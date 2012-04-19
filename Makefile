@@ -1,12 +1,12 @@
-LDFLAGS     = -L/usr/local/lib -lboost_regex  -L/home/cm218888/opensoft/xerces-c-3.1.1-x86_64-linux-gcc-3.4/lib -lxerces-c -L/data/mouton/opensoft/lib
-LD_LIBRARY_PATH = /home/cm218888/opensoft/xerces-c-3.1.1-x86_64-linux-gcc-3.4/lib
-CPPFLAGS    = -g -I/home/cm218888/opensoft/xerces-c-3.1.1-x86_64-linux-gcc-3.4/include -I/data/mouton/opensoft/boost_1_44_0
+LDFLAGS     = -L/usr/local/lib -lboost_regex -lxerces-c
+LD_LIBRARY_PATH = 
+CPPFLAGS    = -g 
 
 all:	translateWN buildBilingualDic evalJAWS-WOLF
 
 
 
-COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp SimSynModule.cpp HyperHypoModule.cpp  MeroHoloModule.cpp LastChanceModule.cpp ../converter.cpp ../tools.cpp WiktHandler.cpp WolfHandler.cpp JawsEvaluatorHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp JawsEvaluatorHandlerBench.cpp BCSBaseHandler.cpp
+COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp SimSynModule.cpp HyperHypoModule.cpp  MeroHoloModule.cpp LastChanceModule.cpp ../src/converter.cpp ../src/tools.cpp WiktHandler.cpp WolfHandler.cpp JawsEvaluatorHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp JawsEvaluatorHandlerBench.cpp BCSBaseHandler.cpp
 
 COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 

@@ -1,6 +1,6 @@
 #include "LastChanceModule.hpp"
 #include "distance.hpp"
-#include "../tools.h"
+#include "../src/tools.h"
 
 
 using namespace std;

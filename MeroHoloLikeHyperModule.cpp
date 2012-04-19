@@ -3,7 +3,7 @@
 #include "MeroHoloLikeHyperModule.hpp"
 #include "distance.hpp"
 #include "Paths.hpp"
-#include "../tools.h"
+#include "../src/tools.h"
 #include <iostream>
 #include <fstream>
 

@@ -1,6 +1,6 @@
 
-#include "../knn_search.h"
-//#include "../converter.h"
+#include "../src/knn_search.h"
+//#include "../src/converter.h"
 #include "Paths.hpp"
 #include "Loader.hpp"
 #include "Dumper.hpp"

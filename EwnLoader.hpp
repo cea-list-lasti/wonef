@@ -5,8 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "../WordNet.hpp"
-#include "boost/regex.hpp"
+#include "WordNet.hpp"
+#include <boost/regex.hpp>
 
 
 using namespace std;

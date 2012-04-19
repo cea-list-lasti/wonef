@@ -2,13 +2,13 @@
 #define MEROHOLOMODULE_HPP
 
 
-#include "../knn_search.h"
+#include "../src/knn_search.h"
 #include "TranslatorModule.hpp"
 #include "Loader.hpp"
 #include "TypeRoler.hpp"
 #include "HyperHypoModule.hpp"
-#include "boost/regex.hpp"
-#include "../WordNet.hpp"
+#include <boost/regex.hpp>
+#include "WordNet.hpp"
 
 
 using namespace std;

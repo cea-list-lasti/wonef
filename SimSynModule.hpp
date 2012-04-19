@@ -5,7 +5,7 @@
 #include "TranslatorModule.hpp"
 #include "Loader.hpp"
 #include "boost/regex.hpp"
-#include "../WordNet.hpp"
+#include "WordNet.hpp"
 
 
 using namespace std;

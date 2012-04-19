@@ -2,7 +2,7 @@
 #define TRANSLATORMODULE_HPP
 
 #include <string>
-#include "../WordNet.hpp"
+#include "WordNet.hpp"
 
 using namespace std;
 
