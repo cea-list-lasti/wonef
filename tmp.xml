@@ -1,0 +1,134 @@
+<wiktionnary lang="fr">
+<page name="équitable"
+>	<!--comment-->
+	<lang name="fr" original="fr">
+		<type name="noType" original="noType">
+			<cat name="autre" original="autre">
+				<subCat name="DAF1932" original="DAF1932">
+					 &lt;!-- Supprimez cette ligne une fois l'article relu. Merci :) --&gt;	
+				</subCat>
+			</cat>
+			<cat name="-étym-" original="-étym-">
+				<subCat attr1="fr" name="ébauche-étym" original="ébauche-étym">
+							
+				</subCat>
+				<subCat attr1="e.ki.tabl" name="fr-rég" original="fr-rég">
+						'''équitable''' 
+				</subCat>
+				<subCat name="mf" original="mf">
+						# Qui a de l’[[équité]].	#: ''Un arbitre '''équitable'''.''	#: ''Un juge '''équitable'''.''	# Qui est [[conforme]] à l’équité.	#: ''Sentiment '''équitable'''.''	#: ''Jugement '''équitable'''.''	#: ''Partage '''équitable'''.''		
+				</subCat>
+			</cat>
+		</type>
+		<type name="a" original="-adj-">
+			<cat name="-ant-" original="-ant-"/>
+			<cat name="-apr-" original="-apr-"/>
+			<cat name="translations" original="-trad-">
+				<subCat name="" original="">
+						* 
+				</subCat>
+				<subCat name="en" original="en">
+					 : 
+				</subCat>
+				<subCat lang="en" name="translation" original="trad+">
+					fair
+				</subCat>
+				<subCat lang="en" name="translation" original="trad+">
+					equitable
+				</subCat>
+				<subCat name="io" original="io">
+					 : 
+				</subCat>
+				<subCat lang="io" name="translation" original="trad-">
+					equitatoza
+				</subCat>
+				<subCat name="id" original="id">
+					 : 
+				</subCat>
+				<subCat lang="id" name="translation" original="trad+">
+					adil
+				</subCat>
+				<subCat name="" original="">
+							
+				</subCat>
+			</cat>
+			<cat name="-pron-" original="-pron-">
+				<subCat attr1="e.ki.tabl" name="pron" original="pron">
+							
+				</subCat>
+			</cat>
+			<cat name="-homo-" original="-homo-"/>
+			<cat name="-réf-" original="-réf-">
+				<subCat name="Import:DAF8" original="Import:DAF8">
+								
+				</subCat>
+				<subCat attr1="equitable" name="clé de tri" original="clé de tri">
+							[[et:équitable]]	[[en:équitable]]	[[io:équitable]]	[[nl:équitable]]	[[vi:équitable]]
+				</subCat>
+			</cat>
+		</type>
+	</lang>
+</page>
+<page name="épluchure">
+	<lang name="fr" original="fr">
+		<type name="noType" original="noType">
+			<cat name="-étym-" original="-étym-">
+				<subCat attr1="e.ply.ʃyʁ" name="fr-rég" original="fr-rég">
+						[[Image:Épluchures.jpg|thumb|'''Épluchures'''.]]	'''épluchure''' 
+				</subCat>
+				<subCat name="f" original="f">
+						# [[déchet|Déchet]] que l’on [[ôte]] de [[quelque chose]] qu’on épluche. Il s’emploie surtout au pluriel.	#: ''Jeter les '''épluchures'''.''		
+				</subCat>
+			</cat>
+		</type>
+		<type name="n" original="-nom-">
+			<cat name="-apr-" original="-apr-"/>
+			<cat name="translations" original="-trad-">
+				<subCat name="" original="">
+						* 
+				</subCat>
+				<subCat name="en" original="en">
+					 : 
+				</subCat>
+				<subCat lang="en" name="translation" original="trad+">
+					peel
+				</subCat>
+				<subCat lang="en" name="translation" original="trad+">
+					peeling
+				</subCat>
+				<subCat lang="en" name="translation" original="trad+">
+					paring
+				</subCat>
+				<subCat name="io" original="io">
+					 : 
+				</subCat>
+				<subCat lang="io" name="translation" original="trad-">
+					emunduro
+				</subCat>
+				<subCat name="la" original="la">
+					 : 
+				</subCat>
+				<subCat lang="la" name="translation" original="trad-">
+					purgamentum
+				</subCat>
+				<subCat lang="la" name="translation" original="trad-">
+					quisquiliæ
+				</subCat>
+				<subCat name="" original="">
+							
+				</subCat>
+			</cat>
+			<cat name="-homo-" original="-homo-"/>
+			<cat name="-anagr-" original="-anagr-"/>
+			<cat name="-réf-" original="-réf-">
+				<subCat name="Import:DAF8" original="Import:DAF8">
+							
+				</subCat>
+				<subCat attr1="epluchure" name="clé de tri" original="clé de tri">
+							[[en:épluchure]]	[[io:épluchure]]
+				</subCat>
+			</cat>
+		</type>
+	</lang>
+</page>
+</wiktionnary>
