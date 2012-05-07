@@ -22,15 +22,20 @@ using namespace std;
 
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
 
+  std::cerr << "loading polysemous literals from: " << filename << std::endl;
   ifstream llss(filename.c_str());
   string s;
-  while (getline(llss, s) ) {	
+  while (getline(llss, s) ) {
+//   std::cerr << "loadPolysemousLiteral lit: '" << s.substr(0, s.find(' ')) << "'" << std::endl;
     litList.insert(s.substr(0, s.find(' ')));
     s=s.substr(0, s.length()-2);
+//     std::cerr << "    ids: ";
     while (s.rfind(' ')==s.length()-9) {
+//       std::cerr << s.substr(s.rfind(' ')+1) << " ";
       polysemousIdsList.insert(s.substr(s.rfind(' ')+1));
       s=s.substr(0, s.rfind(' '));
     }
+    std::cerr << std::endl;
   }
   llss.close();
 }
@@ -55,9 +60,9 @@ int loadWOLFnouns(map<string, set<string> >& wolfNet, map<string, set<string> >&
   parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
   parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
-  WolfHandler* defaultHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent);
-  parser->setContentHandler(defaultHandler);
-  parser->setErrorHandler(defaultHandler);
+  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent);
+  parser->setContentHandler(wolfHandler);
+  parser->setErrorHandler(wolfHandler);
 
   try {
     parser->parse(filename.c_str());
@@ -82,16 +87,18 @@ int loadWOLFnouns(map<string, set<string> >& wolfNet, map<string, set<string> >&
     }*/
 
   delete parser;
-  delete defaultHandler;
+  delete wolfHandler;
 }
 
 int loadBcsBase15(map<string, int>& bcsbase, string filename) {
-  cerr << "loading bcs from : " << filename << endl;
+  cerr << "loading bcs 15 from : " << filename << endl;
+  cerr << "NOTHING TO DO" << endl;
   cerr << "Loaded" << endl;
 }
 
 int loadBcsBaseComplem(map<string, int>& bcsbase, string filename) {
-  cerr << "loading bcs from : " << filename << endl;
+  cerr << "loading bcs complem from : " << filename << endl;
+  cerr << "NOTHING TO DO" << endl;
   cerr << "Loaded" << endl;
 }
 
@@ -116,9 +123,9 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
   parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
   parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
-  BcsbaseHandler* defaultHandler = new BcsbaseHandler(&bcsbase);
-  parser->setContentHandler(defaultHandler);
-  parser->setErrorHandler(defaultHandler);
+  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(&bcsbase);
+  parser->setContentHandler(bcsbaseHandler);
+  parser->setErrorHandler(bcsbaseHandler);
 
   try {
     parser->parse(filename.c_str());
@@ -143,7 +150,7 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
     }*/
 
   delete parser;
-  delete defaultHandler;
+  delete bcsbaseHandler;
 }
 
 
@@ -185,15 +192,15 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
   parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
-  JawsEvaluatorHandler* defaultHandler = NULL; 
+  JawsEvaluatorHandler* jawsEvaluatorHandler = NULL; 
   if (bcsmode==OLDSCHOOL) {
-    defaultHandler = new JawsEvaluatorHandler(litList, polysemousIdsList, wolfNet, wolfNetIdIdent, datafile);
+    jawsEvaluatorHandler = new JawsEvaluatorHandler(litList, polysemousIdsList, wolfNet, wolfNetIdIdent, datafile);
   } else {
-    defaultHandler = new JawsEvaluatorBenchHandler(bcsbase, litList, polysemousIdsList, wolfNet, wolfNetIdIdent, datafile, bcsmode);
+    jawsEvaluatorHandler = new JawsEvaluatorBenchHandler(bcsbase, litList, polysemousIdsList, wolfNet, wolfNetIdIdent, datafile, bcsmode);
   }
 
-  parser->setContentHandler(defaultHandler);
-  parser->setErrorHandler(defaultHandler);
+  parser->setContentHandler(jawsEvaluatorHandler);
+  parser->setErrorHandler(jawsEvaluatorHandler);
 
   try {
     parser->parse(filename.c_str());
@@ -214,86 +221,86 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   }
 
   cout << "------------------------------------" << endl;
-  cout << "cntPolysemousNounsProcessedInJaws : " << defaultHandler->getCnt(1, 0) << endl;
-  cout << "cntPolysemousNounsProcessedInJawsFoundInWolf : " << defaultHandler->getCnt(2, 1) << endl;
-  cout << "cntPolysemousNounsProcessedInJawsAgreeWithWolf : " << defaultHandler->getCnt(2, 2) << endl;
-  cout << "cntCommonPolysemousId : " << defaultHandler->getCntCommonPolysemousId() << endl;
-  float precision = (float)defaultHandler->getCnt(2, 2) /(float) defaultHandler->getCnt(1, 0);
-  float precision2 = (float)defaultHandler->getCnt(2, 2) /(float) defaultHandler->getCnt(2, 1);
-  float precision3 = (float)defaultHandler->getCnt(2, 2) /(float) defaultHandler->getCntCommonPolysemousId();
+  cout << "cntPolysemousNounsProcessedInJaws : " << jawsEvaluatorHandler->getCnt(1, 0) << endl;
+  cout << "cntPolysemousNounsProcessedInJawsFoundInWolf : " << jawsEvaluatorHandler->getCnt(2, 1) << endl;
+  cout << "cntPolysemousNounsProcessedInJawsAgreeWithWolf : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
+  cout << "cntCommonPolysemousId : " << jawsEvaluatorHandler->getCntCommonPolysemousId() << endl;
+  float precision = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(1, 0);
+  float precision2 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(2, 1);
+  float precision3 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCntCommonPolysemousId();
 
   cout << "Precision / WOLF : " << precision  << endl;
   cout << "Generous Precision / WOLF : " << precision2  << endl;
   cout << "P2/WOLF : "  << precision3 << endl;
-  cout << "cntPolysemousNounsProcessedInWolf : " << defaultHandler->getCnt(0, 1) << endl;
-  cout << "cntPolysemousNounsProcessedInWolfFoundInJaws : " << defaultHandler->getCnt(1, 2) << endl;
-  cout << "cntPolysemousNounsProcessedInWolfAgreeWithJaws : " << defaultHandler->getCnt(2, 2) << endl;
+  cout << "cntPolysemousNounsProcessedInWolf : " << jawsEvaluatorHandler->getCnt(0, 1) << endl;
+  cout << "cntPolysemousNounsProcessedInWolfFoundInJaws : " << jawsEvaluatorHandler->getCnt(1, 2) << endl;
+  cout << "cntPolysemousNounsProcessedInWolfAgreeWithJaws : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
 
-  cout << "nbOriginalLit : " << defaultHandler->getNbOriginalLit() << endl;
+  cout << "nbOriginalLit : " << jawsEvaluatorHandler->getNbOriginalLit() << endl;
 
-  //  assert(defaultHandler->getCnt(2, 1)==defaultHandler->getCntCommonPolysemousId()) ;
+  //  assert(jawsEvaluatorHandler->getCnt(2, 1)==jawsEvaluatorHandler->getCntCommonPolysemousId()) ;
 
-  cout << "Wolf coverage : " << defaultHandler->getCnt(0, 1) << "(" << (float)defaultHandler->getCnt(0, 1)/(float)defaultHandler->getNbOriginalLit() << ")" << endl;
+  cout << "Wolf coverage : " << jawsEvaluatorHandler->getCnt(0, 1) << "(" << (float)jawsEvaluatorHandler->getCnt(0, 1)/(float)jawsEvaluatorHandler->getNbOriginalLit() << ")" << endl;
 
 
     // total original polysemous pairs processed in jaws, synset in wolf and pair found in wolf
   cout <<" & " 
-    << ceil(((float)( defaultHandler->getCnt(1, 0))/ (float)defaultHandler->getNbOriginalLit())*1000)/10.   << "\\%"
+    << ceil(((float)( jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit())*1000)/10.   << "\\%"
     // total original polysemous pairs processed
-    << " & "  << ceil(((float) defaultHandler->getCnt(2, 2)/ (float)defaultHandler->getCnt(1,0) )*1000)  /10. << "\\%"
-       << "("<< ceil(((float) defaultHandler->getCnt(2, 2)/ (float) ( defaultHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
+    << " & "  << ceil(((float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getCnt(1,0) )*1000)  /10. << "\\%"
+       << "("<< ceil(((float) jawsEvaluatorHandler->getCnt(2, 2)/ (float) ( jawsEvaluatorHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
     // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " & " << ceil(((float) ( defaultHandler->getCnt(2, 1) - defaultHandler->getCnt(2, 2))/ (float)defaultHandler->getCnt(1,0))*1000)/10. << "\\%"  
-       << "("<< ceil((((float) ( defaultHandler->getCnt(2, 1) - defaultHandler->getCnt(2, 2)))/ (float) ( defaultHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
+       << " & " << ceil(((float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getCnt(1,0))*1000)/10. << "\\%"
+       << "("<< ceil((((float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2)))/ (float) ( jawsEvaluatorHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
     // total original polysemous pairs processed in jaws, synset id not found in wolf
-    << " & " << ceil(((float) ( defaultHandler->getCnt(1, 0) - defaultHandler->getCnt(2, 1))/ (float)defaultHandler->getCnt(1,0))*1000) /10. << "\\%"
+    << " & " << ceil(((float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getCnt(1,0))*1000) /10. << "\\%"
 
        << " \\\\ " << endl;
 
-  cout << defaultHandler->getCnt(2, 2)
-    //       << "(" << (float) defaultHandler->getCnt(2, 2)/ (float)defaultHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) defaultHandler->getCnt(2, 2)/ (float)defaultHandler->getCnt(1,0)  << ")"
+  cout << jawsEvaluatorHandler->getCnt(2, 2)
+    //       << "(" << (float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
+       << "(" << (float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
     // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " | " << defaultHandler->getCnt(2, 1) - defaultHandler->getCnt(2, 2)
-    //       << "(" << (float) ( defaultHandler->getCnt(2, 1) - defaultHandler->getCnt(2, 2))/ (float)defaultHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) ( defaultHandler->getCnt(2, 1) - defaultHandler->getCnt(2, 2))/ (float)defaultHandler->getCnt(1,0)  << ")"
+       << " | " << jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2)
+    //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
+       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
     // total original polysemous pairs processed in jaws, synset id not found in wolf
-       << " | " << defaultHandler->getCnt(1, 0) - defaultHandler->getCnt(2, 1)
-    //       << "(" << (float) ( defaultHandler->getCnt(1, 0) - defaultHandler->getCnt(2, 1))/ (float)defaultHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) ( defaultHandler->getCnt(1, 0) - defaultHandler->getCnt(2, 1))/ (float)defaultHandler->getCnt(1,0)  << ")"
+       << " | " << jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1)
+    //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
+       << "(" << (float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
     // total original polysemous pairs processed
-       << " | " << defaultHandler->getCnt(1, 0) 
-       << "(" << (float)( defaultHandler->getCnt(1, 0))/ (float)defaultHandler->getNbOriginalLit()  << ")"
+       << " | " << jawsEvaluatorHandler->getCnt(1, 0) 
+       << "(" << (float)( jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
     // total original polysemous pairs not processed
-    //       << " | " << defaultHandler->getNbOriginalLit()-defaultHandler->getCnt(1, 0) 
-    //       << "(" << (float)( defaultHandler->getNbOriginalLit() - defaultHandler->getCnt(1, 0))/ (float)defaultHandler->getNbOriginalLit()  << ")"
+    //       << " | " << jawsEvaluatorHandler->getNbOriginalLit()-jawsEvaluatorHandler->getCnt(1, 0)
+    //       << "(" << (float)( jawsEvaluatorHandler->getNbOriginalLit() - jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
     // total original polysemous pairs
-       << " | " << defaultHandler->getNbOriginalLit() 
+       << " | " << jawsEvaluatorHandler->getNbOriginalLit()
        << " | " << endl;
 
 
-  /*  float iprecision = (float) defaultHandler->getCnt(2, 2) /  (float) defaultHandler->getCnt(0, 1);
-  float iprecision2 = (float)defaultHandler->getCnt(2, 2) /  (float) defaultHandler->getCnt(1, 2);
+  /*  float iprecision = (float) jawsEvaluatorHandler->getCnt(2, 2) /  (float) jawsEvaluatorHandler->getCnt(0, 1);
+  float iprecision2 = (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) jawsEvaluatorHandler->getCnt(1, 2);
   cout << "IPrecision / JAWS : " <<  iprecision << endl;
   cout << "Generous IPrecision / JAWS : " <<  iprecision2 << endl;
 
   
   cout << "averageP = " <<(precision+iprecision)/2 << endl;
 
-  cout << "cntType1 : " << defaultHandler->getCntError(1) << endl;
-  cout << "Precision1 / WOLF : " << (float)defaultHandler->getCnt(2, 2) /  (float) (defaultHandler->getCnt(1, 0) - defaultHandler->getCntError(1)) << endl;
-  cout << "cntType2 : " << defaultHandler->getCntError(2) << endl;
-  cout << "Precision2 / WOLF : " << (float)defaultHandler->getCnt(2, 2) /  (float) (defaultHandler->getCnt(1, 0) - defaultHandler->getCntError(2)) << endl;
-  cout << "cntType3 : " << defaultHandler->getCntError(3) << endl;
-  cout << "Precision3 / WOLF : " << (float)defaultHandler->getCnt(2, 2) /  (float) (defaultHandler->getCnt(0, 1) - defaultHandler->getCntError(3)) << endl;
-  cout << "cntType4 : " << defaultHandler->getCntError(4) << endl;
-  cout << "Precision4 / WOLF : " << (float)defaultHandler->getCnt(2, 2) /  (float) (defaultHandler->getCnt(0, 1) - defaultHandler->getCntError(4)) << endl;
+  cout << "cntType1 : " << jawsEvaluatorHandler->getCntError(1) << endl;
+  cout << "Precision1 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCntError(1)) << endl;
+  cout << "cntType2 : " << jawsEvaluatorHandler->getCntError(2) << endl;
+  cout << "Precision2 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCntError(2)) << endl;
+  cout << "cntType3 : " << jawsEvaluatorHandler->getCntError(3) << endl;
+  cout << "Precision3 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(0, 1) - jawsEvaluatorHandler->getCntError(3)) << endl;
+  cout << "cntType4 : " << jawsEvaluatorHandler->getCntError(4) << endl;
+  cout << "Precision4 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(0, 1) - jawsEvaluatorHandler->getCntError(4)) << endl;
   */
 
 
 
   delete parser;
-  delete defaultHandler;
+  delete jawsEvaluatorHandler;
 }
 
 
@@ -332,14 +339,14 @@ int main(int argc, char **argv) {
 
 
     switch (bcsmode) {
-    case (int)OLDSCHOOL : 
+    case (int)OLDSCHOOL : // 4
       break;
-    case (int) BCS1 : 
-    case (int) BCS2 : 
-    case (int) BCS3 : 
+    case (int) BCS1 : // 1
+    case (int) BCS2 : // 2
+    case (int) BCS3 : // 3
       loadBcsBase15(bcsbase, argv[6]);
       break;    
-    case (int) BCSALL : 
+    case (int) BCSALL : // 0
       loadBcsBaseComplem(bcsbase, argv[6]);
       break;
     }
