@@ -30,9 +30,9 @@ WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet, map<string, set<st
 
   theTranscoder =
     theService->makeNewTranscoderFor(
-				     "utf-8",
-				     theCode,
-				     8192);
+                                         "utf-8",
+                                         theCode,
+                                         8192);
 
 
 
@@ -75,14 +75,14 @@ string WolfHandler::_transcode(const XMLCh* const chars) {
   return res;
 }
 
-bool WolfHandler::checkAttr(const Attributes &  	attrs, string key, string value ) {  
+bool WolfHandler::checkAttr(const Attributes &           attrs, string key, string value ) {
   XMLCh * _key = XMLString::transcode(key.c_str());
   bool res =_transcode(attrs.getValue(_key)).compare(value)==0 ;
   XMLString::release(&_key);
   return (res);
 }
 
-string WolfHandler::getAttrValue(const Attributes &  	attrs, string value) {
+string WolfHandler::getAttrValue(const Attributes &           attrs, string value) {
   XMLCh * _key =  XMLString::transcode(value.c_str());
   if (attrs.getValue(_key)==NULL) {
     XMLString::release(&_key);
@@ -93,10 +93,10 @@ string WolfHandler::getAttrValue(const Attributes &  	attrs, string value) {
   return   res;
 }
 
-void WolfHandler::startElement(const XMLCh *const    	 uri,
-			       const XMLCh *const   	localname,
-			       const XMLCh *const   	qname,
-			       const Attributes &  	attrs) {  
+void WolfHandler::startElement(const XMLCh *const              uri,
+                                  const XMLCh *const            localname,
+                                  const XMLCh *const            qname,
+                                  const Attributes &           attrs) {
 
   if(_transcode(qname).compare("SYNSET")==0) {
     nbSynsets++;
@@ -116,8 +116,8 @@ void WolfHandler::characters(const XMLCh *const chars, const XMLSize_t length)  
 }
 
 void WolfHandler::endElement(const XMLCh *const uri,
-			     const XMLCh *const localname,
-			     const XMLCh *const qname) {
+                                const XMLCh *const localname,
+                                const XMLCh *const qname) {
   if (_transcode(qname).compare("ID")==0) {
     id = tmpString.substr(6, 8);
   } else if (_transcode(qname).compare("POS")==0) {
@@ -125,12 +125,12 @@ void WolfHandler::endElement(const XMLCh *const uri,
   }else if (_transcode(qname).compare("LITERAL")==0) {
     if (pos=="n") {
       if (wolfNet->find(tolower(literal))==wolfNet->end()) {
-	(*wolfNet)[tolower(literal)]=set<string>();
+         (*wolfNet)[tolower(literal)]=set<string>();
       }      
-      //      cerr << "INSERT : " << tolower(literal) << " -> " << id << endl;
+//       cerr << "INSERT : " << tolower(literal) << " -> " << id << endl;
       (*wolfNet)[tolower(literal)].insert(id);
       if (wolfNetIdIdent->find(id)==wolfNetIdIdent->end()) {
-	wolfNetIdIdent->insert(make_pair(id, set<string>()));
+         wolfNetIdIdent->insert(make_pair(id, set<string>()));
       }
       (*wolfNetIdIdent)[id].insert(tolower(literal));
     }
