@@ -69,37 +69,41 @@ int loadWOLFnouns(map<string, set<string> >& wolfNet, map<string, set<string> >&
   }
   catch (const XMLException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 1 is: \n"
+    cout << "WOLF Exception message 1 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return -1;
   }
   catch (const SAXParseException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 2 is: \n"
+    cout << "WOLF Exception message 2 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return -1;
   }
-  /* catch (...) {
-    cout << "Unexpected Exception \n";
+  catch (...) {
+    cout << "WOLF Unexpected Exception \n";
     return -1;
-    }*/
+    }
 
   delete parser;
   delete wolfHandler;
+
+  return 0;
 }
 
-int loadBcsBase15(map<string, int>& bcsbase, string filename) {
+int loadBcsBase15(map<string, int>& /*bcsbase*/, string filename) {
   cerr << "loading bcs 15 from : " << filename << endl;
   cerr << "NOTHING TO DO" << endl;
   cerr << "Loaded" << endl;
+  return 0;
 }
 
-int loadBcsBaseComplem(map<string, int>& bcsbase, string filename) {
+int loadBcsBaseComplem(map<string, int>& /*bcsbase*/, string filename) {
   cerr << "loading bcs complem from : " << filename << endl;
   cerr << "NOTHING TO DO" << endl;
   cerr << "Loaded" << endl;
+  return 0;
 }
 
 
@@ -139,7 +143,7 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
   }
   catch (const SAXParseException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 2 is: \n"
+    cout << "BCS Exception message 2 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return -1;
@@ -151,6 +155,7 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
 
   delete parser;
   delete bcsbaseHandler;
+  return 0;
 }
 
 
@@ -263,6 +268,7 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
     // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
        << " | " << jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2)
     //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
+
        << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
     // total original polysemous pairs processed in jaws, synset id not found in wolf
        << " | " << jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1)
@@ -301,6 +307,7 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
 
   delete parser;
   delete jawsEvaluatorHandler;
+  return 0;
 }
 
 
