@@ -36,6 +36,8 @@
 
 #define KNNSTDFILE "/data/text/FastKNN/knnall/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt"
 
+#define WORDS_IDS "/data/text/FastKNN/Ressources/SemMap/words.ids"
+
 #define TYPEROLERFILE4 "/data/text/FastKNN/Ressources/SemMap/windows/window10.dmp"
 #define TYPEROLERFILE3 "/data/text/FastKNN/Ressources/SemMap/normal/COD_V.dmp"
 #define TYPEROLERFILE2 "/data/text/FastKNN/Ressources/SemMap/normal/SUJ_V.dmp"
