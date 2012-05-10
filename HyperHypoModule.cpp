@@ -10,15 +10,16 @@
 using namespace std;
 
 
-HyperHypoModule::HyperHypoModule(string dataInput, string typeroler) {
+HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode)
+    : mode(_mode) {
   if (typeroler.compare("COMPDUNOM")==0) {
-    tRoler = TypeRoler(string(TYPEROLERFILE));
+    tRoler = TypeRoler(TYPEROLERFILE);
   } else if (typeroler.compare("SUJ_V")==0) {
-    tRoler = TypeRoler(string(TYPEROLERFILE2));
+    tRoler = TypeRoler(TYPEROLERFILE2);
   } else if (typeroler.compare("COD_V")==0) {
-    tRoler = TypeRoler(string(TYPEROLERFILE3));
+    tRoler = TypeRoler(TYPEROLERFILE3);
   }else if (typeroler.compare("window10")==0) {
-    tRoler = TypeRoler(string(TYPEROLERFILE4));
+    tRoler = TypeRoler(TYPEROLERFILE4);
   }
   loadHyperHypos(dataInput);  
 }
@@ -78,7 +79,7 @@ void HyperHypoModule::loadHyperHypos(string dataInput) {
 
 
 
-void HyperHypoModule::process(WORDNET::WordNet& wn, TRMode mode, bool verbose ){
+void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
   map<string, set<string> >reverseIndex;
   
   int nbDisamb = 0;
