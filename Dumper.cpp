@@ -16,15 +16,15 @@ DumperModule::DumperModule(string _datafile, string _indexfile) {
 DumperModule::~DumperModule() {
 }
 
-void DumperModule::dump(WORDNET::WordNet& wn, bool verbose) {
-  printData(wn, verbose);
+void DumperModule::dump(WORDNET::WordNet& wn) {
+  printData(wn);
   printUnsolved(wn);
-  //  printIndex(verbose);
+  //  printIndex();
 }
 
 
 
-void DumperModule::printIndex(bool verbose) {
+void DumperModule::printIndex() {
   ofstream indexOfs(indexfile.c_str());  
   for (map<string, set<string> >::iterator it = indexTgt.begin(); it!=indexTgt.end(); it++) {
     if (it->first !="" ) {
@@ -41,7 +41,7 @@ void DumperModule::printIndex(bool verbose) {
 
 
 
-void DumperModule::printData(WORDNET::WordNet& wn, bool verbose) {
+void DumperModule::printData(WORDNET::WordNet& wn) {
   cerr << "Writing in " << datafile << endl;
   ofstream ofs(datafile.c_str(), ios_base::out | ios_base::trunc );
   ofs << "<JAWS pos=\"noun\" >" << endl;

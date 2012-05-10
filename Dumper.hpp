@@ -9,7 +9,7 @@ class DumperModule {
   ~DumperModule() ;
 
 
-  void dump(WORDNET::WordNet& wn, bool verbose=false) ;
+  void dump(WORDNET::WordNet& wn) ;
 
   private :
   string datafile;
@@ -17,8 +17,8 @@ class DumperModule {
   map<string, set <string> > indexTgt;
   //  void fillIndex(WORDNET::WordNet& wn);
 
-  void printIndex(bool verbose=false);
-  void printData(WORDNET::WordNet& wn, bool verbose=false);
+  void printIndex();
+  void printData(WORDNET::WordNet& wn);
   void printUnsolved(WORDNET::WordNet& wn);
 
 
