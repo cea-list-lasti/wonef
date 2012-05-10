@@ -20,7 +20,7 @@ SimSynModule::~SimSynModule() {
 }
 
 
-void SimSynModule::process(WORDNET::WordNet& wn, bool verbose){ 
+void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){ 
   if (wn["00472185"].frenchCandidates.size()!=0) {
     cerr << "TEST3 : " << wn["00472185"].frenchCandidates["coupling"].cand.size() << endl;
   }
@@ -93,14 +93,14 @@ string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<stri
     ifstream knnIfs(knnFile.c_str());
     getline(knnIfs, knns);
     knnIfs.close();
-    int bestPos = 1000;
+    size_t bestPos = 1000;
     string syn = "";
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
       //      cerr << "Processing : " << it2->first << endl;
     
       stringstream sssearch;
       sssearch << " "<< it2->first<<":";
-      int pos = knns.find(sssearch.str());
+      size_t pos = knns.find(sssearch.str());
       if (pos!=string::npos) {
         votes[it2->first]+=it2->second;
 	if( pos < bestPos) {
@@ -113,7 +113,7 @@ string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<stri
     votes[syn]++;
   }
   
-  int bestVote = 0;
+  size_t bestVote = 0;
   string elected = "";
   for(map<string, uint>::iterator itVotes= votes.begin(); itVotes!=votes.end() ; itVotes++)  {
     if (itVotes->second> bestVote && itVotes->first !="" ) {

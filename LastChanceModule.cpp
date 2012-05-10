@@ -11,7 +11,7 @@ LastChanceModule::LastChanceModule() {
 LastChanceModule::~LastChanceModule() {
 }
 
-void LastChanceModule::process(WORDNET::WordNet& wn, bool verbose){
+void LastChanceModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       if (itwne->second.processed=="" && itwne->second.cand.size()>0) {	

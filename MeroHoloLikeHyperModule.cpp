@@ -21,8 +21,6 @@ MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile) {
 
 
 MeroHoloLikeHyperModule::~MeroHoloLikeHyperModule() {
-  meronyms.clear();
-  holonyms.clear();
 }
 
 
