@@ -173,7 +173,7 @@ void MeroHoloModule::finalize() {
 
 
 
-void MeroHoloModule::process(WORDNET::WordNet& wn, bool verbose){
+void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, set<string> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //    for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	

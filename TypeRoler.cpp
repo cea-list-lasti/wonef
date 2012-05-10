@@ -12,7 +12,7 @@ TypeRoler::TypeRoler(string _dataFile) :
   topSize(10),
   thresCut(0) {
   initializeDicMap(dicmap);  
-  initializeDicMapReverse(dicmapReverse, false);    
+  initializeDicMapReverse(dicmapReverse, WORDS_IDS, false);
   ifstream idss(dataFile.c_str());
   string s;
   cerr << "Loading " << dataFile << endl;
@@ -34,7 +34,7 @@ TypeRoler::~TypeRoler() {
 
 
 
-void TypeRoler::processLine(string s, float thresCut, map<ulong, float>& ctxt) {  
+void TypeRoler::processLine(string s, float /*thresCut*/, map<ulong, float>& ctxt) {  
   stringstream ss;
   ss << s;
   ulong currentIdent;
@@ -75,7 +75,7 @@ float TypeRoler::computeIsAScore( string strA, string strB, TRMode mode) {
   //  int unionSize = tmpmapUnion.size();
   int interSize = 0;
   
-  float thres = 0;
+  /*float thres = 0; */
 
   for ( map<ulong, float>::iterator it = tmpmapB.begin(); it!=tmpmapB.end() ;  it++) {
     if (tmpmapA.find(it->first)!=tmpmapA.end()) {

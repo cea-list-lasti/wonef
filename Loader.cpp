@@ -97,7 +97,7 @@ void LoaderModule::loadBilingualDic(bool nounOnly) {
       if (!nounOnly 
 	  || LoaderModule::nounsList.find(tgtWord)!=LoaderModule::nounsList.end()
 	  || LoaderModule::nounsList.find(tgtWord.substr(0, tgtWord.find(' ')))!=LoaderModule::nounsList.end()
-	  || tgtWord[tgtWord.length()-1]=='s' && LoaderModule::nounsList.find(tgtWord.substr(0, tgtWord.length()-1))!=LoaderModule::nounsList.end()
+	  || (tgtWord[tgtWord.length()-1]=='s' && LoaderModule::nounsList.find(tgtWord.substr(0, tgtWord.length()-1))!=LoaderModule::nounsList.end())
 	  ) {
 	src2Tgt[tolower(s.substr(0, s.find(';')))].insert(tgtWord);
 	
