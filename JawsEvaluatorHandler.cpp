@@ -16,19 +16,19 @@ using namespace std;
 
 
 JawsEvaluatorHandler::JawsEvaluatorHandler( set<string>& litList, set<string>& _polysemousIdsList, map<string, set<string> >& _vtNet, map<string, set<string> >& _vtNetIdIdent, string& datafile) :
-  litList(litList), polysemousIdsList(_polysemousIdsList), vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
-  nbSynsets(0),   nbInstances(0),   cntCommonPolysemousId(0), 
+  nbSynsets(0), nbOriginalLit(0), nbInstances(0), cntCommonPolysemousId(0),
   cntPolysemousNounsProcessedInJaws(0),
   cntPolysemousNounsProcessedInJawsFoundInVt(0),
   cntPolysemousNounsProcessedInJawsAgreeWithVt(0),
   cntPolysemousNounsProcessedInVt(0),
   cntPolysemousNounsProcessedInVtFoundInJaws(0),
-  cntPolysemousNounsProcessedInVtAgreeWithJaws(0),  
-  nbOriginalLit(0),
+  cntPolysemousNounsProcessedInVtAgreeWithJaws(0),
   cntType1(0),
   cntType2(0),
   cntType3(0),
-  cntType4(0) {
+  cntType4(0),
+  vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
+  litList(litList), polysemousIdsList(_polysemousIdsList) {
 
 
   candidates = map<string, set<string > >();
@@ -104,8 +104,8 @@ string JawsEvaluatorHandler::getAttrValue(const Attributes &           attrs, st
   return   res;
 }
 
-void JawsEvaluatorHandler::startElement(const XMLCh *const              uri,
-                                             const XMLCh *const            localname,
+void JawsEvaluatorHandler::startElement(const XMLCh *const              /*uri*/,
+                                             const XMLCh *const            /*localname*/,
                                              const XMLCh *const            qname,
                                              const Attributes &           attrs) {
   //  cerr << "START : " << _transcode(qname) << endl;
@@ -129,12 +129,12 @@ void JawsEvaluatorHandler::startElement(const XMLCh *const              uri,
   
 }
 
-void JawsEvaluatorHandler::characters(const XMLCh *const chars, const XMLSize_t length)  {
+void JawsEvaluatorHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
   tmpString = _transcode(chars);
 }
 
-void JawsEvaluatorHandler::endElement(const XMLCh *const uri,
-                                          const XMLCh *const localname,
+void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
+                                          const XMLCh *const /*localname*/,
                                           const XMLCh *const qname) {
   if (_transcode(qname).compare("INSTANCE")==0) {
     for (set<string>::iterator itOrig = originalList.begin(); itOrig !=originalList.end(); itOrig++) {

@@ -15,7 +15,7 @@ using namespace std;
 
 
 WiktHandler::WiktHandler(const string outputfile, const string _srcLang, const string _tgtLang) 
-  : srcLang(_srcLang), tgtLang(_tgtLang), nbPage(0), def("") {
+  : nbPage(0), def(""), srcLang(_srcLang), tgtLang(_tgtLang)  {
   ofs.open(outputfile.c_str(),  ios_base::out | ios_base::trunc );
   XMLTransService* const  theService =
     XMLPlatformUtils::fgTransService;
@@ -83,8 +83,8 @@ string WiktHandler::getAttrValue(const Attributes &  	attrs, string value) {
   return   res;
 }
 
-void WiktHandler::startElement(const XMLCh *const    	 uri,
-			       const XMLCh *const   	localname,
+void WiktHandler::startElement(const XMLCh *const    	 /*uri*/,
+			       const XMLCh *const   	/*localname*/,
 			       const XMLCh *const   	qname,
 			       const Attributes &  	attrs) {  
 
@@ -111,13 +111,13 @@ void WiktHandler::startElement(const XMLCh *const    	 uri,
   
 }
 
-void WiktHandler::characters(const XMLCh *const chars, const XMLSize_t length)  {
+void WiktHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
   tmpString = _transcode(chars);
 
 }
 
-void WiktHandler::endElement(const XMLCh *const uri,
-			     const XMLCh *const localname,
+void WiktHandler::endElement(const XMLCh *const /*uri*/,
+			     const XMLCh *const /*localname*/,
 			     const XMLCh *const qname) {
   if(_transcode(qname).compare("page")==0) {
     for (set<string>::iterator itTgt = tgtStrings.begin(); itTgt!=tgtStrings.end(); itTgt++) {

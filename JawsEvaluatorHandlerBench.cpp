@@ -15,7 +15,7 @@ using namespace std;
 
 
 JawsEvaluatorBenchHandler::JawsEvaluatorBenchHandler(map<string, int>& _bcsbase, set<string>& litList, set<string>& _polysemousIdsList, map<string, set<string> >& _vtNet, map<string, set<string> >& _vtNetIdIdent, string& datafile, BCSMode _bcsmode) :
-  bcsbase(_bcsbase), bcsmode(_bcsmode), JawsEvaluatorHandler(litList, _polysemousIdsList,  _vtNet,_vtNetIdIdent,datafile) {
+  JawsEvaluatorHandler(litList, _polysemousIdsList,  _vtNet,_vtNetIdIdent,datafile), bcsbase(_bcsbase), bcsmode(_bcsmode) {
 
 }
 
