@@ -21,11 +21,11 @@ class MeroHoloModule : public TranslatorModule {
 public : 
   MeroHoloModule();
   MeroHoloModule(string& datafile);
-  ~MeroHoloModule();
+  virtual ~MeroHoloModule();
 
 
   void finalize();
-  void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
 
 
  

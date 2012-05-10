@@ -18,11 +18,11 @@ class MeroHoloLikeHyperModule : public MeroHoloModule {
   
 public : 
   MeroHoloLikeHyperModule(string& datafile);
-  ~MeroHoloLikeHyperModule();
+  virtual ~MeroHoloLikeHyperModule();
 
 
   void finalize();
-  void process(WORDNET::WordNet& wn, TRMode mode, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn, TRMode mode, bool verbose=false) ;
 
  
 protected :

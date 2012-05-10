@@ -8,9 +8,9 @@ class LastChanceModule : SimSynModule {
 public : 
   
   LastChanceModule();
-  ~LastChanceModule();
+  virtual ~LastChanceModule();
 
-  void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
 
   
   string trySelecAndReplace(map<string, set<string> >& synset,

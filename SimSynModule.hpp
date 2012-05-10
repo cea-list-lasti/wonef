@@ -14,11 +14,11 @@ class SimSynModule : public TranslatorModule {
   
 public : 
   SimSynModule();
-  ~SimSynModule();
+  virtual ~SimSynModule();
 
 
 
-  void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
 
 
 private : 

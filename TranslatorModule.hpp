@@ -9,9 +9,9 @@ using namespace std;
 class TranslatorModule {
   public : 
   TranslatorModule() ;
-  ~TranslatorModule() ;
+  virtual ~TranslatorModule() ;
 
-  virtual void process(WORDNET::WordNet& wn, bool verbose) ;
+  virtual void process(WORDNET::WordNet& wn, bool verbose) = 0;
 
 };
 
