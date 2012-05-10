@@ -65,7 +65,7 @@ int *pCell;
 //*****************************
 
 int Distance::LD (string s,  string t) {  
-  LD(s.c_str(), t.c_str()) ;
+  return LD(s.c_str(), t.c_str()) ;
 }
 
 int Distance::LD (char const *s, char const *t)
