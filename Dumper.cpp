@@ -44,7 +44,11 @@ void DumperModule::printIndex() {
 void DumperModule::printData(WORDNET::WordNet& wn) {
   cerr << "Writing in " << datafile << endl;
   ofstream ofs(datafile.c_str(), ios_base::out | ios_base::trunc );
-  ofs << "<JAWS pos=\"noun\" >" << endl;
+  if (datafile.find("noun")!=string::npos) {
+    ofs << "<JAWS pos=\"noun\" >" << endl;
+  } else if (datafile.find("verb")!=string::npos) {
+    ofs << "<JAWS pos=\"verb\" >" << endl;
+  }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     ofs << "\t<SYNSET id=\""<< itwn->first <<"\" >" << endl;
     ofs << "\t\t<ORIGINALDEF>" << itwn->second.def <<"</ORIGINALDEF>"<<endl; 
@@ -97,7 +101,11 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
   stringstream datafiless;
   datafiless << datafile << ".unsolved" ; 
   ofstream ofs(datafiless.str().c_str(), ios_base::out | ios_base::trunc );
-  ofs << "<JAWS pos=\"noun\" >" << endl;
+  if (datafile.find("noun")!=string::npos) {
+    ofs << "<JAWS pos=\"noun\" >" << endl;
+  } else if (datafile.find("verb")!=string::npos) {
+    ofs << "<JAWS pos=\"verb\" >" << endl;
+  }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     // SKIP SOLVED SYNSET
     bool tosolve = false;
