@@ -4,7 +4,7 @@
 #include "LoaderVerbs.hpp"
 #include "Dumper.hpp"
 #include "SimSynVerbsModule.hpp"
-#include "HyperHypoModule.hpp"
+#include "HyperHypoVerbsModule.hpp"
 #include "MeroHoloModule.hpp"
 #include "MeroHoloLikeHyperModule.hpp"
 #include "LastChanceModule.hpp"
@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
   time_t start = time(NULL);
 
   SimSynVerbsModule* simsyner = NULL;
+  HyperHypoVerbsModule* hyperhypoer= NULL;
   LastChanceModule* lastchancer= NULL;
 
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
@@ -31,6 +32,9 @@ int main(int argc, char **argv) {
     if (argv[i][0]=='1') { /*SimSynVerbsModule		S  */
       suffix += "1";
       seq.push_back(1);
+    } else if (argv[i][0]=='2') { /*HyperHypoModule	H  */
+      suffix += "2";
+      seq.push_back(2);
     } else if (argv[i][0]=='5') { /*LastChanceModule	L  */
       suffix += "5";
       seq.push_back(5);
@@ -49,7 +53,7 @@ int main(int argc, char **argv) {
   dicfiles.insert(DICFILE2);
 
   LoaderVerbsModule loader(datafile, dicfiles, VERBS_P_LIST);
-  WORDNET::WordNet wn = loader.load(true, -1); // verbose true
+  WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
 
   for(vector<int>::iterator itseq = seq.begin(); itseq!= seq.end(); itseq++) {
@@ -60,6 +64,15 @@ int main(int argc, char **argv) {
       simsyner->process(wn);
       cout << "First step duration : " << time(NULL) - start << " s " << endl;
       delete simsyner;
+      break;
+
+    case 2 :
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER);
+      cout << "Second step "  << endl;
+      start = time(NULL);
+      hyperhypoer->process(wn);
+      cout << "Second step duration : " << time(NULL) - start << " s " << endl;
+      delete hyperhypoer;
       break;
 
     case 5 :

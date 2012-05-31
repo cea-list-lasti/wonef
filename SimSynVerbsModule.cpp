@@ -45,15 +45,39 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
 					map<string, WORDNET::TgtCandidates>::iterator it,
 					bool homograph) {
 
-  string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "SUJ_V");
-  
+  string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COD_V.reverse");
+
   set<string> elected;
   string elec = selectTgtWord(it->second.cand, synset, knnFile);
-  
+
   if (elec!="") {
     elected.insert(elec);      
   }
-  
+
+  if (elected.size()==0) {
+    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "CPL_V.reverse");
+    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    if (elec!="") {
+      elected.insert(elec);      
+    }
+  }
+
+  if (elected.size()==0) {
+    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "CPLV_V.reverse");
+    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    if (elec!="") {
+      elected.insert(elec);      
+    }
+  }
+/*
+  if (elected.size()==0) {
+    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "SUJ_V.reverse");
+    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    if (elec!="") {
+      elected.insert(elec);      
+    }
+  }
+*/
   if (elected.size()!=0) {
     it->second.processed="simsyn";  
     for (set<string>::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {      
@@ -61,7 +85,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
     }
     return LoaderVerbsModule::tgt2TgtDefs[*elected.begin()];
   }
-  
+
   return "";
 }
 

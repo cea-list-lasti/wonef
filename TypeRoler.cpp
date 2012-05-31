@@ -15,14 +15,14 @@ TypeRoler::TypeRoler(string _dataFile) :
   initializeDicMapReverse(dicmapReverse, WORDS_IDS, false);
   ifstream idss(dataFile.c_str());
   string s;
-  cerr << "Loading " << dataFile << endl;
-  while (getline(idss, s) ) {	
+  while (getline(idss, s) ) {
     stringstream ss;
     ss <<s;
     ulong currentIdent;
-    ss>>currentIdent;   
+    ss>>currentIdent;
     if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);    
+      processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);
+      i++;
     }
   }
   idss.close();  
@@ -40,15 +40,16 @@ void TypeRoler::processLine(string s, float /*thresCut*/, map<ulong, float>& ctx
   ulong currentIdent;
   float nbOccs = 0;
   float sum = 0;
+  while (ss.get() != '{');
   while (ss.get()!='}') {
     ss.unget();
     ss >> currentIdent;
-    ss.ignore(16, ',');
+    while (ss.get() != ',');
     ss >> nbOccs;
     ctxt[currentIdent]=nbOccs;
-    ss.ignore(4, ';');
+    while (ss.get() != ';');
     sum+=nbOccs;
-  }  
+  }
 
   for (map<ulong, float>::iterator it = ctxt.begin(); it!=ctxt.end() ; it++) {
     it->second/=sum;
