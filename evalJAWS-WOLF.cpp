@@ -35,7 +35,7 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
       polysemousIdsList.insert(s.substr(s.rfind(' ')+1));
       s=s.substr(0, s.rfind(' '));
     }
-    std::cerr << std::endl;
+//    std::cerr << std::endl;
   }
   llss.close();
 }
