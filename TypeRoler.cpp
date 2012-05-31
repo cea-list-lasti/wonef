@@ -22,7 +22,6 @@ TypeRoler::TypeRoler(string _dataFile) :
     ss>>currentIdent;
     if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
       processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);
-      i++;
     }
   }
   idss.close();  
