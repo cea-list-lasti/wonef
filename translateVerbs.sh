@@ -11,6 +11,8 @@ seqs=${seqsspaces// /}
 
 echo "Translating... $seqsspaces"
 ./translateVerbs $seqsspaces &> logs/transVerbs$seqs
+#valgrind --show-reachable=yes ./translateVerbs $seqsspaces
+#gdb --args ./translateVerbs $seqsspaces
 
 # The produced file needs some fixes before evaluation
 WNDATA="data2/data.fr.verbs$seqs"
