@@ -20,17 +20,16 @@
 #define INDEX_NOUN "/data/text/moutonc/opendata/WordNet-2.0/dict/index.noun"
 #define DATA_NOUN "/data/text/moutonc/opendata/WordNet-2.0/dict/data.noun"
 
-
 #define INDEX_NOUN20 "/data/text/moutonc/opendata/WordNet-2.0/dict/index.noun"
 #define DATA_NOUN20 "/data/text/moutonc/opendata/WordNet-2.0/dict/data.noun"
-
 #define INDEX_NOUN15 "/data/text/quentin/opendata/WordNet-1.5/DICT/NOUN.IDX"
 #define DATA_NOUN15 "/data/text/quentin/opendata/WordNet-1.5/DICT/NOUN.DAT"
-
 #define NOUNS_LIST "/data/text/FrameNetLUI/externals/POSlist/noms.list"
 
 #define INDEX_VERB "/data/text/moutonc/opendata/WordNet-2.0/dict/index.verb"
 #define DATA_VERB "/data/text/moutonc/opendata/WordNet-2.0/dict/data.verb"
+#define INDEX_VERB15 "/data/text/quentin/opendata/WordNet-1.5/DICT/VERB.IDX"
+#define DATA_VERB15 "/data/text/quentin/opendata/WordNet-1.5/DICT/VERB.DAT"
 #define VERBS_LIST "/data/text/FrameNetLUI/externals/POSlist/verbes.list"
 #define VERBS_P_LIST "/home/baguenierj/Projets/verbes.p.list"
 

@@ -29,7 +29,10 @@ int main(int argc, char **argv) {
   vector<int> seq;
   for (int i = 1; i < argc ; i++) {
     cerr << "ARGV : '" << argv[i] << "'"<<endl;
-    if (argv[i][0]=='1') { /*LastChanceModule				*/
+    if (argv[i][0]=='E') {
+      datafile = DATA_VERB15;
+      suffix += ".ewn";
+    } else if (argv[i][0]=='1') { /*LastChanceModule			*/
       suffix += "1";
       seq.push_back(1);
     } else if (argv[i][0]=='2') { /*SimSynVerbsModule			*/
@@ -75,10 +78,10 @@ int main(int argc, char **argv) {
     switch (*itseq) {
     case 1:
       lastchancer = new LastChanceModule;
-      cout << "Fifth step " << endl;
+      cout << "First step " << endl;
       start = time(NULL);
       lastchancer->process(wn);
-      cout << "Fifth step duration : " << time(NULL) - start << " s " << endl;
+      cout << "First step duration : " << time(NULL) - start << " s " << endl;
       delete lastchancer;
       break;
 

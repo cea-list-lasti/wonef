@@ -1,6 +1,7 @@
 #!/bin/bash
 
 WOLF='/home/qp230782/projets/wolf/wolf-0.1.4.xml'
+EWN='/home/qp230782/ressources/wn_fr.ewn '
 POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb'
 BCSMODE=4
 BCSFILE='/home/qp230782/projets/5000_bc.xml'
