@@ -48,7 +48,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
   string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COD_V.reverse");
 
   set<string> elected;
-  string elec = selectTgtWord(it->second.cand, synset, knnFile);
+  string elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
 
   if (elec!="") {
     elected.insert(elec);      
@@ -56,7 +56,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
 
   if (elected.size()==0) {
     knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "CPL_V.reverse");
-    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
     if (elec!="") {
       elected.insert(elec);      
     }
@@ -64,7 +64,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
 
   if (elected.size()==0) {
     knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "CPLV_V.reverse");
-    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
     if (elec!="") {
       elected.insert(elec);      
     }
@@ -89,7 +89,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<string> >& synset,
   return "";
 }
 
-string SimSynVerbsModule::selectTgtWord (map<string, int>& cand, map<string, set<string> >& synset, string& knnFile) {
+string SimSynVerbsModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<string> >& synset, string& knnFile) {
   map<string, uint> votes;
   for (map<string, set<string> >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
     knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
@@ -101,13 +101,14 @@ string SimSynVerbsModule::selectTgtWord (map<string, int>& cand, map<string, set
     size_t bestPos = 1000;
     string syn = "";
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
-            cerr << "Processing : " << it2->first << endl;
+            cerr << "Processing : " << it2->first << " - " << verbCand[it2->first] << endl;
     
       stringstream sssearch;
-      sssearch << " "<< it2->first<<":";
+      sssearch << " "<< verbCand[it2->first]<<":";
       size_t pos = knns.find(sssearch.str());
       if (pos!=string::npos) {
-        votes[it2->first]+=it2->second;
+	// compute the score without the pronoun
+	votes[verbCand[it2->first]]+=it2->second;
 	if( pos < bestPos) {
 	  bestPos=pos;
 	  syn=it2->first;

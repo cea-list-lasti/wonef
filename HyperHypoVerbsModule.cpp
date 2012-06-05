@@ -125,7 +125,8 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (head=="") {
 	    	head = getHead(*itSyn);
 	    }
-	    float score = tRoler.computeIsAScore( itCand->first, head, mode);
+	    // compute the score without the pronoun
+	    float score = tRoler.computeIsAScore( it->second.verbCand[itCand->first], head, mode);
 
 	    if( verbose) {
 //	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
@@ -155,7 +156,8 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (head=="") {
 		    head = getHead(*itSyn);
 	    }
-	    float score =tRoler.computeIsAScore(head, itCand->first, mode);
+	    // compute the score without the pronoun
+	    float score =tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], mode);
 	    if (!isnan(score)) {
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
 	      sum+=score==1?0.3:score;

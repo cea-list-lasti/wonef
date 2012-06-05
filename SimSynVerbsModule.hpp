@@ -24,6 +24,9 @@ public :
 private : 
   string knnStdFile;
   string selectTgtWord (map<string,int>& candidates,
+			// removes the se_ or s' when pronominal
+			// ex: verbCand["s'étrangler"] = "étrangler"
+			map<string, string>& verbCand,
 			map<string, set<string> >& synset,
 			string& knnFile);
 

@@ -5,6 +5,7 @@
 #include <vector>
 #include <set>
 #include <map>
+#include <utility>
 
 
 namespace WORDNET {
@@ -12,11 +13,15 @@ namespace WORDNET {
 
 typedef struct TgtCandidates {
   std::map<std::string, int> cand;
+  // removes the se_ or s' when pronominal
+  // ex: verbCand["s'étrangler"] = "étrangler"
+  std::map<std::string, std::string> verbCand;
   std::string processed;
   std::string formerElected;
-  TgtCandidates() {};
+  
+  TgtCandidates() : cand(), verbCand() {};
   TgtCandidates(const TgtCandidates& c) 
-    : cand(c.cand), processed(c.processed), formerElected(c.formerElected)
+    : cand(c.cand), verbCand(c.verbCand), processed(c.processed), formerElected(c.formerElected)
   {}
 } TgtCandidates;
 

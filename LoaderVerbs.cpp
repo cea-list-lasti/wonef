@@ -116,12 +116,19 @@ WORDNET::TgtCandidates LoaderVerbsModule::extractCandidates(string srcWord) {
     return res;
   }
 
-  stringstream ss;
   srcWord = tolower(srcWord);
   for (set<string>::iterator it = src2Tgt[srcWord].begin() ; it!= src2Tgt[srcWord].end(); it++) {
-    //    cerr << srcWord << " -> " << *it << endl;
-    //    res.cand.insert(pair<string, int>(*it, 0));
-    res.cand[*it]=0;
+    string tgtWord = *it;
+    res.cand[tgtWord]=0;
+
+    // removes the pronoun in order to compute subsequent scores
+    if (tgtWord.find("se_")!=string::npos) {
+      res.verbCand[tgtWord] = tgtWord.substr(tgtWord.find("_")+1);
+    } else if (tgtWord.find("s'")!=string::npos) {
+      res.verbCand[tgtWord] = tgtWord.substr(tgtWord.find("'")+1);
+    } else {
+      res.verbCand[tgtWord] = tgtWord;
+    }
   } 
   return res;
 }
@@ -265,12 +272,13 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	    // promote true (and false) fr/en friends
 	    for (map<string, int>::iterator itCand = candidates.cand.begin(); itCand!=candidates.cand.end(); itCand++) {
 	      Distance lDist;
-	      int ldScore = lDist.LD(desax(LoaderVerbsModule::desaxData, itCand->first),srcWord);
+	      // compute the score without the pronoun
+	      int ldScore = lDist.LD(desax(LoaderVerbsModule::desaxData, candidates.verbCand[itCand->first]),srcWord);
 	      if (ldScore<=3) {
 		wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;	  
 		if (verbose) {
 		cerr << srcWord << "\t *** ";
-		  cerr << "PROMOTE levenstein " << itCand->first << " - " << wne.frenchCandidates[srcWord].cand.size() << endl;    
+		  cerr << "PROMOTE levenshtein " << itCand->first << " - " << wne.frenchCandidates[srcWord].cand.size() << endl;    
 		}
 	      }
 	    }
