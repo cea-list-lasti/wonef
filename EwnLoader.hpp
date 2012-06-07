@@ -14,7 +14,7 @@ using namespace std;
 class EwnLoader {
 
 public : 
-  EwnLoader(map<string, set<string> >* ewnNet, map<string, set<string> >* ewnNetIdIdent, string& _filepath);
+  EwnLoader(map<string, set<string> >* ewnNet, map<string, set<string> >* ewnNetIdIdent, string& _filepath, map<string, set<string> >* _mapping);
   ~EwnLoader();
 
   void load();
@@ -24,5 +24,6 @@ protected :
   map<string, set<string> >* ewnNetIdIdent;
   string filepath;
   uint nbSynsets;
+  map<string, set<string> >* mapping;
 
 };

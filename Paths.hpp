@@ -59,4 +59,7 @@
 
 #define CONVFILE "/data/text/FastKNN/bases.fr/semmapconversion.global.bin"
 
+#define MAPVERB20_15 "/data/text/jeanne/mappings-upc-2007/mapping-20-15/wn20-15.verb"
+#define MAPVERB15_20 "/data/text/jeanne/mappings-upc-2007/mapping-15-20/wn15-20.verb"
+
 #endif

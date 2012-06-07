@@ -159,8 +159,8 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
 }
 
 
-int loadEWNnouns(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath) {
-  EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath);
+int loadEWNnouns(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
+  EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath, &mapping);
   ewnLoader.load();
   return 0;
 }
@@ -336,6 +336,7 @@ int main(int argc, char **argv) {
   map<string, set<string> > wolfNet = map<string, set<string> >();  
   map<string, set<string> > wolfNetIdIdent = map<string, set<string> >();
   map<string,int> bcsbase = map<string, int>();
+  map<string, set<string> > mapping = map<string, set<string> >();
 
 
   // loading BCS Base
@@ -375,10 +376,10 @@ int main(int argc, char **argv) {
   } else if (vtmode.compare("ewn")==0) {
     // loading EWN 
     cerr << "Loading EWN" << endl;  
-    if (loadEWNnouns(wolfNet, wolfNetIdIdent, argv[2])==1) {
+    if (loadEWNnouns(wolfNet, wolfNetIdIdent, argv[2], mapping)==1) {
       return 1;
     }
-    datafile=DATA_NOUN15;
+    datafile=DATA_NOUN;
   }
   
 

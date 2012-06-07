@@ -3,6 +3,7 @@
 #include <xercesc/sax2/XMLReaderFactory.hpp>
 #include <xercesc/sax2/DefaultHandler.hpp>
 #include <xercesc/util/XMLString.hpp>
+#include <boost/regex.hpp>
 
 #include <math.h>
 #include <set>
@@ -19,6 +20,38 @@
 
 using namespace std;
 
+
+std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
+
+  std::map<std::string, std::set<std::string> > mapping;
+  std::cout << "loading mapfile from: " << mapfile << "\n";
+  std::ifstream llss(mapfile.c_str());
+  std::string s;
+
+  while (getline(llss, s)) {
+    boost::regex patternIdSrc("([0-9]*)(.*)");
+    boost::regex patternIdsTgt(" ([0-9]*) (1|0.[0-9]*)");
+    std::string::const_iterator start, end;
+    start = s.begin();
+    end = s.end();
+    boost::match_results <std::string::const_iterator> what;
+    if (boost::regex_search(start, end, what, patternIdSrc)) {
+      std::string idSrc = what[1].str();
+      start = what[1].second;
+      boost::match_results <std::string::const_iterator> whatInside;
+      while (boost::regex_search(start, end, whatInside, patternIdsTgt)) {
+	std::string idTgt = whatInside[1].str();
+	if(mapping.find(idSrc)==mapping.end()) {
+	  mapping[idSrc]= std::set<std::string>();
+	}
+	mapping[idSrc].insert(idTgt);
+	start = whatInside[1].second;
+      }
+    }
+  }
+  
+  return(mapping);
+}
 
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
 
@@ -159,8 +192,8 @@ int loadBcsBase(map<string, int>& bcsbase, string filename) {
 }
 
 
-int loadEWNverbs(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath) {
-  EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath);
+int loadEWNverbs(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
+  EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath, &mapping);
   ewnLoader.load();
   return 0;
 }
@@ -322,6 +355,7 @@ int main(int argc, char **argv) {
 
   string vtmode =argv[4];
   string datafile = DATA_VERB;
+  std::string mapfile = MAPVERB15_20;
   
   int bcsmode; 
   stringstream ss; 
@@ -359,12 +393,13 @@ int main(int argc, char **argv) {
     }
   }
 
-
+  // Loading Mapping File
+  std::map<std::string, std::set<std::string> > mapping = loadMapfile(mapfile);
 
   // Loading literal list
   loadPolysemousLiteral(litList, polysemousIdsList, argv[1]);
   
-  // loading WOLF
+  // loading VT
   cerr << "VTMode : " <<vtmode << endl;
   if (vtmode.compare("wolf")==0) {
     cerr << "Loading WOLF" << endl;  
@@ -372,15 +407,14 @@ int main(int argc, char **argv) {
       return 1;
     }
     datafile=DATA_VERB;
-  }
-  /* else if (vtmode.compare("ewn")==0) {
+  } else if (vtmode.compare("ewn")==0) {
     // loading EWN 
     cerr << "Loading EWN" << endl;  
-    if (loadEWNverbs(wolfNet, wolfNetIdIdent, argv[2])==1) {
+    if (loadEWNverbs(wolfNet, wolfNetIdIdent, argv[2], mapping)==1) {
       return 1;
     }
-    datafile=DATA_NOUN15;
-  }*/
+    datafile=DATA_VERB15;
+  }
   
 
   // parsing JAWS and evaluating
