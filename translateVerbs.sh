@@ -6,7 +6,6 @@ POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb' #2.0
 #POLYSEMOUSINDEX='/home/baguenierj/Projets/VERB.POLYSEMOUS.IDX' #1.5
 BCSMODE=4
 BCSFILE='/home/qp230782/projets/5000_bc.xml'
-MAPFILE='/data/text/jeanne/mappings-upc-2007/mapping-20-15/wn20-15.verb'
 
 seqsspaces=$*
 seqs=${seqsspaces// /}
@@ -28,4 +27,4 @@ sed -i -r 's/([^A-Z "])[>]/\&gt;\1/g'  $WNDATA
 
 echo "Evaluating..."
 #./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/evalVerbs$seqs #Wolf
-./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE $MAPFILE &> logs/evalVerbsEWN$seqs #EWN
+./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbsEWN$seqs #EWN
