@@ -109,9 +109,9 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
       }
       float best = 0;
       string elected = "";
-      int validSumHypo = 0;
-      int validSumHyper = 0;
       for (map<string, int>::iterator itCand = it->second.cand.begin(); itCand != it->second.cand.end(); itCand++) {
+	int validSumHypo = 0;
+	int validSumHyper = 0;
 	float sum = 0;
 	string head = "";
 /*	if(hyponyms[itwn->first].size()==0) {
@@ -140,6 +140,7 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (score==0 && head[head.length()-1]=='s') {
 	    	head=head.substr(0, head.length()-1);
 	    	itSyn--;
+		validSumHypo--;
 	    } else {
 	    	head="";
 	    }
@@ -165,6 +166,7 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (score == 0 && head[head.length()-1]=='s') {
 	    	head=head.substr(0, head.length()-1);
 	    	itSyn--;
+		validSumHyper--;
 	    } else {
 	    	head="";
 	    }
