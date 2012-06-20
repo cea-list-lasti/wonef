@@ -66,15 +66,13 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
     }  
     for (map<string, std::set<std::pair<std::string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //  ofs << "\t\t<INSTANCE original=\""<<itwne->second<<"\">" << itwne->first << "</INSTANCE>" <<endl;
-      ofs << "\t\t<INSTANCE original=\"";
+      ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\" >" << endl;
       for (set<std::pair<std::string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
-	ofs << itSrc->first << ",";
+	ofs << "\t\t\t<INSTANCE original=\""<< itSrc->first << "\"";
+	ofs << " processed=\"" << itwn->second.frenchCandidates[itSrc->first].processed << "\"";
+	ofs << " score=\"" << itSrc->second <<"\" / >" << endl;
       }
-      ofs << "\" score=\"";
-      for (set<std::pair<std::string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
-	ofs << itSrc->second << ",";
-      }
-      ofs <<"\">" << itwne->first << "</INSTANCE>" <<endl;
+      ofs << "\t\t</INSTANCES>" << endl;
     }
 
     for (set<string>::iterator itH = itwn->second.hypers.begin(); itH != itwn->second.hypers.end(); itH++) {
