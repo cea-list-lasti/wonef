@@ -23,7 +23,11 @@ using namespace std;
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
 
   std::cerr << "loading polysemous literals from: " << filename << std::endl;
-  ifstream llss(filename.c_str());
+  ifstream llss(filename.c_str(), fstream::in);
+  if (llss.fail()) {
+    std::cerr << "Oops, " << filename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
+    exit(-1);
+  }
   string s;
   while (getline(llss, s) ) {
 //   std::cerr << "loadPolysemousLiteral lit: '" << s.substr(0, s.find(' ')) << "'" << std::endl;

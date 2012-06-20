@@ -45,7 +45,11 @@ JawsVerbsEvaluatorHandler::JawsVerbsEvaluatorHandler( set<string>& litList, set<
                                          theCode,
                                          8192);
 
-  ifstream idss(datafile.c_str());
+  ifstream idss(datafile.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << datafile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(idss, s) ) {         
     glosses[s.substr(0, s.find(' '))]=s.substr(s.find(' '));

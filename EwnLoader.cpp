@@ -19,7 +19,11 @@ EwnLoader::~EwnLoader() {
 
 void EwnLoader::load () {
   cerr << "Loading from : " << filepath << endl;
-  ifstream idss(filepath.c_str());
+  ifstream idss(filepath.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << filepath << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   string literal = "";
   string pos = "";

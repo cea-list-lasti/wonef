@@ -94,6 +94,10 @@ pair<string, float> SimSynModule::selectTgtWord (map<string, int>& cand, map<str
     string knns;
     //    cerr << "Opening : " << knnFile << endl;
     ifstream knnIfs(knnFile.c_str());
+    if (knnIfs.fail()) {
+      cerr << "Oops, " << knnIfs << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+      exit(-1);
+    }
     getline(knnIfs, knns);
     knnIfs.close();
     size_t bestPos = 1000;

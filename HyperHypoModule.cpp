@@ -34,7 +34,11 @@ HyperHypoModule::~HyperHypoModule() {
 
 
 void HyperHypoModule::loadHyperHypos(string dataInput) {
-  ifstream dataIfs(dataInput.c_str());
+  ifstream dataIfs(dataInput.c_str(), fstream::in);
+  if (dataIfs.fail()) {
+    cerr << "Oops, " << dataInput << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   int cntHypers = 0;
   int cntHypos = 0;

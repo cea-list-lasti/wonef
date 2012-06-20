@@ -5,6 +5,8 @@
 #include <iostream>
 #include "boost/regex.hpp"
 
+#include <cstdlib>
+
 using namespace std;
 
 
@@ -42,7 +44,11 @@ void LoaderModule::loadIndex() {
   }
 
   cerr << "Opening "<< indexFile << endl;
-  ifstream idss(indexFile.c_str());
+  ifstream idss(indexFile.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << indexFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(idss, s) ) {	
     string literal = s.substr(0,s.find(' '));
@@ -69,7 +75,12 @@ void LoaderModule::loadIndex() {
 
 void LoaderModule::loadPOSList(string nounsFile) {
   cerr << "Opening "<< nounsFile << endl;
-  ifstream idss(nounsFile.c_str());
+  ifstream idss(nounsFile.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << nounsFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
+
   string s;
   while (getline(idss, s) ) {	
     nounsList.insert(s);
@@ -81,7 +92,11 @@ void LoaderModule::loadBilingualDic(bool nounOnly) {
 
   for (set<string>::iterator itDic = dicfiles.begin(); itDic!=dicfiles.end(); itDic++) {
     cerr << "Opening "<< *itDic << endl;
-    ifstream idss(itDic->c_str());
+    ifstream idss(itDic->c_str(), fstream::in);
+    if (idss.fail()) {
+      cerr << "Oops, " << *itDic << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+      exit(-1);
+    }
     string s;
     
     while (getline(idss, s) ) {	
@@ -134,7 +149,11 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
   } else if (infile.find("IDX")!=string::npos) {  
     infile.replace(infile.rfind("IDX"), 3,"DAT");
   }
-  ifstream dataIfs(infile.c_str());
+  ifstream dataIfs(infile.c_str(), fstream::in);
+  if (dataIfs.fail()) {
+    cerr << "Oops, " << infile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   int cnt = 0;
   string s = "";
   cerr << infile << endl;

@@ -14,6 +14,10 @@ TypeRoler::TypeRoler(string _dataFile) :
   initializeDicMap(dicmap);  
   initializeDicMapReverse(dicmapReverse, WORDS_IDS, false);
   ifstream idss(dataFile.c_str());
+  if (idss.fail()) {
+    cerr << "Oops, " << dataFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(idss, s) ) {
     stringstream ss;

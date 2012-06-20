@@ -18,7 +18,11 @@ MeroHoloModule::MeroHoloModule(string& datafile) :
   initializeDicMap(dicmap);  
   loadMeroHolos(datafile);
 
-  ifstream idss(TYPEROLERFILE);
+  ifstream idss(TYPEROLERFILE, fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << TYPEROLERFILE << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   cerr << "Loading " << TYPEROLERFILE << endl;
   while (getline(idss, s) ) {	
@@ -52,7 +56,11 @@ MeroHoloModule::MeroHoloModule(string& datafile) :
 
 
 void MeroHoloModule::loadMeroHolos(string dataInput) {
-  ifstream dataIfs(dataInput.c_str());
+  ifstream dataIfs(dataInput.c_str(), fstream::in);
+  if (dataIfs.fail()) {
+    cerr << "Oops, " << dataInput << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   ulong cntMeros = 0;
   ulong cntHolos = 0;

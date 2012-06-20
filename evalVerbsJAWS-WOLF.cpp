@@ -25,7 +25,11 @@ std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
 
   std::map<std::string, std::set<std::string> > mapping;
   std::cout << "loading mapfile from: " << mapfile << "\n";
-  std::ifstream llss(mapfile.c_str());
+  std::ifstream llss(mapfile.c_str(), fstream::in);
+  if (llss.fail()) {
+    cerr << "Oops, " << mapfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   std::string s;
 
   while (getline(llss, s)) {
@@ -56,7 +60,11 @@ std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
 
   std::cerr << "loading polysemous literals from: " << filename << std::endl;
-  ifstream llss(filename.c_str());
+  ifstream llss(filename.c_str(), fstream::in);
+  if (llss.fail()) {
+    cerr << "Oops, " << filename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(llss, s) ) {
 //   std::cerr << "loadPolysemousLiteral lit: '" << s.substr(0, s.find(' ')) << "'" << std::endl;

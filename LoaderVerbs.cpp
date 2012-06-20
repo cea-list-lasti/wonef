@@ -40,7 +40,11 @@ void LoaderVerbsModule::loadIndex() {
   }
 
   cerr << "Opening "<< indexFile << endl;
-  ifstream idss(indexFile.c_str());
+  ifstream idss(indexFile.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << indexFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(idss, s) ) {
     string literal = s.substr(0,s.find(' '));
@@ -68,7 +72,11 @@ void LoaderVerbsModule::loadIndex() {
 
 void LoaderVerbsModule::loadPOSList(string verbsFile) {
   cerr << "Opening "<< verbsFile << endl;
-  ifstream idss(verbsFile.c_str());
+  ifstream idss(verbsFile.c_str(), fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << verbsFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   string s;
   while (getline(idss, s) ) {	
     verbsList.insert(s);
@@ -81,7 +89,11 @@ void LoaderVerbsModule::loadBilingualDic() {
 
   for (set<string>::iterator itDic = dicfiles.begin(); itDic!=dicfiles.end(); itDic++) {
     cerr << "Opening "<< *itDic << endl;
-    ifstream idss(itDic->c_str());
+    ifstream idss(itDic->c_str(), fstream::in);
+    if (idss.fail()) {
+      cerr << "Oops, " << *itDic << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+      exit(-1);
+    }
     string s;
     while (getline(idss, s) ) {
       s=boost::regex_replace(s, boost::regex(" "), "_");
@@ -141,7 +153,11 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
   } else if (infile.find("IDX")!=string::npos) {  
     infile.replace(infile.rfind("IDX"), 3,"DAT");
   }
-  ifstream dataIfs(infile.c_str());
+  ifstream dataIfs(infile.c_str(), fstream::in);
+  if (dataIfs.fail()) {
+    cerr << "Oops, " << infile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
   int cnt = 0;
   string s = "";
   cerr << infile << endl;
