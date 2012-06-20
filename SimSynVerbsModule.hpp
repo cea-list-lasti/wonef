@@ -23,16 +23,16 @@ public :
 
 private : 
   string knnStdFile;
-  string selectTgtWord (map<string,int>& candidates,
+  pair<string, float> selectTgtWord (map<string,int>& candidates,
 			// removes the se_ or s' when pronominal
 			// ex: verbCand["s'étrangler"] = "étrangler"
 			map<string, string>& verbCand,
-			map<string, set<string> >& synset,
+			map<string, set<pair<string, float> > >& synset,
 			string& knnFile);
 
 protected :
 
-  string trySelecAndReplace(map<string, set<string> >& synset,
+  string trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
 			  string synsetId,
 			  map<string, WORDNET::TgtCandidates >::iterator it,
 			  bool homograph=false);

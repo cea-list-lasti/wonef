@@ -85,7 +85,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
   int nbDisamb = 0;
 
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<string> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       reverseIndex[itwn->first].insert(itwne->first); 	
     }
   }
@@ -123,6 +123,8 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 		cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	      }
 	      sum+=score==1?0.3:score;
+	    } else {
+	      validSumHypo --;
 	    } 
 	    if (score==0 && head[head.length()-1]=='s') {
 	    	head=head.substr(0, head.length()-1);
@@ -148,6 +150,8 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (!isnan(score)) {
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
 	      sum+=score==1?0.3:score;
+	    } else {
+	      validSumHyper --;
 	    }
 	    if (score == 0 && head[head.length()-1]=='s') {
 	    	head=head.substr(0, head.length()-1);
@@ -164,6 +168,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	  sum*=1.+ (1.-0.2*lDist.LD(desax(LoaderModule::desaxData, itCand->first),it->first));
 	}
 	*/
+	sum =  sum / (validSumHypo + validSumHyper);
 	if (verbose && sum >0 ) {
 		cerr << itwn->first<<":"<<it->first << " -> " << itCand->first << ":" << sum << endl;
 	}
@@ -182,9 +187,12 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
       if (elected!="") {	
 	it->second.processed="hyperhypo";
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {
-	  itwn->second.frenchSynset[elected]=set<string>();
+	  itwn->second.frenchSynset[elected]=set<pair<string, float> >();
 	}
-	itwn->second.frenchSynset[elected].insert(it->first);
+	std::pair<std::string, float> score;
+	score.first = it->first;
+	score.second = best;
+	itwn->second.frenchSynset[elected].insert(score);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];
 	nbDisamb++;
       }

@@ -48,45 +48,48 @@ void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 
 
 
-string SimSynModule::trySelecAndReplace(map<string, set<string> >& synset,
+string SimSynModule::trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
 					string synsetId,
 					map<string, WORDNET::TgtCandidates>::iterator it,
 					bool homograph) {
   string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COMPDUNOM");
-  set<string> elected;
-  string elec = selectTgtWord(it->second.cand, synset, knnFile);
-  if (elec!="") {
+  set<pair<string, float> > elected;
+  pair<string, float> elec = selectTgtWord(it->second.cand, synset, knnFile);
+  if (elec.first!="") {
     elected.insert(elec);      
   }
   if (elected.size()==0) {
     knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COD_V");
     elec = selectTgtWord(it->second.cand, synset, knnFile);
-    if (elec!="") {
+    if (elec.first!="") {
       elected.insert(elec);      
     }
   }
   if (elected.size()==0) {
     knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "APPOS");
     elec = selectTgtWord(it->second.cand, synset, knnFile);
-    if (elec!="") {
+    if (elec.first!="") {
       elected.insert(elec);      
     }
   }
 
   if (elected.size()!=0) {
     it->second.processed="simsyn";  
-    for (set<string>::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {      
-      synset[*itElec].insert(it->first);
+    for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {  
+      pair<string, float> score;
+      score.first = it->first;
+      score.second = itElec->second;    
+      synset[itElec->first].insert(score);
     }
-    return LoaderModule::tgt2TgtDefs[*elected.begin()];
+    return LoaderModule::tgt2TgtDefs[(*elected.begin()).first];
   }
   return "";
 }
 
 
-string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<string> >& synset, string& knnFile) {
-  map<string, uint> votes;
-  for (map<string, set<string> >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
+pair<string, float> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<pair<string, float> > >& synset, string& knnFile) {
+  map<pair<string, float>, uint> votes;
+  for (map<string, set<pair<string, float> > >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
     knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
     string knns;
     //    cerr << "Opening : " << knnFile << endl;
@@ -94,7 +97,8 @@ string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<stri
     getline(knnIfs, knns);
     knnIfs.close();
     size_t bestPos = 1000;
-    string syn = "";
+    pair<string, float> syn;
+    syn.first = "";
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
       //      cerr << "Processing : " << it2->first << endl;
     
@@ -102,10 +106,13 @@ string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<stri
       sssearch << " "<< it2->first<<":";
       size_t pos = knns.find(sssearch.str());
       if (pos!=string::npos) {
-        votes[it2->first]+=it2->second;
-	if( pos < bestPos) {
-	  bestPos=pos;
-	  syn=it2->first;
+	pair<string, float> candidate;
+	candidate.first = it2->first;
+	candidate.second = pos;
+        votes[candidate] += it2->second;
+	if(pos < bestPos) {
+	  bestPos = pos;
+	  syn = candidate;
 	}
       }	    
     }
@@ -114,9 +121,9 @@ string SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<stri
   }
   
   size_t bestVote = 0;
-  string elected = "";
-  for(map<string, uint>::iterator itVotes= votes.begin(); itVotes!=votes.end() ; itVotes++)  {
-    if (itVotes->second> bestVote && itVotes->first !="" ) {
+  pair<string, float> elected;
+  for(map<pair<string, float>, uint>::iterator itVotes= votes.begin(); itVotes!=votes.end() ; itVotes++)  {
+    if (itVotes->second > bestVote && (itVotes->first).first != "") {
       bestVote = itVotes->second;
       elected = itVotes->first;
     }

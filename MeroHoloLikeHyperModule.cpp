@@ -38,7 +38,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
   int nbDisamb = 0;
   
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<string> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       reverseIndex[itwn->first].insert(itwne->first); 	
     }
   }
@@ -49,23 +49,25 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	continue;
       }
       float best = 0;
-      string elected = "";
+      pair<string, float> elected;
       for (map<string, int>::iterator itCand = it->second.cand.begin(); itCand != it->second.cand.end(); itCand++) {
 	float sum = 0;
+	int nbMeroHolo = 0;
 	for(set<string>::iterator itHypos = meronyms[itwn->first].begin(); itHypos != meronyms[itwn->first].end(); itHypos++) { 
 	  for (set<string>::iterator itSyn = reverseIndex[*itHypos].begin(); itSyn !=  reverseIndex[*itHypos].end(); itSyn++) {
 	    itwn->second.hypos.insert(*itSyn);
 	    string head = HyperHypoModule::getHead(*itSyn);
 	    float score = tRoler.computeIsAScore( itCand->first, head, mode);
 
-	    if( verbose) {
+/*	    if( verbose) {
 	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
-	    }
+	    }*/
 	    if (!isnan(score)) {
 	      if( verbose) {
-		cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+		cerr << "DEBUG MERO "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	      }
 	      sum+=score;
+	      nbMeroHolo ++;
 	    }
 	  }
 	}
@@ -75,7 +77,11 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	    string head = HyperHypoModule::getHead(*itSyn);
 	    float score =tRoler.computeIsAScore(head, itCand->first, mode);
 	    if (!isnan(score)) {
+	      if( verbose) {
+	      cerr << "DEBUG HOLO "<<" : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+	    }
 	      sum+=score;
+	      nbMeroHolo ++;
 	    }
 	  }
 	}
@@ -85,20 +91,26 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	  sum*=1.+ (1.-0.2*lDist.LD(desax(LoaderModule::desaxData, itCand->first),it->first));
 	}
 	*/
+	sum = sum / nbMeroHolo;
 
 	if (sum> best) {
 	  best = sum;
-	  elected = itCand->first;
+	  elected.first = itCand->first;
+	  elected.second = best;
 	}
 
       }
-      if (elected!="") {	
+      if (elected.first != "") {	
 	it->second.processed="hyperlike";
-	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {
-	  itwn->second.frenchSynset[elected]=set<string>();
+	if (itwn->second.frenchSynset.find(elected.first)==itwn->second.frenchSynset.end()) {
+	  itwn->second.frenchSynset[elected.first]=set<pair<string, float> >();
 	}
-	itwn->second.frenchSynset[elected].insert(it->first);
-	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];
+	pair<string, float> score;
+	score.first = it->first;
+	score.second = elected.second;
+	itwn->second.frenchSynset[elected.first].insert(score);
+	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected.first];
+	cerr << "ELECTED : " << elected.first << " score : " << score.second << endl;
 	nbDisamb++;
       }
     }

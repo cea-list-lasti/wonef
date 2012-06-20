@@ -64,11 +64,15 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
       }
       ofs << "\t\t</CANDIDATES>" <<endl; 
     }  
-    for (map<string, set<string> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, std::set<std::pair<std::string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //  ofs << "\t\t<INSTANCE original=\""<<itwne->second<<"\">" << itwne->first << "</INSTANCE>" <<endl;
       ofs << "\t\t<INSTANCE original=\"";
-      for (set<string>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
-	ofs << *itSrc << ",";
+      for (set<std::pair<std::string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
+	ofs << itSrc->first << ",";
+      }
+      ofs << "\" score=\"";
+      for (set<std::pair<std::string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
+	ofs << itSrc->second << ",";
       }
       ofs <<"\">" << itwne->first << "</INSTANCE>" <<endl;
     }
@@ -134,10 +138,10 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
       }
       ofs << "\t\t</CANDIDATES>" <<endl; 
     }  
-    for (map<string, set<string> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       ofs << "\t\t<INSTANCE original=\"";
-      for (set<string>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
-	ofs << *itSrc << ",";
+      for (set<pair<string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
+	ofs << itSrc->first << ",";
       }
       ofs <<"\">" << itwne->first << "</INSTANCE>" <<endl;
     }

@@ -24,7 +24,7 @@ void LastChanceModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 
 
 
-string LastChanceModule::trySelecAndReplace(map<string, set<string> >& synset,
+string LastChanceModule::trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
 					string synsetId,
 					map<string, WORDNET::TgtCandidates>::iterator it,
 					bool homograph) {
@@ -48,7 +48,10 @@ string LastChanceModule::trySelecAndReplace(map<string, set<string> >& synset,
     }
   }
   if (elected!="") {
-    synset[elected].insert(it->first);
+    pair<string, float> score;
+    score.first = it->first;
+    score.second = bestScore;
+    synset[elected].insert(score);
     return LoaderModule::tgt2TgtDefs[elected];
   }
   return "";

@@ -32,7 +32,7 @@ typedef struct WordNetEntry {
   std::set<std::string> hypers;
   std::set<std::string> meros;
   std::set<std::string> holos;
-  std::map<std::string, std::set<std::string> >frenchSynset;
+  std::map<std::string, std::set<std::pair<std::string, float> > > frenchSynset;
   std::map<std::string, TgtCandidates> frenchCandidates;    
 } WordNetEntry;
 

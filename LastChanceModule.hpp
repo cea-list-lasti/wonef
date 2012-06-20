@@ -13,7 +13,7 @@ public :
   virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
 
   
-  string trySelecAndReplace(map<string, set<string> >& synset,
+  string trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
 			    string synsetId,
 			    map<string, WORDNET::TgtCandidates>::iterator it,
 			    bool homograph);
