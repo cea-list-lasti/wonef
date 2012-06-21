@@ -23,7 +23,7 @@ WNDATA="data2/data.fr.verbs$seqs" #2.0
 echo "Fixing WNDATA..."
 sed -i 's/&/&amp;/g' $WNDATA
 sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNDATA
-sed -i -r 's/([^A-Z "])[>]/\&gt;\1/g'  $WNDATA
+sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
 
 echo "Evaluating..."
 #./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/evalVerbs$seqs #Wolf

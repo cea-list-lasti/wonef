@@ -70,7 +70,7 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
       for (set<std::pair<std::string, float> >::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
 	ofs << "\t\t\t<INSTANCE original=\""<< itSrc->first << "\"";
 	ofs << " processed=\"" << itwn->second.frenchCandidates[itSrc->first].processed << "\"";
-	ofs << " score=\"" << itSrc->second <<"\" / >" << endl;
+	ofs << " score=\"" << itSrc->second <<"\" />" << endl;
       }
       ofs << "\t\t</INSTANCES>" << endl;
     }
