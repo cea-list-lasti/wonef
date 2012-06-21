@@ -139,8 +139,10 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	      if( verbose) {
 		cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	      }
+	      // reduce weight of hyponyms of the synset among the candidates
 	      sum+=score==1?0.3:score;
 	    } else {
+	      // hyponym not considered in the sum
 	      validSumHypo --;
 	    } 
 	    if (score==0 && head[head.length()-1]=='s') {
@@ -167,8 +169,10 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    float score =tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], mode);
 	    if (!isnan(score)) {
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+	      // reduce weight of hypernyms of the synset among the candidates
 	      sum+=score==1?0.3:score;
 	    } else {
+	      // hypernym not considered in the sum
 	      validSumHyper --;
 	    }
 	    if (score == 0 && head[head.length()-1]=='s') {
