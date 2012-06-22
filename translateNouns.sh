@@ -19,12 +19,12 @@ seqsspaces=$*
 seqs=${seqsspaces// /}
 
 
-WOLF='/home/qp230782/projets/wolf/wolf-0.1.4.xml'
+WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
 # This is simply index.noun without the monosemous nouns
-POLYSEMOUSINDEX='/home/qp230782/projets/index.polysemous.noun'
+POLYSEMOUSINDEX='/home/qp230782/Projets/index.polysemous.noun'
 # OLDSCHOOL (means I don't care about BCSFILE?)
 BCSMODE=4
-BCSFILE='/home/qp230782/projets/5000_bc.xml'
+BCSFILE='/home/qp230782/Projets/5000_bc.xml'
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
@@ -35,7 +35,7 @@ WNDATA="data2/data.fr.nouns.wolf.noun.Noen$seqs"
 echo "Fixing WNDATA..."
 sed -i 's/&/&amp;/g' $WNDATA
 sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNDATA
-sed -i -r 's/([^A-Z "])[>]/\&gt;\1/g'  $WNDATA
+sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
 
 echo "Evaluating..."
 ./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/eval$seqs
