@@ -56,13 +56,13 @@ protected :
 
   XMLTranscoder*   theTranscoder;
   string id;
-  set<string> originalList;
+  string original;
   string originalSrc;
   string processed;
   string pos;
+  string translation;
   string tmpString;
   map<string, string> glosses;
-  map<string, string> processingTypes;
   map<string, set<string> > candidates;
   map<string, set<string> > jawsNet;
   map<string, set<string> > jawsNetIdIdent;

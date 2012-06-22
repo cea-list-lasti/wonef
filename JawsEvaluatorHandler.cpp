@@ -32,7 +32,6 @@ JawsEvaluatorHandler::JawsEvaluatorHandler( set<string>& litList, set<string>& _
 
 
   candidates = map<string, set<string > >();
-  processingTypes = map<string, string>();
   XMLTransService* const  theService =
     XMLPlatformUtils::fgTransService;
 
@@ -119,16 +118,13 @@ void JawsEvaluatorHandler::startElement(const XMLCh *const              /*uri*/,
       cerr << "nbSynset : " << nbSynsets << endl;
     }
     id=getAttrValue(attrs, "id");
-  } else if(_transcode(qname).compare("INSTANCE")==0) {    
-    string originals=getAttrValue(attrs, "original");
-    while(originals.find(",")!=string::npos) {
-      originalList.insert(originals.substr(0, originals.find(",")));
-      originals=originals.substr(originals.find(",")+1);
-    }
-
   } else if(_transcode(qname).compare("CANDIDATES")==0) {
-    processed=getAttrValue(attrs, "processed"); 
     originalSrc=getAttrValue(attrs, "original");
+  } else if (_transcode(qname).compare("INSTANCES")==0){
+    translation = getAttrValue(attrs, "translation");
+  } else if(_transcode(qname).compare("INSTANCE")==0) {  
+    original=getAttrValue(attrs, "original");
+    processed=getAttrValue(attrs, "processed"); 
   }
   
 }
@@ -141,28 +137,26 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
                                           const XMLCh *const /*localname*/,
                                           const XMLCh *const qname) {
   if (_transcode(qname).compare("INSTANCE")==0) {
-    for (set<string>::iterator itOrig = originalList.begin(); itOrig !=originalList.end(); itOrig++) {
-      string original = *itOrig; 
       if (litList.find(original)!=litList.end()) {
          cntPolysemousNounsProcessedInJaws++;
          nbInstances++;
-         while (tmpString.find('_')!=string::npos) {
-           tmpString=tmpString.replace(tmpString.find('_'), 1, " ");
+         while (translation.find('_')!=string::npos) {
+           translation=translation.replace(translation.find('_'), 1, " ");
          }
-         tmpString=tolower(tmpString);
-         cerr << "Testing : " << tmpString << " : " << id << endl;
-         for (set<string>::iterator ittest = vtNet[tmpString].begin(); ittest !=vtNet[tmpString].end() ; ittest++) {
+         translation=tolower(translation);
+         cerr << "Testing : " << translation << " : " << id << endl;
+         for (set<string>::iterator ittest = vtNet[translation].begin(); ittest !=vtNet[translation].end() ; ittest++) {
          cerr <<         "Inside : " <<*ittest<< endl;
          }
-      jawsNet[tmpString].insert(id);
-      jawsNetIdIdent[id].insert(tmpString);
+      jawsNet[translation].insert(id);
+      jawsNetIdIdent[id].insert(translation);
       if (vtNetIdIdent[id].size() > 0) {
          cntPolysemousNounsProcessedInJawsFoundInVt++;
-         if (vtNet[tmpString].find(id)!=vtNet[tmpString].end()) {
+         if (vtNet[translation].find(id)!=vtNet[translation].end()) {
            cntPolysemousNounsProcessedInJawsAgreeWithVt++;
          } else {
            cntType2++;
-           cout <<":Error Type 2 : "<< tmpString<<"("<<id << " : " << processingTypes[original]<< " : " << original <<": ";
+           cout <<":Error Type 2 : "<< translation <<"("<< id << " : " << processed << " : " << original <<": ";
            for (set<string>::iterator itCand = candidates[original].begin(); itCand!= candidates[original].end(); itCand++) {
              cout << *itCand << ", ";
            }
@@ -175,14 +169,14 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
            cout << " , where they prefer : " ;
            for (set<string>::iterator itIdent = vtNetIdIdent[id].begin(); itIdent!= vtNetIdIdent[id].end(); itIdent++) {
              cout << *itIdent << ", " ;
-             if (tmpString.compare(*itIdent)==0) {
+             if (translation.compare(*itIdent)==0) {
                cout << "MATCH point" << endl;
              }
            }
          
            cout << ". "<< endl;
            cout << ", but in " ;
-           for (set<string>::iterator itId = vtNet[tmpString].begin(); itId!= vtNet[tmpString].end(); itId++) {
+           for (set<string>::iterator itId = vtNet[translation].begin(); itId!= vtNet[translation].end(); itId++) {
              cout << *itId << " : " ;
              for (set<string>::iterator itIdent = vtNetIdIdent[*itId].begin(); itIdent!= vtNetIdIdent[*itId].end(); itIdent++) {
                cout << *itIdent << ", " ;
@@ -195,13 +189,13 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
          }
       } else {
          cntType1++;
-         cout << id <<":Error Type 1 : '"<< id <<"'("<< tmpString<< " : " << processingTypes[original]<< " : " << original <<":";
+         cout << id <<":Error Type 1 : '"<< id <<"'("<< translation<< " : " << processed << " : " << original <<":";
          for (set<string>::iterator itCand = candidates[original].begin(); itCand!= candidates[original].end(); itCand++) {
            cout << *itCand << ", ";
          }
          cout << ") does not exist in vt." << endl;
          cout << "In Jaws :  "<< endl;
-         for (set<string>::iterator itId = jawsNet[tmpString].begin(); itId != jawsNet[tmpString].end(); itId++) {
+         for (set<string>::iterator itId = jawsNet[translation].begin(); itId != jawsNet[translation].end(); itId++) {
            cout << *itId <<" : " << glosses[*itId] << endl;
          }
          assert(vtNetIdIdent[id].size()==0);
@@ -209,27 +203,25 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
          cout << "------"<< endl;
       }
     }
-    } // end itOrig
-    originalList.clear();
+
   } else if (_transcode(qname).compare("CANDIDATES")==0) {
     if (litList.find(originalSrc)!=litList.end()) {
       cerr << "o:" << originalSrc << endl;
       nbOriginalLit++;    
     }
-    processingTypes[originalSrc]=processed;    
   } else if (_transcode(qname).compare("CANDIDATE")==0) {
     candidates[originalSrc].insert(tmpString);    
   } else if (_transcode(qname).compare("SYNSET")==0) {
     if (polysemousIdsList.find(id)!=polysemousIdsList.end() ) {      
       for (set<string>::iterator it = vtNetIdIdent[id].begin() ; it != vtNetIdIdent[id].end(); it++ ) {
          cntPolysemousNounsProcessedInVt++;
-         if (jawsNetIdIdent[id].size() > 0) {
+         if (jawsNet[*it].size() > 0) {
            cntPolysemousNounsProcessedInVtFoundInJaws++;
            if (jawsNet[*it].find(id)!=jawsNet[*it].end()) {
              cntPolysemousNounsProcessedInVtAgreeWithJaws++;
            } else {
              cntType4++;
-             cout <<id <<":Error Type 4 : "<< *it<<" exists in jaws not in " << id << " : ";
+             cout <<id <<":Error Type 4 : "<< *it <<" exists in jaws not in " << id << " : ";
              for (set<string>::iterator itIdent = vtNetIdIdent[id].begin(); itIdent!= vtNetIdIdent[id].end(); itIdent++) {
                cout << *itIdent << ", " ;
              }
@@ -273,7 +265,6 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
       }
     } // end if id is polysemous
     candidates.clear();
-    processingTypes.clear();
     nbInstances=0;
   } // end endElement SYNSET
   
