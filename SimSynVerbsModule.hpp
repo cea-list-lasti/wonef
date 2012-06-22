@@ -27,12 +27,12 @@ private :
 			// removes the se_ or s' when pronominal
 			// ex: verbCand["s'étrangler"] = "étrangler"
 			map<string, string>& verbCand,
-			map<string, set<pair<string, float> > >& synset,
+			map<string, set<WORDNET::TranslationInfos> >& synset,
 			string& knnFile);
 
 protected :
 
-  string trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
+  string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 			  string synsetId,
 			  map<string, WORDNET::TgtCandidates >::iterator it,
 			  bool homograph=false);

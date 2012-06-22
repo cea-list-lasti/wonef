@@ -40,7 +40,7 @@ void SimSynVerbsModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 }
 
 
-string SimSynVerbsModule::trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
+string SimSynVerbsModule::trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 					string synsetId,
 					map<string, WORDNET::TgtCandidates>::iterator it,
 					bool homograph) {
@@ -81,10 +81,11 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<pair<string, float>
   if (elected.size()!=0) {
     it->second.processed="simsyn";  
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {   
-      pair<string, float> score;
-      score.first = it->first;
-      score.second = itElec->second;
-      synset[itElec->first].insert(score);
+      WORDNET::TranslationInfos translationInfos;
+      translationInfos.original = it->first;
+      translationInfos.processed = "simsyn";
+      translationInfos.score = itElec->second;
+      synset[itElec->first].insert(translationInfos);
     }
     return LoaderVerbsModule::tgt2TgtDefs[(*elected.begin()).first];
   }
@@ -92,9 +93,9 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<pair<string, float>
   return "";
 }
 
-pair<string, float> SimSynVerbsModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<pair<string, float> > >& synset, string& knnFile) {
+pair<string, float> SimSynVerbsModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<WORDNET::TranslationInfos> >& synset, string& knnFile) {
   map<pair<string, float>, uint> votes;
-  for (map<string, set<pair<string, float> > >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
+  for (map<string, set<WORDNET::TranslationInfos> >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
     knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
     string knns;
         cerr << "Opening : " << knnFile << endl;

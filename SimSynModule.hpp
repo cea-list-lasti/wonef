@@ -24,12 +24,12 @@ public :
 private : 
   string knnStdFile;
   pair<string, float> selectTgtWord (map<string,int>& candidates,
-			map<string, set<pair<string, float> > >& synset,
+			map<string, set<WORDNET::TranslationInfos> >& synset,
 			string& knnFile);
 
 protected :
 
-  string trySelecAndReplace(map<string, set<pair<string, float> > >& synset,
+  string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 			  string synsetId,
 			  map<string, WORDNET::TgtCandidates >::iterator it,
 			  bool homograph=false);

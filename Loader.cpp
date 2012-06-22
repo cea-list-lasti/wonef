@@ -186,9 +186,9 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	  srcWord = tolower(srcWord);
 	  capital=true;
 	} 	
-	pair<string, float> score;
-	score.first = srcWord;
-	score.second = 1;
+	WORDNET::TranslationInfos translationInfos;
+	translationInfos.original = srcWord;
+	translationInfos.score = 1;
 
 	if (WNIndex[srcWord].size()==0) {
 	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;	  
@@ -198,9 +198,10 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	  wne.frenchCandidates[srcWord]= candidates;
 	  for (std::map<std::string, int>::iterator it = candidates.cand.begin(); it != candidates.cand.end(); it++) {
 	    if (wne.frenchSynset.find(it->first)==wne.frenchSynset.end()) {
-	      wne.frenchSynset[it->first]=set<pair<string, float> >();  
+	      wne.frenchSynset[it->first]=set<WORDNET::TranslationInfos>();  
 	    }
-	    wne.frenchSynset[it->first].insert(score);
+	    translationInfos.processed = "monosemous";
+	    wne.frenchSynset[it->first].insert(translationInfos);
 	    //wne.frenchSynset.insert(pair<string, string>(it->first, srcWord));
 	    wne.newdef=tgt2TgtDefs[it->first];
 	  }
@@ -213,9 +214,10 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	    //	    wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
 	    if (!noen || capital) {
 	      if (wne.frenchSynset.find(srcWord)==wne.frenchSynset.end()) {
-		wne.frenchSynset[srcWord]=set<pair<string, float> >();  
+		wne.frenchSynset[srcWord]=set<WORDNET::TranslationInfos>();  
 	      }
-	      wne.frenchSynset[srcWord].insert(score);
+	      translationInfos.processed = "notranslation";
+	      wne.frenchSynset[srcWord].insert(translationInfos);
 	      //wne.frenchSynset.insert(pair<string, string>(srcWord, srcWord));
 	    }
 	    wne.newdef=tgt2TgtDefs[srcWord];
@@ -232,9 +234,10 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	    }
 	    */
 	    if (wne.frenchSynset.find(candidates.cand.begin()->first)==wne.frenchSynset.end()) {
-	      wne.frenchSynset[candidates.cand.begin()->first]=set<pair<string, float> >();   
+	      wne.frenchSynset[candidates.cand.begin()->first]=set<WORDNET::TranslationInfos>();   
 	    }
-	    wne.frenchSynset[candidates.cand.begin()->first].insert(score);
+	    translationInfos.processed = "uniq";
+	    wne.frenchSynset[candidates.cand.begin()->first].insert(translationInfos);
 	    //wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
 	    //	      wne.frenchSynset.insert(pair<string, string>(candidates.cand.begin()->first, srcWord));
 	     

@@ -18,6 +18,16 @@ typedef struct TgtCandidates {
   std::string formerElected;
 } TgtCandidates;
 
+struct TranslationInfos {
+  std::string original;
+  std::string processed;
+  float score;
+  TranslationInfos() : original(), processed(), score() {}
+  bool operator< (const TranslationInfos& that ) const {
+    return this->original < that.original || this->processed < that.processed;
+  }
+};
+
 typedef struct WordNetEntry {
   //  std::string synsetId;
   std::string def;
@@ -26,7 +36,7 @@ typedef struct WordNetEntry {
   std::set<std::string> hypers;
   std::set<std::string> meros;
   std::set<std::string> holos;
-  std::map<std::string, std::set<std::pair<std::string, float> > > frenchSynset;
+  std::map<std::string, std::set<TranslationInfos> > frenchSynset;
   std::map<std::string, TgtCandidates> frenchCandidates;
 } WordNetEntry;
 

@@ -89,7 +89,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
   int nbDisamb = 0;
 
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       reverseIndex[itwn->first].insert(itwne->first); 	
     }
   }
@@ -191,12 +191,13 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
       if (elected!="") {	
 	it->second.processed="hyperhypo";
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {
-	  itwn->second.frenchSynset[elected]=set<pair<string, float> >();
+	  itwn->second.frenchSynset[elected] = set<WORDNET::TranslationInfos>();
 	}
-	std::pair<std::string, float> score;
-	score.first = it->first;
-	score.second = best;
-	itwn->second.frenchSynset[elected].insert(score);
+	WORDNET::TranslationInfos translationInfo;
+	translationInfo.original = it->first;
+	translationInfo.processed = "hyperhypo";
+	translationInfo.score = best;
+	itwn->second.frenchSynset[elected].insert(translationInfo);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];
 	nbDisamb++;
       }

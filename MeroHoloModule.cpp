@@ -183,7 +183,7 @@ void MeroHoloModule::finalize() {
 
 void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //    for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
       //      for (map<string, int>::iterator itcand = itlit->second.cand.begin() ; itcand != itlit->second.cand.end(); itcand++) {
 	reverseIndex[itwn->first].insert(itwne->first); 
@@ -213,7 +213,7 @@ float MeroHoloModule::computeIsPartOfScore(WORDNET::WordNet& wn, string strA, st
   }
   float sum = 0;
   cerr << "--------------" << endl;
-  for (map<string,set<pair<string, float> > >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {    
+  for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {    
     cerr << strA << " is part of " << itlit->first  << " ? " << endl;
     sum += (float)coocsMero[strA][itlit->first]/(float)(sumMeros[strA]*sumHolos[itlit->first]);
 //    cerr << "MERO sum += " << coocsMero[strA][itlit->first] << " / (" << sumMeros[strA] << "*" << sumHolos[itlit->first] << ")\n";
@@ -232,7 +232,7 @@ float MeroHoloModule::computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, s
   }
   float sum = 0;
   cerr << "--------------" << endl;
-  for (map<string,set<pair<string, float> > >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {
+  for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {
     cerr << strA << " is whole of " << itlit->first  << " ? " << endl;
     sum += (float)coocsHolo[strA][itlit->first]/(float)(sumMeros[itlit->first]*sumHolos[strA]);
 //    cerr << "HOLO sum += " << coocsHolo[strA][itlit->first] << " / (" << sumMeros[itlit->first] << "*" << sumHolos[strA] << ")\n";
@@ -291,12 +291,13 @@ string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORD
     itlit->second.processed="meroholo";
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {
       if (itwne->second.frenchSynset.find(itElec->first)==itwne->second.frenchSynset.end()) {
-	itwne->second.frenchSynset[itElec->first]=set<pair<string, float> >();
+	itwne->second.frenchSynset[itElec->first]=set<WORDNET::TranslationInfos>();
       }
-      pair<string, float> score;
-      score.first = itlit->first;
-      score.second = itElec->second;
-      itwne->second.frenchSynset[itElec->first].insert(score);
+      WORDNET::TranslationInfos translationInfos;
+      translationInfos.original = itlit->first;
+      translationInfos.processed = "meroholo";
+      translationInfos.score = itElec->second;
+      itwne->second.frenchSynset[itElec->first].insert(translationInfos);
     }
     return LoaderModule::tgt2TgtDefs[(*elected.begin()).first];
   }

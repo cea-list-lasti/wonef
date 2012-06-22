@@ -38,7 +38,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
   int nbDisamb = 0;
   
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<pair<string, float> > >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
+    for (map<string, set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       reverseIndex[itwn->first].insert(itwne->first); 	
     }
   }
@@ -103,14 +103,15 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
       if (elected.first != "") {	
 	it->second.processed="hyperlike";
 	if (itwn->second.frenchSynset.find(elected.first)==itwn->second.frenchSynset.end()) {
-	  itwn->second.frenchSynset[elected.first]=set<pair<string, float> >();
+	  itwn->second.frenchSynset[elected.first]=set<WORDNET::TranslationInfos>();
 	}
-	pair<string, float> score;
-	score.first = it->first;
-	score.second = elected.second;
-	itwn->second.frenchSynset[elected.first].insert(score);
+	WORDNET::TranslationInfos translationInfos;
+	translationInfos.original = it->first;
+	translationInfos.processed = "hyperlike";
+	translationInfos.score = elected.second;
+	itwn->second.frenchSynset[elected.first].insert(translationInfos);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected.first];
-	cerr << "ELECTED : " << elected.first << " score : " << score.second << endl;
+	cerr << "ELECTED : " << elected.first << " score : " << translationInfos.score << endl;
 	nbDisamb++;
       }
     }
