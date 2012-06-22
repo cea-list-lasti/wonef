@@ -179,9 +179,6 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	string srcWord;
 	ss >> srcWord;
 	srcWord=srcWord.substr(0, srcWord.find(' '));
-	pair<string, float> score;
-	score.first = srcWord;
-	score.second = 1;
 
 	WORDNET::TgtCandidates candidates = extractCandidates(srcWord);	
 
@@ -189,10 +186,14 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	if (WNIndex[srcWord].size()==0) {
 	  srcWord = tolower(srcWord);
 	  capital=true;
-	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;
 	}
+	pair<string, float> score;
+	score.first = srcWord;
+	score.second = 1;
 
-	else if (WNIndex[srcWord].size()==1) {
+	if (WNIndex[srcWord].size()==0) {
+	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;	  
+	} else if (WNIndex[srcWord].size()==1) {
 	  candidates.processed="monosemous";
 	  //	  wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
 	  wne.frenchCandidates[srcWord]= candidates;

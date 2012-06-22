@@ -180,16 +180,16 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	string srcWord;
 	ss >> srcWord;
 	srcWord=srcWord.substr(0, srcWord.find(' '));
-	pair<string, float> score;
-	score.first = srcWord;
-	score.second = 1;
-
 	WORDNET::TgtCandidates candidates = extractCandidates(srcWord);	
 	bool capital = false;
 	if (WNIndex[srcWord].size()==0) {
 	  srcWord = tolower(srcWord);
 	  capital=true;
 	} 	
+	pair<string, float> score;
+	score.first = srcWord;
+	score.second = 1;
+
 	if (WNIndex[srcWord].size()==0) {
 	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;	  
 	} else if (WNIndex[srcWord].size()==1) {
