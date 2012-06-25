@@ -13,7 +13,7 @@ using namespace std;
 class SimSynModule : public TranslatorModule {
   
 public : 
-  SimSynModule();
+  SimSynModule(int idModuleConf, int nIteration);
   virtual ~SimSynModule();
 
 
@@ -26,6 +26,7 @@ private :
   pair<string, float> selectTgtWord (map<string,int>& candidates,
 			map<string, set<WORDNET::TranslationInfos> >& synset,
 			string& knnFile);
+  string suffix;
 
 protected :
 

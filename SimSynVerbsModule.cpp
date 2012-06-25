@@ -10,8 +10,11 @@
 
 using namespace std;
 
-SimSynVerbsModule::SimSynVerbsModule() {
+SimSynVerbsModule::SimSynVerbsModule(int idModuleConf, int nIteration) {
   knnStdFile =  KNNSTDFILE;
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 }
 
 SimSynVerbsModule::~SimSynVerbsModule() {
@@ -82,7 +85,7 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<WORDNET::Translatio
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {   
       WORDNET::TranslationInfos translationInfos;
       translationInfos.original = it->first;
-      translationInfos.processed = "simsyn";
+      translationInfos.processed = "simsyn" + suffix;
       translationInfos.score = itElec->second;
       synset[itElec->first].insert(translationInfos);
     }

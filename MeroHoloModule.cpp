@@ -13,10 +13,14 @@ using namespace std;
 MeroHoloModule::MeroHoloModule() {
 }
 
-MeroHoloModule::MeroHoloModule(string& datafile) :
+MeroHoloModule::MeroHoloModule(string& datafile, int idModuleConf, int nIteration) :
   cntMeros(0), cntHolos(0) {
   initializeDicMap(dicmap);  
   loadMeroHolos(datafile);
+  
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 
   ifstream idss(TYPEROLERFILE, fstream::in);
   if (idss.fail()) {
@@ -294,7 +298,7 @@ string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORD
       }
       WORDNET::TranslationInfos translationInfos;
       translationInfos.original = itlit->first;
-      translationInfos.processed = "meroholo";
+      translationInfos.processed = "meroholo" + suffix;
       translationInfos.score = itElec->second;
       itwne->second.frenchSynset[itElec->first].insert(translationInfos);
     }

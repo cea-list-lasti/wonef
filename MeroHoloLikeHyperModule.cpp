@@ -11,7 +11,7 @@
 using namespace std;
 
 
-MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile) {
+MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration) {
   initializeDicMap(dicmap);  
   loadMeroHolos(datafile);
 
@@ -103,7 +103,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	}
 	WORDNET::TranslationInfos translationInfos;
 	translationInfos.original = it->first;
-	translationInfos.processed = "hyperlike";
+	translationInfos.processed = "hyperlike" + suffix;
 	translationInfos.score = elected.second;
 	itwn->second.frenchSynset[elected.first].insert(translationInfos);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected.first];

@@ -10,7 +10,7 @@
 using namespace std;
 
 
-HyperHypoVerbsModule::HyperHypoVerbsModule(string dataInput, string typeroler, TRMode _mode)
+HyperHypoVerbsModule::HyperHypoVerbsModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration)
     : mode(_mode) {
   if (typeroler.compare("SUJ_V.reverse")==0) {
     tRoler = TypeRoler(TYPEROLERFILE5);
@@ -34,6 +34,9 @@ HyperHypoVerbsModule::HyperHypoVerbsModule(string dataInput, string typeroler, T
     tRoler = TypeRoler(TYPEROLERFILE4);
   }
   loadHyperHypos(dataInput);  
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 }
 
 
@@ -209,7 +212,7 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	}
 	WORDNET::TranslationInfos translationInfos;
 	translationInfos.original = it->first;
-	translationInfos.processed = "hyperhypo";
+	translationInfos.processed = "hyperhypo" + suffix;
 	translationInfos.score = best;
 	itwn->second.frenchSynset[elected].insert(translationInfos);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];

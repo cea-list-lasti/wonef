@@ -94,10 +94,12 @@ int main(int argc, char **argv) {
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
 
-  for(vector<int>::iterator itseq = seq.begin(); itseq!= seq.end(); itseq++) {
-    switch (*itseq) {
+  int nIteration = 0;
+  for(vector<int>::iterator idModuleConf = seq.begin(); idModuleConf!= seq.end(); idModuleConf++) {
+    nIteration++;
+    switch (*idModuleConf) {
     case 1:
-      simsyner = new SimSynModule;
+      simsyner = new SimSynModule(*idModuleConf, nIteration);
 
       cout << "First step "  << endl;
       if (wn["00472185"].frenchCandidates.size()!=0) {
@@ -109,7 +111,7 @@ int main(int argc, char **argv) {
       break;
 
     case 2 :
-      hyperhypoer = new HyperHypoModule(datafile, "COMPDUNOM", R_HYPER);
+      hyperhypoer = new HyperHypoModule(datafile, "COMPDUNOM", R_HYPER, *idModuleConf, nIteration);
       cout << "Second step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -128,7 +130,7 @@ int main(int argc, char **argv) {
       cout << "Third step duration : " << time(NULL) - start << " s " << endl;
       */
 
-      merohololiker = new MeroHoloLikeHyperModule(datafile);
+      merohololiker = new MeroHoloLikeHyperModule(datafile, *idModuleConf, nIteration);
       cout << "Third step " << endl;
       start = time(NULL);
       merohololiker->process(wn, R_HYPER, false);
@@ -137,7 +139,7 @@ int main(int argc, char **argv) {
       break;
 
     case 4 :
-      meroholoer = new MeroHoloModule(datafile);
+      meroholoer = new MeroHoloModule(datafile, *idModuleConf, nIteration);
       cout << "Fourth step " << endl;
       start = time(NULL);
       meroholoer->process(wn);
@@ -147,7 +149,7 @@ int main(int argc, char **argv) {
       break;
 
     case 5 :
-      lastchancer = new LastChanceModule;
+      lastchancer = new LastChanceModule(*idModuleConf, nIteration);
       cout << "Fifth step " << endl;
       start = time(NULL);
       lastchancer->process(wn);
@@ -156,7 +158,7 @@ int main(int argc, char **argv) {
       break;
 
     case 6 :
-      hyperhypoer = new HyperHypoModule(datafile, "SUJ_V", R_HYPER);
+      hyperhypoer = new HyperHypoModule(datafile, "SUJ_V", R_HYPER, *idModuleConf, nIteration);
       cout << "Six step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn, false);
@@ -165,7 +167,7 @@ int main(int argc, char **argv) {
       break;
 
     case 7 :
-      hyperhypoer = new HyperHypoModule(datafile, "COMPDUNOM", R_HYPO);
+      hyperhypoer = new HyperHypoModule(datafile, "COMPDUNOM", R_HYPO, *idModuleConf, nIteration);
       cout << "Seventh step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn, false);
@@ -174,7 +176,7 @@ int main(int argc, char **argv) {
       break;
 
     case 8 :
-      hyperhypoer = new HyperHypoModule(datafile, "COD_V", R_HYPER);
+      hyperhypoer = new HyperHypoModule(datafile, "COD_V", R_HYPER, *idModuleConf, nIteration);
       cout << "Eigth step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn, false);
@@ -183,7 +185,7 @@ int main(int argc, char **argv) {
       break;
 
     case 9 :
-      hyperhypoer = new HyperHypoModule(datafile, "window10", R_HYPER);
+      hyperhypoer = new HyperHypoModule(datafile, "window10", R_HYPER, *idModuleConf, nIteration);
       cout << "Ninth step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn, false);

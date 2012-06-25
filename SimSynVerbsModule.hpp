@@ -13,7 +13,7 @@ using namespace std;
 class SimSynVerbsModule : public TranslatorModule {
   
 public : 
-  SimSynVerbsModule();
+  SimSynVerbsModule(int idModuleConf, int nIteration);
   virtual ~SimSynVerbsModule();
 
 
@@ -29,6 +29,7 @@ private :
 			map<string, string>& verbCand,
 			map<string, set<WORDNET::TranslationInfos> >& synset,
 			string& knnFile);
+  string suffix;
 
 protected :
 

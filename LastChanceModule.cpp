@@ -5,7 +5,10 @@
 
 using namespace std;
 
-LastChanceModule::LastChanceModule() {
+LastChanceModule::LastChanceModule(int _idModuleConf, int _nIteration) {
+  std::ostringstream oss;
+  oss << _idModuleConf << "." << _nIteration;
+  suffix = oss.str();
 }
 
 LastChanceModule::~LastChanceModule() {
@@ -49,7 +52,7 @@ string LastChanceModule::trySelecAndReplace(map<string, set<WORDNET::Translation
   if (elected!="") {
     WORDNET::TranslationInfos translationInfos;
     translationInfos.original = it->first;
-    translationInfos.processed = "vote-lastchance";
+    translationInfos.processed = "vote-lastchance" + suffix;
     translationInfos.score = bestScore;
     synset[elected].insert(translationInfos);
     return LoaderModule::tgt2TgtDefs[elected];

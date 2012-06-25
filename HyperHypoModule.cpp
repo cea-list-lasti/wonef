@@ -10,7 +10,7 @@
 using namespace std;
 
 
-HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode)
+HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration)
     : mode(_mode) {
   if (typeroler.compare("COMPDUNOM")==0) {
     tRoler = TypeRoler(TYPEROLERFILE);
@@ -22,6 +22,9 @@ HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mod
     tRoler = TypeRoler(TYPEROLERFILE4);
   }
   loadHyperHypos(dataInput);  
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 }
 
 
@@ -191,7 +194,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	}
 	WORDNET::TranslationInfos translationInfo;
 	translationInfo.original = it->first;
-	translationInfo.processed = "hyperhypo";
+	translationInfo.processed = "hyperhypo" + suffix;
 	translationInfo.score = best;
 	itwn->second.frenchSynset[elected].insert(translationInfo);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];

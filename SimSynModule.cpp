@@ -11,8 +11,11 @@
 using namespace std;
 
 
-SimSynModule::SimSynModule() {
+SimSynModule::SimSynModule(int idModuleConf, int nIteration) {
   knnStdFile =  KNNSTDFILE;
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 }
 
 
@@ -77,7 +80,7 @@ string SimSynModule::trySelecAndReplace(map<string, set<WORDNET::TranslationInfo
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {  
       WORDNET::TranslationInfos translationInfos;
       translationInfos.original = it->first;
-      translationInfos.processed = "simsyn";
+      translationInfos.processed = "simsyn" + suffix;
       translationInfos.score = itElec->second;
       synset[itElec->first].insert(translationInfos);
     }

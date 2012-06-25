@@ -74,10 +74,12 @@ int main(int argc, char **argv) {
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
 
-  for(vector<int>::iterator itseq = seq.begin(); itseq!= seq.end(); itseq++) {
-    switch (*itseq) {
+  int nIteration = 0;
+  for(vector<int>::iterator idModuleConf = seq.begin(); idModuleConf!= seq.end(); idModuleConf++) {
+    nIteration++;
+    switch (*idModuleConf) {
     case 1:
-      lastchancer = new LastChanceModule;
+      lastchancer = new LastChanceModule(*idModuleConf, nIteration);
       cout << "First step " << endl;
       start = time(NULL);
       lastchancer->process(wn);
@@ -86,7 +88,7 @@ int main(int argc, char **argv) {
       break;
 
     case 2 :
-      simsyner = new SimSynVerbsModule;
+      simsyner = new SimSynVerbsModule(*idModuleConf, nIteration);
       cout << "Second step "  << endl;
       simsyner->process(wn);
       cout << "Second step duration : " << time(NULL) - start << " s " << endl;
@@ -94,7 +96,7 @@ int main(int argc, char **argv) {
       break;
 
     case 3 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V_RELG.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V_RELG.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Third step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -103,7 +105,7 @@ int main(int argc, char **argv) {
       break;
 
     case 4 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "COD_V.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "COD_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Fourth step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -112,7 +114,7 @@ int main(int argc, char **argv) {
       break;
 
     case 5 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Fifth step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -121,7 +123,7 @@ int main(int argc, char **argv) {
       break;
 
     case 6 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "ATB_S.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "ATB_S.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Six step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -130,7 +132,7 @@ int main(int argc, char **argv) {
       break;
 
     case 7 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Seventh step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);
@@ -139,7 +141,7 @@ int main(int argc, char **argv) {
       break;
 
     case 8 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPLV_V.reverse", R_HYPER);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPLV_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Eigth step "  << endl;
       start = time(NULL);
       hyperhypoer->process(wn);

@@ -17,7 +17,7 @@ using namespace std;
 class MeroHoloLikeHyperModule : public MeroHoloModule {
   
 public : 
-  MeroHoloLikeHyperModule(string& datafile);
+  MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration);
   virtual ~MeroHoloLikeHyperModule();
 
 

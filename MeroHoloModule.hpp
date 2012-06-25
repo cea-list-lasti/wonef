@@ -20,14 +20,12 @@ class MeroHoloModule : public TranslatorModule {
   
 public : 
   MeroHoloModule();
-  MeroHoloModule(string& datafile);
+  MeroHoloModule(string& datafile, int idModuleConf, int nIteration);
   virtual ~MeroHoloModule();
 
 
   void finalize();
   virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
-
-
  
 protected :
 
@@ -43,6 +41,7 @@ protected :
   std::map<string, uint> sumMeros;
   std::map<string, uint> sumHolos;
 
+  string suffix;
 
   int cntMeros; 
   int cntHolos;
