@@ -96,9 +96,6 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
   cerr << "Reverse Index size : " << reverseIndex.size() << endl;
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {    
     for (map<string, WORDNET::TgtCandidates >::iterator it = itwn->second.frenchCandidates.begin(); it != itwn->second.frenchCandidates.end(); it++) {
-      if (it->second.processed!="" ) {
-	continue;
-      }
       float best = 0;
       string elected = "";
       for (map<string, int>::iterator itCand = it->second.cand.begin(); itCand != it->second.cand.end(); itCand++) {
@@ -188,8 +185,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	*/
 	cerr << "elected :"<< elected << endl;
 
-      if (elected!="") {	
-	it->second.processed="hyperhypo";
+      if (elected!="") {
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {
 	  itwn->second.frenchSynset[elected] = set<WORDNET::TranslationInfos>();
 	}

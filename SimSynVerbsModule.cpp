@@ -20,7 +20,7 @@ SimSynVerbsModule::~SimSynVerbsModule() {
 void SimSynVerbsModule::process(WORDNET::WordNet& wn, bool /*verbose*/){ 
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {
-      if (itwne->second.processed=="" && itwne->second.cand.size()>0) {
+      if (itwne->second.cand.size()>0) {
 	if (itwne->first.find("coupling") !=string::npos) {
 	  cerr << "TRY PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
 	}
@@ -30,7 +30,7 @@ void SimSynVerbsModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {
-      if (itwne->second.processed=="" && itwne->second.cand.size()>0) {
+      if (itwne->second.cand.size()>0) {
 	if (itwne->first.find("coupling") !=string::npos) {
 	  cerr << "ENDING PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
 	}	
@@ -79,7 +79,6 @@ string SimSynVerbsModule::trySelecAndReplace(map<string, set<WORDNET::Translatio
   }
 */
   if (elected.size()!=0) {
-    it->second.processed="simsyn";  
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {   
       WORDNET::TranslationInfos translationInfos;
       translationInfos.original = it->first;

@@ -58,7 +58,8 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
 
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       //      ofs << "\t\t<ORIGINAL>" << itwne->first << "</ORIGINAL>" << endl;
-      ofs << "\t\t<CANDIDATES original=\""<<itwne->first <<"\" processed=\""<< itwne->second.processed <<"\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
+      ofs << "\t\t<CANDIDATES original=\"" << itwne->first
+	  << "\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
       for (map<string, int>::iterator itCand = itwne->second.cand.begin(); itCand !=itwne->second.cand.end(); itCand++) {	
 	ofs << "\t\t\t<CANDIDATE score=\""<< itCand->second <<"\">" << itCand->first << "</CANDIDATE>"<< endl;
       }
@@ -130,7 +131,8 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
 
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       //      ofs << "\t\t<ORIGINAL>" << itwne->first << "</ORIGINAL>" << endl;
-      ofs << "\t\t<CANDIDATES original=\""<<itwne->first <<"\" processed=\""<< itwne->second.processed <<"\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
+      ofs << "\t\t<CANDIDATES original=\""<<itwne->first
+	  << "\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
       for (map<string, int>::iterator itCand = itwne->second.cand.begin(); itCand !=itwne->second.cand.end(); itCand++) {	
 	ofs << "\t\t\t<CANDIDATE score=\""<< itCand->second <<"\">" << itCand->first << "</CANDIDATE>"<< endl;
       }

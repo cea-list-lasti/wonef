@@ -194,7 +194,6 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	if (WNIndex[srcWord].size()==0) {
 	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;	  
 	} else if (WNIndex[srcWord].size()==1) {
-	  candidates.processed="monosemous";
 	  //	  wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
 	  wne.frenchCandidates[srcWord]= candidates;
 	  
@@ -221,8 +220,7 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	else {
 	  string longest = "";
 	  switch (candidates.cand.size()) {
-	  case 0 : 
-	    candidates.processed="notranslation";
+	  case 0 :
 	    wne.frenchCandidates[srcWord]= candidates;
 	    //	    wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
 	    if (capital) {
@@ -238,8 +236,7 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	      cerr << "NEWDEF : " << tgt2TgtDefs[tolower(srcWord)] << endl;
 	    }
 	    break;
-	  case 1 : 
-	    candidates.processed="uniq";
+	  case 1 :
 	    wne.frenchCandidates[srcWord]=candidates;
 	    /*
 	    if (srcWord.length() <=2 ) {
@@ -260,8 +257,7 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	      cerr << "NEWDEF : " << tgt2TgtDefs[tolower(candidates.cand.begin()->first)] << endl;
 	    }
 	    break;
-	  case 2 : 
-
+	  case 2 :
 	    wne.frenchCandidates[srcWord]= candidates;
 	    /*
 	    if (srcWord.length() <=2 ) {

@@ -193,7 +193,7 @@ void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
-      if (itlit->second.processed=="" && itlit->second.cand.size()>0) {
+      if (itlit->second.cand.size()>0) {
 	if (itlit->first.find("equaliz") !=string::npos) {
 	  cerr << "TRY PROCESS : " << itlit->first << " -> " << itlit->second.cand.size() << endl;
 	}
@@ -287,8 +287,7 @@ string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORD
 
 
   if (elec.first != "") {
-    elected.insert(elec);      
-    itlit->second.processed="meroholo";
+    elected.insert(elec);
     for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {
       if (itwne->second.frenchSynset.find(itElec->first)==itwne->second.frenchSynset.end()) {
 	itwne->second.frenchSynset[itElec->first]=set<WORDNET::TranslationInfos>();

@@ -45,9 +45,6 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
   cerr << "Reverse Index size : " << reverseIndex.size() << endl;
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {    
     for (map<string, WORDNET::TgtCandidates >::iterator it = itwn->second.frenchCandidates.begin(); it != itwn->second.frenchCandidates.end(); it++) {
-      if (it->second.processed!="") {
-	continue;
-      }
       float best = 0;
       pair<string, float> elected;
       for (map<string, int>::iterator itCand = it->second.cand.begin(); itCand != it->second.cand.end(); itCand++) {
@@ -100,8 +97,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	}
 
       }
-      if (elected.first != "") {	
-	it->second.processed="hyperlike";
+      if (elected.first != "") {
 	if (itwn->second.frenchSynset.find(elected.first)==itwn->second.frenchSynset.end()) {
 	  itwn->second.frenchSynset[elected.first]=set<WORDNET::TranslationInfos>();
 	}

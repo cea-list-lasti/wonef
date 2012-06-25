@@ -14,7 +14,6 @@ typedef struct TgtCandidates {
   // removes the se_ or s' when pronominal
   // ex: verbCand["s'étrangler"] = "étrangler"
   std::map<std::string, std::string> verbCand;
-  std::string processed;
   std::string formerElected;
 } TgtCandidates;
 

@@ -14,7 +14,7 @@ LastChanceModule::~LastChanceModule() {
 void LastChanceModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
-      if (itwne->second.processed=="" && itwne->second.cand.size()>0) {	
+      if (itwne->second.cand.size()>0) {	
 	itwn->second.newdef=trySelecAndReplace(itwn->second.frenchSynset, itwn->first, itwne, false);
       }
     }
@@ -43,8 +43,7 @@ string LastChanceModule::trySelecAndReplace(map<string, set<WORDNET::Translation
   for (map<string, int>::iterator itLastChance = it->second.cand.begin(); itLastChance!=it->second.cand.end(); itLastChance++) {
     if (itLastChance->second >=bestScore && itLastChance->second!=0) {
       bestScore = itLastChance->second;
-      elected=itLastChance->first;	
-      it->second.processed="vote-lastchance";
+      elected=itLastChance->first;
     }
   }
   if (elected!="") {
