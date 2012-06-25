@@ -268,25 +268,25 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
 
   cout << "------------------------------------" << endl;
   cout << "cntPolysemousVerbsProcessedInJaws : " << jawsEvaluatorHandler->getCnt(1, 0) << endl;
-  cout << "cntPolysemousVerbsProcessedInJawsFoundInWolf : " << jawsEvaluatorHandler->getCnt(2, 1) << endl;
-  cout << "cntPolysemousVerbsProcessedInJawsAgreeWithWolf : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
+  cout << "cntPolysemousVerbsProcessedInJawsFoundInEWN : " << jawsEvaluatorHandler->getCnt(2, 1) << endl;
+  cout << "cntPolysemousVerbsProcessedInJawsAgreeWithEWN : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
   cout << "cntCommonPolysemousId : " << jawsEvaluatorHandler->getCntCommonPolysemousId() << endl;
   float precision = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(1, 0);
   float precision2 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(2, 1);
   float precision3 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCntCommonPolysemousId();
 
-  cout << "Precision / WOLF : " << precision  << endl;
-  cout << "Generous Precision / WOLF : " << precision2  << endl;
+  cout << "Precision / EWN : " << precision  << endl;
+  cout << "Generous Precision / EWN : " << precision2  << endl;
   cout << "P2/WOLF : "  << precision3 << endl;
-  cout << "cntPolysemousVerbsProcessedInWolf : " << jawsEvaluatorHandler->getCnt(0, 1) << endl;
-  cout << "cntPolysemousVerbsProcessedInWolfFoundInJaws : " << jawsEvaluatorHandler->getCnt(1, 2) << endl;
-  cout << "cntPolysemousVerbsProcessedInWolfAgreeWithJaws : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
+  cout << "cntPolysemousVerbsProcessedInEWN : " << jawsEvaluatorHandler->getCnt(0, 1) << endl;
+  cout << "cntPolysemousVerbsProcessedInEWNFoundInJaws : " << jawsEvaluatorHandler->getCnt(1, 2) << endl;
+  cout << "cntPolysemousVerbsProcessedInEWNAgreeWithJaws : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
 
   cout << "nbOriginalLit : " << jawsEvaluatorHandler->getNbOriginalLit() << endl;
 
   //  assert(jawsEvaluatorHandler->getCnt(2, 1)==jawsEvaluatorHandler->getCntCommonPolysemousId()) ;
 
-  cout << "Wolf coverage : " << jawsEvaluatorHandler->getCnt(0, 1) << "(" << (float)jawsEvaluatorHandler->getCnt(0, 1)/(float)jawsEvaluatorHandler->getNbOriginalLit() << ")" << endl;
+  cout << "EWN coverage : " << jawsEvaluatorHandler->getCnt(0, 1) << "(" << (float)jawsEvaluatorHandler->getCnt(0, 1)/(float)jawsEvaluatorHandler->getNbOriginalLit() << ")" << endl;
 
 
     // total original polysemous pairs processed in jaws, synset in wolf and pair found in wolf
