@@ -203,14 +203,6 @@ WORDNET::WordNet LoaderVerbsModule::load(bool verbose, int notmore) {
 	    }
 	    translationInfos.processed = "monosemous";
 	    wne.frenchSynset[it->first].insert(translationInfos);
-	    cerr << "-------------" << endl;
-	    for (set<WORDNET::TranslationInfos>::iterator itTrans = wne.frenchSynset[it->first].begin();
-	    itTrans != wne.frenchSynset[it->first].end();
-	    itTrans++) {
-	      cerr << "DEBUG monosemous :" << it->first << " -> " << itTrans->original << endl;
-	    }
-	    cerr << "-------------" << endl;
-//	    cerr << "cand :" << it->first << " / srcWord : " << srcWord << endl;
 	    //wne.frenchSynset.insert(pair<string, string>(it->first, srcWord));
 	    wne.newdef=tgt2TgtDefs[it->first];
 //	    cerr << "newdef : " << wne.newdef << endl;	    

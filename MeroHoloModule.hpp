@@ -48,12 +48,13 @@ protected :
 
   string trySelecAndReplace(WORDNET::WordNet& wn,
 			    map<string, WORDNET::WordNetEntry>::iterator itwne,
-			    map<string, WORDNET::TgtCandidates >::iterator itcand);
+			    map<string, WORDNET::TgtCandidates >::iterator itcand,
+			    bool verbose);
 
 
   void loadMeroHolos(string dataInput);
-  float computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB);
-  float computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB);
+  float computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose);
+  float computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose);
   void processLine(ulong currentId, string s, Mode mode);
 
 };

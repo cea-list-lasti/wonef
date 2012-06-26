@@ -152,7 +152,9 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    }
 	    float score =tRoler.computeIsAScore(head, itCand->first, mode);
 	    if (!isnan(score)) {
+	      if (verbose){
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+	      }
 	      sum+=score==1?0.3:score;
 	    } else {
 	      validSumHyper --;
@@ -186,7 +188,9 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 		elected="";
 	}
 	*/
+     if (verbose) {
 	cerr << "elected :"<< elected << endl;
+     }
 
       if (elected!="") {
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {

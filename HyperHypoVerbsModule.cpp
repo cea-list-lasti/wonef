@@ -168,7 +168,9 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    // compute the score without the pronoun
 	    float score =tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], mode);
 	    if (!isnan(score)) {
+	      if (verbose) {
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+	      }
 	      // reduce weight of hypernyms of the synset among the candidates
 	      sum+=score==1?0.3:score;
 	    } else {
@@ -204,7 +206,9 @@ void HyperHypoVerbsModule::process(WORDNET::WordNet& wn, bool verbose ){
 		elected="";
 	}
 	*/
+     if (verbose) {
 	cerr << "elected : "<< it->first << " => " << elected << endl;
+     }
 
       if (elected!="") {
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {

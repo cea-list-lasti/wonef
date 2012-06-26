@@ -24,29 +24,29 @@ SimSynModule::~SimSynModule() {
 
 
 void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){ 
-  if (wn["00472185"].frenchCandidates.size()!=0) {
+/*  if (wn["00472185"].frenchCandidates.size()!=0) {
     cerr << "TEST3 : " << wn["00472185"].frenchCandidates["coupling"].cand.size() << endl;
-  }
+  }*/
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       if (itwne->second.cand.size()>0) {
-	if (itwne->first.find("coupling") !=string::npos) {
+/*	if (itwne->first.find("coupling") !=string::npos) {
 	  cerr << "TRY PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
-	}
+	}*/
 	itwn->second.newdef=trySelecAndReplace(itwn->second.frenchSynset, itwn->first, itwne);
       }
     }      
   }
 
-  for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
+/*  for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       if (itwne->second.cand.size()>0) {
 	if (itwne->first.find("coupling") !=string::npos) {
 	  cerr << "ENDING PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
-	}	
+	}
       }
     }      
-  }
+  }*/
 }
 
 

@@ -107,7 +107,9 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	translationInfos.score = elected.second;
 	itwn->second.frenchSynset[elected.first].insert(translationInfos);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected.first];
-	cerr << "ELECTED : " << elected.first << " score : " << translationInfos.score << endl;
+	if (verbose) {
+	  cerr << "ELECTED : " << elected.first << " score : " << translationInfos.score << endl;
+	}
 	nbDisamb++;
       }
     }

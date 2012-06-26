@@ -185,7 +185,7 @@ void MeroHoloModule::finalize() {
 
 
 
-void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
+void MeroHoloModule::process(WORDNET::WordNet& wn, bool verbose){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //    for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
@@ -198,10 +198,10 @@ void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
       if (itlit->second.cand.size()>0) {
-	if (itlit->first.find("equaliz") !=string::npos) {
+/*	if (itlit->first.find("equaliz") !=string::npos) {
 	  cerr << "TRY PROCESS : " << itlit->first << " -> " << itlit->second.cand.size() << endl;
-	}
-	itwn->second.newdef=trySelecAndReplace(wn, itwn, itlit);
+	}*/
+	itwn->second.newdef=trySelecAndReplace(wn, itwn, itlit, verbose);
       }
     }      
   }
@@ -211,40 +211,52 @@ void MeroHoloModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 
 // TODO: OPTIMIZE SCORE : MI ? Z ? or what ?
 
-float MeroHoloModule::computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB) {
+float MeroHoloModule::computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose) {
   if (wn[strB].frenchSynset.size()==0) {
     return 0;
   }
   float sum = 0;
-  cerr << "--------------" << endl;
+  if (verbose) {
+    cerr << "--------------" << endl;
+  }
   for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {    
-    cerr << strA << " is part of " << itlit->first  << " ? " << endl;
+    if (verbose) {
+      cerr << strA << " is part of " << itlit->first  << " ? " << endl;
+    }
     sum += (float)coocsMero[strA][itlit->first]/(float)(sumMeros[strA]*sumHolos[itlit->first]);
 //    cerr << "MERO sum += " << coocsMero[strA][itlit->first] << " / (" << sumMeros[strA] << "*" << sumHolos[itlit->first] << ")\n";
     cntMeros++;
   }
-  cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
-  cerr << "--------------" << endl;
+  if (verbose) {
+    cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
+    cerr << "--------------" << endl;
+  }
 
   return sum/(float)wn[strB].frenchSynset.size(); 
 }
 
 
-float MeroHoloModule::computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB) {
+float MeroHoloModule::computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose) {
   if (wn[strB].frenchSynset.size()==0) {
     return 0;
   }
   float sum = 0;
-  cerr << "--------------" << endl;
+  if (verbose) {
+    cerr << "--------------" << endl;
+  }
   for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {
-    cerr << strA << " is whole of " << itlit->first  << " ? " << endl;
+    if (verbose) {
+      cerr << strA << " is whole of " << itlit->first  << " ? " << endl;
+    }
     sum += (float)coocsHolo[strA][itlit->first]/(float)(sumMeros[itlit->first]*sumHolos[strA]);
 //    cerr << "HOLO sum += " << coocsHolo[strA][itlit->first] << " / (" << sumMeros[itlit->first] << "*" << sumHolos[strA] << ")\n";
     cntHolos++;
   }
 
-  cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
-  cerr << "--------------" << endl;
+  if (verbose) {
+    cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
+    cerr << "--------------" << endl;
+  }
 
 
   return sum/(float)wn[strB].frenchSynset.size(); 
@@ -253,7 +265,7 @@ float MeroHoloModule::computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, s
 
 
 
-string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORDNET::WordNetEntry>::iterator itwne, map<string, WORDNET::TgtCandidates>::iterator itlit) {
+string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORDNET::WordNetEntry>::iterator itwne, map<string, WORDNET::TgtCandidates>::iterator itlit, bool verbose) {
   set<pair<string, float> > elected;
 
   map<string, float> votes;
@@ -262,19 +274,23 @@ string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORD
     //    cerr << "Processing : " << itcand->first << " - " << itwne->first << endl;    
     for (set<string>::iterator itMero = meronyms[itwne->first].begin(); itMero != meronyms[itwne->first].end(); itMero++) {
       itwne->second.meros.insert(reverseIndex[*itMero].begin(), reverseIndex[*itMero].end());
-      cerr << "COMPUTE mero : " << itcand->first << " -> " << *itMero << endl;
-      votes[itcand->first]+=computeIsWholeOfScore(wn, itcand->first, *itMero);      
+      if (verbose) {
+	cerr << "COMPUTE mero : " << itcand->first << " -> " << *itMero << endl;
+      }
+      votes[itcand->first]+=computeIsWholeOfScore(wn, itcand->first, *itMero, verbose);      
     }
-    if (votes[itcand->first]!=0) {
+    if (verbose && votes[itcand->first]!=0) {
       cerr << "VOTE mero :" << votes[itcand->first] << endl;
     }
     for (set<string>::iterator itHolo = holonyms[itwne->first].begin(); itHolo != holonyms[itwne->first].end(); itHolo++) {      
       itwne->second.holos.insert(reverseIndex[*itHolo].begin(),
 				reverseIndex[*itHolo].end());
-      cerr << "COMPUTE holo : " << itcand->first << " -> " << *itHolo << endl;
-      votes[itcand->first]+=computeIsPartOfScore(wn, itcand->first, *itHolo);
+      if (verbose) {
+	cerr << "COMPUTE holo : " << itcand->first << " -> " << *itHolo << endl;
+      }
+      votes[itcand->first]+=computeIsPartOfScore(wn, itcand->first, *itHolo, verbose);
     }
-    if (votes[itcand->first]!=0) {
+    if (verbose && votes[itcand->first]!=0) {
       cerr << "VOTE holo :" << votes[itcand->first] << endl;
     }
   }

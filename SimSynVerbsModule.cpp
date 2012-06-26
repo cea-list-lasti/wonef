@@ -24,19 +24,7 @@ void SimSynVerbsModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {
       if (itwne->second.cand.size()>0) {
-	if (itwne->first.find("coupling") !=string::npos) {
-	  cerr << "TRY PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
-	}
 	itwn->second.newdef=trySelecAndReplace(itwn->second.frenchSynset, itwn->first, itwne);
-      }
-    }      
-  }
-  for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {
-      if (itwne->second.cand.size()>0) {
-	if (itwne->first.find("coupling") !=string::npos) {
-	  cerr << "ENDING PROCESS : " << itwne->first << " -> " << itwne->second.cand.size() << endl;
-	}	
       }
     }      
   }
@@ -100,7 +88,7 @@ pair<string, float> SimSynVerbsModule::selectTgtWord (map<string, int>& cand, ma
   for (map<string, set<WORDNET::TranslationInfos> >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
     knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
     string knns;
-        cerr << "Opening : " << knnFile << endl;
+    //    cerr << "Opening : " << knnFile << endl;
     ifstream knnIfs(knnFile.c_str());
     getline(knnIfs, knns);
     knnIfs.close();
