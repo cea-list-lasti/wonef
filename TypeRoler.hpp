@@ -20,7 +20,6 @@ public :
   TypeRoler();
   ~TypeRoler() ;
   float computeIsAScore( string strA, string strB, TRMode mode);
-  static bool cmpInter(pair<string, pair<float, float> > a, pair<string, pair<float, float> > b);
   
 
 
@@ -33,8 +32,8 @@ private :
   Converter conv;
   int topSize; 
   float thresCut;
-  map<string, map<ulong, float> > repository;
-  void processLine(string s, float thresCut, map<ulong, float>& ctxt);
+  map<string, vector<ulong> > repository;
+  void processLine(string s, float thresCut, vector<ulong>& ctxt);
 };
 
 

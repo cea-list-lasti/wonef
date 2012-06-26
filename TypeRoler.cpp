@@ -1,5 +1,6 @@
 #include "TypeRoler.hpp"
  
+#include <algorithm>
 
 using namespace std;
 
@@ -37,25 +38,19 @@ TypeRoler::~TypeRoler() {
 
 
 
-void TypeRoler::processLine(string s, float /*thresCut*/, map<ulong, float>& ctxt) {  
+void TypeRoler::processLine(string s, float /*thresCut*/, vector<ulong>& ctxt) {  
   stringstream ss;
   ss << s;
   ulong currentIdent;
   float nbOccs = 0;
-  float sum = 0;
   while (ss.get() != '{');
   while (ss.get()!='}') {
     ss.unget();
     ss >> currentIdent;
     while (ss.get() != ',');
     ss >> nbOccs;
-    ctxt[currentIdent]=nbOccs;
+    ctxt.push_back(currentIdent);
     while (ss.get() != ';');
-    sum+=nbOccs;
-  }
-
-  for (map<ulong, float>::iterator it = ctxt.begin(); it!=ctxt.end() ; it++) {
-    it->second/=sum;
   }
 }
 
@@ -63,55 +58,19 @@ void TypeRoler::processLine(string s, float /*thresCut*/, map<ulong, float>& ctx
 
 
 float TypeRoler::computeIsAScore( string strA, string strB, TRMode mode) {
-  set<int> ownerIds;
-  ownerIds.insert(dicmapReverse[strA]);
-  ownerIds.insert(dicmapReverse[strB]);
-  vector<pair<string, pair<float,float > > > bestInter;
-  map<ulong, float> tmpmapA ;
-  map<ulong, float> tmpmapB ;
-  //  map<ulong, float> tmpmapUnion ;
-  tmpmapA.insert( repository[strA].begin(),repository[strA].end()) ;
-  //tmpmapUnion.insert( repository[strA].begin(),repository[strA].end()) ;
-  tmpmapB.insert(  repository[strB].begin(),repository[strB].end()) ;
-  //  tmpmapUnion.insert(repository[strB].begin(),repository[strB].end()) ;
-  //TOFIX : B values erase former A value... :(  -> deprecated
+  std::vector<ulong> tmpA = repository[strA];
+  std::vector<ulong> tmpB = repository[strB];
 
-  //  int unionSize = tmpmapUnion.size();
-  int interSize = 0;
-  
-  /*float thres = 0; */
+  std::vector<ulong> intersection;
+  set_intersection(tmpA.begin(), tmpA.end(), tmpB.begin(), tmpB.end(), inserter(intersection, intersection.end()));
 
-  for ( map<ulong, float>::iterator it = tmpmapB.begin(); it!=tmpmapB.end() ;  it++) {
-    if (tmpmapA.find(it->first)!=tmpmapA.end()) {
-      interSize++;
-      /*
-      // seems to be obsolete
-      float nbOccs = it->second + tmpmapA[it->first];
-      pair<float, float> pairOccs = pair<float, float>(it->second, tmpmapA[it->first]);
-      if (bestInter.size()<topSize) {     
-	bestInter.push_back(pair<string, pair<float, float> >(dicmap[it->first], pairOccs));	
-      } else if (bestInter.size()==topSize && nbOccs>thres) {
-	bestInter.push_back(pair<string, pair<float, float> >(dicmap[it->first], pairOccs));
-	sort(bestInter.begin(), bestInter.end(), cmpInter);	  
-	bestInter.pop_back();
-	thres = (bestInter.end()-1)->second.first  +(bestInter.end()-1)->second.second ;
-      }
-      //*/
-    }
+  float xIsY = (float)intersection.size();
+  if (mode==R_HYPER) {
+    xIsY/=tmpB.size();
+  } else if (mode==R_HYPO) {
+    xIsY/=tmpA.size();
   }
-
-  float xIsY = (float)interSize;
-    if (mode==R_HYPER) {
-      xIsY/=tmpmapB.size();
-    } else if (mode==R_HYPO) {
-      xIsY/=tmpmapA.size();
-    }
-  //  cerr << strA << "("<<tmpmapA.size()<<") is " << strB << "("<<tmpmapB.size()<<") : " <<  interSize  << " -> " << xIsY << endl;
 
   return xIsY;
 }
 
-bool TypeRoler::cmpInter(pair<string, pair<float, float> > a, pair<string, pair<float, float> > b) {
-  return ((a.second.first+a.second.second)
-	  > (b.second.first + b.second.second));
-}
