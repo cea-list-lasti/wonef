@@ -7,7 +7,7 @@ COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp LoaderV
 
 COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 
-H_FILES     = TranslatorModule.hpp Tools.hpp JawsEvaluatorHandler.hpp JawsVerbsEvaluatorHandler.hpp
+H_FILES     = $(wildcard *.hpp)
 
 
 
