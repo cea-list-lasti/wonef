@@ -9,6 +9,7 @@
 #include "MeroHoloModule.hpp"
 #include "MeroHoloLikeHyperModule.hpp"
 #include "LastChanceModule.hpp"
+#include "BestTranslations.hpp"
 #include <set>
 
 using namespace std;
@@ -204,6 +205,18 @@ int main(int argc, char **argv) {
   DumperModule dumper("data2/data.fr.nouns" + suffix, "data2/index.fr.noun" + suffix);
   dumper.dump(wn);
   cout << "Print index duration : " << time(NULL) - start << " s " << endl;
+
+  cout << "Choose best translations" << endl;
+  start = time(NULL);
+  BestTranslations bestTranslations;
+  bestTranslations.choose(wn);
+  cout << "Choice duration : " << time(NULL) - start << " s " << endl;
+
+  cout << "Print best JAWS" << endl;
+  start = time(NULL);
+  DumperModule dumperBest("data2/data.fr.nouns.best" + suffix, "data2/index.fr.nouns.best" + suffix);
+  dumperBest.dump(wn);
+  cout << "Printing best JAWS duration : " << time(NULL) - start << " s " << endl;
 
 
   cout << "Overall duration : " << time(NULL) - globalStart << " s " << endl;

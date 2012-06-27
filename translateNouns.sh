@@ -32,11 +32,16 @@ echo "Translating... $seqsspaces"
 
 # The produced file needs some fixes before evaluation
 WNDATA="data2/data.fr.nouns.wolf.noun.Noen$seqs"
+WNBESTDATA="data2/data.fr.nouns.best.wolf.noun.Noen$seqs"
 echo "Fixing WNDATA..."
 sed -i 's/&/&amp;/g' $WNDATA
+sed -i 's/&/&amp;/g' $WNBESTDATA
 sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNDATA
+sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNBESTDATA
 sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
+sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNBESTDATA
 
 echo "Evaluating..."
 ./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/eval$seqs
+./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf $BCSMODE $BCSFILE &> logs/evalBest$seqs
 
