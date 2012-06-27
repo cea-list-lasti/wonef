@@ -14,6 +14,10 @@ using namespace std;
 MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration) {
   initializeDicMap(dicmap);  
   loadMeroHolos(datafile);
+  
+  std::ostringstream oss;
+  oss << idModuleConf << "." << nIteration;
+  suffix = oss.str();
 
   tRoler = TypeRoler(string(TYPEROLERFILE));
  
