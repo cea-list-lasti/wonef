@@ -17,13 +17,10 @@ using namespace std;
 int main(int argc, char **argv) {
 
   time_t globalStart = time(NULL);
-  time_t start = time(NULL);
 
   SimSynVerbsModule* simsyner = NULL;
   HyperHypoVerbsModule* hyperhypoer= NULL;
   LastChanceModule* lastchancer= NULL;
-
-  cout << "Init duration : " << time(NULL) - start << " s " << endl;
 
   string datafile = DATA_VERB;
   string suffix = "";
@@ -65,7 +62,7 @@ int main(int argc, char **argv) {
   }
 
   cout << "Init " << suffix << endl;
-  start = time(NULL);
+  time_t start = time(NULL);
 
   set<string> dicfiles;
   dicfiles.insert(DICFILE);
@@ -80,74 +77,75 @@ int main(int argc, char **argv) {
     nIteration++;
     switch (*idModuleConf) {
     case 1:
-      lastchancer = new LastChanceModule(*idModuleConf, nIteration);
       cout << "First step " << endl;
       start = time(NULL);
+      lastchancer = new LastChanceModule(*idModuleConf, nIteration);
       lastchancer->process(wn);
-      cout << "First step duration : " << time(NULL) - start << " s " << endl;
       delete lastchancer;
+      cout << "First step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 2 :
-      simsyner = new SimSynVerbsModule(*idModuleConf, nIteration);
       cout << "Second step "  << endl;
+      start = time(NULL);
+      simsyner = new SimSynVerbsModule(*idModuleConf, nIteration);
       simsyner->process(wn);
       cout << "Second step duration : " << time(NULL) - start << " s " << endl;
       delete simsyner;
       break;
 
     case 3 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V_RELG.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Third step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V_RELG.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Third step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Third step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 4 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "COD_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Fourth step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "COD_V.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Fourth step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Fourth step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 5 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Fifth step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Fifth step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Fifth step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 6 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "ATB_S.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Six step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "ATB_S.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Six step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Six step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 7 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Seventh step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Seventh step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Seventh step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 8 :
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPLV_V.reverse", R_HYPER, *idModuleConf, nIteration);
       cout << "Eigth step "  << endl;
       start = time(NULL);
+      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPLV_V.reverse", R_HYPER, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
-      cout << "Eigth step duration : " << time(NULL) - start << " s " << endl;
       delete hyperhypoer;
+      cout << "Eigth step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     default:
