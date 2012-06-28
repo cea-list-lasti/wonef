@@ -25,7 +25,43 @@ JawsVerbsEvaluatorBenchHandler::~JawsVerbsEvaluatorBenchHandler() {
 void JawsVerbsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
 				      const XMLCh *const localname,
 				      const XMLCh *const qname) {
-  if (_transcode(qname).compare("INSTANCE")==0) {
+
+  if (bcsbase[id]==bcsmode && _transcode(qname).compare("INSTANCES")==0) {
+
+    // checking if the translation comes from polysemous source verbs
+    bool polysemous = false;
+    for (set<string>::iterator itOrig = originalsList.begin();
+	 itOrig != originalsList.end(); itOrig++){
+      if (litList.find(*itOrig)!=litList.end()) {
+	polysemous = true;
+      }
+    }
+
+    // counting verbs in JAWS
+    nbVerbsInJaws++;
+    if (polysemous == true) {
+      nbPolysemousVerbsInJaws++;
+    }
+
+    // counting verbs both in JAWS and VT
+    if (vtNet[translation].size() > 0) {
+      nbVerbsInJawsAndVt++;
+      if (polysemous == true) {
+	nbPolysemousVerbsInJawsAndVt++;
+      }
+
+      // counting verbs in the same synset in JAWS and VT
+      if (vtNet[translation].find(id)!=vtNet[translation].end()) {
+	nbVerbsInJawsAgreeWithVt++;
+	if (polysemous == true) {
+	  nbPolysemousVerbsInJawsAgreeWithVt++;
+	}
+      }
+    }
+
+    originalsList.clear();
+
+  } else if (_transcode(qname).compare("INSTANCE")==0) {
       if (bcsbase[id]==bcsmode) {
 	//      if (litList.find(original)!=litList.end()) {
 	cntPolysemousVerbsProcessedInJaws++;

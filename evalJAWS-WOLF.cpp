@@ -230,62 +230,74 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   }
 
   cout << "------------------------------------" << endl;
-  cout << "cntPolysemousNounsProcessedInJaws : " << jawsEvaluatorHandler->getCnt(1, 0) << endl;
-  cout << "cntPolysemousNounsProcessedInJawsFoundInWolf : " << jawsEvaluatorHandler->getCnt(2, 1) << endl;
-  cout << "cntPolysemousNounsProcessedInJawsAgreeWithWolf : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
-  cout << "cntCommonPolysemousId : " << jawsEvaluatorHandler->getCntCommonPolysemousId() << endl;
-  float precision = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(1, 0);
-  float precision2 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCnt(2, 1);
-  float precision3 = (float)jawsEvaluatorHandler->getCnt(2, 2) /(float) jawsEvaluatorHandler->getCntCommonPolysemousId();
+  cout << "cntPolysemousNounsProcessedInJaws : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws << endl;
+  cout << "cntPolysemousNounsProcessedInJawsFoundInWolf : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt << endl;
+  cout << "cntPolysemousNounsProcessedInJawsAgreeWithWolf : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt << endl;
+  cout << "cntCommonPolysemousId : " 
+       << jawsEvaluatorHandler->cntCommonPolysemousId << endl;
+  float precision = (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt
+		   /(float) jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws;
+  float precision2 = (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt
+		    /(float) jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt;
+  float precision3 = (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt
+		    /(float) jawsEvaluatorHandler->cntCommonPolysemousId;
 
-  cout << "Precision / WOLF : " << precision  << endl;
-  cout << "Generous Precision / WOLF : " << precision2  << endl;
+  cout << "Precision / Wolf : " << precision  << endl;
+  cout << "Generous Precision / Wolf : " << precision2  << endl;
   cout << "P2/WOLF : "  << precision3 << endl;
-  cout << "cntPolysemousNounsProcessedInWolf : " << jawsEvaluatorHandler->getCnt(0, 1) << endl;
-  cout << "cntPolysemousNounsProcessedInWolfFoundInJaws : " << jawsEvaluatorHandler->getCnt(1, 2) << endl;
-  cout << "cntPolysemousNounsProcessedInWolfAgreeWithJaws : " << jawsEvaluatorHandler->getCnt(2, 2) << endl;
+  cout << "cntPolysemousNounsProcessedInWolf : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInVt << endl;
+  cout << "cntPolysemousNounsProcessedInWolfFoundInJaws : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInVtFoundInJaws << endl;
+  cout << "cntPolysemousNounsProcessedInWolfAgreeWithJaws : " 
+       << jawsEvaluatorHandler->cntPolysemousNounsProcessedInVtAgreeWithJaws << endl;
 
-  cout << "nbOriginalLit : " << jawsEvaluatorHandler->getNbOriginalLit() << endl;
+  cout << "nbOriginalLit : " << jawsEvaluatorHandler->nbOriginalLit << endl;
 
   //  assert(jawsEvaluatorHandler->getCnt(2, 1)==jawsEvaluatorHandler->getCntCommonPolysemousId()) ;
 
-  cout << "Wolf coverage : " << jawsEvaluatorHandler->getCnt(0, 1) << "(" << (float)jawsEvaluatorHandler->getCnt(0, 1)/(float)jawsEvaluatorHandler->getNbOriginalLit() << ")" << endl;
+  cout << "Wolf coverage : " << jawsEvaluatorHandler->cntPolysemousNounsProcessedInVt 
+       << "(" << (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInVt
+		/(float)jawsEvaluatorHandler->nbOriginalLit << ")" << endl;
 
 
     // total original polysemous pairs processed in jaws, synset in wolf and pair found in wolf
   cout <<" & " 
-    << ceil(((float)( jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit())*1000)/10.   << "\\%"
+    << ceil(((float)( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws)/ (float)jawsEvaluatorHandler->nbOriginalLit)*1000)/10.   << "\\%"
     // total original polysemous pairs processed
-    << " & "  << ceil(((float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getCnt(1,0) )*1000)  /10. << "\\%"
-       << "("<< ceil(((float) jawsEvaluatorHandler->getCnt(2, 2)/ (float) ( jawsEvaluatorHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
+    << " & "  << ceil(((float) jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws )*1000)  /10. << "\\%"
+       << "("<< ceil(((float) jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt/ (float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt))*1000) /10. << "\\%" << ")"
     // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " & " << ceil(((float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getCnt(1,0))*1000)/10. << "\\%"
-       << "("<< ceil((((float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2)))/ (float) ( jawsEvaluatorHandler->getCnt(2, 1)))*1000) /10. << "\\%" << ")"
+       << " & " << ceil(((float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt)/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws)*1000)/10. << "\\%"
+       << "("<< ceil((((float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt))/ (float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt))*1000) /10. << "\\%" << ")"
     // total original polysemous pairs processed in jaws, synset id not found in wolf
-    << " & " << ceil(((float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getCnt(1,0))*1000) /10. << "\\%"
+    << " & " << ceil(((float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt)/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws)*1000) /10. << "\\%"
 
        << " \\\\ " << endl;
 
-  cout << jawsEvaluatorHandler->getCnt(2, 2)
+  cout << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt
     //       << "(" << (float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
+       << "(" << (float) jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws  << ")"
     // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " | " << jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2)
+       << " | " << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt
     //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
 
-       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
+       << "(" << (float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsAgreeWithVt)/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws  << ")"
     // total original polysemous pairs processed in jaws, synset id not found in wolf
-       << " | " << jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1)
+       << " | " << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt
     //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getCnt(1,0)  << ")"
+       << "(" << (float) ( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousNounsProcessedInJawsFoundInVt)/ (float)jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws  << ")"
     // total original polysemous pairs processed
-       << " | " << jawsEvaluatorHandler->getCnt(1, 0) 
-       << "(" << (float)( jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
+       << " | " << jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws 
+       << "(" << (float)( jawsEvaluatorHandler->cntPolysemousNounsProcessedInJaws)/ (float)jawsEvaluatorHandler->nbOriginalLit  << ")"
     // total original polysemous pairs not processed
     //       << " | " << jawsEvaluatorHandler->getNbOriginalLit()-jawsEvaluatorHandler->getCnt(1, 0)
     //       << "(" << (float)( jawsEvaluatorHandler->getNbOriginalLit() - jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
     // total original polysemous pairs
-       << " | " << jawsEvaluatorHandler->getNbOriginalLit()
+       << " | " << jawsEvaluatorHandler->nbOriginalLit
        << " | " << endl;
 
 
@@ -306,6 +318,42 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   cout << "cntType4 : " << jawsEvaluatorHandler->getCntError(4) << endl;
   cout << "Precision4 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(0, 1) - jawsEvaluatorHandler->getCntError(4)) << endl;
   */
+
+  cout << "------------------------------------" << endl;
+  cout << "\t\t*** ALL VERBS ***" << endl;
+  cout << "nbNounsInJaws :\t\t\t"
+       << jawsEvaluatorHandler->nbNounsInJaws << endl;
+  cout << "nbNounsInJawsAndVt :\t\t"
+       << jawsEvaluatorHandler->nbNounsInJawsAndVt << endl;
+  cout << "nbNounsInJawsAgreeWithVt :\t"
+       << jawsEvaluatorHandler->nbNounsInJawsAgreeWithVt << endl;
+
+  float allPrecision = (float)jawsEvaluatorHandler->nbNounsInJawsAgreeWithVt
+		      / (float)jawsEvaluatorHandler->nbNounsInJaws;
+  float allPseudoPrec = (float)jawsEvaluatorHandler->nbNounsInJawsAgreeWithVt
+		       / (float)jawsEvaluatorHandler->nbNounsInJawsAndVt;
+  float polyPrecision = (float)jawsEvaluatorHandler->nbPolysemousNounsInJawsAgreeWithVt
+		      / (float)jawsEvaluatorHandler->nbPolysemousNounsInJaws;
+  float polyPseudoPrec = (float)jawsEvaluatorHandler->nbPolysemousNounsInJawsAgreeWithVt
+		       / (float)jawsEvaluatorHandler->nbPolysemousNounsInJawsAndVt;
+
+  cout << "Precision : " << allPrecision << "\t\t"
+       << ceil(allPrecision*1000)/10. << "%" << endl;
+  cout << "Pseudo precision : " << allPseudoPrec<< "\t" 
+       << ceil(allPseudoPrec*1000)/10. << "%"  << endl;
+
+  cout << "\t\t*** POLYSEMOUS ***" << endl;
+  cout << "nbPolysemousNounsInJaws :\t\t"
+       << jawsEvaluatorHandler->nbPolysemousNounsInJaws << endl;
+  cout << "nbPolysemousNounsInJawsAndVt :\t\t"
+       << jawsEvaluatorHandler->nbPolysemousNounsInJawsAndVt << endl;
+  cout << "nbPolysemousNounsInJawsAgreeWithVt :\t"
+       << jawsEvaluatorHandler->nbPolysemousNounsInJawsAgreeWithVt << endl;
+
+  cout << "Precision : " << polyPrecision << "\t\t\t" 
+       << ceil(polyPrecision*1000)/10. << "%" << endl;
+  cout << "Pseudo precision : " << polyPseudoPrec << "\t\t" 
+       << ceil(polyPseudoPrec*1000)/10. << "%" << endl;
 
 
 

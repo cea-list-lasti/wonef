@@ -124,6 +124,7 @@ void JawsEvaluatorHandler::startElement(const XMLCh *const              /*uri*/,
     translation = getAttrValue(attrs, "translation");
   } else if(_transcode(qname).compare("INSTANCE")==0) {  
     original=getAttrValue(attrs, "original");
+    originalsList.insert(original);
     processed=getAttrValue(attrs, "processed"); 
   }
   
@@ -136,7 +137,43 @@ void JawsEvaluatorHandler::characters(const XMLCh *const chars, const XMLSize_t 
 void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
                                           const XMLCh *const /*localname*/,
                                           const XMLCh *const qname) {
-  if (_transcode(qname).compare("INSTANCE")==0) {
+
+  if (_transcode(qname).compare("INSTANCES")==0) {
+
+    // checking if the translation comes from polysemous source nouns
+    bool polysemous = false;
+    for (set<string>::iterator itOrig = originalsList.begin();
+	 itOrig != originalsList.end(); itOrig++){
+      if (litList.find(*itOrig)!=litList.end()) {
+	polysemous = true;
+      }
+    }
+
+    // counting nouns in JAWS
+    nbNounsInJaws++;
+    if (polysemous == true) {
+      nbPolysemousNounsInJaws++;
+    }
+
+    // counting nouns both in JAWS and VT
+    if (vtNet[translation].size() > 0) {
+      nbNounsInJawsAndVt++;
+      if (polysemous == true) {
+	nbPolysemousNounsInJawsAndVt++;
+      }
+
+      // counting nouns in the same synset in JAWS and VT
+      if (vtNet[translation].find(id)!=vtNet[translation].end()) {
+	nbNounsInJawsAgreeWithVt++;
+	if (polysemous == true) {
+	  nbPolysemousNounsInJawsAgreeWithVt++;
+	}
+      }
+    }
+
+    originalsList.clear();
+
+  } else if (_transcode(qname).compare("INSTANCE")==0) {
       if (litList.find(original)!=litList.end()) {
          cntPolysemousNounsProcessedInJaws++;
          nbInstances++;

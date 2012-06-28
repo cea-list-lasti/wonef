@@ -36,7 +36,6 @@ public :
 		   const XMLCh *const   	localname,
 		   const XMLCh *const   	qname	);
 
-protected :
   uint nbSynsets;  
   uint nbOriginalLit ;
   uint nbInstances;
@@ -49,10 +48,19 @@ protected :
   uint cntPolysemousVerbsProcessedInVtFoundInJaws;
   uint cntPolysemousVerbsProcessedInVtAgreeWithJaws;
   
+  uint nbVerbsInJaws;
+  uint nbPolysemousVerbsInJaws;
+  uint nbVerbsInJawsAndVt;
+  uint nbPolysemousVerbsInJawsAndVt;
+  uint nbVerbsInJawsAgreeWithVt;
+  uint nbPolysemousVerbsInJawsAgreeWithVt;
+  
   uint cntType1;
   uint cntType2;
   uint cntType3;
   uint cntType4;
+
+protected :
 
   XMLTranscoder*   theTranscoder;
   string id;
@@ -62,6 +70,7 @@ protected :
   string pos;
   string translation;
   string tmpString;
+  set<string> originalsList;
   map<string, string> glosses;
   map<string, set<string> > candidates;
   map<string, set<string> > jawsNet;
@@ -75,7 +84,7 @@ public :
   bool checkAttr(const Attributes &  	attrs, string key, string value );
   string getAttrValue(const Attributes &  	attrs, string value);
 
-  inline uint getCntError(int type) {
+/*  inline uint getCntError(int type) {
     switch (type) {
     case 1 : 
       return cntType1;
@@ -96,7 +105,8 @@ public :
       switch (vt) {
       case 1 :
 	return cntPolysemousVerbsProcessedInVt; 
-
+      case 2 :
+	return cntPolysemousVerbsProcessedInVtAgreeWithJaws;
       }
     case 1 : 
       switch (vt) {
@@ -126,7 +136,7 @@ public :
    inline uint getCntCommonPolysemousId() {
      return cntCommonPolysemousId;
    };
-
+*/
 
 };
 
