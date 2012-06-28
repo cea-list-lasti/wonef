@@ -16,7 +16,7 @@ class TypeRoler {
 
 
 public : 
-  TypeRoler(string _dataFile) ;
+  TypeRoler(string _dataFile, string relation) ;
   TypeRoler();
   ~TypeRoler() ;
   float computeIsAScore( string strA, string strB, TRMode mode);

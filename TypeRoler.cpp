@@ -8,7 +8,7 @@ using namespace std;
 TypeRoler::TypeRoler() {
 }
 
-TypeRoler::TypeRoler(string _dataFile) : 
+TypeRoler::TypeRoler(string _dataFile, string relation) : 
   dataFile(_dataFile),
   conv(CONVFILE, 67937),
   topSize(10),
@@ -27,7 +27,11 @@ TypeRoler::TypeRoler(string _dataFile) :
     ulong currentIdent;
     ss>>currentIdent;
     if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);
+      if (dicmap.find(currentIdent) == dicmap.end()) {
+        std::cout << relation << ": " << currentIdent << " was not found in word.ids! Ignoring it." << std::endl;
+      } else {
+        processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);
+      }
     }
   }
   idss.close();  

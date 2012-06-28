@@ -19,7 +19,7 @@ MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleC
   oss << idModuleConf << "." << nIteration;
   suffix = oss.str();
 
-  tRoler = TypeRoler(string(TYPEROLERFILE));
+  tRoler = TypeRoler(TYPEROLERFILE, "COMPDUNOM");
  
 }
 

@@ -13,13 +13,13 @@ using namespace std;
 HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration)
     : mode(_mode) {
   if (typeroler.compare("COMPDUNOM")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE);
+    tRoler = TypeRoler(TYPEROLERFILE, typeroler);
   } else if (typeroler.compare("SUJ_V")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE2);
+    tRoler = TypeRoler(TYPEROLERFILE2, typeroler);
   } else if (typeroler.compare("COD_V")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE3);
+    tRoler = TypeRoler(TYPEROLERFILE3, typeroler);
   }else if (typeroler.compare("window10")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE4);
+    tRoler = TypeRoler(TYPEROLERFILE4, typeroler);
   }
   loadHyperHypos(dataInput);  
   std::ostringstream oss;

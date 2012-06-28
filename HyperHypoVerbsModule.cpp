@@ -13,25 +13,25 @@ using namespace std;
 HyperHypoVerbsModule::HyperHypoVerbsModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration)
     : mode(_mode) {
   if (typeroler.compare("SUJ_V.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE5);
+    tRoler = TypeRoler(TYPEROLERFILE5, typeroler);
   } else if (typeroler.compare("COD_V.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE6);
+    tRoler = TypeRoler(TYPEROLERFILE6, typeroler);
   } else if (typeroler.compare("ATB_S.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE7);
+    tRoler = TypeRoler(TYPEROLERFILE7, typeroler);
   }else if (typeroler.compare("AdvVerbe.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE8);
+    tRoler = TypeRoler(TYPEROLERFILE8, typeroler);
   }else if (typeroler.compare("CPL_V.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE9);
+    tRoler = TypeRoler(TYPEROLERFILE9, typeroler);
   }else if (typeroler.compare("CPLV_V.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE10);
+    tRoler = TypeRoler(TYPEROLERFILE10, typeroler);
   }else if (typeroler.compare("CPLV_V")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE11);
+    tRoler = TypeRoler(TYPEROLERFILE11, typeroler);
   }else if (typeroler.compare("MOD_V.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE12);
+    tRoler = TypeRoler(TYPEROLERFILE12, typeroler);
   }else if (typeroler.compare("SUJ_V_RELG.reverse")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE13);
+    tRoler = TypeRoler(TYPEROLERFILE13, typeroler);
   }else if (typeroler.compare("window10")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE4);
+    tRoler = TypeRoler(TYPEROLERFILE4, typeroler);
   }
   loadHyperHypos(dataInput);  
   std::ostringstream oss;

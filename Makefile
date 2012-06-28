@@ -1,5 +1,5 @@
-LDFLAGS     = -L/usr/local/lib -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/boost_1_49_0/stage/lib -lboost_regex -lxerces-c
-CPPFLAGS    = -Wall -Wextra -ggdb -I/home/qp230782/externals/boost_1_49_0/ -I/home/qp230782/externals/xerces-c-3.1.1/include
+LDFLAGS     = -L/usr/local/lib -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/boost_1_49_0/stage/lib -lboost_regex -lxerces-c -pg
+CPPFLAGS    = -Wall -Wextra -O3 -I/home/qp230782/externals/boost_1_49_0/ -I/home/qp230782/externals/xerces-c-3.1.1/include -pg
 
 all:	translateWN translateVerbs buildBilingualDic evalJAWS-WOLF evalVerbsJAWS-WOLF
 
