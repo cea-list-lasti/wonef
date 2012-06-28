@@ -1,6 +1,7 @@
 #include "TypeRoler.hpp"
  
 #include <algorithm>
+#include <cassert>
 
 using namespace std;
 
@@ -50,6 +51,12 @@ void TypeRoler::processLine(string s, float /*thresCut*/, vector<ulong>& ctxt) {
     while (ss.get() != ',');
     ss >> nbOccs;
     ctxt.push_back(currentIdent);
+    /* In TypeRoler::computeIsAScore, we assume those arrays are sorted, but
+     * this only works if the underlying TYPEROLERFILE is sorted. Let's check
+     * at runtime. */
+    if (ctxt.size() > 1) {
+        assert(currentIdent > ctxt[ctxt.size()-2]);
+    }
     while (ss.get() != ';');
   }
 }
