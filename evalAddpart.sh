@@ -2,7 +2,8 @@
 # Extraction de la partie additionnelle #
 #---------------------------------------#
 
-QUERY='addPart.xq'
+cp addPart.xq addPart.xq.tmp
+QUERY='addPart.xq.tmp'
 ADDPART='data2/JAWS.xml'
 
 input=$1 # JAWS dont on veut évaluer la partie additionnelle (situé dans data2/)
@@ -23,9 +24,7 @@ sed -i "s/MODULE/$module/g" $QUERY
 
 java -cp /data/text/bin/basex.jar org.basex.BaseX < $QUERY &> $ADDPART
 
-# Réinitialisation de la requête
-sed -i "s/$input/INPUT/" $QUERY
-sed -i "s/$module/MODULE/g" $QUERY
+rm $QUERY
 
 # Mise en forme du fichier de sortie (la partie additionnelle de JAWS)
 sed -i 's/^> //' $ADDPART

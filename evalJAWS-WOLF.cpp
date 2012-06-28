@@ -320,7 +320,7 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   */
 
   cout << "------------------------------------" << endl;
-  cout << "\t\t*** ALL VERBS ***" << endl;
+  cout << "\t\t*** ALL NOUNS ***" << endl;
   cout << "nbNounsInJaws :\t\t\t"
        << jawsEvaluatorHandler->nbNounsInJaws << endl;
   cout << "nbNounsInJawsAndVt :\t\t"
