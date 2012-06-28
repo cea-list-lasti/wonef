@@ -90,8 +90,8 @@ int main(int argc, char **argv) {
       start = time(NULL);
       simsyner = new SimSynVerbsModule(*idModuleConf, nIteration);
       simsyner->process(wn);
-      cout << "Second step duration : " << time(NULL) - start << " s " << endl;
       delete simsyner;
+      cout << "Second step duration : " << time(NULL) - start << " s " << endl;
       break;
 
     case 3 :
