@@ -38,23 +38,23 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
     }
 
     // counting nouns in JAWS
-    nbNounsInJaws++;
+    nbTermsInJaws++;
     if (polysemous == true) {
-      nbPolysemousNounsInJaws++;
+      nbPolysemousTermsInJaws++;
     }
 
     // counting nouns both in JAWS and VT
     if (vtNet[translation].size() > 0) {
-      nbNounsInJawsAndVt++;
+      nbTermsInJawsAndVt++;
       if (polysemous == true) {
-	nbPolysemousNounsInJawsAndVt++;
+	nbPolysemousTermsInJawsAndVt++;
       }
 
       // counting nouns in the same synset in JAWS and VT
       if (vtNet[translation].find(id)!=vtNet[translation].end()) {
-	nbNounsInJawsAgreeWithVt++;
+	nbTermsInJawsAgreeWithVt++;
 	if (polysemous == true) {
-	  nbPolysemousNounsInJawsAgreeWithVt++;
+	  nbPolysemousTermsInJawsAgreeWithVt++;
 	}
       }
     }
@@ -64,7 +64,7 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
   } else if (_transcode(qname).compare("INSTANCE")==0) {
       if (bcsbase[id]==bcsmode) {
 	//      if (litList.find(original)!=litList.end()) {
-	cntPolysemousNounsProcessedInJaws++;
+	cntPolysemousTermsProcessedInJaws++;
 	nbInstances++;
 	while (translation.find('_')!=string::npos) {
 	  translation=translation.replace(translation.find('_'), 1, " ");
@@ -72,9 +72,9 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
       jawsNet[translation].insert(id);
       jawsNetIdIdent[id].insert(translation);
       if (vtNet[translation].size() > 0) {
-	cntPolysemousNounsProcessedInJawsFoundInVt++;
+	cntPolysemousTermsProcessedInJawsFoundInVt++;
 	if (vtNet[translation].find(id)!=vtNet[translation].end()) {
-	  cntPolysemousNounsProcessedInJawsAgreeWithVt++;
+	  cntPolysemousTermsProcessedInJawsAgreeWithVt++;
 	} else {
 	  cntType2++;
 	  cout <<":Error Type 2 : "<< translation<<"("<<id << " : " << processed << " : " << original <<": ";
@@ -134,11 +134,11 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
   } else if (_transcode(qname).compare("SYNSET")==0) {
     if (polysemousIdsList.find(id)!=polysemousIdsList.end() ) {      
       for (set<string>::iterator it = vtNetIdIdent[id].begin() ; it != vtNetIdIdent[id].end(); it++ ) {
-	cntPolysemousNounsProcessedInVt++;
+	cntPolysemousTermsProcessedInVt++;
 	if (jawsNet[*it].size() > 0) {
-	  cntPolysemousNounsProcessedInVtFoundInJaws++;
+	  cntPolysemousTermsProcessedInVtFoundInJaws++;
 	  if (jawsNet[*it].find(id)!=jawsNet[*it].end()) {
-	    cntPolysemousNounsProcessedInVtAgreeWithJaws++;
+	    cntPolysemousTermsProcessedInVtAgreeWithJaws++;
 	  } else {
 	    cntType4++;
 	    cout <<id <<":Error Type 4 : "<< *it<<" exists in jaws not in " << id << " : "; 

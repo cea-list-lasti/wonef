@@ -41,19 +41,19 @@ public :
   uint nbInstances;
   uint cntCommonPolysemousId;
 
-  uint cntPolysemousNounsProcessedInJaws;
-  uint cntPolysemousNounsProcessedInJawsFoundInVt;
-  uint cntPolysemousNounsProcessedInJawsAgreeWithVt;
-  uint cntPolysemousNounsProcessedInVt;
-  uint cntPolysemousNounsProcessedInVtFoundInJaws;
-  uint cntPolysemousNounsProcessedInVtAgreeWithJaws;
+  uint cntPolysemousTermsProcessedInJaws;
+  uint cntPolysemousTermsProcessedInJawsFoundInVt;
+  uint cntPolysemousTermsProcessedInJawsAgreeWithVt;
+  uint cntPolysemousTermsProcessedInVt;
+  uint cntPolysemousTermsProcessedInVtFoundInJaws;
+  uint cntPolysemousTermsProcessedInVtAgreeWithJaws;
   
-  uint nbNounsInJaws;
-  uint nbPolysemousNounsInJaws;
-  uint nbNounsInJawsAndVt;
-  uint nbPolysemousNounsInJawsAndVt;
-  uint nbNounsInJawsAgreeWithVt;
-  uint nbPolysemousNounsInJawsAgreeWithVt;
+  uint nbTermsInJaws;
+  uint nbPolysemousTermsInJaws;
+  uint nbTermsInJawsAndVt;
+  uint nbPolysemousTermsInJawsAndVt;
+  uint nbTermsInJawsAgreeWithVt;
+  uint nbPolysemousTermsInJawsAgreeWithVt;
   
   uint cntType1;
   uint cntType2;

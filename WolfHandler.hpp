@@ -15,7 +15,7 @@ class WolfHandler : public DefaultHandler {
 
 public : 
 
-  WolfHandler(map<string, set<string> >* wolfNet, map<string, set<string> >* wolfNetIdIdent);
+  WolfHandler(map<string, set<string> >* wolfNet, map<string, set<string> >* wolfNetIdIdent, string _pos);
 
   ~WolfHandler();
 
@@ -33,9 +33,10 @@ private :
   uint nbSynsets;  
   XMLTranscoder*   theTranscoder;
   string id;
-  string pos;
+  string PartOfSpeech;
   string literal;
   string tmpString;
+  string pos;
   map<string, set<string> >* wolfNet;
   map<string, set<string> >* wolfNetIdIdent;
   

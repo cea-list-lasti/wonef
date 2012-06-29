@@ -16,8 +16,8 @@ using namespace std;
 
 
 
-WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet, map<string, set<string> >* _wolfNetIdIdent) :
-  nbSynsets(0) {
+WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet, map<string, set<string> >* _wolfNetIdIdent, string _pos) :
+  nbSynsets(0), pos(_pos) {
   wolfNet = _wolfNet;
 
 
@@ -121,9 +121,10 @@ void WolfHandler::endElement(const XMLCh *const uri,
   if (_transcode(qname).compare("ID")==0) {
     id = tmpString.substr(6, 8);
   } else if (_transcode(qname).compare("POS")==0) {
-    pos = tmpString;
+    PartOfSpeech = tmpString;
   }else if (_transcode(qname).compare("LITERAL")==0) {
-    if (pos=="n") {
+    if ((pos == "noun" && PartOfSpeech == "n")
+      || (pos == "verb" && PartOfSpeech == "v")) {
       if (wolfNet->find(tolower(literal))==wolfNet->end()) {
          (*wolfNet)[tolower(literal)]=set<string>();
       }      

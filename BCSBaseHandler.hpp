@@ -15,7 +15,7 @@ class BcsbaseHandler : public DefaultHandler {
 
 public : 
 
-  BcsbaseHandler(map<string, int >* bcsbase);
+  BcsbaseHandler(map<string, int >* bcsbase, string _pos);
 
   ~BcsbaseHandler();
 
@@ -33,9 +33,10 @@ private :
   uint nbSynsets;  
   XMLTranscoder*   theTranscoder;
   string id;
-  string pos;
+  string PartOfSpeech;
   string literal;
   string tmpString;
+  string pos;
   map<string, int >* bcsbase;
   
   string _transcode(const XMLCh* const chars);

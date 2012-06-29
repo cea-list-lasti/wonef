@@ -16,8 +16,8 @@ using namespace std;
 
 
 
-BcsbaseHandler::BcsbaseHandler(map<string, int >* _bcsbase) :
-  nbSynsets(0) {
+BcsbaseHandler::BcsbaseHandler(map<string, int >* _bcsbase, string _pos) :
+  nbSynsets(0), pos(_pos) {
   bcsbase = _bcsbase;
 
   XMLTransService* const  theService =
@@ -117,9 +117,10 @@ void BcsbaseHandler::endElement(const XMLCh *const uri,
   if (_transcode(qname).compare("ID")==0) {
     id = tmpString.substr(6, 8);
   } else if (_transcode(qname).compare("POS")==0) {
-    pos = tmpString;
+    PartOfSpeech = tmpString;
   } else if (_transcode(qname).compare("BCS")==0) {
-    if(pos.compare("n")==0) {
+    if((pos == "noun" && PartOfSpeech.compare("n") == 0)
+      || (pos == "verb" && PartOfSpeech.compare("v") == 0)) {
       stringstream ss;
       ss << tmpString;
       int bcs ; 
