@@ -20,6 +20,43 @@
 using namespace std;
 
 
+std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
+
+  std::map<std::string, std::set<std::string> > mapping;
+  std::cout << "loading mapfile from: " << mapfile << "\n";
+  std::ifstream llss(mapfile.c_str(), fstream::in);
+  if (llss.fail()) {
+    cerr << "Oops, " << mapfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
+  std::string s;
+
+  while (getline(llss, s)) {
+    boost::regex patternIdSrc("([0-9]*)(.*)");
+    boost::regex patternIdsTgt(" ([0-9]*) (1|0.[0-9]*)");
+    std::string::const_iterator start, end;
+    start = s.begin();
+    end = s.end();
+    boost::match_results <std::string::const_iterator> what;
+    if (boost::regex_search(start, end, what, patternIdSrc)) {
+      std::string idSrc = what[1].str();
+      start = what[1].second;
+      boost::match_results <std::string::const_iterator> whatInside;
+      while (boost::regex_search(start, end, whatInside, patternIdsTgt)) {
+	std::string idTgt = whatInside[1].str();
+	if(mapping.find(idSrc)==mapping.end()) {
+	  mapping[idSrc]= std::set<std::string>();
+	}
+	mapping[idSrc].insert(idTgt);
+	start = whatInside[1].second;
+      }
+    }
+  }
+  
+  return(mapping);
+}
+
+
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
 
   std::cerr << "loading polysemous literals from: " << filename << std::endl;
@@ -45,7 +82,7 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
 }
 
 
-int loadWOLFnouns(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string pos) {
+int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string pos) {
 
   try {
 
@@ -163,7 +200,7 @@ int loadBcsBase(map<string, int>& bcsbase, string filename, string pos) {
 }
 
 
-int loadEWNnouns(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
+int loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
   EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath, &mapping);
   ewnLoader.load();
   return 0;
@@ -178,7 +215,8 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
 			       set<string>& litList,
 			       set<string>& polysemousIdsList,
 			       map<string, set<string> >& wolfNet,
-			       map<string, set<string> >& wolfNetIdIdent, 
+			       map<string, set<string> >& wolfNetIdIdent,
+			       string pos,
 			       string filename,
 			       string& datafile,
 			       BCSMode bcsmode) {
@@ -229,12 +267,19 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
     return -1;
   }
 
+  string terms;
+  if (pos == "noun") {
+    terms = "Nouns";
+  } else if (pos == "verb") {
+    terms = "Verbs";
+  }
+
   cout << "------------------------------------" << endl;
-  cout << "cntPolysemousNounsProcessedInJaws : " 
+  cout << "cntPolysemous" + terms + "ProcessedInJaws : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws << endl;
-  cout << "cntPolysemousNounsProcessedInJawsFoundInWolf : " 
+  cout << "cntPolysemous" + terms + "ProcessedInJawsFoundInWolf : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt << endl;
-  cout << "cntPolysemousNounsProcessedInJawsAgreeWithWolf : " 
+  cout << "cntPolysemous" + terms + "ProcessedInJawsAgreeWithWolf : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt << endl;
   cout << "cntCommonPolysemousId : " 
        << jawsEvaluatorHandler->cntCommonPolysemousId << endl;
@@ -248,11 +293,11 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   cout << "Precision / Wolf : " << precision  << endl;
   cout << "Generous Precision / Wolf : " << precision2  << endl;
   cout << "P2/WOLF : "  << precision3 << endl;
-  cout << "cntPolysemousNounsProcessedInWolf : " 
+  cout << "cntPolysemous" + terms + "ProcessedInWolf : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVt << endl;
-  cout << "cntPolysemousNounsProcessedInWolfFoundInJaws : " 
+  cout << "cntPolysemous" + terms + "ProcessedInWolfFoundInJaws : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVtFoundInJaws << endl;
-  cout << "cntPolysemousNounsProcessedInWolfAgreeWithJaws : " 
+  cout << "cntPolysemous" + terms + "ProcessedInWolfAgreeWithJaws : " 
        << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVtAgreeWithJaws << endl;
 
   cout << "nbOriginalLit : " << jawsEvaluatorHandler->nbOriginalLit << endl;
@@ -320,12 +365,12 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   */
 
   cout << "------------------------------------" << endl;
-  cout << "\t\t*** ALL NOUNS ***" << endl;
-  cout << "nbNounsInJaws :\t\t\t"
+  cout << "\t\t*** All " + terms + " ***" << endl;
+  cout << "nb" + terms + "InJaws :\t\t\t"
        << jawsEvaluatorHandler->nbTermsInJaws << endl;
-  cout << "nbNounsInJawsAndVt :\t\t"
+  cout << "nb" + terms + "InJawsAndVt :\t\t"
        << jawsEvaluatorHandler->nbTermsInJawsAndVt << endl;
-  cout << "nbNounsInJawsAgreeWithVt :\t"
+  cout << "nb" + terms + "InJawsAgreeWithVt :\t"
        << jawsEvaluatorHandler->nbTermsInJawsAgreeWithVt << endl;
 
   float allPrecision = (float)jawsEvaluatorHandler->nbTermsInJawsAgreeWithVt
@@ -342,12 +387,12 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   cout << "Pseudo precision : " << allPseudoPrec<< "\t" 
        << ceil(allPseudoPrec*1000)/10. << "%"  << endl;
 
-  cout << "\t\t*** POLYSEMOUS ***" << endl;
-  cout << "nbPolysemousNounsInJaws :\t\t"
+  cout << "\t\t*** Polysemous ***" << endl;
+  cout << "nbPolysemous" + terms + "InJaws :\t\t"
        << jawsEvaluatorHandler->nbPolysemousTermsInJaws << endl;
-  cout << "nbPolysemousNounsInJawsAndVt :\t\t"
+  cout << "nbPolysemous" + terms + "InJawsAndVt :\t\t"
        << jawsEvaluatorHandler->nbPolysemousTermsInJawsAndVt << endl;
-  cout << "nbPolysemousNounsInJawsAgreeWithVt :\t"
+  cout << "nbPolysemous" + terms + "InJawsAgreeWithVt :\t"
        << jawsEvaluatorHandler->nbPolysemousTermsInJawsAgreeWithVt << endl;
 
   cout << "Precision : " << polyPrecision << "\t\t\t" 
@@ -367,21 +412,28 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
 
 
 int main(int argc, char **argv) {
-  if (argc <6) {
-    cerr << "Usage : evalJAWS-WOLF  literalList wolf.xml jaws.xml vtmode bcsmode bcsfile" << endl;
+  if (argc < 7) {
+    cerr << "Usage : evalJAWS-WOLF pos literalList wolf.xml jaws.xml vtmode bcsmode bcsfile" << endl;
     return 1;
   }
 
-  string vtmode =argv[4];
-  string datafile = DATA_NOUN;
-  string pos = "noun";
-  
+  string vtmode = argv[5];
+  string pos = argv[1];
+  string datafile;
+  string mapfile;
+  if (pos == "noun") {
+    datafile = DATA_NOUN;
+  } else if (pos == "verb") {
+    datafile = DATA_VERB;
+    mapfile = MAPVERB15_20;
+  }
+
   int bcsmode; 
   stringstream ss; 
-  ss << argv[5];
+  ss << argv[6];
   ss >> bcsmode; 
-  
-    
+
+
 
 
   set<string> litList = set<string>();
@@ -394,9 +446,9 @@ int main(int argc, char **argv) {
 
   // loading BCS Base
   if (vtmode.compare("wolf")==0) {
-    loadBcsBase(bcsbase, argv[6], pos);
+    loadBcsBase(bcsbase, argv[7], pos);
   } else if (vtmode.compare("ewn")==0) {
-  
+
 
 
     switch (bcsmode) {
@@ -405,36 +457,40 @@ int main(int argc, char **argv) {
     case (int) BCS1 : // 1
     case (int) BCS2 : // 2
     case (int) BCS3 : // 3
-      loadBcsBase15(bcsbase, argv[6]);
+      loadBcsBase15(bcsbase, argv[7]);
       break;    
     case (int) BCSALL : // 0
-      loadBcsBaseComplem(bcsbase, argv[6]);
+      loadBcsBaseComplem(bcsbase, argv[7]);
       break;
     }
   }
 
-
+  if (pos == "verb") {
+    // Loading Mapping File
+    mapping = loadMapfile(mapfile);
+  }
 
   // Loading literal list
-  loadPolysemousLiteral(litList, polysemousIdsList, argv[1]);
-  
+  loadPolysemousLiteral(litList, polysemousIdsList, argv[2]);
+
   // loading WOLF
-  cerr << "VTMode : " <<vtmode << endl;
+  cerr << "VTMode : " << vtmode << endl;
   if (vtmode.compare("wolf")==0) {
     cerr << "Loading WOLF" << endl;  
-    if (loadWOLFnouns(wolfNet, wolfNetIdIdent, argv[2], pos)==1) {
+    if (loadWOLF(wolfNet, wolfNetIdIdent, argv[3], pos)==1) {
       return 1;
     }
-    datafile=DATA_NOUN;
   } else if (vtmode.compare("ewn")==0) {
     // loading EWN 
     cerr << "Loading EWN" << endl;  
-    if (loadEWNnouns(wolfNet, wolfNetIdIdent, argv[2], mapping)==1) {
+    if (loadEWN(wolfNet, wolfNetIdIdent, argv[3], mapping)==1) {
       return 1;
     }
-    datafile=DATA_NOUN;
+    if (pos == "verb") {
+      datafile = DATA_VERB15;
+    }
   }
-  
+
 
   // parsing JAWS and evaluating
   cerr << "Parsing JAWS" << endl;
@@ -443,7 +499,8 @@ int main(int argc, char **argv) {
 				 polysemousIdsList,
 				 wolfNet,
 				 wolfNetIdIdent,
-				 argv[3], 
+				 pos,
+				 argv[4], 
 				 datafile, 
 				 (BCSMode) bcsmode) == 1 ) {
     return 1;

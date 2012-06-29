@@ -27,5 +27,5 @@ sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
 sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNBESTDATA
 
 echo "Evaluating..."
-./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbs$seqs
-./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbsBest$seqs
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbs$seqs
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbsBest$seqs
