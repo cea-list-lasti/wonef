@@ -13,14 +13,14 @@ pos=$3 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe)
 
 # /!\ à antislasher tous les "."
 # exemple :
-#./evalAddpart.sh data\.fr\.nouns\.best\.wolf\.noun\.Noen1 simsyn1\.1 N
+#./evalAddpart.sh data2/data.fr.nouns.best.wolf.noun.Noen1 simsyn1.1 N
 # ou
-#./evalAddpart.sh data\.fr\.verbs1 vote-lastchance1\.1 V
+#./evalAddpart.sh data2/data.fr.verbs1 vote-lastchance1.1 V
 
-echo "Extracting $module from data2/$input ..."
+echo "Extracting $module from $input ..."
 
 # Adaptation de la requête
-sed -i "s/INPUT/$input/" $QUERY
+sed -i "s,INPUT,$PWD/$input," $QUERY
 sed -i "s/MODULE/$module/g" $QUERY
 
 java -cp /data/text/bin/basex.jar org.basex.BaseX < $QUERY &> $ADDPART
