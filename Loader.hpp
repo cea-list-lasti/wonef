@@ -8,10 +8,10 @@ using namespace std;
 
 class LoaderModule {
   public : 
-  LoaderModule(string infile, set<string>& dicfiles, string nounfile, bool nounonly, bool noen) ;
+  LoaderModule(string infile, set<string>& dicfiles, string posfile, string pos, bool noen) ;
   ~LoaderModule() ;
   
-  static set<string> nounsList;
+  static set<string> posList;
   static map<string, string> desaxData;
   static map<string, string> tgt2TgtDefs;
   static WORDNET::WordNetIndex WNIndex;
@@ -22,17 +22,18 @@ class LoaderModule {
 private : 
   map<string, set<string> > src2Tgt;
   bool noen; 
+  string pos;
 
   set<string> dicfiles;
   string infile;
   map<string, string> lowercase;
 
   WORDNET::TgtCandidates extractCandidates(string srcWord);
-  void loadBilingualDic(bool nounOnly=true);
+  void loadBilingualDic();
   void loadLowercase();
   void loadIndex();
   //  string tolower(string str);
-  void loadPOSList(string nounsFile);
+  void loadPOSList(string posFile);
 };
 
 

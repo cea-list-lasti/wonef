@@ -1,10 +1,10 @@
 #include "../src/knn_search.h"
 //#include "../src/converter.h"
 #include "Paths.hpp"
-#include "LoaderVerbs.hpp"
+#include "Loader.hpp"
 #include "Dumper.hpp"
-#include "SimSynVerbsModule.hpp"
-#include "HyperHypoVerbsModule.hpp"
+#include "SimSynModule.hpp"
+#include "HyperHypoModule.hpp"
 #include "MeroHoloModule.hpp"
 #include "MeroHoloLikeHyperModule.hpp"
 #include "LastChanceModule.hpp"
@@ -18,12 +18,16 @@ int main(int argc, char **argv) {
 
   time_t globalStart = time(NULL);
 
-  SimSynVerbsModule* simsyner = NULL;
-  HyperHypoVerbsModule* hyperhypoer= NULL;
+  SimSynModule* simsyner = NULL;
+  HyperHypoModule* hyperhypoer= NULL;
   LastChanceModule* lastchancer= NULL;
 
+  bool noen = false;
+
+  string pos = "verb";
   string datafile = DATA_VERB;
   string suffix = "";
+
   vector<int> seq;
   for (int i = 1; i < argc ; i++) {
     cerr << "ARGV : '" << argv[i] << "'"<<endl;
@@ -54,6 +58,11 @@ int main(int argc, char **argv) {
     } else if (argv[i][0]=='8') { /*HyperHypoModule CPLV_V.reverse	*/
       suffix += "8";
       seq.push_back(8);
+    } else if (argv[i][0]=='N') {
+      noen = true;
+      stringstream ss ;
+      ss << "." << argv[i];
+      suffix += ss.str();
     } else {
     stringstream ss ;
       ss << "." << argv[i];
@@ -68,7 +77,7 @@ int main(int argc, char **argv) {
   dicfiles.insert(DICFILE);
   dicfiles.insert(DICFILE2);
 
-  LoaderVerbsModule loader(datafile, dicfiles, VERBS_P_LIST);
+  LoaderModule loader(datafile, dicfiles, VERBS_P_LIST, pos, noen);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
 
@@ -88,7 +97,7 @@ int main(int argc, char **argv) {
     case 2 :
       cout << "Second step "  << endl;
       start = time(NULL);
-      simsyner = new SimSynVerbsModule(*idModuleConf, nIteration);
+      simsyner = new SimSynModule(pos, *idModuleConf, nIteration);
       simsyner->process(wn);
       delete simsyner;
       cout << "Second step duration : " << time(NULL) - start << " s " << endl;
@@ -97,7 +106,7 @@ int main(int argc, char **argv) {
     case 3 :
       cout << "Third step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V_RELG.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "SUJ_V_RELG.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Third step duration : " << time(NULL) - start << " s " << endl;
@@ -106,7 +115,7 @@ int main(int argc, char **argv) {
     case 4 :
       cout << "Fourth step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "COD_V.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "COD_V.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Fourth step duration : " << time(NULL) - start << " s " << endl;
@@ -115,7 +124,7 @@ int main(int argc, char **argv) {
     case 5 :
       cout << "Fifth step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPL_V.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "CPL_V.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Fifth step duration : " << time(NULL) - start << " s " << endl;
@@ -124,7 +133,7 @@ int main(int argc, char **argv) {
     case 6 :
       cout << "Six step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "ATB_S.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "ATB_S.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Six step duration : " << time(NULL) - start << " s " << endl;
@@ -133,7 +142,7 @@ int main(int argc, char **argv) {
     case 7 :
       cout << "Seventh step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "SUJ_V.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "SUJ_V.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Seventh step duration : " << time(NULL) - start << " s " << endl;
@@ -142,7 +151,7 @@ int main(int argc, char **argv) {
     case 8 :
       cout << "Eigth step "  << endl;
       start = time(NULL);
-      hyperhypoer = new HyperHypoVerbsModule(datafile, "CPLV_V.reverse", R_HYPER, *idModuleConf, nIteration);
+      hyperhypoer = new HyperHypoModule(datafile, "CPLV_V.reverse", R_HYPER, pos, *idModuleConf, nIteration);
       hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Eigth step duration : " << time(NULL) - start << " s " << endl;

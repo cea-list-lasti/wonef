@@ -28,11 +28,11 @@ BCSFILE='/home/qp230782/Projets/5000_bc.xml'
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translateWN WOLF noun Noen $seqsspaces &> logs/trans$seqs
+./translateWN WOLF Noen $seqsspaces &> logs/transNouns$seqs
 
 # The produced file needs some fixes before evaluation
-WNDATA="data2/data.fr.nouns.wolf.noun.Noen$seqs"
-WNBESTDATA="data2/data.fr.nouns.best.wolf.noun.Noen$seqs"
+WNDATA="data2/data.fr.nouns.wolf.Noen$seqs"
+WNBESTDATA="data2/data.fr.nouns.best.wolf.Noen$seqs"
 echo "Fixing WNDATA..."
 sed -i 's/&/&amp;/g' $WNDATA
 sed -i 's/&/&amp;/g' $WNBESTDATA
@@ -42,6 +42,6 @@ sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
 sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNBESTDATA
 
 echo "Evaluating..."
-./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/eval$seqs
-./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf $BCSMODE $BCSFILE &> logs/evalBest$seqs
+./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/evalNouns$seqs
+./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf $BCSMODE $BCSFILE &> logs/evalNounsBest$seqs
 

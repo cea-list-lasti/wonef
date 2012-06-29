@@ -13,7 +13,7 @@ using namespace std;
 class SimSynModule : public TranslatorModule {
   
 public : 
-  SimSynModule(int idModuleConf, int nIteration);
+  SimSynModule(string _pos, int idModuleConf, int nIteration);
   virtual ~SimSynModule();
 
 
@@ -24,16 +24,19 @@ public :
 private : 
   string knnStdFile;
   pair<string, float> selectTgtWord (map<string,int>& candidates,
+			// removes the se_ or s' when pronominal
+			// ex: verbCand["s'étrangler"] = "étrangler"
+			map<string, string>& verbCand,
 			map<string, set<WORDNET::TranslationInfos> >& synset,
 			string& knnFile);
+  string pos;
   string suffix;
 
 protected :
 
   string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 			  string synsetId,
-			  map<string, WORDNET::TgtCandidates >::iterator it,
-			  bool homograph=false);
+			  map<string, WORDNET::TgtCandidates >::iterator it);
 };
 
 

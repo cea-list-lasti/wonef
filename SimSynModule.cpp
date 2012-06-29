@@ -11,7 +11,7 @@
 using namespace std;
 
 
-SimSynModule::SimSynModule(int idModuleConf, int nIteration) {
+SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration) : pos(_pos) {
   knnStdFile =  KNNSTDFILE;
   std::ostringstream oss;
   oss << idModuleConf << "." << nIteration;
@@ -53,24 +53,33 @@ void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 
 string SimSynModule::trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 					string synsetId,
-					map<string, WORDNET::TgtCandidates>::iterator it,
-					bool homograph) {
-  string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COMPDUNOM");
+					map<string, WORDNET::TgtCandidates>::iterator it) {
+  string rel1, rel2, rel3;
+  if (pos == "noun") {
+    rel1 = "COMPDUNOM";
+    rel2 = "COD_V";
+    rel3 = "APPOS";
+  } else if (pos == "verb") {
+    rel1 = "COD_V.reverse";
+    rel2 = "CPL_V.reverse";
+    rel3 = "CPLV_V.reverse";
+  }
+  string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), rel1);
   set<pair<string, float> > elected;
-  pair<string, float> elec = selectTgtWord(it->second.cand, synset, knnFile);
+  pair<string, float> elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
   if (elec.first!="") {
     elected.insert(elec);      
   }
   if (elected.size()==0) {
-    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "COD_V");
-    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), rel2);
+    elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
     if (elec.first!="") {
       elected.insert(elec);      
     }
   }
   if (elected.size()==0) {
-    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), "APPOS");
-    elec = selectTgtWord(it->second.cand, synset, knnFile);
+    knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), rel3);
+    elec = selectTgtWord(it->second.cand, it->second.verbCand, synset, knnFile);
     if (elec.first!="") {
       elected.insert(elec);      
     }
@@ -90,7 +99,7 @@ string SimSynModule::trySelecAndReplace(map<string, set<WORDNET::TranslationInfo
 }
 
 
-pair<string, float> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, set<WORDNET::TranslationInfos> >& synset, string& knnFile) {
+pair<string, float> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<WORDNET::TranslationInfos> >& synset, string& knnFile) {
   map<pair<string, float>, uint> votes;
   for (map<string, set<WORDNET::TranslationInfos> >::iterator itSynset = synset.begin() ; itSynset!=synset.end() ; itSynset++) {
     knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
@@ -106,7 +115,12 @@ pair<string, float> SimSynModule::selectTgtWord (map<string, int>& cand, map<str
       //      cerr << "Processing : " << it2->first << endl;
     
       stringstream sssearch;
-      sssearch << " "<< it2->first<<":";
+      if (pos == "noun") {
+	sssearch << " " << it2->first << ":";
+      } else if (pos == "verb") {
+	// compute the score without the pronoun
+	sssearch << " " << verbCand[it2->first] << ":";
+      }
       size_t pos = knns.find(sssearch.str());
       if (pos!=string::npos) {
 	pair<string, float> candidate;

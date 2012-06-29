@@ -13,7 +13,7 @@ using namespace std;
 
 class HyperHypoModule : TranslatorModule {
 public : 
-  HyperHypoModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration);
+  HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration);
   virtual ~HyperHypoModule();
 
   virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
@@ -24,6 +24,7 @@ private :
   map<string, set<string> >hypernyms;
   map<string, set<string> >hyponyms;
   
+  string pos;
   string suffix;
 
   void loadHyperHypos(string dataInput);

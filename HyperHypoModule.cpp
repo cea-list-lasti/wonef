@@ -10,17 +10,41 @@
 using namespace std;
 
 
-HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, int idModuleConf, int nIteration)
-    : mode(_mode) {
-  if (typeroler.compare("COMPDUNOM")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE, typeroler);
-  } else if (typeroler.compare("SUJ_V")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE2, typeroler);
-  } else if (typeroler.compare("COD_V")==0) {
-    tRoler = TypeRoler(TYPEROLERFILE3, typeroler);
-  }else if (typeroler.compare("window10")==0) {
+HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration)
+    : mode(_mode), pos(_pos) {
+
+  if (typeroler.compare("window10")==0) {
     tRoler = TypeRoler(TYPEROLERFILE4, typeroler);
+  } else if (pos == "noun") {
+    if (typeroler.compare("COMPDUNOM")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE, typeroler);
+    } else if (typeroler.compare("SUJ_V")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE2, typeroler);
+    } else if (typeroler.compare("COD_V")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE3, typeroler);
+    }
+  } else if (pos == "verb") {
+    if (typeroler.compare("SUJ_V.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE5, typeroler);
+    } else if (typeroler.compare("COD_V.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE6, typeroler);
+    } else if (typeroler.compare("ATB_S.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE7, typeroler);
+    } else if (typeroler.compare("AdvVerbe.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE8, typeroler);
+    } else if (typeroler.compare("CPL_V.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE9, typeroler);
+    } else if (typeroler.compare("CPLV_V.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE10, typeroler);
+    } else if (typeroler.compare("CPLV_V")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE11, typeroler);
+    } else if (typeroler.compare("MOD_V.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE12, typeroler);
+    } else if (typeroler.compare("SUJ_V_RELG.reverse")==0) {
+      tRoler = TypeRoler(TYPEROLERFILE13, typeroler);
+    }
   }
+
   loadHyperHypos(dataInput);  
   std::ostringstream oss;
   oss << idModuleConf << "." << nIteration;
@@ -117,17 +141,25 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (head=="") {
 	    	head = getHead(*itSyn);
 	    }
-	    float score = tRoler.computeIsAScore( itCand->first, head, mode);
+	    float score;
+	    if (pos == "noun") {
+	      score = tRoler.computeIsAScore( itCand->first, head, mode);
+	    } else if (pos == "verb") {
+	      // compute the score without the pronoun
+	      score = tRoler.computeIsAScore( it->second.verbCand[itCand->first], head, mode);
+	    }
 
 	    if( verbose) {
-//	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	    }
 	    if (!isnan(score)) {
 	      if( verbose) {
 		cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	      }
+	      // reduce weight of hyponyms of the synset among the candidates
 	      sum+=score==1?0.3:score;
 	    } else {
+	      // hyponym not considered in the sum
 	      validSumHypo --;
 	    } 
 	    if (score==0 && head[head.length()-1]=='s') {
@@ -150,13 +182,21 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	    if (head=="") {
 		    head = getHead(*itSyn);
 	    }
-	    float score =tRoler.computeIsAScore(head, itCand->first, mode);
+	    float score;
+	    if (pos == "noun") {
+	      score = tRoler.computeIsAScore(head, itCand->first, mode);
+	    } else if (pos == "verb") {
+	      // compute the score without the pronoun
+	      score = tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], mode);
+	    }
 	    if (!isnan(score)) {
 	      if (verbose){
 	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
 	      }
+	      // reduce weight of hypernyms of the synset among the candidates
 	      sum+=score==1?0.3:score;
 	    } else {
+	      // hypernym not considered in the sum
 	      validSumHyper --;
 	    }
 	    if (score == 0 && head[head.length()-1]=='s') {
@@ -189,18 +229,18 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 	}
 	*/
      if (verbose) {
-	cerr << "elected :"<< elected << endl;
+	cerr << "elected : "<< it->first << " => " << elected << endl;
      }
 
       if (elected!="") {
 	if (itwn->second.frenchSynset.find(elected)==itwn->second.frenchSynset.end()) {
 	  itwn->second.frenchSynset[elected] = set<WORDNET::TranslationInfos>();
 	}
-	WORDNET::TranslationInfos translationInfo;
-	translationInfo.original = it->first;
-	translationInfo.processed = "hyperhypo" + suffix;
-	translationInfo.score = best;
-	itwn->second.frenchSynset[elected].insert(translationInfo);
+	WORDNET::TranslationInfos translationInfos;
+	translationInfos.original = it->first;
+	translationInfos.processed = "hyperhypo" + suffix;
+	translationInfos.score = best;
+	itwn->second.frenchSynset[elected].insert(translationInfos);
 	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];
 	nbDisamb++;
       }
@@ -222,19 +262,19 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 
 string HyperHypoModule::getHead (string locution) {
   string endLoc = locution;
-  if (LoaderModule::nounsList.find(locution)==LoaderModule::nounsList.end()) {
+  if (LoaderModule::posList.find(locution)==LoaderModule::posList.end()) {
     return locution;
   }
 
   string partialLoc = endLoc.substr(0, endLoc.find('_'));
-  while (LoaderModule::nounsList.find(partialLoc)==LoaderModule::nounsList.end()
+  while (LoaderModule::posList.find(partialLoc)==LoaderModule::posList.end()
 	 && partialLoc!=endLoc 
 	 && partialLoc!=endLoc.substr(0, endLoc.length()-1)) {
     endLoc = endLoc.substr(endLoc.find('_')+1);
     partialLoc = endLoc.substr(0, endLoc.find('_'));
     if (partialLoc[partialLoc.length()-1]=='s'
 	||partialLoc[partialLoc.length()-1]=='x') {
-      if (LoaderModule::nounsList.find(partialLoc)==LoaderModule::nounsList.end()) {
+      if (LoaderModule::posList.find(partialLoc)==LoaderModule::posList.end()) {
 	partialLoc=partialLoc.substr(0, partialLoc.length()-1);
       }
     }

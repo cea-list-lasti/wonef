@@ -10,22 +10,22 @@
 using namespace std;
 
 
-set<string> LoaderModule::nounsList;
+set<string> LoaderModule::posList;
 map<string, string> LoaderModule::desaxData;
 map<string, string> LoaderModule::tgt2TgtDefs;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
-LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string nounsfile, bool nounonly, bool noen ) : 
-  noen(noen) {
+LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfile, string _pos, bool _noen) : 
+  pos(_pos), noen(_noen) {
   infile = _infile;
-  dicfiles=_dicfiles;
+  dicfiles = _dicfiles;
   cerr << "Loading...  " << endl;
   
   if(desaxData.size()==0) {
     initDesax(desaxData) ;
-    LoaderModule::loadPOSList(nounsfile);
-    LoaderModule::loadBilingualDic(nounonly);
+    LoaderModule::loadPOSList(posfile);
+    LoaderModule::loadBilingualDic();
     LoaderModule::loadIndex();
   }
 }
@@ -73,22 +73,22 @@ void LoaderModule::loadIndex() {
   cerr << "Index loaded" << endl;
 }
 
-void LoaderModule::loadPOSList(string nounsFile) {
-  cerr << "Opening "<< nounsFile << endl;
-  ifstream idss(nounsFile.c_str(), fstream::in);
+void LoaderModule::loadPOSList(string posFile) {
+  cerr << "Opening "<< posFile << endl;
+  ifstream idss(posFile.c_str(), fstream::in);
   if (idss.fail()) {
-    cerr << "Oops, " << nounsFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    cerr << "Oops, " << posFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
     exit(-1);
   }
 
   string s;
   while (getline(idss, s) ) {	
-    nounsList.insert(s);
+    posList.insert(s);
   }
   idss.close();
 }
 
-void LoaderModule::loadBilingualDic(bool nounOnly) {
+void LoaderModule::loadBilingualDic() {
 
   for (set<string>::iterator itDic = dicfiles.begin(); itDic!=dicfiles.end(); itDic++) {
     cerr << "Opening "<< *itDic << endl;
@@ -109,10 +109,9 @@ void LoaderModule::loadBilingualDic(bool nounOnly) {
       ss.ignore(256,';');
       ss >> s;     
       //      cerr << s << endl;
-      if (!nounOnly 
-	  || LoaderModule::nounsList.find(tgtWord)!=LoaderModule::nounsList.end()
-	  || LoaderModule::nounsList.find(tgtWord.substr(0, tgtWord.find(' ')))!=LoaderModule::nounsList.end()
-	  || (tgtWord[tgtWord.length()-1]=='s' && LoaderModule::nounsList.find(tgtWord.substr(0, tgtWord.length()-1))!=LoaderModule::nounsList.end())
+      if (LoaderModule::posList.find(tgtWord)!=LoaderModule::posList.end()
+	  || LoaderModule::posList.find(tgtWord.substr(0, tgtWord.find(' ')))!=LoaderModule::posList.end()
+	  || (tgtWord[tgtWord.length()-1]=='s' && LoaderModule::posList.find(tgtWord.substr(0, tgtWord.length()-1))!=LoaderModule::posList.end())
 	  ) {
 	src2Tgt[tolower(s.substr(0, s.find(';')))].insert(tgtWord);
 	
@@ -134,49 +133,64 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   stringstream ss;
   srcWord = tolower(srcWord);
   for (set<string>::iterator it = src2Tgt[srcWord].begin() ; it!= src2Tgt[srcWord].end(); it++) {
-    //    cerr << srcWord << " -> " << *it << endl;
-    //    res.cand.insert(pair<string, int>(*it, 0));
-    res.cand[*it]=0;
+    string tgtWord = *it;
+    res.cand[tgtWord]=0;
+
+    // removes the pronoun in order to compute subsequent scores
+    if (pos == "verb") {
+      if (tgtWord.find("se_") != string::npos) {
+	res.verbCand[tgtWord] = tgtWord.substr(tgtWord.find("_")+1);
+      } else if (tgtWord.find("s'") != string::npos) {
+	res.verbCand[tgtWord] = tgtWord.substr(tgtWord.find("'")+1);
+      } else {
+	res.verbCand[tgtWord] = tgtWord;
+      }
+    }
+
   } 
   return res;
 }
 
 
 WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
+
   WORDNET::WordNet wn;
+
   if (infile.find("index")!=string::npos) {  
     infile.replace(infile.rfind("index"), 5,"data");
   } else if (infile.find("IDX")!=string::npos) {  
     infile.replace(infile.rfind("IDX"), 3,"DAT");
   }
+
   ifstream dataIfs(infile.c_str(), fstream::in);
   if (dataIfs.fail()) {
     cerr << "Oops, " << infile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
     exit(-1);
   }
+
   int cnt = 0;
   string s = "";
   cerr << infile << endl;
   cerr << "cnt : " << cnt <<"/"<< notmore << endl;
-  while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {	
-    if (s.find('0')==string::npos) {
-      continue;
-    }
+
+  while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {
     WORDNET::WordNetEntry wne;    
     if (s[0]!=' ') {
       string str = s;
-      if (s.find("data/wn.fr/data.fr.nouns.ewn.noun.Noen5")!=string::npos) {
-	cerr << "test : "<< s << endl;
-      }
       string synsetId = s.substr(0, s.find(' '));
 
       stringstream ss;    
-      ss << s; 
-      ss.ignore(256, 'n') ;
+      ss << s;
+      if (pos == "noun") {
+	ss.ignore(256, 'n') ;
+      } else if (pos == "verb") {
+	ss.ignore(256, 'v') ;
+      }
       int nbSyns = 0xaa;
-      ss >> hex >> nbSyns ; 
+      ss >> hex >> nbSyns ;
+
       for (int i = 0; i < nbSyns; i++) {
-	ss.ignore(1, ' ') ;      
+	ss.ignore(1, ' ') ;
 	string srcWord;
 	ss >> srcWord;
 	srcWord=srcWord.substr(0, srcWord.find(' '));
@@ -184,8 +198,9 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	bool capital = false;
 	if (WNIndex[srcWord].size()==0) {
 	  srcWord = tolower(srcWord);
-	  capital=true;
-	} 	
+	  capital = true;
+	}
+
 	WORDNET::TranslationInfos translationInfos;
 	translationInfos.original = srcWord;
 	translationInfos.score = 1;
@@ -204,6 +219,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	    //wne.frenchSynset.insert(pair<string, string>(it->first, srcWord));
 	    wne.newdef=tgt2TgtDefs[it->first];
 	  }
+
 	} else {
 	  string longest = "";
 	  switch (candidates.cand.size()) {	
@@ -284,8 +300,14 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 
 	    // promote true (and false) fr/en friends
 	    for (map<string, int>::iterator itCand = candidates.cand.begin(); itCand!=candidates.cand.end(); itCand++) {
-	      Distance lDist;
-	      int ldScore = lDist.LD(desax(LoaderModule::desaxData, itCand->first),srcWord);
+	      Distance lDist; 
+	      int ldScore = 0;
+	      if (pos == "noun") {
+		ldScore = lDist.LD(desax(LoaderModule::desaxData, itCand->first),srcWord);
+	      } else if (pos == "verb") {
+		// compute the score without the pronoun
+		ldScore = lDist.LD(desax(LoaderModule::desaxData, candidates.verbCand[itCand->first]),srcWord);
+	      }
 	      if (ldScore<=3) {	     
 		wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;	  
 		if (verbose) {
