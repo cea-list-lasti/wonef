@@ -11,7 +11,6 @@ input=$1 # JAWS dont on veut évaluer la partie additionnelle (situé dans data2
 module=$2 # module ayant engendré la partie additionnelle que l'on veut évaluer
 pos=$3 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe)
 
-# /!\ à antislasher tous les "."
 # exemple :
 #./evalAddpart.sh data2/data.fr.nouns.best.wolf.noun.Noen1 simsyn1.1 N
 # ou
@@ -48,10 +47,10 @@ BCSFILE='/home/qp230782/projets/5000_bc.xml'
 
 if [ "$pos" = "N" ]
 then
-./evalJAWS-WOLF $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalNouns_$module
+./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalNouns_$module
 elif [ "$pos" = "V" ]
 then
-./evalVerbsJAWS-WOLF $POLYSEMOUSINDEX $EWN $ADDPART ewn $BCSMODE $BCSFILE &> logs/evalVerbsEWN_$module
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $ADDPART ewn $BCSMODE $BCSFILE &> logs/evalVerbs_$module
 else
 echo "Precise the POS to evaluate"
 fi
