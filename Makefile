@@ -39,10 +39,3 @@ evalJAWS-WOLF: evalJAWS-WOLF.o  $(COMMON_OBJ) $(H_FILES)
 
 evalJAWS-WOLF.o : evalJAWS-WOLF.cpp $(H_FILES) proto
 	$(CXX) $(CPPFLAGS) -c $*.cpp
-
-evalVerbsJAWS-WOLF: evalVerbsJAWS-WOLF.o  $(COMMON_OBJ) $(H_FILES)
-	$(CXX) -o evalVerbsJAWS-WOLF evalVerbsJAWS-WOLF.o $(COMMON_OBJ)  $(LDFLAGS)
-
-evalVerbsJAWS-WOLF.o : evalVerbsJAWS-WOLF.cpp $(H_FILES) proto
-	$(CXX) $(CPPFLAGS) -c $*.cpp
-
