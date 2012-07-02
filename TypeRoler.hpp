@@ -33,6 +33,8 @@ private :
   int topSize; 
   float thresCut;
   map<string, vector<ulong> > repository;
+  void writeRepository(std::string protofile, std::string relation);
+  void readRepository(std::string protofile, std::string relation);
   void processLine(string s, float thresCut, vector<ulong>& ctxt);
 };
 
