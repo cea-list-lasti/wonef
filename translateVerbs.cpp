@@ -30,34 +30,13 @@ int main(int argc, char **argv) {
 
   vector<int> seq;
   for (int i = 1; i < argc ; i++) {
-    cerr << "ARGV : '" << argv[i] << "'"<<endl;
     if (argv[i][0]=='E') {
       datafile = DATA_VERB15;
       suffix += ".ewn";
-    } else if (argv[i][0]=='1') { /*LastChanceModule			*/
-      suffix += "1";
-      seq.push_back(1);
-    } else if (argv[i][0]=='2') { /*SimSynVerbsModule			*/
-      suffix += "2";
-      seq.push_back(2);
-    } else if (argv[i][0]=='3') { /*HyperHypoModule SUJ_V_RELG.reverse	*/
-      suffix += "3";
-      seq.push_back(3);
-    } else if (argv[i][0]=='4') { /*HyperHypoModule COD_V.reverse	*/
-      suffix += "4";
-      seq.push_back(4);
-    } else if (argv[i][0]=='5') { /*HyperHypoModule CPL_V.reverse	*/
-      suffix += "5";
-      seq.push_back(5);
-    } else if (argv[i][0]=='6') { /*HyperHypoModule ATB_S.reverse	*/
-      suffix += "6";
-      seq.push_back(6);
-    } else if (argv[i][0]=='7') { /*HyperHypoModule SUJ_V.reverse	*/
-      suffix += "7";
-      seq.push_back(7);
-    } else if (argv[i][0]=='8') { /*HyperHypoModule CPLV_V.reverse	*/
-      suffix += "8";
-      seq.push_back(8);
+    /* simple integer: add the corresponding module */
+    } else if (argv[i][0] >= '1' && argv[i][0] <= '8') {
+      suffix += argv[i][0];
+      seq.push_back(argv[i][0] - '0');
     } else if (argv[i][0]=='N') {
       noen = true;
       stringstream ss ;
