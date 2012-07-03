@@ -134,80 +134,85 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
 		validSumHypo+=2;
 	}
 	*/
-	for(set<string>::iterator itHypos = hyponyms[itwn->first].begin(); itHypos != hyponyms[itwn->first].end(); itHypos++) { 
-	  for (set<string>::iterator itSyn = reverseIndex[*itHypos].begin(); itSyn !=  reverseIndex[*itHypos].end(); itSyn++) {
-	    validSumHypo++;	
-	    itwn->second.hypos.insert(*itSyn);
-	    if (head=="") {
-	    	head = getHead(*itSyn);
-	    }
-	    float score;
-	    if (pos == "noun") {
-	      score = tRoler.computeIsAScore( itCand->first, head, mode);
-	    } else if (pos == "verb") {
-	      // compute the score without the pronoun
-	      score = tRoler.computeIsAScore( it->second.verbCand[itCand->first], head, mode);
-	    }
 
-	    if( verbose) {
-	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
-	    }
-	    if (!isnan(score)) {
-	      if( verbose) {
-		cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+
+	  for(set<string>::iterator itHypos = hyponyms[itwn->first].begin(); itHypos != hyponyms[itwn->first].end(); itHypos++) { 
+	    for (set<string>::iterator itSyn = reverseIndex[*itHypos].begin(); itSyn !=  reverseIndex[*itHypos].end(); itSyn++) {
+	      validSumHypo++;	
+	      itwn->second.hypos.insert(*itSyn);
+	      if (head=="") {
+		  head = getHead(*itSyn);
 	      }
-	      // reduce weight of hyponyms of the synset among the candidates
-	      sum+=score==1?0.3:score;
-	    } else {
-	      // hyponym not considered in the sum
-	      validSumHypo --;
-	    } 
-	    if (score==0 && head[head.length()-1]=='s') {
-	    	head=head.substr(0, head.length()-1);
-	    	itSyn--;
+	      float score;
+	      if (pos == "noun") {
+		score = tRoler.computeIsAScore( itCand->first, head, R_HYPO);
+	      } else if (pos == "verb") {
+		// compute the score without the pronoun
+		score = tRoler.computeIsAScore( it->second.verbCand[itCand->first], head, R_HYPO);
+	      }
+
+	      if( verbose) {
+		cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+	      }
+	      if (!isnan(score)) {
+		if( verbose) {
+		  cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+		}
+		// reduce weight of hyponyms of the synset among the candidates
+		sum+=score==1?0.3:score;
+	      } else {
+		// hyponym not considered in the sum
 		validSumHypo --;
-	    } else {
-	    	head="";
+	      } 
+	      if (score==0 && head[head.length()-1]=='s') {
+		  head=head.substr(0, head.length()-1);
+		  itSyn--;
+		  validSumHypo --;
+	      } else {
+		  head="";
+	      }
 	    }
 	  }
-	}
+
 /*	if (hypernyms[itwn->first].size()==0) {
 		validSumHyper+=2;
 	}
 	*/
-	for(set<string>::iterator itHyper = hypernyms[itwn->first].begin(); itHyper != hypernyms[itwn->first].end(); itHyper++) { 
-	  for (set<string>::iterator itSyn = reverseIndex[*itHyper].begin(); itSyn !=  reverseIndex[*itHyper].end(); itSyn++) {	  	
-	    validSumHyper++;
-	    itwn->second.hypers.insert(*itSyn);
-	    if (head=="") {
-		    head = getHead(*itSyn);
-	    }
-	    float score;
-	    if (pos == "noun") {
-	      score = tRoler.computeIsAScore(head, itCand->first, mode);
-	    } else if (pos == "verb") {
-	      // compute the score without the pronoun
-	      score = tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], mode);
-	    }
-	    if (!isnan(score)) {
-	      if (verbose){
-	         cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+
+	  for(set<string>::iterator itHyper = hypernyms[itwn->first].begin(); itHyper != hypernyms[itwn->first].end(); itHyper++) { 
+	    for (set<string>::iterator itSyn = reverseIndex[*itHyper].begin(); itSyn !=  reverseIndex[*itHyper].end(); itSyn++) {	  	
+	      validSumHyper++;
+	      itwn->second.hypers.insert(*itSyn);
+	      if (head=="") {
+		      head = getHead(*itSyn);
 	      }
-	      // reduce weight of hypernyms of the synset among the candidates
-	      sum+=score==1?0.3:score;
-	    } else {
-	      // hypernym not considered in the sum
-	      validSumHyper --;
-	    }
-	    if (score == 0 && head[head.length()-1]=='s') {
-	    	head=head.substr(0, head.length()-1);
-	    	itSyn--;
+	      float score;
+	      if (pos == "noun") {
+		score = tRoler.computeIsAScore(head, itCand->first, R_HYPER);
+	      } else if (pos == "verb") {
+		// compute the score without the pronoun
+		score = tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], R_HYPER);
+	      }
+	      if (!isnan(score)) {
+		if (verbose){
+		  cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+		}
+		// reduce weight of hypernyms of the synset among the candidates
+		sum+=score==1?0.3:score;
+	      } else {
+		// hypernym not considered in the sum
 		validSumHyper --;
-	    } else {
-	    	head="";
+	      }
+	      if (score == 0 && head[head.length()-1]=='s') {
+		  head=head.substr(0, head.length()-1);
+		  itSyn--;
+		  validSumHyper --;
+	      } else {
+		  head="";
+	      }
 	    }
 	  }
-	}
+
 	/*
 	Distance lDist;
 	if (lDist.LD(desax(LoaderModule::desaxData, itCand->first),it->first)<=3) {
