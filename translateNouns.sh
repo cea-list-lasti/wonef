@@ -37,5 +37,5 @@ echo -e "\n                *** Normal ***"
 tail -12 logs/evalNouns$seqs
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf $BCSMODE $BCSFILE &> logs/evalNounsBest$seqs
 echo -e "\n                *** Best ***"
-tail -12 logs/evalNouns$seqs
+tail -12 logs/evalNounsBest$seqs
 
