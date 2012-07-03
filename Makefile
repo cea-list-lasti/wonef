@@ -9,33 +9,32 @@ COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.
 
 COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 
-H_FILES     = $(wildcard *.hpp)
-PROTO_H_FILES = $(wildcard *.proto)
+H_FILES     = $(wildcard *.hpp) repository.pb.h
+PROTO_FILE = $(wildcard *.proto)
 
-
-proto: $(PROTO_H_FILES)
+repository.pb.h: $(PROTO_H_FILES)
 	$(PROTOC) repository.proto --cpp_out=.
 
 buildBilingualDic : buildBilingualDic.o  $(COMMON_OBJ) 
 	$(CXX) -o buildBilingualDic buildBilingualDic.o $(COMMON_OBJ)  $(LDFLAGS) 
 
-buildBilingualDic.o : buildBilingualDic.cpp $(H_FILES) proto
+buildBilingualDic.o : buildBilingualDic.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
 
 translateWN: translateWN.o  $(COMMON_OBJ) $(H_FILES)
 	$(CXX) -o translateWN translateWN.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
 
-translateWN.o : translateWN.cpp $(H_FILES) proto
+translateWN.o : translateWN.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
 
 translateVerbs: translateVerbs.o  $(COMMON_OBJ) $(H_FILES)
 	$(CXX) -o translateVerbs translateVerbs.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
 
-translateVerbs.o : translateVerbs.cpp $(H_FILES) proto
+translateVerbs.o : translateVerbs.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
 
 evalJAWS-WOLF: evalJAWS-WOLF.o  $(COMMON_OBJ) $(H_FILES)
 	$(CXX) -o evalJAWS-WOLF evalJAWS-WOLF.o $(COMMON_OBJ)  $(LDFLAGS)
 
-evalJAWS-WOLF.o : evalJAWS-WOLF.cpp $(H_FILES) proto
+evalJAWS-WOLF.o : evalJAWS-WOLF.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
