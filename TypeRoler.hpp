@@ -5,7 +5,8 @@
 #include "../src/converter.h"
 #include "../src/tools.h"
 #include "Paths.hpp"
-#include <set> 
+#include <set>
+#include <utility>
 
 using namespace std;
 
@@ -32,10 +33,11 @@ private :
   Converter conv;
   int topSize; 
   float thresCut;
-  map<string, vector<ulong> > repository;
+  map<string, vector<pair<ulong,int> > > repository;
+  map<string, int> numCoocs;
   void writeRepository(std::string protofile, std::string relation);
   void readRepository(std::string protofile, std::string relation);
-  void processLine(string s, float thresCut, vector<ulong>& ctxt);
+  int processLine(string s, float thresCut, vector<pair<ulong,int> >& ctxt);
 };
 
 

@@ -2,7 +2,9 @@ message Repository {
     required string relation = 1;
     message Word {
         required string key = 1;
-        repeated int32 related = 2 [packed=true];
+        required int32 numCoocs = 2;
+        repeated int32 related = 3 [packed=true];
+        repeated int32 score = 4 [packed=true];
     }
 
     repeated Word word = 2;

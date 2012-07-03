@@ -38,7 +38,9 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
         if (dicmap.find(currentIdent) == dicmap.end()) {
           std::cout << relation << ": " << currentIdent << " was not found in word.ids! Ignoring it." << std::endl;
         } else {
-          processLine(ss.str(), thresCut, repository[dicmap[currentIdent]]);
+          string semanticMapWord = dicmap[currentIdent];
+          int sumOccs = processLine(ss.str(), thresCut, repository[semanticMapWord]);
+          numCoocs[semanticMapWord] = sumOccs;
         }
       }
     }
@@ -57,12 +59,14 @@ void TypeRoler::writeRepository(std::string protofile, std::string relation) {
   Repository repositoryFile;
   repositoryFile.set_relation(relation);
 
-  for(std::map<std::string, std::vector<ulong> >::iterator it = repository.begin();
+  for(std::map<std::string, std::vector<pair<ulong,int> > >::iterator it = repository.begin();
     it != repository.end(); ++it) {
     Repository::Word *word = repositoryFile.add_word();
     word->set_key(it->first);
+    word->set_numcoocs(numCoocs[it->first]);
     for(unsigned int i = 0; i < it->second.size(); i++) {
-      word->add_related(it->second[i]);
+      word->add_related(it->second[i].first);
+      word->add_score(it->second[i].second);
     }
   }
 
@@ -84,54 +88,103 @@ void TypeRoler::readRepository(std::string protofile, std::string relation) {
   for(int i = 0; i < repositoryFile.word_size(); i++) {
     Repository::Word w = repositoryFile.word(i);
 
-    std::vector<ulong> related;
+    std::vector<pair<ulong,int> > related;
+    related.reserve(w.related_size());
+    assert(w.related_size() == w.score_size());
     for(int j = 0; j < w.related_size(); j++) {
-      related.push_back(w.related(j));
+      related.push_back(pair<ulong,int>(w.related(j), w.score(j)));
     }
 
     repository[w.key()] = related;
+    numCoocs[w.key()] = w.numcoocs();
   }
 }
 
-void TypeRoler::processLine(string s, float /*thresCut*/, vector<ulong>& ctxt) {  
+int TypeRoler::processLine(string s, float /*thresCut*/, vector<pair<ulong,int> >& ctxt) {
   stringstream ss;
   ss << s;
   ulong currentIdent;
-  float nbOccs = 0;
+  int nbOccs = 0, sumOccs = 0;
   while (ss.get() != '{');
   while (ss.get()!='}') {
     ss.unget();
     ss >> currentIdent;
     while (ss.get() != ',');
     ss >> nbOccs;
-    ctxt.push_back(currentIdent);
+    sumOccs += nbOccs;
+    ctxt.push_back(pair<ulong, int>(currentIdent, nbOccs));
     /* In TypeRoler::computeIsAScore, we assume those arrays are sorted, but
      * this only works if the underlying TYPEROLERFILE is sorted. Let's check
      * at runtime. */
     if (ctxt.size() > 1) {
-        assert(currentIdent > ctxt[ctxt.size()-2]);
+        assert(currentIdent > ctxt[ctxt.size()-2].first);
     }
     while (ss.get() != ';');
   }
+  // try to save memory since this barely holds in RAM for large syntactic relations
+  ctxt.resize(ctxt.size());
+
+  return sumOccs;
 }
 
+/* XXX Most of execution time is spent in this function: make sure to profile any change! */
 
+/* This function computes the "strHyperonym is a hyperonym of strHyponym"
+ *
+ * It does so by looking at the shared syntaxic co-occurrences: strHyponym
+ * should have the same cooccurences than strHypernym, but also more specific
+ * ones.
+ */
+float TypeRoler::computeIsAScore(string strHyperonym, string strHyponym, TRMode mode) {
+  /* If contexts are empty, simply return 0 */
+  std::map<std::string, std::vector<std::pair<ulong, int> > >::iterator hyperonymCoocsIt, hyponymCoocsIt;
 
+  hyperonymCoocsIt = repository.find(strHyperonym);
+  hyponymCoocsIt = repository.find(strHyponym);
 
-float TypeRoler::computeIsAScore( string strA, string strB, TRMode mode) {
-  std::vector<ulong> tmpA = repository[strA];
-  std::vector<ulong> tmpB = repository[strB];
-
-  std::vector<ulong> intersection;
-  set_intersection(tmpA.begin(), tmpA.end(), tmpB.begin(), tmpB.end(), inserter(intersection, intersection.end()));
-
-  float xIsY = (float)intersection.size();
-  if (mode==R_HYPER) {
-    xIsY/=tmpB.size();
-  } else if (mode==R_HYPO) {
-    xIsY/=tmpA.size();
+  if (hyponymCoocsIt == repository.end() || hyperonymCoocsIt == repository.end()) {
+    return 0.0f;
   }
 
-  return xIsY;
+  /* Compute the intersection of syntaxic co-occurrence vectors */
+  std::vector<std::pair<ulong,int> >& hyperonymCoocs = hyperonymCoocsIt->second;
+  std::vector<std::pair<ulong,int> >& hyponymCoocs = hyponymCoocsIt->second;
+
+  unsigned int i = 0, j = 0, interSize = 0;
+
+  while (i < hyperonymCoocs.size() && j < hyponymCoocs.size()) {
+    if (hyperonymCoocs[i].first < hyponymCoocs[j].first) {
+      i++;
+    } else if(hyperonymCoocs[i].first > hyponymCoocs[j].first) {
+      j++;
+    } else {
+      /* Stick with what works best, not what looks best */
+      // interSize += mode == R_HYPER ? hyperonymCoocs[i].second : hyponymCoocs[j].second;
+      interSize++;
+      i++;
+      j++;
+    }
+  }
+
+  /* normalize by the total number of cooccurrences */
+  float normalized = interSize;
+
+  switch(mode) {
+    case R_HYPER:
+      normalized /= repository[strHyponym].size();
+      //normalized /= numCoocs[strHyponym];
+      break;
+    case R_HYPO:
+      normalized /= repository[strHyperonym].size();
+      //normalized /= numCoocs[strHyperonym];
+      break;
+    default:
+      // fail early
+      std::cerr << "TyperRoler::computeIsAScore wrong mode: " << mode << std::endl;
+      exit(1);
+      break;
+  }
+
+  return normalized;
 }
 
