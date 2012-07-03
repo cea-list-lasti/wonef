@@ -10,7 +10,7 @@ seqsspaces=$*
 seqs=${seqsspaces// /}
 
 echo "Translating... $seqsspaces"
-./translateVerbs Noen $seqsspaces &> logs/transVerbs$seqs
+./translateVerbs Noen $seqsspaces 2>&1 | tee logs/transVerbs$seqs | grep duration
 
 #valgrind --show-reachable=yes ./translateVerbs $seqsspaces
 #gdb --args ./translateVerbs $seqsspaces
@@ -18,14 +18,11 @@ echo "Translating... $seqsspaces"
 # The produced file needs some fixes before evaluation
 WNDATA="data2/data.fr.verbs.Noen$seqs"
 WNBESTDATA="data2/data.fr.verbs.best.Noen$seqs"
-echo "Fixing WNDATA..."
-sed -i 's/&/&amp;/g' $WNDATA
-sed -i 's/&/&amp;/g' $WNBESTDATA
-sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNDATA
-sed -i -r 's/[<]([^A-Z/])/\&lt;\1/g'  $WNBESTDATA
-sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNDATA
-sed -i -r 's/([^A-Z /"])[>]/\&gt;\1/g'  $WNBESTDATA
 
-echo "Evaluating..."
+echo -e "\n-- Evaluating... --"
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbs$seqs
+echo -e "\n                *** Normal ***"
+tail -12 logs/evalVerbs$seqs
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbsBest$seqs
+echo -e "\n                *** Best ***"
+tail -12 logs/evalVerbsBest$seqs
