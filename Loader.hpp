@@ -21,8 +21,8 @@ class LoaderModule {
 
 private : 
   map<string, set<string> > src2Tgt;
-  bool noen; 
   string pos;
+  bool noen;
 
   set<string> dicfiles;
   string infile;
