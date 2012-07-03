@@ -12,6 +12,11 @@ COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 H_FILES     = $(wildcard *.hpp) repository.pb.h
 PROTO_FILE = $(wildcard *.proto)
 
+data2:
+	mkdir data2
+logs:
+	mkdir logs
+
 repository.pb.h: $(PROTO_H_FILES)
 	$(PROTOC) repository.proto --cpp_out=.
 
