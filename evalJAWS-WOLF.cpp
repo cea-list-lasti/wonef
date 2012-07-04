@@ -44,12 +44,12 @@ std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
       start = what[1].second;
       boost::match_results <std::string::const_iterator> whatInside;
       while (boost::regex_search(start, end, whatInside, patternIdsTgt)) {
-	std::string idTgt = whatInside[1].str();
-	if(mapping.find(idSrc)==mapping.end()) {
-	  mapping[idSrc]= std::set<std::string>();
-	}
-	mapping[idSrc].insert(idTgt);
-	start = whatInside[1].second;
+        std::string idTgt = whatInside[1].str();
+        if(mapping.find(idSrc)==mapping.end()) {
+          mapping[idSrc]= std::set<std::string>();
+        }
+        mapping[idSrc].insert(idTgt);
+        start = whatInside[1].second;
       }
     }
   }
@@ -68,69 +68,77 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
   }
   string s;
   while (getline(llss, s) ) {
-//   std::cerr << "loadPolysemousLiteral lit: '" << s.substr(0, s.find(' ')) << "'" << std::endl;
     litList.insert(s.substr(0, s.find(' ')));
     s=s.substr(0, s.length()-2);
-//     std::cerr << "    ids: ";
     while (s.rfind(' ')==s.length()-9) {
-//       std::cerr << s.substr(s.rfind(' ')+1) << " ";
       polysemousIdsList.insert(s.substr(s.rfind(' ')+1));
       s=s.substr(0, s.rfind(' '));
     }
-//    std::cerr << std::endl;
   }
   llss.close();
 }
 
-
-int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string pos) {
-
+int preParser(string what, SAX2XMLReader*& parser) {
   try {
-
     XMLPlatformUtils::Initialize();
   }
   catch (const XMLException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Error during initialization! :\n";
-    cout << "Exception message 0 is: \n"
+    cout << what << " Error during initialization! :\n";
+    cout << what << " Exception message 0 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return 1;
   }
 
-  SAX2XMLReader* parser = XMLReaderFactory::createXMLReader();
+  parser = XMLReaderFactory::createXMLReader();
   parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
   parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
+  return 0;
+}
 
-  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent, pos);
-  parser->setContentHandler(wolfHandler);
-  parser->setErrorHandler(wolfHandler);
-
+int postParser(string what, string filename, SAX2XMLReader*& parser) {
   try {
     parser->parse(filename.c_str());
   }
   catch (const XMLException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "WOLF Exception message 1 is: \n"
+    cout << what << " Exception message 1 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return -1;
   }
   catch (const SAXParseException& toCatch) {
     char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "WOLF Exception message 2 is: \n"
+    cout << what << " Exception message 2 is: \n"
          << message << "\n";
     XMLString::release(&message);
     return -1;
   }
   catch (...) {
-    cout << "WOLF Unexpected Exception \n";
+    cout << what << " Unexpected Exception \n";
     return -1;
-    }
+  }
+  return 0;
+}
+
+int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string pos) {
+
+  SAX2XMLReader* parser = NULL;
+  if (preParser("Wolf", parser) == 1) {
+    return 1;
+  }
+
+  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent, pos);
+  parser->setContentHandler(wolfHandler);
+  parser->setErrorHandler(wolfHandler);
+
+  if (postParser ("Wolf", filename, parser) == -1) {
+    return -1;
+  }
 
   delete parser;
   delete wolfHandler;
-
   return 0;
 }
 
@@ -152,48 +160,19 @@ int loadBcsBaseComplem(map<string, int>& /*bcsbase*/, string filename) {
 
 int loadBcsBase(map<string, int>& bcsbase, string filename, string pos) {
   cerr << "loading bcs from : " << filename << endl;
-  try {
-
-    XMLPlatformUtils::Initialize();
-  }
-  catch (const XMLException& toCatch) {   
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Error during initialization! :\n";
-    cout << "Exception message 0 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  
+  SAX2XMLReader* parser = NULL;
+  if (preParser("BCS", parser) == 1) {
     return 1;
   }
-
-  SAX2XMLReader* parser = XMLReaderFactory::createXMLReader();
-  parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
-  parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
   BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(&bcsbase, pos);
   parser->setContentHandler(bcsbaseHandler);
   parser->setErrorHandler(bcsbaseHandler);
 
-  try {
-    parser->parse(filename.c_str());
-  }
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 1 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  if (postParser ("BCS", filename, parser) == -1) {
     return -1;
   }
-  catch (const SAXParseException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "BCS Exception message 2 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return -1;
-  }
-  /* catch (...) {
-    cout << "Unexpected Exception \n";
-    return -1;
-    }*/
 
   delete parser;
   delete bcsbaseHandler;
@@ -208,58 +187,24 @@ int loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNet
 }
 
 int loadGold(map<string, set<string> >& goldNet,
-	     map<string, set<string> >& goldNetIdIdent,
-	     string filename) {
+             map<string, set<string> >& goldNetIdIdent,
+             string filename) {
 
-  try {
-    XMLPlatformUtils::Initialize();
-  }
-
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Error during initialization! :\n";
-    cout << "Exception message 0 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  SAX2XMLReader* parser = NULL;
+  if (preParser("Gold", parser) == 1) {
     return 1;
   }
-
-  SAX2XMLReader* parser = XMLReaderFactory::createXMLReader();
-  parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
-  parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
   GoldHandler* goldHandler = new GoldHandler(& goldNet, & goldNetIdIdent);
   parser->setContentHandler(goldHandler);
   parser->setErrorHandler(goldHandler);
 
-  try {
-    parser->parse(filename.c_str());
-  }
-
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Gold Exception message 1 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  if (postParser("Gold", filename, parser) == -1) {
     return -1;
   }
-
-  catch (const SAXParseException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Gold Exception message 2 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return -1;
-  }
-
-  catch (...) {
-    cout << "Gold Unexpected Exception \n";
-    return -1;
-    }
 
   delete parser;
   delete goldHandler;
-
   return 0;
 }
 
@@ -267,32 +212,19 @@ int loadGold(map<string, set<string> >& goldNet,
 
 
 int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
-			       set<string>& litList,
-			       set<string>& polysemousIdsList,
-			       map<string, set<string> >& wolfNet,
-			       map<string, set<string> >& wolfNetIdIdent,
-			       string pos,
-			       string filename,
-			       string& datafile,
-			       BCSMode bcsmode) {
+                               set<string>& litList,
+                               set<string>& polysemousIdsList,
+                               map<string, set<string> >& wolfNet,
+                               map<string, set<string> >& wolfNetIdIdent,
+                               string pos,
+                               string filename,
+                               string& datafile,
+                               BCSMode bcsmode) {
 
-
-  try {
-
-    XMLPlatformUtils::Initialize();
-  }
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Error during initialization! :\n";
-    cout << "Exception message 0 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  SAX2XMLReader* parser = NULL;
+  if (preParser("Jaws", parser) == 1) {
     return 1;
   }
-
-  SAX2XMLReader* parser = XMLReaderFactory::createXMLReader();
-  parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
-  parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
   JawsEvaluatorHandler* jawsEvaluatorHandler = NULL; 
   if (bcsmode==OLDSCHOOL) {
@@ -304,21 +236,7 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   parser->setContentHandler(jawsEvaluatorHandler);
   parser->setErrorHandler(jawsEvaluatorHandler);
 
-  try {
-    parser->parse(filename.c_str());
-  }
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 1 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return -1;
-  }
-  catch (const SAXParseException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << "Exception message 2 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
+  if (postParser("Jaws", filename, parser) == -1) {
     return -1;
   }
 
@@ -330,96 +248,6 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
   }
 
   cout << "------------------------------------" << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInJaws : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInJawsFoundInWolf : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInJawsAgreeWithWolf : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt << endl;
-  cout << "cntCommonPolysemousId : " 
-       << jawsEvaluatorHandler->cntCommonPolysemousId << endl;
-  float precision = (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt
-		   /(float) jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws;
-  float precision2 = (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt
-		    /(float) jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt;
-  float precision3 = (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt
-		    /(float) jawsEvaluatorHandler->cntCommonPolysemousId;
-
-  cout << "Precision / Wolf : " << precision  << endl;
-  cout << "Generous Precision / Wolf : " << precision2  << endl;
-  cout << "P2/WOLF : "  << precision3 << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInWolf : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVt << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInWolfFoundInJaws : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVtFoundInJaws << endl;
-  cout << "cntPolysemous" + terms + "ProcessedInWolfAgreeWithJaws : " 
-       << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVtAgreeWithJaws << endl;
-
-  cout << "nbOriginalLit : " << jawsEvaluatorHandler->nbOriginalLit << endl;
-
-  //  assert(jawsEvaluatorHandler->getCnt(2, 1)==jawsEvaluatorHandler->getCntCommonPolysemousId()) ;
-
-  cout << "Wolf coverage : " << jawsEvaluatorHandler->cntPolysemousTermsProcessedInVt 
-       << "(" << (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInVt
-		/(float)jawsEvaluatorHandler->nbOriginalLit << ")" << endl;
-
-
-    // total original polysemous pairs processed in jaws, synset in wolf and pair found in wolf
-  cout <<" & " 
-    << ceil(((float)( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws)/ (float)jawsEvaluatorHandler->nbOriginalLit)*1000)/10.   << "\\%"
-    // total original polysemous pairs processed
-    << " & "  << ceil(((float) jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws )*1000)  /10. << "\\%"
-       << "("<< ceil(((float) jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt/ (float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt))*1000) /10. << "\\%" << ")"
-    // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " & " << ceil(((float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt)/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws)*1000)/10. << "\\%"
-       << "("<< ceil((((float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt))/ (float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt))*1000) /10. << "\\%" << ")"
-    // total original polysemous pairs processed in jaws, synset id not found in wolf
-    << " & " << ceil(((float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt)/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws)*1000) /10. << "\\%"
-
-       << " \\\\ " << endl;
-
-  cout << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt
-    //       << "(" << (float) jawsEvaluatorHandler->getCnt(2, 2)/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws  << ")"
-    // total original polysemous pairs processed in jaws, synset in wolf but pair not found in wolf
-       << " | " << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt
-    //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(2, 1) - jawsEvaluatorHandler->getCnt(2, 2))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-
-       << "(" << (float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsAgreeWithVt)/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws  << ")"
-    // total original polysemous pairs processed in jaws, synset id not found in wolf
-       << " | " << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt
-    //       << "(" << (float) ( jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCnt(2, 1))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-       << "(" << (float) ( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws - jawsEvaluatorHandler->cntPolysemousTermsProcessedInJawsFoundInVt)/ (float)jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws  << ")"
-    // total original polysemous pairs processed
-       << " | " << jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws 
-       << "(" << (float)( jawsEvaluatorHandler->cntPolysemousTermsProcessedInJaws)/ (float)jawsEvaluatorHandler->nbOriginalLit  << ")"
-    // total original polysemous pairs not processed
-    //       << " | " << jawsEvaluatorHandler->getNbOriginalLit()-jawsEvaluatorHandler->getCnt(1, 0)
-    //       << "(" << (float)( jawsEvaluatorHandler->getNbOriginalLit() - jawsEvaluatorHandler->getCnt(1, 0))/ (float)jawsEvaluatorHandler->getNbOriginalLit()  << ")"
-    // total original polysemous pairs
-       << " | " << jawsEvaluatorHandler->nbOriginalLit
-       << " | " << endl;
-
-
-  /*  float iprecision = (float) jawsEvaluatorHandler->getCnt(2, 2) /  (float) jawsEvaluatorHandler->getCnt(0, 1);
-  float iprecision2 = (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) jawsEvaluatorHandler->getCnt(1, 2);
-  cout << "IPrecision / JAWS : " <<  iprecision << endl;
-  cout << "Generous IPrecision / JAWS : " <<  iprecision2 << endl;
-
-  
-  cout << "averageP = " <<(precision+iprecision)/2 << endl;
-
-  cout << "cntType1 : " << jawsEvaluatorHandler->getCntError(1) << endl;
-  cout << "Precision1 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCntError(1)) << endl;
-  cout << "cntType2 : " << jawsEvaluatorHandler->getCntError(2) << endl;
-  cout << "Precision2 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(1, 0) - jawsEvaluatorHandler->getCntError(2)) << endl;
-  cout << "cntType3 : " << jawsEvaluatorHandler->getCntError(3) << endl;
-  cout << "Precision3 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(0, 1) - jawsEvaluatorHandler->getCntError(3)) << endl;
-  cout << "cntType4 : " << jawsEvaluatorHandler->getCntError(4) << endl;
-  cout << "Precision4 / WOLF : " << (float)jawsEvaluatorHandler->getCnt(2, 2) /  (float) (jawsEvaluatorHandler->getCnt(0, 1) - jawsEvaluatorHandler->getCntError(4)) << endl;
-  */
-
-  cout << "------------------------------------" << endl;
   cout << "\t\t*** All " + terms + " ***" << endl;
   cout << "nb" + terms + "InJaws :\t\t\t"
        << jawsEvaluatorHandler->nbTermsInJaws << endl;
@@ -429,13 +257,13 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
        << jawsEvaluatorHandler->nbTermsInJawsAgreeWithVt << endl;
 
   float allPrecision = (float)jawsEvaluatorHandler->nbTermsInJawsAgreeWithVt
-		      / (float)jawsEvaluatorHandler->nbTermsInJaws;
+                      / (float)jawsEvaluatorHandler->nbTermsInJaws;
   float allPseudoPrec = (float)jawsEvaluatorHandler->nbTermsInJawsAgreeWithVt
-		       / (float)jawsEvaluatorHandler->nbTermsInJawsAndVt;
+                       / (float)jawsEvaluatorHandler->nbTermsInJawsAndVt;
   float polyPrecision = (float)jawsEvaluatorHandler->nbPolysemousTermsInJawsAgreeWithVt
-		      / (float)jawsEvaluatorHandler->nbPolysemousTermsInJaws;
+                      / (float)jawsEvaluatorHandler->nbPolysemousTermsInJaws;
   float polyPseudoPrec = (float)jawsEvaluatorHandler->nbPolysemousTermsInJawsAgreeWithVt
-		       / (float)jawsEvaluatorHandler->nbPolysemousTermsInJawsAndVt;
+                       / (float)jawsEvaluatorHandler->nbPolysemousTermsInJawsAndVt;
 
   cout << "Precision : " << allPrecision << "\t\t"
        << ceil(allPrecision*1000)/10. << "%" << endl;
@@ -553,14 +381,14 @@ int main(int argc, char **argv) {
   // parsing JAWS and evaluating
   cerr << "Parsing JAWS" << endl;
   if (parseAndEvaluatePolysemous(bcsbase,
-				 litList,
-				 polysemousIdsList,
-				 vtNet,
-				 vtNetIdIdent,
-				 pos,
-				 argv[4], 
-				 datafile, 
-				 (BCSMode) bcsmode) == 1 ) {
+                                 litList,
+                                 polysemousIdsList,
+                                 vtNet,
+                                 vtNetIdIdent,
+                                 pos,
+                                 argv[4], 
+                                 datafile, 
+                                 (BCSMode) bcsmode) == 1 ) {
     return 1;
   }
   
