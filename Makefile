@@ -10,14 +10,14 @@ COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.
 COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 
 H_FILES     = $(wildcard *.hpp) repository.pb.h
-PROTO_FILE = $(wildcard *.proto)
+PROTO_FILES = $(wildcard *.proto)
 
 data2:
 	mkdir data2
 logs:
 	mkdir logs
 
-repository.pb.h: $(PROTO_H_FILES)
+repository.pb.h: $(PROTO_FILES)
 	$(PROTOC) repository.proto --cpp_out=.
 
 buildBilingualDic : buildBilingualDic.o  $(COMMON_OBJ) 
