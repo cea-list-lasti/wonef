@@ -1,4 +1,5 @@
 #include "JawsEvaluatorHandlerBench.hpp"
+#include "Tools.hpp"
 #include <xercesc/util/PlatformUtils.hpp>
 #include <xercesc/util/TransService.hpp>
 
@@ -26,7 +27,7 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
 				      const XMLCh *const localname,
 				      const XMLCh *const qname) {
 
-  if (bcsbase[id]==bcsmode && _transcode(qname).compare("INSTANCES")==0) {
+  if (bcsbase[id]==bcsmode && _transcode(qname, theTranscoder).compare("INSTANCES")==0) {
 
     // checking if the translation comes from polysemous source nouns
     bool polysemous = false;
@@ -61,7 +62,7 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
 
     originalsList.clear();
 
-  } else if (_transcode(qname).compare("INSTANCE")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("INSTANCE")==0) {
       if (bcsbase[id]==bcsmode) {
 	//      if (litList.find(original)!=litList.end()) {
 	cntPolysemousTermsProcessedInJaws++;
@@ -122,16 +123,16 @@ void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
       }
     }
 
-  } else if (_transcode(qname).compare("CANDIDATES")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("CANDIDATES")==0) {
       if (bcsbase[id]==bcsmode) {
 	//    if (litList.find(originalSrc)!=litList.end()) {
       cerr << "o:" << originalSrc << endl;
       nbOriginalLit++;    
     }
 
-  } else if (_transcode(qname).compare("CANDIDATE")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("CANDIDATE")==0) {
     candidates[originalSrc].insert(tmpString);    
-  } else if (_transcode(qname).compare("SYNSET")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("SYNSET")==0) {
     if (polysemousIdsList.find(id)!=polysemousIdsList.end() ) {      
       for (set<string>::iterator it = vtNetIdIdent[id].begin() ; it != vtNetIdIdent[id].end(); it++ ) {
 	cntPolysemousTermsProcessedInVt++;

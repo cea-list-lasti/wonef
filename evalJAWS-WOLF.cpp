@@ -16,6 +16,7 @@
 #include "EwnLoader.hpp"
 #include "JawsEvaluatorHandler.hpp"
 #include "JawsEvaluatorHandlerBench.hpp"
+#include "GoldHandler.hpp"
 
 using namespace std;
 
@@ -206,7 +207,61 @@ int loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNet
   return 0;
 }
 
+int loadGold(map<string, set<string> >& goldNet,
+	     map<string, set<string> >& goldNetIdIdent,
+	     string filename) {
 
+  try {
+    XMLPlatformUtils::Initialize();
+  }
+
+  catch (const XMLException& toCatch) {
+    char* message = XMLString::transcode(toCatch.getMessage());
+    cout << "Error during initialization! :\n";
+    cout << "Exception message 0 is: \n"
+         << message << "\n";
+    XMLString::release(&message);
+    return 1;
+  }
+
+  SAX2XMLReader* parser = XMLReaderFactory::createXMLReader();
+  parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
+  parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
+
+  GoldHandler* goldHandler = new GoldHandler(& goldNet, & goldNetIdIdent);
+  parser->setContentHandler(goldHandler);
+  parser->setErrorHandler(goldHandler);
+
+  try {
+    parser->parse(filename.c_str());
+  }
+
+  catch (const XMLException& toCatch) {
+    char* message = XMLString::transcode(toCatch.getMessage());
+    cout << "Gold Exception message 1 is: \n"
+         << message << "\n";
+    XMLString::release(&message);
+    return -1;
+  }
+
+  catch (const SAXParseException& toCatch) {
+    char* message = XMLString::transcode(toCatch.getMessage());
+    cout << "Gold Exception message 2 is: \n"
+         << message << "\n";
+    XMLString::release(&message);
+    return -1;
+  }
+
+  catch (...) {
+    cout << "Gold Unexpected Exception \n";
+    return -1;
+    }
+
+  delete parser;
+  delete goldHandler;
+
+  return 0;
+}
 
 
 
@@ -413,7 +468,7 @@ int parseAndEvaluatePolysemous(map<string, int>& bcsbase,
 
 int main(int argc, char **argv) {
   if (argc < 7) {
-    cerr << "Usage : evalJAWS-WOLF pos literalList wolf.xml jaws.xml vtmode bcsmode bcsfile" << endl;
+    cerr << "Usage : evalJAWS-WOLF pos literalList vt.xml jaws.xml vtmode bcsmode bcsfile" << endl;
     return 1;
   }
 
@@ -438,8 +493,8 @@ int main(int argc, char **argv) {
 
   set<string> litList = set<string>();
   set<string> polysemousIdsList = set<string>();
-  map<string, set<string> > wolfNet = map<string, set<string> >();  
-  map<string, set<string> > wolfNetIdIdent = map<string, set<string> >();
+  map<string, set<string> > vtNet = map<string, set<string> >();  
+  map<string, set<string> > vtNetIdIdent = map<string, set<string> >();
   map<string,int> bcsbase = map<string, int>();
   map<string, set<string> > mapping = map<string, set<string> >();
 
@@ -465,29 +520,32 @@ int main(int argc, char **argv) {
     }
   }
 
-  if (pos == "verb") {
-    // Loading Mapping File
-    mapping = loadMapfile(mapfile);
-  }
-
   // Loading literal list
   loadPolysemousLiteral(litList, polysemousIdsList, argv[2]);
 
-  // loading WOLF
   cerr << "VTMode : " << vtmode << endl;
+  // loading WOLF
   if (vtmode.compare("wolf")==0) {
     cerr << "Loading WOLF" << endl;  
-    if (loadWOLF(wolfNet, wolfNetIdIdent, argv[3], pos)==1) {
+    if (loadWOLF(vtNet, vtNetIdIdent, argv[3], pos)==1) {
       return 1;
     }
   } else if (vtmode.compare("ewn")==0) {
+    // Loading Mapping File
+    mapping = loadMapfile(mapfile);
     // loading EWN 
     cerr << "Loading EWN" << endl;  
-    if (loadEWN(wolfNet, wolfNetIdIdent, argv[3], mapping)==1) {
+    if (loadEWN(vtNet, vtNetIdIdent, argv[3], mapping)==1) {
       return 1;
     }
     if (pos == "verb") {
       datafile = DATA_VERB15;
+    }
+  } else if (vtmode.compare("gold")==0) {
+    //loading gold
+    cerr << "Loading Gold" << endl;
+    if (loadGold(vtNet, vtNetIdIdent, argv[3])==1) {
+      return 1;
     }
   }
 
@@ -497,8 +555,8 @@ int main(int argc, char **argv) {
   if (parseAndEvaluatePolysemous(bcsbase,
 				 litList,
 				 polysemousIdsList,
-				 wolfNet,
-				 wolfNetIdIdent,
+				 vtNet,
+				 vtNetIdIdent,
 				 pos,
 				 argv[4], 
 				 datafile, 

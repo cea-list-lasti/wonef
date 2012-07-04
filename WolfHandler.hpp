@@ -15,18 +15,23 @@ class WolfHandler : public DefaultHandler {
 
 public : 
 
-  WolfHandler(map<string, set<string> >* wolfNet, map<string, set<string> >* wolfNetIdIdent, string _pos);
+  WolfHandler(map<string, set<string> >* wolfNet,
+	      map<string, set<string> >* wolfNetIdIdent,
+	      string _pos);
 
   ~WolfHandler();
 
-  void startElement(const XMLCh *const    	 uri,
-		const XMLCh *const   	localname,
-		const XMLCh *const   	qname,
-		const Attributes &  	attrs);
+  void startElement(const XMLCh *const uri,
+		    const XMLCh *const localname,
+		    const XMLCh *const qname,
+		    const Attributes & attrs);
 
-  void characters(const XMLCh *const chars, const XMLSize_t length) ;
+  void characters(const XMLCh *const chars,
+		  const XMLSize_t length);
 
-  void endElement(const XMLCh *const uri, const XMLCh *const localname, const XMLCh *const qname) ;
+  void endElement(const XMLCh *const uri,
+		  const XMLCh *const localname,
+		  const XMLCh *const qname);
 
 
 private :
@@ -39,8 +44,4 @@ private :
   string pos;
   map<string, set<string> >* wolfNet;
   map<string, set<string> >* wolfNetIdIdent;
-  
-  string _transcode(const XMLCh* const chars);
-  bool checkAttr(const Attributes &  	attrs, string key, string value );
-  string getAttrValue(const Attributes &  	attrs, string value);
 };

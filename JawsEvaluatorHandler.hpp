@@ -79,64 +79,6 @@ protected :
   map<string, set<string> > vtNetIdIdent;
   set<string> litList;
   set<string> polysemousIdsList;
-public : 
-  string _transcode(const XMLCh* const chars);
-  bool checkAttr(const Attributes &  	attrs, string key, string value );
-  string getAttrValue(const Attributes &  	attrs, string value);
-
-/*  inline uint getCntError(int type) {
-    switch (type) {
-    case 1 : 
-      return cntType1;
-    case 2 : 
-      return cntType2;
-    case 3 : 
-      return cntType3;
-    case 4 : 
-      return cntType4;
-    }
-    return 0;
-  }; 
-
-  inline uint getCnt(int jaws, int vt) {
-    switch (jaws) {
-
-    case 0 : 
-      switch (vt) {
-      case 1 :
-	return cntPolysemousNounsProcessedInVt; 
-      case 2 :
-	return cntPolysemousNounsProcessedInVtAgreeWithJaws;
-      }
-    case 1 : 
-      switch (vt) {
-      case 0 :
-	return cntPolysemousNounsProcessedInJaws ; 
-      case 2 :
-	return cntPolysemousNounsProcessedInVtFoundInJaws;
-      }
-    case 2 : 
-      switch (vt) {
-      case 1 :
-	return cntPolysemousNounsProcessedInJawsFoundInVt; 
-      case 2 :
-	return cntPolysemousNounsProcessedInJawsAgreeWithVt;
-      }
-
-    }
-    return 0;
-  };
-
-
-
-   inline uint getNbOriginalLit() {
-     return nbOriginalLit;
-   };
-
-   inline uint getCntCommonPolysemousId() {
-     return cntCommonPolysemousId;
-   };
-*/
 
 };
 

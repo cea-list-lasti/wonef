@@ -23,6 +23,12 @@ JawsEvaluatorHandler::JawsEvaluatorHandler( set<string>& litList, set<string>& _
   cntPolysemousTermsProcessedInVt(0),
   cntPolysemousTermsProcessedInVtFoundInJaws(0),
   cntPolysemousTermsProcessedInVtAgreeWithJaws(0),
+  nbTermsInJaws(0),
+  nbPolysemousTermsInJaws(0),
+  nbTermsInJawsAndVt(0),
+  nbPolysemousTermsInJawsAndVt(0),
+  nbTermsInJawsAgreeWithVt(0),
+  nbPolysemousTermsInJawsAgreeWithVt(0),
   cntType1(0),
   cntType2(0),
   cntType3(0),
@@ -32,16 +38,10 @@ JawsEvaluatorHandler::JawsEvaluatorHandler( set<string>& litList, set<string>& _
 
 
   candidates = map<string, set<string > >();
-  XMLTransService* const  theService =
-    XMLPlatformUtils::fgTransService;
-
-  XMLTransService::Codes  theCode;
-
-  theTranscoder =
-    theService->makeNewTranscoderFor(
-                                         "utf-8",
-                                         theCode,
-                                         8192);
+  
+  XMLTransService* const theService = XMLPlatformUtils::fgTransService;
+  XMLTransService::Codes theCode;
+  theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
 
   ifstream idss(datafile.c_str(), fstream::in);
   if (idss.fail()) {
@@ -61,84 +61,40 @@ JawsEvaluatorHandler::~JawsEvaluatorHandler() {
 }
 
 
-string JawsEvaluatorHandler::_transcode(const XMLCh* const chars) {
-  //  cerr << "start transcode " << endl;
-  XMLSize_t length = XMLString::stringLen(chars);
-  const XMLCh* it = chars;
-  while (*it!=0) {
-    if (it[0]>=0xa0) {
-      length++;
-    }
-    it++;    
-  }
-  XMLByte buff[65536];
-  XMLSize_t nbTranscoded = 0;
-  theTranscoder->transcodeTo (chars, length, buff, 16384, nbTranscoded, XMLTranscoder::UnRep_RepChar);
-  buff[length]=0;
-  char *buff2 = (char*) buff;
-  XMLString::trim(buff2);
-  string res = buff2;
-  remove(res.begin(), res.end(), '*');
-  remove(res.begin(), res.end(), '[');
-  remove(res.begin(), res.end(), ']');
-  //  remove(res.begin(), res.end(), '\'');
-  while(res!="" && (res.find(" ")==0 || res.rfind(" ")==(res.length()-1))) {
-    res=res.substr(res.find(" ")+1).substr(0,res.rfind(" "));
-  } 
-  //  cerr << res << endl;
-  return res;
-}
 
-bool JawsEvaluatorHandler::checkAttr(const Attributes &           attrs, string key, string value ) {
-  XMLCh * _key = XMLString::transcode(key.c_str());
-  bool res =_transcode(attrs.getValue(_key)).compare(value)==0 ;
-  XMLString::release(&_key);
-  return (res);
-}
 
-string JawsEvaluatorHandler::getAttrValue(const Attributes &           attrs, string value) {
-  XMLCh * _key =  XMLString::transcode(value.c_str());
-  if (attrs.getValue(_key)==NULL) {
-    XMLString::release(&_key);
-    return "";
-  }
-  string res = _transcode(attrs.getValue(_key));
-  XMLString::release(&_key);
-  return   res;
-}
-
-void JawsEvaluatorHandler::startElement(const XMLCh *const              /*uri*/,
-                                             const XMLCh *const            /*localname*/,
-                                             const XMLCh *const            qname,
-                                             const Attributes &           attrs) {
+void JawsEvaluatorHandler::startElement(const XMLCh *const /*uri*/,
+					const XMLCh *const /*localname*/,
+					const XMLCh *const qname,
+					const Attributes & attrs) {
   //  cerr << "START : " << _transcode(qname) << endl;
-  if(_transcode(qname).compare("SYNSET")==0) {
+  if(_transcode(qname, theTranscoder).compare("SYNSET")==0) {
     nbSynsets++;
     if (nbSynsets%10000==0) {
       cerr << "nbSynset : " << nbSynsets << endl;
     }
-    id=getAttrValue(attrs, "id");
-  } else if(_transcode(qname).compare("CANDIDATES")==0) {
-    originalSrc=getAttrValue(attrs, "original");
-  } else if (_transcode(qname).compare("INSTANCES")==0){
-    translation = getAttrValue(attrs, "translation");
-  } else if(_transcode(qname).compare("INSTANCE")==0) {  
-    original=getAttrValue(attrs, "original");
+    id=getAttrValue(attrs, "id", theTranscoder);
+  } else if(_transcode(qname, theTranscoder).compare("CANDIDATES")==0) {
+    originalSrc=getAttrValue(attrs, "original", theTranscoder);
+  } else if (_transcode(qname, theTranscoder).compare("INSTANCES")==0){
+    translation = getAttrValue(attrs, "translation", theTranscoder);
+  } else if(_transcode(qname, theTranscoder).compare("INSTANCE")==0) {  
+    original=getAttrValue(attrs, "original", theTranscoder);
     originalsList.insert(original);
-    processed=getAttrValue(attrs, "processed"); 
+    processed=getAttrValue(attrs, "processed", theTranscoder); 
   }
   
 }
 
 void JawsEvaluatorHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
-  tmpString = _transcode(chars);
+  tmpString = _transcode(chars, theTranscoder);
 }
 
 void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
-                                          const XMLCh *const /*localname*/,
-                                          const XMLCh *const qname) {
+				      const XMLCh *const /*localname*/,
+				      const XMLCh *const qname) {
 
-  if (_transcode(qname).compare("INSTANCES")==0) {
+  if (_transcode(qname, theTranscoder).compare("INSTANCES")==0) {
 
     // checking if the translation comes from polysemous source nouns
     bool polysemous = false;
@@ -173,7 +129,7 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
 
     originalsList.clear();
 
-  } else if (_transcode(qname).compare("INSTANCE")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("INSTANCE")==0) {
       if (litList.find(original)!=litList.end()) {
          cntPolysemousTermsProcessedInJaws++;
          nbInstances++;
@@ -241,14 +197,14 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
       }
     }
 
-  } else if (_transcode(qname).compare("CANDIDATES")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("CANDIDATES")==0) {
     if (litList.find(originalSrc)!=litList.end()) {
       cerr << "o:" << originalSrc << endl;
       nbOriginalLit++;    
     }
-  } else if (_transcode(qname).compare("CANDIDATE")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("CANDIDATE")==0) {
     candidates[originalSrc].insert(tmpString);    
-  } else if (_transcode(qname).compare("SYNSET")==0) {
+  } else if (_transcode(qname, theTranscoder).compare("SYNSET")==0) {
     if (polysemousIdsList.find(id)!=polysemousIdsList.end() ) {      
       for (set<string>::iterator it = vtNetIdIdent[id].begin() ; it != vtNetIdIdent[id].end(); it++ ) {
          cntPolysemousTermsProcessedInVt++;
