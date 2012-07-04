@@ -34,7 +34,8 @@ string _transcode(const XMLCh* const chars,
   remove(res.begin(), res.end(), '*');
   remove(res.begin(), res.end(), '[');
   remove(res.begin(), res.end(), ']');
-  remove(res.begin(), res.end(), '\'');
+  // since Dumper doesn't escape anything, removing quotes will remove real quotes
+  //remove(res.begin(), res.end(), '\'');
   while(res != "" && (res.find(" ") == 0 || res.rfind(" ") == (res.length()-1))) {
     res = res.substr(res.find(" ")+1).substr(0, res.rfind(" "));
   }
