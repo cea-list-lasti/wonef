@@ -18,7 +18,7 @@ DumperModule::~DumperModule() {
 
 void DumperModule::dump(WORDNET::WordNet& wn) {
   printData(wn);
-  printUnsolved(wn);
+  //  printUnsolved(wn);
   //  printIndex();
 }
 
