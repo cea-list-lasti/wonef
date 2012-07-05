@@ -18,7 +18,7 @@ void LastChanceModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       if (itwne->second.cand.size()>0) {	
-	itwn->second.newdef=trySelecAndReplace(itwn->second.frenchSynset, itwn->first, itwne, false);
+	itwn->second.newdef=trySelecAndReplace(itwn->second.frenchSynset, itwne);
       }
     }
   }
@@ -28,9 +28,7 @@ void LastChanceModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
 
 
 string LastChanceModule::trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
-					string synsetId,
-					map<string, WORDNET::TgtCandidates>::iterator it,
-					bool homograph) {
+					map<string, WORDNET::TgtCandidates>::iterator it) {
   string elected;
 
 

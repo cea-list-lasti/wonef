@@ -21,9 +21,7 @@ class LastChanceModule : TranslatorModule {
 
   
   string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
-			    string synsetId,
-			    map<string, WORDNET::TgtCandidates>::iterator it,
-			    bool homograph);
+			    map<string, WORDNET::TgtCandidates>::iterator it);
 
   private :
     string suffix;

@@ -90,10 +90,10 @@ string BcsbaseHandler::getAttrValue(const Attributes &  	attrs, string value) {
   return   res;
 }
 
-void BcsbaseHandler::startElement(const XMLCh *const    	 uri,
-			       const XMLCh *const   	localname,
-			       const XMLCh *const   	qname,
-			       const Attributes &  	attrs) {  
+void BcsbaseHandler::startElement(const XMLCh *const /*uri*/,
+			       const XMLCh *const /*localname*/,
+			       const XMLCh *const qname,
+			       const Attributes & /*attrs*/) {
 
   if(_transcode(qname).compare("SYNSET")==0) {
     nbSynsets++;
@@ -106,12 +106,12 @@ void BcsbaseHandler::startElement(const XMLCh *const    	 uri,
   
 }
 
-void BcsbaseHandler::characters(const XMLCh *const chars, const XMLSize_t length)  {
+void BcsbaseHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
     tmpString = _transcode(chars);
 }
 
-void BcsbaseHandler::endElement(const XMLCh *const uri,
-			     const XMLCh *const localname,
+void BcsbaseHandler::endElement(const XMLCh *const /*uri*/,
+			     const XMLCh *const /*localname*/,
 			     const XMLCh *const qname) {
 
   if (_transcode(qname).compare("ID")==0) {
