@@ -23,8 +23,8 @@ JawsEvaluatorBenchHandler::JawsEvaluatorBenchHandler(map<string, int>& _bcsbase,
 JawsEvaluatorBenchHandler::~JawsEvaluatorBenchHandler() {
 }
 
-void JawsEvaluatorBenchHandler::endElement(const XMLCh *const uri,
-				      const XMLCh *const localname,
+void JawsEvaluatorBenchHandler::endElement(const XMLCh *const /*uri*/,
+				      const XMLCh *const /*localname*/,
 				      const XMLCh *const qname) {
 
   if (bcsbase[id]==bcsmode && _transcode(qname, theTranscoder).compare("INSTANCES")==0) {
