@@ -12,6 +12,7 @@ seqs=${seqsspaces// /}
 
 echo "Translating... $seqsspaces"
 ./translateVerbs Noen $seqsspaces 2>&1 | tee logs/transVerbs$seqs | grep duration
+gprof translateVerbs > profiledVerb 2> /dev/null
 
 #valgrind --show-reachable=yes ./translateVerbs $seqsspaces
 #gdb --args ./translateVerbs $seqsspaces

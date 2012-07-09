@@ -26,6 +26,7 @@ BCSFILE='/home/qp230782/Projets/5000_bc.xml'
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
 ./translateWN WOLF Noen $seqsspaces 2>&1 | tee logs/transNouns$seqs | grep duration
+gprof translateWN > profiledNoun 2> /dev/null
 
 # The produced file needs some fixes before evaluation
 WNDATA="data2/data.fr.nouns.wolf.Noen$seqs"
