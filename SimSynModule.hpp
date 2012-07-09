@@ -11,32 +11,26 @@
 using namespace std;
 
 class SimSynModule : public TranslatorModule {
-  
-public : 
+public:
   SimSynModule(string _pos, int idModuleConf, int nIteration);
-  virtual ~SimSynModule();
-
-
+  virtual ~SimSynModule() {}
 
   virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
 
-
-private : 
+private:
   string knnStdFile;
-  pair<string, float> selectTgtWord (map<string,int>& candidates,
-			// removes the se_ or s' when pronominal
-			// ex: verbCand["s'étrangler"] = "étrangler"
-			map<string, string>& verbCand,
-			map<string, set<WORDNET::TranslationInfos> >& synset,
-			string& knnFile);
+  pair<string, size_t> selectTgtWord (map<string,int>& candidates,
+                  // removes the se_ or s' when pronominal
+                  // ex: verbCand["s'étrangler"] = "étrangler"
+                  map<string, string>& verbCand,
+                  map<string, set<WORDNET::TranslationInfos> >& synset,
+                  string& knnFile);
   string pos;
   string suffix;
 
-protected :
-
-  string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
-			  string synsetId,
-			  map<string, WORDNET::TgtCandidates >::iterator it);
+protected:
+  string trySelectAndReplace(WORDNET::WordNetEntry& synset,
+                  pair<string, WORDNET::TgtCandidates> candidate);
 };
 
 

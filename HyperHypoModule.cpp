@@ -228,6 +228,12 @@ void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
           elected = itCand->first;
         }
 
+        /* Even if it was not kept, add the candidate to our list of "scores" */
+        if (sum > 0) {
+          WORDNET::TranslationInfos translationCandidate(it->first, "hyperhypo" + suffix, sum);
+          itwn->second.frenchScore[itCand->first].insert(translationCandidate);
+        }
+
       }
       /* if (validSumHypo<2 || validSumHypo<2) {
           elected="";

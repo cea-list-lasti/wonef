@@ -75,6 +75,15 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
       }
       ofs << "\t\t</INSTANCES>" << endl;
     }
+    for (map<string, std::set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchScore.begin(); itwne !=itwn->second.frenchScore.end(); itwne++) {	
+      ofs << "\t\t<SCORES translation=\"" << itwne->first << "\" >" << endl;
+      for (set<WORDNET::TranslationInfos>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
+	ofs << "\t\t\t<SCORE original=\"" << itSrc->original << "\"";
+	ofs << " processed=\"" << itSrc->processed << "\"";
+	ofs << " score=\"" << itSrc->score <<"\" />" << endl;
+      }
+      ofs << "\t\t</SCORES>" << endl;
+    }
 
     for (set<string>::iterator itH = itwn->second.hypers.begin(); itH != itwn->second.hypers.end(); itH++) {
       ofs << "\t\t<HYPER>" << *itH << "</HYPER>" <<endl;

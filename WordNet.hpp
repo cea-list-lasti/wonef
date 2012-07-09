@@ -22,8 +22,11 @@ struct TranslationInfos {
   std::string processed;
   float score;
   TranslationInfos() : original(), processed(), score() {}
+  TranslationInfos(std::string _original, std::string _processed, float _score) :
+    original(_original), processed(_processed), score(_score) { }
   bool operator< (const TranslationInfos& that ) const {
-    return this->original < that.original || this->processed < that.processed;
+    // sort by score  
+    return this->score < that.score || this->original < that.original || this->processed < that.processed;
   }
 };
 
@@ -35,8 +38,12 @@ typedef struct WordNetEntry {
   std::set<std::string> hypers;
   std::set<std::string> meros;
   std::set<std::string> holos;
+  /* Kept translations */
   std::map<std::string, std::set<TranslationInfos> > frenchSynset;
+  /* Candidate translations */
   std::map<std::string, TgtCandidates> frenchCandidates;
+  /* Score */
+  std::map<std::string, std::set<TranslationInfos> > frenchScore;
 } WordNetEntry;
 
 typedef std::map<std::string, WordNetEntry> WordNet;
