@@ -1,5 +1,3 @@
-PROTOC = /home/qp230782/externals/protobuf/bin/protoc
-
 LDFLAGS     = -L/usr/local/lib -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/boost_1_49_0/stage/lib -L/home/qp230782/externals/protobuf/lib -I/home/qp230782/externals/protobuf/include -lboost_regex -lxerces-c -lprotobuf -lpthread -pg
 CPPFLAGS    = -Wall -Wextra -O3 -I/home/qp230782/externals/boost_1_49_0/ -I/home/qp230782/externals/xerces-c-3.1.1/include -I/home/qp230782/externals/protobuf/include -pg
 
@@ -18,7 +16,7 @@ logs:
 	mkdir logs
 
 repository.pb.h: $(PROTO_FILES)
-	$(PROTOC) repository.proto --cpp_out=.
+	protoc repository.proto --cpp_out=.
 
 buildBilingualDic : buildBilingualDic.o  $(COMMON_OBJ) 
 	$(CXX) -o buildBilingualDic buildBilingualDic.o $(COMMON_OBJ)  $(LDFLAGS) 
