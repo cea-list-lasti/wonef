@@ -4,8 +4,8 @@ WOLF='/home/qp230782/projets/wolf/wolf-0.1.4.xml'
 EWN='/home/qp230782/ressources/wn_fr.ewn '
 GOLD='/data/text/jeanne/veriteTerrain.xml'
 POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb'
-BCSMODE=4
-BCSFILE='/home/qp230782/projets/5000_bc.xml'
+#BCSMODE=4
+#BCSFILE='/home/qp230782/projets/5000_bc.xml'
 
 seqsspaces=$*
 seqs=${seqsspaces// /}
@@ -21,15 +21,18 @@ gprof translateVerbs > profiledVerb 2> /dev/null
 WNDATA="data2/data.fr.verbs.Noen$seqs"
 WNBESTDATA="data2/data.fr.verbs.best.Noen$seqs"
 
-echo -e "\n-- Evaluating... --"
-./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbs$seqs
-./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNDATA gold $BCSMODE $BCSFILE &> logs/evalVerbsG$seqs
-
+echo -e "\n-- Evaluating with EWN... --"
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNDATA ewn &> logs/evalVerbs$seqs
 echo -e "\n                *** Normal ***"
-tail -12 logs/evalVerbs$seqs
-
-./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn $BCSMODE $BCSFILE &> logs/evalVerbsBest$seqs
-./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold $BCSMODE $BCSFILE &> logs/evalVerbsGBest$seqs
-
+tail -25 logs/evalVerbs$seqs
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn &> logs/evalVerbsBest$seqs
 echo -e "\n                *** Best ***"
-tail -12 logs/evalVerbsBest$seqs
+tail -25 logs/evalVerbsBest$seqs
+
+echo -e "\n-- Evaluating with Gold... --"
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalVerbsG$seqs
+echo -e "\n                *** Normal ***"
+tail -25 logs/evalVerbsG$seqs
+./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalVerbsGBest$seqs
+echo -e "\n                *** Best ***"
+tail -25 logs/evalVerbsGBest$seqs

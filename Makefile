@@ -3,7 +3,7 @@ CPPFLAGS    = -Wall -Wextra -O3 -I/home/qp230782/externals/boost_1_49_0/ -I/home
 
 all:	translateWN translateVerbs buildBilingualDic evalJAWS-WOLF
 
-COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/converter.cpp ../src/tools.cpp WiktHandler.cpp WolfHandler.cpp JawsEvaluatorHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp JawsEvaluatorHandlerBench.cpp BCSBaseHandler.cpp BestTranslations.cpp repository.pb.cc GoldHandler.cpp
+COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/converter.cpp ../src/tools.cpp WiktHandler.cpp WolfHandler.cpp JawsEvaluatorHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp JawsEvaluatorHandlerBench.cpp BCSBaseHandler.cpp BestTranslations.cpp repository.pb.cc GoldHandler.cpp JawsHandler.cpp
 
 COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
 

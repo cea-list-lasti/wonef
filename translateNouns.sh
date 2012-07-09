@@ -20,8 +20,8 @@ WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
 # This is simply index.noun without the monosemous nouns
 POLYSEMOUSINDEX='/home/qp230782/Projets/index.polysemous.noun'
 # OLDSCHOOL (means I don't care about BCSFILE?)
-BCSMODE=4
-BCSFILE='/home/qp230782/Projets/5000_bc.xml'
+#BCSMODE=4
+#BCSFILE='/home/qp230782/Projets/5000_bc.xml'
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
@@ -33,10 +33,10 @@ WNDATA="data2/data.fr.nouns.wolf.Noen$seqs"
 WNBESTDATA="data2/data.fr.nouns.best.wolf.Noen$seqs"
 
 echo -e "\n-- Evaluating... --"
-./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNDATA wolf $BCSMODE $BCSFILE &> logs/evalNouns$seqs
+./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNDATA wolf &> logs/evalNouns$seqs
 echo -e "\n                *** Normal ***"
-tail -12 logs/evalNouns$seqs
-./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf $BCSMODE $BCSFILE &> logs/evalNounsBest$seqs
+tail -25 logs/evalNouns$seqs
+./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf &> logs/evalNounsBest$seqs
 echo -e "\n                *** Best ***"
-tail -12 logs/evalNounsBest$seqs
+tail -25 logs/evalNounsBest$seqs
 
