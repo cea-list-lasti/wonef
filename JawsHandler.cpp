@@ -10,12 +10,12 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
                          std::map<std::pair<std::string, std::string>, int>& _goldValue,
                          bool _gold, std::string _pos) :
-                         nbSynsets(0), nbJawsSynsets(0), nbVtSynsets(0),
+                         nbSynsets(0), nbJawsSynsets(0), nbGtSynsets(0),
                          nbOriginals(0), nbPolyOriginals(0),
                          nbTermsInJaws(0), nbPolyTermsInJaws(0),
-                         nbTermsInVt(0), nbPolyTermsInVt(0),
+                         nbTermsInGt(0), nbPolyTermsInGt(0),
                          nbTermsOk(0), nbPolyTermsOk(0),
-                         nbInJawsSynsetInVt(0), nbPolyInJawsSynsetInVt(0),
+                         nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
                          polyLitList(_polyLitList), polyIdsList(_polyIdsList),
                          vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
                          goldValue(_goldValue),gold (_gold), pos(_pos) {
@@ -106,14 +106,14 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       nbPolyTermsInJaws++;
     }
 
-    // count terms in Jaws which are in synsets translated in VT
+    // count terms in Jaws which are in synsets translated in GT
     if (vtNetIdIdent[id].size() > 0) {
-      nbInJawsSynsetInVt++;
+      nbInJawsSynsetInGt++;
       if (polysemous) {
-        nbPolyInJawsSynsetInVt++;
+        nbPolyInJawsSynsetInGt++;
       }
 
-      // count terms in the same synset in JAWS and VT
+      // count terms in the same synset in JAWS and GT
       if (vtNetIdIdent[id].find(translation) != vtNetIdIdent[id].end()) {
         nbTermsOk++;
         if (polysemous == true) {
@@ -126,7 +126,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     translation = string();
 
   } else if(_transcode(qname, theTranscoder).compare("SYNSET") == 0) {
-    bool transInVt = false;
+    bool transInGt = false;
     bool transInJaws = false;
     nbSynsets++;
     if (jawsNetIdIdent[id].size() > 0) {
@@ -134,15 +134,15 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       transInJaws = true;
     }
 
-    // count terms in VT
+    // count terms in GT
     if (vtNetIdIdent[id].size() > 0) {
-      nbVtSynsets++;
-      for (std::set<std::string>::iterator itVtTerm = vtNetIdIdent[id].begin();
-           itVtTerm != vtNetIdIdent[id].end(); itVtTerm++) {
-        nbTermsInVt++;
-        transInVt = true;
+      nbGtSynsets++;
+      for (std::set<std::string>::iterator itGtTerm = vtNetIdIdent[id].begin();
+           itGtTerm != vtNetIdIdent[id].end(); itGtTerm++) {
+        nbTermsInGt++;
+        transInGt = true;
         if (polyIdsList.find(id) != polyIdsList.end()) {
-          nbPolyTermsInVt++;
+          nbPolyTermsInGt++;
         }
       }
     }
@@ -150,7 +150,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     bool printSynset = false;
     if (gold && goldIds.find(id) != goldIds.end()) {
       printSynset = true;
-    } else if (!gold && (transInVt || transInJaws)) {
+    } else if (!gold && (transInGt || transInJaws)) {
       printSynset = true;
     }
 
@@ -165,19 +165,19 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
            itJawsTerm = wne.frenchSynset.begin();
            itJawsTerm != wne.frenchSynset.end();
            itJawsTerm++) {
-        // Jaws and VT agree
+        // Jaws and GT agree
         if (vtNet[itJawsTerm->first].find(id) != vtNet[itJawsTerm->first].end()) {
           agree.insert(itJawsTerm->first);
-        // translations in Jaws not in VT
+        // translations in Jaws not in GT
         } else {
           type2.insert(itJawsTerm->first);
         }
       }
-      // translations in VT not in Jaws
-      for (std::set<std::string>::iterator itVtTerm = vtNetIdIdent[id].begin();
-           itVtTerm != vtNetIdIdent[id].end(); itVtTerm++) {
-        if (jawsNetIdIdent[id].find(*itVtTerm) == jawsNetIdIdent[id].end()) {
-          type1.insert(*itVtTerm);
+      // translations in GT not in Jaws
+      for (std::set<std::string>::iterator itGtTerm = vtNetIdIdent[id].begin();
+           itGtTerm != vtNetIdIdent[id].end(); itGtTerm++) {
+        if (jawsNetIdIdent[id].find(*itGtTerm) == jawsNetIdIdent[id].end()) {
+          type1.insert(*itGtTerm);
         }
       }
 
@@ -187,9 +187,9 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       std::cout << "In the synset " << id << " :" << endl;
       std::cout << "Definition : " << wne.def << endl;
 
-      // Jaws and VT agree
+      // Jaws and GT agree
       if (agree.size() > 0) {
-        std::cout << "\n--- Jaws and Vt agree on :" << endl;
+        std::cout << "\n--- Jaws and Gt agree on :" << endl;
         for (std::set<std::string>::iterator itAgree = agree.begin();
              itAgree != agree.end(); itAgree++) {
           std::cout << "\"" << *itAgree << "\"";
@@ -210,7 +210,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
         }
       }
 
-      // a term in this synset in VT not in Jaws
+      // a term in this synset in GT not in Jaws
       if (type1.size() > 0) {
         std::cout << "\n--- Error type 1 : Jaws missed a " << pos << "." << endl;
         for (std::set<std::string>::iterator itType1 = type1.begin();
@@ -225,9 +225,9 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
         }
       }
 
-      // a term in this synset in Jaws not in VT
+      // a term in this synset in Jaws not in GT
       if (type2.size() > 0) {
-        std::cout << "\n--- Error type 2 : this " << pos << " is not in VT." << endl;
+        std::cout << "\n--- Error type 2 : this " << pos << " is not in GT." << endl;
         for (std::set<std::string>::iterator itType2 = type2.begin();
              itType2 != type2.end(); itType2++) {
           std::cout << "\"" << *itType2 << "\"";
@@ -268,18 +268,18 @@ void JawsHandler::endDocument() {
   }
 
   float allPrecision = (float)nbTermsOk / (float)nbTermsInJaws;
-  float allPseudoPrec = (float)nbTermsOk / (float)nbInJawsSynsetInVt;
+  float allPseudoPrec = (float)nbTermsOk / (float)nbInJawsSynsetInGt;
   float polyPrecision = (float)nbPolyTermsOk / (float)nbPolyTermsInJaws;
-  float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInVt;
-  float allRecVt = (float)nbInJawsSynsetInVt / (float)nbTermsInVt;
-  float polyRecVt = (float)nbPolyInJawsSynsetInVt / (float)nbPolyTermsInVt;
-  float allF1 = 2*( (float)allPseudoPrec * (float)allRecVt )
-                / ( (float)allPseudoPrec + (float)allRecVt );
-  float polyF1 = 2*( (float)polyPseudoPrec * (float)polyRecVt )
-                / ( (float)polyPseudoPrec + (float)polyRecVt );
-  float allRecall = (float)nbTermsInJaws / (float)nbOriginals;
-  float polyRecall = (float)nbPolyTermsInJaws / (float)nbPolyOriginals;
-  float recSynsetsVt = (float)nbJawsSynsets / (float)nbVtSynsets;
+  float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInGt;
+  float allRecGt = (float)nbTermsOk / (float)nbTermsInGt;
+  float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGt;
+  float allF1 = 2*( (float)allPseudoPrec * (float)allRecGt )
+                / ( (float)allPseudoPrec + (float)allRecGt );
+  float polyF1 = 2*( (float)polyPseudoPrec * (float)polyRecGt )
+                / ( (float)polyPseudoPrec + (float)polyRecGt );
+  float coverageWN = (float)nbTermsInJaws / (float)nbOriginals;
+  float polycoverWN = (float)nbPolyTermsInJaws / (float)nbPolyOriginals;
+  float recSynsetsGt = (float)nbJawsSynsets / (float)nbGtSynsets;
   float recallSynsets = (float)nbJawsSynsets / (float)nbSynsets;
 
   cout.setf(ios::fixed, ios::floatfield);
@@ -288,34 +288,34 @@ void JawsHandler::endDocument() {
   cout << "------------------------------------" << endl;
   cout << "\t\t*** All " + terms + " ***" << endl;
   cout << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << endl;
-  cout << "In synsets known by Vt :\t" << nbInJawsSynsetInVt << endl;
-  cout << "nb" + terms + "InVt :\t\t\t" << nbTermsInVt << endl;
-  cout << "nb" + terms + "InJawsAgreeWithVt :\t" << nbTermsOk << endl;
+  cout << "In synsets known by GT :\t" << nbInJawsSynsetInGt << endl;
+  cout << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << endl;
+  cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << endl;
 
   cout << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
   cout << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
-  cout << "Recall / VT :\t\t\t" << allRecVt*100 << "%" << endl;
-  cout << "Recall / WN :\t\t\t" << allRecall*100 << "%" << endl;
+  cout << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
+  cout << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
 
   cout << "\t\t*** Polysemous ***" << endl;
   cout << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << endl;
-  cout << "In synsets known by Vt :\t" << nbPolyInJawsSynsetInVt << endl;
-  cout << "nb" + terms + "InVt :\t\t\t" << nbPolyTermsInVt << endl;
-  cout << "nb" + terms + "InJawsAgreeWithVt :\t" << nbPolyTermsOk << endl;
+  cout << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << endl;
+  cout << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << endl;
+  cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << endl;
 
   cout << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
   cout << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
-  cout << "Recall / VT :\t\t\t" << polyRecVt*100 << "%" << endl;
-  cout << "Recall / WN :\t\t\t" << polyRecall*100 << "%" << endl;
+  cout << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
+  cout << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
   cout << "---" << endl;
   cout << "nbOriginals : " << nbOriginals
        << ", polysemous : " << nbPolyOriginals << endl;
   cout << "nbSynsets in WN : " << nbSynsets
        << ", in Jaws : " << nbJawsSynsets
-       << ", in Vt : " << nbVtSynsets << endl;
-  cout << "Recall synsets / VT :\t\t" << recSynsetsVt*100 << "%" << endl;
-  cout << "Recall synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
+       << ", in Gt : " << nbGtSynsets << endl;
+  cout << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
+  cout << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
 
 }

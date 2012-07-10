@@ -39,17 +39,17 @@ public :
 
   uint nbSynsets;
   uint nbJawsSynsets;
-  uint nbVtSynsets;
+  uint nbGtSynsets;
   uint nbOriginals;
   uint nbPolyOriginals;
   uint nbTermsInJaws;
   uint nbPolyTermsInJaws;
-  uint nbTermsInVt;
-  uint nbPolyTermsInVt;
+  uint nbTermsInGt;
+  uint nbPolyTermsInGt;
   uint nbTermsOk;
   uint nbPolyTermsOk;
-  uint nbInJawsSynsetInVt;
-  uint nbPolyInJawsSynsetInVt;
+  uint nbInJawsSynsetInGt;
+  uint nbPolyInJawsSynsetInGt;
 
 protected :
 
