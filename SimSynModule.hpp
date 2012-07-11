@@ -24,7 +24,7 @@ private:
                   // ex: verbCand["s'étrangler"] = "étrangler"
                   map<string, string>& verbCand,
                   map<string, set<WORDNET::TranslationInfos> >& synset,
-                  string& knnFile);
+                  const string& knnFile);
   string pos;
   string suffix;
 

@@ -21,13 +21,13 @@ SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration) : pos(
 }
 
 void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
-  typedef std::pair<string, WORDNET::WordNetEntry> synset_t;
-  typedef std::pair<string, WORDNET::TgtCandidates> candidate_t;
+  typedef std::pair<const string, WORDNET::WordNetEntry> synset_t;
+  typedef std::pair<const string, WORDNET::TgtCandidates> candidate_t;
 
-  BOOST_FOREACH(synset_t synset, wn) {
+  BOOST_FOREACH(synset_t& synset, wn) {
     /* For every potential translation in our synset, look for already
      * translated synonyms */
-    BOOST_FOREACH(candidate_t candidate, synset.second.frenchCandidates) {
+    BOOST_FOREACH(candidate_t& candidate, synset.second.frenchCandidates) {
       if (candidate.second.cand.size() > 0) {
         synset.second.newdef = trySelectAndReplace(synset.second, candidate);
       }
@@ -56,9 +56,13 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
   while ((elected.empty() || elected.begin()->second >= electionThreshold) && i < rels.size()) {
     string knnFile=boost::regex_replace(knnStdFile, boost::regex("[$]REL"), rels[i]);
     pair<string, size_t> elec = selectTgtWord(candidate.second.cand, candidate.second.verbCand, synset.frenchSynset, knnFile);
-    if (elec.first != "" && (!elected.empty() && elec.second < elected.begin()->second)) {
-      elected.clear();
-      elected.insert(elec);
+    if (elec.first != "") {
+      // First time, "elected" is empty.
+      // Then, we keep only the "elec" with shortest distance.
+      if (elected.empty() || (!elected.empty() && elec.second < elected.begin()->second)) {
+        elected.clear();
+        elected.insert(elec);
+      }
     }
     i++;
   }
@@ -80,18 +84,18 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
 }
 
 
-pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<WORDNET::TranslationInfos> >& synset, string& knnFile) {
+pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<WORDNET::TranslationInfos> >& synset, const string& knnRelFile) {
   map<pair<string, size_t>, uint> votes;
   for (map<string, set<WORDNET::TranslationInfos> >::iterator itSynset = synset.begin(); itSynset != synset.end(); itSynset++) {
 
+    string knnFile=boost::regex_replace(knnRelFile, boost::regex("[$]WORD"), itSynset->first);
     //cerr << "Opening : " << knnFile << endl;
-    knnFile=boost::regex_replace(knnFile, boost::regex("[$]WORD"), itSynset->first);
     string knns;
     ifstream knnIfs(knnFile.c_str());
     getline(knnIfs, knns);
     knnIfs.close();
 
-    size_t bestPos = SIZE_MAX;
+    size_t bestDist = SIZE_MAX;
     pair<string, size_t> syn;
     syn.first = "";
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
@@ -104,14 +108,14 @@ pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<st
         sssearch << " " << verbCand[it2->first] << ":";
       }
 
-      size_t pos = knns.find(sssearch.str());
-      if (pos!=string::npos) {
+      size_t dist = knns.find(sssearch.str());
+      if (dist!=string::npos) {
         pair<string, float> candidate;
         candidate.first = it2->first;
-        candidate.second = pos;
+        candidate.second = dist;
         votes[candidate] += it2->second;
-        if(pos < bestPos) {
-          bestPos = pos;
+        if(dist < bestDist && dist > 0) {
+          bestDist = dist;
           syn = candidate;
         }
       }
