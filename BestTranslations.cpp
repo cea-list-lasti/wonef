@@ -48,7 +48,7 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
 	  - that come from "uniq", "monosemous" or "notranslation"
 	  - that have been chosen by several modules
       ------------------------------------------------------------------------*/
-      if (nbTranslations < 2 && nbUniq == 0 && nbMono == 0 && nbNotrans == 0) {
+      if (nbTranslations < 2 && nbUniq == 0 /*&& nbMono == 0 && nbNotrans == 0*/) {
 	itEntry->second.frenchSynset.erase(itFrench++);
 
       } else {
