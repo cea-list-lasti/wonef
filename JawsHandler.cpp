@@ -273,10 +273,8 @@ void JawsHandler::endDocument() {
   float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInGt;
   float allRecGt = (float)nbTermsOk / (float)nbTermsInGt;
   float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGt;
-  float allF1 = 2*( (float)allPseudoPrec * (float)allRecGt )
-                / ( (float)allPseudoPrec + (float)allRecGt );
-  float polyF1 = 2*( (float)polyPseudoPrec * (float)polyRecGt )
-                / ( (float)polyPseudoPrec + (float)polyRecGt );
+  float allF1 = 2*(allPseudoPrec * allRecGt) / (allPseudoPrec + allRecGt);
+  float polyF1 = 2*(polyPseudoPrec * polyRecGt) / (polyPseudoPrec + polyRecGt);
   float coverageWN = (float)nbTermsInJaws / (float)nbOriginals;
   float polycoverWN = (float)nbPolyTermsInJaws / (float)nbPolyOriginals;
   float recSynsetsGt = (float)nbJawsSynsets / (float)nbGtSynsets;
