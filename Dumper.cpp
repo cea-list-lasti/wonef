@@ -1,4 +1,4 @@
-# include "Dumper.hpp"
+#include "Dumper.hpp"
 #include "Loader.hpp"
 #include <iostream>
 #include <fstream>
