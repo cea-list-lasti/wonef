@@ -14,7 +14,9 @@ pos=$3 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe)
 # exemple :
 #./evalAddpart.sh data2/data.fr.nouns.best.wolf.noun.Noen1 simsyn1.1 N
 # ou
-#./evalAddpart.sh data2/data.fr.verbs1 vote-lastchance1.1 V
+#./evalAddpart.sh data2/data.fr.adjs.Noen1 vote-lastchance1.1 A
+# ou
+#./evalAddpart.sh data2/data.fr.verbs.Noen1 vote-lastchance1.1 V
 
 echo "Extracting $module from $input ..."
 
@@ -48,9 +50,15 @@ BCSFILE='/home/qp230782/projets/5000_bc.xml'
 if [ "$pos" = "N" ]
 then
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalNouns_$module
+tail -25 logs/evalNouns_$module
+elif [ "$pos" = "A" ]
+then
+./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalAdjs_$module
+tail -25 logs/evalAdjs_$module
 elif [ "$pos" = "V" ]
 then
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $ADDPART ewn $BCSMODE $BCSFILE &> logs/evalVerbs_$module
+tail -25 logs/evalVerbs_$module
 else
 echo "Precise the POS to evaluate"
 fi

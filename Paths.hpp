@@ -33,8 +33,10 @@
 #define VERBS_LIST "/data/text/FrameNetLUI/externals/POSlist/verbes.list"
 #define VERBS_P_LIST "/home/baguenierj/Projets/verbes.p.list"
 
-#define INDEX_ADJ "/data/text/moutonc/opendata/WordNet-3.0/dict/index.adj"
-#define DATA_ADJ "/data/text/moutonc/opendata/WordNet-3.0/dict/data.adj"
+#define INDEX_ADJ "/data/text/moutonc/opendata/WordNet-2.0/dict/index.adj"
+#define DATA_ADJ "/data/text/moutonc/opendata/WordNet-2.0/dict/data.adj"
+#define INDEX_ADJ15 "/data/text/quentin/opendata/WordNet-1.5/DICT/ADJ.IDX"
+#define DATA_ADJ15 "/data/text/quentin/opendata/WordNet-1.5/DICT/ADJ.DAT"
 #define ADJS_LIST "/data/text/FrameNetLUI/externals/POSlist/adjectifs.list"
 #define ADJS_LIST_F "/data/text/FrameNetLUI/externals/POSlist/adjectifs.filtered.list"
 

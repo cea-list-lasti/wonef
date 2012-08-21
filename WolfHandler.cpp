@@ -14,9 +14,9 @@ using namespace std;
 
 
 WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet,
-			 map<string, set<string> >* _wolfNetIdIdent,
-			 string _pos) :
-			 nbSynsets(0), pos(_pos) {
+                         map<string, set<string> >* _wolfNetIdIdent,
+                         string _pos) :
+                         nbSynsets(0), pos(_pos) {
   
   wolfNet = _wolfNet;
   wolfNetIdIdent = _wolfNetIdIdent;
@@ -32,9 +32,9 @@ WolfHandler::~WolfHandler() {
 }
 
 void WolfHandler::startElement(const XMLCh *const /*uri*/,
-			       const XMLCh *const /*localname*/,
-			       const XMLCh *const qname,
-			       const Attributes & /*attrs*/) {
+                               const XMLCh *const /*localname*/,
+                               const XMLCh *const qname,
+                               const Attributes & /*attrs*/) {
 
   if(_transcode(qname, theTranscoder).compare("SYNSET")==0) {
     nbSynsets++;
@@ -48,9 +48,9 @@ void WolfHandler::startElement(const XMLCh *const /*uri*/,
 }
 
 void WolfHandler::characters(const XMLCh *const chars,
-			     const XMLSize_t /*length*/)  {
+                             const XMLSize_t /*length*/)  {
     tmpString = _transcode(chars, theTranscoder);
-    cout << "TEST : " << tmpString << endl;
+    //cout << "TEST : " << tmpString << endl;
 }
 
 void WolfHandler::endElement(const XMLCh *const /*uri*/,
@@ -63,7 +63,8 @@ void WolfHandler::endElement(const XMLCh *const /*uri*/,
     PartOfSpeech = tmpString;
   } else if (_transcode(qname, theTranscoder).compare("LITERAL")==0) {
     if ((pos == "noun" && PartOfSpeech == "n")
-      || (pos == "verb" && PartOfSpeech == "v")) {
+      || (pos == "verb" && PartOfSpeech == "v")
+      || (pos == "adj" && PartOfSpeech == "a")) {
       if (wolfNet->find(tolower(literal))==wolfNet->end()) {
          (*wolfNet)[tolower(literal)]=set<string>();
       }      

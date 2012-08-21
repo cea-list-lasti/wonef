@@ -45,13 +45,15 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
   cerr << "Writing in " << datafile << endl;
   ofstream ofs(datafile.c_str(), ios_base::out | ios_base::trunc );
   if (datafile.find("noun")!=string::npos) {
-    ofs << "<JAWS pos=\"noun\" >" << endl;
+    ofs << "<JAWS pos=\"noun\">" << endl;
   } else if (datafile.find("verb")!=string::npos) {
-    ofs << "<JAWS pos=\"verb\" >" << endl;
+    ofs << "<JAWS pos=\"verb\">" << endl;
+  } else if (datafile.find("adj")!=string::npos) {
+    ofs << "<JAWS pos=\"adj\">" << endl;
   }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    ofs << "\t<SYNSET id=\""<< itwn->first <<"\" >" << endl;
-    ofs << "\t\t<ORIGINALDEF>" << itwn->second.def <<"</ORIGINALDEF>"<<endl; 
+    ofs << "\t<SYNSET id=\""<< itwn->first <<"\">" << endl;
+    ofs << "\t\t<ORIGINALDEF>" << "<![CDATA[" << itwn->second.def << "]]>" <<"</ORIGINALDEF>"<<endl;
     /*    if (itwn->second.newdef!="") {
       ofs << "\t\t<NEWDEF>" << itwn->second.newdef <<"</NEWDEF>"<<endl; 
       }*/
@@ -59,7 +61,7 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       //      ofs << "\t\t<ORIGINAL>" << itwne->first << "</ORIGINAL>" << endl;
       ofs << "\t\t<CANDIDATES original=\"" << itwne->first
-	  << "\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
+	  << "\" formerElected=\"" << itwne->second.formerElected << "\">" <<endl;
       for (map<string, int>::iterator itCand = itwne->second.cand.begin(); itCand !=itwne->second.cand.end(); itCand++) {	
 	ofs << "\t\t\t<CANDIDATE score=\""<< itCand->second <<"\">" << itCand->first << "</CANDIDATE>"<< endl;
       }
@@ -67,7 +69,7 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
     }  
     for (map<string, std::set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //  ofs << "\t\t<INSTANCE original=\""<<itwne->second<<"\">" << itwne->first << "</INSTANCE>" <<endl;
-      ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\" >" << endl;
+      ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\">" << endl;
       for (set<WORDNET::TranslationInfos>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
 	ofs << "\t\t\t<INSTANCE original=\"" << itSrc->original << "\"";
 	ofs << " processed=\"" << itSrc->processed << "\"";
@@ -76,7 +78,7 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
       ofs << "\t\t</INSTANCES>" << endl;
     }
     for (map<string, std::set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchScore.begin(); itwne !=itwn->second.frenchScore.end(); itwne++) {	
-      ofs << "\t\t<SCORES translation=\"" << itwne->first << "\" >" << endl;
+      ofs << "\t\t<SCORES translation=\"" << itwne->first << "\">" << endl;
       for (set<WORDNET::TranslationInfos>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
 	ofs << "\t\t\t<SCORE original=\"" << itSrc->original << "\"";
 	ofs << " processed=\"" << itSrc->processed << "\"";
@@ -114,9 +116,11 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
   datafiless << datafile << ".unsolved" ; 
   ofstream ofs(datafiless.str().c_str(), ios_base::out | ios_base::trunc );
   if (datafile.find("noun")!=string::npos) {
-    ofs << "<JAWS pos=\"noun\" >" << endl;
+    ofs << "<JAWS pos=\"noun\">" << endl;
   } else if (datafile.find("verb")!=string::npos) {
-    ofs << "<JAWS pos=\"verb\" >" << endl;
+    ofs << "<JAWS pos=\"verb\">" << endl;
+  } else if (datafile.find("adj")!=string::npos) {
+    ofs << "<JAWS pos=\"adj\">" << endl;
   }
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     // SKIP SOLVED SYNSET
@@ -132,8 +136,8 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
       continue;
     }
     //    cerr << "\t<SYNSET id=\""<< itwn->first <<"\" >" << endl;
-    ofs << "\t<SYNSET id=\""<< itwn->first <<"\" >" << endl;
-    ofs << "\t\t<ORIGINALDEF>" << itwn->second.def <<"</ORIGINALDEF>"<<endl; 
+    ofs << "\t<SYNSET id=\""<< itwn->first <<"\">" << endl;
+    ofs << "\t\t<ORIGINALDEF>" << "<![CDATA[" << itwn->second.def << "]]>" <<"</ORIGINALDEF>"<<endl;
     /*    if (itwn->second.newdef!="") {
       ofs << "\t\t<NEWDEF>" << itwn->second.newdef <<"</NEWDEF>"<<endl; 
       }*/
@@ -141,7 +145,7 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
     for (map<string, WORDNET::TgtCandidates>::iterator itwne = itwn->second.frenchCandidates.begin(); itwne !=itwn->second.frenchCandidates.end(); itwne++) {	
       //      ofs << "\t\t<ORIGINAL>" << itwne->first << "</ORIGINAL>" << endl;
       ofs << "\t\t<CANDIDATES original=\""<<itwne->first
-	  << "\" formerElected=\"" << itwne->second.formerElected << "\" >" <<endl;
+	  << "\" formerElected=\"" << itwne->second.formerElected << "\">" <<endl;
       for (map<string, int>::iterator itCand = itwne->second.cand.begin(); itCand !=itwne->second.cand.end(); itCand++) {	
 	ofs << "\t\t\t<CANDIDATE score=\""<< itCand->second <<"\">" << itCand->first << "</CANDIDATE>"<< endl;
       }
@@ -149,7 +153,7 @@ void DumperModule::printUnsolved(WORDNET::WordNet& wn) {
     }  
     for (map<string, std::set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //  ofs << "\t\t<INSTANCE original=\""<<itwne->second<<"\">" << itwne->first << "</INSTANCE>" <<endl;
-      ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\" >" << endl;
+      ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\">" << endl;
       for (set<WORDNET::TranslationInfos>::iterator itSrc = itwne->second.begin(); itSrc != itwne->second.end(); itSrc++) {
 	ofs << "\t\t\t<INSTANCE original=\""<< itSrc->original << "\"";
 	ofs << " processed=\"" << itSrc->processed << "\"";

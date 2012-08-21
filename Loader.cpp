@@ -185,6 +185,8 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	ss.ignore(256, 'n') ;
       } else if (pos == "verb") {
 	ss.ignore(256, 'v') ;
+      } else if (pos == "adj") {
+        ss.ignore(256, 'a') ;
       }
       int nbSyns = 0xaa;
       ss >> hex >> nbSyns ;
@@ -302,12 +304,12 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 	    for (map<string, int>::iterator itCand = candidates.cand.begin(); itCand!=candidates.cand.end(); itCand++) {
 	      Distance lDist; 
 	      int ldScore = 0;
-	      if (pos == "noun") {
-		ldScore = lDist.LD(desax(LoaderModule::desaxData, itCand->first),srcWord);
-	      } else if (pos == "verb") {
+	      if (pos == "verb") {
 		// compute the score without the pronoun
 		ldScore = lDist.LD(desax(LoaderModule::desaxData, candidates.verbCand[itCand->first]),srcWord);
-	      }
+	      } else {
+                ldScore = lDist.LD(desax(LoaderModule::desaxData, itCand->first),srcWord);
+              }
 	      if (ldScore<=3) {	     
 		wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;	  
 		if (verbose) {

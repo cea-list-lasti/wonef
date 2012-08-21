@@ -47,6 +47,11 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
     rels.push_back("COD_V.reverse");
     rels.push_back("CPL_V.reverse");
     rels.push_back("CPLV_V.reverse");
+    //rels.push_back("SUJ_V.reverse");
+  } else if (pos == "adj") {
+    rels.push_back("SUBADJPOST");
+    rels.push_back("ADVADJ.reverse");
+    rels.push_back("ATB_SG");
   }
 
   unsigned int i = 0;
@@ -101,11 +106,11 @@ pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<st
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
       /* Look at the position of our candidate in the synonyms list */
       stringstream sssearch;
-      if (pos == "noun") {
-        sssearch << " " << it2->first << ":";
-      } else if (pos == "verb") {
+      if (pos == "verb") {
         // compute the score without the pronoun
         sssearch << " " << verbCand[it2->first] << ":";
+      } else {
+        sssearch << " " << it2->first << ":";
       }
 
       size_t dist = knns.find(sssearch.str());

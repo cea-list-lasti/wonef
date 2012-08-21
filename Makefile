@@ -1,7 +1,7 @@
 LDFLAGS     = -L/usr/local/lib -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/boost_1_49_0/stage/lib -L/home/qp230782/externals/protobuf/lib -I/home/qp230782/externals/protobuf/include -lboost_regex -lxerces-c -lprotobuf -lpthread -pg
 CPPFLAGS    = -Wall -Wextra -O3 -I/home/qp230782/externals/boost_1_49_0/ -I/home/qp230782/externals/xerces-c-3.1.1/include -I/home/qp230782/externals/protobuf/include -pg
 
-all:	translateWN translateVerbs buildBilingualDic evalJAWS-WOLF
+all:	translateWN translateVerbs translateAdjs buildBilingualDic evalJAWS-WOLF
 
 COMMON_SRC  = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/converter.cpp ../src/tools.cpp WiktHandler.cpp WolfHandler.cpp JawsEvaluatorHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp JawsEvaluatorHandlerBench.cpp BCSBaseHandler.cpp BestTranslations.cpp repository.pb.cc GoldHandler.cpp JawsHandler.cpp
 
@@ -34,6 +34,12 @@ translateVerbs: translateVerbs.o  $(COMMON_OBJ) $(H_FILES)
 	$(CXX) -o translateVerbs translateVerbs.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
 
 translateVerbs.o : translateVerbs.cpp $(H_FILES)
+	$(CXX) $(CPPFLAGS) -c $*.cpp
+
+translateAdjs: translateAdjs.o  $(COMMON_OBJ) $(H_FILES)
+	$(CXX) -o translateAdjs translateAdjs.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
+
+translateAdjs.o : translateAdjs.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
 
 evalJAWS-WOLF: evalJAWS-WOLF.o  $(COMMON_OBJ) $(H_FILES)

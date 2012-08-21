@@ -265,6 +265,8 @@ void JawsHandler::endDocument() {
     terms = "Nouns";
   } else if (pos == "verb") {
     terms = "Verbs";
+  } else if (pos == "adj") {
+    terms = "Adjs";
   }
 
   float allPrecision = (float)nbTermsOk / (float)nbTermsInJaws;
