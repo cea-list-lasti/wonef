@@ -28,6 +28,8 @@ LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfil
     LoaderModule::loadBilingualDic();
     LoaderModule::loadIndex();
   }
+
+  cerr << "... Loaded!" << endl;
 }
 
 
@@ -43,7 +45,7 @@ void LoaderModule::loadIndex() {
     indexFile = infile.replace(infile.rfind("DAT"), 3,"IDX");
   }
 
-  cerr << "Opening "<< indexFile << endl;
+  cerr << "Opening index "<< indexFile << endl;
   ifstream idss(indexFile.c_str(), fstream::in);
   if (idss.fail()) {
     cerr << "Oops, " << indexFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -162,6 +164,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
     infile.replace(infile.rfind("IDX"), 3,"DAT");
   }
 
+  cerr << "Opening data "<< infile << endl;
   ifstream dataIfs(infile.c_str(), fstream::in);
   if (dataIfs.fail()) {
     cerr << "Oops, " << infile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -175,37 +178,40 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
 
   while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {
     WORDNET::WordNetEntry wne;    
-    if (s[0]!=' ') {
+    if (s[0]!=' ') { // not trying to read the license header
       string str = s;
       string synsetId = s.substr(0, s.find(' '));
 
-      stringstream ss;    
-      ss << s;
+      stringstream ss(s);
+
       if (pos == "noun") {
 	ss.ignore(256, 'n') ;
       } else if (pos == "verb") {
 	ss.ignore(256, 'v') ;
       } else if (pos == "adj") {
-        ss.ignore(256, 'a') ;
+        while(ss.peek() != 'a' && ss.peek() != 's') {
+           ss.ignore();
+        }
+        ss.ignore();
       }
       int nbSyns = 0xaa;
       ss >> hex >> nbSyns ;
 
       for (int i = 0; i < nbSyns; i++) {
-	ss.ignore(1, ' ') ;
-	string srcWord;
-	ss >> srcWord;
-	srcWord=srcWord.substr(0, srcWord.find(' '));
-	WORDNET::TgtCandidates candidates = extractCandidates(srcWord);	
-	bool capital = false;
-	if (WNIndex[srcWord].size()==0) {
-	  srcWord = tolower(srcWord);
-	  capital = true;
-	}
+        ss.ignore(1, ' ') ;
+        string srcWord;
+        ss >> srcWord;
+        srcWord=srcWord.substr(0, srcWord.find(' '));
+        WORDNET::TgtCandidates candidates = extractCandidates(srcWord);	
+        bool capital = false;
+        if (WNIndex[srcWord].size()==0) {
+          srcWord = tolower(srcWord);
+          capital = true;
+        }
 
-	WORDNET::TranslationInfos translationInfos;
-	translationInfos.original = srcWord;
-	translationInfos.score = 1;
+        WORDNET::TranslationInfos translationInfos;
+        translationInfos.original = srcWord;
+        translationInfos.score = 1;
 
 	if (WNIndex[srcWord].size()==0) {
 	  cerr << "WARNING : "<<srcWord<<" has no id" << endl;	  
