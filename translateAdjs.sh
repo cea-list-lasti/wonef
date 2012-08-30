@@ -22,6 +22,7 @@ POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.adj'
 # OLDSCHOOL (means I don't care about BCSFILE?)
 #BCSMODE=4
 #BCSFILE='/home/qp230782/Projets/5000_bc.xml'
+GOLD='/data/text/jeanne/Gold/VT_adjectifs.xml'
 
 echo "Translating... $seqsspaces"
 ./translateAdjs Noen $seqsspaces 2>&1 | tee logs/transAdjs$seqs | grep "duration "
@@ -31,10 +32,18 @@ gprof translateAdjs > profiledAdj 2> /dev/null
 WNDATA="data2/data.fr.adjs.Noen$seqs"
 WNBESTDATA="data2/data.fr.adjs.best.Noen$seqs"
 
-echo -e "\n-- Evaluating... --"
+echo -e "\n-- Evaluating with Wolf... --"
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $WNDATA wolf &> logs/evalAdjs$seqs
 echo -e "\n                *** Normal ***"
 tail -25 logs/evalAdjs$seqs
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf &> logs/evalAdjsBest$seqs
 echo -e "\n                *** Best ***"
 tail -25 logs/evalAdjsBest$seqs
+
+echo -e "\n-- Evaluating with Gold... --"
+./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalAdjsG$seqs
+echo -e "\n                *** Normal ***"
+tail -25 logs/evalAdjsG$seqs
+./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalAdjsGBest$seqs
+echo -e "\n                *** Best ***"
+tail -25 logs/evalAdjsGBest$seqs

@@ -2,7 +2,7 @@
 
 WOLF='/home/qp230782/projets/wolf/wolf-0.1.4.xml'
 EWN='/home/qp230782/ressources/wn_fr.ewn '
-GOLD='/data/text/jeanne/veriteTerrain.xml'
+GOLD='/data/text/jeanne/Gold/VT_verbes.xml'
 POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb'
 #BCSMODE=4
 #BCSFILE='/home/qp230782/projets/5000_bc.xml'

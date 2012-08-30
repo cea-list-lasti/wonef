@@ -22,6 +22,7 @@ POLYSEMOUSINDEX='/home/qp230782/Projets/index.polysemous.noun'
 # OLDSCHOOL (means I don't care about BCSFILE?)
 #BCSMODE=4
 #BCSFILE='/home/qp230782/Projets/5000_bc.xml'
+GOLD='/data/text/jeanne/Gold/VT_noms.xml'
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
@@ -32,7 +33,7 @@ gprof translateWN > profiledNoun 2> /dev/null
 WNDATA="data2/data.fr.nouns.wolf.Noen$seqs"
 WNBESTDATA="data2/data.fr.nouns.best.wolf.Noen$seqs"
 
-echo -e "\n-- Evaluating... --"
+echo -e "\n-- Evaluating with Wolf... --"
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNDATA wolf &> logs/evalNouns$seqs
 echo -e "\n                *** Normal ***"
 tail -25 logs/evalNouns$seqs
@@ -40,3 +41,11 @@ tail -25 logs/evalNouns$seqs
 echo -e "\n                *** Best ***"
 tail -25 logs/evalNounsBest$seqs
 
+
+echo -e "\n-- Evaluating with Gold... --"
+./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalNounsG$seqs
+echo -e "\n                *** Normal ***"
+tail -25 logs/evalNounsG$seqs
+./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalNounsGBest$seqs
+echo -e "\n                *** Best ***"
+tail -25 logs/evalNounsGBest$seqs
