@@ -208,6 +208,12 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           srcWord = tolower(srcWord);
           capital = true;
         }
+        /* Adjectives can be of the of the form "bearing(a)", and the last
+         * three characters need to be removed. TODO: what does it mean? can
+         * we use it for translations? */
+        if (pos == "adj" && srcWord[srcWord.size()-1] == ')') {
+          srcWord.resize(srcWord.size()-3);
+        }
 
         WORDNET::TranslationInfos translationInfos;
         translationInfos.original = srcWord;
