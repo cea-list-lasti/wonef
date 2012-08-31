@@ -35,15 +35,15 @@ WNBESTDATA="data2/data.fr.adjs.best.Noen$seqs"
 echo -e "\n-- Evaluating with Wolf... --"
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $WNDATA wolf &> logs/evalAdjs$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalAdjs$seqs
+tail -27 logs/evalAdjs$seqs
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf &> logs/evalAdjsBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalAdjsBest$seqs
+tail -27 logs/evalAdjsBest$seqs
 
 echo -e "\n-- Evaluating with Gold... --"
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalAdjsG$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalAdjsG$seqs
+tail -27 logs/evalAdjsG$seqs
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalAdjsGBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalAdjsGBest$seqs
+tail -27 logs/evalAdjsGBest$seqs

@@ -36,16 +36,16 @@ WNBESTDATA="data2/data.fr.nouns.best.wolf.Noen$seqs"
 echo -e "\n-- Evaluating with Wolf... --"
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNDATA wolf &> logs/evalNouns$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalNouns$seqs
+tail -27 logs/evalNouns$seqs
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $WNBESTDATA wolf &> logs/evalNounsBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalNounsBest$seqs
+tail -27 logs/evalNounsBest$seqs
 
 
 echo -e "\n-- Evaluating with Gold... --"
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalNounsG$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalNounsG$seqs
+tail -27 logs/evalNounsG$seqs
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalNounsGBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalNounsGBest$seqs
+tail -27 logs/evalNounsGBest$seqs
