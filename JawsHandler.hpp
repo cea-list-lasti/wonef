@@ -51,6 +51,14 @@ public :
   uint nbInJawsSynsetInGt;
   uint nbPolyInJawsSynsetInGt;
 
+  /* per-synset average precision */
+  uint nbTermsOkInSynset;
+  uint nbPolyTermsOkInSynset;
+  uint nbTermsInSynset;
+  uint nbPolyTermsInSynset;
+  float totalPercentageTermsOkInSynset;
+  float totalPercentagePolyTermsOkInSynset;
+
 protected :
 
   std::set<std::string> polyLitList;

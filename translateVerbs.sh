@@ -24,15 +24,15 @@ WNBESTDATA="data2/data.fr.verbs.best.Noen$seqs"
 echo -e "\n-- Evaluating with EWN... --"
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNDATA ewn &> logs/evalVerbs$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalVerbs$seqs
+tail -27 logs/evalVerbs$seqs
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $WNBESTDATA ewn &> logs/evalVerbsBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalVerbsBest$seqs
+tail -27 logs/evalVerbsBest$seqs
 
 echo -e "\n-- Evaluating with Gold... --"
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNDATA gold &> logs/evalVerbsG$seqs
 echo -e "\n                *** Normal ***"
-tail -25 logs/evalVerbsG$seqs
+tail -27 logs/evalVerbsG$seqs
 ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalVerbsGBest$seqs
 echo -e "\n                *** Best ***"
-tail -25 logs/evalVerbsGBest$seqs
+tail -27 logs/evalVerbsGBest$seqs

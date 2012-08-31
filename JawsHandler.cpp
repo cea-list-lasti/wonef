@@ -16,6 +16,7 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          nbTermsInGt(0), nbPolyTermsInGt(0),
                          nbTermsOk(0), nbPolyTermsOk(0),
                          nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
+                         totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
                          polyLitList(_polyLitList), polyIdsList(_polyIdsList),
                          vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
                          goldValue(_goldValue),gold (_gold), pos(_pos) {
@@ -48,6 +49,12 @@ void JawsHandler::startElement(const XMLCh *const /*uri*/,
 
   if(_transcode(qname, theTranscoder).compare("SYNSET") == 0) {
     id = getAttrValue(attrs, "id", theTranscoder);
+
+    nbTermsOkInSynset = 0;
+    nbPolyTermsOkInSynset = 0;
+    nbTermsInSynset = 0;
+    nbPolyTermsInSynset = 0;
+
 
   } else if(_transcode(qname, theTranscoder).compare("CANDIDATES") == 0) {
     original = getAttrValue(attrs, "original", theTranscoder);
@@ -85,7 +92,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
    } else if(_transcode(qname, theTranscoder).compare("CANDIDATES") == 0) {
     nbOriginals++;
     if (polyLitList.find(original) != polyLitList.end()) {
-      nbPolyOriginals++;    
+      nbPolyOriginals++;
     }
     original = string();
 
@@ -102,8 +109,10 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     }
     // count terms in Jaws
     nbTermsInJaws++;
+    nbTermsInSynset++;
     if (polysemous) {
       nbPolyTermsInJaws++;
+      nbPolyTermsInSynset++;
     }
 
     // count terms in Jaws which are in synsets translated in GT
@@ -116,8 +125,10 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       // count terms in the same synset in JAWS and GT
       if (vtNetIdIdent[id].find(translation) != vtNetIdIdent[id].end()) {
         nbTermsOk++;
+        nbTermsOkInSynset++;
         if (polysemous == true) {
           nbPolyTermsOk++;
+          nbPolyTermsOkInSynset++;
         }
       }
     }
@@ -132,6 +143,15 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     if (jawsNetIdIdent[id].size() > 0) {
       nbJawsSynsets++;
       transInJaws = true;
+    }
+
+    if (vtNetIdIdent[id].size() > 0) {
+      if (nbTermsInSynset > 0) {
+        totalPercentageTermsOkInSynset += 1.0 * nbTermsOkInSynset / nbTermsInSynset;
+      }
+      if (nbPolyTermsInSynset > 0) {
+        totalPercentagePolyTermsOkInSynset += 1.0 * nbPolyTermsOkInSynset / nbPolyTermsInSynset;
+      }
     }
 
     // count terms in GT
@@ -271,8 +291,10 @@ void JawsHandler::endDocument() {
 
   float allPrecision = (float)nbTermsOk / (float)nbTermsInJaws;
   float allPseudoPrec = (float)nbTermsOk / (float)nbInJawsSynsetInGt;
+  float averagePseudoPrec = totalPercentageTermsOkInSynset / nbInJawsSynsetInGt;
   float polyPrecision = (float)nbPolyTermsOk / (float)nbPolyTermsInJaws;
   float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInGt;
+  float averagePolyPseudoPrec = totalPercentagePolyTermsOkInSynset / nbPolyInJawsSynsetInGt;
   float allRecGt = (float)nbTermsOk / (float)nbTermsInGt;
   float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGt;
   float allF1 = 2*(allPseudoPrec * allRecGt) / (allPseudoPrec + allRecGt);
@@ -294,6 +316,7 @@ void JawsHandler::endDocument() {
 
   cout << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
   cout << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
+  cout << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << endl;
   cout << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
   cout << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
@@ -306,6 +329,7 @@ void JawsHandler::endDocument() {
 
   cout << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
   cout << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
+  cout << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << endl;
   cout << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
   cout << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
