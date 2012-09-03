@@ -100,7 +100,7 @@ pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<st
     getline(knnIfs, knns);
     knnIfs.close();
 
-    size_t bestDist = SIZE_MAX;
+    int bestDist = INT_MAX;
     pair<string, size_t> syn;
     syn.first = "";
     for (map<string,int>::iterator it2 = cand.begin(); it2!=cand.end(); it2++) {
@@ -115,17 +115,31 @@ pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<st
 
       size_t dist = knns.find(sssearch.str());
       if (dist!=string::npos) {
-        pair<string, float> candidate;
-        candidate.first = it2->first;
-        candidate.second = dist;
-        votes[candidate] += it2->second;
-        if(dist < bestDist && dist > 0) {
-          bestDist = dist;
-          syn = candidate;
+        // find out the actual distance
+        std::string::const_iterator start, end;
+        start = knns.begin() + dist;
+        end = knns.end();
+        boost::match_results<std::string::const_iterator> what;
+
+        int semantic_distance;
+        if (boost::regex_search(start, end, what, boost::regex("[0-9]+"))) {
+          stringstream(what[0].str()) >> semantic_distance;
+
+          pair<string, float> candidate;
+          candidate.first = it2->first;
+          candidate.second = semantic_distance;
+          votes[candidate] += it2->second;
+          if(semantic_distance < bestDist && semantic_distance > 0) {
+            bestDist = semantic_distance;
+            syn = candidate;
+          }
+        } else {
+          std::cerr << "regex failed for " << knnFile << " and " << sssearch << std::endl;
+          exit(0);
         }
       }
     }
-   // TODO:  ponderate score with proximity
+    // TODO:  ponderate score with proximity
     votes[syn]++;
   }
 
