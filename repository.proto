@@ -9,5 +9,3 @@ message Repository {
 
     repeated Word word = 2;
 }
-
-    

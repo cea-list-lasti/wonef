@@ -41,6 +41,7 @@
 #define ADJS_LIST_F "/data/text/FrameNetLUI/externals/POSlist/adjectifs.filtered.list"
 
 #define KNNSTDFILE "/data/text/FastKNN/knnall/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt"
+#define KNNSTDDIR "/data/text/FastKNN/knnall/"
 
 #define WORDS_IDS "/data/text/FastKNN/Ressources/SemMap/words.ids"
 
@@ -63,5 +64,7 @@
 
 #define MAPVERB20_15 "/data/text/jeanne/mappings-upc-2007/mapping-20-15/wn20-15.verb"
 #define MAPVERB15_20 "/data/text/jeanne/mappings-upc-2007/mapping-15-20/wn15-20.verb"
+
+#define KNNPROTOFILE "/tmp/protobuf/knndists_"
 
 #endif
