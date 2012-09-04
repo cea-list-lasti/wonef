@@ -1,6 +1,7 @@
 #include "TypeRoler.hpp"
 
 #include "repository.pb.h"
+#include <google/protobuf/io/zero_copy_stream_impl.h>
 
 #include <algorithm>
 #include <cassert>
@@ -79,7 +80,15 @@ void TypeRoler::readRepository(std::string protofile, std::string relation) {
   std::cout << "Reading protobuf " << protofile << "!" << std::endl;
   Repository repositoryFile;
   fstream in(protofile.c_str(), ios::in | ios::binary);
-  if (!repositoryFile.ParseFromIstream(&in)) {
+
+  /* Since protocol buffers for HyperHypo can be very large (window10 is around
+   * 550MB), we need to work-around Google's 64MB limit by doing more work than
+   * ParseFromIStream */
+  int fd = open(protofile.c_str(), O_RDONLY);
+  google::protobuf::io::ZeroCopyInputStream* raw_input = new google::protobuf::io::FileInputStream(fd);
+  google::protobuf::io::CodedInputStream* coded_input = new google::protobuf::io::CodedInputStream(raw_input);
+  coded_input->SetTotalBytesLimit(600*1024*1024, 550*1024*1024);
+  if (!repositoryFile.ParseFromCodedStream(coded_input)) {
     std::cerr << "Failed to parse " << protofile << std::endl;
     exit(1);
   }
