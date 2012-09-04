@@ -29,6 +29,9 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
       cerr << "Oops, " << dataFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
       exit(-1);
     }
+
+    std::cout << "note: computing the typeroler cache, next run will be faster." << std::endl;
+
     string s;
     while (getline(idss, s) ) {
       stringstream ss;
@@ -46,7 +49,6 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
       }
     }
     idss.close();
-    cout << "end load repository" << endl;
 
     writeRepository(protofile, relation);
   }

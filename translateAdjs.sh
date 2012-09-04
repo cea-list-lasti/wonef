@@ -25,7 +25,7 @@ POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.adj'
 GOLD='/data/text/jeanne/Gold/VT_adjectifs.xml'
 
 echo "Translating... $seqsspaces"
-./translateAdjs Noen $seqsspaces 2>&1 | tee logs/transAdjs$seqs | grep "duration "
+./translateAdjs Noen $seqsspaces 2>&1 | tee logs/transAdjs$seqs | egrep "duration|note"
 gprof translateAdjs > profiledAdj 2> /dev/null
 
 # The produced file needs some fixes before evaluation

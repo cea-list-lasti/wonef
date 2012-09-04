@@ -26,7 +26,7 @@ GOLD='/data/text/jeanne/Gold/VT_noms.xml'
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translateWN WOLF Noen $seqsspaces 2>&1 | tee logs/transNouns$seqs | grep duration
+./translateWN WOLF Noen $seqsspaces 2>&1 | tee logs/transNouns$seqs | egrep "duration|note"
 gprof translateWN > profiledNoun 2> /dev/null
 
 # The produced file needs some fixes before evaluation

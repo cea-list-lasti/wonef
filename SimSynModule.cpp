@@ -249,6 +249,7 @@ void SimSynModule::loadKnnDistsCache() {
     if (ifstream(protofile.c_str(), std::ios::in).good()) {
       readProtobuf(relation);
     } else {
+      std::cout << "note: computing the simsyn cache, next run will be faster." << std::endl;
       buildRelationCache(relation);
       writeProtobuf(relation);
     }
