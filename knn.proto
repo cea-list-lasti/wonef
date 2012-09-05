@@ -1,0 +1,11 @@
+message KnnDists {
+  required string relation = 1;
+  message Word {
+    required string word = 1;
+    repeated string related = 2;
+    repeated int32 distance = 3 [packed=true];
+  }
+
+  repeated Word word = 2;
+}
+
