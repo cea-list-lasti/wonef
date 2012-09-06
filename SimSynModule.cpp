@@ -56,6 +56,13 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
 
   unsigned int i = 0;
   size_t electionThreshold = 1000;
+  // TODO need to learn again when more data available and the algorithm is fixed.
+  if (pos == "verb") {
+    electionThreshold = 6006;
+  } else if (pos == "noun") {
+    electionThreshold = 7273;
+  }
+
   set<pair<string, size_t> > elected;
 
   while ((elected.empty() || elected.begin()->second >= electionThreshold) && i < rels.size()) {
