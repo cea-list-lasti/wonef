@@ -34,6 +34,10 @@ private :
   void loadIndex();
   //  string tolower(string str);
   void loadPOSList(string posFile);
+
+  void addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,
+    const std::string& processed, const std::string& translation,
+    const std::string& original, int score);
 };
 
 

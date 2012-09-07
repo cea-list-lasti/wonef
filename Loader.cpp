@@ -221,10 +221,6 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           srcWord.resize(srcWord.size()-3);
         }
 
-        WORDNET::TranslationInfos translationInfos;
-        translationInfos.original = srcWord;
-        translationInfos.score = 1;
-
         if (WNIndex[srcWord].size()==0) {
           cerr << "WARNING : "<<srcWord<<" has no id" << endl;
         } else if (WNIndex[srcWord].size()==1) {
@@ -232,11 +228,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
            * translation is correct since monosemous */
           wne.frenchCandidates[srcWord] = candidates;
           for (std::map<std::string, int>::iterator it = candidates.cand.begin(); it != candidates.cand.end(); it++) {
-            if (wne.frenchSynset.find(it->first)==wne.frenchSynset.end()) {
-              wne.frenchSynset[it->first]=set<WORDNET::TranslationInfos>();
-            }
-            translationInfos.processed = "monosemous";
-            wne.frenchSynset[it->first].insert(translationInfos);
+            addInstance(wne.frenchSynset, "monosemous", it->first, srcWord, 1);
             wne.newdef=tgt2TgtDefs[it->first];
           }
 
@@ -249,11 +241,8 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
             case 0 :
               wne.frenchCandidates[srcWord]= candidates;
               if (!noen || capital) {
-                if (wne.frenchSynset.find(srcWord)==wne.frenchSynset.end()) {
-                  wne.frenchSynset[srcWord]=set<WORDNET::TranslationInfos>();
-                }
-                translationInfos.processed = "notranslation";
-                wne.frenchSynset[srcWord].insert(translationInfos);
+                // original == translation here.
+                addInstance(wne.frenchSynset, "notranslation", srcWord, srcWord, 1);
               }
               wne.newdef=tgt2TgtDefs[srcWord];
               if (verbose) {
@@ -265,11 +254,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
              * TODO: is this really helpful? for all part-of-speech? */
             case 1 :
               wne.frenchCandidates[srcWord]=candidates;
-              if (wne.frenchSynset.find(candidates.cand.begin()->first)==wne.frenchSynset.end()) {
-                wne.frenchSynset[candidates.cand.begin()->first]=set<WORDNET::TranslationInfos>();
-              }
-              translationInfos.processed = "uniq";
-              wne.frenchSynset[candidates.cand.begin()->first].insert(translationInfos);
+              addInstance(wne.frenchSynset, "uniq", candidates.cand.begin()->first, srcWord, 1);
 
               wne.newdef=tgt2TgtDefs[candidates.cand.begin()->first];
               if (verbose) {
@@ -349,16 +334,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
       BOOST_FOREACH(count_t& count, englishCount) {
         if(count.second.size() > 1) {
           BOOST_FOREACH(const std::string& srcWord, count.second) {
-            if (wne.frenchSynset.find(count.first)==wne.frenchSynset.end()) {
-              wne.frenchSynset[count.first]=set<WORDNET::TranslationInfos>();
-            }
-            WORDNET::TranslationInfos translationInfos;
-            translationInfos.original = srcWord;
-            // since we're going to have one INSTANCE per english word, score is one.
-            // otherwise, count.second.size() would be fine.
-            translationInfos.score = 1;
-            translationInfos.processed = "multiplesource";
-            wne.frenchSynset[count.first].insert(translationInfos);
+            addInstance(wne.frenchSynset, "multiplesource", count.first, srcWord, 1);
           }
         }
       }
@@ -377,4 +353,18 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
   return wn;
 }
 
+void LoaderModule::addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,
+  const std::string& processed, const std::string& translation,
+  const std::string& original, int score) {
 
+  WORDNET::TranslationInfos translationInfos;
+  translationInfos.original = original;
+  translationInfos.score = score;
+  translationInfos.processed = processed;
+
+  if (frenchSynset.find(translation) == frenchSynset.end()) {
+    frenchSynset[translation] = set<WORDNET::TranslationInfos>();
+  }
+
+  frenchSynset[translation].insert(translationInfos);
+}
