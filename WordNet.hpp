@@ -25,7 +25,7 @@ struct TranslationInfos {
   TranslationInfos(std::string _original, std::string _processed, float _score) :
     original(_original), processed(_processed), score(_score) { }
   bool operator< (const TranslationInfos& that ) const {
-    // sort by score  
+    // sort by score
     return this->score < that.score || this->original < that.original || this->processed < that.processed;
   }
 };

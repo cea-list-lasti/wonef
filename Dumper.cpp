@@ -67,6 +67,7 @@ void DumperModule::printData(WORDNET::WordNet& wn) {
       }
       ofs << "\t\t</CANDIDATES>" <<endl; 
     }  
+    std::cerr << "for synset id " << itwn->first << ", we have " << itwn->second.frenchSynset.size() << " instances!"<< std::endl;
     for (map<string, std::set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
       //  ofs << "\t\t<INSTANCE original=\""<<itwne->second<<"\">" << itwne->first << "</INSTANCE>" <<endl;
       ofs << "\t\t<INSTANCES translation=\"" << itwne->first << "\">" << endl;

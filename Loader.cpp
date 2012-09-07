@@ -3,7 +3,8 @@
 #include "Tools.hpp"
 #include "../src/tools.h"
 #include <iostream>
-#include "boost/regex.hpp"
+#include <boost/regex.hpp>
+#include <boost/foreach.hpp>
 
 #include <cstdlib>
 
@@ -194,6 +195,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
         }
         ss.ignore();
       }
+      // read nbSyns as an hexadecimal number
       int nbSyns = 0xaa;
       ss >> hex >> nbSyns ;
 
@@ -209,8 +211,12 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           capital = true;
         }
         /* Adjectives can be of the of the form "bearing(a)", and the last
-         * three characters need to be removed. TODO: what does it mean? can
-         * we use it for translations? */
+         * three characters need to be removed.
+         *
+         * According to http://vicki.intra.cea.fr/dokuwiki/doku.php?id=lic2m:analyse_semantique#specificites_des_adjectifs
+         * this only means prepositional/postpositional adjective and is not
+         * expected to be useful for our translation purpose.
+         */
         if (pos == "adj" && srcWord[srcWord.size()-1] == ')') {
           srcWord.resize(srcWord.size()-3);
         }
@@ -222,68 +228,58 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
         if (WNIndex[srcWord].size()==0) {
           cerr << "WARNING : "<<srcWord<<" has no id" << endl;
         } else if (WNIndex[srcWord].size()==1) {
-          //	  wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
-          wne.frenchCandidates[srcWord]= candidates;
+          /* If this word only appears in one synset, let's assume the
+           * translation is correct since monosemous */
+          wne.frenchCandidates[srcWord] = candidates;
           for (std::map<std::string, int>::iterator it = candidates.cand.begin(); it != candidates.cand.end(); it++) {
             if (wne.frenchSynset.find(it->first)==wne.frenchSynset.end()) {
               wne.frenchSynset[it->first]=set<WORDNET::TranslationInfos>();
             }
             translationInfos.processed = "monosemous";
             wne.frenchSynset[it->first].insert(translationInfos);
-            //wne.frenchSynset.insert(pair<string, string>(it->first, srcWord));
             wne.newdef=tgt2TgtDefs[it->first];
           }
 
         } else {
           string longest = "";
           switch (candidates.cand.size()) {
+
+            /* There is no translation for this word, maybe use the english
+             * word. TODO: is this helpful for verbs and adjectives too? */
             case 0 :
               wne.frenchCandidates[srcWord]= candidates;
-              //	    wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
               if (!noen || capital) {
                 if (wne.frenchSynset.find(srcWord)==wne.frenchSynset.end()) {
                   wne.frenchSynset[srcWord]=set<WORDNET::TranslationInfos>();
                 }
                 translationInfos.processed = "notranslation";
                 wne.frenchSynset[srcWord].insert(translationInfos);
-                //wne.frenchSynset.insert(pair<string, string>(srcWord, srcWord));
               }
               wne.newdef=tgt2TgtDefs[srcWord];
               if (verbose) {
                 cerr << "NEWDEF : " << tgt2TgtDefs[tolower(srcWord)] << endl;
               }
               break;
+
+            /* If there's only one possible translation in this synset, choose it.
+             * TODO: is this really helpful? for all part-of-speech? */
             case 1 :
               wne.frenchCandidates[srcWord]=candidates;
-              /*
-                 if (srcWord.length() <=2 ) {
-                 wne.frenchCandidates[srcWord].cand.clear();
-                 }
-               */
               if (wne.frenchSynset.find(candidates.cand.begin()->first)==wne.frenchSynset.end()) {
                 wne.frenchSynset[candidates.cand.begin()->first]=set<WORDNET::TranslationInfos>();
               }
               translationInfos.processed = "uniq";
               wne.frenchSynset[candidates.cand.begin()->first].insert(translationInfos);
-              //wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
-              //	      wne.frenchSynset.insert(pair<string, string>(candidates.cand.begin()->first, srcWord));
-
 
               wne.newdef=tgt2TgtDefs[candidates.cand.begin()->first];
               if (verbose) {
                 cerr << "NEWDEF : " << tgt2TgtDefs[tolower(candidates.cand.begin()->first)] << endl;
               }
               break;
+
+            /* OK so what is this? */
             case 2 :
-
               wne.frenchCandidates[srcWord]= candidates;
-              /*
-                 if (srcWord.length() <=2 ) {
-                 wne.frenchCandidates[srcWord].cand.clear();
-                 }
-               */
-              //	      wne.frenchCandidates.insert(pair<string, WORDNET::TgtCandidates>(srcWord, candidates));
-
               // promote more specific terms
               if (candidates.cand.begin()->first.find(candidates.cand.rbegin()->first)!=string::npos
                   && ((*candidates.cand.rbegin()).first.length() - (*candidates.cand.begin()).first.length() > 2 )) {
@@ -300,17 +296,11 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
               }
 
 
+            /* Use Levenshtein distance to promote true and false friends. Why no "processed"? */
             default :
               if (wne.frenchCandidates[srcWord].cand.size()==0 ) {
-                wne.frenchCandidates[srcWord]= candidates;
+                wne.frenchCandidates[srcWord] = candidates;
               }
-              /*
-                 if (srcWord.length() <=2 ) {
-                 wne.frenchCandidates[srcWord].cand.clear();
-                 }
-               */
-              //	      wne.frenchCandidates.insert(make_pair(srcWord, candidates));
-
 
               // promote true (and false) fr/en friends
               for (map<string, int>::iterator itCand = candidates.cand.begin(); itCand!=candidates.cand.end(); itCand++) {
@@ -335,6 +325,42 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
         ss.ignore(1, ' ') ;
         ss.ignore(1, '0') ;
 
+      }
+
+      /* For this synset, we read every possible verb and its candidate
+       * translations. We can now look at repeated translations (eg. two
+       * english verbs give the same french word) and add them to our list.
+       *
+       * The plan is to build something like an inverted index and to see which
+       * french word lead to multiple english words */
+      std::map<std::string, std::set<std::string> > englishCount;
+
+      typedef std::pair<const std::string, int> cand_t;
+      typedef std::pair<const string, WORDNET::TgtCandidates> candidate_t;
+
+      BOOST_FOREACH(candidate_t& candidate, wne.frenchCandidates) {
+        BOOST_FOREACH(cand_t& cand, candidate.second.cand) {
+            englishCount[cand.first].insert(candidate.first);
+        }
+      }
+
+      typedef std::pair<const std::string, std::set<std::string> > count_t;
+
+      BOOST_FOREACH(count_t& count, englishCount) {
+        if(count.second.size() > 1) {
+          BOOST_FOREACH(const std::string& srcWord, count.second) {
+            if (wne.frenchSynset.find(count.first)==wne.frenchSynset.end()) {
+              wne.frenchSynset[count.first]=set<WORDNET::TranslationInfos>();
+            }
+            WORDNET::TranslationInfos translationInfos;
+            translationInfos.original = srcWord;
+            // since we're going to have one INSTANCE per english word, score is one.
+            // otherwise, count.second.size() would be fine.
+            translationInfos.score = 1;
+            translationInfos.processed = "multiplesource";
+            wne.frenchSynset[count.first].insert(translationInfos);
+          }
+        }
       }
 
       char buff[2048];
