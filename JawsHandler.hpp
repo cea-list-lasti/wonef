@@ -46,6 +46,9 @@ public :
   uint nbPolyTermsInJaws;
   uint nbTermsInGt;
   uint nbPolyTermsInGt;
+  // useful for recall: terms in GT, but only in a non-empty JAWS synset
+  uint nbTermsInGtAndAJawsSynset;
+  uint nbPolyTermsInGtAndAJawsSynset;
   uint nbTermsOk;
   uint nbPolyTermsOk;
   uint nbInJawsSynsetInGt;

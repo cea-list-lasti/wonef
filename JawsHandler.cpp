@@ -14,6 +14,7 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          nbOriginals(0), nbPolyOriginals(0),
                          nbTermsInJaws(0), nbPolyTermsInJaws(0),
                          nbTermsInGt(0), nbPolyTermsInGt(0),
+                         nbTermsInGtAndAJawsSynset(0), nbPolyTermsInGtAndAJawsSynset(0),
                          nbTermsOk(0), nbPolyTermsOk(0),
                          nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
                          totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
@@ -160,9 +161,15 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       for (std::set<std::string>::iterator itGtTerm = vtNetIdIdent[id].begin();
            itGtTerm != vtNetIdIdent[id].end(); itGtTerm++) {
         nbTermsInGt++;
+        if (transInJaws) {
+          nbTermsInGtAndAJawsSynset++;
+        }
         transInGt = true;
         if (polyIdsList.find(id) != polyIdsList.end()) {
           nbPolyTermsInGt++;
+          if (transInJaws) {
+            nbPolyTermsInGtAndAJawsSynset++;
+          }
         }
       }
     }
@@ -295,8 +302,8 @@ void JawsHandler::endDocument() {
   float polyPrecision = (float)nbPolyTermsOk / (float)nbPolyTermsInJaws;
   float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInGt;
   float averagePolyPseudoPrec = totalPercentagePolyTermsOkInSynset / nbPolyInJawsSynsetInGt;
-  float allRecGt = (float)nbTermsOk / (float)nbTermsInGt;
-  float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGt;
+  float allRecGt = (float)nbTermsOk / (float)nbTermsInGtAndAJawsSynset;
+  float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGtAndAJawsSynset;
   float allF1 = 2*(allPseudoPrec * allRecGt) / (allPseudoPrec + allRecGt);
   float polyF1 = 2*(polyPseudoPrec * polyRecGt) / (polyPseudoPrec + polyRecGt);
   float coverageWN = (float)nbTermsInJaws / (float)nbOriginals;
@@ -315,8 +322,8 @@ void JawsHandler::endDocument() {
   cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << endl;
 
   cout << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
-  cout << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
   cout << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << endl;
+  cout << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
   cout << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
   cout << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
@@ -328,8 +335,8 @@ void JawsHandler::endDocument() {
   cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << endl;
 
   cout << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
-  cout << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
   cout << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << endl;
+  cout << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
   cout << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
   cout << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
   cout << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
