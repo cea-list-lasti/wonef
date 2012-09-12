@@ -204,12 +204,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
         string srcWord;
         ss >> srcWord;
         srcWord=srcWord.substr(0, srcWord.find(' '));
-        WORDNET::TgtCandidates candidates = extractCandidates(srcWord);
-        bool capital = false;
-        if (WNIndex[srcWord].size()==0) {
-          srcWord = tolower(srcWord);
-          capital = true;
-        }
+
         /* Adjectives can be of the of the form "bearing(a)", and the last
          * three characters need to be removed.
          *
@@ -223,6 +218,12 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           srcWord.resize(srcWord.size() - toremove);
         }
 
+        WORDNET::TgtCandidates candidates = extractCandidates(srcWord);
+        bool capital = false;
+        if (WNIndex[srcWord].size()==0) {
+          srcWord = tolower(srcWord);
+          capital = true;
+        }
         if (WNIndex[srcWord].size()==0) {
           cerr << "WARNING : "<<srcWord<<" has no id" << endl;
         } else if (WNIndex[srcWord].size()==1) {
