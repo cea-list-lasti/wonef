@@ -218,7 +218,9 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
          * expected to be useful for our translation purpose.
          */
         if (pos == "adj" && srcWord[srcWord.size()-1] == ')') {
-          srcWord.resize(srcWord.size()-3);
+          // we need to account for "adj(a)", "adj(p)" and "adj(ip)"
+          int toremove = srcWord[srcWord.size()-3] == '(' ? 3 : 4;
+          srcWord.resize(srcWord.size() - toremove);
         }
 
         if (WNIndex[srcWord].size()==0) {
