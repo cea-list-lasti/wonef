@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WOLF='/home/qp230782/projets/wolf/wolf-0.1.4.xml'
-EWN='/home/qp230782/ressources/wn_fr.ewn '
+EWN='/home/qp230782/ressources/wn_fr.ewn.utf8'
 GOLD='/data/text/jeanne/Gold/VT_verbes.xml'
 POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb'
 #BCSMODE=4

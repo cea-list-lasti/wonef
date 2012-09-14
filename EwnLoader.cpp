@@ -68,6 +68,10 @@ void EwnLoader::load () {
         case 2 :
           if (string(what[2].first,what[2].second).compare("LITERAL")==0) {
             literal = string(what[4].first,what[4].second);
+            // we want "se gonfler" to appear as "se_gonfler" to be able to compare with JAWS
+            if (boost::starts_with(literal, "se ")) {
+              literal[2] = '_';
+            }
             //	  cerr << "TEST LITERAL " << literal << "\n";
           }
           break;
