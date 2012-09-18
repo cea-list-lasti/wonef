@@ -321,6 +321,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
        *
        * The plan is to build something like an inverted index and to see which
        * french word lead to multiple english words */
+#if 0
       std::map<std::string, std::set<std::string> > englishCount;
 
       typedef std::pair<const std::string, int> cand_t;
@@ -341,6 +342,7 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           }
         }
       }
+#endif
 
       char buff[2048];
       ss.getline( buff, 2048);
