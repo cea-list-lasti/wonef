@@ -6,8 +6,12 @@
 #
 # Once finished, interesting files are:
 #  * data2/data.fr.nouns.wolf.nouns.Noen1234 (it's JAWS!)
-#  * logs/trans1234
-#  * logs/eval1234 (end of file contains results)
+#  * logs/transNouns1234
+#  * various evaluation files (end of file contains results):
+#    * logs/evalNouns1234      # WOLF / normal
+#    * logs/evalNounsG1234     # WOLF / best
+#    * logs/evalNounsBest1234  # gold / normal
+#    * logs/evalNounsGBest1234 # gold / best
 
 # Reusing our above example, seqspaces will be "1 2 3 4" and seqs will be
 # "1234". Having $seqs is useful for filenames, while seqspaces is used to
@@ -15,6 +19,9 @@
 seqsspaces=$*
 seqs=${seqsspaces// /}
 
+# Store the time of launch for archives
+day=`date +%Y_%B_%d`
+time=`date +%H_%M_%S`
 
 WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
 # This is simply index.noun without the monosemous nouns
@@ -29,7 +36,7 @@ echo "Translating... $seqsspaces"
 ./translateWN WOLF Noen $seqsspaces 2>&1 | tee logs/transNouns$seqs | egrep "duration|note"
 gprof translateWN > profiledNoun 2> /dev/null
 
-# The produced file needs some fixes before evaluation
+# The produced files
 WNDATA="data2/data.fr.nouns.wolf.Noen$seqs"
 WNBESTDATA="data2/data.fr.nouns.best.wolf.Noen$seqs"
 
@@ -49,3 +56,22 @@ tail -27 logs/evalNounsG$seqs
 ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalNounsGBest$seqs
 echo -e "\n                *** Best ***"
 tail -27 logs/evalNounsGBest$seqs
+
+# Archive relevant files to our archive.
+echo -e "Finished! Archiving..."
+tmpsubdir="Nouns__${day}__${time}"
+tmppath=/tmp/$tmpsubdir
+archivedir=/data/text/quentin/archives/$day/
+
+echo $tmpsubdir $tmppath $archivedir
+mkdir -p $tmppath
+mkdir -p $archivedir
+
+cp logs/transNouns$seqs $tmppath
+cp logs/evalNouns$seqs logs/evalNounsBest$seqs logs/evalNounsG$seqs logs/evalNounsGBest$seqs $tmppath
+cp $WNDATA $WNBESTDATA $tmppath
+
+pushd /tmp
+  tar cjf $archivedir/Nouns__$time.tar.bz2 $tmpsubdir
+  rm -rf $tmpsubdir
+popd

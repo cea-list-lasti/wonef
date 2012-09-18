@@ -2,12 +2,16 @@
 
 # Usage
 # The parameters specify which iterations should be run. For example, with
-# ./translateNouns.sh 1 2 3 4, iterations 1 2 3 4 will be launched.
+# ./translateAdjs.sh 1 2 3 4, iterations 1 2 3 4 will be launched.
 #
 # Once finished, interesting files are:
-#  * data2/data.fr.nouns.wolf.nouns.Noen1234 (it's JAWS!)
-#  * logs/trans1234
-#  * logs/eval1234 (end of file contains results)
+#  * data2/data.fr.adjs.wolf.nouns.Noen1234 (it's JAWS!)
+#  * logs/transAdjs1234
+#  * various evaluation files (end of file contains results):
+#    * logs/evalAdjs1234      # WOLF / normal
+#    * logs/evalAdjsG1234     # WOLF / best
+#    * logs/evalAdjsBest1234  # gold / normal
+#    * logs/evalAdjsGBest1234 # gold / best
 
 # Reusing our above example, seqspaces will be "1 2 3 4" and seqs will be
 # "1234". Having $seqs is useful for filenames, while seqspaces is used to
@@ -15,6 +19,9 @@
 seqsspaces=$*
 seqs=${seqsspaces// /}
 
+# Store the time of launch for archives
+day=`date +%Y_%B_%d`
+time=`date +%H_%M_%S`
 
 WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
 # This is simply index.noun without the monosemous nouns
@@ -47,3 +54,22 @@ tail -27 logs/evalAdjsG$seqs
 ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLD $WNBESTDATA gold &> logs/evalAdjsGBest$seqs
 echo -e "\n                *** Best ***"
 tail -27 logs/evalAdjsGBest$seqs
+
+# Archive relevant files to our archive.
+echo -e "Finished! Archiving..."
+tmpsubdir="Adjs__${day}__${time}"
+tmppath=/tmp/$tmpsubdir
+archivedir=/data/text/quentin/archives/$day/
+
+echo $tmpsubdir $tmppath $archivedir
+mkdir -p $tmppath
+mkdir -p $archivedir
+
+cp logs/transAdjs$seqs $tmppath
+cp logs/evalAdjs$seqs logs/evalAdjsBest$seqs logs/evalAdjsG$seqs logs/evalAdjsGBest$seqs $tmppath
+cp $WNDATA $WNBESTDATA $tmppath
+
+pushd /tmp
+tar cjf $archivedir/Adjs__$time.tar.bz2 $tmpsubdir
+  rm -rf $tmpsubdir
+popd
