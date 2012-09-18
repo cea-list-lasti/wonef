@@ -55,17 +55,17 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
   pair<string, WORDNET::TgtCandidates> candidate) {
 
   unsigned int i = 0;
-  size_t electionThreshold = 0;
+  size_t maximumValue = 0;
   // TODO need to learn again when more data available and the algorithm is fixed.
   if (pos == "verb") {
-    electionThreshold = 6006;
+    maximumValue = 6006;
   } else if (pos == "noun") {
-    electionThreshold = 7273;
+    maximumValue = 7273;
   }
 
   set<pair<string, size_t> > elected;
 
-  while ((elected.empty() || elected.begin()->second >= electionThreshold) && i < rels.size()) {
+  while ((elected.empty() || elected.begin()->second >= maximumValue) && i < rels.size()) {
     pair<string, size_t> elec = selectTgtWord(candidate.second.cand, candidate.second.verbCand, synset.frenchSynset, rels[i]);
     if (elec.first != "") {
       // First time, "elected" is empty.
@@ -84,7 +84,7 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
       translationInfos.original = candidate.first;
       translationInfos.processed = "simsyn" + suffix;
       translationInfos.score = itElec->second;
-      if (translationInfos.score < electionThreshold) {
+      if (translationInfos.score < maximumValue) {
         synset.frenchSynset[itElec->first].insert(translationInfos);
       }
       synset.frenchScore[itElec->first].insert(translationInfos);
