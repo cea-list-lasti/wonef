@@ -42,34 +42,36 @@ echo '</JAWS>' >> $ADDPART
 echo "Evaluating additional part ..."
 
 WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
-EWN='/home/qp230782/ressources/wn_fr.ewn '
+EWN='/home/qp230782/ressources/wn_fr.ewn.utf8'
 GOLDV='/data/text/jeanne/Gold/VT_verbes.xml'
 GOLDA='/data/text/jeanne/Gold/VT_adjectifs.xml'
 GOLDN='/data/text/jeanne/Gold/VT_noms.xml'
-POLYSEMOUSINDEX='/home/baguenierj/Projets/index.polysemous.verb'
+POLYSEMOUSINDEXN='/home/qp230782/Projets/index.polysemous.noun'
+POLYSEMOUSINDEXA='/home/baguenierj/Projets/index.polysemous.adj'
+POLYSEMOUSINDEXV='/home/baguenierj/Projets/index.polysemous.verb'
 BCSMODE=4
 BCSFILE='/home/qp230782/projets/5000_bc.xml'
 
 if [ "$pos" = "N" ]
 then
-  ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalNouns_$module
+  ./evalJAWS-WOLF noun $POLYSEMOUSINDEXN $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalNouns_$module
   tail -27 logs/evalNouns_$module
   echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF noun $POLYSEMOUSINDEX $GOLDN $ADDPART gold &> logs/evalNounsG_$module
+  ./evalJAWS-WOLF noun $POLYSEMOUSINDEXN $GOLDN $ADDPART gold &> logs/evalNounsG_$module
   tail -27 logs/evalNounsG_$module
 elif [ "$pos" = "A" ]
 then
-  ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalAdjs_$module
+  ./evalJAWS-WOLF adj $POLYSEMOUSINDEXA $WOLF $ADDPART wolf $BCSMODE $BCSFILE &> logs/evalAdjs_$module
   tail -27 logs/evalAdjs_$module
   echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF adj $POLYSEMOUSINDEX $GOLDA $ADDPART gold &> logs/evalAdjsG_$module
+  ./evalJAWS-WOLF adj $POLYSEMOUSINDEXA $GOLDA $ADDPART gold &> logs/evalAdjsG_$module
   tail -27 logs/evalAdjsG_$module
 elif [ "$pos" = "V" ]
 then
-  ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $EWN $ADDPART ewn $BCSMODE $BCSFILE &> logs/evalVerbs_$module
+  ./evalJAWS-WOLF verb $POLYSEMOUSINDEXV $EWN $ADDPART ewn $BCSMODE $BCSFILE &> logs/evalVerbs_$module
   tail -27 logs/evalVerbs_$module
   echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF verb $POLYSEMOUSINDEX $GOLDV $ADDPART gold &> logs/evalVerbsG_$module
+  ./evalJAWS-WOLF verb $POLYSEMOUSINDEXV $GOLDV $ADDPART gold &> logs/evalVerbsG_$module
   tail -27 logs/evalVerbsG_$module
 else
   echo "Precise the POS to evaluate"
