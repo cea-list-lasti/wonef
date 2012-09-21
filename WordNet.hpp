@@ -15,6 +15,7 @@ typedef struct TgtCandidates {
   // ex: verbCand["s'étrangler"] = "étrangler"
   std::map<std::string, std::string> verbCand;
   std::string formerElected;
+  bool capital; // true if the english word is capitalized in WordNet
 } TgtCandidates;
 
 struct TranslationInfos {

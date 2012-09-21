@@ -1,10 +1,9 @@
 #include "Loader.hpp"
-#include "distance.hpp"
 #include "Tools.hpp"
-#include "../src/tools.h"
 #include <iostream>
+#include <fstream>
 #include <boost/regex.hpp>
-#include <boost/foreach.hpp>
+#include <cassert>
 
 #include <cstdlib>
 
@@ -12,31 +11,20 @@ using namespace std;
 
 
 set<string> LoaderModule::posList;
-map<string, string> LoaderModule::desaxData;
 map<string, string> LoaderModule::tgt2TgtDefs;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
 LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfile, string _pos, bool _noen) :
-  pos(_pos), noen(_noen) {
-    infile = _infile;
-    dicfiles = _dicfiles;
+  pos(_pos), noen(_noen), dicfiles(_dicfiles), infile(_infile) {
     cerr << "Loading...  " << endl;
-
-    if(desaxData.size()==0) {
-      initDesax(desaxData) ;
-      LoaderModule::loadPOSList(posfile);
-      LoaderModule::loadBilingualDic();
-      LoaderModule::loadIndex();
-    }
-
+    LoaderModule::loadPOSList(posfile);
+    LoaderModule::loadBilingualDic();
+    LoaderModule::loadIndex();
     cerr << "... Loaded!" << endl;
   }
 
-
-LoaderModule::~LoaderModule() {
-}
-
+LoaderModule::~LoaderModule() {}
 
 void LoaderModule::loadIndex() {
   string indexFile = "";
@@ -66,14 +54,13 @@ void LoaderModule::loadIndex() {
       start = what[1].second;
       //      end = what[0].second;
       WNIndex[literal].insert(string(what[1].first, what[1].second));
-      //      cerr << literal << " -> " << string(what[1].first, what[1].second) << endl;
+      // cout << literal << " -> " << string(what[1].first, what[1].second) << endl;
       // update flags:
       flags |= boost::match_prev_avail;
       flags |= boost::match_not_bob;
     }
   }
   idss.close();
-  cerr << "Index loaded" << endl;
 }
 
 void LoaderModule::loadPOSList(string posFile) {
@@ -134,7 +121,6 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   }
 
   stringstream ss;
-  srcWord = tolower(srcWord);
   for (set<string>::iterator it = src2Tgt[srcWord].begin() ; it!= src2Tgt[srcWord].end(); it++) {
     string tgtWord = *it;
     res.cand[tgtWord]=0;
@@ -155,7 +141,7 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
 }
 
 
-WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
+WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
   WORDNET::WordNet wn;
 
@@ -218,131 +204,30 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
           srcWord.resize(srcWord.size() - toremove);
         }
 
-        WORDNET::TgtCandidates candidates = extractCandidates(srcWord);
+        /* Words in the index are lower-case, so this is an easy way to see if
+         * the word is lower-case or not */
         bool capital = false;
         if (WNIndex[srcWord].size()==0) {
           srcWord = tolower(srcWord);
           capital = true;
         }
+
         if (WNIndex[srcWord].size()==0) {
-          cerr << "WARNING : "<<srcWord<<" has no id" << endl;
-        } else if (WNIndex[srcWord].size()==1) {
-          /* If this word only appears in one synset, let's assume the
-           * translation is correct since monosemous */
-          wne.frenchCandidates[srcWord] = candidates;
-          for (std::map<std::string, int>::iterator it = candidates.cand.begin(); it != candidates.cand.end(); it++) {
-            addInstance(wne.frenchSynset, "monosemous", it->first, srcWord, 1);
-            wne.newdef=tgt2TgtDefs[it->first];
-          }
-
-        } else {
-          string longest = "";
-          switch (candidates.cand.size()) {
-
-            /* There is no translation for this word, maybe use the english
-             * word. TODO: is this helpful for verbs and adjectives too? */
-            case 0 :
-              wne.frenchCandidates[srcWord]= candidates;
-              if (!noen || capital) {
-                // original == translation here.
-                addInstance(wne.frenchSynset, "notranslation", srcWord, srcWord, 1);
-              }
-              wne.newdef=tgt2TgtDefs[srcWord];
-              if (verbose) {
-                cerr << "NEWDEF : " << tgt2TgtDefs[tolower(srcWord)] << endl;
-              }
-              break;
-
-            /* If there's only one possible translation in this synset, choose it.
-             * TODO: is this really helpful? for all part-of-speech? */
-            case 1 :
-              wne.frenchCandidates[srcWord]=candidates;
-              addInstance(wne.frenchSynset, "uniq", candidates.cand.begin()->first, srcWord, 1);
-
-              wne.newdef=tgt2TgtDefs[candidates.cand.begin()->first];
-              if (verbose) {
-                cerr << "NEWDEF : " << tgt2TgtDefs[tolower(candidates.cand.begin()->first)] << endl;
-              }
-              break;
-
-            /* OK so what is this? */
-            case 2 :
-              wne.frenchCandidates[srcWord]= candidates;
-              // promote more specific terms
-              if (candidates.cand.begin()->first.find(candidates.cand.rbegin()->first)!=string::npos
-                  && ((*candidates.cand.rbegin()).first.length() - (*candidates.cand.begin()).first.length() > 2 )) {
-                wne.frenchCandidates[srcWord].cand[candidates.cand.begin()->first]++;
-                if (verbose) {
-                  cerr << "PROMOTE " << candidates.cand.begin()->first << endl;
-                }
-              } else if (candidates.cand.rbegin()->first.find(candidates.cand.begin()->first)!=string::npos
-                  && ((*candidates.cand.rbegin()).first.length() - (*candidates.cand.begin()).first.length() > 2 )) {
-                wne.frenchCandidates[srcWord].cand[candidates.cand.rbegin()->first]++;
-                if (verbose) {
-                  cerr << "PROMOTE " << candidates.cand.rbegin()->first << endl;
-                }
-              }
-
-
-            /* Use Levenshtein distance to promote true and false friends. Why no "processed"? */
-            default :
-              if (wne.frenchCandidates[srcWord].cand.size()==0 ) {
-                wne.frenchCandidates[srcWord] = candidates;
-              }
-
-              // promote true (and false) fr/en friends
-              for (map<string, int>::iterator itCand = candidates.cand.begin(); itCand!=candidates.cand.end(); itCand++) {
-                Distance lDist;
-                int ldScore = 0;
-                if (pos == "verb") {
-                  // compute the score without the pronoun
-                  ldScore = lDist.LD(desax(LoaderModule::desaxData, candidates.verbCand[itCand->first]),srcWord);
-                } else {
-                  ldScore = lDist.LD(desax(LoaderModule::desaxData, itCand->first),srcWord);
-                }
-                if (ldScore<=3) {
-                  wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;
-                  if (verbose) {
-                    cerr << "PROMOTE levenstein " << itCand->first << " - " << wne.frenchCandidates[srcWord].cand.size() << endl;
-                  }
-                }
-              }
-              break;
-          }
+          cerr << "ERROR: " << srcWord << " has no id" << endl;
+          exit(-1);
         }
+
+
+        wne.newdef=tgt2TgtDefs[srcWord];
+        wne.frenchCandidates[srcWord] = extractCandidates(srcWord);
+        wne.frenchCandidates[srcWord].capital = capital;
+        assert(wne.frenchCandidates[srcWord].capital == capital);
+
         ss.ignore(1, ' ') ;
         ss.ignore(1, '0') ;
 
       }
 
-      /* For this synset, we read every possible verb and its candidate
-       * translations. We can now look at repeated translations (eg. two
-       * english verbs give the same french word) and add them to our list.
-       *
-       * The plan is to build something like an inverted index and to see which
-       * french word lead to multiple english words */
-#if 0
-      std::map<std::string, std::set<std::string> > englishCount;
-
-      typedef std::pair<const std::string, int> cand_t;
-      typedef std::pair<const string, WORDNET::TgtCandidates> candidate_t;
-
-      BOOST_FOREACH(candidate_t& candidate, wne.frenchCandidates) {
-        BOOST_FOREACH(cand_t& cand, candidate.second.cand) {
-            englishCount[cand.first].insert(candidate.first);
-        }
-      }
-
-      typedef std::pair<const std::string, std::set<std::string> > count_t;
-
-      BOOST_FOREACH(count_t& count, englishCount) {
-        if(count.second.size() > 1) {
-          BOOST_FOREACH(const std::string& srcWord, count.second) {
-            addInstance(wne.frenchSynset, "multiplesource", count.first, srcWord, 1);
-          }
-        }
-      }
-#endif
 
       char buff[2048];
       ss.getline( buff, 2048);
@@ -358,18 +243,3 @@ WORDNET::WordNet LoaderModule::load(bool verbose, int notmore) {
   return wn;
 }
 
-void LoaderModule::addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,
-  const std::string& processed, const std::string& translation,
-  const std::string& original, int score) {
-
-  WORDNET::TranslationInfos translationInfos;
-  translationInfos.original = original;
-  translationInfos.score = score;
-  translationInfos.processed = processed;
-
-  if (frenchSynset.find(translation) == frenchSynset.end()) {
-    frenchSynset[translation] = set<WORDNET::TranslationInfos>();
-  }
-
-  frenchSynset[translation].insert(translationInfos);
-}

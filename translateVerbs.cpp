@@ -3,6 +3,7 @@
 #include "Paths.hpp"
 #include "Loader.hpp"
 #include "Dumper.hpp"
+#include "ExtractorModule.hpp"
 #include "SimSynModule.hpp"
 #include "HyperHypoModule.hpp"
 #include "MeroHoloModule.hpp"
@@ -60,6 +61,12 @@ int main(int argc, char **argv) {
   LoaderModule loader(datafile, dicfiles, VERBS_P_LIST, pos, noen);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Init duration : " << time(NULL) - start << " s " << endl;
+
+  start = time(NULL);
+  std::set<ExtractionType> extractions{ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
+  ExtractorModule extractor(pos, extractions);
+  extractor.process(wn);
+  cout << "Extraction duration : " << time(NULL) - start << " s " << endl;
 
   int nIteration = 0;
   for(vector<int>::iterator idModuleConf = seq.begin(); idModuleConf!= seq.end(); idModuleConf++) {
