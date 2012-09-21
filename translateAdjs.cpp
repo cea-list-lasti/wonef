@@ -29,14 +29,15 @@ int main(int argc, char **argv) {
 
   vector<int> seq;
   for (int i = 1; i < argc ; i++) {
-    if (argv[i][0]=='E') {
+    std::string param(argv[i]);
+    if (param == "EWN") {
       datafile = DATA_ADJ15;
       suffix += ".ewn";
     /* simple integer: add the corresponding module */
     } else if (argv[i][0] >= '1' && argv[i][0] <= '2') {
       suffix += argv[i][0];
       seq.push_back(argv[i][0] - '0');
-    } else if (argv[i][0]=='N') {
+    } else if (param == "Noen") {
       noen = true;
       stringstream ss ;
       ss << "." << argv[i];
