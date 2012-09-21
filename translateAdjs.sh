@@ -56,20 +56,24 @@ echo -e "\n                *** Best ***"
 tail -27 logs/evalAdjsGBest$seqs
 
 # Archive relevant files to our archive.
-echo -e "Finished! Archiving..."
 tmpsubdir="Adjs__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/data/text/quentin/archives/$day/
+archivedir=/data/text/quentin/archives/$day
 
-echo $tmpsubdir $tmppath $archivedir
 mkdir -p $tmppath
 mkdir -p $archivedir
+chmod -f o+w $archivedir
+
+echo -n "Finished! Archiving to $archivedir/Adjs__$time.tar.bz2..."
 
 cp logs/transAdjs$seqs $tmppath
 cp logs/evalAdjs$seqs logs/evalAdjsBest$seqs logs/evalAdjsG$seqs logs/evalAdjsGBest$seqs $tmppath
 cp $WNDATA $WNBESTDATA $tmppath
+cp profiledAdj $tmppath
 
-pushd /tmp
+pushd /tmp > /dev/null
 tar cjf $archivedir/Adjs__$time.tar.bz2 $tmpsubdir
   rm -rf $tmpsubdir
-popd
+popd > /dev/null
+
+echo " done!"

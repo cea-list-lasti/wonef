@@ -55,20 +55,24 @@ echo -e "\n                *** Best ***"
 tail -27 logs/evalVerbsGBest$seqs
 
 # Archive relevant files to our archive.
-echo -e "Finished! Archiving..."
 tmpsubdir="Verbs__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/data/text/quentin/archives/$day/
+archivedir=/data/text/quentin/archives/$day
 
-echo $tmpsubdir $tmppath $archivedir
 mkdir -p $tmppath
 mkdir -p $archivedir
+chmod -f o+w $archivedir
+
+echo -n "Finished! Archiving to $archivedir/Verbs__$time.tar.bz2..."
 
 cp logs/transVerbs$seqs $tmppath
 cp logs/evalVerbs$seqs logs/evalVerbsBest$seqs logs/evalVerbsG$seqs logs/evalVerbsGBest$seqs $tmppath
 cp $WNDATA $WNBESTDATA $tmppath
+cp profiledVerb $tmppath
 
-pushd /tmp
+pushd /tmp > /dev/null
   tar cjf $archivedir/Verbs__$time.tar.bz2 $tmpsubdir
   rm -rf $tmpsubdir
-popd
+popd > /dev/null
+
+echo " done!"

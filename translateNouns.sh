@@ -58,20 +58,24 @@ echo -e "\n                *** Best ***"
 tail -27 logs/evalNounsGBest$seqs
 
 # Archive relevant files to our archive.
-echo -e "Finished! Archiving..."
 tmpsubdir="Nouns__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/data/text/quentin/archives/$day/
+archivedir=/data/text/quentin/archives/$day
 
-echo $tmpsubdir $tmppath $archivedir
 mkdir -p $tmppath
 mkdir -p $archivedir
+chmod -f o+w $archivedir
+
+echo -n "Finished! Archiving to $archivedir/Nouns__$time.tar.bz2..."
 
 cp logs/transNouns$seqs $tmppath
 cp logs/evalNouns$seqs logs/evalNounsBest$seqs logs/evalNounsG$seqs logs/evalNounsGBest$seqs $tmppath
 cp $WNDATA $WNBESTDATA $tmppath
+cp profiledNoun $tmppath
 
-pushd /tmp
+pushd /tmp > /dev/null
   tar cjf $archivedir/Nouns__$time.tar.bz2 $tmpsubdir
   rm -rf $tmpsubdir
-popd
+popd > /dev/null
+
+echo " done!"
