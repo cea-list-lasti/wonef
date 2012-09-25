@@ -7,19 +7,19 @@
 using namespace std;
 
 class LoaderModule {
-  public : 
-  LoaderModule(string infile, set<string>& dicfiles, string posfile, string pos, bool noen) ;
+  public:
+  LoaderModule(string infile, set<string>& dicfiles, string posfile, string pos) ;
   ~LoaderModule() ;
-  
+
   static set<string> posList;
   static map<string, string> desaxData;
   static map<string, string> tgt2TgtDefs;
   static WORDNET::WordNetIndex WNIndex;
-  
+
 
   WORDNET::WordNet load(bool verbose, int notmore) ;
 
-private : 
+private:
   map<string, set<string> > src2Tgt;
   string pos;
   bool noen;

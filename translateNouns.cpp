@@ -26,28 +26,24 @@ int main(int argc, char **argv) {
   MeroHoloLikeHyperModule* merohololiker= NULL;
   LastChanceModule* lastchancer= NULL;
 
+  set<string> dicfiles{DICFILE, DICFILE2};
   string pos = "noun";
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;
+
   time_t start = time(NULL);
-
-  set<string> dicfiles;
-  dicfiles.insert(DICFILE);
-  dicfiles.insert(DICFILE2);
-
-  LoaderModule loader(options.datafile, dicfiles, NOUNS_LIST, pos, options.noen);
+  LoaderModule loader(options.datafile, dicfiles, NOUNS_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
-  cout << "Init duration : " << time(NULL) - start << " s " << endl;
+  cout << "Loading duration : " << time(NULL) - start << " s " << endl;
 
   start = time(NULL);
-  std::set<ExtractionType> extractions{ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
-  ExtractorModule extractor(pos, extractions);
+  ExtractorModule extractor(pos, options.extractionSet);
   extractor.process(wn);
   cout << "Extraction duration : " << time(NULL) - start << " s " << endl;
 
   int nIteration = 0;
-  for(int idModuleConf: options.sequence) {
+  for(int idModuleConf: options.moduleSequence) {
     nIteration++;
     switch (idModuleConf) {
     case 1:

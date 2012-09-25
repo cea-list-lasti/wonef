@@ -18,6 +18,8 @@ class ExtractorModule {
 
     virtual void process(WORDNET::WordNet& wn, bool verbose = false);
 
+    static ExtractionType fromInt(int n);
+
   private:
     std::string pos;
     std::set<ExtractionType> extractions;

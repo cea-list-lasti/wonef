@@ -293,9 +293,9 @@ int main(int argc, char **argv) {
 
   // No use of BCS for now
   /*// loading BCS Base
-  if (vtmode.compare("wolf")==0) {
+  if (vtmode.compare("WOLF")==0) {
     loadBcsBase(bcsbase, argv[7], pos);
-  } else if (vtmode.compare("ewn")==0) {
+  } else if (vtmode.compare("EWN")==0) {
 
 
 
@@ -318,12 +318,12 @@ int main(int argc, char **argv) {
 
   cerr << "VTMode : " << vtmode << endl;
   // loading WOLF
-  if (vtmode.compare("wolf")==0) {
+  if (vtmode.compare("WOLF")==0) {
     cerr << "Loading WOLF" << endl;  
     if (loadWOLF(vtNet, vtNetIdIdent, argv[3], pos)==1) {
       return 1;
     }
-  } else if (vtmode.compare("ewn")==0) {
+  } else if (vtmode.compare("EWN")==0) {
     // Loading Mapping File
     if (pos == "verb") {
       mapping = loadMapfile(mapfile);
@@ -333,7 +333,7 @@ int main(int argc, char **argv) {
     if (loadEWN(vtNet, vtNetIdIdent, argv[3], mapping)==1) {
       return 1;
     }
-  } else if (vtmode.compare("gold")==0) {
+  } else if (vtmode.compare("GOLD")==0) {
     //loading gold
     cerr << "Loading Gold" << endl;
     if (loadGold(vtNet, vtNetIdIdent, goldValue, argv[3])==1) {

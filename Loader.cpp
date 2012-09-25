@@ -15,8 +15,8 @@ map<string, string> LoaderModule::tgt2TgtDefs;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
-LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfile, string _pos, bool _noen) :
-  pos(_pos), noen(_noen), dicfiles(_dicfiles), infile(_infile) {
+LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfile, string _pos) :
+  pos(_pos), dicfiles(_dicfiles), infile(_infile) {
     cerr << "Loading...  " << endl;
     LoaderModule::loadPOSList(posfile);
     LoaderModule::loadBilingualDic();
