@@ -8,7 +8,8 @@ enum class OptionMode { Module, Extraction };
 
 Options::Options(std::string pos, int argc, char **argv) {
   OptionMode mode(OptionMode::Module);
-  suffix = "";
+  std::string extractionSuffix = ".e";
+  std::string moduleSuffix = ".m";
 
   datafile = getWN20Data(pos);
 
@@ -16,19 +17,16 @@ Options::Options(std::string pos, int argc, char **argv) {
     std::string param(argv[i]);
     if (param == "--module") {
       mode = OptionMode::Module;
-      suffix += ".m";
     } else if (param == "--extract") {
       mode = OptionMode::Extraction;
-      suffix += ".e";
     } else if (param[0] >= '1' && param[0] <= '9') {
       /* simple integer: add the corresponding module */
       int n = param[0] - '0';
-      suffix += param[0];
       if (mode == OptionMode::Module) {
-        std::cout << "module " << n << std::endl;
+        moduleSuffix += param[0];
         moduleSequence.push_back(n);
       } else if (mode == OptionMode::Extraction) {
-        std::cout << "extracting " << n << std::endl;
+        extractionSuffix += param[0];
         extractionSet.insert(ExtractorModule::fromInt(n));
       }
     } else {
@@ -36,6 +34,8 @@ Options::Options(std::string pos, int argc, char **argv) {
       exit(-1);
     }
   }
+
+  suffix = extractionSuffix + moduleSuffix;
 
   if (extractionSet.empty()) {
     extractionSet = {ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
