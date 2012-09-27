@@ -130,7 +130,11 @@ void SimSynModule::buildRelationCache(std::string relation) {
   BOOST_FOREACH(const std::string& knnFile, getPaths(relation)) {
     // put our file into a string
     string knns;
-    ifstream knnIfs(knnFile.c_str());
+    ifstream knnIfs(knnFile);
+    if (knnIfs.fail()) {
+      std::cerr << "Oops, " << knnFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
+      exit(-1);
+    }
     getline(knnIfs, knns);
     knnIfs.close();
 
@@ -231,6 +235,7 @@ void SimSynModule::writeProtobuf(std::string relation) {
   KnnDists knnDistsFile;
   knnDistsFile.set_relation(relation);
 
+  assert(boost::filesystem::is_directory(KNNPROTODIR));
   std::map<std::string, std::map<std::string, int> >& relationCache = knnDistsCache[relation];
 
   typedef std::pair<const string, std::map<std::string, int> > words_t;
