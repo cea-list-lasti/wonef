@@ -14,6 +14,8 @@
 #    * logs/evalNounsBest.e123m12  # gold / normal
 #    * logs/evalNounsGBest.e123m12 # gold / best
 
+DATAPATH="/home/pradet/data"
+
 # Parse the part-of-speech
 pos=$1 # noun
 poss="${1}s" #nouns
@@ -59,18 +61,19 @@ seqs="e${extract}.m${module}"
 day=`date +%Y_%B_%d`
 time=`date +%H_%M_%S`
 
-WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
-EWN='/home/qp230782/ressources/wn_fr.ewn.utf8'
+WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
+EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
 # This is simply index.noun without the monosemous nouns
-POLYSEMOUSINDEX="/data/text/quentin/opendata/WordNet-2.0/dict/index.polysemous.$pos"
+POLYSEMOUSINDEX="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.$pos"
 # OLDSCHOOL (means I don't care about BCSFILE?)
 #BCSMODE=4
 #BCSFILE='/home/qp230782/Projets/5000_bc.xml'
-GOLD="/data/text/quentin/Gold/GT_$poss.xml"
+GOLD="$DATAPATH/Gold/GT_$poss.xml"
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translate$Poss --extract $extractspaces --module $modulespaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
+./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled$Poss 2> /dev/null
 
 # The produced files
@@ -79,27 +82,32 @@ WNBESTDATA="data2/data.fr.$poss.best.$seqs"
 
 
 echo -e "\n-- Evaluating with $REFERENCE... --"
-echo "./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs"
+
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
 tail -27 logs/eval$Poss.$seqs
+
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNBESTDATA $REFERENCE &> logs/eval${Poss}Best.$seqs
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
 tail -27 logs/eval${Poss}Best.$seqs
 
-
 echo -e "\n-- Evaluating with Gold... --"
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD &> logs/eval${Poss}G.$seqs
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Gold evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
 tail -27 logs/eval${Poss}G.$seqs
+
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNBESTDATA GOLD &> logs/eval${Poss}GBest.$seqs
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best Gold evaluation, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
 tail -27 logs/eval${Poss}GBest.$seqs
 
 # Archive relevant files to our archive.
 tmpsubdir="$Poss__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/data/text/quentin/archives/$day
+archivedir=/home/pradet/archives/$day
 
 mkdir -p $tmppath
 mkdir -p $archivedir

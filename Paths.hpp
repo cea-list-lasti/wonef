@@ -1,70 +1,67 @@
 #ifndef PATHS_HPP
 #define PATHS_HPP
 
-//#define CONVFILE "/data/text/FastKNN/bases/semmapconversion.global.bin"
-//#define DICFILE "/data/text/FrameNetLUI/externals/dicfrenelda-utf8.txt"
-/*#define INDEX_NOUN "/data/text/WordNet-3.0/dict/index.nounk"
-#define DATA_NOUN "/data/text/WordNet-3.0/dict/data.noun"
-#define NOUNS_LIST "/data/text/FrameNetLUI/externals/noms.list"
-
-#define INDEX_VERB "/data/text/WordNet-3.0/dict/index.verb"
-#define DATA_VERB "/data/text/WordNet-3.0/dict/data.verb"
-#define INDEX_ADJ "/data/text/WordNet-3.0/dict/index.adj"
-#define DATA_ADJ "/data/text/WordNet-3.0/dict/data.adj"
+/*
+const std::string  INDEX_VERB "/data/text/WordNet-3.0/dict/index.verb";
+const std::string  DATA_VERB "/data/text/WordNet-3.0/dict/data.verb";
+const std::string  INDEX_ADJ "/data/text/WordNet-3.0/dict/index.adj";
+const std::string  DATA_ADJ "/data/text/WordNet-3.0/dict/data.adj";
 */
 
-#define DICFILE "/data/text/FrameNetLUI/externals/dicfrenelda-utf8.txt"
-#define DICFILE2 "/data/text/FrameNetLUI/Wiktionaires/frwiktionary-20090120-eldafmt.csv"
+const std::string  DATAPATH = "/home/pradet/data";
+
+const std::string  DICFILE = DATAPATH + "/dictionnaires/euradic-utf8.txt";
+const std::string  DICFILE2 = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
+
+const std::string  INDEX_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/index.noun";
+const std::string  DATA_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";
+
+const std::string  INDEX_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/index.noun";
+const std::string  DATA_NOUN20 = DATAPATH + "//opendata/WordNet-2.0/dict/data.noun";
+const std::string  INDEX_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.IDX";
+const std::string  DATA_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.DAT";
+const std::string  NOUNS_LIST = DATAPATH + "/POSlist/noms.list";
+
+const std::string  INDEX_VERB = DATAPATH + "/opendata/WordNet-2.0/dict/index.verb";
+const std::string  DATA_VERB = DATAPATH + "/opendata/WordNet-2.0/dict/data.verb";
+const std::string  INDEX_VERB15 = DATAPATH + "/opendata/WordNet-1.5/DICT/VERB.IDX";
+const std::string  DATA_VERB15 = DATAPATH + "/opendata/WordNet-1.5/DICT/VERB.DAT";
+const std::string  VERBS_LIST = DATAPATH + "/POSlist/verbes.list";
+const std::string  VERBS_P_LIST = DATAPATH + "/POSlist/verbes.p.list";
+
+const std::string  INDEX_ADJ = DATAPATH + "/opendata/WordNet-2.0/dict/index.adj";
+const std::string  DATA_ADJ = DATAPATH + "/opendata/WordNet-2.0/dict/data.adj";
+const std::string  INDEX_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.IDX";
+const std::string  DATA_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.DAT";
+const std::string  ADJS_LIST = DATAPATH + "/POSlist/adjectifs.list";
+const std::string  ADJS_LIST_F = DATAPATH + "/POSlist/adjectifs.filtered.list";
+
+const std::string  KNNSTDDIR = DATAPATH + "/FastKNN/knnall/";
+const std::string  KNNSTDFILE = "KNNSTDDIR/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt";
 
 
-#define INDEX_NOUN "/data/text/moutonc/opendata/WordNet-2.0/dict/index.noun"
-#define DATA_NOUN "/data/text/moutonc/opendata/WordNet-2.0/dict/data.noun"
+const std::string  TYPEROLERFILE13 = DATAPATH + "/FastKNN/SemMap/reverse/SUJ_V_RELG.reverse.dmp";
+const std::string  TYPEROLERFILE12 = DATAPATH + "/FastKNN/SemMap/reverse/MOD_V.reverse.dmp";
+const std::string  TYPEROLERFILE11 = DATAPATH + "/FastKNN/SemMap/normal/CPLV_V.dmp";
+const std::string  TYPEROLERFILE10 = DATAPATH + "/FastKNN/SemMap/reverse/CPLV_V.reverse.dmp";
+const std::string  TYPEROLERFILE9  = DATAPATH + "/FastKNN/SemMap/reverse/CPL_V.reverse.dmp";
+const std::string  TYPEROLERFILE8  = DATAPATH + "/FastKNN/SemMap/reverse/AdvVerbe.reverse.dmp";
+const std::string  TYPEROLERFILE7  = DATAPATH + "/FastKNN/SemMap/reverse/ATB_S.reverse.dmp";
+const std::string  TYPEROLERFILE6  = DATAPATH + "/FastKNN/SemMap/reverse/COD_V.reverse.dmp";
+const std::string  TYPEROLERFILE5  = DATAPATH + "/FastKNN/SemMap/reverse/SUJ_V.reverse.dmp";
+const std::string  TYPEROLERFILE4  = DATAPATH + "/FastKNN/SemMap/windows/window10.dmp";
+const std::string  TYPEROLERFILE3  = DATAPATH + "/FastKNN/SemMap/normal/COD_V.dmp";
+const std::string  TYPEROLERFILE2  = DATAPATH + "/FastKNN/SemMap/normal/SUJ_V.dmp";
+const std::string  TYPEROLERFILE   = DATAPATH + "/FastKNN/SemMap/normal/COMPDUNOM.dmp";
+const std::string  HOLOFILE        = DATAPATH + "/FastKNN/SemMap/reverse/COMPDUNOM.reverse.dmp";
 
-#define INDEX_NOUN20 "/data/text/moutonc/opendata/WordNet-2.0/dict/index.noun"
-#define DATA_NOUN20 "/data/text/moutonc/opendata/WordNet-2.0/dict/data.noun"
-#define INDEX_NOUN15 "/data/text/quentin/opendata/WordNet-1.5/DICT/NOUN.IDX"
-#define DATA_NOUN15 "/data/text/quentin/opendata/WordNet-1.5/DICT/NOUN.DAT"
-#define NOUNS_LIST "/data/text/FrameNetLUI/externals/POSlist/noms.list"
+const std::string  WORDS_IDS = DATAPATH + "/FastKNN/SemMap/words.ids";
+const std::string  CONVFILE = DATAPATH + "/FastKNN/SemMap/semmapconversion.global.bin";
 
-#define INDEX_VERB "/data/text/moutonc/opendata/WordNet-2.0/dict/index.verb"
-#define DATA_VERB "/data/text/moutonc/opendata/WordNet-2.0/dict/data.verb"
-#define INDEX_VERB15 "/data/text/quentin/opendata/WordNet-1.5/DICT/VERB.IDX"
-#define DATA_VERB15 "/data/text/quentin/opendata/WordNet-1.5/DICT/VERB.DAT"
-#define VERBS_LIST "/data/text/FrameNetLUI/externals/POSlist/verbes.list"
-#define VERBS_P_LIST "/home/baguenierj/Projets/verbes.p.list"
+const std::string  MAPVERB20_15 = DATAPATH + "/opendata/mappings-upc-2007/mapping-20-15/wn20-15.verb";
+const std::string  MAPVERB15_20 = DATAPATH + "/opendata/mappings-upc-2007/mapping-15-20/wn15-20.verb";
 
-#define INDEX_ADJ "/data/text/moutonc/opendata/WordNet-2.0/dict/index.adj"
-#define DATA_ADJ "/data/text/moutonc/opendata/WordNet-2.0/dict/data.adj"
-#define INDEX_ADJ15 "/data/text/quentin/opendata/WordNet-1.5/DICT/ADJ.IDX"
-#define DATA_ADJ15 "/data/text/quentin/opendata/WordNet-1.5/DICT/ADJ.DAT"
-#define ADJS_LIST "/data/text/FrameNetLUI/externals/POSlist/adjectifs.list"
-#define ADJS_LIST_F "/data/text/FrameNetLUI/externals/POSlist/adjectifs.filtered.list"
-
-#define KNNSTDFILE "/data/text/FastKNN/knnall/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt"
-#define KNNSTDDIR "/data/text/FastKNN/knnall/"
-
-#define WORDS_IDS "/data/text/FastKNN/Ressources/SemMap/words.ids"
-
-#define TYPEROLERFILE13 "/data/text/FastKNN/Ressources/SemMap/reverse/SUJ_V_RELG.reverse.dmp"
-#define TYPEROLERFILE12 "/data/text/FastKNN/Ressources/SemMap/reverse/MOD_V.reverse.dmp"
-#define TYPEROLERFILE11 "/data/text/FastKNN/Ressources/SemMap/normal/CPLV_V.dmp"
-#define TYPEROLERFILE10 "/data/text/FastKNN/Ressources/SemMap/reverse/CPLV_V.reverse.dmp"
-#define TYPEROLERFILE9 "/data/text/FastKNN/Ressources/SemMap/reverse/CPL_V.reverse.dmp"
-#define TYPEROLERFILE8 "/data/text/FastKNN/Ressources/SemMap/reverse/AdvVerbe.reverse.dmp"
-#define TYPEROLERFILE7 "/data/text/FastKNN/Ressources/SemMap/reverse/ATB_S.reverse.dmp"
-#define TYPEROLERFILE6 "/data/text/FastKNN/Ressources/SemMap/reverse/COD_V.reverse.dmp"
-#define TYPEROLERFILE5 "/data/text/FastKNN/Ressources/SemMap/reverse/SUJ_V.reverse.dmp"
-#define TYPEROLERFILE4 "/data/text/FastKNN/Ressources/SemMap/windows/window10.dmp"
-#define TYPEROLERFILE3 "/data/text/FastKNN/Ressources/SemMap/normal/COD_V.dmp"
-#define TYPEROLERFILE2 "/data/text/FastKNN/Ressources/SemMap/normal/SUJ_V.dmp"
-#define TYPEROLERFILE "/data/text/FastKNN/Ressources/SemMap/normal/COMPDUNOM.dmp"
-#define HOLOFILE "/data/text/FastKNN/Ressources/SemMap/reverse/COMPDUNOM.reverse.dmp"
-
-#define CONVFILE "/data/text/FastKNN/bases.fr/semmapconversion.global.bin"
-
-#define MAPVERB20_15 "/data/text/jeanne/mappings-upc-2007/mapping-20-15/wn20-15.verb"
-#define MAPVERB15_20 "/data/text/jeanne/mappings-upc-2007/mapping-15-20/wn15-20.verb"
-
-#define KNNPROTOFILE "/tmp/protobuf/knndists_"
+const std::string  KNNPROTODIR = "/tmp/protobuf/";
+const std::string  KNNPROTOFILE = KNNPROTODIR + "knndists_";
 
 #endif

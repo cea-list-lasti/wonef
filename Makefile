@@ -1,5 +1,5 @@
-LDFLAGS     = -L/usr/local/lib  -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/boost_1_51_0/stage/lib -L/home/qp230782/externals/protobuf/lib -I/home/qp230782/externals/protobuf/include -lboost_regex -lboost_filesystem -lxerces-c -lprotobuf -lpthread -pg
-CPPFLAGS    = -std=gnu++0x -Wall -Wextra -O3 -I/home/qp230782/externals/boost_1_51_0/ -I/home/qp230782/externals/xerces-c-3.1.1/include -I/home/qp230782/externals/protobuf/include -pg
+LDFLAGS     = -L/usr/local/lib  -L/home/pradet/externals/xerces-c/lib -L/home/pradet/externals/icu/lib -L/home/pradet/externals/boost_1_51_0/stage/lib -L/home/pradet/externals/protobuf/lib -I/home/pradet/externals/protobuf/include -licuuc -licudata -licui18n -lboost_system -lboost_regex -lboost_filesystem -liconv -lxerces-c -lprotobuf -lpthread -pg
+CPPFLAGS    = -std=c++11 -Wall -Wextra -O3 -I/home/pradet/externals/boost_1_51_0 -I/home/pradet/externals/icu/include -I/home/pradet/externals/xerces-c/include -I/home/pradet/externals/protobuf/include -pg
 
 all:	translateNouns translateVerbs translateAdjs buildBilingualDic evalJAWS-WOLF
 

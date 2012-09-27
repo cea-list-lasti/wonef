@@ -41,16 +41,17 @@ echo '</JAWS>' >> $ADDPART
 
 echo "Evaluating additional part ..."
 
-WOLF='/home/qp230782/Projets/wolf/wolf-0.1.4.xml'
-EWN='/home/qp230782/ressources/wn_fr.ewn.utf8'
-GOLDV='/data/text/jeanne/Gold/VT_verbes.xml'
-GOLDA='/data/text/jeanne/Gold/VT_adjectifs.xml'
-GOLDN='/data/text/jeanne/Gold/VT_noms.xml'
-POLYSEMOUSINDEXN='/home/qp230782/Projets/index.polysemous.noun'
-POLYSEMOUSINDEXA='/home/baguenierj/Projets/index.polysemous.adj'
-POLYSEMOUSINDEXV='/home/baguenierj/Projets/index.polysemous.verb'
+DATAPATH="/home/pradet/data"
+WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
+EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
+GOLDV="$DATAPATH/Gold/VT_verbes.xml"
+GOLDA="$DATAPATH/Gold/VT_adjectifs.xml"
+GOLDN="$DATAPATH/Gold/VT_noms.xml"
+POLYSEMOUSINDEXN="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.noun"
+POLYSEMOUSINDEXV="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.adj"
+POLYSEMOUSINDEXA="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.verb"
 BCSMODE=4
-BCSFILE='/home/qp230782/projets/5000_bc.xml'
+BCSFILE="$DATAPATH/opendata/5000_bc.xml"
 
 if [ "$pos" = "N" ]
 then
