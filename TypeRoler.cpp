@@ -17,7 +17,7 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
   conv(CONVFILE, 67937),
   topSize(10),
   thresCut(0) {
-  initializeDicMap(dicmap);
+  initializeDicMap(dicmap, WORDS_IDS);
   initializeDicMapReverse(dicmapReverse, WORDS_IDS, false);
 
   std::string protofile = "/tmp/protobuf/" + relation;

@@ -12,7 +12,7 @@ using namespace std;
 
 
 MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration) {
-  initializeDicMap(dicmap);  
+  initializeDicMap(dicmap, WORDS_IDS);
   loadMeroHolos(datafile);
   
   std::ostringstream oss;

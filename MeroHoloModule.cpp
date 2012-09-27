@@ -15,7 +15,7 @@ MeroHoloModule::MeroHoloModule() {
 
 MeroHoloModule::MeroHoloModule(string& datafile, int idModuleConf, int nIteration) :
   cntMeros(0), cntHolos(0) {
-  initializeDicMap(dicmap);  
+  initializeDicMap(dicmap, WORDS_IDS);  
   loadMeroHolos(datafile);
   
   std::ostringstream oss;
