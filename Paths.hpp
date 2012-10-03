@@ -17,7 +17,7 @@ const std::string  INDEX_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/index.nou
 const std::string  DATA_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";
 
 const std::string  INDEX_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/index.noun";
-const std::string  DATA_NOUN20 = DATAPATH + "//opendata/WordNet-2.0/dict/data.noun";
+const std::string  DATA_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";
 const std::string  INDEX_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.IDX";
 const std::string  DATA_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.DAT";
 const std::string  NOUNS_LIST = DATAPATH + "/POSlist/noms.list";
