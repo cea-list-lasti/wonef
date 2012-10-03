@@ -98,16 +98,10 @@ void LoaderModule::loadBilingualDic() {
       ss.ignore(256,';');
       ss.ignore(256,';');
       ss >> s;
-      //      cerr << s << endl;
-      if (LoaderModule::posList.find(tgtWord)!=LoaderModule::posList.end()
-          || LoaderModule::posList.find(tgtWord.substr(0, tgtWord.find(' ')))!=LoaderModule::posList.end()
-          || (tgtWord[tgtWord.length()-1]=='s' && LoaderModule::posList.find(tgtWord.substr(0, tgtWord.length()-1))!=LoaderModule::posList.end())
-         ) {
-        src2Tgt[tolower(s.substr(0, s.find(';')))].insert(tgtWord);
+      src2Tgt[s.substr(0, s.find(';'))].insert(tgtWord);
 
-        if (s.find(";")+5< s.rfind(";")) {
-          tgt2TgtDefs[tgtWord]=s.substr(s.find(';')+1);
-        }
+      if (s.find(";")+5< s.rfind(";")) {
+        tgt2TgtDefs[tgtWord]=s.substr(s.find(';')+1);
       }
     }
     idss.close();
@@ -206,13 +200,14 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
         /* Words in the index are lower-case, so this is an easy way to see if
          * the word is lower-case or not */
+        string lowerCaseSrcWord = srcWord;
         bool capital = false;
         if (WNIndex[srcWord].size()==0) {
-          srcWord = tolower(srcWord);
+          lowerCaseSrcWord = tolower(srcWord);
           capital = true;
         }
 
-        if (WNIndex[srcWord].size()==0) {
+        if (WNIndex[lowerCaseSrcWord].size()==0) {
           cerr << "ERROR: " << srcWord << " has no id" << endl;
           exit(-1);
         }
