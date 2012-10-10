@@ -14,6 +14,16 @@ def get_mapping(pos):
 
   return to30
 
+import re
+
+def get_definitions(pos):
+  defs = {}
+  with open("data.{}".format(pos)) as datapos:
+    for l in datapos:
+      if l.startswith("  "): continue
+      synsetid, definition = re.search(r'(\d{8}) .+ \| (.+)$', l).groups()
+      defs[synsetid] = definition.strip()
+  return defs
 
 from xml.etree.ElementTree import ElementTree, Element
 import sys
@@ -21,11 +31,14 @@ import sys
 pos = sys.argv[1]
 
 to30 = get_mapping(pos)
+defs = get_definitions(pos)
 GT = ElementTree(file="GT_%ss.xml" % pos)
 
 for synset in GT.findall("SYNSET"):
-  if len(to30[synset.get('id')]) != 1:
-    print(synset.get('id'))
-  synset.set('id', ' '.join(to30[synset.get('id')]))
+  synsetid = synset.get('id')
+  if len(to30[synsetid]) != 1:
+    print(synsetid)
+  synset.set('id', ' '.join(to30[synsetid]))
+  synset.find('ORIGINALDEF').text = defs[synset.get('id')]
 
 GT.write("GT_%ss30.xml" % pos, encoding="UTF-8")
