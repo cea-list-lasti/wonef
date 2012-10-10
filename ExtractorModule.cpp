@@ -130,7 +130,10 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
       for (count_t& count: englishCount) {
         if(count.second.size() > 1) {
           for (const std::string& srcWord: count.second) {
-            addInstance(wne.frenchSynset, "multiplesource", count.first, srcWord, 1);
+            /* score : number of candidates by source word in the synset
+             * (the more candidates there are, the less they are meaningful)*/
+            int score = wne.nbCandidates / wne.frenchCandidates.size();
+            addInstance(wne.frenchSynset, "multiplesource", count.first, srcWord, score);
           }
         }
       }

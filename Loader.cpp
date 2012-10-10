@@ -159,6 +159,7 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
   while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {
     WORDNET::WordNetEntry wne;
+    wne.nbCandidates = 0;
     if (s[0]!=' ') { // not trying to read the license header
       string str = s;
       string synsetId = s.substr(0, s.find(' '));
@@ -217,6 +218,8 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
         wne.frenchCandidates[srcWord] = extractCandidates(srcWord);
         wne.frenchCandidates[srcWord].capital = capital;
         assert(wne.frenchCandidates[srcWord].capital == capital);
+        
+        wne.nbCandidates += wne.frenchCandidates[srcWord].cand.size();
 
         ss.ignore(1, ' ') ;
         ss.ignore(1, '0') ;

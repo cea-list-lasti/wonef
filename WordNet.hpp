@@ -39,6 +39,7 @@ typedef struct WordNetEntry {
   std::set<std::string> hypers;
   std::set<std::string> meros;
   std::set<std::string> holos;
+  int nbCandidates;
   /* Kept translations */
   std::map<std::string, std::set<TranslationInfos> > frenchSynset;
   /* Candidate translations */
