@@ -28,6 +28,7 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
       int nbUniq = 0;
       int nbMono = 0;
       int nbNotrans = 0;
+      int nbMultiple = 0;
 
       for (std::set<WORDNET::TranslationInfos>::iterator
 	   itTrans = itFrench->second.begin();
@@ -40,7 +41,12 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
 	  nbMono++;
 	} else if (itTrans->processed == "notranslation"){
 	  nbNotrans++;
-	}
+	} else if (itTrans->processed == "multiplesource") {
+          if (nbMultiple > 0) {
+            nbTranslations--;
+          }
+          nbMultiple++;
+        }
 
       } // end itTrans
 
