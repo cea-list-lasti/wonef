@@ -1,0 +1,1 @@
+This folder was used to migrate the gold standard from the WordNet 2.0 release synsets with only words in LIMA to the WN 3.0 release with multi word expressions. Even if we don't handle MWEs well now, it's important to have them in the gold standard.
