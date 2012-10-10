@@ -24,7 +24,7 @@ echo "Extracting $module from $input ..."
 sed -i "s,INPUT,$PWD/$input," $QUERY
 sed -i "s/MODULE/$module/g" $QUERY
 
-java -cp /data/text/bin/basex.jar org.basex.BaseX < $QUERY &> $ADDPART
+java -cp /home/pradet/bin/basex.jar org.basex.BaseX < $QUERY &> $ADDPART
 
 rm $QUERY
 
@@ -44,9 +44,9 @@ echo "Evaluating additional part ..."
 DATAPATH="/home/pradet/data"
 WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
 EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
-GOLDV="$DATAPATH/Gold/VT_verbes.xml"
-GOLDA="$DATAPATH/Gold/VT_adjectifs.xml"
-GOLDN="$DATAPATH/Gold/VT_noms.xml"
+GOLDV="$DATAPATH/Gold/GT_verbs.xml"
+GOLDA="$DATAPATH/Gold/GT_adjs.xml"
+GOLDN="$DATAPATH/Gold/GT_nouns.xml"
 POLYSEMOUSINDEXN="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.noun"
 POLYSEMOUSINDEXV="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.adj"
 POLYSEMOUSINDEXA="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.verb"
