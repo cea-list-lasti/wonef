@@ -61,6 +61,9 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
     maximumValue = 6006;
   } else if (pos == "noun") {
     maximumValue = 7273;
+  } else if (pos == "adj") {
+    maximumValue = 4700;
+
   }
 
   set<pair<string, size_t> > elected;
