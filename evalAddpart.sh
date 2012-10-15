@@ -48,8 +48,8 @@ GOLDV="$DATAPATH/Gold/GT_verbs.xml"
 GOLDA="$DATAPATH/Gold/GT_adjs.xml"
 GOLDN="$DATAPATH/Gold/GT_nouns.xml"
 POLYSEMOUSINDEXN="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.noun"
-POLYSEMOUSINDEXV="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.adj"
-POLYSEMOUSINDEXA="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.verb"
+POLYSEMOUSINDEXV="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.verb"
+POLYSEMOUSINDEXA="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.adj"
 BCSMODE=4
 BCSFILE="$DATAPATH/opendata/5000_bc.xml"
 
