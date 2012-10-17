@@ -9,7 +9,9 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          std::map<std::string, std::set<std::string> >& _vtNet,
                          std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
                          std::map<std::pair<std::string, std::string>, int>& _goldValue,
-                         bool _gold, std::string _pos) :
+                         bool _gold, std::string _pos,
+                         const std::map<std::string, int>& _BCS,
+                         const std::map<int, int>& _BCSCount) :
                          nbSynsets(0), nbJawsSynsets(0), nbGtSynsets(0),
                          nbOriginals(0), nbPolyOriginals(0),
                          nbTermsInJaws(0), nbPolyTermsInJaws(0),
@@ -20,7 +22,7 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
                          polyLitList(_polyLitList), polyIdsList(_polyIdsList),
                          vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
-                         goldValue(_goldValue),gold (_gold), pos(_pos) {
+                         goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount) {
 
   candidates = std::map<std::string, std::set<std::string > >();
 
@@ -35,8 +37,18 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
   xercesc::XMLTransService::Codes theCode;
   theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
 
-}
+  BCSJawsCount = { {1, 0}, {2, 0}, {3, 0} };
 
+  std::cout << "so, let's see those entries, dude!" << std::endl;
+
+  for(auto entry: vtNet) {
+    std::cout << entry.first << " -> ";
+    for(auto literal: entry.second) {
+      std::cout << literal << " ";
+    }
+    std::cout << std::endl;
+  }
+}
 
 JawsHandler::~JawsHandler() {
   delete theTranscoder;
@@ -144,6 +156,10 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     if (jawsNetIdIdent[id].size() > 0) {
       nbJawsSynsets++;
       transInJaws = true;
+      // If it's a BCS, count it
+      if(BCS.find(id) != BCS.end()) {
+        BCSJawsCount[BCS.at(id)]++;
+      }
     }
 
     if (vtNetIdIdent[id].size() > 0) {
@@ -346,6 +362,8 @@ void JawsHandler::endDocument() {
   cout << "nbSynsets in WN : " << nbSynsets
        << ", in Jaws : " << nbJawsSynsets
        << ", in Gt : " << nbGtSynsets << endl;
+  cout << "BCS:\t\t\t\t" << BCSJawsCount[1] << " " << BCSJawsCount[2] << " " << BCSJawsCount[3] << endl;
+  cout << "BCS(%):\t\t\t\t" << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
   cout << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
   cout << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
 

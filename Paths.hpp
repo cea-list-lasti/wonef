@@ -13,25 +13,19 @@ const std::string  DATAPATH = "/home/pradet/data";
 const std::string  DICFILE = DATAPATH + "/dictionnaires/euradic-utf8.txt";
 const std::string  DICFILE2 = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
 
-const std::string  INDEX_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/index.noun";
-const std::string  DATA_NOUN = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";
-
-const std::string  INDEX_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/index.noun";
+const std::string  DATA_NOUN30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.noun";
 const std::string  DATA_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";
-const std::string  INDEX_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.IDX";
 const std::string  DATA_NOUN15 = DATAPATH + "/opendata/WordNet-1.5/DICT/NOUN.DAT";
 const std::string  NOUNS_LIST = DATAPATH + "/POSlist/noms.list";
 
-const std::string  INDEX_VERB = DATAPATH + "/opendata/WordNet-2.0/dict/index.verb";
-const std::string  DATA_VERB = DATAPATH + "/opendata/WordNet-2.0/dict/data.verb";
-const std::string  INDEX_VERB15 = DATAPATH + "/opendata/WordNet-1.5/DICT/VERB.IDX";
+const std::string  DATA_VERB30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.verb";
+const std::string  DATA_VERB20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.verb";
 const std::string  DATA_VERB15 = DATAPATH + "/opendata/WordNet-1.5/DICT/VERB.DAT";
 const std::string  VERBS_LIST = DATAPATH + "/POSlist/verbes.list";
 const std::string  VERBS_P_LIST = DATAPATH + "/POSlist/verbes.p.list";
 
-const std::string  INDEX_ADJ = DATAPATH + "/opendata/WordNet-2.0/dict/index.adj";
-const std::string  DATA_ADJ = DATAPATH + "/opendata/WordNet-2.0/dict/data.adj";
-const std::string  INDEX_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.IDX";
+const std::string  DATA_ADJ30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.adj";
+const std::string  DATA_ADJ20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.adj";
 const std::string  DATA_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.DAT";
 const std::string  ADJS_LIST = DATAPATH + "/POSlist/adjectifs.list";
 const std::string  ADJS_LIST_F = DATAPATH + "/POSlist/adjectifs.filtered.list";
@@ -63,5 +57,9 @@ const std::string  MAPVERB15_20 = DATAPATH + "/opendata/mappings-upc-2007/mappin
 
 const std::string  KNNPROTODIR = "/tmp/protobuf/";
 const std::string  KNNPROTOFILE = KNNPROTODIR + "knndists_";
+
+const std::string  BCSFILE = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
+const std::string MAPPING_30_20 = DATAPATH + "/opendata/mappings-upc-2007/mapping-30-20/wn30-20.";
+const std::string MAPPING_20_30 = DATAPATH + "/opendata/mappings-upc-2007/mapping-20-30/wn20-30.";
 
 #endif

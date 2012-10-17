@@ -1,6 +1,7 @@
 #ifndef TOOLS_HPP
 #define TOOLS_HPP
 #include <string>
+#include <map>
 
 #include <xercesc/util/PlatformUtils.hpp>
 #include <xercesc/sax2/DefaultHandler.hpp>
@@ -20,5 +21,7 @@ bool checkAttr(const xercesc::Attributes & attrs, string key, string value,
 
 string getAttrValue(const xercesc::Attributes & attrs, string value,
 		    xercesc::XMLTranscoder* theTranscoder);
+
+std::map<std::string, std::string> loadSensemap(std::string pos);
 
 #endif

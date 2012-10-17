@@ -11,7 +11,7 @@
 #include <fstream>
 
 #include "Paths.hpp"
-//#include "BCSBaseHandler.hpp"
+#include "BCSBaseHandler.hpp"
 #include "WolfHandler.hpp"
 #include "EwnLoader.hpp"
 #include "JawsEvaluatorHandler.hpp"
@@ -116,10 +116,6 @@ int postParser(string what, string filename, SAX2XMLReader*& parser) {
     XMLString::release(&message);
     return -1;
   }
-  catch (...) {
-    cout << what << " Unexpected Exception \n";
-    return -1;
-  }
   return 0;
 }
 
@@ -143,43 +139,25 @@ int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolf
   return 0;
 }
 
-// No use of BCS for now
-/*int loadBcsBase15(map<string, int>& bcsbase, string filename) {
-  cerr << "loading bcs 15 from : " << filename << endl;
-  cerr << "NOTHING TO DO" << endl;
-  cerr << "Loaded" << endl;
-  return 0;
-}
+int loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string pos) {
 
-int loadBcsBaseComplem(map<string, int>& bcsbase, string filename) {
-  cerr << "loading bcs complem from : " << filename << endl;
-  cerr << "NOTHING TO DO" << endl;
-  cerr << "Loaded" << endl;
-  return 0;
-}
-
-
-
-int loadBcsBase(map<string, int>& bcsbase, string filename, string pos) {
-  cerr << "loading bcs from : " << filename << endl;
-  
   SAX2XMLReader* parser = NULL;
   if (preParser("BCS", parser) == 1) {
     return 1;
   }
 
-  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(&bcsbase, pos);
+  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(bcsbase, BCSCount, pos);
   parser->setContentHandler(bcsbaseHandler);
   parser->setErrorHandler(bcsbaseHandler);
 
-  if (postParser ("BCS", filename, parser) == -1) {
+  if (postParser ("BCS", BCSFILE, parser) == -1) {
     return -1;
   }
 
   delete parser;
   delete bcsbaseHandler;
   return 0;
-}*/
+}
 
 
 int loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
@@ -214,14 +192,14 @@ int loadGold(map<string, set<string> >& goldNet,
 
 
 
-int parseAndEvaluatePolysemous(//map<string, int>& bcsbase,
+int parseAndEvaluatePolysemous(map<string, int>& BCS,
+                               map<int, int>& BCSCount,
                                set<string>& litList,
                                set<string>& polysemousIdsList,
                                map<string, set<string> >& vtNet,
                                map<string, set<string> >& vtNetIdIdent,
                                string pos,
                                string filename,
-                               //BCSMode bcsmode,
                                map<pair<string, string>, int>& goldValue,
                                bool gold) {
 
@@ -236,7 +214,8 @@ int parseAndEvaluatePolysemous(//map<string, int>& bcsbase,
                                              vtNetIdIdent,
                                              goldValue,
                                              gold,
-                                             pos);
+                                             pos,
+                                             BCS, BCSCount);
   parser->setContentHandler(jawsHandler);
   parser->setErrorHandler(jawsHandler);
 
@@ -255,11 +234,6 @@ int parseAndEvaluatePolysemous(//map<string, int>& bcsbase,
 
 
 int main(int argc, char **argv) {
-  // No use of BCS for now
-  /*if (argc < 7) {
-    cerr << "Usage : evalJAWS-WOLF pos literalList vt.xml jaws.xml vtmode bcsmode bcsfile" << endl;
-    return 1;
-  }*/
   if (argc < 5) {
     cerr << "Usage : evalJAWS-WOLF pos literalList vt.xml jaws.xml vtmode" << endl;
     return 1;
@@ -273,45 +247,19 @@ int main(int argc, char **argv) {
     mapfile = MAPVERB15_20;
   }
 
-  // No use of BCS for now
-  /*int bcsmode;
-  stringstream ss;
-  ss << argv[6];
-  ss >> bcsmode;*/
-
-
-
 
   set<string> litList = set<string>();
   set<string> polysemousIdsList = set<string>();
-  map<string, set<string> > vtNet = map<string, set<string> >();  
+  map<string, set<string> > vtNet = map<string, set<string> >();
   map<string, set<string> > vtNetIdIdent = map<string, set<string> >();
-  //map<string,int> bcsbase = map<string, int>();
+  map<string,int> bcsbase = map<string, int>();
+  map<int,int> BCSCount;
   map<string, set<string> > mapping = map<string, set<string> >();
   map<pair<string, string>, int> goldValue = map<pair<string, string>, int>();
 
 
   // No use of BCS for now
-  /*// loading BCS Base
-  if (vtmode.compare("WOLF")==0) {
-    loadBcsBase(bcsbase, argv[7], pos);
-  } else if (vtmode.compare("EWN")==0) {
-
-
-
-    switch (bcsmode) {
-    case (int)OLDSCHOOL : // 4
-      break;
-    case (int) BCS1 : // 1
-    case (int) BCS2 : // 2
-    case (int) BCS3 : // 3
-      loadBcsBase15(bcsbase, argv[7]);
-      break;    
-    case (int) BCSALL : // 0
-      loadBcsBaseComplem(bcsbase, argv[7]);
-      break;
-    }
-  }*/
+  loadBcsBase(bcsbase, BCSCount, pos);
 
   // Loading literal list
   loadPolysemousLiteral(litList, polysemousIdsList, argv[2]);
@@ -319,7 +267,7 @@ int main(int argc, char **argv) {
   cerr << "VTMode : " << vtmode << endl;
   // loading WOLF
   if (vtmode.compare("WOLF")==0) {
-    cerr << "Loading WOLF" << endl;  
+    cerr << "Loading WOLF" << endl;
     if (loadWOLF(vtNet, vtNetIdIdent, argv[3], pos)==1) {
       return 1;
     }
@@ -328,8 +276,8 @@ int main(int argc, char **argv) {
     if (pos == "verb") {
       mapping = loadMapfile(mapfile);
     }
-    // loading EWN 
-    cerr << "Loading EWN" << endl;  
+    // loading EWN
+    cerr << "Loading EWN" << endl;
     if (loadEWN(vtNet, vtNetIdIdent, argv[3], mapping)==1) {
       return 1;
     }
@@ -345,14 +293,13 @@ int main(int argc, char **argv) {
 
   // parsing JAWS and evaluating
   cerr << "Parsing JAWS" << endl;
-  if (parseAndEvaluatePolysemous(//bcsbase,
+  if (parseAndEvaluatePolysemous(bcsbase, BCSCount,
                                  litList,
                                  polysemousIdsList,
                                  vtNet,
                                  vtNetIdIdent,
                                  pos,
                                  argv[4],
-                                 //(BCSMode) bcsmode,
                                  goldValue,
                                  gold) == 1 ) {
     return 1;

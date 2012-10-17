@@ -13,13 +13,13 @@
 class JawsHandler : public xercesc::DefaultHandler {
 
 public :
-  
   JawsHandler(std::set<std::string>& _polyLitList,
               std::set<std::string>& _polyIdsList,
               std::map<std::string, std::set<std::string> >& _vtNet,
               std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
               std::map<std::pair<std::string, std::string>, int>& _goldValue,
-              bool _gold, std::string _pos);
+              bool _gold, std::string _pos,
+              const std::map<std::string, int>& BCS, const std::map<int, int>& BCSCount);
 
   ~JawsHandler();
 
@@ -85,6 +85,11 @@ protected :
   std::string translation;
   std::string tmpString;
   std::string pos;
+
+  /* Basic Concept Sets as defined by balkanet */
+  const std::map<std::string, int>& BCS;
+  const std::map<int, int>& BCSCount;
+  std::map<int, int> BCSJawsCount;
 
 };
 

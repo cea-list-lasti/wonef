@@ -16,6 +16,11 @@
 
 DATAPATH="/home/pradet/data"
 
+if [ "$1" != "noun" -a "$1" != "adj" -a "$1" != "verb" ]; then
+  echo "Usage: ./translateWN.sh pos --extract 1 2 4 --module 5 4 3"
+  exit 255
+fi
+
 # Parse the part-of-speech
 pos=$1 # noun
 poss="${1}s" #nouns
@@ -61,14 +66,11 @@ seqs="e${extract}.m${module}"
 day=`date +%Y_%B_%d`
 time=`date +%H_%M_%S`
 
-WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
+WOLF="$DATAPATH/opendata/wolf/wolf-0.1.5.format.xml"
 EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
 # This is simply index.noun without the monosemous nouns
-POLYSEMOUSINDEX="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.$pos"
-# OLDSCHOOL (means I don't care about BCSFILE?)
-#BCSMODE=4
-#BCSFILE='/home/qp230782/Projets/5000_bc.xml'
-GOLD="$DATAPATH/Gold/GT_$poss.xml"
+POLYSEMOUSINDEX="$DATAPATH/opendata/polysemous/WordNet-3.0/index.polysemous.$pos"
+GOLD="$DATAPATH/Gold30/GT_${poss}30.xml"
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
@@ -83,26 +85,28 @@ WNBESTDATA="data2/data.fr.$poss.best.$seqs"
 
 echo -e "\n-- Evaluating with $REFERENCE... --"
 
+echo ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
-tail -27 logs/eval$Poss.$seqs
+tail -29 logs/eval$Poss.$seqs
 
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNBESTDATA $REFERENCE &> logs/eval${Poss}Best.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
-tail -27 logs/eval${Poss}Best.$seqs
+tail -29 logs/eval${Poss}Best.$seqs
 
 echo -e "\n-- Evaluating with Gold... --"
+echo ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD &> logs/eval${Poss}G.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Gold evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
-tail -27 logs/eval${Poss}G.$seqs
+tail -29 logs/eval${Poss}G.$seqs
 
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNBESTDATA GOLD &> logs/eval${Poss}GBest.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best Gold evaluation, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
-tail -27 logs/eval${Poss}GBest.$seqs
+tail -29 logs/eval${Poss}GBest.$seqs
 
 # Archive relevant files to our archive.
 tmpsubdir="$Poss__${day}__${time}"

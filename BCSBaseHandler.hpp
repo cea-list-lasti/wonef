@@ -13,16 +13,16 @@ using namespace std;
 
 class BcsbaseHandler : public DefaultHandler {
 
-public : 
+public:
 
-  BcsbaseHandler(map<string, int >* bcsbase, string _pos);
+  BcsbaseHandler(map<string, int >& bcsbase, map<int, int>& BCSCount, string _pos);
 
   ~BcsbaseHandler();
 
-  void startElement(const XMLCh *const    	 uri,
-		const XMLCh *const   	localname,
-		const XMLCh *const   	qname,
-		const Attributes &  	attrs);
+  void startElement(const XMLCh *const uri,
+      const XMLCh *const localname,
+      const XMLCh *const qname,
+      const Attributes& attrs);
 
   void characters(const XMLCh *const chars, const XMLSize_t length) ;
 
@@ -30,16 +30,19 @@ public :
 
 
 private :
-  uint nbSynsets;  
+  uint nbSynsets;
   XMLTranscoder*   theTranscoder;
   string id;
   string PartOfSpeech;
   string literal;
   string tmpString;
   string pos;
-  map<string, int >* bcsbase;
-  
+  map<string, int >& bcsbase;
+  map<int, int >& BCSCount;
+
+  map<string, string> sensemap;
+
   string _transcode(const XMLCh* const chars);
-  bool checkAttr(const Attributes &  	attrs, string key, string value );
-  string getAttrValue(const Attributes &  	attrs, string value);
+  bool checkAttr(const Attributes & attrs, string key, string value );
+  string getAttrValue(const Attributes & attrs, string value);
 };

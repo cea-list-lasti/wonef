@@ -11,7 +11,7 @@ Options::Options(std::string pos, int argc, char **argv) {
   std::string extractionSuffix = ".e";
   std::string moduleSuffix = ".m";
 
-  datafile = getWN20Data(pos);
+  datafile = getWN30Data(pos);
 
   for (int i = 1; i < argc ; i++) {
     std::string param(argv[i]);
@@ -44,13 +44,13 @@ Options::Options(std::string pos, int argc, char **argv) {
   }
 }
 
-std::string Options::getWN20Data(std::string pos) {
+std::string Options::getWN30Data(std::string pos) {
   if (pos == "noun") {
-    return DATA_NOUN;
+    return DATA_NOUN30;
   } else if (pos == "verb") {
-    return DATA_VERB;
+    return DATA_VERB30;
   } else if (pos =="adj") {
-    return DATA_ADJ;
+    return DATA_ADJ30;
   } else {
     assert(false);
   }

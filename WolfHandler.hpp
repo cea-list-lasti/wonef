@@ -44,4 +44,5 @@ private :
   string pos;
   map<string, set<string> >* wolfNet;
   map<string, set<string> >* wolfNetIdIdent;
+  std::map<std::string, std::string> sensemap;
 };

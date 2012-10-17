@@ -18,8 +18,7 @@ class Options {
     bool noen;
 
   private:
-    std::string getWN15Data(std::string pos);
-    std::string getWN20Data(std::string pos);
+    std::string getWN30Data(std::string pos);
 
 };
 

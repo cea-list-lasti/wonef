@@ -25,6 +25,8 @@ WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet,
   XMLTransService::Codes theCode;
   theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
 
+  sensemap = loadSensemap(pos);
+
 }
 
 WolfHandler::~WolfHandler() {
@@ -58,22 +60,22 @@ void WolfHandler::endElement(const XMLCh *const /*uri*/,
                                 const XMLCh *const qname) {
 
   if (_transcode(qname, theTranscoder).compare("ID")==0) {
-    id = tmpString.substr(6, 8);
+    id = sensemap[tmpString.substr(6, 8)];
   } else if (_transcode(qname, theTranscoder).compare("POS")==0) {
     PartOfSpeech = tmpString;
   } else if (_transcode(qname, theTranscoder).compare("LITERAL")==0) {
     if ((pos == "noun" && PartOfSpeech == "n")
       || (pos == "verb" && PartOfSpeech == "v")
       || (pos == "adj" && PartOfSpeech == "a")) {
-      if (wolfNet->find(tolower(literal))==wolfNet->end()) {
-         (*wolfNet)[tolower(literal)]=set<string>();
-      }      
-//       cerr << "INSERT : " << tolower(literal) << " -> " << id << endl;
-      (*wolfNet)[tolower(literal)].insert(id);
+      if (wolfNet->find(literal)==wolfNet->end()) {
+         (*wolfNet)[literal]=set<string>();
+      }
+      // cerr << "INSERT : " << literal << " -> " << id << endl;
+      (*wolfNet)[literal].insert(id);
       if (wolfNetIdIdent->find(id)==wolfNetIdIdent->end()) {
          wolfNetIdIdent->insert(make_pair(id, set<string>()));
       }
-      (*wolfNetIdIdent)[id].insert(tolower(literal));
+      (*wolfNetIdIdent)[id].insert(literal);
     }
   }
 
