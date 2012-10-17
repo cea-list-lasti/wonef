@@ -94,10 +94,10 @@ void EwnLoader::load () {
             } else {
               for(std::set<std::string>::iterator itMapId = mapping->at(id).begin();
                   itMapId != mapping->at(id).end(); itMapId++){
-                if(ewnNet->find(tolower(literal))==ewnNet->end()) {
-                  (*ewnNet)[tolower(literal)]= set<string>();
+                if(ewnNet->find(literal)==ewnNet->end()) {
+                  (*ewnNet)[literal]= set<string>();
                 }
-                (*ewnNet)[tolower(literal)].insert(*itMapId);
+                (*ewnNet)[literal].insert(*itMapId);
 
                 if(ewnNetIdIdent->find(*itMapId)==ewnNet->end()) {
                   (*ewnNet)[*itMapId]= set<string>();

@@ -38,16 +38,6 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
   theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
 
   BCSJawsCount = { {1, 0}, {2, 0}, {3, 0} };
-
-  std::cout << "so, let's see those entries, dude!" << std::endl;
-
-  for(auto entry: vtNet) {
-    std::cout << entry.first << " -> ";
-    for(auto literal: entry.second) {
-      std::cout << literal << " ";
-    }
-    std::cout << std::endl;
-  }
 }
 
 JawsHandler::~JawsHandler() {

@@ -49,17 +49,17 @@ void GoldHandler::endElement(const XMLCh *const /*uri*/,
 
   if (_transcode(qname, theTranscoder).compare("CANDIDATE") == 0) {
     if (valide == 1) {
-      if (goldNet->find(tolower(tmpString)) == goldNet->end()) {
-        (*goldNet)[tolower(tmpString)] = set<string>();
+      if (goldNet->find(tmpString) == goldNet->end()) {
+        (*goldNet)[tmpString] = set<string>();
       }
-      (*goldNet)[tolower(tmpString)].insert(id);
+      (*goldNet)[tmpString].insert(id);
       if (goldNetIdIdent->find(id) == goldNetIdIdent->end()) {
         goldNetIdIdent->insert(make_pair(id, set<string>()));
       }
-      (*goldNetIdIdent)[id].insert(tolower(tmpString));
+      (*goldNetIdIdent)[id].insert(tmpString);
     }
 
-    pair<string, string> pairSynsetWord = pair<string, string>(id, tolower(tmpString));
+    pair<string, string> pairSynsetWord = pair<string, string>(id, tmpString);
     (*goldValue)[pairSynsetWord] = valide;
   }
 

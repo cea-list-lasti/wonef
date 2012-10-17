@@ -136,7 +136,6 @@ void JawsEvaluatorHandler::endElement(const XMLCh *const /*uri*/,
          while (translation.find('_')!=string::npos) {
            translation=translation.replace(translation.find('_'), 1, " ");
          }
-         translation=tolower(translation);
          cerr << "Testing : " << translation << " : " << id << endl;
          for (set<string>::iterator ittest = vtNet[translation].begin(); ittest !=vtNet[translation].end() ; ittest++) {
          cerr <<         "Inside : " <<*ittest<< endl;
