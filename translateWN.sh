@@ -66,7 +66,7 @@ seqs="e${extract}.m${module}"
 day=`date +%Y_%B_%d`
 time=`date +%H_%M_%S`
 
-WOLF="$DATAPATH/opendata/wolf/wolf-0.1.5.format.xml"
+WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
 EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
 # This is simply index.noun without the monosemous nouns
 POLYSEMOUSINDEX="$DATAPATH/opendata/polysemous/WordNet-3.0/index.polysemous.$pos"
@@ -85,7 +85,6 @@ WNBESTDATA="data2/data.fr.$poss.best.$seqs"
 
 echo -e "\n-- Evaluating with $REFERENCE... --"
 
-echo ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
@@ -97,7 +96,6 @@ echo -e "\n                *** Best ***"
 tail -29 logs/eval${Poss}Best.$seqs
 
 echo -e "\n-- Evaluating with Gold... --"
-echo ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD &> logs/eval${Poss}G.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Gold evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"

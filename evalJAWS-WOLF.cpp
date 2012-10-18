@@ -14,8 +14,6 @@
 #include "BCSBaseHandler.hpp"
 #include "WolfHandler.hpp"
 #include "EwnLoader.hpp"
-#include "JawsEvaluatorHandler.hpp"
-#include "JawsEvaluatorHandlerBench.hpp"
 #include "GoldHandler.hpp"
 #include "JawsHandler.hpp"
 
