@@ -88,23 +88,23 @@ echo -e "\n-- Evaluating with $REFERENCE... --"
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
-tail -29 logs/eval$Poss.$seqs
+tail -4 logs/eval$Poss.$seqs
 
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNBESTDATA $REFERENCE &> logs/eval${Poss}Best.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
-tail -29 logs/eval${Poss}Best.$seqs
+tail -4 logs/eval${Poss}Best.$seqs
 
 echo -e "\n-- Evaluating with Gold... --"
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD &> logs/eval${Poss}G.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Gold evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
-tail -29 logs/eval${Poss}G.$seqs
+tail -4 logs/eval${Poss}G.$seqs
 
 ./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNBESTDATA GOLD &> logs/eval${Poss}GBest.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best Gold evaluation, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
-tail -29 logs/eval${Poss}GBest.$seqs
+tail -4 logs/eval${Poss}GBest.$seqs
 
 # Archive relevant files to our archive.
 tmpsubdir="$Poss__${day}__${time}"

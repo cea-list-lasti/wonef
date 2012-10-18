@@ -2,6 +2,7 @@
 #include "Tools.hpp"
 
 #include <iostream>
+#include <iomanip>
 #include <boost/lexical_cast.hpp>
 #include <math.h>
 #include <unicode/unistr.h>
@@ -361,4 +362,16 @@ void JawsHandler::endDocument() {
   cout << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
   cout << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
 
+  cout << "           All " << setw(5) << terms << "            Polysemous" << endl;
+
+  cout << setw(5) << terms << ":  ";
+  cout << setw(6) << nbTermsInJaws << " - " << setw(5) << coverageWN*100 << "%" << "     ";
+  cout << setw(6) << nbPolyTermsInJaws << " - " << setw(5) << polycoverWN*100 << "%" << endl;
+
+  cout << "P/R:    ";
+  cout << setw(5) << allPseudoPrec * 100 << "% / " << setw(5) << allRecGt * 100 << "%" << "     ";
+  cout << setw(5) << polyPseudoPrec * 100 << "% / " << setw(5) << polyRecGt * 100 << "%" << endl;
+
+
+  cout << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
 }
