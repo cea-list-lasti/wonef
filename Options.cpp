@@ -1,6 +1,7 @@
 #include "Options.hpp"
 
 #include "Paths.hpp"
+
 #include <cassert>
 #include <iostream>
 
@@ -39,9 +40,13 @@ Options::Options(std::string pos, int argc, char **argv) {
 
   if (extractionSet.empty()) {
     extractionSet = {ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
-  } else {
-    std::cout << "non empty" << std::endl;
   }
+
+  std::cout << "extractions: ";
+  for(ExtractionType e: extractionSet) {
+    std::cout << ExtractorModule::toString(e) << " ";
+  }
+  std::cout << std::endl;
 }
 
 std::string Options::getWN30Data(std::string pos) {

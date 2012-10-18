@@ -167,4 +167,14 @@ ExtractionType ExtractorModule::fromInt(int n) {
   }
 }
 
+std::string ExtractorModule::toString(ExtractionType e) {
+  switch(e) {
+    case ExtractionType::Monosemous:     return "monosemous";
+    case ExtractionType::NoTranslation:  return "notranslation";
+    case ExtractionType::Uniq:           return "uniq";
+    case ExtractionType::MultipleSource: return "multiplesource";
+    default: assert(false);
+  }
+}
+
 
