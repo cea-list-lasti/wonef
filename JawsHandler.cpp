@@ -1,8 +1,11 @@
 #include "JawsHandler.hpp"
 #include "Tools.hpp"
+
 #include <iostream>
 #include <boost/lexical_cast.hpp>
 #include <math.h>
+#include <unicode/unistr.h>
+#include <unicode/stringpiece.h>
 
 JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
                          std::set<std::string>& _polyIdsList,
@@ -27,9 +30,8 @@ JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
   candidates = std::map<std::string, std::set<std::string > >();
 
   if(gold) {
-    for (std::map<std::pair<std::string, std::string>, int>::iterator
-         itGold = goldValue.begin(); itGold != goldValue.end(); itGold++) {
-      goldIds.insert((itGold->first).first);
+    for (auto itGold : goldValue) {
+      goldIds.insert((itGold.first).first);
     }
   }
 
@@ -50,7 +52,7 @@ void JawsHandler::startElement(const XMLCh *const /*uri*/,
                                const XMLCh *const qname,
                                const xercesc::Attributes & attrs){
 
-  if(_transcode(qname, theTranscoder).compare("SYNSET") == 0) {
+  if(_transcode(qname, theTranscoder) == "SYNSET") {
     id = getAttrValue(attrs, "id", theTranscoder);
 
     nbTermsOkInSynset = 0;
@@ -59,15 +61,15 @@ void JawsHandler::startElement(const XMLCh *const /*uri*/,
     nbPolyTermsInSynset = 0;
 
 
-  } else if(_transcode(qname, theTranscoder).compare("CANDIDATES") == 0) {
+  } else if(_transcode(qname, theTranscoder) == "CANDIDATES") {
     original = getAttrValue(attrs, "original", theTranscoder);
     wne.frenchCandidates[original] = WORDNET::TgtCandidates();
 
-  } else if (_transcode(qname, theTranscoder).compare("INSTANCES") == 0) {
+  } else if (_transcode(qname, theTranscoder) == "INSTANCES") {
     translation = getAttrValue(attrs, "translation", theTranscoder);
     wne.frenchSynset[translation] = std::set<WORDNET::TranslationInfos>();
 
-  } else if(_transcode(qname, theTranscoder).compare("INSTANCE") == 0) {
+  } else if(_transcode(qname, theTranscoder) == "INSTANCE") {
     WORDNET::TranslationInfos transInfos;
     transInfos.original = getAttrValue(attrs, "original", theTranscoder);
     transInfos.processed = getAttrValue(attrs, "processed", theTranscoder);
@@ -84,29 +86,41 @@ void JawsHandler::characters(const XMLCh *const chars,
   tmpString = _transcode(chars, theTranscoder);
 }
 
+bool gtHasTranslation(std::set<std::string> gtTerms, std::string jawsTerm) {
+  UnicodeString unicodeJawsTerm = UnicodeString::fromUTF8(StringPiece(jawsTerm));
+
+  for(std::string correct: gtTerms) {
+    UnicodeString unicodeCorrect = UnicodeString::fromUTF8(StringPiece(correct));
+    if (unicodeCorrect.caseCompare(unicodeJawsTerm, 0) == 0) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 
 void JawsHandler::endElement(const XMLCh *const /*uri*/,
                              const XMLCh *const /*localname*/,
                              const XMLCh *const qname){
 
-   if(_transcode(qname, theTranscoder).compare("ORIGINALDEF") == 0) {
+   if(_transcode(qname, theTranscoder) == "ORIGINALDEF") {
     wne.def = tmpString;
 
-   } else if(_transcode(qname, theTranscoder).compare("CANDIDATES") == 0) {
+   } else if(_transcode(qname, theTranscoder) == "CANDIDATES") {
     nbOriginals++;
     if (polyLitList.find(original) != polyLitList.end()) {
       nbPolyOriginals++;
     }
     original = string();
 
-  } else if (_transcode(qname, theTranscoder).compare("INSTANCES") == 0) {
+  } else if (_transcode(qname, theTranscoder) == "INSTANCES") {
+    if (translation.find("_") != std::string::npos) { return; }
+
     // check if the translation comes from polysemous source terms
     bool polysemous = false;
-    for (set<WORDNET::TranslationInfos>::iterator
-         itOrig = wne.frenchSynset[translation].begin();
-         itOrig != wne.frenchSynset[translation].end();
-         itOrig++){
-      if (polyLitList.find(itOrig->original) != polyLitList.end()) {
+    for (WORDNET::TranslationInfos itOrig : wne.frenchSynset[translation]) {
+      if (polyLitList.find(itOrig.original) != polyLitList.end()) {
         polysemous = true;
       }
     }
@@ -126,7 +140,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       }
 
       // count terms in the same synset in JAWS and GT
-      if (vtNetIdIdent[id].find(translation) != vtNetIdIdent[id].end()) {
+      if (gtHasTranslation(vtNetIdIdent[id], translation)) {
         nbTermsOk++;
         nbTermsOkInSynset++;
         if (polysemous == true) {
@@ -139,7 +153,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     jawsNetIdIdent[id].insert(translation);
     translation = string();
 
-  } else if(_transcode(qname, theTranscoder).compare("SYNSET") == 0) {
+  } else if(_transcode(qname, theTranscoder) == "SYNSET") {
     bool transInGt = false;
     bool transInJaws = false;
     nbSynsets++;
@@ -155,17 +169,19 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     if (vtNetIdIdent[id].size() > 0) {
       if (nbTermsInSynset > 0) {
         totalPercentageTermsOkInSynset += 1.0 * nbTermsOkInSynset / nbTermsInSynset;
-      }
-      if (nbPolyTermsInSynset > 0) {
-        totalPercentagePolyTermsOkInSynset += 1.0 * nbPolyTermsOkInSynset / nbPolyTermsInSynset;
+        if (nbPolyTermsInSynset > 0) {
+          totalPercentagePolyTermsOkInSynset += 1.0 * nbPolyTermsOkInSynset / nbPolyTermsInSynset;
+        }
       }
     }
 
     // count terms in GT
     if (vtNetIdIdent[id].size() > 0) {
       nbGtSynsets++;
-      for (std::set<std::string>::iterator itGtTerm = vtNetIdIdent[id].begin();
-           itGtTerm != vtNetIdIdent[id].end(); itGtTerm++) {
+      for (std::string gtTerm : vtNetIdIdent[id]) {
+        // MWE expressions don't count for now
+        if (gtTerm.find("_") != std::string::npos) { continue; }
+
         nbTermsInGt++;
         if (transInJaws) {
           nbTermsInGtAndAJawsSynset++;
@@ -194,23 +210,20 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       std::set<std::string> agree;
       std::set<std::string> type1;
       std::set<std::string> type2;
-      for (std::map<std::string, std::set<WORDNET::TranslationInfos> >::iterator
-           itJawsTerm = wne.frenchSynset.begin();
-           itJawsTerm != wne.frenchSynset.end();
-           itJawsTerm++) {
+      for (auto itJawsTerm : wne.frenchSynset) {
+        std::string jawsTerm = itJawsTerm.first;
         // Jaws and GT agree
-        if (vtNet[itJawsTerm->first].find(id) != vtNet[itJawsTerm->first].end()) {
-          agree.insert(itJawsTerm->first);
+        if (vtNet[jawsTerm].find(id) != vtNet[jawsTerm].end()) {
+          agree.insert(jawsTerm);
         // translations in Jaws not in GT
         } else {
-          type2.insert(itJawsTerm->first);
+          type2.insert(jawsTerm);
         }
       }
       // translations in GT not in Jaws
-      for (std::set<std::string>::iterator itGtTerm = vtNetIdIdent[id].begin();
-           itGtTerm != vtNetIdIdent[id].end(); itGtTerm++) {
-        if (jawsNetIdIdent[id].find(*itGtTerm) == jawsNetIdIdent[id].end()) {
-          type1.insert(*itGtTerm);
+      for (std::string gtTerm : vtNetIdIdent[id]) {
+        if (jawsNetIdIdent[id].find(gtTerm) == jawsNetIdIdent[id].end()) {
+          type1.insert(gtTerm);
         }
       }
 
@@ -223,22 +236,18 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       // Jaws and GT agree
       if (agree.size() > 0) {
         std::cout << "\n--- Jaws and Gt agree on :" << endl;
-        for (std::set<std::string>::iterator itAgree = agree.begin();
-             itAgree != agree.end(); itAgree++) {
-          std::cout << "\"" << *itAgree << "\"";
+        for (std::string sameTerm : agree) {
+          std::cout << "\"" << sameTerm << "\"";
           if(gold) {
             std::cout << " ("
-                      << goldValue[std::pair<std::string, std::string>(id, *itAgree)]
+                      << goldValue[make_pair(id, sameTerm)]
                       << " in gold)";
           }
           std::cout << endl;
-          for (std::set<WORDNET::TranslationInfos>::iterator
-              itTransInfos = wne.frenchSynset[*itAgree].begin();
-              itTransInfos != wne.frenchSynset[*itAgree].end();
-              itTransInfos++) {
-            std::cout << " - from " << itTransInfos->original
-                      << ", with " << itTransInfos->processed
-                      << " module, score : " << itTransInfos->score << endl;
+          for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[sameTerm]) {
+            std::cout << " - from " << itTransInfos.original
+                      << ", with " << itTransInfos.processed
+                      << " module, score : " << itTransInfos.score << endl;
           }
         }
       }
@@ -246,12 +255,11 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       // a term in this synset in GT not in Jaws
       if (type1.size() > 0) {
         std::cout << "\n--- Error type 1 : Jaws missed a " << pos << "." << endl;
-        for (std::set<std::string>::iterator itType1 = type1.begin();
-             itType1 != type1.end(); itType1++) {
-        std::cout << "\"" << *itType1 << "\"";
+        for (std::string gtTerm : type1) {
+          std::cout << "\"" << gtTerm << "\"";
           if(gold) {
             std::cout << " ("
-                      << goldValue[std::pair<std::string, std::string>(id, *itType1)]
+                      << goldValue[make_pair(id, gtTerm)]
                       << " in gold)";
           }
           std::cout << endl;
@@ -261,22 +269,18 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
       // a term in this synset in Jaws not in GT
       if (type2.size() > 0) {
         std::cout << "\n--- Error type 2 : this " << pos << " is not in GT." << endl;
-        for (std::set<std::string>::iterator itType2 = type2.begin();
-             itType2 != type2.end(); itType2++) {
-          std::cout << "\"" << *itType2 << "\"";
+        for (std::string jawsTerm : type2) {
+          std::cout << "\"" << jawsTerm << "\"";
           if(gold) {
             std::cout << " ("
-                      << goldValue[std::pair<std::string, std::string>(id, *itType2)]
+                      << goldValue[make_pair(id, jawsTerm)]
                       << " in gold)";
           }
           std::cout << endl;
-          for (std::set<WORDNET::TranslationInfos>::iterator
-              itTransInfos = wne.frenchSynset[*itType2].begin();
-              itTransInfos != wne.frenchSynset[*itType2].end();
-              itTransInfos++) {
-            std::cout << " - from " << itTransInfos->original
-                      << ", with " << itTransInfos->processed
-                      << " module, score : " << itTransInfos->score << endl;
+          for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[jawsTerm]) {
+            std::cout << " - from " << itTransInfos.original
+                      << ", with " << itTransInfos.processed
+                      << " module, score : " << itTransInfos.score << endl;
           }
         }
       }
