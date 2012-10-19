@@ -4,6 +4,8 @@
 #include "Options.hpp"
 #include "Loader.hpp"
 #include "Dumper.hpp"
+#include "Timer.hpp"
+
 #include "ExtractorModule.hpp"
 #include "SimSynModule.hpp"
 #include "HyperHypoModule.hpp"
@@ -11,6 +13,7 @@
 #include "MeroHoloLikeHyperModule.hpp"
 #include "LastChanceModule.hpp"
 #include "BestTranslations.hpp"
+
 #include <set>
 
 using namespace std;
@@ -18,7 +21,7 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
-  time_t globalStart = time(NULL);
+  Timer globalStart;
 
   SimSynModule* simsyner = NULL;
   LastChanceModule* lastchancer= NULL;
@@ -29,15 +32,15 @@ int main(int argc, char **argv) {
 
   cout << "Init " << options.suffix << endl;
 
-  time_t start = time(NULL);
+  Timer t;
   LoaderModule loader(options.datafile, dicfiles, ADJS_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
-  cout << "Loading duration : " << time(NULL) - start << " s " << endl;
+  cout << "Loading duration : " << t.duration() << "s" << endl;
 
-  start = time(NULL);
+  t.start();
   ExtractorModule extractor(pos, options.extractionSet);
   extractor.process(wn);
-  cout << "Extraction duration : " << time(NULL) - start << " s " << endl;
+  cout << "Extraction duration : " << t.duration() << "s" << endl;
 
   int nIteration = 0;
   for(int idModuleConf: options.moduleSequence) {
@@ -45,20 +48,20 @@ int main(int argc, char **argv) {
     switch (idModuleConf) {
     case 1:
       cout << "First step " << endl;
-      start = time(NULL);
+      t.start();
       lastchancer = new LastChanceModule(idModuleConf, nIteration);
       lastchancer->process(wn);
       delete lastchancer;
-      cout << "First step duration : " << time(NULL) - start << " s " << endl;
+      cout << "First step duration : " << t.duration() << "s" << endl;
       break;
 
     case 2 :
       cout << "Second step "  << endl;
-      start = time(NULL);
+      t.start();
       simsyner = new SimSynModule(pos, idModuleConf, nIteration);
       simsyner->process(wn);
       delete simsyner;
-      cout << "Second step duration : " << time(NULL) - start << " s " << endl;
+      cout << "Second step duration : " << t.duration() << "s" << endl;
       break;
 
     default:
@@ -68,24 +71,24 @@ int main(int argc, char **argv) {
   }
 
   cout << "Print Index  " << endl;
-  start = time(NULL);
+  t.start();
   DumperModule dumper("data2/data.fr.adjs" + options.suffix, "data2/index.fr.adjs" + options.suffix);
   dumper.dump(wn);
-  cout << "Print index duration : " << time(NULL) - start << " s " << endl;
+  cout << "Print index duration : " << t.duration() << "s" << endl;
 
   cout << "Choose best translations" << endl;
-  start = time(NULL);
+  t.start();
   BestTranslations bestTranslations;
   bestTranslations.choose(wn);
-  cout << "Choice duration : " << time(NULL) - start << " s " << endl;
+  cout << "Choice duration : " << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;
-  start = time(NULL);
+  t.start();
   DumperModule dumperBest("data2/data.fr.adjs.best" + options.suffix, "data2/index.fr.adjs.best" + options.suffix);
   dumperBest.dump(wn);
-  cout << "Printing best JAWS duration : " << time(NULL) - start << " s " << endl;
+  cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 
 
-  cout << "Overall duration : " << time(NULL) - globalStart << " s " << endl;
+  cout << "Overall duration : " << globalStart.duration() << "s" << endl;
   return 0;
 }
