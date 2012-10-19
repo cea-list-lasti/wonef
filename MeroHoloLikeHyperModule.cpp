@@ -11,16 +11,11 @@
 using namespace std;
 
 
-MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration) {
-  initializeDicMap(dicmap, WORDS_IDS);
-  loadMeroHolos(datafile);
-  
-  std::ostringstream oss;
-  oss << idModuleConf << "." << nIteration;
-  suffix = oss.str();
+MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration)
+  : MeroHoloModule(datafile, idModuleConf, nIteration) {
 
   tRoler = TypeRoler(TYPEROLERFILE, "COMPDUNOM");
- 
+
 }
 
 

@@ -10,8 +10,8 @@
 using namespace std;
 
 
-HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration)
-  : mode(_mode), pos(_pos) {
+HyperHypoModule::HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration, bool _verbose)
+  : TranslatorModule(_verbose), mode(_mode), pos(_pos) {
 
     if (typeroler.compare("window10")==0) {
       tRoler = TypeRoler(TYPEROLERFILE4, typeroler);
@@ -110,7 +110,7 @@ void HyperHypoModule::loadHyperHypos(string dataInput) {
 
 
 
-void HyperHypoModule::process(WORDNET::WordNet& wn, bool verbose ){
+void HyperHypoModule::process(WORDNET::WordNet& wn){
   map<string, set<string> >reverseIndex;
 
   int nbDisamb = 0;

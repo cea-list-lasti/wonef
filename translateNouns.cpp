@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
       cout << "Third step " << endl;
       start = time(NULL);
       merohololiker = new MeroHoloLikeHyperModule(options.datafile, idModuleConf, nIteration);
-      merohololiker->process(wn, R_HYPER, false);
+      merohololiker->process(wn, R_HYPER);
       delete merohololiker;
       cout << "Third step duration : " << time(NULL) - start << " s " << endl;
       break;
@@ -96,7 +96,7 @@ int main(int argc, char **argv) {
       cout << "Six step "  << endl;
       start = time(NULL);
       hyperhypoer = new HyperHypoModule(options.datafile, "SUJ_V", R_HYPER, pos, idModuleConf, nIteration);
-      hyperhypoer->process(wn, false);
+      hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Six step duration : " << time(NULL) - start << " s " << endl;
       break;
@@ -105,7 +105,7 @@ int main(int argc, char **argv) {
       cout << "Seventh step "  << endl;
       hyperhypoer = new HyperHypoModule(options.datafile, "COMPDUNOM", R_HYPO, pos, idModuleConf, nIteration);
       start = time(NULL);
-      hyperhypoer->process(wn, false);
+      hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Seventh step duration : " << time(NULL) - start << " s " << endl;
       break;
@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
       cout << "Eigth step "  << endl;
       start = time(NULL);
       hyperhypoer = new HyperHypoModule(options.datafile, "COD_V", R_HYPER, pos, idModuleConf, nIteration);
-      hyperhypoer->process(wn, false);
+      hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Eigth step duration : " << time(NULL) - start << " s " << endl;
       break;
@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
       cout << "Ninth step "  << endl;
       start = time(NULL);
       hyperhypoer = new HyperHypoModule(options.datafile, "window10", R_HYPER, pos, idModuleConf, nIteration);
-      hyperhypoer->process(wn, false);
+      hyperhypoer->process(wn);
       delete hyperhypoer;
       cout << "Ninth step duration : " << time(NULL) - start << " s " << endl;
       break;

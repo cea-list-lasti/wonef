@@ -12,14 +12,14 @@
 using namespace std;
 
 class LastChanceModule : TranslatorModule {
-  public : 
-  
-  LastChanceModule(int idModuleConf, int nIteration);
+  public:
+
+  LastChanceModule(int idModuleConf, int nIteration, bool verbose=false);
   virtual ~LastChanceModule();
 
-  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn) ;
 
-  
+
   string trySelecAndReplace(map<string, set<WORDNET::TranslationInfos> >& synset,
 			    map<string, WORDNET::TgtCandidates>::iterator it);
 

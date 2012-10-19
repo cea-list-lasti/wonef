@@ -12,7 +12,8 @@
 
 using namespace std;
 
-SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration) : pos(_pos) {
+SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration, bool _verbose) : 
+  TranslatorModule(_verbose), pos(_pos) {
   std::ostringstream oss;
   oss << idModuleConf << "." << nIteration;
   suffix = oss.str();
@@ -36,7 +37,7 @@ SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration) : pos(
 
 }
 
-void SimSynModule::process(WORDNET::WordNet& wn, bool /*verbose*/){
+void SimSynModule::process(WORDNET::WordNet& wn){
   typedef std::pair<const string, WORDNET::WordNetEntry> synset_t;
   typedef std::pair<const string, WORDNET::TgtCandidates> candidate_t;
 

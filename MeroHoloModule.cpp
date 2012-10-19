@@ -1,63 +1,23 @@
-
-
 #include "MeroHoloModule.hpp"
 #include "distance.hpp"
 #include "Paths.hpp"
 #include "../src/tools.h"
+
 #include <iostream>
 #include <fstream>
 
-
 using namespace std;
 
-MeroHoloModule::MeroHoloModule() {
-}
-
-MeroHoloModule::MeroHoloModule(string& datafile, int idModuleConf, int nIteration) :
-  cntMeros(0), cntHolos(0) {
-  initializeDicMap(dicmap, WORDS_IDS);  
+MeroHoloModule::MeroHoloModule(string& datafile, int idModuleConf, int nIteration, bool _verbose) :
+  TranslatorModule(_verbose), cntMeros(0), cntHolos(0) {
+  initializeDicMap(dicmap, WORDS_IDS);
   loadMeroHolos(datafile);
-  
+
   std::ostringstream oss;
   oss << idModuleConf << "." << nIteration;
   suffix = oss.str();
 
-  ifstream idss(TYPEROLERFILE, fstream::in);
-  if (idss.fail()) {
-    cerr << "Oops, " << TYPEROLERFILE << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
-    exit(-1);
-  }
-  string s;
-  cerr << "Loading " << TYPEROLERFILE << endl;
-  while (getline(idss, s) ) {	
-    ulong currentId; 
-    stringstream ss;
-    ss << s;
-    ss >> currentId;
-    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(currentId, s.substr(s.find('{')+1), MERO);    
-    }
-  }
-  idss.close();  
-  cout << "end load TYPEROLERFILE" << endl;
-
-  idss.open(HOLOFILE);
-
-  cerr << "Loading " << HOLOFILE << endl;
-  while (getline(idss, s) ) {	
-    ulong currentId; 
-    stringstream ss;
-    ss << s;
-    ss >> currentId;
-    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(currentId, s.substr(s.find('{')+1), HOLO);    
-    }
-  }
-  idss.close();  
-  cout << "end load HOLOFILE" << endl;
-  
 }
-
 
 void MeroHoloModule::loadMeroHolos(string dataInput) {
   ifstream dataIfs(dataInput.c_str(), fstream::in);
@@ -68,67 +28,63 @@ void MeroHoloModule::loadMeroHolos(string dataInput) {
   string s;
   ulong cntMeros = 0;
   ulong cntHolos = 0;
-  while (getline(dataIfs, s) ) {	
+  while (getline(dataIfs, s) ) {
     string str = s;
-    string synsetId = s.substr(0, s.find(' '));    
+    string synsetId = s.substr(0, s.find(' '));
 
-    std::string::const_iterator start, end; 
-    boost::match_results<std::string::const_iterator> what; 
-    boost::match_flag_type flags = boost::match_default; 
+    std::string::const_iterator start, end;
+    boost::match_results<std::string::const_iterator> what;
+    boost::match_flag_type flags = boost::match_default;
 
     // extract meronyms && holonyms
-    start = s.begin(); 
-    end = s.end(); 
-    while(regex_search(start, end, what, boost::regex("%p ([^ ]*) n"), flags))  { 
-      /*      cerr << "-------------------------------" << endl;
-      cerr << "INSERT mero 0 : " << synsetId << " -> " << string(what[1].first, what[1].second) << endl;
-      */
+    start = s.begin();
+    end = s.end();
+    while(regex_search(start, end, what, boost::regex("%p ([^ ]*) n"), flags))  {
       if (meronyms.find(synsetId)==meronyms.end()) {
-	meronyms[synsetId]=set<string>(); 
+        meronyms[synsetId]=set<string>();
       }
-      meronyms[synsetId].insert(string(what[1].first, what[1].second)); 
-      // update search position: 
-      start = what[1].second; 
-      // update flags: 
-      flags |= boost::match_prev_avail; 
-      flags |= boost::match_not_bob; 
+      meronyms[synsetId].insert(string(what[1].first, what[1].second));
+      // update search position:
+      start = what[1].second;
+      // update flags:
+      flags |= boost::match_prev_avail;
+      flags |= boost::match_not_bob;
     }
     cntMeros+=meronyms[synsetId].size();
 
-    while(regex_search(start, end, what, boost::regex("#p ([^ ]*) n"), flags))  { 
+    while(regex_search(start, end, what, boost::regex("#p ([^ ]*) n"), flags))  {
       /*      cerr << "-------------------------------" << endl;
       cerr << "INSERT holo 0 : " << synsetId << " -> " << string(what[1].first, what[1].second) << endl;
       */
 
-      holonyms[synsetId].insert(string(what[1].first, what[1].second)); 
-      /*      for (set<string>::iterator it1 = reverseIndex[synsetId].begin(); it1 != reverseIndex[synsetId].end() ; it1 ++) {
-	cerr << *it1 << endl;
+      holonyms[synsetId].insert(string(what[1].first, what[1].second));
+      /*
+      for (std::string it1 : reverseIndex[synsetId]) {
+        cerr << it1 << endl;
       }
       cerr << "-->>>--" << endl;
-      for (set<string>::iterator it1 = reverseIndex[string(what[1].first, what[1].second)].begin(); it1 != reverseIndex[string(what[1].first, what[1].second)].end() ; it1 ++) {
-	cerr << *it1 << endl;
+      for (std::string it1 : reverseIndex[string(what[1].first, what[1].second)]) {
+        cerr << it1 << endl;
       }
       */
 
-
-      // update search position: 
-      start = what[1].second; 
-      // update flags: 
-      flags |= boost::match_prev_avail; 
-      flags |= boost::match_not_bob; 
+      // update search position:
+      start = what[1].second;
+      // update flags:
+      flags |= boost::match_prev_avail;
+      flags |= boost::match_not_bob;
     }
     cntHolos+=holonyms[synsetId].size();
   }
 
-
-  dataIfs.close(); 
+  dataIfs.close();
   /*
   cerr << "Total Meronyms : " << cntMeros << endl;
-  cerr << "Total Holonyms : " << cntHolos << endl;  
+  cerr << "Total Holonyms : " << cntHolos << endl;
   */
 }
 
-void MeroHoloModule::processLine(ulong currentId, string s, Mode mode) {  
+void MeroHoloModule::processLine(ulong currentId, string s, Mode mode) {
   stringstream ss;
   ss << s;
   string currentIdCooc;
@@ -136,38 +92,29 @@ void MeroHoloModule::processLine(ulong currentId, string s, Mode mode) {
   uint sum = 0;
   while (ss.get()!='}') {
     ss.unget();
-    ulong currentIdCooc; 
+    ulong currentIdCooc;
     ss >> currentIdCooc;
     ss.ignore(16, ',');
     ss >> nbOccs;
     ss.ignore(4, ';');
     sum+=nbOccs;
     if (mode==MERO) {
-      coocsMero[dicmap[currentId]].insert(make_pair(dicmap[currentIdCooc], nbOccs));      
+      coocsMero[dicmap[currentId]].insert(make_pair(dicmap[currentIdCooc], nbOccs));
     } else if (mode==HOLO) {
       coocsHolo[dicmap[currentId]].insert(make_pair(dicmap[currentIdCooc], nbOccs));
     }
-
   }
+
   if (mode==MERO) {
     sumMeros[dicmap[currentId]]=sum;
   } else if (mode==HOLO) {
     sumHolos[dicmap[currentId]]=sum;
-  }  
-  
+  }
+
 }
-
-
-
-
-
-
-
-
 
 MeroHoloModule::~MeroHoloModule() {
 }
-
 
 void MeroHoloModule::finalize() {
   meronyms.clear();
@@ -178,147 +125,180 @@ void MeroHoloModule::finalize() {
   sumHolos.clear();
 }
 
+void MeroHoloModule::process(WORDNET::WordNet& wn) {
 
-
-
-
-
-
-
-void MeroHoloModule::process(WORDNET::WordNet& wn, bool verbose){
-  for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, set<WORDNET::TranslationInfos> >::iterator itwne = itwn->second.frenchSynset.begin(); itwne !=itwn->second.frenchSynset.end(); itwne++) {	
-      //    for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
-      //      for (map<string, int>::iterator itcand = itlit->second.cand.begin() ; itcand != itlit->second.cand.end(); itcand++) {
-	reverseIndex[itwn->first].insert(itwne->first); 
-	//	cerr << itwn->first << " -> " << itwne->first << endl;
-	//      }
+  /* Load TypeRoler files */
+  ifstream idss(TYPEROLERFILE, fstream::in);
+  if (idss.fail()) {
+    cerr << "Oops, " << TYPEROLERFILE << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
+  }
+  string s;
+  cerr << "Loading " << TYPEROLERFILE << endl;
+  while (getline(idss, s) ) {
+    ulong currentId;
+    stringstream ss;
+    ss << s;
+    ss >> currentId;
+    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
+      processLine(currentId, s.substr(s.find('{')+1), MERO);
     }
   }
-  for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
-    for (map<string, WORDNET::TgtCandidates>::iterator itlit = itwn->second.frenchCandidates.begin(); itlit !=itwn->second.frenchCandidates.end(); itlit++) {	
-      if (itlit->second.cand.size()>0) {
-/*	if (itlit->first.find("equaliz") !=string::npos) {
-	  cerr << "TRY PROCESS : " << itlit->first << " -> " << itlit->second.cand.size() << endl;
-	}*/
-	itwn->second.newdef=trySelecAndReplace(wn, itwn, itlit, verbose);
+  idss.close();
+  cout << "end load TYPEROLERFILE" << endl;
+
+  idss.open(HOLOFILE);
+
+  cerr << "Loading " << HOLOFILE << endl;
+  while (getline(idss, s) ) {
+    ulong currentId;
+    stringstream ss;
+    ss << s;
+    ss >> currentId;
+    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
+      processLine(currentId, s.substr(s.find('{')+1), HOLO);
+    }
+  }
+  idss.close();
+  cout << "end load HOLOFILE" << endl;
+
+
+
+
+  // First compute the reverseIndex to know about existing instances
+  for (const auto& itwn : wn) {
+    string synsetId = itwn.first;
+    WORDNET::WordNetEntry wne = itwn.second;
+    for (const auto& itinstance : wne.frenchSynset) {
+      string instance = itinstance.first;
+      reverseIndex[synsetId].insert(instance);
+    }
+  }
+
+  // Then try to add new instances with trySelectAndReplace
+  for (auto& itwn : wn) {
+    WORDNET::WordNetEntry& wne = itwn.second;
+    for (auto& itlit : wne.frenchCandidates) {
+      auto candidates = itlit.second.cand;
+      if (!candidates.empty()) {
+        wne.newdef = trySelecAndReplace(wn, itwn.first, wne, itlit);
       }
-    }      
+    }
   }
 }
-
-
 
 // TODO: OPTIMIZE SCORE : MI ? Z ? or what ?
 
-float MeroHoloModule::computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose) {
-  if (wn[strB].frenchSynset.size()==0) {
+float MeroHoloModule::computeIsPartOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB) {
+  if (wn.at(strB).frenchSynset.empty()) {
     return 0;
   }
+
   float sum = 0;
   if (verbose) {
     cerr << "--------------" << endl;
   }
-  for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {    
+  for (const auto& itlit : wn.at(strB).frenchSynset) {
     if (verbose) {
-      cerr << strA << " is part of " << itlit->first  << " ? " << endl;
+      cerr << strA << " is part of " << itlit.first  << " ? " << endl;
     }
-    sum += (float)coocsMero[strA][itlit->first]/(float)(sumMeros[strA]*sumHolos[itlit->first]);
-//    cerr << "MERO sum += " << coocsMero[strA][itlit->first] << " / (" << sumMeros[strA] << "*" << sumHolos[itlit->first] << ")\n";
+    sum += (float)coocsMero[strA][itlit.first]/(float)(sumMeros[strA]*sumHolos[itlit.first]);
+    // cerr << "MERO sum += " << coocsMero[strA][itlit.first] << " / (";
+    // cerr << sumMeros[strA] << "*" << sumHolos[itlit.first] << ")\n";
     cntMeros++;
   }
   if (verbose) {
-    cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
+    cerr<< "Score : " << sum/(float)wn.at(strB).frenchSynset.size() << endl;
     cerr << "--------------" << endl;
   }
 
-  return sum/(float)wn[strB].frenchSynset.size(); 
+  return sum/(float)wn.at(strB).frenchSynset.size();
 }
 
 
-float MeroHoloModule::computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose) {
-  if (wn[strB].frenchSynset.size()==0) {
+float MeroHoloModule::computeIsWholeOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB) {
+  if (wn.at(strB).frenchSynset.empty()) {
     return 0;
   }
+
   float sum = 0;
   if (verbose) {
     cerr << "--------------" << endl;
   }
-  for (map<string,set<WORDNET::TranslationInfos> >::iterator itlit = wn[strB].frenchSynset.begin(); itlit != wn[strB].frenchSynset.end(); itlit++) {
+  for (const auto& itlit : wn.at(strB).frenchSynset) {
     if (verbose) {
-      cerr << strA << " is whole of " << itlit->first  << " ? " << endl;
+      cerr << strA << " is whole of " << itlit.first  << " ? " << endl;
     }
-    sum += (float)coocsHolo[strA][itlit->first]/(float)(sumMeros[itlit->first]*sumHolos[strA]);
-//    cerr << "HOLO sum += " << coocsHolo[strA][itlit->first] << " / (" << sumMeros[itlit->first] << "*" << sumHolos[strA] << ")\n";
+    sum += (float)coocsHolo[strA][itlit.first]/(float)(sumMeros[itlit.first]*sumHolos[strA]);
+    // cerr << "HOLO sum += " << coocsHolo[strA][itlit.first] << " / (";
+    // cerr << sumMeros[itlit.first] << "*" << sumHolos[strA] << ")\n";
     cntHolos++;
   }
 
   if (verbose) {
-    cerr<< "Score : " << sum/(float)wn[strB].frenchSynset.size() << endl;
+    cerr<< "Score : " << sum/(float)wn.at(strB).frenchSynset.size() << endl;
     cerr << "--------------" << endl;
   }
 
-
-  return sum/(float)wn[strB].frenchSynset.size(); 
+  return sum/(float)wn.at(strB).frenchSynset.size();
 }
 
 
-
-
-string MeroHoloModule::trySelecAndReplace(WORDNET::WordNet& wn, map<string, WORDNET::WordNetEntry>::iterator itwne, map<string, WORDNET::TgtCandidates>::iterator itlit, bool verbose) {
+string MeroHoloModule::trySelecAndReplace(const WORDNET::WordNet& wn, string synsetId, WORDNET::WordNetEntry& wne, pair<string, WORDNET::TgtCandidates> itlit) {
   set<pair<string, float> > elected;
 
   map<string, float> votes;
 
-  for (map<string,int>::iterator itcand = itlit->second.cand.begin(); itcand!=itlit->second.cand.end(); itcand++) {
-    //    cerr << "Processing : " << itcand->first << " - " << itwne->first << endl;    
-    for (set<string>::iterator itMero = meronyms[itwne->first].begin(); itMero != meronyms[itwne->first].end(); itMero++) {
-      itwne->second.meros.insert(reverseIndex[*itMero].begin(), reverseIndex[*itMero].end());
+  for (auto itcand : itlit.second.cand) {
+    std::string candidate = itcand.first;
+    // cerr << "Processing : " << candidate << " - " << synsetId << endl;
+    for (const std::string& synsetMeronym : meronyms[synsetId]) {
+      wne.meros.insert(reverseIndex[synsetMeronym].begin(), reverseIndex[synsetMeronym].end());
       if (verbose) {
-	cerr << "COMPUTE mero : " << itcand->first << " -> " << *itMero << endl;
+        cerr << "COMPUTE mero : " << candidate << " -> " << synsetMeronym << endl;
       }
-      votes[itcand->first]+=computeIsWholeOfScore(wn, itcand->first, *itMero, verbose);      
+      votes[candidate]+=computeIsWholeOfScore(wn, candidate, synsetMeronym);
     }
-    if (verbose && votes[itcand->first]!=0) {
-      cerr << "VOTE mero :" << votes[itcand->first] << endl;
+    if (verbose && votes[candidate]!=0) {
+      cerr << "VOTE mero :" << votes[candidate] << endl;
     }
-    for (set<string>::iterator itHolo = holonyms[itwne->first].begin(); itHolo != holonyms[itwne->first].end(); itHolo++) {      
-      itwne->second.holos.insert(reverseIndex[*itHolo].begin(),
-				reverseIndex[*itHolo].end());
+
+    for (std::string synsetHolonym : holonyms[synsetId]) {
+      wne.holos.insert(reverseIndex[synsetHolonym].begin(), reverseIndex[synsetHolonym].end());
       if (verbose) {
-	cerr << "COMPUTE holo : " << itcand->first << " -> " << *itHolo << endl;
+        cerr << "COMPUTE holo : " << candidate << " -> " << synsetHolonym << endl;
       }
-      votes[itcand->first]+=computeIsPartOfScore(wn, itcand->first, *itHolo, verbose);
+      votes[candidate]+=computeIsPartOfScore(wn, candidate, synsetHolonym);
     }
-    if (verbose && votes[itcand->first]!=0) {
-      cerr << "VOTE holo :" << votes[itcand->first] << endl;
+    if (verbose && votes[candidate]!=0) {
+      cerr << "VOTE holo :" << votes[candidate] << endl;
     }
   }
-  
+
   float bestVote = 0;
   pair<string, float> elec;
-  for(map<string, float>::iterator itVotes= votes.begin(); itVotes!=votes.end() ; itVotes++)  {
-    if (itVotes->second> bestVote && itVotes->first !="" ) {
-      bestVote = itVotes->second;
-      elec = *itVotes;
+  for(auto itVotes : votes) {
+    std::string candidate = itVotes.first;
+    float vote = itVotes.second;
+    if (vote > bestVote && !candidate.empty()) {
+      bestVote = vote;
+      elec = itVotes;
     }
   }
 
-
-
-  if (elec.first != "") {
+  if (!elec.first.empty()) {
     elected.insert(elec);
-    for (set<pair<string, float> >::iterator itElec = elected.begin(); itElec != elected.end(); itElec++) {
-      if (itwne->second.frenchSynset.find(itElec->first)==itwne->second.frenchSynset.end()) {
-	itwne->second.frenchSynset[itElec->first]=set<WORDNET::TranslationInfos>();
+    for (auto itElec : elected) {
+      if (wne.frenchSynset.find(itElec.first) == wne.frenchSynset.end()) {
+        wne.frenchSynset[itElec.first]=set<WORDNET::TranslationInfos>();
       }
       WORDNET::TranslationInfos translationInfos;
-      translationInfos.original = itlit->first;
+      translationInfos.original = itlit.first;
       translationInfos.processed = "meroholo" + suffix;
-      translationInfos.score = itElec->second;
-      itwne->second.frenchSynset[itElec->first].insert(translationInfos);
+      translationInfos.score = itElec.second;
+      wne.frenchSynset[itElec.first].insert(translationInfos);
     }
-    return LoaderModule::tgt2TgtDefs[(*elected.begin()).first];
+    return LoaderModule::tgt2TgtDefs[elected.begin()->first];
   }
   return "";
 }

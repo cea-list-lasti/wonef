@@ -17,18 +17,16 @@ enum Mode{MERO, HOLO};
 
 
 class MeroHoloModule : public TranslatorModule {
-  
-public : 
-  MeroHoloModule();
-  MeroHoloModule(string& datafile, int idModuleConf, int nIteration);
+
+public:
+  MeroHoloModule(string& datafile, int idModuleConf, int nIteration, bool verbose=false);
   virtual ~MeroHoloModule();
 
 
   void finalize();
-  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
- 
-protected :
+  virtual void process(WORDNET::WordNet& wn) ;
 
+protected :
   map<ulong, string> dicmap ;
   map<string, set<string> >reverseIndex;
 
@@ -43,18 +41,18 @@ protected :
 
   string suffix;
 
-  int cntMeros; 
+  int cntMeros;
   int cntHolos;
 
-  string trySelecAndReplace(WORDNET::WordNet& wn,
-			    map<string, WORDNET::WordNetEntry>::iterator itwne,
-			    map<string, WORDNET::TgtCandidates >::iterator itcand,
-			    bool verbose);
+  string trySelecAndReplace(const WORDNET::WordNet& wn,
+          std::string synsetId,
+			    WORDNET::WordNetEntry& wne,
+			    pair<string, WORDNET::TgtCandidates>itcand);
 
 
   void loadMeroHolos(string dataInput);
-  float computeIsPartOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose);
-  float computeIsWholeOfScore(WORDNET::WordNet& wn, string strA, string strB, bool verbose);
+  float computeIsPartOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB);
+  float computeIsWholeOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB);
   void processLine(ulong currentId, string s, Mode mode);
 
 };

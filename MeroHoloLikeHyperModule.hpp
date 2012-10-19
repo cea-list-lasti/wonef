@@ -15,8 +15,8 @@
 using namespace std;
 
 class MeroHoloLikeHyperModule : public MeroHoloModule {
-  
-public : 
+
+public:
   MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration);
   virtual ~MeroHoloLikeHyperModule();
 
@@ -24,8 +24,8 @@ public :
   void finalize();
   virtual void process(WORDNET::WordNet& wn, TRMode mode, bool verbose=false) ;
 
- 
-protected :
+
+protected:
 
   TypeRoler tRoler;
 

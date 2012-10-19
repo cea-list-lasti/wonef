@@ -5,10 +5,12 @@
 
 class TranslatorModule {
   public:
-    TranslatorModule() ;
+    TranslatorModule(bool verbose = false) ;
     virtual ~TranslatorModule() ;
 
-    virtual void process(WORDNET::WordNet& wn, bool verbose) = 0;
+    virtual void process(WORDNET::WordNet& wn) = 0;
+  protected:
+    bool verbose;
 };
 
 #endif

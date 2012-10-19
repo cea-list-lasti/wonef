@@ -12,18 +12,19 @@ using namespace std;
 
 
 class HyperHypoModule : TranslatorModule {
-public : 
-  HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration);
+public:
+  HyperHypoModule(string dataInput, string typeroler, TRMode _mode, string _pos, int idModuleConf, int nIteration, bool verbose=false);
   virtual ~HyperHypoModule();
 
-  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn) ;
   static string getHead (string locution);
-private : 
+
+private:
   TRMode mode;
   TypeRoler tRoler;
   map<string, set<string> >hypernyms;
   map<string, set<string> >hyponyms;
-  
+
   string pos;
   string suffix;
 

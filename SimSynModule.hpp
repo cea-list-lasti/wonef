@@ -13,10 +13,10 @@ using namespace std;
 
 class SimSynModule : public TranslatorModule {
 public:
-  SimSynModule(string _pos, int idModuleConf, int nIteration);
+  SimSynModule(string _pos, int idModuleConf, int nIteration, bool verbose=false);
   virtual ~SimSynModule() {}
 
-  virtual void process(WORDNET::WordNet& wn, bool verbose=false) ;
+  virtual void process(WORDNET::WordNet& wn) ;
 
 private:
   pair<string, size_t> selectTgtWord (map<string,int>& candidates,
