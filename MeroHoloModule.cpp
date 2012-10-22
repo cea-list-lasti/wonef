@@ -206,12 +206,12 @@ string MeroHoloModule::trySelecAndReplace(const WORDNET::WordNet& wn, string syn
       cerr << "VOTE mero :" << votes[candidate] << endl;
     }
 
-    for (std::string synsetHolonym : holonyms[synsetId]) {
-      wne.holos.insert(reverseIndex[synsetHolonym].begin(), reverseIndex[synsetHolonym].end());
+    for (std::string termHolonym : holonyms[synsetId]) {
+      wne.holos.insert(reverseIndex[termHolonym].begin(), reverseIndex[termHolonym].end());
       if (verbose) {
-        cerr << "COMPUTE holo : " << candidate << " -> " << synsetHolonym << endl;
+        cerr << "COMPUTE holo : " << candidate << " -> " << termHolonym << endl;
       }
-      votes[candidate]+=computeIsPartOfScore(wn, candidate, synsetHolonym);
+      votes[candidate]+=computeIsPartOfScore(wn, candidate, termHolonym);
     }
     if (verbose && votes[candidate]!=0) {
       cerr << "VOTE holo :" << votes[candidate] << endl;
