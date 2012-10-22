@@ -33,6 +33,8 @@ class Timer
             usecs += 1000000;
         }
 
+        start();
+
         return static_cast<float>(1.0 * secs + 1.0 * usecs / 1000000.0);
     }
 };

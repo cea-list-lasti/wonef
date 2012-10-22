@@ -3,6 +3,7 @@
 #include <xercesc/sax2/XMLReaderFactory.hpp>
 #include <xercesc/sax2/DefaultHandler.hpp>
 #include <xercesc/util/XMLString.hpp>
+#include <boost/filesystem.hpp>
 
 #include <math.h>
 #include <set>
@@ -10,6 +11,7 @@
 #include <iostream>
 #include <fstream>
 
+#include "Timer.hpp"
 #include "Paths.hpp"
 #include "BCSBaseHandler.hpp"
 #include "WolfHandler.hpp"
@@ -52,7 +54,7 @@ std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
       }
     }
   }
-  
+
   return(mapping);
 }
 
@@ -77,80 +79,37 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
   llss.close();
 }
 
-int preParser(string what, SAX2XMLReader*& parser) {
-  try {
-    XMLPlatformUtils::Initialize();
-  }
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << what << " Error during initialization! :\n";
-    cout << what << " Exception message 0 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return 1;
-  }
-
+SAX2XMLReader* preParser(void) {
+  SAX2XMLReader* parser;
+  XMLPlatformUtils::Initialize();
   parser = XMLReaderFactory::createXMLReader();
   parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
   parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
-  return 0;
+
+  return parser;
 }
 
-int postParser(string what, string filename, SAX2XMLReader*& parser) {
-  try {
-    parser->parse(filename.c_str());
-  }
-  catch (const XMLException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << what << " Exception message 1 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return -1;
-  }
-  catch (const SAXParseException& toCatch) {
-    char* message = XMLString::transcode(toCatch.getMessage());
-    cout << what << " Exception message 2 is: \n"
-         << message << "\n";
-    XMLString::release(&message);
-    return -1;
-  }
-  return 0;
-}
+int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string spos) {
 
-int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string pos) {
+  SAX2XMLReader* parser = preParser();
 
-  SAX2XMLReader* parser = NULL;
-  if (preParser("Wolf", parser) == 1) {
-    return 1;
-  }
-
-  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent, pos);
+  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent, spos);
   parser->setContentHandler(wolfHandler);
   parser->setErrorHandler(wolfHandler);
-
-  if (postParser ("Wolf", filename, parser) == -1) {
-    return -1;
-  }
+  parser->parse(filename.c_str());
 
   delete parser;
   delete wolfHandler;
   return 0;
 }
 
-int loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string pos) {
+int loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string spos) {
 
-  SAX2XMLReader* parser = NULL;
-  if (preParser("BCS", parser) == 1) {
-    return 1;
-  }
-
-  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(bcsbase, BCSCount, pos);
+  SAX2XMLReader* parser = preParser();
+  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(bcsbase, BCSCount, spos);
   parser->setContentHandler(bcsbaseHandler);
   parser->setErrorHandler(bcsbaseHandler);
-
-  if (postParser ("BCS", BCSFILE, parser) == -1) {
-    return -1;
-  }
+  parser->parse(BCSFILE.c_str());
 
   delete parser;
   delete bcsbaseHandler;
@@ -169,18 +128,12 @@ int loadGold(map<string, set<string> >& goldNet,
              map<pair<string, string>, int>& goldValue,
              string filename) {
 
-  SAX2XMLReader* parser = NULL;
-  if (preParser("Gold", parser) == 1) {
-    return 1;
-  }
+  SAX2XMLReader* parser = preParser();
 
   GoldHandler* goldHandler = new GoldHandler(& goldNet, & goldNetIdIdent, & goldValue);
   parser->setContentHandler(goldHandler);
   parser->setErrorHandler(goldHandler);
-
-  if (postParser("Gold", filename, parser) == -1) {
-    return -1;
-  }
+  parser->parse(filename.c_str());
 
   delete parser;
   delete goldHandler;
@@ -190,7 +143,7 @@ int loadGold(map<string, set<string> >& goldNet,
 
 
 
-int parseAndEvaluatePolysemous(map<string, int>& BCS,
+int parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
                                map<int, int>& BCSCount,
                                set<string>& litList,
                                set<string>& polysemousIdsList,
@@ -201,12 +154,16 @@ int parseAndEvaluatePolysemous(map<string, int>& BCS,
                                map<pair<string, string>, int>& goldValue,
                                bool gold) {
 
-  SAX2XMLReader* parser = NULL;
-  if (preParser("Jaws", parser) == 1) {
-    return 1;
+  Timer t;
+  SAX2XMLReader* parser = preParser();
+
+  if (!boost::filesystem::exists(filename))
+  {
+    cerr << "Oops, " << filename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
   }
 
-  JawsHandler* jawsHandler = new JawsHandler(litList,
+  JawsHandler* jawsHandler = new JawsHandler(out, litList,
                                              polysemousIdsList,
                                              vtNet,
                                              vtNetIdIdent,
@@ -216,35 +173,34 @@ int parseAndEvaluatePolysemous(map<string, int>& BCS,
                                              BCS, BCSCount);
   parser->setContentHandler(jawsHandler);
   parser->setErrorHandler(jawsHandler);
-
-  if (postParser("Jaws", filename, parser) == -1) {
-    return -1;
-  }
-
+  parser->parse(filename.c_str());
 
   delete parser;
   delete jawsHandler;
+
+  std::cout << "Parsed JAWS duration: " << t.duration() << "s" << std::endl;
   return 0;
 }
 
-
-
-
-
 int main(int argc, char **argv) {
-  if (argc < 5) {
-    cerr << "Usage : evalJAWS-WOLF pos literalList vt.xml jaws.xml vtmode" << endl;
+  if (argc < 2) {
+    cerr << "Usage : evalJAWS-WOLF pos seqs" << endl;
     return 1;
   }
 
-  bool gold = false;
-  string vtmode = argv[5];
-  string pos = argv[1];
-  string mapfile;
-  if (pos == "verb") {
-    mapfile = MAPVERB15_20;
-  }
+  string spos = argv[1];
+  string seqs = argv[2];
 
+  std::map<std::string, POS> POS_of_string = { {"noun", POS::Noun}, {"verb", POS::Verb}, {"adj", POS::Adj} };
+  POS pos = POS_of_string[spos];
+
+  std::map<POS, std::string> groundTruth = { {POS::Noun, WOLF}, {POS::Verb, EWN}, {POS::Adj, WOLF} };
+  std::map<POS, std::string> goldFile = { { POS::Noun, GOLD_NOUN }, {POS::Verb, GOLD_VERB}, {POS::Adj, GOLD_ADJ} };
+
+  std::string suffix = spos + "." + seqs;
+
+  std::string jaws = "data/jaws." + suffix + ".xml";
+  std::string bestJaws = "data/jaws.best." + suffix + ".xml";
 
   set<string> litList = set<string>();
   set<string> polysemousIdsList = set<string>();
@@ -255,53 +211,54 @@ int main(int argc, char **argv) {
   map<string, set<string> > mapping = map<string, set<string> >();
   map<pair<string, string>, int> goldValue = map<pair<string, string>, int>();
 
+  Timer t;
 
-  // No use of BCS for now
-  loadBcsBase(bcsbase, BCSCount, pos);
+  // BCS helps evaluation metrics
+  loadBcsBase(bcsbase, BCSCount, spos);
+  std::cout << "BCS duration: " << t.duration() << "s" << std::endl;
 
   // Loading literal list
-  loadPolysemousLiteral(litList, polysemousIdsList, argv[2]);
+  loadPolysemousLiteral(litList, polysemousIdsList, POLYSEMOUSINDEX + spos);
 
-  cerr << "VTMode : " << vtmode << endl;
-  // loading WOLF
-  if (vtmode.compare("WOLF")==0) {
-    cerr << "Loading WOLF" << endl;
-    if (loadWOLF(vtNet, vtNetIdIdent, argv[3], pos)==1) {
-      return 1;
-    }
-  } else if (vtmode.compare("EWN")==0) {
-    // Loading Mapping File
-    if (pos == "verb") {
-      mapping = loadMapfile(mapfile);
-    }
+  std::string vtmode = groundTruth[pos];
+
+  /* First evaluate with a given ground truth */
+  if (vtmode == "WOLF") {
+    // loading WOLF
+    cerr << "Loading WOLF... ";
+    loadWOLF(vtNet, vtNetIdIdent, groundTruth[pos], spos);
+    cerr << t.duration() << endl;
+  } else if (vtmode == "EWN") {
     // loading EWN
-    cerr << "Loading EWN" << endl;
-    if (loadEWN(vtNet, vtNetIdIdent, argv[3], mapping)==1) {
-      return 1;
-    }
-  } else if (vtmode.compare("GOLD")==0) {
-    //loading gold
-    cerr << "Loading Gold" << endl;
-    if (loadGold(vtNet, vtNetIdIdent, goldValue, argv[3])==1) {
-      return 1;
-    }
-    gold = true;
+    cerr << "Loading EWN... ";
+    mapping = loadMapfile(MAPVERB15_20);
+    loadEWN(vtNet, vtNetIdIdent, groundTruth[pos], mapping);
+    cerr << t.duration() << endl;
   }
 
+  std::ofstream log("logs/eval." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(log, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent,
+      spos, jaws, goldValue, false);
 
-  // parsing JAWS and evaluating
-  cerr << "Parsing JAWS" << endl;
-  if (parseAndEvaluatePolysemous(bcsbase, BCSCount,
-                                 litList,
-                                 polysemousIdsList,
-                                 vtNet,
-                                 vtNetIdIdent,
-                                 pos,
-                                 argv[4],
-                                 goldValue,
-                                 gold) == 1 ) {
-    return 1;
-  }
+  std::ofstream logBest("logs/eval.best" + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent,
+      spos, bestJaws, goldValue, false);
+
+  /* Then evaluate with the gold standard */
+  cerr << "Loading Gold... ";
+  loadGold(vtNet, vtNetIdIdent, goldValue, groundTruth[pos]);
+  cerr << t.duration() << "s" << endl;
+
+  std::ofstream logGold("logs/eval.gold." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent,
+      spos, jaws, goldValue, true);
+  std::ofstream logGoldBest("logs/eval.gold.best" + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent,
+      spos, bestJaws, goldValue, true);
 
   return 0;
 }

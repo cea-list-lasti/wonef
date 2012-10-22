@@ -70,21 +70,21 @@ int main(int argc, char **argv) {
 
   }
 
-  cout << "Print Index  " << endl;
+  cout << "Dumping Jaws...";
   t.start();
-  DumperModule dumper("data2/data.fr.adjs" + options.suffix, "data2/index.fr.adjs" + options.suffix);
+  DumperModule dumper("data/jaws.adj" + options.suffix + ".xml", "data/jaws.index.adj" + options.suffix + ".xml");
   dumper.dump(wn);
-  cout << "Print index duration : " << t.duration() << "s" << endl;
+  cout << t.duration() << "s" << endl;
 
-  cout << "Choose best translations" << endl;
+  cout << "Choosing best translations...";
   t.start();
   BestTranslations bestTranslations;
   bestTranslations.choose(wn);
-  cout << "Choice duration : " << t.duration() << "s" << endl;
+  cout << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;
   t.start();
-  DumperModule dumperBest("data2/data.fr.adjs.best" + options.suffix, "data2/index.fr.adjs.best" + options.suffix);
+  DumperModule dumperBest("data/jaws.best.adj" + options.suffix + ".xml", "data/jaws.best.index.adj." + options.suffix + ".xml");
   dumperBest.dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 

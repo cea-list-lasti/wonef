@@ -6,6 +6,7 @@
 #include <xercesc/sax2/DefaultHandler.hpp>
 #include <xercesc/sax2/Attributes.hpp>
 #include <xercesc/util/TransService.hpp>
+#include <fstream>
 #include <string>
 #include <set>
 #include <map>
@@ -13,13 +14,15 @@
 class JawsHandler : public xercesc::DefaultHandler {
 
 public :
-  JawsHandler(std::set<std::string>& _polyLitList,
-              std::set<std::string>& _polyIdsList,
-              std::map<std::string, std::set<std::string> >& _vtNet,
-              std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
-              std::map<std::pair<std::string, std::string>, int>& _goldValue,
-              bool _gold, std::string _pos,
-              const std::map<std::string, int>& BCS, const std::map<int, int>& BCSCount);
+  JawsHandler(
+      std::ofstream& _out,
+      std::set<std::string>& _polyLitList,
+      std::set<std::string>& _polyIdsList,
+      std::map<std::string, std::set<std::string> >& _vtNet,
+      std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
+      std::map<std::pair<std::string, std::string>, int>& _goldValue,
+      bool _gold, std::string _pos,
+      const std::map<std::string, int>& BCS, const std::map<int, int>& BCSCount);
 
   ~JawsHandler();
 
@@ -36,6 +39,8 @@ public :
                   const XMLCh *const qname);
 
   void endDocument();
+
+  std::ofstream& out;
 
   uint nbSynsets;
   uint nbJawsSynsets;

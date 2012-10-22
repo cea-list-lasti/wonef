@@ -66,65 +66,47 @@ seqs="e${extract}.m${module}"
 day=`date +%Y_%B_%d`
 time=`date +%H_%M_%S`
 
-WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
-EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
-# This is simply index.noun without the monosemous nouns
-POLYSEMOUSINDEX="$DATAPATH/opendata/polysemous/WordNet-3.0/index.polysemous.$pos"
-GOLD="$DATAPATH/Gold30/GT_${poss}30.xml"
-
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
 ./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled$Poss 2> /dev/null
 
-# The produced files
-WNDATA="data2/data.fr.$poss.$seqs"
-WNBESTDATA="data2/data.fr.$poss.best.$seqs"
-
+./evalJAWS-WOLF $pos $seqs
+gprof evalJAWS-WOLF > profiledEval$Poss.$seqs
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 
 echo -e "\n-- Evaluating with $REFERENCE... --"
-
-./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNDATA $REFERENCE &> logs/eval$Poss.$seqs
-if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
 tail -4 logs/eval$Poss.$seqs
-
-./evalJAWS-WOLF $pos $POLYSEMOUSINDEX ${!REFERENCE} $WNBESTDATA $REFERENCE &> logs/eval${Poss}Best.$seqs
-if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
 tail -4 logs/eval${Poss}Best.$seqs
-
 echo -e "\n-- Evaluating with Gold... --"
-./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNDATA GOLD &> logs/eval${Poss}G.$seqs
-if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Gold evaluation failed, exiting."; exit 255; fi
 echo -e "\n                *** Normal ***"
 tail -4 logs/eval${Poss}G.$seqs
-
-./evalJAWS-WOLF $pos $POLYSEMOUSINDEX $GOLD $WNBESTDATA GOLD &> logs/eval${Poss}GBest.$seqs
-if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Best Gold evaluation, exiting."; exit 255; fi
 echo -e "\n                *** Best ***"
 tail -4 logs/eval${Poss}GBest.$seqs
 
 # Archive relevant files to our archive.
-tmpsubdir="$Poss__${day}__${time}"
-tmppath=/tmp/$tmpsubdir
-archivedir=/home/pradet/archives/$day
 
-mkdir -p $tmppath
-mkdir -p $archivedir
-chmod -f o+w $archivedir
+#echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
 
-echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
+#tmpsubdir="$Poss__${day}__${time}"
+#tmppath=/tmp/$tmpsubdir
+#archivedir=/home/pradet/archives/$day
 
-cp logs/trans$Poss.$seqs $tmppath
-cp logs/eval$Poss.$seqs logs/eval${Poss}Best.$seqs logs/eval${Poss}G.$seqs logs/eval${Poss}GBest.$seqs $tmppath
-cp $WNDATA $WNBESTDATA $tmppath
-cp profiled$Poss $tmppath
+#mkdir -p $tmppath
+#mkdir -p $archivedir
+#chmod -f o+w $archivedir
 
-pushd /tmp > /dev/null
-  tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
-  rm -rf $tmpsubdir
-popd > /dev/null
+#cp logs/trans$Poss.$seqs $tmppath
+#cp logs/eval$Poss.$seqs logs/eval${Poss}Best.$seqs logs/eval${Poss}G.$seqs logs/eval${Poss}GBest.$seqs $tmppath
+#cp $WNDATA $WNBESTDATA $tmppath
+#cp profiled$Poss $tmppath
 
-echo " done!"
+#pushd /tmp > /dev/null
+#  tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
+#  rm -rf $tmpsubdir
+#popd > /dev/null
+
+#echo " done!"

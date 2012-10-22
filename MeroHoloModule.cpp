@@ -1,6 +1,7 @@
 #include "MeroHoloModule.hpp"
 #include "distance.hpp"
 #include "Paths.hpp"
+#include "Timer.hpp"
 #include "../src/tools.h"
 
 #include <iostream>
@@ -10,13 +11,12 @@ using namespace std;
 
 MeroHoloModule::MeroHoloModule(string& datafile, int idModuleConf, int nIteration, bool _verbose) :
   TranslatorModule(_verbose), cntMeros(0), cntHolos(0) {
-  initializeDicMap(dicmap, WORDS_IDS);
+
   loadMeroHolos(datafile);
 
   std::ostringstream oss;
   oss << idModuleConf << "." << nIteration;
   suffix = oss.str();
-
 }
 
 void MeroHoloModule::loadMeroHolos(string dataInput) {
@@ -84,85 +84,10 @@ void MeroHoloModule::loadMeroHolos(string dataInput) {
   */
 }
 
-void MeroHoloModule::processLine(ulong currentId, string s, Mode mode) {
-  stringstream ss;
-  ss << s;
-  string currentIdCooc;
-  uint nbOccs = 0;
-  uint sum = 0;
-  while (ss.get()!='}') {
-    ss.unget();
-    ulong currentIdCooc;
-    ss >> currentIdCooc;
-    ss.ignore(16, ',');
-    ss >> nbOccs;
-    ss.ignore(4, ';');
-    sum+=nbOccs;
-    if (mode==MERO) {
-      coocsMero[dicmap[currentId]].insert(make_pair(dicmap[currentIdCooc], nbOccs));
-    } else if (mode==HOLO) {
-      coocsHolo[dicmap[currentId]].insert(make_pair(dicmap[currentIdCooc], nbOccs));
-    }
-  }
-
-  if (mode==MERO) {
-    sumMeros[dicmap[currentId]]=sum;
-  } else if (mode==HOLO) {
-    sumHolos[dicmap[currentId]]=sum;
-  }
-
-}
-
-MeroHoloModule::~MeroHoloModule() {
-}
-
-void MeroHoloModule::finalize() {
-  meronyms.clear();
-  holonyms.clear();
-  coocsMero.clear();
-  coocsHolo.clear();
-  sumMeros.clear();
-  sumHolos.clear();
-}
-
 void MeroHoloModule::process(WORDNET::WordNet& wn) {
-
   /* Load TypeRoler files */
-  ifstream idss(TYPEROLERFILE, fstream::in);
-  if (idss.fail()) {
-    cerr << "Oops, " << TYPEROLERFILE << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
-    exit(-1);
-  }
-  string s;
-  cerr << "Loading " << TYPEROLERFILE << endl;
-  while (getline(idss, s) ) {
-    ulong currentId;
-    stringstream ss;
-    ss << s;
-    ss >> currentId;
-    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(currentId, s.substr(s.find('{')+1), MERO);
-    }
-  }
-  idss.close();
-  cout << "end load TYPEROLERFILE" << endl;
-
-  idss.open(HOLOFILE);
-
-  cerr << "Loading " << HOLOFILE << endl;
-  while (getline(idss, s) ) {
-    ulong currentId;
-    stringstream ss;
-    ss << s;
-    ss >> currentId;
-    if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-      processLine(currentId, s.substr(s.find('{')+1), HOLO);
-    }
-  }
-  idss.close();
-  cout << "end load HOLOFILE" << endl;
-
-
+  meroTypeRoler = TypeRoler(TYPEROLERFILE, "COMPDUNOM");
+  holoTypeRoler = TypeRoler(HOLOFILE, "COMPDUNOM.reverse");
 
 
   // First compute the reverseIndex to know about existing instances
@@ -187,6 +112,16 @@ void MeroHoloModule::process(WORDNET::WordNet& wn) {
   }
 }
 
+int MeroHoloModule::get_cooc(Mode m, const string& strA, ulong itlit_first_code) {
+  TypeRoler& tr = m == MERO ? meroTypeRoler : holoTypeRoler;
+  for(auto p : tr.repository[strA]) {
+    if (p.first == itlit_first_code) {
+      return p.second;
+    }
+  }
+  return 0;
+}
+
 // TODO: OPTIMIZE SCORE : MI ? Z ? or what ?
 
 float MeroHoloModule::computeIsPartOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB) {
@@ -202,9 +137,13 @@ float MeroHoloModule::computeIsPartOfScore(const WORDNET::WordNet& wn, const str
     if (verbose) {
       cerr << strA << " is part of " << itlit.first  << " ? " << endl;
     }
-    sum += (float)coocsMero[strA][itlit.first]/(float)(sumMeros[strA]*sumHolos[itlit.first]);
-    // cerr << "MERO sum += " << coocsMero[strA][itlit.first] << " / (";
-    // cerr << sumMeros[strA] << "*" << sumHolos[itlit.first] << ")\n";
+
+    ulong itlit_first_code = meroTypeRoler.dicmapReverse[itlit.first];
+    sum += get_cooc(MERO, strA, itlit_first_code) /
+      (float)(meroTypeRoler.numCoocs[strA] * holoTypeRoler.numCoocs[itlit.first]);
+
+    //cerr << "MERO sum += " << get_cooc(MERO, strA, itlit_first_code) << " / (";
+    //cerr << meroTypeRoler.numCoocs[strA] << "*" << holoTypeRoler.numCoocs[itlit.first] << ")\n";
     cntMeros++;
   }
   if (verbose) {
@@ -229,9 +168,13 @@ float MeroHoloModule::computeIsWholeOfScore(const WORDNET::WordNet& wn, const st
     if (verbose) {
       cerr << strA << " is whole of " << itlit.first  << " ? " << endl;
     }
-    sum += (float)coocsHolo[strA][itlit.first]/(float)(sumMeros[itlit.first]*sumHolos[strA]);
-    // cerr << "HOLO sum += " << coocsHolo[strA][itlit.first] << " / (";
-    // cerr << sumMeros[itlit.first] << "*" << sumHolos[strA] << ")\n";
+
+    ulong itlit_first_code = holoTypeRoler.dicmapReverse[itlit.first];
+    sum += get_cooc(HOLO, strA, itlit_first_code) /
+      (float)(meroTypeRoler.numCoocs[itlit.first] * holoTypeRoler.numCoocs[strA]);
+
+    //cerr << "HOLO sum += " << get_cooc(HOLO, strA, itlit_first_code) << " / (";
+    //cerr << meroTypeRoler.numCoocs[itlit.first] << "*" << meroTypeRoler.numCoocs[strA] << ")\n";
     cntHolos++;
   }
 
@@ -251,7 +194,7 @@ string MeroHoloModule::trySelecAndReplace(const WORDNET::WordNet& wn, string syn
 
   for (auto itcand : itlit.second.cand) {
     std::string candidate = itcand.first;
-    // cerr << "Processing : " << candidate << " - " << synsetId << endl;
+    //cerr << "Processing : " << candidate << " - " << synsetId << endl;
     for (const std::string& synsetMeronym : meronyms[synsetId]) {
       wne.meros.insert(reverseIndex[synsetMeronym].begin(), reverseIndex[synsetMeronym].end());
       if (verbose) {
@@ -302,4 +245,5 @@ string MeroHoloModule::trySelecAndReplace(const WORDNET::WordNet& wn, string syn
   }
   return "";
 }
+
 

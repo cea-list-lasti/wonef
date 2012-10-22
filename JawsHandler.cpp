@@ -8,25 +8,27 @@
 #include <unicode/unistr.h>
 #include <unicode/stringpiece.h>
 
-JawsHandler::JawsHandler(std::set<std::string>& _polyLitList,
-                         std::set<std::string>& _polyIdsList,
-                         std::map<std::string, std::set<std::string> >& _vtNet,
-                         std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
-                         std::map<std::pair<std::string, std::string>, int>& _goldValue,
-                         bool _gold, std::string _pos,
-                         const std::map<std::string, int>& _BCS,
-                         const std::map<int, int>& _BCSCount) :
-                         nbSynsets(0), nbJawsSynsets(0), nbGtSynsets(0),
-                         nbOriginals(0), nbPolyOriginals(0),
-                         nbTermsInJaws(0), nbPolyTermsInJaws(0),
-                         nbTermsInGt(0), nbPolyTermsInGt(0),
-                         nbTermsInGtAndAJawsSynset(0), nbPolyTermsInGtAndAJawsSynset(0),
-                         nbTermsOk(0), nbPolyTermsOk(0),
-                         nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
-                         totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
-                         polyLitList(_polyLitList), polyIdsList(_polyIdsList),
-                         vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
-                         goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount) {
+JawsHandler::JawsHandler(std::ofstream& _out,
+    std::set<std::string>& _polyLitList,
+    std::set<std::string>& _polyIdsList,
+    std::map<std::string, std::set<std::string> >& _vtNet,
+    std::map<std::string, std::set<std::string> >& _vtNetIdIdent,
+    std::map<std::pair<std::string, std::string>, int>& _goldValue,
+    bool _gold, std::string _pos,
+    const std::map<std::string, int>& _BCS,
+    const std::map<int, int>& _BCSCount) :
+  out(_out),
+  nbSynsets(0), nbJawsSynsets(0), nbGtSynsets(0),
+  nbOriginals(0), nbPolyOriginals(0),
+  nbTermsInJaws(0), nbPolyTermsInJaws(0),
+  nbTermsInGt(0), nbPolyTermsInGt(0),
+  nbTermsInGtAndAJawsSynset(0), nbPolyTermsInGtAndAJawsSynset(0),
+  nbTermsOk(0), nbPolyTermsOk(0),
+  nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
+  totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
+  polyLitList(_polyLitList), polyIdsList(_polyIdsList),
+  vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
+  goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount) {
 
   candidates = std::map<std::string, std::set<std::string > >();
 
@@ -230,23 +232,23 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
 
       /* print an abstract about the synset
       ----------------------------------------------------*/
-      std::cout << "\n*****************" << endl;
-      std::cout << "In the synset " << id << " :" << endl;
-      std::cout << "Definition : " << wne.def << endl;
+      out << "\n*****************" << endl;
+      out << "In the synset " << id << " :" << endl;
+      out << "Definition : " << wne.def << endl;
 
       // Jaws and GT agree
       if (agree.size() > 0) {
-        std::cout << "\n--- Jaws and Gt agree on :" << endl;
+        out << "\n--- Jaws and Gt agree on :" << endl;
         for (std::string sameTerm : agree) {
-          std::cout << "\"" << sameTerm << "\"";
+          out << "\"" << sameTerm << "\"";
           if(gold) {
-            std::cout << " ("
+            out << " ("
                       << goldValue[make_pair(id, sameTerm)]
                       << " in gold)";
           }
-          std::cout << endl;
+          out << endl;
           for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[sameTerm]) {
-            std::cout << " - from " << itTransInfos.original
+            out << " - from " << itTransInfos.original
                       << ", with " << itTransInfos.processed
                       << " module, score : " << itTransInfos.score << endl;
           }
@@ -255,31 +257,31 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
 
       // a term in this synset in GT not in Jaws
       if (type1.size() > 0) {
-        std::cout << "\n--- Error type 1 : Jaws missed a " << pos << "." << endl;
+        out << "\n--- Error type 1 : Jaws missed a " << pos << "." << endl;
         for (std::string gtTerm : type1) {
-          std::cout << "\"" << gtTerm << "\"";
+          out << "\"" << gtTerm << "\"";
           if(gold) {
-            std::cout << " ("
+            out << " ("
                       << goldValue[make_pair(id, gtTerm)]
                       << " in gold)";
           }
-          std::cout << endl;
+          out << endl;
         }
       }
 
       // a term in this synset in Jaws not in GT
       if (type2.size() > 0) {
-        std::cout << "\n--- Error type 2 : this " << pos << " is not in GT." << endl;
+        out << "\n--- Error type 2 : this " << pos << " is not in GT." << endl;
         for (std::string jawsTerm : type2) {
-          std::cout << "\"" << jawsTerm << "\"";
+          out << "\"" << jawsTerm << "\"";
           if(gold) {
-            std::cout << " ("
+            out << " ("
                       << goldValue[make_pair(id, jawsTerm)]
                       << " in gold)";
           }
-          std::cout << endl;
+          out << endl;
           for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[jawsTerm]) {
-            std::cout << " - from " << itTransInfos.original
+            out << " - from " << itTransInfos.original
                       << ", with " << itTransInfos.processed
                       << " module, score : " << itTransInfos.score << endl;
           }
@@ -322,56 +324,56 @@ void JawsHandler::endDocument() {
   float recSynsetsGt = (float)nbJawsSynsets / (float)nbGtSynsets;
   float recallSynsets = (float)nbJawsSynsets / (float)nbSynsets;
 
-  cout.setf(ios::fixed, ios::floatfield);
-  cout.precision(2);
+  out.setf(ios::fixed, ios::floatfield);
+  out.precision(2);
 
-  cout << "------------------------------------" << endl;
-  cout << "\t\t*** All " + terms + " ***" << endl;
-  cout << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << endl;
-  cout << "In synsets known by GT :\t" << nbInJawsSynsetInGt << endl;
-  cout << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << endl;
-  cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << endl;
+  out << "------------------------------------" << endl;
+  out << "\t\t*** All " + terms + " ***" << endl;
+  out << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << endl;
+  out << "In synsets known by GT :\t" << nbInJawsSynsetInGt << endl;
+  out << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << endl;
+  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << endl;
 
-  cout << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
-  cout << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << endl;
-  cout << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
-  cout << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
-  cout << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
-  cout << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
+  out << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
+  out << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << endl;
+  out << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
+  out << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
+  out << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
+  out << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
 
-  cout << "\t\t*** Polysemous ***" << endl;
-  cout << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << endl;
-  cout << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << endl;
-  cout << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << endl;
-  cout << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << endl;
+  out << "\t\t*** Polysemous ***" << endl;
+  out << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << endl;
+  out << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << endl;
+  out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << endl;
+  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << endl;
 
-  cout << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
-  cout << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << endl;
-  cout << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
-  cout << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
-  cout << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
-  cout << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
-  cout << "---" << endl;
-  cout << "nbOriginals : " << nbOriginals
+  out << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
+  out << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << endl;
+  out << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
+  out << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
+  out << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
+  out << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
+  out << "---" << endl;
+  out << "nbOriginals : " << nbOriginals
        << ", polysemous : " << nbPolyOriginals << endl;
-  cout << "nbSynsets in WN : " << nbSynsets
+  out << "nbSynsets in WN : " << nbSynsets
        << ", in Jaws : " << nbJawsSynsets
        << ", in Gt : " << nbGtSynsets << endl;
-  cout << "BCS:\t\t\t\t" << BCSJawsCount[1] << " " << BCSJawsCount[2] << " " << BCSJawsCount[3] << endl;
-  cout << "BCS(%):\t\t\t\t" << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
-  cout << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
-  cout << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
+  out << "BCS:\t\t\t\t" << BCSJawsCount[1] << " " << BCSJawsCount[2] << " " << BCSJawsCount[3] << endl;
+  out << "BCS(%):\t\t\t\t" << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
+  out << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
+  out << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
 
-  cout << "           All " << setw(5) << terms << "            Polysemous" << endl;
+  out << "           All " << setw(5) << terms << "           Polysemous" << endl;
 
-  cout << setw(5) << terms << ":  ";
-  cout << setw(6) << nbTermsInJaws << " - " << setw(5) << coverageWN*100 << "%" << "     ";
-  cout << setw(6) << nbPolyTermsInJaws << " - " << setw(5) << polycoverWN*100 << "%" << endl;
+  out << setw(5) << terms << ":  ";
+  out << setw(6) << nbTermsInJaws << " - " << setw(5) << coverageWN*100 << "%" << "     ";
+  out << setw(6) << nbPolyTermsInJaws << " - " << setw(5) << polycoverWN*100 << "%" << endl;
 
-  cout << "P/R:    ";
-  cout << setw(5) << allPseudoPrec * 100 << "% / " << setw(5) << allRecGt * 100 << "%" << "     ";
-  cout << setw(5) << polyPseudoPrec * 100 << "% / " << setw(5) << polyRecGt * 100 << "%" << endl;
+  out << "P/R:    ";
+  out << setw(5) << allPseudoPrec * 100 << "% / " << setw(5) << allRecGt * 100 << "%" << "     ";
+  out << setw(5) << polyPseudoPrec * 100 << "% / " << setw(5) << polyRecGt * 100 << "%" << endl;
 
 
-  cout << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
+  out << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
 }

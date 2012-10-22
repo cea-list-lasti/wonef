@@ -89,6 +89,7 @@ void TypeRoler::readRepository(std::string protofile, std::string relation) {
   int fd = open(protofile.c_str(), O_RDONLY);
   google::protobuf::io::ZeroCopyInputStream* raw_input = new google::protobuf::io::FileInputStream(fd);
   google::protobuf::io::CodedInputStream* coded_input = new google::protobuf::io::CodedInputStream(raw_input);
+  // limit is 600, warn at 550
   coded_input->SetTotalBytesLimit(600*1024*1024, 550*1024*1024);
   if (!repositoryFile.ParseFromCodedStream(coded_input)) {
     std::cerr << "Failed to parse " << protofile << std::endl;

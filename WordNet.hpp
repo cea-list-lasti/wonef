@@ -6,8 +6,9 @@
 #include <set>
 #include <map>
 
-namespace WORDNET {
+enum class POS { Noun, Verb, Adj };
 
+namespace WORDNET {
 
 typedef struct TgtCandidates {
   std::map<std::string, int> cand;

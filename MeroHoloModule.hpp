@@ -20,10 +20,8 @@ class MeroHoloModule : public TranslatorModule {
 
 public:
   MeroHoloModule(string& datafile, int idModuleConf, int nIteration, bool verbose=false);
-  virtual ~MeroHoloModule();
+  virtual ~MeroHoloModule() {}
 
-
-  void finalize();
   virtual void process(WORDNET::WordNet& wn) ;
 
 protected :
@@ -33,11 +31,8 @@ protected :
   map<string, set<string> > meronyms;
   map<string, set<string> > holonyms;
 
-  map<string, map<string, int> > coocsMero;
-  map<string, map<string, int> > coocsHolo;
-
-  std::map<string, uint> sumMeros;
-  std::map<string, uint> sumHolos;
+  TypeRoler meroTypeRoler;
+  TypeRoler holoTypeRoler;
 
   string suffix;
 
@@ -53,6 +48,7 @@ protected :
   void loadMeroHolos(string dataInput);
   float computeIsPartOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB);
   float computeIsWholeOfScore(const WORDNET::WordNet& wn, const string& strA, const string& strB);
+  int get_cooc(Mode m, const string& strA, ulong itlist_fist_code);
   void processLine(ulong currentId, string s, Mode mode);
 
 };

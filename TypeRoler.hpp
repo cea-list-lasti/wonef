@@ -21,20 +21,21 @@ public :
   TypeRoler();
   ~TypeRoler() ;
   float computeIsAScore( string strA, string strB, TRMode mode);
-  
 
 
+  map<string, vector<pair<ulong,int> > > repository;
+  /* multiplications involving two big numbers will overflow normal ints*/
+  map<string, uint> numCoocs;
 
-private :
   map<ulong, string> dicmap ;
   map<string, ulong> dicmapReverse ;
+
+private :
 
   string dataFile ; 
   Converter conv;
   int topSize; 
   float thresCut;
-  map<string, vector<pair<ulong,int> > > repository;
-  map<string, int> numCoocs;
   void writeRepository(std::string protofile, std::string relation);
   void readRepository(std::string protofile, std::string relation);
   int processLine(string s, float thresCut, vector<pair<ulong,int> >& ctxt);

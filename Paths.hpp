@@ -10,6 +10,13 @@ const std::string  DATA_ADJ "/data/text/WordNet-3.0/dict/data.adj";
 
 const std::string  DATAPATH = "/home/pradet/data";
 
+const std::string WOLF = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
+const std::string EWN = DATAPATH + "/opendata/ewn/wn_fr.ewn.utf8";
+
+const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.xml";
+const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.xml";
+const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.xml";
+
 const std::string  DICFILE = DATAPATH + "/dictionnaires/euradic-utf8.txt";
 const std::string  DICFILE2 = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
 
@@ -61,5 +68,7 @@ const std::string  KNNPROTOFILE = KNNPROTODIR + "knndists_";
 const std::string  BCSFILE = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
 const std::string MAPPING_30_20 = DATAPATH + "/opendata/mappings-upc-2007/mapping-30-20/wn30-20.";
 const std::string MAPPING_20_30 = DATAPATH + "/opendata/mappings-upc-2007/mapping-20-30/wn20-30.";
+
+const std::string POLYSEMOUSINDEX = DATAPATH + "/opendata/polysemous/WordNet-3.0/index.polysemous.";
 
 #endif
