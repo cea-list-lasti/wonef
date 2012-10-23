@@ -3,109 +3,35 @@
 #include "Tools.hpp"
 #include "Paths.hpp"
 
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/util/TransService.hpp>
 #include <algorithm>
 #include <string>
 #include <fstream>
 #include <sstream>
 
-using namespace xercesc;
-
 BcsbaseHandler::BcsbaseHandler(map<string, int >& _bcsbase, map<int, int>& _BCSCount, string _pos) :
   nbSynsets(0), pos(_pos), bcsbase(_bcsbase), BCSCount(_BCSCount) {
-  XMLTransService* const  theService =
-    XMLPlatformUtils::fgTransService;
-
-  XMLTransService::Codes  theCode;
-
-  theTranscoder =
-    theService->makeNewTranscoderFor(
-        "utf-8",
-        theCode,
-        8192);
-
   sensemap = loadSensemap(pos);
 }
 
-BcsbaseHandler::~BcsbaseHandler() {
-  delete theTranscoder;
-}
-
-string BcsbaseHandler::_transcode(const XMLCh* const chars) {
-  if (*chars==10) {
-    return "";
-  }
-  XMLSize_t length = XMLString::stringLen(chars);
-  const XMLCh* it = chars;
-  while (*it!=0) {
-    if (it[0]>=0xa0) {
-      length++;
-    }
-    it++;
-  }
-  XMLByte buff[65536];
-  buff[0]=0;
-
-  XMLSize_t nbTranscoded = 0;
-  theTranscoder->transcodeTo (chars, length, buff, 16384, nbTranscoded, XMLTranscoder::UnRep_RepChar);
-  buff[length]=0;
-  char *buff2 = (char*) buff;
-  XMLString::trim(buff2);
-  string res = buff2;
-  remove(res.begin(), res.end(), '*');
-  remove(res.begin(), res.end(), '[');
-  remove(res.begin(), res.end(), ']');
-  remove(res.begin(), res.end(), '\'');
-  while(res!="" && (res.find(" ")==0 || res.rfind(" ")==(res.length()-1))) {
-    res=res.substr(res.find(" ")+1).substr(0,res.rfind(" "));
-  }
-  return res;
-}
-
-bool BcsbaseHandler::checkAttr(const Attributes& attrs, string key, string value ) {
-  XMLCh * _key = XMLString::transcode(key.c_str());
-  bool res =_transcode(attrs.getValue(_key)).compare(value)==0 ;
-  XMLString::release(&_key);
-  return (res);
-}
-
-string BcsbaseHandler::getAttrValue(const Attributes & attrs, string value) {
-  XMLCh * _key =  XMLString::transcode(value.c_str());
-  if (attrs.getValue(_key)==NULL) {
-    XMLString::release(&_key);
-    return "";
-  }
-  string res = _transcode(attrs.getValue(_key));
-  XMLString::release(&_key);
-  return   res;
-}
-
-void BcsbaseHandler::startElement(const XMLCh *const /*uri*/,
-    const XMLCh *const /*localname*/,
-    const XMLCh *const qname,
-    const Attributes & /*attrs*/) {
-
-  if(_transcode(qname).compare("SYNSET")==0) {
+void BcsbaseHandler::on_start_element(const std::string& name,
+    const xmlpp::SaxParser::AttributeList& /* properties */) {
+  if(name == "SYNSET") {
     nbSynsets++;
-  } else if(_transcode(qname).compare("SENSE")==0) {
+  } else if(name == "SENSE") {
     literal = tmpString;
   }
 }
 
-void BcsbaseHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
-    tmpString = _transcode(chars);
+void BcsbaseHandler::on_characters(const std::string& characters) {
+    tmpString = characters;
 }
 
-void BcsbaseHandler::endElement(const XMLCh *const /*uri*/,
-    const XMLCh *const /*localname*/,
-    const XMLCh *const qname) {
-
-  if (_transcode(qname).compare("ID")==0) {
+void BcsbaseHandler::on_end_element(const std::string &name) {
+  if (name == "ID") {
     id = tmpString.substr(6, 8);
-  } else if (_transcode(qname).compare("POS")==0) {
+  } else if (name == "POS") {
     PartOfSpeech = tmpString;
-  } else if (_transcode(qname).compare("BCS")==0) {
+  } else if (name == "BCS") {
     if((pos == "noun" && PartOfSpeech.compare("n") == 0)
       || (pos == "verb" && PartOfSpeech.compare("v") == 0)
       || (pos == "adj" && PartOfSpeech.compare("a") == 0)) {
@@ -118,4 +44,3 @@ void BcsbaseHandler::endElement(const XMLCh *const /*uri*/,
     }
   }
 }
-

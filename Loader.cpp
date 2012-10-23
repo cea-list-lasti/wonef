@@ -218,7 +218,7 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
         wne.frenchCandidates[srcWord] = extractCandidates(srcWord);
         wne.frenchCandidates[srcWord].capital = capital;
         assert(wne.frenchCandidates[srcWord].capital == capital);
-        
+
         wne.nbCandidates += wne.frenchCandidates[srcWord].cand.size();
 
         ss.ignore(1, ' ') ;

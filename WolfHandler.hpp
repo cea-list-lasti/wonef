@@ -1,42 +1,27 @@
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/sax2/DefaultHandler.hpp>
-#include <xercesc/sax2/Attributes.hpp>
-#include <xercesc/util/TransService.hpp>
+#include <libxml++/libxml++.h>
+
 #include <string>
 #include <set>
 #include <map>
 #include <iostream>
 #include <fstream>
 
-using namespace xercesc;
 using namespace std;
 
-class WolfHandler : public DefaultHandler {
+class WolfHandler : public xmlpp::SaxParser {
 
-public : 
+public:
 
   WolfHandler(map<string, set<string> >* wolfNet,
 	      map<string, set<string> >* wolfNetIdIdent,
 	      string _pos);
 
-  ~WolfHandler();
+  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
+  void on_characters(const std::string& characters) override;
+  void on_end_element(const std::string &name) override;
 
-  void startElement(const XMLCh *const uri,
-		    const XMLCh *const localname,
-		    const XMLCh *const qname,
-		    const Attributes & attrs);
-
-  void characters(const XMLCh *const chars,
-		  const XMLSize_t length);
-
-  void endElement(const XMLCh *const uri,
-		  const XMLCh *const localname,
-		  const XMLCh *const qname);
-
-
-private :
-  uint nbSynsets;  
-  XMLTranscoder*   theTranscoder;
+private:
+  uint nbSynsets;
   string id;
   string PartOfSpeech;
   string literal;

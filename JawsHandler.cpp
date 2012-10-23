@@ -41,7 +41,7 @@ JawsHandler::JawsHandler(std::ofstream& _out,
   BCSJawsCount = { {1, 0}, {2, 0}, {3, 0} };
 }
 
-std::string get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name) {
+std::string JawsHandler::get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name) {
   for(const xmlpp::SaxParser::Attribute& attr: attrs) {
     if (attr.name == name) return attr.value;
   }

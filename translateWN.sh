@@ -70,11 +70,11 @@ echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
 ./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
-gprof translate$Poss > profiled$Poss 2> /dev/null
+gprof translate$Poss > profiled.create.$pos 2> /dev/null
 
 echo -e "\n-- Evaluating with $REFERENCE... --"
 ./evalJAWS-WOLF $pos $seqs
-gprof evalJAWS-WOLF > profiledEval$Poss.$seqs
+gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 
 echo -e "\n                *** Normal ***"

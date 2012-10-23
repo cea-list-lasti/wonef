@@ -1,8 +1,3 @@
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/sax2/SAX2XMLReader.hpp>
-#include <xercesc/sax2/XMLReaderFactory.hpp>
-#include <xercesc/sax2/DefaultHandler.hpp>
-#include <xercesc/util/XMLString.hpp>
 #include <boost/filesystem.hpp>
 
 #include <math.h>
@@ -79,69 +74,29 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
   llss.close();
 }
 
-SAX2XMLReader* preParser(void) {
-  SAX2XMLReader* parser;
-  XMLPlatformUtils::Initialize();
-  parser = XMLReaderFactory::createXMLReader();
-  parser->setFeature(XMLUni::fgSAX2CoreValidation, true);
-  parser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
-
-  return parser;
+void loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string spos) {
+  WolfHandler wolfHandler(&wolfNet, & wolfNetIdIdent, spos);
+  wolfHandler.parse_file(filename);
 }
 
-int loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string spos) {
-
-  SAX2XMLReader* parser = preParser();
-
-  WolfHandler* wolfHandler = new WolfHandler(&wolfNet, & wolfNetIdIdent, spos);
-  parser->setContentHandler(wolfHandler);
-  parser->setErrorHandler(wolfHandler);
-  parser->parse(filename.c_str());
-
-  delete parser;
-  delete wolfHandler;
-  return 0;
-}
-
-int loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string spos) {
-
-  SAX2XMLReader* parser = preParser();
-  BcsbaseHandler* bcsbaseHandler = new BcsbaseHandler(bcsbase, BCSCount, spos);
-  parser->setContentHandler(bcsbaseHandler);
-  parser->setErrorHandler(bcsbaseHandler);
-  parser->parse(BCSFILE.c_str());
-
-  delete parser;
-  delete bcsbaseHandler;
-  return 0;
+void loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string spos) {
+  BcsbaseHandler bcsbaseHandler(bcsbase, BCSCount, spos);
+  bcsbaseHandler.parse_file(BCSFILE);
 }
 
 
-int loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
+void loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
   EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath, &mapping);
   ewnLoader.load();
-  return 0;
 }
 
-int loadGold(map<string, set<string> >& goldNet,
+void loadGold(map<string, set<string> >& goldNet,
              map<string, set<string> >& goldNetIdIdent,
              map<pair<string, string>, int>& goldValue,
              string filename) {
-
-  SAX2XMLReader* parser = preParser();
-
-  GoldHandler* goldHandler = new GoldHandler(& goldNet, & goldNetIdIdent, & goldValue);
-  parser->setContentHandler(goldHandler);
-  parser->setErrorHandler(goldHandler);
-  parser->parse(filename.c_str());
-
-  delete parser;
-  delete goldHandler;
-  return 0;
+  GoldHandler goldHandler(& goldNet, & goldNetIdIdent, & goldValue);
+  goldHandler.parse_file(filename);
 }
-
-
-
 
 int parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
                                map<int, int>& BCSCount,
@@ -208,6 +163,7 @@ int main(int argc, char **argv) {
   map<pair<string, string>, int> goldValue = map<pair<string, string>, int>();
 
   Timer t;
+  Timer globalT;
 
   // BCS helps evaluation metrics
   loadBcsBase(bcsbase, BCSCount, spos);
@@ -242,6 +198,7 @@ int main(int argc, char **argv) {
       vtNet, vtNetIdIdent,
       spos, bestJaws, goldValue, false);
 
+  t.start();
   /* Then evaluate with the gold standard */
   cerr << "Loading Gold... ";
   vtNet.clear();
@@ -258,6 +215,8 @@ int main(int argc, char **argv) {
   parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent,
       spos, bestJaws, goldValue, true);
+
+  std::cout << "Overall evaluation duration: " << globalT.duration() << " s" << std::endl;
 
   return 0;
 }

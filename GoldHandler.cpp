@@ -2,6 +2,8 @@
 #include "Tools.hpp"
 #include <boost/lexical_cast.hpp>
 
+using namespace std;
+
 GoldHandler::GoldHandler(std::map<std::string, std::set<std::string> >* _goldNet,
                          std::map<std::string, std::set<std::string> >* _goldNetIdIdent,
                          std::map<std::pair<std::string, std::string>, int>* _goldValue) {
@@ -10,44 +12,33 @@ GoldHandler::GoldHandler(std::map<std::string, std::set<std::string> >* _goldNet
   goldNetIdIdent = _goldNetIdIdent;
   goldValue = _goldValue;
   nbSynsets = 0;
-
-  xercesc::XMLTransService* const theService = xercesc::XMLPlatformUtils::fgTransService;
-  xercesc::XMLTransService::Codes theCode;
-  theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
-
 }
 
-GoldHandler::~GoldHandler(){
-  delete theTranscoder;
+void GoldHandler::on_characters(const std::string& characters) {
+  tmpString = characters;
 }
 
-void GoldHandler::characters(const XMLCh *const chars,
-                             const XMLSize_t /*length*/)  {
-
-  tmpString = _transcode(chars, theTranscoder);
-
+std::string GoldHandler::get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name) {
+  for(const xmlpp::SaxParser::Attribute& attr: attrs) {
+    if (attr.name == name) return attr.value;
+  }
+  exit(-1);
 }
 
-void GoldHandler::startElement(const XMLCh *const /*uri*/,
-                               const XMLCh *const /*localname*/,
-                               const XMLCh*const qname,
-                               const Attributes & attrs) {
-
-  if(_transcode(qname, theTranscoder).compare("SYNSET") == 0) {
+void GoldHandler::on_start_element(const std::string& name,
+    const xmlpp::SaxParser::AttributeList& attrs) {
+  if(name == "SYNSET") {
     nbSynsets++;
-    id = getAttrValue(attrs, "id", theTranscoder);
-  } else if(_transcode(qname, theTranscoder).compare("CANDIDATE") == 0) {
-    string val = getAttrValue(attrs, "valide", theTranscoder);
+    id = get_attr(attrs, "id");
+  } else if(name == "CANDIDATE") {
+    string val = get_attr(attrs, "valide");
     valide = boost::lexical_cast<int>(val);
   }
 
 }
 
-void GoldHandler::endElement(const XMLCh *const /*uri*/,
-                             const XMLCh *const /*localname*/,
-                             const XMLCh*const qname) {
-
-  if (_transcode(qname, theTranscoder).compare("CANDIDATE") == 0) {
+void GoldHandler::on_end_element(const std::string &name) {
+  if (name == "CANDIDATE") {
     if (valide == 1) {
       if (goldNet->find(tmpString) == goldNet->end()) {
         (*goldNet)[tmpString] = set<string>();

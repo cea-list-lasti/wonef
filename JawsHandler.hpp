@@ -83,6 +83,9 @@ protected :
   const std::map<int, int>& BCSCount;
   std::map<int, int> BCSJawsCount;
 
+private:
+  std::string get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name);
+
 };
 
 #endif

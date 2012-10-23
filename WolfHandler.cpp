@@ -1,7 +1,5 @@
 #include "WolfHandler.hpp"
 #include "Tools.hpp"
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/util/TransService.hpp>
 
 #include <string>
 #include <iostream>
@@ -21,46 +19,28 @@ WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet,
   wolfNet = _wolfNet;
   wolfNetIdIdent = _wolfNetIdIdent;
 
-  XMLTransService* const theService = XMLPlatformUtils::fgTransService;
-  XMLTransService::Codes theCode;
-  theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
-
   sensemap = loadSensemap(pos);
-
 }
 
-WolfHandler::~WolfHandler() {
-  delete theTranscoder;
-}
-
-void WolfHandler::startElement(const XMLCh *const /*uri*/,
-                               const XMLCh *const /*localname*/,
-                               const XMLCh *const qname,
-                               const Attributes & /*attrs*/) {
-
-  if(_transcode(qname, theTranscoder).compare("SYNSET")==0) {
+void WolfHandler::on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList&) {
+  if(name == "SYNSET") {
     nbSynsets++;
-  } else if(_transcode(qname, theTranscoder).compare("SENSE")==0) {
+  } else if(name == "SENSE") {
     literal = tmpString;
   }
 
 }
 
-void WolfHandler::characters(const XMLCh *const chars,
-                             const XMLSize_t /*length*/)  {
-    tmpString = _transcode(chars, theTranscoder);
-    //cout << "TEST : " << tmpString << endl;
+void WolfHandler::on_characters(const std::string& characters) {
+    tmpString = characters;
 }
 
-void WolfHandler::endElement(const XMLCh *const /*uri*/,
-                                const XMLCh *const /*localname*/,
-                                const XMLCh *const qname) {
-
-  if (_transcode(qname, theTranscoder).compare("ID")==0) {
+void WolfHandler::on_end_element(const std::string &name) {
+  if (name == "ID") {
     id = sensemap[tmpString.substr(6, 8)];
-  } else if (_transcode(qname, theTranscoder).compare("POS")==0) {
+  } else if (name == "POS") {
     PartOfSpeech = tmpString;
-  } else if (_transcode(qname, theTranscoder).compare("LITERAL")==0) {
+  } else if (name == "LITERAL") {
     if ((pos == "noun" && PartOfSpeech == "n")
       || (pos == "verb" && PartOfSpeech == "v")
       || (pos == "adj" && PartOfSpeech == "a")) {
