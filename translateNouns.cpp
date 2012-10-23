@@ -1,5 +1,4 @@
 #include "../src/knn_search.h"
-//#include "../src/converter.h"
 #include "Paths.hpp"
 #include "Options.hpp"
 #include "Loader.hpp"

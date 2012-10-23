@@ -17,7 +17,7 @@ WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet,
                          map<string, set<string> >* _wolfNetIdIdent,
                          string _pos) :
                          nbSynsets(0), pos(_pos) {
-  
+
   wolfNet = _wolfNet;
   wolfNetIdIdent = _wolfNetIdIdent;
 
@@ -40,13 +40,10 @@ void WolfHandler::startElement(const XMLCh *const /*uri*/,
 
   if(_transcode(qname, theTranscoder).compare("SYNSET")==0) {
     nbSynsets++;
-    if (nbSynsets%10000==0) {
-      cerr << "nbSynset : " << nbSynsets << endl;
-    }
   } else if(_transcode(qname, theTranscoder).compare("SENSE")==0) {
     literal = tmpString;
   }
-  
+
 }
 
 void WolfHandler::characters(const XMLCh *const chars,

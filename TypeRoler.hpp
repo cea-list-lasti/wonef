@@ -2,11 +2,12 @@
 #define TYPEROLER_HPP
 
 #include "../src/knn_search.h"
-#include "../src/converter.h"
 #include "../src/tools.h"
 #include "Paths.hpp"
 #include <set>
 #include <utility>
+#include <vector>
+#include <map>
 
 using namespace std;
 
@@ -33,7 +34,6 @@ public :
 private :
 
   string dataFile ; 
-  Converter conv;
   int topSize; 
   float thresCut;
   void writeRepository(std::string protofile, std::string relation);

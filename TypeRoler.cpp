@@ -7,6 +7,11 @@
 #include <cassert>
 #include <fstream>
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+
 using namespace std;
 
 TypeRoler::TypeRoler() {
@@ -14,7 +19,6 @@ TypeRoler::TypeRoler() {
 
 TypeRoler::TypeRoler(string _dataFile, string relation) : 
   dataFile(_dataFile),
-  conv(CONVFILE, 67937),
   topSize(10),
   thresCut(0) {
   initializeDicMap(dicmap, WORDS_IDS);
