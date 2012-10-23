@@ -2,16 +2,13 @@
 #define JAWSHANDLER_HPP
 
 #include "WordNet.hpp"
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/sax2/DefaultHandler.hpp>
-#include <xercesc/sax2/Attributes.hpp>
-#include <xercesc/util/TransService.hpp>
+#include <libxml++/libxml++.h>
 #include <fstream>
 #include <string>
 #include <set>
 #include <map>
 
-class JawsHandler : public xercesc::DefaultHandler {
+class JawsHandler : public xmlpp::SaxParser {
 
 public :
   JawsHandler(
@@ -24,21 +21,12 @@ public :
       bool _gold, std::string _pos,
       const std::map<std::string, int>& BCS, const std::map<int, int>& BCSCount);
 
-  ~JawsHandler();
+  virtual ~JawsHandler() {}
 
-  void startElement(const XMLCh *const uri,
-                    const XMLCh *const localname,
-                    const XMLCh *const qname,
-                    const xercesc::Attributes & attrs);
-
-  void characters(const XMLCh *const chars,
-                  const XMLSize_t length);
-
-  void endElement(const XMLCh *const uri,
-                  const XMLCh *const localname,
-                  const XMLCh *const qname);
-
-  void endDocument();
+  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
+  void on_characters(const std::string& characters) override;
+  void on_end_element(const std::string &name) override;
+  void on_end_document() override;
 
   std::ofstream& out;
 
@@ -83,7 +71,6 @@ protected :
   std::map<std::pair<std::string, std::string>, int> goldValue;
   std::set<std::string> goldIds;
   bool gold;
-  xercesc::XMLTranscoder* theTranscoder;
   WORDNET::WordNetEntry wne;
   std::string id;
   std::string original;

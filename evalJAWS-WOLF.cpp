@@ -155,7 +155,6 @@ int parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
                                bool gold) {
 
   Timer t;
-  SAX2XMLReader* parser = preParser();
 
   if (!boost::filesystem::exists(filename))
   {
@@ -171,11 +170,8 @@ int parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
                                              gold,
                                              pos,
                                              BCS, BCSCount);
-  parser->setContentHandler(jawsHandler);
-  parser->setErrorHandler(jawsHandler);
-  parser->parse(filename.c_str());
+  jawsHandler->parse_file(filename);
 
-  delete parser;
   delete jawsHandler;
 
   std::cout << "Parsed JAWS duration: " << t.duration() << "s" << std::endl;
@@ -223,17 +219,17 @@ int main(int argc, char **argv) {
   std::string vtmode = groundTruth[pos];
 
   /* First evaluate with a given ground truth */
-  if (vtmode == "WOLF") {
+  if (vtmode == WOLF) {
     // loading WOLF
     cerr << "Loading WOLF... ";
     loadWOLF(vtNet, vtNetIdIdent, groundTruth[pos], spos);
-    cerr << t.duration() << endl;
-  } else if (vtmode == "EWN") {
+    cerr << t.duration() << "s" << endl;
+  } else if (vtmode == EWN) {
     // loading EWN
     cerr << "Loading EWN... ";
     mapping = loadMapfile(MAPVERB15_20);
     loadEWN(vtNet, vtNetIdIdent, groundTruth[pos], mapping);
-    cerr << t.duration() << endl;
+    cerr << t.duration() << "s" << endl;
   }
 
   std::ofstream log("logs/eval." + suffix, ios_base::out | ios_base::trunc);
@@ -241,21 +237,24 @@ int main(int argc, char **argv) {
       vtNet, vtNetIdIdent,
       spos, jaws, goldValue, false);
 
-  std::ofstream logBest("logs/eval.best" + suffix, ios_base::out | ios_base::trunc);
+  std::ofstream logBest("logs/eval.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent,
       spos, bestJaws, goldValue, false);
 
   /* Then evaluate with the gold standard */
   cerr << "Loading Gold... ";
-  loadGold(vtNet, vtNetIdIdent, goldValue, groundTruth[pos]);
+  vtNet.clear();
+  vtNetIdIdent.clear();
+
+  loadGold(vtNet, vtNetIdIdent, goldValue, goldFile[pos]);
   cerr << t.duration() << "s" << endl;
 
   std::ofstream logGold("logs/eval.gold." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent,
       spos, jaws, goldValue, true);
-  std::ofstream logGoldBest("logs/eval.gold.best" + suffix, ios_base::out | ios_base::trunc);
+  std::ofstream logGoldBest("logs/eval.gold.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent,
       spos, bestJaws, goldValue, true);

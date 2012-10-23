@@ -72,20 +72,20 @@ echo "Translating... $seqsspaces"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled$Poss 2> /dev/null
 
+echo -e "\n-- Evaluating with $REFERENCE... --"
 ./evalJAWS-WOLF $pos $seqs
 gprof evalJAWS-WOLF > profiledEval$Poss.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 
-echo -e "\n-- Evaluating with $REFERENCE... --"
 echo -e "\n                *** Normal ***"
-tail -4 logs/eval$Poss.$seqs
+tail -4 logs/eval.$pos.$seqs
 echo -e "\n                *** Best ***"
-tail -4 logs/eval${Poss}Best.$seqs
+tail -4 logs/eval.best.$pos.$seqs
 echo -e "\n-- Evaluating with Gold... --"
 echo -e "\n                *** Normal ***"
-tail -4 logs/eval${Poss}G.$seqs
+tail -4 logs/eval.gold.${pos}.$seqs
 echo -e "\n                *** Best ***"
-tail -4 logs/eval${Poss}GBest.$seqs
+tail -4 logs/eval.gold.best.${pos}.$seqs
 
 # Archive relevant files to our archive.
 

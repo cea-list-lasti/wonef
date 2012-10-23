@@ -1,5 +1,5 @@
-LDFLAGS     = -L/usr/local/lib  -L/home/pradet/externals/xerces-c/lib -L/home/pradet/externals/icu/lib -L/home/pradet/externals/boost_1_51_0/stage/lib -L/home/pradet/externals/protobuf/lib -I/home/pradet/externals/protobuf/include -licuuc -licudata -licui18n -lboost_system -lboost_regex -lboost_filesystem -liconv -lxerces-c -lprotobuf -lpthread -pg
-CPPFLAGS    = -std=c++11 -Wall -Wextra -I/home/pradet/externals/boost_1_51_0 -I/home/pradet/externals/icu/include -I/home/pradet/externals/xerces-c/include -I/home/pradet/externals/protobuf/include -pg -O3
+LDFLAGS     = -L/usr/local/lib  -L/home/pradet/externals/xerces-c/lib -L/home/pradet/externals/icu/lib -L/home/pradet/externals/boost_1_51_0/stage/lib -L/home/pradet/externals/fastsax/libxml++/lib -L/home/pradet/externals/protobuf/lib -I/home/pradet/externals/protobuf/include -licuuc -licudata -licui18n -lboost_system -lboost_regex -lboost_filesystem -liconv -lxerces-c -lprotobuf -lpthread -lxml++-1.0 -pg
+CPPFLAGS    = -std=c++11 -Wall -Wextra -I/home/pradet/externals/boost_1_51_0 -I/home/pradet/externals/icu/include -I/home/pradet/externals/xerces-c/include -I/home/pradet/externals/protobuf/include -I/home/pradet/externals/fastsax/libxml++/include/libxml++-1.0 -pg -O3
 
 all:	translateNouns translateVerbs translateAdjs buildBilingualDic evalJAWS-WOLF
 

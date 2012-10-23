@@ -38,25 +38,20 @@ JawsHandler::JawsHandler(std::ofstream& _out,
     }
   }
 
-  xercesc::XMLTransService* const theService = xercesc::XMLPlatformUtils::fgTransService;
-  xercesc::XMLTransService::Codes theCode;
-  theTranscoder = theService->makeNewTranscoderFor("utf-8", theCode, 8192);
-
   BCSJawsCount = { {1, 0}, {2, 0}, {3, 0} };
 }
 
-JawsHandler::~JawsHandler() {
-  delete theTranscoder;
+std::string get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name) {
+  for(const xmlpp::SaxParser::Attribute& attr: attrs) {
+    if (attr.name == name) return attr.value;
+  }
+  exit(-1);
 }
 
+void JawsHandler::on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& attrs) {
 
-void JawsHandler::startElement(const XMLCh *const /*uri*/,
-                               const XMLCh *const /*localname*/,
-                               const XMLCh *const qname,
-                               const xercesc::Attributes & attrs){
-
-  if(_transcode(qname, theTranscoder) == "SYNSET") {
-    id = getAttrValue(attrs, "id", theTranscoder);
+  if(name == "SYNSET") {
+    id = get_attr(attrs, "id");
 
     nbTermsOkInSynset = 0;
     nbPolyTermsOkInSynset = 0;
@@ -64,19 +59,20 @@ void JawsHandler::startElement(const XMLCh *const /*uri*/,
     nbPolyTermsInSynset = 0;
 
 
-  } else if(_transcode(qname, theTranscoder) == "CANDIDATES") {
-    original = getAttrValue(attrs, "original", theTranscoder);
+  } else if(name == "CANDIDATES") {
+    original = get_attr(attrs, "original");
+
     wne.frenchCandidates[original] = WORDNET::TgtCandidates();
 
-  } else if (_transcode(qname, theTranscoder) == "INSTANCES") {
-    translation = getAttrValue(attrs, "translation", theTranscoder);
+  } else if (name == "INSTANCES") {
+    translation = get_attr(attrs, "translation");
     wne.frenchSynset[translation] = std::set<WORDNET::TranslationInfos>();
 
-  } else if(_transcode(qname, theTranscoder) == "INSTANCE") {
+  } else if(name == "INSTANCE") {
     WORDNET::TranslationInfos transInfos;
-    transInfos.original = getAttrValue(attrs, "original", theTranscoder);
-    transInfos.processed = getAttrValue(attrs, "processed", theTranscoder);
-    string score = getAttrValue(attrs, "score", theTranscoder);
+    transInfos.original = get_attr(attrs, "original");
+    transInfos.processed = get_attr(attrs, "processed");
+    string score = get_attr(attrs, "score");
     transInfos.score = boost::lexical_cast<float>(score);
     wne.frenchSynset[translation].insert(transInfos);
   }
@@ -84,9 +80,8 @@ void JawsHandler::startElement(const XMLCh *const /*uri*/,
 }
 
 
-void JawsHandler::characters(const XMLCh *const chars,
-                             const XMLSize_t /*length*/){
-  tmpString = _transcode(chars, theTranscoder);
+void JawsHandler::on_characters(const std::string& characters) {
+  tmpString = characters;
 }
 
 bool gtHasTranslation(std::set<std::string> gtTerms, std::string jawsTerm) {
@@ -103,21 +98,19 @@ bool gtHasTranslation(std::set<std::string> gtTerms, std::string jawsTerm) {
 }
 
 
-void JawsHandler::endElement(const XMLCh *const /*uri*/,
-                             const XMLCh *const /*localname*/,
-                             const XMLCh *const qname){
+void JawsHandler::on_end_element(const std::string &name){
 
-   if(_transcode(qname, theTranscoder) == "ORIGINALDEF") {
+   if(name == "ORIGINALDEF") {
     wne.def = tmpString;
 
-   } else if(_transcode(qname, theTranscoder) == "CANDIDATES") {
+   } else if(name == "CANDIDATES") {
     nbOriginals++;
     if (polyLitList.find(original) != polyLitList.end()) {
       nbPolyOriginals++;
     }
     original = string();
 
-  } else if (_transcode(qname, theTranscoder) == "INSTANCES") {
+  } else if (name == "INSTANCES") {
     if (translation.find("_") != std::string::npos) { return; }
 
     // check if the translation comes from polysemous source terms
@@ -156,7 +149,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
     jawsNetIdIdent[id].insert(translation);
     translation = string();
 
-  } else if(_transcode(qname, theTranscoder) == "SYNSET") {
+  } else if(name == "SYNSET") {
     bool transInGt = false;
     bool transInJaws = false;
     nbSynsets++;
@@ -297,7 +290,7 @@ void JawsHandler::endElement(const XMLCh *const /*uri*/,
 }
 
 
-void JawsHandler::endDocument() {
+void JawsHandler::on_end_document() {
 
   // print an abstract about the evaluation
   string terms;
