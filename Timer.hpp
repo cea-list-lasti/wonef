@@ -35,6 +35,7 @@ class Timer
 
         start();
 
-        return static_cast<float>(1.0 * secs + 1.0 * usecs / 1000000.0);
+        // simpler than using std::setprecision() for our purpose
+        return static_cast<float>(1.0 * secs + 1.0 * (usecs / 10000) / 100.0);
     }
 };
