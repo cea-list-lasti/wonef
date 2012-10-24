@@ -54,20 +54,27 @@ std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
 }
 
 
+/* This functions loads literals and synsets from a list of english literals
+ * which belong to two or more synset. If a term is in litList, then it's a
+ * polysemous term. If a synset is in polysemousIdsList, then at least one of
+ * its terms is polysemous */
 void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList, string filename) {
-
-  std::cerr << "loading polysemous literals from: " << filename << std::endl;
   ifstream llss(filename.c_str(), fstream::in);
   if (llss.fail()) {
     std::cerr << "Oops, " << filename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
     exit(-1);
   }
+
   string s;
   while (getline(llss, s) ) {
-    litList.insert(s.substr(0, s.find(' ')));
+    std::string literal = s.substr(0, s.find(' '));
+    litList.insert(literal);
+
     s=s.substr(0, s.length()-2);
-    while (s.rfind(' ')==s.length()-9) {
-      polysemousIdsList.insert(s.substr(s.rfind(' ')+1));
+    while (s.rfind(' ') == s.length()-9) {
+      std::string synsetId = s.substr(s.rfind(' ')+1);
+      assert(synsetId.length() == 8);
+      polysemousIdsList.insert(synsetId);
       s=s.substr(0, s.rfind(' '));
     }
   }
