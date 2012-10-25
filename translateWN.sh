@@ -21,6 +21,11 @@ if [ "$1" != "noun" -a "$1" != "adj" -a "$1" != "verb" ]; then
   exit 255
 fi
 
+if [ `hostname` == "master0.alineos.net" ]; then
+  echo "How do you *dare* launching this on master0?"
+  exit 255
+fi
+
 # Parse the part-of-speech
 pos=$1 # noun
 poss="${1}s" #nouns

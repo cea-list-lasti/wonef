@@ -33,9 +33,10 @@ int main(int argc, char **argv) {
   cout << "Init " << options.suffix << endl;
 
   Timer t;
+  cout << "Loading... ";
   LoaderModule loader(options.datafile, dicfiles, ADJS_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
-  cout << "Loading duration : " << t.duration() << "s" << endl;
+  cout << t.duration() << "s" << endl;
 
   t.start();
   ExtractorModule extractor(pos, options.extractionSet);

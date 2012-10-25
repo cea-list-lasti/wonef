@@ -2,14 +2,10 @@
 #include <cassert>
 
 #include "distance.hpp"
-#include "../src/tools.h" // desax
+#include "Tools.hpp"
 
 ExtractorModule::ExtractorModule(std::string _pos, std::set<ExtractionType> _extractions)
-  : pos(_pos), extractions(_extractions) {
-std::cout << extractions.size() << std::endl;
-
-    initDesax(desaxData) ;
-  }
+  : pos(_pos), extractions(_extractions) { }
 
 void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
@@ -99,9 +95,9 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
               int ldScore = 0;
               if (pos == "verb") {
                 // compute the score without the pronoun
-                ldScore = lDist.LD(desax(desaxData, candidates.second.verbCand[itCand->first]),srcWord);
+                ldScore = lDist.LD(candidates.second.verbCand[itCand->first],srcWord);
               } else {
-                ldScore = lDist.LD(desax(desaxData, itCand->first),srcWord);
+                ldScore = lDist.LD(itCand->first,srcWord);
               }
               if (ldScore<=3) {
                 wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;

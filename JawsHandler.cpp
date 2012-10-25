@@ -75,7 +75,7 @@ void JawsHandler::on_start_element(const std::string& name, const xmlpp::SaxPars
     WORDNET::TranslationInfos transInfos;
     transInfos.original = get_attr(attrs, "original");
     transInfos.processed = get_attr(attrs, "processed");
-    string score = get_attr(attrs, "score");
+    std::string score = get_attr(attrs, "score");
     transInfos.score = boost::lexical_cast<float>(score);
     wne.frenchSynset[translation].insert(transInfos);
   }
@@ -111,7 +111,7 @@ void JawsHandler::on_end_element(const std::string &name){
     if (polyLitList.find(original) != polyLitList.end()) {
       nbPolyOriginals++;
     }
-    original = string();
+    original = std::string();
 
   } else if (name == "INSTANCES") {
     if (translation.find("_") != std::string::npos) { return; }
@@ -165,7 +165,7 @@ void JawsHandler::on_end_element(const std::string &name){
     }
     jawsNet[translation].insert(id);
     jawsNetIdIdent[id].insert(translation);
-    translation = string();
+    translation = std::string();
 
   } else if(name == "SYNSET") {
     bool transInGt = false;
@@ -249,13 +249,13 @@ void JawsHandler::on_end_element(const std::string &name){
 
       /* print an abstract about the synset
       ----------------------------------------------------*/
-      out << "\n*****************" << endl;
-      out << "In the synset " << id << " :" << endl;
-      out << "Definition : " << wne.def << endl;
+      out << "\n*****************" << std::endl;
+      out << "In the synset " << id << " :" << std::endl;
+      out << "Definition : " << wne.def << std::endl;
 
       // Jaws and GT agree
       if (agree.size() > 0) {
-        out << "\n--- Jaws and Gt agree on :" << endl;
+        out << "\n--- Jaws and Gt agree on :" << std::endl;
         for (std::string sameTerm : agree) {
           out << "\"" << sameTerm << "\"";
           if(gold) {
@@ -263,18 +263,18 @@ void JawsHandler::on_end_element(const std::string &name){
                       << goldValue[make_pair(id, sameTerm)]
                       << " in gold)";
           }
-          out << endl;
+          out << std::endl;
           for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[sameTerm]) {
             out << " - from " << itTransInfos.original
                       << ", with " << itTransInfos.processed
-                      << " module, score : " << itTransInfos.score << endl;
+                      << " module, score : " << itTransInfos.score << std::endl;
           }
         }
       }
 
       // a term in this synset in GT not in Jaws
       if (type1.size() > 0) {
-        out << "\n--- Error type 1 : Jaws missed a " << pos << "." << endl;
+        out << "\n--- Error type 1 : Jaws missed a " << pos << "." << std::endl;
         for (std::string gtTerm : type1) {
           out << "\"" << gtTerm << "\"";
           if(gold) {
@@ -282,13 +282,13 @@ void JawsHandler::on_end_element(const std::string &name){
                       << goldValue[make_pair(id, gtTerm)]
                       << " in gold)";
           }
-          out << endl;
+          out << std::endl;
         }
       }
 
       // a term in this synset in Jaws not in GT
       if (type2.size() > 0) {
-        out << "\n--- Error type 2 : this " << pos << " is not in GT." << endl;
+        out << "\n--- Error type 2 : this " << pos << " is not in GT." << std::endl;
         for (std::string jawsTerm : type2) {
           out << "\"" << jawsTerm << "\"";
           if(gold) {
@@ -296,18 +296,18 @@ void JawsHandler::on_end_element(const std::string &name){
                       << goldValue[make_pair(id, jawsTerm)]
                       << " in gold)";
           }
-          out << endl;
+          out << std::endl;
           for (WORDNET::TranslationInfos itTransInfos : wne.frenchSynset[jawsTerm]) {
             out << " - from " << itTransInfos.original
                       << ", with " << itTransInfos.processed
-                      << " module, score : " << itTransInfos.score << endl;
+                      << " module, score : " << itTransInfos.score << std::endl;
           }
         }
       }
 
     }
 
-    id = string();
+    id = std::string();
     wne = WORDNET::WordNetEntry();
   }
 
@@ -317,7 +317,7 @@ void JawsHandler::on_end_element(const std::string &name){
 void JawsHandler::on_end_document() {
 
   // print an abstract about the evaluation
-  string terms;
+  std::string terms;
   if (pos == "noun") {
     terms = "Nouns";
   } else if (pos == "verb") {
@@ -341,56 +341,56 @@ void JawsHandler::on_end_document() {
   float recSynsetsGt = (float)nbJawsSynsets / (float)nbGtSynsets;
   float recallSynsets = (float)nbJawsSynsets / (float)nbSynsets;
 
-  out.setf(ios::fixed, ios::floatfield);
+  out.setf(std::ios::fixed, std::ios::floatfield);
   out.precision(2);
 
-  out << "------------------------------------" << endl;
-  out << "\t\t*** All " + terms + " ***" << endl;
-  out << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << endl;
-  out << "In synsets known by GT :\t" << nbInJawsSynsetInGt << endl;
-  out << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << endl;
-  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << endl;
+  out << "------------------------------------" << std::endl;
+  out << "\t\t*** All " + terms + " ***" << std::endl;
+  out << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << std::endl;
+  out << "In synsets known by GT :\t" << nbInJawsSynsetInGt << std::endl;
+  out << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << std::endl;
+  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << std::endl;
 
-  out << "Precision :\t\t\t" << allPrecision*100 << "%" << endl;
-  out << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << endl;
-  out << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << endl;
-  out << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << endl;
-  out << "F1-score :\t\t\t" << allF1*100 << "%" << endl;
-  out << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << endl;
+  out << "Precision :\t\t\t" << allPrecision*100 << "%" << std::endl;
+  out << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << std::endl;
+  out << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << std::endl;
+  out << "Recall / GT :\t\t\t" << allRecGt*100 << "%" << std::endl;
+  out << "F1-score :\t\t\t" << allF1*100 << "%" << std::endl;
+  out << "Coverage / WN :\t\t\t" << coverageWN*100 << "%" << std::endl;
 
-  out << "\t\t*** Polysemous ***" << endl;
-  out << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << endl;
-  out << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << endl;
-  out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << endl;
-  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << endl;
+  out << "\t\t*** Polysemous ***" << std::endl;
+  out << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << std::endl;
+  out << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << std::endl;
+  out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << std::endl;
+  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << std::endl;
 
-  out << "Precision :\t\t\t" << polyPrecision*100 << "%" << endl;
-  out << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << endl;
-  out << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << endl;
-  out << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << endl;
-  out << "F1-score :\t\t\t" << polyF1*100 << "%" << endl;
-  out << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << endl;
-  out << "---" << endl;
+  out << "Precision :\t\t\t" << polyPrecision*100 << "%" << std::endl;
+  out << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << std::endl;
+  out << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << std::endl;
+  out << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << std::endl;
+  out << "F1-score :\t\t\t" << polyF1*100 << "%" << std::endl;
+  out << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << std::endl;
+  out << "---" << std::endl;
   out << "nbOriginals : " << nbOriginals
-       << ", polysemous : " << nbPolyOriginals << endl;
+       << ", polysemous : " << nbPolyOriginals << std::endl;
   out << "nbSynsets in WN : " << nbSynsets
        << ", in Jaws : " << nbJawsSynsets
-       << ", in Gt : " << nbGtSynsets << endl;
-  out << "BCS:\t\t\t\t" << BCSJawsCount[1] << " " << BCSJawsCount[2] << " " << BCSJawsCount[3] << endl;
-  out << "BCS(%):\t\t\t\t" << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
-  out << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << endl;
-  out << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << endl;
+       << ", in Gt : " << nbGtSynsets << std::endl;
+  out << "BCS:\t\t\t\t" << BCSJawsCount[1] << " " << BCSJawsCount[2] << " " << BCSJawsCount[3] << std::endl;
+  out << "BCS(%):\t\t\t\t" << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << std::endl;
+  out << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << std::endl;
+  out << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << std::endl;
 
-  out << "           All " << setw(5) << terms << "           Polysemous" << endl;
+  out << "           All " << std::setw(5) << terms << "           Polysemous" << std::endl;
 
-  out << setw(5) << terms << ":  ";
-  out << setw(6) << nbTermsInJaws << " - " << setw(5) << coverageWN*100 << "%" << "     ";
-  out << setw(6) << nbPolyTermsInJaws << " - " << setw(5) << polycoverWN*100 << "%" << endl;
+  out << std::setw(5) << terms << ":  ";
+  out << std::setw(6) << nbTermsInJaws << " - " << std::setw(5) << coverageWN*100 << "%" << "     ";
+  out << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << std::endl;
 
   out << "P/R:    ";
-  out << setw(5) << allPseudoPrec * 100 << "% / " << setw(5) << allRecGt * 100 << "%" << "     ";
-  out << setw(5) << polyPseudoPrec * 100 << "% / " << setw(5) << polyRecGt * 100 << "%" << endl;
+  out << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
+  out << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << std::endl;
 
 
-  out << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << endl;
+  out << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << std::endl;
 }

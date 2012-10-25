@@ -24,7 +24,6 @@ class ExtractorModule {
   private:
     std::string pos;
     std::set<ExtractionType> extractions;
-    std::map<std::string, std::string> desaxData;
 
     std::map<std::string, std::set<std::string> > englishCount;
 

@@ -7,9 +7,7 @@
 #include <sstream>
 #include <algorithm>
 
-using namespace xercesc;
 using namespace std;
-
 
 WolfHandler::WolfHandler(map<string, set<string> >& _wolfNet,
     map<string, set<string> >& _wolfNetIdIdent,

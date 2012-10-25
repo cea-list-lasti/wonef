@@ -216,8 +216,8 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
 
         /*
            Distance lDist;
-           if (lDist.LD(desax(LoaderModule::desaxData, itCand->first),it->first)<=3) {
-           sum*=1.+ (1.-0.2*lDist.LD(desax(LoaderModule::desaxData, itCand->first),it->first));
+           if (lDist.LD(desaxUTF8(itCand->first),it->first)<=3) {
+           sum*=1.+ (1.-0.2*lDist.LD(desaxUTF8(itCand->first),it->first));
            }
          */
         sum =  sum / (validSumHypo + validSumHyper);
