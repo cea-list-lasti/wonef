@@ -13,17 +13,18 @@ using namespace std;
 
 class EwnLoader {
 
-public : 
-  EwnLoader(map<string, set<string> >* ewnNet, map<string, set<string> >* ewnNetIdIdent, string& _filepath, map<string, set<string> >* _mapping);
-  ~EwnLoader();
+public:
+  EwnLoader(map<string, set<string>>& ewnNet,
+      map<string, set<string>>& ewnNetIdIdent,
+      string& _filepath, map<string, set<string> >& _mapping);
 
   void load();
 
-protected : 
-  map<string, set<string> >* ewnNet;
-  map<string, set<string> >* ewnNetIdIdent;
+protected:
+  map<string, set<string> >& ewnNet;
+  map<string, set<string> >& ewnNetIdIdent;
   string filepath;
   uint nbSynsets;
-  map<string, set<string> >* mapping;
+  map<string, set<string> >& mapping;
 
 };

@@ -20,7 +20,6 @@ using namespace std;
 std::map<std::string, std::set<std::string> > loadMapfile(std::string mapfile) {
 
   std::map<std::string, std::set<std::string> > mapping;
-  std::cout << "loading mapfile from: " << mapfile << "\n";
   std::ifstream llss(mapfile.c_str(), fstream::in);
   if (llss.fail()) {
     cerr << "Oops, " << mapfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -81,63 +80,28 @@ void loadPolysemousLiteral(set<string>& litList, set<string>& polysemousIdsList,
   llss.close();
 }
 
-void loadWOLF(map<string, set<string> >& wolfNet, map<string, set<string> >& wolfNetIdIdent, string filename, string spos) {
-  WolfHandler wolfHandler(&wolfNet, & wolfNetIdIdent, spos);
-  wolfHandler.parse_file(filename);
-}
-
-void loadBcsBase(map<string, int>& bcsbase, map<int, int>& BCSCount, string spos) {
-  BcsbaseHandler bcsbaseHandler(bcsbase, BCSCount, spos);
-  bcsbaseHandler.parse_file(BCSFILE);
-}
-
-
-void loadEWN(map<string, set<string> >& ewnNet, map<string, set<string> >& ewnNetIdIdent, string filepath, map<string, set<string> >& mapping) {
-  EwnLoader ewnLoader(&ewnNet, &ewnNetIdIdent, filepath, &mapping);
-  ewnLoader.load();
-}
-
-void loadGold(map<string, set<string> >& goldNet,
-             map<string, set<string> >& goldNetIdIdent,
-             map<pair<string, string>, int>& goldValue,
-             string filename) {
-  GoldHandler goldHandler(goldNet, goldNetIdIdent, goldValue);
-  goldHandler.parse_file(filename);
-}
-
-int parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
-                               map<int, int>& BCSCount,
-                               set<string>& litList,
-                               set<string>& polysemousIdsList,
-                               map<string, set<string> >& vtNet,
-                               map<string, set<string> >& vtNetIdIdent,
-                               string pos,
-                               string filename,
-                               map<pair<string, string>, int>& goldValue,
-                               bool gold) {
+void parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
+    map<int, int>& BCSCount,
+    set<string>& litList, set<string>& polysemousIdsList,
+    map<string, set<string> >& vtNet, map<string, set<string> >& vtNetIdIdent,
+    string pos, string filename,
+    map<pair<string, string>, int>& goldValue, bool gold) {
 
   Timer t;
 
-  if (!boost::filesystem::exists(filename))
-  {
+  if (!boost::filesystem::exists(filename))  {
     cerr << "Oops, " << filename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
     exit(-1);
   }
 
-  JawsHandler* jawsHandler = new JawsHandler(out, litList,
-                                             polysemousIdsList,
-                                             vtNet,
-                                             vtNetIdIdent,
-                                             goldValue,
-                                             gold,
-                                             pos,
-                                             BCS, BCSCount);
-  jawsHandler->parse_file(filename);
+  std::cerr << "Parsing JAWS... ";
 
-  delete jawsHandler;
+  JawsHandler jawsHandler(out, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent, goldValue, gold,
+      pos, BCS, BCSCount);
+  jawsHandler.parse_file(filename);
 
-  std::cout << "Parsed JAWS duration: " << t.duration() << "s" << std::endl;
-  return 0;
+  std::cerr << t.duration() << "s" << std::endl;
 }
 
 int main(int argc, char **argv) {
@@ -146,35 +110,45 @@ int main(int argc, char **argv) {
     return 1;
   }
 
+  set<string> litList, polysemousIdsList;
+  map<string, set<string>> vtNet, vtNetIdIdent;
+  map<string, set<string>> goldNet, goldNetIdIdent;
+  map<string,int> bcsbase;
+  map<int,int> BCSCount;
+  map<string, set<string>> mapping;
+  map<pair<string, string>, int> goldValue;
+
+  Timer t, globalT;
+
   string spos = argv[1];
   string seqs = argv[2];
 
-  std::map<std::string, POS> POS_of_string = { {"noun", POS::Noun}, {"verb", POS::Verb}, {"adj", POS::Adj} };
+  std::map<std::string, POS> POS_of_string = {
+    {"noun", POS::Noun},
+    {"verb", POS::Verb},
+    {"adj", POS::Adj}};
   POS pos = POS_of_string[spos];
 
-  std::map<POS, std::string> groundTruth = { {POS::Noun, WOLF}, {POS::Verb, EWN}, {POS::Adj, WOLF} };
-  std::map<POS, std::string> goldFile = { { POS::Noun, GOLD_NOUN }, {POS::Verb, GOLD_VERB}, {POS::Adj, GOLD_ADJ} };
+  std::map<POS, std::string> groundTruth = {
+    {POS::Noun, WOLF},
+    {POS::Verb, EWN},
+    {POS::Adj, WOLF}};
+
+  std::map<POS, std::string> goldFile = {
+    {POS::Noun, GOLD_NOUN},
+    {POS::Verb, GOLD_VERB},
+    {POS::Adj, GOLD_ADJ}};
 
   std::string suffix = spos + "." + seqs;
 
   std::string jaws = "data/jaws." + suffix + ".xml";
   std::string bestJaws = "data/jaws.best." + suffix + ".xml";
 
-  set<string> litList = set<string>();
-  set<string> polysemousIdsList = set<string>();
-  map<string, set<string> > vtNet = map<string, set<string> >();
-  map<string, set<string> > vtNetIdIdent = map<string, set<string> >();
-  map<string,int> bcsbase = map<string, int>();
-  map<int,int> BCSCount;
-  map<string, set<string> > mapping = map<string, set<string> >();
-  map<pair<string, string>, int> goldValue = map<pair<string, string>, int>();
-
-  Timer t;
-  Timer globalT;
-
   // BCS helps evaluation metrics
-  loadBcsBase(bcsbase, BCSCount, spos);
-  std::cout << "BCS duration: " << t.duration() << "s" << std::endl;
+  cerr << "Loading BCS... ";
+  BcsbaseHandler bcsbaseHandler(bcsbase, BCSCount, spos);
+  bcsbaseHandler.parse_file(BCSFILE);
+  cerr << t.duration() << "s" << std::endl;
 
   // Loading literal list
   loadPolysemousLiteral(litList, polysemousIdsList, POLYSEMOUSINDEX + spos);
@@ -182,48 +156,42 @@ int main(int argc, char **argv) {
   std::string vtmode = groundTruth[pos];
 
   /* First evaluate with a given ground truth */
+  t.start();
   if (vtmode == WOLF) {
-    // loading WOLF
     cerr << "Loading WOLF... ";
-    loadWOLF(vtNet, vtNetIdIdent, groundTruth[pos], spos);
+    WolfHandler wolfHandler(vtNet, vtNetIdIdent, spos);
+    wolfHandler.parse_file(groundTruth[pos]);
     cerr << t.duration() << "s" << endl;
   } else if (vtmode == EWN) {
-    // loading EWN
     cerr << "Loading EWN... ";
     mapping = loadMapfile(MAPVERB15_20);
-    loadEWN(vtNet, vtNetIdIdent, groundTruth[pos], mapping);
+    EwnLoader ewnLoader(vtNet, vtNetIdIdent, groundTruth[pos], mapping);
+    ewnLoader.load();
     cerr << t.duration() << "s" << endl;
   }
 
   std::ofstream log("logs/eval." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(log, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent,
-      spos, jaws, goldValue, false);
+      vtNet, vtNetIdIdent, spos, jaws, goldValue, false);
 
   std::ofstream logBest("logs/eval.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent,
-      spos, bestJaws, goldValue, false);
+      vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
 
-  t.start();
   /* Then evaluate with the gold standard */
+  t.start();
   cerr << "Loading Gold... ";
-
-  /* We're using the same maps, so clear them first! */
-  vtNet.clear();
-  vtNetIdIdent.clear();
-
-  loadGold(vtNet, vtNetIdIdent, goldValue, goldFile[pos]);
+  GoldHandler goldHandler(goldNet, goldNetIdIdent, goldValue);
+  goldHandler.parse_file(goldFile[pos]);
   cerr << t.duration() << "s" << endl;
 
   std::ofstream logGold("logs/eval.gold." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent,
-      spos, jaws, goldValue, true);
+      goldNet, goldNetIdIdent, spos, jaws, goldValue, true);
+
   std::ofstream logGoldBest("logs/eval.gold.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent,
-      spos, bestJaws, goldValue, true);
+      goldNet, goldNetIdIdent, spos, bestJaws, goldValue, true);
 
   std::cout << "Overall evaluation duration: " << globalT.duration() << " s" << std::endl;
 

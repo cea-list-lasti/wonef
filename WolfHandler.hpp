@@ -13,8 +13,8 @@ class WolfHandler : public xmlpp::SaxParser {
 
 public:
 
-  WolfHandler(map<string, set<string> >* wolfNet,
-	      map<string, set<string> >* wolfNetIdIdent,
+  WolfHandler(map<string, set<string> >& wolfNet,
+	      map<string, set<string> >& wolfNetIdIdent,
 	      string _pos);
 
   void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
@@ -28,7 +28,7 @@ private:
   string literal;
   stringstream tmpString;
   string pos;
-  map<string, set<string> >* wolfNet;
-  map<string, set<string> >* wolfNetIdIdent;
+  map<string, set<string> >& wolfNet;
+  map<string, set<string> >& wolfNetIdIdent;
   std::map<std::string, std::string> sensemap;
 };

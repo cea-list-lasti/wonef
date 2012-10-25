@@ -72,7 +72,8 @@ int main(int argc, char **argv) {
 
   cout << "Dumping Jaws...";
   t.start();
-  DumperModule dumper("data/jaws.adj" + options.suffix + ".xml", "data/jaws.index.adj" + options.suffix + ".xml");
+  DumperModule dumper("data/jaws.adj" + options.suffix + ".xml",
+      "data/jaws.index.adj" + options.suffix + ".xml");
   dumper.dump(wn);
   cout << t.duration() << "s" << endl;
 
@@ -84,7 +85,8 @@ int main(int argc, char **argv) {
 
   cout << "Print best JAWS" << endl;
   t.start();
-  DumperModule dumperBest("data/jaws.best.adj" + options.suffix + ".xml", "data/jaws.best.index.adj." + options.suffix + ".xml");
+  DumperModule dumperBest("data/jaws.best.adj" + options.suffix + ".xml",
+      "data/jaws.best.index.adj." + options.suffix + ".xml");
   dumperBest.dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 

@@ -21,6 +21,7 @@ std::string GoldHandler::get_attr(const xmlpp::SaxParser::AttributeList& attrs, 
   for(const xmlpp::SaxParser::Attribute& attr: attrs) {
     if (attr.name == name) return attr.value;
   }
+  std::cout << "asked for " << name << std::endl;
   exit(-1);
 }
 
@@ -34,7 +35,7 @@ void GoldHandler::on_start_element(const std::string& name,
     nbSynsets++;
     id = get_attr(attrs, "id");
   } else if(name == "CANDIDATE") {
-    string val = get_attr(attrs, "valide");
+    string val = get_attr(attrs, "score");
     valide = boost::lexical_cast<int>(val);
   }
 

@@ -5,6 +5,7 @@
 #include "../src/tools.h"
 #include <iostream>
 #include <fstream>
+#include <limits>
 #include "boost/regex.hpp"
 
 using namespace std;
@@ -143,7 +144,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
             if (head=="") {
               head = getHead(*itSyn);
             }
-            float score;
+            float score = - std::numeric_limits<float>::infinity();;
             if (pos == "noun") {
               score = tRoler.computeIsAScore( itCand->first, head, R_HYPO);
             } else if (pos == "verb") {
@@ -154,7 +155,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
             if( verbose) {
               cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
             }
-            if (!isnan(score)) {
+            if (isfinite(score)) {
               if( verbose) {
                 cerr << "DEBUG hyponyms"<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
               }
@@ -186,14 +187,14 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
             if (head=="") {
               head = getHead(*itSyn);
             }
-            float score;
+            float score = - std::numeric_limits<float>::infinity();
             if (pos == "noun") {
               score = tRoler.computeIsAScore(head, itCand->first, R_HYPER);
             } else if (pos == "verb") {
               // compute the score without the pronoun
               score = tRoler.computeIsAScore(head, it->second.verbCand[itCand->first], R_HYPER);
             }
-            if (!isnan(score)) {
+            if (isfinite(score)) {
               if (verbose){
                 cerr << "DEBUG hypernyms : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
               }

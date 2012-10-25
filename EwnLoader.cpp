@@ -2,23 +2,18 @@
 #include "Tools.hpp"
 #include <boost/algorithm/string/predicate.hpp>
 
-
 using namespace std;
 
-
-
-EwnLoader::EwnLoader(map<string, set<string> >* _ewnNet, map<string, set<string> >* _ewnNetIdIdent, string& _filepath, map<string, set<string> >* _mapping) :
+EwnLoader::EwnLoader(map<string, set<string>>& _ewnNet,
+    map<string, set<string> >& _ewnNetIdIdent,
+    string& _filepath, map<string, set<string> >& _mapping) :
+  ewnNet(_ewnNet), ewnNetIdIdent(_ewnNetIdIdent),
   filepath(_filepath), nbSynsets(0), mapping(_mapping) {
-    ewnNet = _ewnNet;
-    ewnNetIdIdent = _ewnNetIdIdent;
+
   }
 
-EwnLoader::~EwnLoader() {
-}
-
-
 void EwnLoader::load () {
-  cerr << "Loading from : " << filepath << endl;
+  //cerr << "Loading from : " << filepath << endl;
   ifstream idss(filepath.c_str(), fstream::in);
   if (idss.fail()) {
     cerr << "Oops, " << filepath << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -89,20 +84,12 @@ void EwnLoader::load () {
               id[i]=tmp[j];
               j--;
             }
-            if (mapping->find(id) == mapping->end()) {
-              cerr << "Pas de correspondance pour " << id << "\n";
+            if (mapping.find(id) == mapping.end()) {
+              //cerr << "Pas de correspondance pour " << id << "\n";
             } else {
-              for(std::set<std::string>::iterator itMapId = mapping->at(id).begin();
-                  itMapId != mapping->at(id).end(); itMapId++){
-                if(ewnNet->find(literal)==ewnNet->end()) {
-                  (*ewnNet)[literal]= set<string>();
-                }
-                (*ewnNet)[literal].insert(*itMapId);
-
-                if(ewnNetIdIdent->find(*itMapId)==ewnNet->end()) {
-                  (*ewnNet)[*itMapId]= set<string>();
-                }
-                (*ewnNetIdIdent)[*itMapId].insert(tolower(literal));
+              for (std::string mapped_id : mapping.at(id)) {
+                ewnNet[literal].insert(mapped_id);
+                ewnNetIdIdent[mapped_id].insert(tolower(literal));
               }
             }
           }

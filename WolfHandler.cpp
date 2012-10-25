@@ -11,13 +11,11 @@ using namespace xercesc;
 using namespace std;
 
 
-WolfHandler::WolfHandler(map<string, set<string> >* _wolfNet,
-                         map<string, set<string> >* _wolfNetIdIdent,
-                         string _pos) :
-                         nbSynsets(0), pos(_pos) {
-
-  wolfNet = _wolfNet;
-  wolfNetIdIdent = _wolfNetIdIdent;
+WolfHandler::WolfHandler(map<string, set<string> >& _wolfNet,
+    map<string, set<string> >& _wolfNetIdIdent,
+    string _pos) :
+  nbSynsets(0), pos(_pos),
+  wolfNet(_wolfNet), wolfNetIdIdent(_wolfNetIdIdent) {
 
   sensemap = loadSensemap(pos);
 }
@@ -47,15 +45,9 @@ void WolfHandler::on_end_element(const std::string &name) {
     if ((pos == "noun" && PartOfSpeech == "n")
       || (pos == "verb" && PartOfSpeech == "v")
       || (pos == "adj" && PartOfSpeech == "a")) {
-      if (wolfNet->find(literal)==wolfNet->end()) {
-         (*wolfNet)[literal]=set<string>();
-      }
       // cerr << "INSERT : " << literal << " -> " << id << endl;
-      (*wolfNet)[literal].insert(id);
-      if (wolfNetIdIdent->find(id)==wolfNetIdIdent->end()) {
-         wolfNetIdIdent->insert(make_pair(id, set<string>()));
-      }
-      (*wolfNetIdIdent)[id].insert(literal);
+      wolfNet[literal].insert(id);
+      wolfNetIdIdent[id].insert(literal);
     }
   }
 

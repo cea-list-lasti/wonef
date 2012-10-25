@@ -66,16 +66,20 @@ seqs="e${extract}.m${module}"
 day=`date +%Y_%B_%d`
 time=`date +%H_%M_%S`
 
+# Never, ever display logs or data from last time.
+mkdir -p logs data
+rm -f logs/* data/*
+
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
 ./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
-gprof translate$Poss > profiled.create.$pos 2> /dev/null
+gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
-echo -e "\n-- Evaluating with $REFERENCE... --"
+
 ./evalJAWS-WOLF $pos $seqs
-gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
+gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 
 echo -e "\n                *** Normal ***"
 tail -4 logs/eval.$pos.$seqs

@@ -11,6 +11,7 @@
 BcsbaseHandler::BcsbaseHandler(map<string, int >& _bcsbase, map<int, int>& _BCSCount, string _pos) :
   nbSynsets(0), pos(_pos), bcsbase(_bcsbase), BCSCount(_BCSCount) {
   sensemap = loadSensemap(pos);
+  BCSCount = { {1, 0}, {2, 0}, {3, 0} };
 }
 
 void BcsbaseHandler::on_start_element(const std::string& name,
