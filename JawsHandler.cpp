@@ -50,6 +50,9 @@ std::string JawsHandler::get_attr(const xmlpp::SaxParser::AttributeList& attrs, 
 
 void JawsHandler::on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& attrs) {
 
+  tmpString.clear();
+  tmpString.str(std::string());
+
   if(name == "SYNSET") {
     id = get_attr(attrs, "id");
 
@@ -81,7 +84,7 @@ void JawsHandler::on_start_element(const std::string& name, const xmlpp::SaxPars
 
 
 void JawsHandler::on_characters(const std::string& characters) {
-  tmpString = characters;
+  tmpString << characters;
 }
 
 bool gtHasTranslation(std::set<std::string> gtTerms, std::string jawsTerm) {
@@ -101,7 +104,7 @@ bool gtHasTranslation(std::set<std::string> gtTerms, std::string jawsTerm) {
 void JawsHandler::on_end_element(const std::string &name){
 
    if(name == "ORIGINALDEF") {
-    wne.def = tmpString;
+    wne.def = tmpString.str();
 
    } else if(name == "CANDIDATES") {
     nbOriginals++;
@@ -120,12 +123,20 @@ void JawsHandler::on_end_element(const std::string &name){
         polysemous = true;
       }
     }
-    // count terms in Jaws
+
+    // check if the translation comes from a BCS synset
+    bool bcs = BCS.find(id) != BCS.end();
+
+    // count terms in Jaws: all, polysemous, bcs
     nbTermsInJaws++;
     nbTermsInSynset++;
     if (polysemous) {
       nbPolyTermsInJaws++;
       nbPolyTermsInSynset++;
+    }
+    if (bcs) {
+      nbBcsTermsInJaws++;
+      nbBcsTermsInSynset++;
     }
 
     // count terms in Jaws which are in synsets translated in GT
@@ -134,14 +145,21 @@ void JawsHandler::on_end_element(const std::string &name){
       if (polysemous) {
         nbPolyInJawsSynsetInGt++;
       }
+      if (bcs) {
+        nbBcsInJawsSynsetInGt++;
+      }
 
       // count terms in the same synset in JAWS and GT
       if (gtHasTranslation(vtNetIdIdent[id], translation)) {
         nbTermsOk++;
         nbTermsOkInSynset++;
-        if (polysemous == true) {
+        if (polysemous) {
           nbPolyTermsOk++;
           nbPolyTermsOkInSynset++;
+        }
+        if (bcs) {
+          nbBcsTermsOk++;
+          nbBcsTermsOkInSynset++;
         }
       }
     }
@@ -157,7 +175,7 @@ void JawsHandler::on_end_element(const std::string &name){
       nbJawsSynsets++;
       transInJaws = true;
       // If it's a BCS, count it
-      if(BCS.find(id) != BCS.end()) {
+      if (BCS.find(id) != BCS.end()) {
         BCSJawsCount[BCS.at(id)]++;
       }
     }
@@ -168,6 +186,9 @@ void JawsHandler::on_end_element(const std::string &name){
         if (nbPolyTermsInSynset > 0) {
           totalPercentagePolyTermsOkInSynset += 1.0 * nbPolyTermsOkInSynset / nbPolyTermsInSynset;
         }
+        if (nbBcsTermsInSynset > 0) {
+          totalPercentageBcsTermsOkInSynset += 1.0 * nbBcsTermsOkInSynset / nbBcsTermsInSynset;
+        }
       }
     }
 
@@ -175,6 +196,9 @@ void JawsHandler::on_end_element(const std::string &name){
     if (vtNetIdIdent[id].size() > 0) {
       nbGtSynsets++;
       for (std::string gtTerm : vtNetIdIdent[id]) {
+        // we'll want to display what the GT said.
+        transInGt = true;
+
         // MWE expressions don't count for now
         if (gtTerm.find("_") != std::string::npos) { continue; }
 
@@ -182,7 +206,7 @@ void JawsHandler::on_end_element(const std::string &name){
         if (transInJaws) {
           nbTermsInGtAndAJawsSynset++;
         }
-        transInGt = true;
+        // we're assuming the term is polysemous if it comes
         if (polyIdsList.find(id) != polyIdsList.end()) {
           nbPolyTermsInGt++;
           if (transInJaws) {

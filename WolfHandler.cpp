@@ -26,20 +26,23 @@ void WolfHandler::on_start_element(const std::string& name, const xmlpp::SaxPars
   if(name == "SYNSET") {
     nbSynsets++;
   } else if(name == "SENSE") {
-    literal = tmpString;
+    literal = tmpString.str();
   }
+
+  tmpString.clear();
+  tmpString.str(std::string());
 
 }
 
 void WolfHandler::on_characters(const std::string& characters) {
-    tmpString = characters;
+    tmpString << characters;
 }
 
 void WolfHandler::on_end_element(const std::string &name) {
   if (name == "ID") {
-    id = sensemap[tmpString.substr(6, 8)];
+    id = sensemap[tmpString.str().substr(6, 8)];
   } else if (name == "POS") {
-    PartOfSpeech = tmpString;
+    PartOfSpeech = tmpString.str();
   } else if (name == "LITERAL") {
     if ((pos == "noun" && PartOfSpeech == "n")
       || (pos == "verb" && PartOfSpeech == "v")

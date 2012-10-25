@@ -1,6 +1,7 @@
 #include <libxml++/libxml++.h>
 
 #include <string>
+#include <sstream>
 #include <set>
 #include <map>
 #include <iostream>
@@ -25,7 +26,7 @@ private:
   string id;
   string PartOfSpeech;
   string literal;
-  string tmpString;
+  stringstream tmpString;
   string pos;
   map<string, set<string> >* wolfNet;
   map<string, set<string> >* wolfNetIdIdent;

@@ -18,27 +18,29 @@ void BcsbaseHandler::on_start_element(const std::string& name,
   if(name == "SYNSET") {
     nbSynsets++;
   } else if(name == "SENSE") {
-    literal = tmpString;
+    literal = tmpString.str();
   }
+
+  tmpString.clear();
+  tmpString.str(std::string());
 }
 
 void BcsbaseHandler::on_characters(const std::string& characters) {
-    tmpString = characters;
+    tmpString << characters;
 }
 
 void BcsbaseHandler::on_end_element(const std::string &name) {
+
   if (name == "ID") {
-    id = tmpString.substr(6, 8);
+    id = tmpString.str().substr(6, 8);
   } else if (name == "POS") {
-    PartOfSpeech = tmpString;
+    PartOfSpeech = tmpString.str();
   } else if (name == "BCS") {
     if((pos == "noun" && PartOfSpeech.compare("n") == 0)
-      || (pos == "verb" && PartOfSpeech.compare("v") == 0)
-      || (pos == "adj" && PartOfSpeech.compare("a") == 0)) {
-      stringstream ss;
-      ss << tmpString;
+        || (pos == "verb" && PartOfSpeech.compare("v") == 0)
+        || (pos == "adj" && PartOfSpeech.compare("a") == 0)) {
       int bcs;
-      ss >> bcs;
+      tmpString >> bcs;
       bcsbase[sensemap[id]] = bcs;
       BCSCount[bcs]++;
     }

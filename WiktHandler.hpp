@@ -3,6 +3,7 @@
 #include <xercesc/sax2/Attributes.hpp>
 #include <xercesc/util/TransService.hpp>
 #include <string>
+#include <sstream>
 #include <set>
 #include <map>
 #include <iostream>
@@ -34,7 +35,7 @@ private :
   ofstream ofs;
   set<string> srcStrings;
   set<string> tgtStrings;
-  string tmpString;
+  stringstream tmpStringstream;
   string tmpEntry;
   map<string,string> tmpAttrs;
   string def;

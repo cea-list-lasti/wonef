@@ -5,6 +5,7 @@
 #include <libxml++/libxml++.h>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <set>
 #include <map>
 
@@ -33,27 +34,43 @@ public :
   uint nbSynsets;
   uint nbJawsSynsets;
   uint nbGtSynsets;
+
   uint nbOriginals;
   uint nbPolyOriginals;
+
   uint nbTermsInJaws;
   uint nbPolyTermsInJaws;
+  uint nbBcsTermsInJaws;
+
   uint nbTermsInGt;
   uint nbPolyTermsInGt;
+  uint nbBcsTermsInGt;
+
   // useful for recall: terms in GT, but only in a non-empty JAWS synset
   uint nbTermsInGtAndAJawsSynset;
   uint nbPolyTermsInGtAndAJawsSynset;
+  uint nbBcsTermsInGtAndAJawsSynset;
+
   uint nbTermsOk;
   uint nbPolyTermsOk;
+  uint nbBcsTermsOk;
+
   uint nbInJawsSynsetInGt;
   uint nbPolyInJawsSynsetInGt;
+  uint nbBcsInJawsSynsetInGt;
 
   /* per-synset average precision */
   uint nbTermsOkInSynset;
   uint nbPolyTermsOkInSynset;
+  uint nbBcsTermsOkInSynset;
+
   uint nbTermsInSynset;
   uint nbPolyTermsInSynset;
+  uint nbBcsTermsInSynset;
+
   float totalPercentageTermsOkInSynset;
   float totalPercentagePolyTermsOkInSynset;
+  float totalPercentageBcsTermsOkInSynset;
 
 protected :
 
@@ -75,7 +92,7 @@ protected :
   std::string id;
   std::string original;
   std::string translation;
-  std::string tmpString;
+  std::stringstream tmpString;
   std::string pos;
 
   /* Basic Concept Sets as defined by balkanet */

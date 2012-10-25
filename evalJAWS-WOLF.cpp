@@ -101,7 +101,7 @@ void loadGold(map<string, set<string> >& goldNet,
              map<string, set<string> >& goldNetIdIdent,
              map<pair<string, string>, int>& goldValue,
              string filename) {
-  GoldHandler goldHandler(& goldNet, & goldNetIdIdent, & goldValue);
+  GoldHandler goldHandler(goldNet, goldNetIdIdent, goldValue);
   goldHandler.parse_file(filename);
 }
 
@@ -208,6 +208,8 @@ int main(int argc, char **argv) {
   t.start();
   /* Then evaluate with the gold standard */
   cerr << "Loading Gold... ";
+
+  /* We're using the same maps, so clear them first! */
   vtNet.clear();
   vtNetIdIdent.clear();
 

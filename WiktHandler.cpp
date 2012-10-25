@@ -98,7 +98,7 @@ void WiktHandler::startElement(const XMLCh *const    	 /*uri*/,
     //    cerr << tgtLang << " vs "<<getAttrValue(attrs, "name")<< endl;
     if (checkAttr(attrs, "name", srcLang)) {      
       srcStrings.insert(tmpEntry);
-    } else if (checkAttr(attrs, "name", tgtLang) && tmpString.compare(":")!=0) {
+    } else if (checkAttr(attrs, "name", tgtLang) && tmpStringstream.str() != ":") {
       tgtStrings.insert(tmpEntry);
       //      cerr << "INSERT : " << tmpEntry << endl;
     }  
@@ -108,17 +108,21 @@ void WiktHandler::startElement(const XMLCh *const    	 /*uri*/,
     tmpAttrs["subcat_name"]= getAttrValue(attrs, "name");
     tmpAttrs["subcat_lang"]= getAttrValue(attrs, "lang");
   }
-  
+
+  tmpStringstream.clear();
+  tmpStringstream.str(std::string());
+
 }
 
 void WiktHandler::characters(const XMLCh *const chars, const XMLSize_t /*length*/)  {
-  tmpString = _transcode(chars);
+  tmpStringstream << _transcode(chars);
 
 }
 
 void WiktHandler::endElement(const XMLCh *const /*uri*/,
 			     const XMLCh *const /*localname*/,
 			     const XMLCh *const qname) {
+  std::string tmpString = tmpStringstream.str();
   if(_transcode(qname).compare("page")==0) {
     for (set<string>::iterator itTgt = tgtStrings.begin(); itTgt!=tgtStrings.end(); itTgt++) {
       for (set<string>::iterator itSrc = srcStrings.begin(); itSrc!=srcStrings.end(); itSrc++) {
