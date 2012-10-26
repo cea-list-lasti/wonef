@@ -2,103 +2,93 @@
 #include <cassert>
 
 #include "distance.hpp"
+#include "tools.h"
 #include "Tools.hpp"
 
-ExtractorModule::ExtractorModule(std::string _pos, std::set<ExtractionType> _extractions)
-  : pos(_pos), extractions(_extractions) { }
+ExtractorModule::ExtractorModule(std::string _pos, std::set<ExtractionType>
+_extractions) : pos(_pos), extractions(_extractions) {
+
+  initDesax(desaxData); }
 
 void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
-  typedef std::pair<const std::string, WORDNET::WordNetEntry> wn_t;
-  typedef std::pair<const std::string, WORDNET::TgtCandidates> candidate_t;
-  typedef std::pair<const std::string, int> cand_t;
+  typedef std::pair<const std::string, WORDNET::WordNetEntry> wn_t; typedef
+std::pair<const std::string, WORDNET::TgtCandidates> candidate_t; typedef
+std::pair<const std::string, int> cand_t;
 
   std::map<std::string, int> WNIndex;
 
   /* Preprocessing: compute various informations our extraction rules need */
-  for (wn_t& wnepair: wn) {
-    for (candidate_t& candidates: wnepair.second.frenchCandidates) {
-      std::string srcWord = candidates.first;
+  for (wn_t& wnepair: wn) { for (candidate_t& candidates:
+wnepair.second.frenchCandidates) { std::string srcWord = candidates.first;
       // fill up WNIndex to know what words only appear in one synset
-      WNIndex[srcWord]++;
-    }
-  }
+      WNIndex[srcWord]++; } }
 
-  /* Actual code: setting candidate scores (promoting) and adding new instances */
-  for (wn_t& wnepair: wn) {
-    WORDNET::WordNetEntry& wne = wnepair.second;
-    englishCount.clear();
-    for (candidate_t& candidates: wne.frenchCandidates) {
-      std::string srcWord = candidates.first;
+  /* Actual code: setting candidate scores (promoting) and adding new instances
+ * */
+  for (wn_t& wnepair: wn) { WORDNET::WordNetEntry& wne = wnepair.second;
+englishCount.clear(); for (candidate_t& candidates: wne.frenchCandidates) {
+std::string srcWord = candidates.first;
 
       /* monosemous */
-      if (WNIndex[srcWord] == 1) {
-        if (extractions.count(ExtractionType::Monosemous) == 1) {
-          for (cand_t& cand: candidates.second.cand) {
-            std::string tgtWord = cand.first;
+      if (WNIndex[srcWord] == 1) { if
+(extractions.count(ExtractionType::Monosemous) == 1) { for (cand_t& cand:
+candidates.second.cand) { std::string tgtWord = cand.first;
             /* If this word only appears in one synset, let's assume the
-             * translation is correct since monosemous */
-            addInstance(wne.frenchSynset, "monosemous", tgtWord, srcWord, 1);
-          }
-        }
-      } else {
-        switch (candidates.second.cand.size()) {
+ * translation is correct since monosemous */
+            addInstance(wne.frenchSynset, "monosemous", tgtWord, srcWord, 1); }
+} } else { switch (candidates.second.cand.size()) {
           /* no translation */
-          case 0 :
-            if (extractions.count(ExtractionType::NoTranslation) == 1) {
-              if (candidates.second.capital) {
+          case 0 : if (extractions.count(ExtractionType::NoTranslation) == 1) {
+if (candidates.second.capital) {
                 // original == translation here.
-                addInstance(wne.frenchSynset, "notranslation", srcWord, srcWord, 1);
-              }
-            }
-            break;
+                addInstance(wne.frenchSynset, "notranslation", srcWord,
+srcWord, 1); } } break;
 
             /* uniq */
           case 1 :
-            /* If there's only one possible translation in this synset, choose it.
-             * TODO: is this really helpful? for all part-of-speech? */
+            /* If there's only one possible translation in this synset, choose
+ * it.  TODO: is this really helpful? for all part-of-speech? */
             if (extractions.count(ExtractionType::Uniq) == 1) {
-              addInstance(wne.frenchSynset, "uniq", candidates.second.cand.begin()->first, srcWord, 1);
-            }
-            break;
+addInstance(wne.frenchSynset, "uniq", candidates.second.cand.begin()->first,
+srcWord, 1); } break;
 
             /* promote specifics */
           case 2 :
             // TODO does this have an effect at all? on how many synsets?
             /* We prefer more specific terms, eg. "individualité" is better
-             * than "individual" */
+ * than "individual" */
             if (candidates.second.cand.begin()->first
-                .find(candidates.second.cand.rbegin()->first) != string::npos
-                && ((*candidates.second.cand.rbegin()).first.length()
-                  - (*candidates.second.cand.begin()).first.length() > 2))
-            {
-              wne.frenchCandidates[srcWord].cand[candidates.second.cand.begin()->first]++;
-            }
-            else if (candidates.second.cand.rbegin()->first
-                .find(candidates.second.cand.begin()->first) != string::npos
-                && ((*candidates.second.cand.rbegin()).first.length() -
-                  (*candidates.second.cand.begin()).first.length() > 2))
-            {
-              wne.frenchCandidates[srcWord].cand[candidates.second.cand.rbegin()->first]++;
-            }
+.find(candidates.second.cand.rbegin()->first) != string::npos &&
+((*candidates.second.cand.rbegin()).first.length()
+                  - (*candidates.second.cand.begin()).first.length() > 2)) {
+                    wne.frenchCandidates[srcWord].cand[candidates.second.cand.begin()->first]++;
+} else if (candidates.second.cand.rbegin()->first
+.find(candidates.second.cand.begin()->first) != string::npos &&
+((*candidates.second.cand.rbegin()).first.length() -
+(*candidates.second.cand.begin()).first.length() > 2)) {
+wne.frenchCandidates[srcWord].cand[candidates.second.cand.rbegin()->first]++; }
 
 
             /* promote close words */
           default:
             /* We're using Levenshtein distance to promote true and false
-             * friends. This only affects the score of a candidate, and doesn't
-             * add any new instance */
+ * friends. This only affects the score of a candidate, and doesn't add any new
+ * instance */
 
             // promote true (and false) fr/en friends
-            for (map<string, int>::iterator itCand = candidates.second.cand.begin(); itCand!=candidates.second.cand.end(); itCand++) {
-              Distance lDist;
-              int ldScore = 0;
-              if (pos == "verb") {
+            for (map<string, int>::iterator itCand =
+candidates.second.cand.begin(); itCand!=candidates.second.cand.end(); itCand++)
+{ Distance lDist; int ldScore = 0; std::string candidate = itCand->first; if
+(pos == "verb") {
                 // compute the score without the pronoun
-                ldScore = lDist.LD(candidates.second.verbCand[itCand->first],srcWord);
-              } else {
-                ldScore = lDist.LD(itCand->first,srcWord);
-              }
+                candidate = candidates.second.verbCand[candidate]; }
+
+              /* Desaccentuation: using the faster method, which has been
+               * corrected using the Unicode-aware one. */
+              ldScore = lDist.LD(fastDesax(desaxData, candidate), srcWord);
+              // ldScore = lDist.LD(desaxUTF8(candidate), srcWord);
+
               if (ldScore<=3) {
                 wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;
               }
