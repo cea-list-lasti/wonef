@@ -87,14 +87,14 @@ if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 2
 gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 
 echo -e "\n                *** Normal ***"
-tail -4 logs/eval.$pos.$seqs
+tail -3 logs/eval.$pos.$seqs
 echo -e "\n                *** Best ***"
-tail -4 logs/eval.best.$pos.$seqs
+tail -3 logs/eval.best.$pos.$seqs
 echo -e "\n-- Evaluating with Gold... --"
 echo -e "\n                *** Normal ***"
-tail -4 logs/eval.gold.${pos}.$seqs
+tail -3 logs/eval.gold.${pos}.$seqs
 echo -e "\n                *** Best ***"
-tail -4 logs/eval.gold.best.${pos}.$seqs
+tail -3 logs/eval.gold.best.${pos}.$seqs
 
 # Archive relevant files to our archive.
 

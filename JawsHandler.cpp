@@ -19,13 +19,13 @@ JawsHandler::JawsHandler(std::ofstream& _out,
     const std::map<int, int>& _BCSCount) :
   out(_out),
   nbSynsets(0), nbJawsSynsets(0), nbGtSynsets(0),
-  nbOriginals(0), nbPolyOriginals(0),
-  nbTermsInJaws(0), nbPolyTermsInJaws(0),
-  nbTermsInGt(0), nbPolyTermsInGt(0),
-  nbTermsInGtAndAJawsSynset(0), nbPolyTermsInGtAndAJawsSynset(0),
-  nbTermsOk(0), nbPolyTermsOk(0),
-  nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0),
-  totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f),
+  nbOriginals(0), nbPolyOriginals(0), nbBcsOriginals(0),
+  nbTermsInJaws(0), nbPolyTermsInJaws(0), nbBcsTermsInJaws(0),
+  nbTermsInGt(0), nbPolyTermsInGt(0), nbBcsTermsInGt(0),
+  nbTermsInGtAndAJawsSynset(0), nbPolyTermsInGtAndAJawsSynset(0), nbBcsTermsInGtAndAJawsSynset(0),
+  nbTermsOk(0), nbPolyTermsOk(0), nbBcsTermsOk(0),
+  nbInJawsSynsetInGt(0), nbPolyInJawsSynsetInGt(0), nbBcsInJawsSynsetInGt(0),
+  totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f), totalPercentageBcsTermsOkInSynset(0),
   polyLitList(_polyLitList), polyIdsList(_polyIdsList),
   vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
   goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount) {
@@ -110,6 +110,9 @@ void JawsHandler::on_end_element(const std::string &name){
     nbOriginals++;
     if (polyLitList.find(original) != polyLitList.end()) {
       nbPolyOriginals++;
+    }
+    if (BCS.find(id) != BCS.end()) {
+      nbBcsOriginals++;
     }
     original = std::string();
 
@@ -206,11 +209,18 @@ void JawsHandler::on_end_element(const std::string &name){
         if (transInJaws) {
           nbTermsInGtAndAJawsSynset++;
         }
-        // we're assuming the term is polysemous if it comes
+        // we're assuming the term is polysemous if it comes from a polysemous synset.
+        // a synset is polysemous is one of its terms comes from more than one synset.
         if (polyIdsList.find(id) != polyIdsList.end()) {
           nbPolyTermsInGt++;
           if (transInJaws) {
             nbPolyTermsInGtAndAJawsSynset++;
+          }
+        }
+        if (BCS.find(id) != BCS.end()) {
+          nbBcsTermsInGt++;
+          if (transInJaws) {
+            nbBcsTermsInGtAndAJawsSynset++;
           }
         }
       }
@@ -329,15 +339,24 @@ void JawsHandler::on_end_document() {
   float allPrecision = (float)nbTermsOk / (float)nbTermsInJaws;
   float allPseudoPrec = (float)nbTermsOk / (float)nbInJawsSynsetInGt;
   float averagePseudoPrec = totalPercentageTermsOkInSynset / nbInJawsSynsetInGt;
+  float allRecGt = (float)nbTermsOk / (float)nbTermsInGtAndAJawsSynset;
+  float allF1 = 2*(allPseudoPrec * allRecGt) / (allPseudoPrec + allRecGt);
+
   float polyPrecision = (float)nbPolyTermsOk / (float)nbPolyTermsInJaws;
   float polyPseudoPrec = (float)nbPolyTermsOk / (float)nbPolyInJawsSynsetInGt;
-  float averagePolyPseudoPrec = totalPercentagePolyTermsOkInSynset / nbPolyInJawsSynsetInGt;
-  float allRecGt = (float)nbTermsOk / (float)nbTermsInGtAndAJawsSynset;
+  float averagePolyPseudoPrec = (float)totalPercentagePolyTermsOkInSynset / (float)nbPolyInJawsSynsetInGt;
   float polyRecGt = (float)nbPolyTermsOk / (float)nbPolyTermsInGtAndAJawsSynset;
-  float allF1 = 2*(allPseudoPrec * allRecGt) / (allPseudoPrec + allRecGt);
-  float polyF1 = 2*(polyPseudoPrec * polyRecGt) / (polyPseudoPrec + polyRecGt);
-  float coverageWN = (float)nbTermsInJaws / (float)nbOriginals;
   float polycoverWN = (float)nbPolyTermsInJaws / (float)nbPolyOriginals;
+  float polyF1 = 2*(polyPseudoPrec * polyRecGt) / (polyPseudoPrec + polyRecGt);
+
+  float bcsPrecision = (float)nbBcsTermsOk / (float)nbBcsTermsInJaws;
+  float bcsPseudoPrec = (float)nbBcsTermsOk / (float)nbBcsInJawsSynsetInGt;
+  float averageBcsPseudoPrec = (float)totalPercentageBcsTermsOkInSynset / (float)nbBcsInJawsSynsetInGt;
+  float bcsRecGt = (float)nbBcsTermsOk / (float)nbBcsTermsInGtAndAJawsSynset;
+  float bcscoverWN = (float)nbBcsTermsInJaws / (float)nbBcsOriginals;
+  float bcsF1 = 2*(bcsPseudoPrec * bcsRecGt) / (bcsPseudoPrec + bcsRecGt);
+
+  float coverageWN = (float)nbTermsInJaws / (float)nbOriginals;
   float recSynsetsGt = (float)nbJawsSynsets / (float)nbGtSynsets;
   float recallSynsets = (float)nbJawsSynsets / (float)nbSynsets;
 
@@ -345,12 +364,12 @@ void JawsHandler::on_end_document() {
   out.precision(2);
 
   out << "------------------------------------" << std::endl;
+
   out << "\t\t*** All " + terms + " ***" << std::endl;
   out << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << std::endl;
   out << "In synsets known by GT :\t" << nbInJawsSynsetInGt << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << std::endl;
-
   out << "Precision :\t\t\t" << allPrecision*100 << "%" << std::endl;
   out << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << std::endl;
   out << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << std::endl;
@@ -363,13 +382,26 @@ void JawsHandler::on_end_document() {
   out << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << std::endl;
-
   out << "Precision :\t\t\t" << polyPrecision*100 << "%" << std::endl;
   out << "Average pseudo precision :\t" << averagePolyPseudoPrec*100 << "%"  << std::endl;
   out << "Pseudo precision :\t\t" << polyPseudoPrec*100 << "%" << std::endl;
   out << "Recall / GT :\t\t\t" << polyRecGt*100 << "%" << std::endl;
   out << "F1-score :\t\t\t" << polyF1*100 << "%" << std::endl;
   out << "Coverage / WN :\t\t\t" << polycoverWN*100 << "%" << std::endl;
+
+  out << "\t\t*** BCS ***" << std::endl;
+  out << "nb" + terms + "InJaws :\t\t\t" << nbBcsTermsInJaws << std::endl;
+  out << "In synsets known by GT :\t" << nbBcsInJawsSynsetInGt << std::endl;
+  out << "nb" + terms + "InGt :\t\t\t" << nbBcsTermsInGt << std::endl;
+  out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbBcsTermsOk << std::endl;
+  out << "Precision :\t\t\t" << bcsPrecision*100 << "%" << std::endl;
+  out << "Average pseudo precision :\t" << averageBcsPseudoPrec*100 << "%"  << std::endl;
+  out << "Pseudo precision :\t\t" << bcsPseudoPrec*100 << "%" << std::endl;
+  out << "Recall / GT :\t\t\t" << bcsRecGt*100 << "%" << std::endl;
+  out << "F1-score :\t\t\t" << bcsF1*100 << "%" << std::endl;
+  out << "Coverage / WN :\t\t\t" << bcscoverWN*100 << "%" << std::endl;
+
+
   out << "---" << std::endl;
   out << "nbOriginals : " << nbOriginals
        << ", polysemous : " << nbPolyOriginals << std::endl;
@@ -381,16 +413,16 @@ void JawsHandler::on_end_document() {
   out << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << std::endl;
   out << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << std::endl;
 
-  out << "           All " << std::setw(5) << terms << "           Polysemous" << std::endl;
+  out << "           All " << std::setw(5) << terms << "           Polysemous              BCS" << std::endl;
 
   out << std::setw(5) << terms << ":  ";
   out << std::setw(6) << nbTermsInJaws << " - " << std::setw(5) << coverageWN*100 << "%" << "     ";
-  out << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << std::endl;
+  out << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << "     ";
+  out << std::setw(6) << nbBcsTermsInJaws << " - " << std::setw(5) << bcscoverWN*100 << "%" << std::endl;
 
   out << "P/R:    ";
   out << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
-  out << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << std::endl;
+  out << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << "     ";
 
-
-  out << "BCS(%):         " << 100.0*BCSJawsCount[1]/BCSCount.at(1) << "% " << 100.0*BCSJawsCount[2]/BCSCount.at(2) << "% " << 100.0*BCSJawsCount[3]/BCSCount.at(3) << "%" << std::endl;
+  out << std::setw(5) << bcsPseudoPrec * 100 << "% / " << std::setw(5) << bcsRecGt * 100 << "%" << std::endl;
 }

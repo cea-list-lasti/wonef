@@ -37,6 +37,7 @@ public :
 
   uint nbOriginals;
   uint nbPolyOriginals;
+  uint nbBcsOriginals;
 
   uint nbTermsInJaws;
   uint nbPolyTermsInJaws;
