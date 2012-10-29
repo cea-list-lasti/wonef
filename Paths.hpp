@@ -11,6 +11,7 @@ const std::string  DATA_ADJ "/data/text/WordNet-3.0/dict/data.adj";
 const std::string  DATAPATH = "/home/pradet/data";
 
 const std::string WOLF = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
+const std::string WOLFONE = DATAPATH + "/opendata/wolf10b/wolf-1.0b.xml";
 const std::string EWN = DATAPATH + "/opendata/ewn/wn_fr.ewn.utf8";
 
 const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.xml";

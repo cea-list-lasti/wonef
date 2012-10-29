@@ -10,6 +10,7 @@
 #include "Paths.hpp"
 #include "BCSBaseHandler.hpp"
 #include "WolfHandler.hpp"
+#include "WolfOneHandler.hpp"
 #include "EwnLoader.hpp"
 #include "GoldHandler.hpp"
 #include "JawsHandler.hpp"
@@ -112,6 +113,7 @@ int main(int argc, char **argv) {
 
   set<string> litList, polysemousIdsList;
   map<string, set<string>> vtNet, vtNetIdIdent;
+  map<string, set<string>> wolf10Net, wolf10NetIdIdent;
   map<string, set<string>> goldNet, goldNetIdIdent;
   map<string,int> bcsbase;
   map<int,int> BCSCount;
@@ -177,6 +179,21 @@ int main(int argc, char **argv) {
   std::ofstream logBest("logs/eval.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
+
+  /* Then evaluate with WOLF 1.0 */
+  cerr << "Loading WOLF 1.0... ";
+  t.start();
+  WolfOneHandler wolfOneHandler(wolf10Net, wolf10NetIdIdent, spos);
+  wolfOneHandler.parse_file(WOLFONE);
+  cerr << t.duration() << "s" << endl;
+
+  std::ofstream logWolfOne("logs/eval.wolfone." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logWolfOne, bcsbase, BCSCount, litList, polysemousIdsList,
+      wolf10Net, wolf10NetIdIdent, spos, jaws, goldValue, false);
+
+  std::ofstream logWolfOneBest("logs/eval.wolfone.best." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logWolfOneBest, bcsbase, BCSCount, litList, polysemousIdsList,
+      wolf10Net, wolf10NetIdIdent, spos, bestJaws, goldValue, false);
 
   /* Then evaluate with the gold standard */
   t.start();

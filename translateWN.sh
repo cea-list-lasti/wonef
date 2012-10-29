@@ -90,6 +90,11 @@ echo -e "\n                *** Normal ***"
 tail -3 logs/eval.$pos.$seqs
 echo -e "\n                *** Best ***"
 tail -3 logs/eval.best.$pos.$seqs
+echo -e "\n-- Evaluating with Wolf 1.0... --"
+echo -e "\n                *** Normal ***"
+tail -3 logs/eval.wolfone.${pos}.$seqs
+echo -e "\n                *** Best ***"
+tail -3 logs/eval.wolfone.best.${pos}.$seqs
 echo -e "\n-- Evaluating with Gold... --"
 echo -e "\n                *** Normal ***"
 tail -3 logs/eval.gold.${pos}.$seqs
