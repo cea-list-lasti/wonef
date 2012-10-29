@@ -3,9 +3,9 @@ CPPFLAGS    = -std=c++11 -Wall -Wextra -I../src -I/home/pradet/externals/boost_1
 
 all:	translateNouns translateVerbs translateAdjs evalJAWS-WOLF
 
-COMMON_SRC = TranslatorModule.cpp distance.cpp TypeRoler.cpp Loader.cpp Dumper.cpp ExtractorModule.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/tools.cpp WolfHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp BCSBaseHandler.cpp BestTranslations.cpp knn.pb.cc repository.pb.cc GoldHandler.cpp JawsHandler.cpp Options.cpp
+COMMON_SRC = TranslatorModule.cpp distance.cpp levenshtein.cpp TypeRoler.cpp Loader.cpp Dumper.cpp ExtractorModule.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/tools.cpp WolfHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp BCSBaseHandler.cpp BestTranslations.cpp knn.pb.cc repository.pb.cc GoldHandler.cpp JawsHandler.cpp Options.cpp
 
-COMMON_OBJ  = $(COMMON_SRC:%.cpp=%.o)
+COMMON_OBJ  = $(COMMON_SRC:.cpp=.o)
 
 H_FILES     = $(wildcard *.hpp) repository.pb.h knn.pb.h
 PROTO_FILES = $(wildcard *.proto)

@@ -1,6 +1,6 @@
 #include "HyperHypoModule.hpp"
 #include "Loader.hpp"
-#include "distance.hpp"
+#include "levenshtein.hpp"
 #include "Paths.hpp"
 #include "../src/tools.h"
 #include <iostream>
@@ -215,8 +215,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
         }
 
         /*
-           Distance lDist;
-           if (lDist.LD(desaxUTF8(itCand->first),it->first)<=3) {
+           if (levenshtein(desaxUTF8(itCand->first),it->first)<=3) {
            sum*=1.+ (1.-0.2*lDist.LD(desaxUTF8(itCand->first),it->first));
            }
          */

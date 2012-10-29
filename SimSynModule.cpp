@@ -1,6 +1,5 @@
 #include "SimSynModule.hpp"
 #include "knn.pb.h"
-#include "distance.hpp"
 #include "Paths.hpp"
 #include "../src/tools.h"
 #include <iostream>

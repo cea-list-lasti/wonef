@@ -1,7 +1,7 @@
 #include "ExtractorModule.hpp"
 #include <cassert>
 
-#include "distance.hpp"
+#include "levenshtein.hpp"
 #include "tools.h"
 #include "Tools.hpp"
 
@@ -92,7 +92,6 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
             // promote true (and false) fr/en friends
             for (map<string, int>::iterator itCand = candidates.second.cand.begin(); itCand!=candidates.second.cand.end(); itCand++) {
-              Distance lDist;
               int ldScore = 0;
 
               std::string candidate = itCand->first;
@@ -103,8 +102,9 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
               /* Desaccentuation: using the faster method, which has been
                * corrected using the Unicode-aware one. */
-              ldScore = lDist.LD(fastDesax(desaxData, candidate), srcWord);
-              // ldScore = lDist.LD(desaxUTF8(candidate), srcWord);
+              ldScore = levenshtein(fastDesax(desaxData, candidate), srcWord);
+              //ldScore = Dist.LD(fastDesax(desaxData, candidate), srcWord);
+              // ldScore = levenshtein(desaxUTF8(candidate), srcWord);
 
               if (ldScore<=3) {
                 wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;

@@ -1,5 +1,4 @@
 #include "MeroHoloModule.hpp"
-#include "distance.hpp"
 #include "Paths.hpp"
 #include "Timer.hpp"
 #include "../src/tools.h"
