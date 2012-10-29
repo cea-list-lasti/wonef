@@ -82,6 +82,7 @@ if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
 
+echo "Evaluating..."
 ./evalJAWS-WOLF $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
@@ -103,24 +104,23 @@ tail -3 logs/eval.gold.best.${pos}.$seqs
 
 # Archive relevant files to our archive.
 
-#echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
+echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
 
-#tmpsubdir="$Poss__${day}__${time}"
-#tmppath=/tmp/$tmpsubdir
-#archivedir=/home/pradet/archives/$day
+tmpsubdir="${pos}__${day}__${time}"
+tmppath=/tmp/$tmpsubdir
+archivedir=/home/pradet/archives/$day
 
-#mkdir -p $tmppath
-#mkdir -p $archivedir
-#chmod -f o+w $archivedir
+mkdir -p $tmppath
+mkdir -p $archivedir
+chmod -f o+w $archivedir
 
-#cp logs/trans$Poss.$seqs $tmppath
-#cp logs/eval$Poss.$seqs logs/eval${Poss}Best.$seqs logs/eval${Poss}G.$seqs logs/eval${Poss}GBest.$seqs $tmppath
-#cp $WNDATA $WNBESTDATA $tmppath
-#cp profiled$Poss $tmppath
+cp logs/* $tmppath
+cp data/jaws.$pos.$seqs.xml data/jaws.best.$pos.$seqs.xml $tmppath
+cp profiled.create.$pos.$seqs profiled.eval.$pos.$seqs $tmppath
 
-#pushd /tmp > /dev/null
-#  tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
-#  rm -rf $tmpsubdir
-#popd > /dev/null
+pushd /tmp > /dev/null
+  tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
+  rm -rf $tmpsubdir
+popd > /dev/null
 
-#echo " done!"
+echo " done!"
