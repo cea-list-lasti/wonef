@@ -45,6 +45,8 @@ int main(int argc, char **argv) {
   extractor.process(wn);
   cout << "Extraction duration : " << t.duration() << "s" << endl;
 
+  //BestTranslations(true).choose(wn);
+
   int nIteration = 0;
   for(int idModuleConf: options.moduleSequence) {
     nIteration++;
@@ -146,8 +148,7 @@ int main(int argc, char **argv) {
 
   cout << "Choose best translations" << endl;
   t.start();
-  BestTranslations bestTranslations;
-  bestTranslations.choose(wn);
+  BestTranslations().choose(wn);
   cout << "Choice duration : " << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;

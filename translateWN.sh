@@ -77,7 +77,7 @@ rm -f logs/* data/*
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "duration|note"
+./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "Overall|note"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
@@ -87,10 +87,6 @@ echo "Evaluating..."
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 
-echo -e "\n                *** Normal ***"
-tail -3 logs/eval.$pos.$seqs
-echo -e "\n                *** Best ***"
-tail -3 logs/eval.best.$pos.$seqs
 echo -e "\n-- Evaluating with Wolf 1.0... --"
 echo -e "\n                *** Normal ***"
 tail -3 logs/eval.wolfone.${pos}.$seqs

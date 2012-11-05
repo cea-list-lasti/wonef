@@ -8,7 +8,8 @@ enum class ExtractionType {
   Monosemous,
   NoTranslation,
   Uniq,
-  MultipleSource
+  MultipleSource,
+  Levenshtein
 };
 
 class ExtractorModule {

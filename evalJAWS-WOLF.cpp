@@ -158,6 +158,7 @@ int main(int argc, char **argv) {
   std::string vtmode = groundTruth[pos];
 
   /* First evaluate with a given ground truth */
+  /*
   t.start();
   if (vtmode == WOLF) {
     cerr << "Loading WOLF... ";
@@ -179,6 +180,7 @@ int main(int argc, char **argv) {
   std::ofstream logBest("logs/eval.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
       vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
+  */
 
   /* Then evaluate with WOLF 1.0 */
   cerr << "Loading WOLF 1.0... ";

@@ -3,10 +3,7 @@
 #include <iostream>
 #include "boost/regex.hpp"
 
-BestTranslations::BestTranslations() {
-}
-
-BestTranslations::~BestTranslations() {
+BestTranslations::BestTranslations(bool _easyFilter) : easyFilter(_easyFilter) {
 }
 
 void BestTranslations::choose(WORDNET::WordNet& wn) {
@@ -27,6 +24,7 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
       int nbTranslations = 0;
       int nbUniq = 0;
       int nbMono = 0;
+      int nbLevenshtein = 0;
       int nbNotrans = 0;
       int nbMultiple = 0;
       int scoreMultiple = 0;
@@ -38,10 +36,12 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
         nbTranslations++;
         if (itTrans->processed == "uniq") {
           nbUniq++;
-        } else if (itTrans->processed == "monosemous"){
+        } else if (itTrans->processed == "monosemous") {
           nbMono++;
-        } else if (itTrans->processed == "notranslation"){
+        } else if (itTrans->processed == "notranslation") {
           nbNotrans++;
+        } else if (itTrans->processed == "levenshtein") {
+          nbLevenshtein++;
         } else if (itTrans->processed == "multiplesource") {
           /* Several "multiplesource" instances are counted like a single one
              (the french word can be deleted if no other translation)
@@ -63,11 +63,11 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
              meaningful)
           (a little score is better)
       ------------------------------------------------------------------------*/
-      bool badMultiple = true;
+      bool goodMultiple = false;
       if (scoreMultiple != 0) {
         scoreMultiple = scoreMultiple / nbMultiple;
-        if (scoreMultiple < 3) {
-          badMultiple = false;
+        if (scoreMultiple >= 3) {
+          goodMultiple = true;
         }
       }
 
@@ -76,11 +76,18 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
           - that have a good "multiplesource" score
           - that have been chosen by several modules
       ------------------------------------------------------------------------*/
-      if (nbTranslations < 2 && nbUniq == 0 && badMultiple /*&& nbMono == 0 && nbNotrans == 0*/) {
-        itEntry->second.frenchSynset.erase(itFrench++);
+      bool keepit = false;
+      if (easyFilter && (nbUniq > 0 || nbLevenshtein > 0 || nbMono > 0)) {
+        std::cout << "keep it true" << std::endl;
+        keepit = true;
+      } else if (nbTranslations >= 2 || nbUniq > 0 || goodMultiple /*|| nbMono > 0 || nbNotrans > 0*/) {
+        keepit = true;
+      }
 
-      } else {
+      if (keepit) {
         itFrench++;
+      } else {
+        itEntry->second.frenchSynset.erase(itFrench++);
       }
 
     } // end itFrench

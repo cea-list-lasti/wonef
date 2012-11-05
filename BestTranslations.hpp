@@ -4,11 +4,12 @@
 #include "WordNet.hpp"
 
 class BestTranslations {
-  public :
-    BestTranslations();
-    ~BestTranslations();
+  public:
+    BestTranslations(bool easyFilter = false);
 
     void choose(WORDNET::WordNet& wn);
+  private:
+    bool easyFilter;
 };
 
 #endif

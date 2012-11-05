@@ -67,7 +67,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
           case 2 :
             // TODO does this have an effect at all? on how many synsets?
             /* We prefer more specific terms, eg. "individualité" is better
-             * than "individual" */
+             * than "individu" */
             if (candidates.second.cand.begin()->first
                 .find(candidates.second.cand.rbegin()->first) != string::npos
                 && ((*candidates.second.cand.rbegin()).first.length()
@@ -91,10 +91,8 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
              * add any new instance */
 
             // promote true (and false) fr/en friends
-            for (map<string, int>::iterator itCand = candidates.second.cand.begin(); itCand!=candidates.second.cand.end(); itCand++) {
-              int ldScore = 0;
-
-              std::string candidate = itCand->first;
+            for (cand_t& cand: candidates.second.cand) {
+              std::string candidate = cand.first;
               if (pos == "verb") {
                 // compute the score without the pronoun
                 candidate = candidates.second.verbCand[candidate];
@@ -102,16 +100,25 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
               /* Desaccentuation: using the faster method, which has been
                * corrected using the Unicode-aware one. */
-              ldScore = levenshtein(fastDesax(desaxData, candidate), srcWord);
-              //ldScore = Dist.LD(fastDesax(desaxData, candidate), srcWord);
-              // ldScore = levenshtein(desaxUTF8(candidate), srcWord);
+              float ldScore = levenshtein(fastDesax(desaxData, candidate), srcWord);
+              // float ldScore = levenshtein(desaxUTF8(candidate), srcWord);
 
-              if (ldScore<=3) {
-                wne.frenchCandidates[srcWord].cand[itCand->first]+=3-ldScore;
+              float strSize = (srcWord.size() + candidate.size())/2;
+
+              if (extractions.count(ExtractionType::Levenshtein) == 1) {
+                if (ldScore/strSize <= 0.15) {
+                  addInstance(wne.frenchSynset, "levenshtein", candidate, srcWord, ldScore/strSize);
+                }
+              }
+
+              if (ldScore <= 3) {
+                wne.frenchCandidates[srcWord].cand[candidate]+=3-ldScore;
               }
             }
         }
       }
+
+      /* multiplesource */
 
       /* For this synset, we read every possible verb and its candidate
        * translations. We can now look at repeated translations (eg. two
@@ -166,6 +173,7 @@ ExtractionType ExtractorModule::fromInt(int n) {
     case 2: return ExtractionType::NoTranslation;
     case 3: return ExtractionType::Uniq;
     case 4: return ExtractionType::MultipleSource;
+    case 5: return ExtractionType::Levenshtein;
     default: assert(false);
   }
 }
@@ -176,6 +184,7 @@ std::string ExtractorModule::toString(ExtractionType e) {
     case ExtractionType::NoTranslation:  return "notranslation";
     case ExtractionType::Uniq:           return "uniq";
     case ExtractionType::MultipleSource: return "multiplesource";
+    case ExtractionType::Levenshtein:    return "levenshtein";
     default: assert(false);
   }
 }
