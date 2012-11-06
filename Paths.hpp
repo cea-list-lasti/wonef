@@ -18,8 +18,8 @@ const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.xml";
 const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.xml";
 const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.xml";
 
-const std::string  DICFILE = DATAPATH + "/dictionnaires/euradic-utf8.txt";
-const std::string  DICFILE2 = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
+const std::string EURADIC = DATAPATH + "/dictionnaires/euradic-utf8.txt";
+const std::string WIKTIONARY = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
 
 const std::string  DATA_NOUN30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.noun";
 const std::string  DATA_NOUN20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.noun";

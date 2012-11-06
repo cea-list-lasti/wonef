@@ -8,7 +8,7 @@ using namespace std;
 
 class LoaderModule {
   public:
-  LoaderModule(string infile, set<string>& dicfiles, string posfile, string pos) ;
+  LoaderModule(string infile, string posfile, string pos) ;
   ~LoaderModule() ;
 
   static set<string> posList;
@@ -24,15 +24,14 @@ private:
   string pos;
   bool noen;
 
-  set<string> dicfiles;
   string infile;
   map<string, string> lowercase;
 
   WORDNET::TgtCandidates extractCandidates(string srcWord);
+  bool validPos(string candidatePos);
   void loadBilingualDic();
   void loadLowercase();
   void loadIndex();
-  //  string tolower(string str);
   void loadPOSList(string posFile);
 
   void addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,

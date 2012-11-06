@@ -27,14 +27,13 @@ int main(int argc, char **argv) {
   LastChanceModule* lastchancer= NULL;
 
   string pos = "adj";
-  set<string> dicfiles{DICFILE, DICFILE2};
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;
 
   Timer t;
   cout << "Loading... ";
-  LoaderModule loader(options.datafile, dicfiles, ADJS_LIST, pos);
+  LoaderModule loader(options.datafile, ADJS_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << t.duration() << "s" << endl;
 

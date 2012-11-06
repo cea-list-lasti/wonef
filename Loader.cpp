@@ -1,8 +1,11 @@
 #include "Loader.hpp"
 #include "Tools.hpp"
+#include "Paths.hpp"
 #include <iostream>
 #include <fstream>
 #include <boost/regex.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/split.hpp>
 #include <cassert>
 
 #include <cstdlib>
@@ -15,8 +18,8 @@ map<string, string> LoaderModule::tgt2TgtDefs;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
-LoaderModule::LoaderModule(string _infile, set<string>& _dicfiles, string posfile, string _pos) :
-  pos(_pos), dicfiles(_dicfiles), infile(_infile) {
+LoaderModule::LoaderModule(string _infile, string posfile, string _pos) :
+  pos(_pos), infile(_infile) {
     cerr << "Loading...  " << endl;
     LoaderModule::loadPOSList(posfile);
     LoaderModule::loadBilingualDic();
@@ -78,30 +81,45 @@ void LoaderModule::loadPOSList(string posFile) {
   idss.close();
 }
 
+bool LoaderModule::validPos(string candidatePos) {
+  if (pos == "noun") { return candidatePos == "S" || candidatePos == "NP"; }
+  else if (pos == "verb") { return candidatePos == "V"; }
+  else if (pos == "adj") { return candidatePos == "J"; }
+  else { exit(-1); }
+}
+
 void LoaderModule::loadBilingualDic() {
 
-  for (set<string>::iterator itDic = dicfiles.begin(); itDic!=dicfiles.end(); itDic++) {
-    cerr << "Opening "<< *itDic << endl;
-    ifstream idss(itDic->c_str(), fstream::in);
+  std::set<std::string> dicfiles{EURADIC, WIKTIONARY};
+
+  for (std::string dicfile : dicfiles) {
+    cerr << "Opening "<< dicfile << endl;
+    ifstream idss(dicfile, fstream::in);
     if (idss.fail()) {
-      cerr << "Oops, " << *itDic << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+      cerr << "Oops, " << dicfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
       exit(-1);
     }
     string s;
 
     while (getline(idss, s) ) {
       s=boost::regex_replace(s, boost::regex(" "), "_");
-      stringstream ss;
-      ss << s;
-      string tgtWord = s.substr(0, s.find(';'));
-      ss.ignore(256,';');
-      ss.ignore(256,';');
-      ss.ignore(256,';');
-      ss >> s;
-      src2Tgt[s.substr(0, s.find(';'))].insert(tgtWord);
 
-      if (s.find(";")+5< s.rfind(";")) {
-        tgt2TgtDefs[tgtWord]=s.substr(s.find(';')+1);
+      vector<string> strs;
+      boost::split(strs, s, boost::is_any_of(";"));
+
+      string tgtWord = strs[0];
+      string tgtPos = strs[1];
+      string srcWord = strs[3];
+      string srcPos = strs[4];
+
+      // insert if Wiktionary or if ELDA and valid part-of-speech
+      if (dicfile == WIKTIONARY || validPos(srcPos) || validPos(tgtPos)) {
+        src2Tgt[srcWord].insert(tgtWord);
+      }
+
+      // store definition for Wiktionary
+      if (strs.size() >= 6) {
+        tgt2TgtDefs[tgtWord]=strs[5];
       }
     }
     idss.close();

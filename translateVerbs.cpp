@@ -28,14 +28,13 @@ int main(int argc, char **argv) {
   LastChanceModule* lastchancer= NULL;
 
   string pos = "verb";
-  set<string> dicfiles{DICFILE, DICFILE2};
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;
 
   Timer t;
   cout << "Loading... ";
-  LoaderModule loader(options.datafile, dicfiles, VERBS_P_LIST, pos);
+  LoaderModule loader(options.datafile, VERBS_P_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << t.duration() << "s" << endl;
 

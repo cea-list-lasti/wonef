@@ -29,14 +29,13 @@ int main(int argc, char **argv) {
   MeroHoloLikeHyperModule* merohololiker= NULL;
   LastChanceModule* lastchancer= NULL;
 
-  set<string> dicfiles{DICFILE, DICFILE2};
   string pos = "noun";
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;
 
   Timer t;
-  LoaderModule loader(options.datafile, dicfiles, NOUNS_LIST, pos);
+  LoaderModule loader(options.datafile, NOUNS_LIST, pos);
   WORDNET::WordNet wn = loader.load(false, -1); // verbose false
   cout << "Loading duration : " << t.duration() << "s" << endl;
 
