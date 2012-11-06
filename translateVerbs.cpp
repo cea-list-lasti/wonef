@@ -126,8 +126,7 @@ int main(int argc, char **argv) {
 
   cout << "Print Index  " << endl;
   t.start();
-  DumperModule dumper("data/jaws.verb" + options.suffix + ".xml",
-      "data/jaws.index.verb" + options.suffix + ".xml");
+  DumperModule dumper("data/jaws.verb" + options.suffix + ".xml");
   dumper.dump(wn);
   cout << "Print index duration : " << t.duration() << "s" << endl;
 
@@ -139,8 +138,7 @@ int main(int argc, char **argv) {
 
   cout << "Print best JAWS" << endl;
   t.start();
-  DumperModule dumperBest("data/jaws.best.verb" + options.suffix + ".xml",
-      "data/jaws.best.index.verb" + options.suffix + ".xml");
+  DumperModule dumperBest("data/jaws.best.verb" + options.suffix + ".xml");
   dumperBest.dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 
