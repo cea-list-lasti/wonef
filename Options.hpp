@@ -6,6 +6,12 @@
 #include <string>
 #include <vector>
 
+enum class Mode {
+  FScore,
+  Precision,
+  Coverage
+};
+
 /* A simple utility class that parses options */
 class Options {
   public:
@@ -13,9 +19,10 @@ class Options {
 
     std::string suffix;
     std::vector<int> moduleSequence;
-    std::set<ExtractionType> extractionSet;
+    std::set<ExtractionType> extractions;
     std::string datafile;
     bool noen;
+    Mode mode;
 
   private:
     std::string getWN30Data(std::string pos);

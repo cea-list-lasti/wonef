@@ -7,28 +7,50 @@
 
 enum class OptionMode { Module, Extraction };
 
+Mode Mode_of_string(std::string s) {
+  if(s == "fscore") { return Mode::FScore; }
+  else if (s == "precision") { return Mode::Precision; }
+  else if (s == "coverage") { return Mode::Coverage; }
+  else {
+    std::cerr << "unknown mode " << s << std::endl;
+    exit(-1);
+  }
+}
+
 Options::Options(std::string pos, int argc, char **argv) {
-  OptionMode mode(OptionMode::Module);
+  OptionMode omode(OptionMode::Module);
   std::string extractionSuffix = ".e";
   std::string moduleSuffix = ".m";
 
   datafile = getWN30Data(pos);
 
+  mode = Mode::FScore;
+
   for (int i = 1; i < argc ; i++) {
     std::string param(argv[i]);
     if (param == "--module") {
-      mode = OptionMode::Module;
+      omode = OptionMode::Module;
     } else if (param == "--extract") {
-      mode = OptionMode::Extraction;
+      omode = OptionMode::Extraction;
     } else if (param[0] >= '1' && param[0] <= '9') {
       /* simple integer: add the corresponding module */
       int n = param[0] - '0';
-      if (mode == OptionMode::Module) {
+      if (omode == OptionMode::Module) {
         moduleSuffix += param[0];
         moduleSequence.push_back(n);
-      } else if (mode == OptionMode::Extraction) {
+      } else if (omode == OptionMode::Extraction) {
         extractionSuffix += param[0];
-        extractionSet.insert(ExtractorModule::fromInt(n));
+        extractions.insert(ExtractorModule::fromInt(n));
+      }
+    } else if (param == "--mode") {
+      if (i+1 >= argc) {
+        std::cerr << "Expecting a mode after --mode" << std::endl;
+        exit(-1);
+      } else {
+        std::string modeChoice(argv[i+1]);
+        mode = Mode_of_string(modeChoice);
+        moduleSuffix += "." + modeChoice;
+        i++;
       }
     } else {
       std::cerr << "Unexpected param: " << param;
@@ -38,12 +60,12 @@ Options::Options(std::string pos, int argc, char **argv) {
 
   suffix = extractionSuffix + moduleSuffix;
 
-  if (extractionSet.empty()) {
-    extractionSet = {ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
+  if (extractions.empty()) {
+    extractions = {ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
   }
 
   std::cout << "extractions: ";
-  for(ExtractionType e: extractionSet) {
+  for(ExtractionType e: extractions) {
     std::cout << ExtractorModule::toString(e) << " ";
   }
   std::cout << std::endl;

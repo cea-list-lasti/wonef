@@ -1,8 +1,10 @@
 #ifndef EXTRACTOR_MODULE_HPP
 #define EXTRACTOR_MODULE_HPP
 
-#include <vector>
 #include "TranslatorModule.hpp"
+class Options;
+
+#include <vector>
 
 enum class ExtractionType {
   Monosemous,
@@ -14,7 +16,7 @@ enum class ExtractionType {
 
 class ExtractorModule {
   public:
-    ExtractorModule(std::string pos, std::set<ExtractionType>);
+    ExtractorModule(std::string pos, const Options& options);
     virtual ~ExtractorModule() {}
 
     virtual void process(WORDNET::WordNet& wn, bool verbose = false);
@@ -24,7 +26,7 @@ class ExtractorModule {
 
   private:
     std::string pos;
-    std::set<ExtractionType> extractions;
+    const Options& opt;
     std::map<std::string, std::string> desaxData;
 
     std::map<std::string, std::set<std::string> > englishCount;

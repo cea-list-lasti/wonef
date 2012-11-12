@@ -3,37 +3,49 @@
 # Extraction de la partie additionnelle #
 #---------------------------------------#
 
-cp addPart.xq addPart.xq.tmp
-QUERY='addPart.xq.tmp'
-ADDPART='data2/JAWS.xml'
-
-input=$1 # JAWS dont on veut évaluer la partie additionnelle (situé dans data2/)
-module=$2 # module ayant engendré la partie additionnelle que l'on veut évaluer
-pos=$3 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe)
-
 # exemple :
-#./evalAddpart.sh data2/data.fr.nouns.best.wolf.noun.Noen1 simsyn1.1 N
+#./evalAddpart.sh noun e135.m43.precision multiplesource
 # ou
-#./evalAddpart.sh data2/data.fr.adjs.Noen1 vote-lastchance1.1 A
+#./evalAddpart.sh adj e1m12.coverage vote-lastchance1.1
 # ou
-#./evalAddpart.sh data2/data.fr.verbs.Noen1 vote-lastchance1.1 V
+#./evalAddpart.sh verb e12345m12345.fscore vote-lastchance1.1
 
-echo "Extracting $module from $input ..."
+pos=$1 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe, A pour adjectif)
+conf=$2 # configuration ayant servi à créer ce JAWS
+module=$3 # module ayant engendré la partie additionnelle que l'on veut évaluer
+
+echo "Extracting $module from $conf..."
 
 # Adaptation de la requête
-sed -i "s,INPUT,$PWD/$input," $QUERY
-sed -i "s/MODULE/$module/g" $QUERY
+function extract() {
+  inputjaws=$1
+  outputjaws=$2
 
-java -cp /home/pradet/bin/basex.jar org.basex.BaseX < $QUERY &> $ADDPART
+  # Extraction de la partie additionnelle
+  echo "From $inputjaws to $outputjaws"
+  cp addPart.xq addPart.xq.tmp
+  QUERY='addPart.xq.tmp'
+  sed -i "s,INPUT,$PWD/$inputjaws," $QUERY
+  sed -i "s/MODULE/$module/g" $QUERY
+  java -cp /home/pradet/bin/basex.jar org.basex.BaseX < $QUERY &> $outputjaws
+  rm $QUERY
 
-rm $QUERY
+  # Mise en forme du fichier de sortie (la partie additionnelle de JAWS)
+  sed -i 's/^> //' $outputjaws
+  sed -i '/^[A-Z].*$/d' $outputjaws
+  sed -i '/^$/d' $outputjaws
+  sed -i "1i\<JAWS pos=\"$pos\" module=\"$module\">" $outputjaws
+  echo '</JAWS>' >> $outputjaws
+}
 
-# Mise en forme du fichier de sortie (la partie additionnelle de JAWS)
-sed -i 's/^> //' $ADDPART
-sed -i '/^[A-Z].*$/d' $ADDPART
-sed -i '/^$/d' $ADDPART
-sed -i "1i\<JAWS pos=\"verb\" module=\"$module\">" $ADDPART
-echo '</JAWS>' >> $ADDPART
+# JAWS dont on veut évaluer la partie additionnelle (situé dans data/)
+input="data/jaws.$pos.$conf.xml"
+addpart="data/jaws.$pos.$conf.$module.xml"
+extract $input $addpart
+
+inputbest="data/jaws.best.$pos.$conf.xml"
+addpartbest="data/jaws.best.$pos.$conf.$module.xml"
+extract $inputbest $addpartbest
 
 #---------------------------------------#
 # Evaluation de la partie additionnelle #
@@ -41,39 +53,15 @@ echo '</JAWS>' >> $ADDPART
 
 echo "Evaluating additional part ..."
 
-DATAPATH="/home/pradet/data"
-WOLF="$DATAPATH/opendata/wolf/wolf-0.1.4.xml"
-EWN="$DATAPATH/opendata/ewn/wn_fr.ewn.utf8"
-GOLDV="$DATAPATH/Gold/GT_verbs.xml"
-GOLDA="$DATAPATH/Gold/GT_adjs.xml"
-GOLDN="$DATAPATH/Gold/GT_nouns.xml"
-POLYSEMOUSINDEXN="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.noun"
-POLYSEMOUSINDEXV="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.verb"
-POLYSEMOUSINDEXA="$DATAPATH/opendata/polysemous/WordNet-2.0/index.polysemous.adj"
-BCSMODE=4
-BCSFILE="$DATAPATH/opendata/5000_bc.xml"
+./evalJAWS-WOLF $pos $conf.$module
 
-if [ "$pos" = "N" ]
-then
-  ./evalJAWS-WOLF noun $POLYSEMOUSINDEXN $WOLF $ADDPART WOLF $BCSMODE $BCSFILE &> logs/evalNouns_$module
-  tail -27 logs/evalNouns_$module
-  echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF noun $POLYSEMOUSINDEXN $GOLDN $ADDPART GOLD &> logs/evalNounsG_$module
-  tail -27 logs/evalNounsG_$module
-elif [ "$pos" = "A" ]
-then
-  ./evalJAWS-WOLF adj $POLYSEMOUSINDEXA $WOLF $ADDPART WOLF $BCSMODE $BCSFILE &> logs/evalAdjs_$module
-  tail -27 logs/evalAdjs_$module
-  echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF adj $POLYSEMOUSINDEXA $GOLDA $ADDPART GOLD &> logs/evalAdjsG_$module
-  tail -27 logs/evalAdjsG_$module
-elif [ "$pos" = "V" ]
-then
-  ./evalJAWS-WOLF verb $POLYSEMOUSINDEXV $EWN $ADDPART EWN $BCSMODE $BCSFILE &> logs/evalVerbs_$module
-  tail -27 logs/evalVerbs_$module
-  echo -e "\n-- Evaluating with Gold... --"
-  ./evalJAWS-WOLF verb $POLYSEMOUSINDEXV $GOLDV $ADDPART GOLD &> logs/evalVerbsG_$module
-  tail -27 logs/evalVerbsG_$module
-else
-  echo "Precise the POS to evaluate"
-fi
+echo -e "\n-- Evaluating with Wolf 1.0... --"
+echo -e "\n                *** Normal ***"
+tail -3 logs/eval.wolfone.${pos}.$conf.$module
+echo -e "\n                *** Best ***"
+tail -3 logs/eval.wolfone.best.${pos}.$conf.$module
+echo -e "\n-- Evaluating with Gold... --"
+echo -e "\n                *** Normal ***"
+tail -3 logs/eval.gold.${pos}.$conf.$module
+echo -e "\n                *** Best ***"
+tail -3 logs/eval.gold.best.${pos}.$conf.$module

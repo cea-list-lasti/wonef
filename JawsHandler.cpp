@@ -423,6 +423,5 @@ void JawsHandler::on_end_document() {
   out << "P/R:    ";
   out << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
   out << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << "     ";
-
   out << std::setw(5) << bcsPseudoPrec * 100 << "% / " << std::setw(5) << bcsRecGt * 100 << "%" << std::endl;
 }

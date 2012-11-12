@@ -177,6 +177,7 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
   while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {
     WORDNET::WordNetEntry wne;
+    wne.pos = WORDNET::POS_of_string[pos];
     wne.nbCandidates = 0;
     if (s[0]!=' ') { // not trying to read the license header
       string str = s;

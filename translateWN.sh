@@ -46,12 +46,15 @@ do
   case $1 in
     -e|--extract) mode='extract' ;;
     -m|--module) mode='module' ;;
+    -p|--prefer) mode='prefer' ;;
     *) if [ "$mode" = "extract" ]; then
         extract="$extract$1"
         extractspaces="$extractspaces$1 "
        elif [ "$mode" = "module" ]; then
         module="$module$1"
         modulespaces="$modulespaces$1 "
+       elif [ "$mode" = "prefer" ]; then
+        prefer=$1
        fi ;;
   esac
   shift
@@ -64,8 +67,8 @@ fi
 # Reusing our above example, seqspaces will be "1 2 3 4" and seqs will be
 # "1234". Having $seqs is useful for filenames, while seqspaces is used to
 # launch translateWN.
-seqsspaces="$extractoptions --module $modulespaces"
-seqs="e${extract}.m${module}"
+seqsspaces="$extractoptions --module $modulespaces --mode $prefer"
+seqs="e${extract}.m${module}.$prefer"
 
 # Store the time of launch for archives
 day=`date +%Y_%B_%d`
@@ -77,7 +80,7 @@ rm -f logs/* data/*
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "Overall|note"
+./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "Overall|note|duration"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 

@@ -125,11 +125,7 @@ int main(int argc, char **argv) {
   string spos = argv[1];
   string seqs = argv[2];
 
-  std::map<std::string, POS> POS_of_string = {
-    {"noun", POS::Noun},
-    {"verb", POS::Verb},
-    {"adj", POS::Adj}};
-  POS pos = POS_of_string[spos];
+  POS pos = WORDNET::POS_of_string[spos];
 
   std::map<POS, std::string> groundTruth = {
     {POS::Noun, WOLF},

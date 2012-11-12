@@ -111,8 +111,8 @@ void MeroHoloModule::process(WORDNET::WordNet& wn) {
   }
 }
 
-int MeroHoloModule::get_cooc(Mode m, const string& strA, ulong itlit_first_code) {
-  TypeRoler& tr = m == MERO ? meroTypeRoler : holoTypeRoler;
+int MeroHoloModule::get_cooc(MeroHoloMode m, const string& strA, ulong itlit_first_code) {
+  TypeRoler& tr = m == MeroHoloMode::MERO ? meroTypeRoler : holoTypeRoler;
   for(auto p : tr.repository[strA]) {
     if (p.first == itlit_first_code) {
       return p.second;
@@ -138,7 +138,7 @@ float MeroHoloModule::computeIsPartOfScore(const WORDNET::WordNet& wn, const str
     }
 
     ulong itlit_first_code = meroTypeRoler.dicmapReverse[itlit.first];
-    sum += get_cooc(MERO, strA, itlit_first_code) /
+    sum += get_cooc(MeroHoloMode::MERO, strA, itlit_first_code) /
       (float)(meroTypeRoler.numCoocs[strA] * holoTypeRoler.numCoocs[itlit.first]);
 
     //cerr << "MERO sum += " << get_cooc(MERO, strA, itlit_first_code) << " / (";
@@ -169,7 +169,7 @@ float MeroHoloModule::computeIsWholeOfScore(const WORDNET::WordNet& wn, const st
     }
 
     ulong itlit_first_code = holoTypeRoler.dicmapReverse[itlit.first];
-    sum += get_cooc(HOLO, strA, itlit_first_code) /
+    sum += get_cooc(MeroHoloMode::HOLO, strA, itlit_first_code) /
       (float)(meroTypeRoler.numCoocs[itlit.first] * holoTypeRoler.numCoocs[strA]);
 
     //cerr << "HOLO sum += " << get_cooc(HOLO, strA, itlit_first_code) << " / (";

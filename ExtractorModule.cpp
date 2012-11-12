@@ -1,12 +1,13 @@
 #include "ExtractorModule.hpp"
-#include <cassert>
-
+#include "Options.hpp"
 #include "levenshtein.hpp"
 #include "tools.h"
 #include "Tools.hpp"
 
-ExtractorModule::ExtractorModule(std::string _pos, std::set<ExtractionType> _extractions)
-  : pos(_pos), extractions(_extractions) { }
+#include <cassert>
+
+ExtractorModule::ExtractorModule(std::string _pos, const Options& _options)
+  : pos(_pos), opt(_options) { }
 
 void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
@@ -34,7 +35,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
       /* monosemous */
       if (WNIndex[srcWord] == 1) {
-        if (extractions.count(ExtractionType::Monosemous) == 1) {
+        if (opt.extractions.count(ExtractionType::Monosemous) == 1) {
           for (cand_t& cand: candidates.second.cand) {
             std::string tgtWord = cand.first;
             /* If this word only appears in one synset, let's assume the
@@ -46,7 +47,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
         switch (candidates.second.cand.size()) {
           /* no translation */
           case 0 :
-            if (extractions.count(ExtractionType::NoTranslation) == 1) {
+            if (opt.extractions.count(ExtractionType::NoTranslation) == 1) {
               if (candidates.second.capital) {
                 // original == translation here.
                 addInstance(wne.frenchSynset, "notranslation", srcWord, srcWord, 1);
@@ -58,7 +59,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
           case 1 :
             /* If there's only one possible translation in this synset, choose it.
              * TODO: is this really helpful? for all part-of-speech? */
-            if (extractions.count(ExtractionType::Uniq) == 1) {
+            if (opt.extractions.count(ExtractionType::Uniq) == 1) {
               addInstance(wne.frenchSynset, "uniq", candidates.second.cand.begin()->first, srcWord, 1);
             }
             break;
@@ -105,7 +106,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
               float strSize = (srcWord.size() + candidate.size())/2;
 
-              if (extractions.count(ExtractionType::Levenshtein) == 1) {
+              if (opt.extractions.count(ExtractionType::Levenshtein) == 1) {
                 if (ldScore/strSize <= 0.15) {
                   addInstance(wne.frenchSynset, "levenshtein", candidate, srcWord, ldScore/strSize);
                 }
@@ -136,7 +137,7 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
     /* multiplesource */
     typedef std::pair<const std::string, std::set<std::string> > count_t;
 
-    if (extractions.count(ExtractionType::MultipleSource) == 1) {
+    if (opt.extractions.count(ExtractionType::MultipleSource) == 1) {
       for (count_t& count: englishCount) {
         if(count.second.size() > 1) {
           for (const std::string& srcWord: count.second) {

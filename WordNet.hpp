@@ -34,6 +34,7 @@ struct TranslationInfos {
 
 typedef struct WordNetEntry {
   //  std::string synsetId;
+  POS pos;
   std::string def;
   std::string newdef;
   std::set<std::string> hypos;
@@ -53,6 +54,7 @@ typedef std::map<std::string, WordNetEntry> WordNet;
 
 typedef std::map<std::string, std::set<std::string> > WordNetIndex;
 
+extern std::map<std::string, POS> POS_of_string;
 
 }
 

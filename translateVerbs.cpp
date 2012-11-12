@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
   cout << t.duration() << "s" << endl;
 
   t.start();
-  ExtractorModule extractor(pos, options.extractionSet);
+  ExtractorModule extractor(pos, options);
   extractor.process(wn);
   cout << "Extraction duration : " << t.duration() << "s" << endl;
 
@@ -132,8 +132,7 @@ int main(int argc, char **argv) {
 
   cout << "Choose best translations" << endl;
   t.start();
-  BestTranslations bestTranslations;
-  bestTranslations.choose(wn);
+  BestTranslations(options).choose(wn);
   cout << "Choice duration : " << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;

@@ -1,9 +1,13 @@
 #include "BestTranslations.hpp"
+
+#include "Options.hpp"
+
 #include <string>
 #include <iostream>
 #include "boost/regex.hpp"
 
-BestTranslations::BestTranslations(bool _easyFilter) : easyFilter(_easyFilter) {
+BestTranslations::BestTranslations(const Options& _options, bool _easyFilter)
+  : options(_options), easyFilter(_easyFilter) {
 }
 
 void BestTranslations::choose(WORDNET::WordNet& wn) {
@@ -44,11 +48,13 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
           nbLevenshtein++;
         } else if (itTrans->processed == "multiplesource") {
           /* Several "multiplesource" instances are counted like a single one
-             (the french word can be deleted if no other translation)
+             (so that the french word can be deleted if no other translation exists)
           --------------------------------------------------------------------*/
           if (nbMultiple > 0) {
             nbTranslations--;
           }
+          // the score isn't really a score: that's the number of candidates
+          // per instance in our synset. It's the same for every instance.
           scoreMultiple = itTrans->score;
           nbMultiple++;
         }
@@ -57,15 +63,16 @@ void BestTranslations::choose(WORDNET::WordNet& wn) {
 
       /* Check if the "multiplesource" word is reliable on his own :
           - old scoreMultiple : nb of candidates by source word in the synset
-             (the more candidates there are, the less they are meaningful)
-          - new scoreMultiple : take account of the nb of multiples (2, 3, 4...)
-             (the more multiples there are among candidates, the more they are
-             meaningful)
-          (a little score is better)
+             (less is better)
+          - new scoreMultiple : take into account of the nb of multiples (2, 3,
+            4...) (more is better)
       ------------------------------------------------------------------------*/
-      bool goodMultiple = false;
-      if (scoreMultiple != 0) {
-        scoreMultiple = scoreMultiple / nbMultiple;
+      bool goodMultiple;
+      /* If we're not looking for precision, we're taking the word anyway */
+      goodMultiple = options.mode != Mode::Precision;
+
+      if (nbMultiple != 0) {
+        scoreMultiple = scoreMultiple / (float) nbMultiple;
         if (scoreMultiple >= 3) {
           goodMultiple = true;
         }
