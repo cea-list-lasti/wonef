@@ -14,8 +14,6 @@
 #    * logs/evalNounsBest.e123m12  # gold / normal
 #    * logs/evalNounsGBest.e123m12 # gold / best
 
-DATAPATH="/home/pradet/data"
-
 if [ "$1" != "noun" -a "$1" != "adj" -a "$1" != "verb" ]; then
   echo "Usage: ./translateWN.sh pos --extract 1 2 4 --module 5 4 3"
   exit 255
