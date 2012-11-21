@@ -95,14 +95,12 @@ void parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
     exit(-1);
   }
 
-  std::cerr << "Parsing JAWS... ";
-
   JawsHandler jawsHandler(out, litList, polysemousIdsList,
       vtNet, vtNetIdIdent, goldValue, gold,
       pos, BCS, BCSCount);
   jawsHandler.parse_file(filename);
 
-  std::cerr << t.duration() << "s" << std::endl;
+  //std::cerr << "Parsed JAWS in " << t.duration() << "s" << std::endl;
 }
 
 int main(int argc, char **argv) {
@@ -178,35 +176,42 @@ int main(int argc, char **argv) {
       vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
   */
 
-  /* Then evaluate with WOLF 1.0 */
   cerr << "Loading WOLF 1.0... ";
   t.start();
   WolfOneHandler wolfOneHandler(wolf10Net, wolf10NetIdIdent, spos);
   wolfOneHandler.parse_file(WOLFONE);
   cerr << t.duration() << "s" << endl;
 
-  std::ofstream logWolfOne("logs/eval.wolfone." + suffix, ios_base::out | ios_base::trunc);
-  parseAndEvaluatePolysemous(logWolfOne, bcsbase, BCSCount, litList, polysemousIdsList,
-      wolf10Net, wolf10NetIdIdent, spos, jaws, goldValue, false);
-
-  std::ofstream logWolfOneBest("logs/eval.wolfone.best." + suffix, ios_base::out | ios_base::trunc);
-  parseAndEvaluatePolysemous(logWolfOneBest, bcsbase, BCSCount, litList, polysemousIdsList,
-      wolf10Net, wolf10NetIdIdent, spos, bestJaws, goldValue, false);
-
-  /* Then evaluate with the gold standard */
   t.start();
   cerr << "Loading Gold... ";
   GoldHandler goldHandler(goldNet, goldNetIdIdent, goldValue);
   goldHandler.parse_file(goldFile[pos]);
   cerr << t.duration() << "s" << endl;
 
+  /* Then evaluate with WOLF 1.0 */
+  std::cout << std::endl << "-- Evaluating with Wolf 1.0... --" << std::endl;
+  std::cout << std::endl << "                *** Normal ***" << std::endl;
+  std::ofstream logWolfOne("logs/eval.wolfone." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logWolfOne, bcsbase, BCSCount, litList, polysemousIdsList,
+      wolf10Net, wolf10NetIdIdent, spos, jaws, goldValue, false);
+
+  std::cout << std::endl << "                *** Gold ***" << std::endl;
+  std::ofstream logWolfOneBest("logs/eval.wolfone.best." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logWolfOneBest, bcsbase, BCSCount, litList, polysemousIdsList,
+      wolf10Net, wolf10NetIdIdent, spos, bestJaws, goldValue, false);
+
+  /* Then evaluate with the gold standard */
+  std::cout << std::endl << "-- Evaluating with Gold... --" << std::endl;
+  std::cout << std::endl << "                *** Normal ***" << std::endl;
   std::ofstream logGold("logs/eval.gold." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
       goldNet, goldNetIdIdent, spos, jaws, goldValue, true);
 
+  std::cout << std::endl << "                *** Gold ***" << std::endl;
   std::ofstream logGoldBest("logs/eval.gold.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
       goldNet, goldNetIdIdent, spos, bestJaws, goldValue, true);
+  std::cout << std::endl;
 
   std::cout << "Overall evaluation duration: " << globalT.duration() << " s" << std::endl;
 

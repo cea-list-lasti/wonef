@@ -82,25 +82,12 @@ echo "Translating... $seqsspaces"
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
-
 echo "Evaluating..."
 ./evalJAWS-WOLF $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
 
-echo -e "\n-- Evaluating with Wolf 1.0... --"
-echo -e "\n                *** Normal ***"
-tail -3 logs/eval.wolfone.${pos}.$seqs
-echo -e "\n                *** Best ***"
-tail -3 logs/eval.wolfone.best.${pos}.$seqs
-echo -e "\n-- Evaluating with Gold... --"
-echo -e "\n                *** Normal ***"
-tail -3 logs/eval.gold.${pos}.$seqs
-echo -e "\n                *** Best ***"
-tail -3 logs/eval.gold.best.${pos}.$seqs
-
 # Archive relevant files to our archive.
-
 echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
 
 tmpsubdir="${pos}__${day}__${time}"

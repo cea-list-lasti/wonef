@@ -362,6 +362,8 @@ void JawsHandler::on_end_document() {
 
   out.setf(std::ios::fixed, std::ios::floatfield);
   out.precision(2);
+  std::cout.setf(std::ios::fixed, std::ios::floatfield);
+  std::cout.precision(2);
 
   out << "------------------------------------" << std::endl;
 
@@ -413,15 +415,18 @@ void JawsHandler::on_end_document() {
   out << "Coverage synsets / GT :\t\t" << recSynsetsGt*100 << "%" << std::endl;
   out << "Coverage synsets / WN :\t\t" << recallSynsets*100 << "%" << std::endl;
 
-  out << "           All " << std::setw(5) << terms << "           Polysemous              BCS" << std::endl;
+  std::set<std::ostream*> logs{&std::cout, &out};
+  for(std::ostream* logTo: logs) {
+    *logTo << "           All " << std::setw(5) << terms << "           Polysemous              BCS" << std::endl;
 
-  out << std::setw(5) << terms << ":  ";
-  out << std::setw(6) << nbTermsInJaws << " - " << std::setw(5) << coverageWN*100 << "%" << "     ";
-  out << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << "     ";
-  out << std::setw(6) << nbBcsTermsInJaws << " - " << std::setw(5) << bcscoverWN*100 << "%" << std::endl;
+    *logTo << std::setw(5) << terms << ":  ";
+    *logTo << std::setw(6) << nbTermsInJaws << " - " << std::setw(5) << coverageWN*100 << "%" << "     ";
+    *logTo << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << "     ";
+    *logTo << std::setw(6) << nbBcsTermsInJaws << " - " << std::setw(5) << bcscoverWN*100 << "%" << std::endl;
 
-  out << "P/R:    ";
-  out << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
-  out << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << "     ";
-  out << std::setw(5) << bcsPseudoPrec * 100 << "% / " << std::setw(5) << bcsRecGt * 100 << "%" << std::endl;
+    *logTo << "P/R:    ";
+    *logTo << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
+    *logTo << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << "     ";
+    *logTo << std::setw(5) << bcsPseudoPrec * 100 << "% / " << std::setw(5) << bcsRecGt * 100 << "%" << std::endl;
+  }
 }
