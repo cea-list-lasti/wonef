@@ -2,6 +2,7 @@
 #define _OPTIONS_H__
 
 #include "ExtractorModule.hpp"
+#include "WordNet.hpp"
 
 #include <string>
 #include <vector>
@@ -25,7 +26,7 @@ class Options {
     Mode mode;
 
   private:
-    std::string getWN30Data(std::string pos);
+    std::string getWN30Data(POS pos);
 
 };
 

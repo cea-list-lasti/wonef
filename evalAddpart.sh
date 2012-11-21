@@ -10,7 +10,7 @@
 # ou
 #./evalAddpart.sh verb e12345m12345.fscore vote-lastchance1.1
 
-pos=$1 # nature du JAWS que l'on veut évaluer (N pour nom, V pour verbe, A pour adjectif)
+pos=$1 # nature du JAWS que l'on veut évaluer (noun, verb, adj)
 conf=$2 # configuration ayant servi à créer ce JAWS
 module=$3 # module ayant engendré la partie additionnelle que l'on veut évaluer
 
@@ -52,16 +52,4 @@ extract $inputbest $addpartbest
 #---------------------------------------#
 
 echo "Evaluating additional part ..."
-
 ./evalJAWS-WOLF $pos $conf.$module
-
-echo -e "\n-- Evaluating with Wolf 1.0... --"
-echo -e "\n                *** Normal ***"
-tail -3 logs/eval.wolfone.${pos}.$conf.$module
-echo -e "\n                *** Best ***"
-tail -3 logs/eval.wolfone.best.${pos}.$conf.$module
-echo -e "\n-- Evaluating with Gold... --"
-echo -e "\n                *** Normal ***"
-tail -3 logs/eval.gold.${pos}.$conf.$module
-echo -e "\n                *** Best ***"
-tail -3 logs/eval.gold.best.${pos}.$conf.$module

@@ -17,10 +17,12 @@ Mode Mode_of_string(std::string s) {
   }
 }
 
-Options::Options(std::string pos, int argc, char **argv) {
+Options::Options(std::string _pos, int argc, char **argv) {
   OptionMode omode(OptionMode::Module);
   std::string extractionSuffix = ".e";
   std::string moduleSuffix = ".m";
+
+  POS pos = WORDNET::POS_of_string[_pos];
 
   datafile = getWN30Data(pos);
 
@@ -61,7 +63,47 @@ Options::Options(std::string pos, int argc, char **argv) {
   suffix = extractionSuffix + moduleSuffix;
 
   if (extractions.empty()) {
-    extractions = {ExtractionType::Monosemous, ExtractionType::NoTranslation, ExtractionType::Uniq};
+    switch(pos) {
+      case POS::Noun:
+        switch(mode) {
+          case Mode::Precision:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq};
+            break;
+          case Mode::FScore:
+          case Mode::Coverage:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::MultipleSource, ExtractionType::Levenshtein};
+            break;
+          default: assert(false);
+        }
+        break;
+      case POS::Verb:
+        switch(mode) {
+          case Mode::Precision:
+            extractions = {ExtractionType::Uniq};
+            break;
+          case Mode::FScore:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq};
+            break;
+          case Mode::Coverage:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::MultipleSource};
+            break;
+          default: assert(false);
+        }
+        break;
+      case POS::Adj:
+        switch(mode) {
+          case Mode::Precision:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::Levenshtein};
+            break;
+          case Mode::FScore:
+          case Mode::Coverage:
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::MultipleSource, ExtractionType::Levenshtein};
+            break;
+          default: assert(false);
+        }
+        break;
+      default: assert(false);
+    }
   }
 
   std::cout << "extractions: ";
@@ -71,14 +113,11 @@ Options::Options(std::string pos, int argc, char **argv) {
   std::cout << std::endl;
 }
 
-std::string Options::getWN30Data(std::string pos) {
-  if (pos == "noun") {
-    return DATA_NOUN30;
-  } else if (pos == "verb") {
-    return DATA_VERB30;
-  } else if (pos =="adj") {
-    return DATA_ADJ30;
-  } else {
-    assert(false);
+std::string Options::getWN30Data(POS pos) {
+  switch(pos) {
+    case POS::Noun: return DATA_NOUN30;
+    case POS::Verb: return DATA_VERB30;
+    case POS::Adj:  return DATA_ADJ30;
+    default: assert(false);
   }
 }
