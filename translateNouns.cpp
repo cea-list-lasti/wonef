@@ -75,7 +75,6 @@ int main(int argc, char **argv) {
 
     case 5 :
       cout << "Fifth step does not exist" << endl;
-      exit(-1);
       break;
 
     case 6 :
