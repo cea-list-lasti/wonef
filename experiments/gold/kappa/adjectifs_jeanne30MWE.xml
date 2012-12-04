@@ -1,0 +1,4763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VERITE>
+  <SYNSET id="00016647">
+    <ORIGINALDEF/>
+    <CANDIDATES original="verdant">
+      <CANDIDATE score="1">verdoyant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01379116">
+    <ORIGINALDEF/>
+    <CANDIDATES original="misunderstood">
+      <CANDIDATE score="1">incompris</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00018222">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unexceptionable">
+      <CANDIDATE score="1">irréprochable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unimpeachable">
+      <CANDIDATE score="0">impeccable</CANDIDATE>
+      <CANDIDATE score="1">inattaquable</CANDIDATE>
+      <CANDIDATE score="1">incontestable</CANDIDATE>
+      <CANDIDATE score="1">irrécusable</CANDIDATE>
+      <CANDIDATE score="1">irréprochable</CANDIDATE>
+      <CANDIDATE score="0">sûr</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00032358">
+    <ORIGINALDEF/>
+    <CANDIDATES original="astir">
+      <CANDIDATE score="1">agité</CANDIDATE>
+      <CANDIDATE score="0">debout</CANDIDATE>
+      <CANDIDATE score="0">levé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="about">
+      <CANDIDATE score="0">sur</CANDIDATE>
+      <CANDIDATE score="0">touchant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00032497">
+    <ORIGINALDEF/>
+    <CANDIDATES original="acrobatic">
+      <CANDIDATE score="1">acrobatique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="athletic">
+      <CANDIDATE score="1">athlétique</CANDIDATE>
+      <CANDIDATE score="1">sportif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gymnastic">
+      <CANDIDATE score="1">acrobatique</CANDIDATE>
+      <CANDIDATE score="0">gymnique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00035465">
+    <ORIGINALDEF/>
+    <CANDIDATES original="active">
+      <CANDIDATE score="1">actif</CANDIDATE>
+      <CANDIDATE score="0">agissant</CANDIDATE>
+      <CANDIDATE score="0">allant</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="0">remuant</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00036254">
+    <ORIGINALDEF/>
+    <CANDIDATES original="open">
+      <CANDIDATE score="0">béant</CANDIDATE>
+      <CANDIDATE score="0">dilaté</CANDIDATE>
+      <CANDIDATE score="0">débouché</CANDIDATE>
+      <CANDIDATE score="0">déboutonné</CANDIDATE>
+      <CANDIDATE score="0">décapoté</CANDIDATE>
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="0">dégagé</CANDIDATE>
+      <CANDIDATE score="0">déplié</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">open</CANDIDATE>
+      <CANDIDATE score="1">ouvert</CANDIDATE>
+      <CANDIDATE score="0">patent</CANDIDATE>
+      <CANDIDATE score="0">perméable</CANDIDATE>
+      <CANDIDATE score="0">public</CANDIDATE>
+      <CANDIDATE score="0">relâché</CANDIDATE>
+      <CANDIDATE score="0">transparent</CANDIDATE>
+      <CANDIDATE score="0">vacant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="added">
+      <CANDIDATE score="0">rapporté</CANDIDATE>
+      <CANDIDATE score="1">supplémentaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00048858">
+    <ORIGINALDEF/>
+    <CANDIDATES original="additional">
+      <CANDIDATE score="1">additionnel</CANDIDATE>
+      <CANDIDATE score="1">supplémentaire</CANDIDATE>
+      <CANDIDATE score="1">supplétif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="extra">
+      <CANDIDATE score="0">super</CANDIDATE>
+      <CANDIDATE score="1">supplémentaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="other">
+      <CANDIDATE score="1">autre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00054541">
+    <ORIGINALDEF/>
+    <CANDIDATES original="self-sealing">
+      <CANDIDATE score="1">auto-adhésif</CANDIDATE>
+      <CANDIDATE score="1">autocollant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01870889">
+    <ORIGINALDEF/>
+    <CANDIDATES original="profitable">
+      <CANDIDATE score="0">avantageux</CANDIDATE>
+      <CANDIDATE score="0">bénéficiaire</CANDIDATE>
+      <CANDIDATE score="1">fructueux</CANDIDATE>
+      <CANDIDATE score="0">intéressant</CANDIDATE>
+      <CANDIDATE score="0">lucratif</CANDIDATE>
+      <CANDIDATE score="1">payant</CANDIDATE>
+      <CANDIDATE score="1">profitable</CANDIDATE>
+      <CANDIDATE score="0">rentable</CANDIDATE>
+      <CANDIDATE score="0">salutaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00071242">
+    <ORIGINALDEF/>
+    <CANDIDATES original="smitten">
+      <CANDIDATE score="0">amoureux</CANDIDATE>
+      <CANDIDATE score="0">mordu</CANDIDATE>
+      <CANDIDATE score="0">épris</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stricken">
+      <CANDIDATE score="0">affligé</CANDIDATE>
+      <CANDIDATE score="0">dévasté</CANDIDATE>
+      <CANDIDATE score="0">ravagé</CANDIDATE>
+      <CANDIDATE score="0">sinistré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="struck">
+      <CANDIDATE score="0">frappé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00071427">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stage-struck"/>
+  </SYNSET>
+  <SYNSET id="00077449">
+    <ORIGINALDEF/>
+    <CANDIDATES original="aground">
+      <CANDIDATE score="1">échoué</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00083749">
+    <ORIGINALDEF/>
+    <CANDIDATES original="in-your-face"/>
+  </SYNSET>
+  <SYNSET id="00096072">
+    <ORIGINALDEF/>
+    <CANDIDATES original="assassinated"/>
+  </SYNSET>
+  <SYNSET id="00107868">
+    <ORIGINALDEF/>
+    <CANDIDATES original="energy-storing">
+		</CANDIDATES>
+    <CANDIDATES original="constructive-metabolic">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00133417">
+    <ORIGINALDEF/>
+    <CANDIDATES original="appetising"/>
+    <CANDIDATES original="appetizing">
+      <CANDIDATE score="1">appétissant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00151105">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inarticulate">
+      <CANDIDATE score="1">inarticulé</CANDIDATE>
+      <CANDIDATE score="0">inexprimable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unarticulate"/>
+  </SYNSET>
+  <SYNSET id="00151530">
+    <ORIGINALDEF/>
+    <CANDIDATES original="aphasic">
+      <CANDIDATE score="1">aphasique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00161431">
+    <ORIGINALDEF/>
+    <CANDIDATES original="attachable"/>
+  </SYNSET>
+  <SYNSET id="00179315">
+    <ORIGINALDEF/>
+    <CANDIDATES original="empowered"/>
+    <CANDIDATES original="sceptered"/>
+    <CANDIDATES original="sceptred"/>
+  </SYNSET>
+  <SYNSET id="00185363">
+    <ORIGINALDEF/>
+    <CANDIDATES original="on_tap"/>
+  </SYNSET>
+  <SYNSET id="00200979">
+    <ORIGINALDEF/>
+    <CANDIDATES original="straight-backed"/>
+  </SYNSET>
+  <SYNSET id="00202677">
+    <ORIGINALDEF/>
+    <CANDIDATES original="regardant"/>
+  </SYNSET>
+  <SYNSET id="00206627">
+    <ORIGINALDEF/>
+    <CANDIDATES original="beaklike"/>
+  </SYNSET>
+  <SYNSET id="01698400">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bare">
+      <CANDIDATE score="0">chauve</CANDIDATE>
+      <CANDIDATE score="0">décharné</CANDIDATE>
+      <CANDIDATE score="0">déchaussé</CANDIDATE>
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="0">dégagé</CANDIDATE>
+      <CANDIDATE score="0">dégarni</CANDIDATE>
+      <CANDIDATE score="0">dénudé</CANDIDATE>
+      <CANDIDATE score="0">dépouillé</CANDIDATE>
+      <CANDIDATE score="0">nu</CANDIDATE>
+      <CANDIDATE score="0">pelé</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00221934">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hideous">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">affreux</CANDIDATE>
+      <CANDIDATE score="1">atroce</CANDIDATE>
+      <CANDIDATE score="1">hideux</CANDIDATE>
+      <CANDIDATE score="1">horrible</CANDIDATE>
+      <CANDIDATE score="1">immonde</CANDIDATE>
+      <CANDIDATE score="1">monstrueux</CANDIDATE>
+      <CANDIDATE score="1">repoussant</CANDIDATE>
+      <CANDIDATE score="1">répugnant</CANDIDATE>
+      <CANDIDATE score="1">terrible</CANDIDATE>
+      <CANDIDATE score="1">épouvantable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="repulsive">
+      <CANDIDATE score="1">repoussant</CANDIDATE>
+      <CANDIDATE score="1">répulsif</CANDIDATE>
+      <CANDIDATE score="1">épouvantable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00231103">
+    <ORIGINALDEF/>
+    <CANDIDATES original="improved">
+      <CANDIDATE score="0">enrichi</CANDIDATE>
+      <CANDIDATE score="0">meilleur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00232754">
+    <ORIGINALDEF/>
+    <CANDIDATES original="corrective">
+      <CANDIDATE score="1">correcteur</CANDIDATE>
+      <CANDIDATE score="1">correctif</CANDIDATE>
+      <CANDIDATE score="1">rectificatif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00239847">
+    <ORIGINALDEF/>
+    <CANDIDATES original="three-sided">
+      <CANDIDATE score="1">trilatéral</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="triangular">
+      <CANDIDATE score="1">triangulaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="trilateral">
+      <CANDIDATE score="1">trilatéral</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00244503">
+    <ORIGINALDEF/>
+    <CANDIDATES original="brunet"/>
+    <CANDIDATES original="brunette">
+      <CANDIDATE score="1">brun</CANDIDATE>
+      <CANDIDATE score="1">châtain</CANDIDATE>
+      <CANDIDATE score="0">marron</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00246175">
+    <ORIGINALDEF/>
+    <CANDIDATES original="acned"/>
+    <CANDIDATES original="pimpled"/>
+    <CANDIDATES original="pimply">
+      <CANDIDATE score="1">boutonneux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pustulate">
+      <CANDIDATE score="1">pustuleux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00252310">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coy">
+      <CANDIDATE score="0">mièvre</CANDIDATE>
+      <CANDIDATE score="0">évasif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00254296">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unchained"/>
+    <CANDIDATES original="unfettered"/>
+    <CANDIDATES original="unshackled"/>
+    <CANDIDATES original="untied"/>
+  </SYNSET>
+  <SYNSET id="00256453">
+    <ORIGINALDEF/>
+    <CANDIDATES original="untangled"/>
+  </SYNSET>
+  <SYNSET id="00263463">
+    <ORIGINALDEF/>
+    <CANDIDATES original="desperate">
+      <CANDIDATE score="0">abominable</CANDIDATE>
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="0">atroce</CANDIDATE>
+      <CANDIDATE score="0">cruel</CANDIDATE>
+      <CANDIDATE score="1">désespéré</CANDIDATE>
+      <CANDIDATE score="0">épouvantable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="heroic">
+      <CANDIDATE score="1">héroïque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00265989">
+    <ORIGINALDEF/>
+    <CANDIDATES original="faint">
+      <CANDIDATE score="1">défaillant</CANDIDATE>
+      <CANDIDATE score="0">faible</CANDIDATE>
+      <CANDIDATE score="0">imperceptible</CANDIDATE>
+      <CANDIDATE score="0">indistinct</CANDIDATE>
+      <CANDIDATE score="0">léger</CANDIDATE>
+      <CANDIDATE score="0">mourant</CANDIDATE>
+      <CANDIDATE score="0">petit</CANDIDATE>
+      <CANDIDATE score="0">pâle</CANDIDATE>
+      <CANDIDATE score="0">ténu</CANDIDATE>
+      <CANDIDATE score="0">vague</CANDIDATE>
+      <CANDIDATE score="0">éteint</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fainthearted">
+      <CANDIDATE score="0">peureux</CANDIDATE>
+      <CANDIDATE score="1">pusillanime</CANDIDATE>
+      <CANDIDATE score="0">timide</CANDIDATE>
+      <CANDIDATE score="1">timoré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="timid">
+      <CANDIDATE score="0">craintif</CANDIDATE>
+      <CANDIDATE score="0">farouche</CANDIDATE>
+      <CANDIDATE score="0">peureux</CANDIDATE>
+      <CANDIDATE score="0">timide</CANDIDATE>
+      <CANDIDATE score="1">timoré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="faint-hearted"/>
+  </SYNSET>
+  <SYNSET id="00267871">
+    <ORIGINALDEF/>
+    <CANDIDATES original="breathless">
+      <CANDIDATE score="1">essoufflé</CANDIDATE>
+      <CANDIDATE score="0">fébrile</CANDIDATE>
+      <CANDIDATE score="1">haletant</CANDIDATE>
+      <CANDIDATE score="1">oppressé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dyspneal"/>
+    <CANDIDATES original="dyspneic"/>
+    <CANDIDATES original="dyspnoeal"/>
+    <CANDIDATES original="dyspnoeic"/>
+  </SYNSET>
+  <SYNSET id="00268869">
+    <ORIGINALDEF/>
+    <CANDIDATES original="crystalline">
+      <CANDIDATE score="1">cristallin</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00289594">
+    <ORIGINALDEF/>
+    <CANDIDATES original="broken">
+      <CANDIDATE score="0">abattu</CANDIDATE>
+      <CANDIDATE score="0">accidenté</CANDIDATE>
+      <CANDIDATE score="0">agité</CANDIDATE>
+      <CANDIDATE score="1">brisé</CANDIDATE>
+      <CANDIDATE score="1">cassé</CANDIDATE>
+      <CANDIDATE score="0">dentelé</CANDIDATE>
+      <CANDIDATE score="0">discontinu</CANDIDATE>
+      <CANDIDATE score="0">défoncé</CANDIDATE>
+      <CANDIDATE score="0">déglingué</CANDIDATE>
+      <CANDIDATE score="0">délabré</CANDIDATE>
+      <CANDIDATE score="0">détraqué</CANDIDATE>
+      <CANDIDATE score="0">fracturé</CANDIDATE>
+      <CANDIDATE score="0">haché</CANDIDATE>
+      <CANDIDATE score="0">interrompu</CANDIDATE>
+      <CANDIDATE score="0">manqué</CANDIDATE>
+      <CANDIDATE score="0">raboteux</CANDIDATE>
+      <CANDIDATE score="1">rompu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unkept"/>
+  </SYNSET>
+  <SYNSET id="00292298">
+    <ORIGINALDEF/>
+    <CANDIDATES original="biovular"/>
+    <CANDIDATES original="fraternal">
+      <CANDIDATE score="0">confraternel</CANDIDATE>
+      <CANDIDATE score="1">dizygote</CANDIDATE>
+      <CANDIDATE score="0">fraternel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00296186">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bonelike"/>
+  </SYNSET>
+  <SYNSET id="00303480">
+    <ORIGINALDEF/>
+    <CANDIDATES original="settled">
+      <CANDIDATE score="0">colonisé</CANDIDATE>
+      <CANDIDATE score="0">décidé</CANDIDATE>
+      <CANDIDATE score="0">habité</CANDIDATE>
+      <CANDIDATE score="0">peuplé</CANDIDATE>
+      <CANDIDATE score="0">rangé</CANDIDATE>
+      <CANDIDATE score="0">réglé</CANDIDATE>
+      <CANDIDATE score="1">stable</CANDIDATE>
+      <CANDIDATE score="0">sédentaire</CANDIDATE>
+      <CANDIDATE score="0">établi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00306314">
+    <ORIGINALDEF/>
+    <CANDIDATES original="capable">
+      <CANDIDATE score="1">capable</CANDIDATE>
+      <CANDIDATE score="0">compétent</CANDIDATE>
+      <CANDIDATE score="0">performant</CANDIDATE>
+      <CANDIDATE score="1">susceptible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00308870">
+    <ORIGINALDEF/>
+    <CANDIDATES original="untended"/>
+  </SYNSET>
+  <SYNSET id="00309945">
+    <ORIGINALDEF/>
+    <CANDIDATES original="close">
+      <CANDIDATE score="0">approchant</CANDIDATE>
+      <CANDIDATE score="0">attentif</CANDIDATE>
+      <CANDIDATE score="0">clos</CANDIDATE>
+      <CANDIDATE score="0">disputé</CANDIDATE>
+      <CANDIDATE score="0">détaillé</CANDIDATE>
+      <CANDIDATE score="0">enceinte</CANDIDATE>
+      <CANDIDATE score="0">fermé</CANDIDATE>
+      <CANDIDATE score="0">fidèle</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="1">fort</CANDIDATE>
+      <CANDIDATE score="0">intime</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="1">minutieux</CANDIDATE>
+      <CANDIDATE score="0">proche</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">précis</CANDIDATE>
+      <CANDIDATE score="0">rapproché</CANDIDATE>
+      <CANDIDATE score="0">serré</CANDIDATE>
+      <CANDIDATE score="0">soudé</CANDIDATE>
+      <CANDIDATE score="0">tangent</CANDIDATE>
+      <CANDIDATE score="0">uni</CANDIDATE>
+      <CANDIDATE score="0">étroit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00754873">
+    <ORIGINALDEF/>
+    <CANDIDATES original="negligent">
+      <CANDIDATE score="1">nonchalant</CANDIDATE>
+      <CANDIDATE score="1">négligent</CANDIDATE>
+      <CANDIDATE score="2">étourdi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00317727">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sliced">
+      <CANDIDATE score="1">tranché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00331446">
+    <ORIGINALDEF/>
+    <CANDIDATES original="peripheral">
+      <CANDIDATE score="0">accessoire</CANDIDATE>
+      <CANDIDATE score="0">marginal</CANDIDATE>
+      <CANDIDATE score="0">péri-informatique</CANDIDATE>
+      <CANDIDATE score="1">périphérique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00334245">
+    <ORIGINALDEF/>
+    <CANDIDATES original="centrifugal">
+      <CANDIDATE score="1">centrifuge</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="motor">
+      <CANDIDATE score="0">automobile</CANDIDATE>
+      <CANDIDATE score="0">automoteur</CANDIDATE>
+      <CANDIDATE score="1">moteur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00339941">
+    <ORIGINALDEF/>
+    <CANDIDATES original="diffident">
+      <CANDIDATE score="0">embarrassé</CANDIDATE>
+      <CANDIDATE score="1">timide</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="shy">
+      <CANDIDATE score="0">craintif</CANDIDATE>
+      <CANDIDATE score="0">farouche</CANDIDATE>
+      <CANDIDATE score="0">peureux</CANDIDATE>
+      <CANDIDATE score="1">timide</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="timid">
+      <CANDIDATE score="0">craintif</CANDIDATE>
+      <CANDIDATE score="0">farouche</CANDIDATE>
+      <CANDIDATE score="0">peureux</CANDIDATE>
+      <CANDIDATE score="1">timide</CANDIDATE>
+      <CANDIDATE score="1">timoré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unsure">
+      <CANDIDATE score="1">incertain</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00353101">
+    <ORIGINALDEF/>
+    <CANDIDATES original="revised"/>
+  </SYNSET>
+  <SYNSET id="00359862">
+    <ORIGINALDEF/>
+    <CANDIDATES original="uncharitable"/>
+  </SYNSET>
+  <SYNSET id="00386095">
+    <ORIGINALDEF/>
+    <CANDIDATES original="yellow-green"/>
+  </SYNSET>
+  <SYNSET id="00403505">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fluorescent">
+      <CANDIDATE score="1">fluo</CANDIDATE>
+      <CANDIDATE score="1">fluorescent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00409750">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chromatic">
+      <CANDIDATE score="1">chromatique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00420480">
+    <ORIGINALDEF/>
+    <CANDIDATES original="befouled"/>
+    <CANDIDATES original="fouled"/>
+  </SYNSET>
+  <SYNSET id="00422870">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scummy">
+      <CANDIDATE score="0">mousseux</CANDIDATE>
+      <CANDIDATE score="1">écumeux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00424240">
+    <ORIGINALDEF/>
+    <CANDIDATES original="antiseptic">
+      <CANDIDATE score="1">antiseptique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00442057">
+    <ORIGINALDEF/>
+    <CANDIDATES original="anticlockwise"/>
+    <CANDIDATES original="contraclockwise"/>
+    <CANDIDATES original="counterclockwise"/>
+  </SYNSET>
+  <SYNSET id="00449079">
+    <ORIGINALDEF/>
+    <CANDIDATES original="contiguous">
+      <CANDIDATE score="1">contigu</CANDIDATE>
+      <CANDIDATE score="0">jointif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="immediate">
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="1">immédiat</CANDIDATE>
+      <CANDIDATE score="0">instantané</CANDIDATE>
+      <CANDIDATE score="0">prochain</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00452773">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cozy"/>
+  </SYNSET>
+  <SYNSET id="00455605">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cowled">
+      <CANDIDATE score="1">encagoulé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00459881">
+    <ORIGINALDEF/>
+    <CANDIDATES original="seminude"/>
+  </SYNSET>
+  <SYNSET id="00462409">
+    <ORIGINALDEF/>
+    <CANDIDATES original="heavy">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="1">chargé</CANDIDATE>
+      <CANDIDATE score="0">costaud</CANDIDATE>
+      <CANDIDATE score="1">couvert</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">empâté</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">important</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="1">lourd</CANDIDATE>
+      <CANDIDATE score="0">massif</CANDIDATE>
+      <CANDIDATE score="0">nourri</CANDIDATE>
+      <CANDIDATE score="0">pesant</CANDIDATE>
+      <CANDIDATE score="0">pondéreux</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+      <CANDIDATE score="0">épais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lowering">
+      <CANDIDATE score="0">abaissant</CANDIDATE>
+      <CANDIDATE score="0">dégradant</CANDIDATE>
+      <CANDIDATE score="0">humiliant</CANDIDATE>
+      <CANDIDATE score="1">menaçant</CANDIDATE>
+      <CANDIDATE score="1">orageux</CANDIDATE>
+      <CANDIDATE score="1">sombre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sullen">
+      <CANDIDATE score="0">boudeur</CANDIDATE>
+      <CANDIDATE score="1">maussade</CANDIDATE>
+      <CANDIDATE score="1">menaçant</CANDIDATE>
+      <CANDIDATE score="0">morne</CANDIDATE>
+      <CANDIDATE score="0">morose</CANDIDATE>
+      <CANDIDATE score="0">mélancolique</CANDIDATE>
+      <CANDIDATE score="0">quinteux</CANDIDATE>
+      <CANDIDATE score="0">renfrogné</CANDIDATE>
+      <CANDIDATE score="0">rétif</CANDIDATE>
+      <CANDIDATE score="1">sombre</CANDIDATE>
+      <CANDIDATE score="0">terreux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="threatening">
+      <CANDIDATE score="0">comminatoire</CANDIDATE>
+      <CANDIDATE score="1">menaçant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00464068">
+    <ORIGINALDEF/>
+    <CANDIDATES original="landlocked">
+      <CANDIDATE score="1">enclavé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00471348">
+    <ORIGINALDEF/>
+    <CANDIDATES original="reported"/>
+  </SYNSET>
+  <SYNSET id="00471966">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unreported"/>
+  </SYNSET>
+  <SYNSET id="00475308">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blazing">
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="1">flamboyant</CANDIDATE>
+      <CANDIDATE score="0">fulgurant</CANDIDATE>
+      <CANDIDATE score="0">furibard</CANDIDATE>
+      <CANDIDATE score="0">furibond</CANDIDATE>
+      <CANDIDATE score="0">éclatant</CANDIDATE>
+      <CANDIDATE score="0">étincelant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="burning">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">cuisant</CANDIDATE>
+      <CANDIDATE score="0">dévorant</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="1">flambant</CANDIDATE>
+      <CANDIDATE score="1">incandescent</CANDIDATE>
+      <CANDIDATE score="0">incendié</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">passionnant</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">véhément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="flaming">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="0">fichu</CANDIDATE>
+      <CANDIDATE score="1">flamboyant</CANDIDATE>
+      <CANDIDATE score="0">foutu</CANDIDATE>
+      <CANDIDATE score="0">furax</CANDIDATE>
+      <CANDIDATE score="0">furibard</CANDIDATE>
+      <CANDIDATE score="0">satané</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="afire">
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="alight">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="on_fire">
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ablaze">
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="aflame">
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="aflare">
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00483048">
+    <ORIGINALDEF/>
+    <CANDIDATES original="disproportional"/>
+    <CANDIDATES original="disproportionate">
+      <CANDIDATE score="1">disproportionné</CANDIDATE>
+      <CANDIDATE score="1">démesuré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00491511">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unique">
+      <CANDIDATE score="1">exceptionnel</CANDIDATE>
+      <CANDIDATE score="1">unique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00498724">
+    <ORIGINALDEF/>
+    <CANDIDATES original="kannada-speaking"/>
+    <CANDIDATES original="Kannada-speaking"/>
+  </SYNSET>
+  <SYNSET id="00505285">
+    <ORIGINALDEF/>
+    <CANDIDATES original="incommensurable">
+      <CANDIDATE score="1">incommensurable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00511966">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unworkmanlike"/>
+  </SYNSET>
+  <SYNSET id="00522101">
+    <ORIGINALDEF/>
+    <CANDIDATES original="clean">
+      <CANDIDATE score="0">clean</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">désintoxiqué</CANDIDATE>
+      <CANDIDATE score="1">franc</CANDIDATE>
+      <CANDIDATE score="1">net</CANDIDATE>
+      <CANDIDATE score="1">propre</CANDIDATE>
+      <CANDIDATE score="0">pur</CANDIDATE>
+      <CANDIDATE score="0">vierge</CANDIDATE>
+      <CANDIDATE score="0">élégant</CANDIDATE>
+      <CANDIDATE score="0">épuré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00540366">
+    <ORIGINALDEF/>
+    <CANDIDATES original="broken">
+      <CANDIDATE score="0">abattu</CANDIDATE>
+      <CANDIDATE score="0">accidenté</CANDIDATE>
+      <CANDIDATE score="0">agité</CANDIDATE>
+      <CANDIDATE score="0">brisé</CANDIDATE>
+      <CANDIDATE score="0">cassé</CANDIDATE>
+      <CANDIDATE score="0">dentelé</CANDIDATE>
+      <CANDIDATE score="0">discontinu</CANDIDATE>
+      <CANDIDATE score="0">défoncé</CANDIDATE>
+      <CANDIDATE score="0">déglingué</CANDIDATE>
+      <CANDIDATE score="0">délabré</CANDIDATE>
+      <CANDIDATE score="0">détraqué</CANDIDATE>
+      <CANDIDATE score="0">fracturé</CANDIDATE>
+      <CANDIDATE score="0">haché</CANDIDATE>
+      <CANDIDATE score="0">interrompu</CANDIDATE>
+      <CANDIDATE score="0">manqué</CANDIDATE>
+      <CANDIDATE score="0">raboteux</CANDIDATE>
+      <CANDIDATE score="0">rompu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00541614">
+    <ORIGINALDEF/>
+    <CANDIDATES original="far-flung"/>
+    <CANDIDATES original="widespread">
+      <CANDIDATE score="0">commun</CANDIDATE>
+      <CANDIDATE score="1">considérable</CANDIDATE>
+      <CANDIDATE score="0">courant</CANDIDATE>
+      <CANDIDATE score="0">déployé</CANDIDATE>
+      <CANDIDATE score="0">général</CANDIDATE>
+      <CANDIDATE score="1">généralisé</CANDIDATE>
+      <CANDIDATE score="0">répandu</CANDIDATE>
+      <CANDIDATE score="0">étendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00542501">
+    <ORIGINALDEF/>
+    <CANDIDATES original="splashed"/>
+  </SYNSET>
+  <SYNSET id="00547641">
+    <ORIGINALDEF/>
+    <CANDIDATES original="crisp">
+      <CANDIDATE score="0">acerbe</CANDIDATE>
+      <CANDIDATE score="0">apprêté</CANDIDATE>
+      <CANDIDATE score="1">brusque</CANDIDATE>
+      <CANDIDATE score="0">cassant</CANDIDATE>
+      <CANDIDATE score="0">chips</CANDIDATE>
+      <CANDIDATE score="0">clair</CANDIDATE>
+      <CANDIDATE score="1">concis</CANDIDATE>
+      <CANDIDATE score="0">coulant</CANDIDATE>
+      <CANDIDATE score="0">craquant</CANDIDATE>
+      <CANDIDATE score="0">croquant</CANDIDATE>
+      <CANDIDATE score="0">croustillant</CANDIDATE>
+      <CANDIDATE score="0">dépouillé</CANDIDATE>
+      <CANDIDATE score="0">frais</CANDIDATE>
+      <CANDIDATE score="0">impeccable</CANDIDATE>
+      <CANDIDATE score="0">pimpant</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">précis</CANDIDATE>
+      <CANDIDATE score="0">raide</CANDIDATE>
+      <CANDIDATE score="1">sec</CANDIDATE>
+      <CANDIDATE score="0">tonifiant</CANDIDATE>
+      <CANDIDATE score="0">tranchant</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+      <CANDIDATE score="0">épuré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="curt">
+      <CANDIDATE score="1">brusque</CANDIDATE>
+      <CANDIDATE score="0">cassant</CANDIDATE>
+      <CANDIDATE score="1">sec</CANDIDATE>
+      <CANDIDATE score="0">tranchant</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="laconic">
+      <CANDIDATE score="1">laconique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="terse">
+      <CANDIDATE score="1">brusque</CANDIDATE>
+      <CANDIDATE score="1">laconique</CANDIDATE>
+      <CANDIDATE score="1">lapidaire</CANDIDATE>
+      <CANDIDATE score="1">sec</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00703454">
+    <ORIGINALDEF/>
+    <CANDIDATES original="deflated">
+      <CANDIDATE score="0">découragé</CANDIDATE>
+      <CANDIDATE score="1">dégonflé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="chapfallen"/>
+    <CANDIDATES original="chopfallen"/>
+    <CANDIDATES original="crestfallen">
+      <CANDIDATE score="0">morfondu</CANDIDATE>
+      <CANDIDATE score="0">découragé</CANDIDATE>
+      <CANDIDATE score="0">déçu</CANDIDATE>
+      <CANDIDATE score="0">déconfit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00585856">
+    <ORIGINALDEF/>
+    <CANDIDATES original="reconstructive">
+      <CANDIDATE score="0">reconstructeur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rehabilitative"/>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="obliterating"/>
+    <CANDIDATES original="obscurant"/>
+  </SYNSET>
+  <SYNSET id="00591513">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bulletproof">
+      <CANDIDATE score="1">blindé</CANDIDATE>
+      <CANDIDATE score="0">pare-balles</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ironclad">
+      <CANDIDATE score="0">cuirassé</CANDIDATE>
+      <CANDIDATE score="0">impératif</CANDIDATE>
+      <CANDIDATE score="0">strict</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unassailable">
+      <CANDIDATE score="0">imprenable</CANDIDATE>
+      <CANDIDATE score="1">inattaquable</CANDIDATE>
+      <CANDIDATE score="0">indétrônable</CANDIDATE>
+      <CANDIDATE score="0">inexpugnable</CANDIDATE>
+      <CANDIDATE score="0">invincible</CANDIDATE>
+      <CANDIDATE score="1">irréfutable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unshakable">
+      <CANDIDATE score="1">inébranlable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="watertight">
+      <CANDIDATE score="0">hermétique</CANDIDATE>
+      <CANDIDATE score="0">imperméable</CANDIDATE>
+      <CANDIDATE score="1">inattaquable</CANDIDATE>
+      <CANDIDATE score="1">indiscutable</CANDIDATE>
+      <CANDIDATE score="0">indémontable</CANDIDATE>
+      <CANDIDATE score="0">étanche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00595147">
+    <ORIGINALDEF/>
+    <CANDIDATES original="around-the-clock"/>
+    <CANDIDATES original="day-and-night"/>
+    <CANDIDATES original="nonstop">
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="1">ininterrompu</CANDIDATE>
+      <CANDIDATE score="1">non-stop</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="round-the-clock"/>
+  </SYNSET>
+  <SYNSET id="00597988">
+    <ORIGINALDEF/>
+    <CANDIDATES original="continuing">
+      <CANDIDATE score="1">ininterrompu</CANDIDATE>
+      <CANDIDATE score="0">postscolaire</CANDIDATE>
+      <CANDIDATE score="0">soutenu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00604617">
+    <ORIGINALDEF/>
+    <CANDIDATES original="convenient">
+      <CANDIDATE score="1">commode</CANDIDATE>
+      <CANDIDATE score="1">opportun</CANDIDATE>
+      <CANDIDATE score="1">pratique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00611281">
+    <ORIGINALDEF/>
+    <CANDIDATES original="conventional">
+      <CANDIDATE score="0">banal</CANDIDATE>
+      <CANDIDATE score="0">bourgeois</CANDIDATE>
+      <CANDIDATE score="1">classique</CANDIDATE>
+      <CANDIDATE score="0">conformiste</CANDIDATE>
+      <CANDIDATE score="1">conventionnel</CANDIDATE>
+      <CANDIDATE score="0">convenu</CANDIDATE>
+      <CANDIDATE score="1">traditionnel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00611754">
+    <ORIGINALDEF/>
+    <CANDIDATES original="traditionalistic">
+      <CANDIDATE score="1">traditionaliste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00632438">
+    <ORIGINALDEF/>
+    <CANDIDATES original="incorrect">
+      <CANDIDATE score="1">erroné</CANDIDATE>
+      <CANDIDATE score="1">fautif</CANDIDATE>
+      <CANDIDATE score="0">inadapté</CANDIDATE>
+      <CANDIDATE score="1">incorrect</CANDIDATE>
+      <CANDIDATE score="1">inexact</CANDIDATE>
+      <CANDIDATE score="0">mauvais</CANDIDATE>
+      <CANDIDATE score="0">vicieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wrong">
+      <CANDIDATE score="1">erroné</CANDIDATE>
+      <CANDIDATE score="1">faux</CANDIDATE>
+      <CANDIDATE score="1">incorrect</CANDIDATE>
+      <CANDIDATE score="1">inexact</CANDIDATE>
+      <CANDIDATE score="0">injuste</CANDIDATE>
+      <CANDIDATE score="0">mal</CANDIDATE>
+      <CANDIDATE score="0">mauvais</CANDIDATE>
+      <CANDIDATE score="0">vicieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00662873">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unpierced"/>
+  </SYNSET>
+  <SYNSET id="00665587">
+    <ORIGINALDEF/>
+    <CANDIDATES original="incurious">
+      <CANDIDATE score="1">incurieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00669478">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cursed">
+      <CANDIDATE score="1">damné</CANDIDATE>
+      <CANDIDATE score="1">maudit</CANDIDATE>
+      <CANDIDATE score="0">sacré</CANDIDATE>
+      <CANDIDATE score="1">satané</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="curst"/>
+  </SYNSET>
+  <SYNSET id="00670635">
+    <ORIGINALDEF/>
+    <CANDIDATES original="damnable">
+      <CANDIDATE score="0">damnable</CANDIDATE>
+      <CANDIDATE score="1">détestable</CANDIDATE>
+      <CANDIDATE score="1">fichu</CANDIDATE>
+      <CANDIDATE score="1">odieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="execrable">
+      <CANDIDATE score="0">affreux</CANDIDATE>
+      <CANDIDATE score="1">détestable</CANDIDATE>
+      <CANDIDATE score="1">exécrable</CANDIDATE>
+      <CANDIDATE score="0">épouvantable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00670938">
+    <ORIGINALDEF/>
+    <CANDIDATES original="favored">
+      <CANDIDATE score="0">favori</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fortunate">
+      <CANDIDATE score="0">chanceux</CANDIDATE>
+      <CANDIDATE score="0">favorable</CANDIDATE>
+      <CANDIDATE score="1">fortuné</CANDIDATE>
+      <CANDIDATE score="0">heureux</CANDIDATE>
+      <CANDIDATE score="1">privilégié</CANDIDATE>
+      <CANDIDATE score="0">propice</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="golden">
+      <CANDIDATE score="0">blond</CANDIDATE>
+      <CANDIDATE score="1">doré</CANDIDATE>
+      <CANDIDATE score="0">jaune</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00671593">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dowerless"/>
+  </SYNSET>
+  <SYNSET id="00675064">
+    <ORIGINALDEF/>
+    <CANDIDATES original="factory-made"/>
+  </SYNSET>
+  <SYNSET id="00676754">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bicyclic"/>
+  </SYNSET>
+  <SYNSET id="00678923">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nocturnal">
+      <CANDIDATE score="1">nocturne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00680156">
+    <ORIGINALDEF/>
+    <CANDIDATES original="broken">
+      <CANDIDATE score="0">abattu</CANDIDATE>
+      <CANDIDATE score="0">accidenté</CANDIDATE>
+      <CANDIDATE score="0">agité</CANDIDATE>
+      <CANDIDATE score="0">brisé</CANDIDATE>
+      <CANDIDATE score="1">cassé</CANDIDATE>
+      <CANDIDATE score="0">dentelé</CANDIDATE>
+      <CANDIDATE score="0">discontinu</CANDIDATE>
+      <CANDIDATE score="0">défoncé</CANDIDATE>
+      <CANDIDATE score="0">déglingué</CANDIDATE>
+      <CANDIDATE score="0">délabré</CANDIDATE>
+      <CANDIDATE score="0">détraqué</CANDIDATE>
+      <CANDIDATE score="0">fracturé</CANDIDATE>
+      <CANDIDATE score="0">haché</CANDIDATE>
+      <CANDIDATE score="0">interrompu</CANDIDATE>
+      <CANDIDATE score="0">manqué</CANDIDATE>
+      <CANDIDATE score="0">raboteux</CANDIDATE>
+      <CANDIDATE score="0">rompu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="busted"/>
+  </SYNSET>
+  <SYNSET id="00685638">
+    <ORIGINALDEF/>
+    <CANDIDATES original="decisive">
+      <CANDIDATE score="2">catégorique</CANDIDATE>
+      <CANDIDATE score="0">concluant</CANDIDATE>
+      <CANDIDATE score="1">décidé</CANDIDATE>
+      <CANDIDATE score="2">décisif</CANDIDATE>
+      <CANDIDATE score="0">décisoire</CANDIDATE>
+      <CANDIDATE score="2">définitif</CANDIDATE>
+      <CANDIDATE score="0">déterminant</CANDIDATE>
+      <CANDIDATE score="1">ferme</CANDIDATE>
+      <CANDIDATE score="1">résolu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00686890">
+    <ORIGINALDEF/>
+    <CANDIDATES original="declarative">
+      <CANDIDATE score="1">assertif</CANDIDATE>
+      <CANDIDATE score="1">déclaratif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="declaratory">
+      <CANDIDATE score="1">déclaratif</CANDIDATE>
+      <CANDIDATE score="0">déclaratoire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="asserting">
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00696828">
+    <ORIGINALDEF/>
+    <CANDIDATES original="amenable">
+      <CANDIDATE score="1">maniable</CANDIDATE>
+      <CANDIDATE score="0">responsable</CANDIDATE>
+      <CANDIDATE score="1">souple</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="conformable">
+      <CANDIDATE score="1">accommodant</CANDIDATE>
+      <CANDIDATE score="0">adapté</CANDIDATE>
+      <CANDIDATE score="0">compatible</CANDIDATE>
+      <CANDIDATE score="0">concordant</CANDIDATE>
+      <CANDIDATE score="0">conforme</CANDIDATE>
+      <CANDIDATE score="1">docile</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="willing">
+      <CANDIDATE score="0">consentant</CANDIDATE>
+      <CANDIDATE score="0">empressé</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">volontaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00696996">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lamblike"/>
+  </SYNSET>
+  <SYNSET id="00708738">
+    <ORIGINALDEF/>
+    <CANDIDATES original="crumbly">
+      <CANDIDATE score="0">croulant</CANDIDATE>
+      <CANDIDATE score="1">friable</CANDIDATE>
+      <CANDIDATE score="0">meuble</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="friable">
+      <CANDIDATE score="1">friable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00720082">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nonarbitrary"/>
+    <CANDIDATES original="unarbitrary"/>
+  </SYNSET>
+  <SYNSET id="00729246">
+    <ORIGINALDEF/>
+    <CANDIDATES original="case-by-case"/>
+    <CANDIDATES original="individual">
+      <CANDIDATE score="1">individuel</CANDIDATE>
+      <CANDIDATE score="1">particulier</CANDIDATE>
+      <CANDIDATE score="1">personnel</CANDIDATE>
+      <CANDIDATE score="0">sauteur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="item-by-item"/>
+  </SYNSET>
+  <SYNSET id="00730731">
+    <ORIGINALDEF/>
+    <CANDIDATES original="partisan">
+      <CANDIDATE score="1">partisan</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="partizan"/>
+  </SYNSET>
+  <SYNSET id="00735709">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blasted">
+      <CANDIDATE score="1">anéanti</CANDIDATE>
+      <CANDIDATE score="0">desséché</CANDIDATE>
+      <CANDIDATE score="1">désolé</CANDIDATE>
+      <CANDIDATE score="0">fichu</CANDIDATE>
+      <CANDIDATE score="0">foudroyé</CANDIDATE>
+      <CANDIDATE score="0">maudit</CANDIDATE>
+      <CANDIDATE score="0">sacré</CANDIDATE>
+      <CANDIDATE score="0">satané</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="desolate">
+      <CANDIDATE score="0">affligé</CANDIDATE>
+      <CANDIDATE score="0">délaissé</CANDIDATE>
+      <CANDIDATE score="0">désert</CANDIDATE>
+      <CANDIDATE score="0">désespéré</CANDIDATE>
+      <CANDIDATE score="1">désolé</CANDIDATE>
+      <CANDIDATE score="1">dévasté</CANDIDATE>
+      <CANDIDATE score="0">morne</CANDIDATE>
+      <CANDIDATE score="0">perdu</CANDIDATE>
+      <CANDIDATE score="1">ravagé</CANDIDATE>
+      <CANDIDATE score="0">sauvage</CANDIDATE>
+      <CANDIDATE score="0">solitaire</CANDIDATE>
+      <CANDIDATE score="0">sombre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="desolated"/>
+    <CANDIDATES original="devastated">
+      <CANDIDATE score="1">dévasté</CANDIDATE>
+      <CANDIDATE score="1">sinistré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ravaged">
+      <CANDIDATE score="0">défait</CANDIDATE>
+      <CANDIDATE score="1">dévasté</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ruined">
+      <CANDIDATE score="0">décavé</CANDIDATE>
+      <CANDIDATE score="0">délabré</CANDIDATE>
+      <CANDIDATE score="1">dévasté</CANDIDATE>
+      <CANDIDATE score="0">perdu</CANDIDATE>
+      <CANDIDATE score="1">ruiné</CANDIDATE>
+      <CANDIDATE score="0">écroulé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wasted">
+      <CANDIDATE score="0">atrophié</CANDIDATE>
+      <CANDIDATE score="0">bourré</CANDIDATE>
+      <CANDIDATE score="0">crevé</CANDIDATE>
+      <CANDIDATE score="0">décharné</CANDIDATE>
+      <CANDIDATE score="0">défoncé</CANDIDATE>
+      <CANDIDATE score="0">lessivé</CANDIDATE>
+      <CANDIDATE score="0">manqué</CANDIDATE>
+      <CANDIDATE score="0">perdu</CANDIDATE>
+      <CANDIDATE score="0">raté</CANDIDATE>
+      <CANDIDATE score="0">émacié</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sacked"/>
+    <CANDIDATES original="pillaged"/>
+    <CANDIDATES original="raped"/>
+    <CANDIDATES original="despoiled"/>
+  </SYNSET>
+  <SYNSET id="00739495">
+    <ORIGINALDEF/>
+    <CANDIDATES original="indeterminate">
+      <CANDIDATE score="0">imprécis</CANDIDATE>
+      <CANDIDATE score="1">indéfini</CANDIDATE>
+      <CANDIDATE score="1">indéterminé</CANDIDATE>
+      <CANDIDATE score="0">vague</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00743742">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sinister">
+      <CANDIDATE score="0">funeste</CANDIDATE>
+      <CANDIDATE score="0">menaçant</CANDIDATE>
+      <CANDIDATE score="0">patibulaire</CANDIDATE>
+      <CANDIDATE score="1">senestre</CANDIDATE>
+      <CANDIDATE score="0">sinistre</CANDIDATE>
+      <CANDIDATE score="1">sénestre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00746451">
+    <ORIGINALDEF/>
+    <CANDIDATES original="baffling">
+      <CANDIDATE score="1">déconcertant</CANDIDATE>
+      <CANDIDATE score="1">déroutant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="knotty">
+      <CANDIDATE score="1">difficile</CANDIDATE>
+      <CANDIDATE score="1">noueux</CANDIDATE>
+      <CANDIDATE score="1">épineux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="problematic">
+      <CANDIDATE score="1">problématique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="problematical">
+      <CANDIDATE score="1">problématique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="elusive">
+      <CANDIDATE score="0">difficile_à_joindre</CANDIDATE>
+      <CANDIDATE score="0">fuyant</CANDIDATE>
+      <CANDIDATE score="0">élusif</CANDIDATE>
+      <CANDIDATE score="0">difficile_à_atteindre</CANDIDATE>
+      <CANDIDATE score="5">qui_échappe</CANDIDATE>
+      <CANDIDATE score="0">indéfinissable</CANDIDATE>
+      <CANDIDATE score="0">insaisissable</CANDIDATE>
+      <CANDIDATE score="0">évasif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tough">
+      <CANDIDATE score="0">à_la_redresse</CANDIDATE>
+      <CANDIDATE score="0">robuste</CANDIDATE>
+      <CANDIDATE score="0">tenace</CANDIDATE>
+      <CANDIDATE score="0">calé</CANDIDATE>
+      <CANDIDATE score="0">âpre</CANDIDATE>
+      <CANDIDATE score="0">dur</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="1">épineux</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">endurci</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="0">trapu</CANDIDATE>
+      <CANDIDATE score="0">redoutable</CANDIDATE>
+      <CANDIDATE score="0">puissant</CANDIDATE>
+      <CANDIDATE score="0">scoumoune</CANDIDATE>
+      <CANDIDATE score="0">chié</CANDIDATE>
+      <CANDIDATE score="0">sérieux</CANDIDATE>
+      <CANDIDATE score="1">difficile</CANDIDATE>
+      <CANDIDATE score="0">chiadé</CANDIDATE>
+      <CANDIDATE score="0">coriace</CANDIDATE>
+      <CANDIDATE score="0">rude</CANDIDATE>
+      <CANDIDATE score="0">rigoureux</CANDIDATE>
+      <CANDIDATE score="0">solide</CANDIDATE>
+      <CANDIDATE score="1">corsé</CANDIDATE>
+      <CANDIDATE score="0">endurant</CANDIDATE>
+      <CANDIDATE score="0">fatigant</CANDIDATE>
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="0">résistant</CANDIDATE>
+      <CANDIDATE score="0">apache</CANDIDATE>
+      <CANDIDATE score="0">duraille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00747576">
+    <ORIGINALDEF/>
+    <CANDIDATES original="herculean">
+      <CANDIDATE score="1">herculéen</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00765862">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pointed">
+      <CANDIDATE score="0">aigu</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="0">ogival</CANDIDATE>
+      <CANDIDATE score="0">pointu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00774911">
+    <ORIGINALDEF/>
+    <CANDIDATES original="diacritic">
+      <CANDIDATE score="1">diacritique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="diacritical">
+      <CANDIDATE score="1">diacritique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00785889">
+    <ORIGINALDEF/>
+    <CANDIDATES original="indiscrete">
+      <CANDIDATE score="1">indivisible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00794146">
+    <ORIGINALDEF/>
+    <CANDIDATES original="single-barreled"/>
+    <CANDIDATES original="single-barrelled"/>
+  </SYNSET>
+  <SYNSET id="00804695">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lively">
+      <CANDIDATE score="0">alerte</CANDIDATE>
+      <CANDIDATE score="0">allant</CANDIDATE>
+      <CANDIDATE score="1">allègre</CANDIDATE>
+      <CANDIDATE score="1">animé</CANDIDATE>
+      <CANDIDATE score="0">dansant</CANDIDATE>
+      <CANDIDATE score="0">entraînant</CANDIDATE>
+      <CANDIDATE score="0">folâtre</CANDIDATE>
+      <CANDIDATE score="0">frappant</CANDIDATE>
+      <CANDIDATE score="0">frétillant</CANDIDATE>
+      <CANDIDATE score="1">gai</CANDIDATE>
+      <CANDIDATE score="0">gaillard</CANDIDATE>
+      <CANDIDATE score="0">gouleyant</CANDIDATE>
+      <CANDIDATE score="0">joyeux</CANDIDATE>
+      <CANDIDATE score="0">nourri</CANDIDATE>
+      <CANDIDATE score="0">percutant</CANDIDATE>
+      <CANDIDATE score="1">pétulant</CANDIDATE>
+      <CANDIDATE score="0">rapide</CANDIDATE>
+      <CANDIDATE score="0">spirituel</CANDIDATE>
+      <CANDIDATE score="1">vif</CANDIDATE>
+      <CANDIDATE score="0">vigoureux</CANDIDATE>
+      <CANDIDATE score="0">vivant</CANDIDATE>
+      <CANDIDATE score="0">éveillé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00820458">
+    <ORIGINALDEF/>
+    <CANDIDATES original="middle">
+      <CANDIDATE score="0">intermédiaire</CANDIDATE>
+      <CANDIDATE score="1">moyen</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00824094">
+    <ORIGINALDEF/>
+    <CANDIDATES original="easternmost"/>
+    <CANDIDATES original="eastmost"/>
+  </SYNSET>
+  <SYNSET id="00842810">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sharp">
+      <CANDIDATE score="0">acerbe</CANDIDATE>
+      <CANDIDATE score="0">acide</CANDIDATE>
+      <CANDIDATE score="0">acéré</CANDIDATE>
+      <CANDIDATE score="0">affilé</CANDIDATE>
+      <CANDIDATE score="0">affûté</CANDIDATE>
+      <CANDIDATE score="0">aigre</CANDIDATE>
+      <CANDIDATE score="0">aigu</CANDIDATE>
+      <CANDIDATE score="0">aiguisé</CANDIDATE>
+      <CANDIDATE score="0">anguleux</CANDIDATE>
+      <CANDIDATE score="0">brusque</CANDIDATE>
+      <CANDIDATE score="0">brutal</CANDIDATE>
+      <CANDIDATE score="0">cassant</CANDIDATE>
+      <CANDIDATE score="0">chic</CANDIDATE>
+      <CANDIDATE score="0">cinglant</CANDIDATE>
+      <CANDIDATE score="0">coupant</CANDIDATE>
+      <CANDIDATE score="0">cuisant</CANDIDATE>
+      <CANDIDATE score="0">distinct</CANDIDATE>
+      <CANDIDATE score="0">dièse</CANDIDATE>
+      <CANDIDATE score="0">dégourdi</CANDIDATE>
+      <CANDIDATE score="0">délié</CANDIDATE>
+      <CANDIDATE score="0">déloyal</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">incisif</CANDIDATE>
+      <CANDIDATE score="0">malhonnête</CANDIDATE>
+      <CANDIDATE score="0">malin</CANDIDATE>
+      <CANDIDATE score="0">marqué</CANDIDATE>
+      <CANDIDATE score="0">mordant</CANDIDATE>
+      <CANDIDATE score="0">net</CANDIDATE>
+      <CANDIDATE score="0">perçant</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">pointu</CANDIDATE>
+      <CANDIDATE score="0">prononcé</CANDIDATE>
+      <CANDIDATE score="0">pénétrant</CANDIDATE>
+      <CANDIDATE score="0">raide</CANDIDATE>
+      <CANDIDATE score="0">sec</CANDIDATE>
+      <CANDIDATE score="0">serré</CANDIDATE>
+      <CANDIDATE score="0">soudain</CANDIDATE>
+      <CANDIDATE score="0">suret</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">tranchant</CANDIDATE>
+      <CANDIDATE score="0">vert</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">âcre</CANDIDATE>
+      <CANDIDATE score="0">âpre</CANDIDATE>
+      <CANDIDATE score="0">éveillé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00866182">
+    <ORIGINALDEF/>
+    <CANDIDATES original="undeceived">
+      <CANDIDATE score="1">désabusé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="disabused">
+      <CANDIDATE score="1">désabusé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00881030">
+    <ORIGINALDEF/>
+    <CANDIDATES original="exaggerated">
+      <CANDIDATE score="1">exagéré</CANDIDATE>
+      <CANDIDATE score="1">outré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hyperbolic">
+      <CANDIDATE score="1">hyperbolique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inflated">
+      <CANDIDATE score="0">boursouflé</CANDIDATE>
+      <CANDIDATE score="0">dilaté</CANDIDATE>
+      <CANDIDATE score="0">enflé</CANDIDATE>
+      <CANDIDATE score="1">exagéré</CANDIDATE>
+      <CANDIDATE score="1">excessif</CANDIDATE>
+      <CANDIDATE score="0">gonflé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00885415">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nonenterprising"/>
+    <CANDIDATES original="unenterprising"/>
+  </SYNSET>
+  <SYNSET id="00895442">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ambiguous">
+      <CANDIDATE score="1">ambigu</CANDIDATE>
+      <CANDIDATE score="0">douteux</CANDIDATE>
+      <CANDIDATE score="0">obscur</CANDIDATE>
+      <CANDIDATE score="1">équivoque</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="equivocal">
+      <CANDIDATE score="1">ambigu</CANDIDATE>
+      <CANDIDATE score="0">douteux</CANDIDATE>
+      <CANDIDATE score="0">incertain</CANDIDATE>
+      <CANDIDATE score="0">indécis</CANDIDATE>
+      <CANDIDATE score="0">louche</CANDIDATE>
+      <CANDIDATE score="1">équivoque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00916199">
+    <ORIGINALDEF/>
+    <CANDIDATES original="free">
+      <CANDIDATE score="0">autonome</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">gratis</CANDIDATE>
+      <CANDIDATE score="0">gratuit</CANDIDATE>
+      <CANDIDATE score="0">généreux</CANDIDATE>
+      <CANDIDATE score="0">large</CANDIDATE>
+      <CANDIDATE score="1">libre</CANDIDATE>
+      <CANDIDATE score="0">prodigue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="liberal">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">ample</CANDIDATE>
+      <CANDIDATE score="0">généreux</CANDIDATE>
+      <CANDIDATE score="0">large</CANDIDATE>
+      <CANDIDATE score="1">libre</CANDIDATE>
+      <CANDIDATE score="0">libéral</CANDIDATE>
+      <CANDIDATE score="0">prodigue</CANDIDATE>
+      <CANDIDATE score="0">progressiste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="loose">
+      <CANDIDATE score="0">ample</CANDIDATE>
+      <CANDIDATE score="0">approximatif</CANDIDATE>
+      <CANDIDATE score="0">branlant</CANDIDATE>
+      <CANDIDATE score="0">confus</CANDIDATE>
+      <CANDIDATE score="0">desserré</CANDIDATE>
+      <CANDIDATE score="0">disponible</CANDIDATE>
+      <CANDIDATE score="0">distendu</CANDIDATE>
+      <CANDIDATE score="0">douteux</CANDIDATE>
+      <CANDIDATE score="0">déchaussé</CANDIDATE>
+      <CANDIDATE score="0">démanché</CANDIDATE>
+      <CANDIDATE score="0">dénoué</CANDIDATE>
+      <CANDIDATE score="0">détaché</CANDIDATE>
+      <CANDIDATE score="0">dévergondé</CANDIDATE>
+      <CANDIDATE score="0">facile</CANDIDATE>
+      <CANDIDATE score="0">flasque</CANDIDATE>
+      <CANDIDATE score="0">flottant</CANDIDATE>
+      <CANDIDATE score="0">flou</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="0">imprécis</CANDIDATE>
+      <CANDIDATE score="0">large</CANDIDATE>
+      <CANDIDATE score="0">liquide</CANDIDATE>
+      <CANDIDATE score="0">lâche</CANDIDATE>
+      <CANDIDATE score="0">lâché</CANDIDATE>
+      <CANDIDATE score="0">meuble</CANDIDATE>
+      <CANDIDATE score="0">mobile</CANDIDATE>
+      <CANDIDATE score="0">mou</CANDIDATE>
+      <CANDIDATE score="0">relâché</CANDIDATE>
+      <CANDIDATE score="0">vague</CANDIDATE>
+      <CANDIDATE score="0">échappé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00921866">
+    <ORIGINALDEF/>
+    <CANDIDATES original="electrifying">
+      <CANDIDATE score="1">galvanisant</CANDIDATE>
+      <CANDIDATE score="1">électrisant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thrilling">
+      <CANDIDATE score="1">emballant</CANDIDATE>
+      <CANDIDATE score="1">exaltant</CANDIDATE>
+      <CANDIDATE score="1">palpitant</CANDIDATE>
+      <CANDIDATE score="1">saisissant</CANDIDATE>
+      <CANDIDATE score="1">trépidant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00930170">
+    <ORIGINALDEF/>
+    <CANDIDATES original="matter-of-course"/>
+  </SYNSET>
+  <SYNSET id="00945207">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inextricable">
+      <CANDIDATE score="1">inextricable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00946281">
+    <ORIGINALDEF/>
+    <CANDIDATES original="digitate">
+      <CANDIDATE score="1">digité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fingerlike"/>
+  </SYNSET>
+  <SYNSET id="00947264">
+    <ORIGINALDEF/>
+    <CANDIDATES original="expandable"/>
+    <CANDIDATES original="expandible"/>
+    <CANDIDATES original="expansible">
+      <CANDIDATE score="1">expansible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00950592">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inside">
+      <CANDIDATE score="0">droit</CANDIDATE>
+      <CANDIDATE score="0">gauche</CANDIDATE>
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00950592">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inside">
+      <CANDIDATE score="0">droit</CANDIDATE>
+      <CANDIDATE score="0">gauche</CANDIDATE>
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00953814">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blue-eyed"/>
+  </SYNSET>
+  <SYNSET id="00963671">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rebellious">
+      <CANDIDATE score="0">frondeur</CANDIDATE>
+      <CANDIDATE score="0">indocile</CANDIDATE>
+      <CANDIDATE score="0">insoumis</CANDIDATE>
+      <CANDIDATE score="0">insubordonné</CANDIDATE>
+      <CANDIDATE score="1">rebelle</CANDIDATE>
+      <CANDIDATE score="0">rétif</CANDIDATE>
+      <CANDIDATE score="0">révolté</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rebel">
+      <CANDIDATE score="0">dissident</CANDIDATE>
+      <CANDIDATE score="0">frondeur</CANDIDATE>
+      <CANDIDATE score="1">insurgé</CANDIDATE>
+      <CANDIDATE score="0">mutin</CANDIDATE>
+      <CANDIDATE score="0">mutiné</CANDIDATE>
+      <CANDIDATE score="1">rebelle</CANDIDATE>
+      <CANDIDATE score="0">révolté</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rebelling">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00976016">
+    <ORIGINALDEF/>
+    <CANDIDATES original="snazzy">
+      <CANDIDATE score="0">chouette</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00977372">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blistering">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">cinglant</CANDIDATE>
+      <CANDIDATE score="0">impitoyable</CANDIDATE>
+      <CANDIDATE score="0">torride</CANDIDATE>
+      <CANDIDATE score="0">virulent</CANDIDATE>
+      <CANDIDATE score="0">étouffant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hot">
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">chaud</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">hot</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">pimenté</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">radioactif</CANDIDATE>
+      <CANDIDATE score="0">relevé</CANDIDATE>
+      <CANDIDATE score="0">sensationnel</CANDIDATE>
+      <CANDIDATE score="0">terrible</CANDIDATE>
+      <CANDIDATE score="0">thermal</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">volé</CANDIDATE>
+      <CANDIDATE score="0">épicé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="red-hot">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">rouge</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00982954">
+    <ORIGINALDEF/>
+    <CANDIDATES original="andante">
+      <CANDIDATE score="1">andante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00990053">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scarecrowish"/>
+  </SYNSET>
+  <SYNSET id="00994410">
+    <ORIGINALDEF/>
+    <CANDIDATES original="curable">
+      <CANDIDATE score="1">curable</CANDIDATE>
+      <CANDIDATE score="1">guérissable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00994744">
+    <ORIGINALDEF/>
+    <CANDIDATES original="plumbable"/>
+    <CANDIDATES original="soundable"/>
+    <CANDIDATES original="fathomable"/>
+  </SYNSET>
+  <SYNSET id="00995775">
+    <ORIGINALDEF/>
+    <CANDIDATES original="favorable">
+      <CANDIDATE score="1">favorable</CANDIDATE>
+      <CANDIDATE score="0">propice</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="favourable">
+      <CANDIDATE score="0">avantageux</CANDIDATE>
+      <CANDIDATE score="0">bon</CANDIDATE>
+      <CANDIDATE score="1">favorable</CANDIDATE>
+      <CANDIDATE score="0">flatteur</CANDIDATE>
+      <CANDIDATE score="0">propice</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00996343">
+    <ORIGINALDEF/>
+    <CANDIDATES original="indulgent">
+      <CANDIDATE score="0">accommodant</CANDIDATE>
+      <CANDIDATE score="1">clément</CANDIDATE>
+      <CANDIDATE score="0">complaisant</CANDIDATE>
+      <CANDIDATE score="1">indulgent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stiffened">
+      <CANDIDATE score="0">baleiné</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00894879">
+    <ORIGINALDEF/>
+    <CANDIDATES original="labile">
+      <CANDIDATE score="1">labile</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01040087">
+    <ORIGINALDEF/>
+    <CANDIDATES original="undomesticated"/>
+  </SYNSET>
+  <SYNSET id="01043070">
+    <ORIGINALDEF/>
+    <CANDIDATES original="form-only"/>
+  </SYNSET>
+  <SYNSET id="01048202">
+    <ORIGINALDEF/>
+    <CANDIDATES original="better_off"/>
+  </SYNSET>
+  <SYNSET id="01050890">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hapless">
+      <CANDIDATE score="1">infortuné</CANDIDATE>
+      <CANDIDATE score="0">malchanceux</CANDIDATE>
+      <CANDIDATE score="1">malheureux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="miserable">
+      <CANDIDATE score="0">déplorable</CANDIDATE>
+      <CANDIDATE score="0">dérisoire</CANDIDATE>
+      <CANDIDATE score="0">lamentable</CANDIDATE>
+      <CANDIDATE score="1">malheureux</CANDIDATE>
+      <CANDIDATE score="1">minable</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="1">miteux</CANDIDATE>
+      <CANDIDATE score="0">méchant</CANDIDATE>
+      <CANDIDATE score="1">piteux</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="misfortunate"/>
+    <CANDIDATES original="pathetic">
+      <CANDIDATE score="0">affligeant</CANDIDATE>
+      <CANDIDATE score="0">débile</CANDIDATE>
+      <CANDIDATE score="0">dérisoire</CANDIDATE>
+      <CANDIDATE score="0">merdique</CANDIDATE>
+      <CANDIDATE score="1">minable</CANDIDATE>
+      <CANDIDATE score="1">navrant</CANDIDATE>
+      <CANDIDATE score="1">pathétique</CANDIDATE>
+      <CANDIDATE score="1">pauvre</CANDIDATE>
+      <CANDIDATE score="1">piteux</CANDIDATE>
+      <CANDIDATE score="1">pitoyable</CANDIDATE>
+      <CANDIDATE score="0">vaseux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="piteous">
+      <CANDIDATE score="1">pitoyable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pitiable">
+      <CANDIDATE score="1">minable</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="1">piteux</CANDIDATE>
+      <CANDIDATE score="1">pitoyable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pitiful">
+      <CANDIDATE score="0">déplorable</CANDIDATE>
+      <CANDIDATE score="0">lamentable</CANDIDATE>
+      <CANDIDATE score="1">malheureux</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="1">piteux</CANDIDATE>
+      <CANDIDATE score="1">pitoyable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="poor">
+      <CANDIDATE score="0">besogneux</CANDIDATE>
+      <CANDIDATE score="0">chétif</CANDIDATE>
+      <CANDIDATE score="0">débile</CANDIDATE>
+      <CANDIDATE score="0">déficitaire</CANDIDATE>
+      <CANDIDATE score="0">faible</CANDIDATE>
+      <CANDIDATE score="0">fautif</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">indigent</CANDIDATE>
+      <CANDIDATE score="0">insalubre</CANDIDATE>
+      <CANDIDATE score="0">insatisfaisant</CANDIDATE>
+      <CANDIDATE score="0">insuffisant</CANDIDATE>
+      <CANDIDATE score="0">maigre</CANDIDATE>
+      <CANDIDATE score="1">malheureux</CANDIDATE>
+      <CANDIDATE score="0">mauvais</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="0">médiocre</CANDIDATE>
+      <CANDIDATE score="1">pauvre</CANDIDATE>
+      <CANDIDATE score="0">piètre</CANDIDATE>
+      <CANDIDATE score="0">pâle</CANDIDATE>
+      <CANDIDATE score="0">quelconque</CANDIDATE>
+      <CANDIDATE score="0">raté</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wretched">
+      <CANDIDATE score="0">fichu</CANDIDATE>
+      <CANDIDATE score="1">infortuné</CANDIDATE>
+      <CANDIDATE score="0">laid</CANDIDATE>
+      <CANDIDATE score="1">malheureux</CANDIDATE>
+      <CANDIDATE score="1">minable</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="0">méprisable</CANDIDATE>
+      <CANDIDATE score="0">piètre</CANDIDATE>
+      <CANDIDATE score="0">satané</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01058029">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scentless">
+      <CANDIDATE score="1">inodore</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01072908">
+    <ORIGINALDEF/>
+    <CANDIDATES original="freeze-dried">
+      <CANDIDATE score="1">lyophilisé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lyophilised"/>
+    <CANDIDATES original="lyophilized"/>
+  </SYNSET>
+  <SYNSET id="01075178">
+    <ORIGINALDEF/>
+    <CANDIDATES original="affable">
+      <CANDIDATE score="1">affable</CANDIDATE>
+      <CANDIDATE score="1">aimable</CANDIDATE>
+      <CANDIDATE score="1">amène</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="amiable">
+      <CANDIDATE score="1">aimable</CANDIDATE>
+      <CANDIDATE score="1">amène</CANDIDATE>
+      <CANDIDATE score="1">gentil</CANDIDATE>
+      <CANDIDATE score="0">gracieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="cordial">
+      <CANDIDATE score="1">cordial</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="genial">
+      <CANDIDATE score="1">affable</CANDIDATE>
+      <CANDIDATE score="1">agréable</CANDIDATE>
+      <CANDIDATE score="1">aimable</CANDIDATE>
+      <CANDIDATE score="1">avenant</CANDIDATE>
+      <CANDIDATE score="1">chaleureux</CANDIDATE>
+      <CANDIDATE score="0">clément</CANDIDATE>
+      <CANDIDATE score="1">cordial</CANDIDATE>
+      <CANDIDATE score="0">doux</CANDIDATE>
+      <CANDIDATE score="1">engageant</CANDIDATE>
+      <CANDIDATE score="0">génial</CANDIDATE>
+      <CANDIDATE score="0">mentonnier</CANDIDATE>
+      <CANDIDATE score="0">réconfortant</CANDIDATE>
+      <CANDIDATE score="0">vivifiant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01077638">
+    <ORIGINALDEF/>
+    <CANDIDATES original="friendly">
+      <CANDIDATE score="0">accueillant</CANDIDATE>
+      <CANDIDATE score="0">affectueux</CANDIDATE>
+      <CANDIDATE score="0">aimable</CANDIDATE>
+      <CANDIDATE score="1">ami</CANDIDATE>
+      <CANDIDATE score="0">amical</CANDIDATE>
+      <CANDIDATE score="0">avenant</CANDIDATE>
+      <CANDIDATE score="0">bienveillant</CANDIDATE>
+      <CANDIDATE score="0">chaleureux</CANDIDATE>
+      <CANDIDATE score="0">convivial</CANDIDATE>
+      <CANDIDATE score="0">familier</CANDIDATE>
+      <CANDIDATE score="0">gentil</CANDIDATE>
+      <CANDIDATE score="0">sympa</CANDIDATE>
+      <CANDIDATE score="0">sympathique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01079978">
+    <ORIGINALDEF/>
+    <CANDIDATES original="liquescent"/>
+    <CANDIDATES original="melting">
+      <CANDIDATE score="0">attendri</CANDIDATE>
+      <CANDIDATE score="0">attendrissant</CANDIDATE>
+      <CANDIDATE score="1">fondant</CANDIDATE>
+      <CANDIDATE score="0">pourri</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01083754">
+    <ORIGINALDEF/>
+    <CANDIDATES original="flooded">
+      <CANDIDATE score="1">submergé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inundated">
+      <CANDIDATE score="1">submergé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overflowing">
+      <CANDIDATE score="1">débordant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="awash">
+      <CANDIDATE score="1">inondé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="afloat">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01087093">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blank">
+      <CANDIDATE score="0">absolu</CANDIDATE>
+      <CANDIDATE score="0">aveugle</CANDIDATE>
+      <CANDIDATE score="1">blanc</CANDIDATE>
+      <CANDIDATE score="0">déconcerté</CANDIDATE>
+      <CANDIDATE score="0">dérouté</CANDIDATE>
+      <CANDIDATE score="0">inexpressif</CANDIDATE>
+      <CANDIDATE score="0">muet</CANDIDATE>
+      <CANDIDATE score="0">net</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="1">vide</CANDIDATE>
+      <CANDIDATE score="1">vierge</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="clean">
+      <CANDIDATE score="0">clean</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">désintoxiqué</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">net</CANDIDATE>
+      <CANDIDATE score="0">propre</CANDIDATE>
+      <CANDIDATE score="0">pur</CANDIDATE>
+      <CANDIDATE score="1">vierge</CANDIDATE>
+      <CANDIDATE score="0">élégant</CANDIDATE>
+      <CANDIDATE score="0">épuré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="white">
+      <CANDIDATE score="1">blanc</CANDIDATE>
+      <CANDIDATE score="0">livide</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01092142">
+    <ORIGINALDEF/>
+    <CANDIDATES original="malfunctioning"/>
+    <CANDIDATES original="nonfunctional"/>
+  </SYNSET>
+  <SYNSET id="01118568">
+    <ORIGINALDEF/>
+    <CANDIDATES original="geocentric">
+      <CANDIDATE score="1">géocentrique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01134769">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ill-natured">
+      <CANDIDATE score="1">désagréable</CANDIDATE>
+      <CANDIDATE score="1">méchant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01142666">
+    <ORIGINALDEF/>
+    <CANDIDATES original="graceless">
+      <CANDIDATE score="1">gauche</CANDIDATE>
+      <CANDIDATE score="1">inélégant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unpleasing">
+      <CANDIDATE score="1">déplaisant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01144730">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sloping">
+      <CANDIDATE score="0">couché</CANDIDATE>
+      <CANDIDATE score="1">incliné</CANDIDATE>
+      <CANDIDATE score="1">penché</CANDIDATE>
+      <CANDIDATE score="1">pentu</CANDIDATE>
+      <CANDIDATE score="0">tombant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01145422">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bluff">
+      <CANDIDATE score="0">carré</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="1">escarpé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bold">
+      <CANDIDATE score="0">assuré</CANDIDATE>
+      <CANDIDATE score="0">audacieux</CANDIDATE>
+      <CANDIDATE score="0">aventureux</CANDIDATE>
+      <CANDIDATE score="0">effronté</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="0">hardi</CANDIDATE>
+      <CANDIDATE score="0">intrépide</CANDIDATE>
+      <CANDIDATE score="0">osé</CANDIDATE>
+      <CANDIDATE score="0">vaillant</CANDIDATE>
+      <CANDIDATE score="0">vigoureux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sheer">
+      <CANDIDATE score="1">abrupt</CANDIDATE>
+      <CANDIDATE score="0">absolu</CANDIDATE>
+      <CANDIDATE score="1">accore</CANDIDATE>
+      <CANDIDATE score="0">extra-fin</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">même</CANDIDATE>
+      <CANDIDATE score="0">pur</CANDIDATE>
+      <CANDIDATE score="0">satiné</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01145639">
+    <ORIGINALDEF/>
+    <CANDIDATES original="heavy">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="0">chargé</CANDIDATE>
+      <CANDIDATE score="0">costaud</CANDIDATE>
+      <CANDIDATE score="0">couvert</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">empâté</CANDIDATE>
+      <CANDIDATE score="1">fort</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">important</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="0">massif</CANDIDATE>
+      <CANDIDATE score="0">nourri</CANDIDATE>
+      <CANDIDATE score="0">pesant</CANDIDATE>
+      <CANDIDATE score="0">pondéreux</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+      <CANDIDATE score="0">épais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thick">
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">bête</CANDIDATE>
+      <CANDIDATE score="0">charnu</CANDIDATE>
+      <CANDIDATE score="0">fourni</CANDIDATE>
+      <CANDIDATE score="0">visqueux</CANDIDATE>
+      <CANDIDATE score="0">dur</CANDIDATE>
+      <CANDIDATE score="0">borné</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="0">consistant</CANDIDATE>
+      <CANDIDATE score="0">compact</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">touffu</CANDIDATE>
+      <CANDIDATE score="0">catarrheux</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="1">épais</CANDIDATE>
+      <CANDIDATE score="0">pâteux</CANDIDATE>
+      <CANDIDATE score="0">obtus</CANDIDATE>
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">tourte</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01505041">
+    <ORIGINALDEF/>
+    <CANDIDATES original="liquid">
+      <CANDIDATE score="1">clair</CANDIDATE>
+      <CANDIDATE score="0">harmonieux</CANDIDATE>
+      <CANDIDATE score="1">limpide</CANDIDATE>
+      <CANDIDATE score="0">liquide</CANDIDATE>
+      <CANDIDATE score="0">liquidien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01159655">
+    <ORIGINALDEF/>
+    <CANDIDATES original="harmless">
+      <CANDIDATE score="0">anodin</CANDIDATE>
+      <CANDIDATE score="0">bénin</CANDIDATE>
+      <CANDIDATE score="0">innocent</CANDIDATE>
+      <CANDIDATE score="1">inoffensif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01160584">
+    <ORIGINALDEF/>
+    <CANDIDATES original="abusive">
+      <CANDIDATE score="0">abusif</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">injurieux</CANDIDATE>
+      <CANDIDATE score="0">maltraitant</CANDIDATE>
+      <CANDIDATE score="0">mauvais</CANDIDATE>
+      <CANDIDATE score="0">offensant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01192248">
+    <ORIGINALDEF/>
+    <CANDIDATES original="light-footed">
+      <CANDIDATE score="1">aérien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01197386">
+    <ORIGINALDEF/>
+    <CANDIDATES original="reformative">
+      <CANDIDATE score="1">réformateur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="reformatory"/>
+  </SYNSET>
+  <SYNSET id="01202813">
+    <ORIGINALDEF/>
+    <CANDIDATES original="transvestic"/>
+    <CANDIDATES original="transvestite">
+      <CANDIDATE score="1">travesti</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01208492">
+    <ORIGINALDEF/>
+    <CANDIDATES original="down">
+      <CANDIDATE score="0">descendant</CANDIDATE>
+      <CANDIDATE score="0">dépressif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01219938">
+    <ORIGINALDEF/>
+    <CANDIDATES original="away">
+      <CANDIDATE score="0">absent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01228050">
+    <ORIGINALDEF/>
+    <CANDIDATES original="debasing"/>
+    <CANDIDATES original="degrading">
+      <CANDIDATE score="0">abaissant</CANDIDATE>
+      <CANDIDATE score="1">avilissant</CANDIDATE>
+      <CANDIDATE score="1">dégradant</CANDIDATE>
+      <CANDIDATE score="0">déshonorant</CANDIDATE>
+      <CANDIDATE score="0">humiliant</CANDIDATE>
+      <CANDIDATE score="0">rabaissant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01228159">
+    <ORIGINALDEF/>
+    <CANDIDATES original="shabby">
+      <CANDIDATE score="0">craspec</CANDIDATE>
+      <CANDIDATE score="0">glauque</CANDIDATE>
+      <CANDIDATE score="2">incorrect</CANDIDATE>
+      <CANDIDATE score="1">mesquin</CANDIDATE>
+      <CANDIDATE score="1">minable</CANDIDATE>
+      <CANDIDATE score="1">misérable</CANDIDATE>
+      <CANDIDATE score="0">miteux</CANDIDATE>
+      <CANDIDATE score="1">méprisable</CANDIDATE>
+      <CANDIDATE score="0">pauvre</CANDIDATE>
+      <CANDIDATE score="0">râpé</CANDIDATE>
+      <CANDIDATE score="0">usé</CANDIDATE>
+      <CANDIDATE score="0">élimé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01264336">
+    <ORIGINALDEF/>
+    <CANDIDATES original="humorous">
+      <CANDIDATE score="0">amusant</CANDIDATE>
+      <CANDIDATE score="0">amusé</CANDIDATE>
+      <CANDIDATE score="0">facétieux</CANDIDATE>
+      <CANDIDATE score="0">humoriste</CANDIDATE>
+      <CANDIDATE score="1">humoristique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="humourous"/>
+  </SYNSET>
+  <SYNSET id="01274741">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dickey"/>
+    <CANDIDATES original="dicky">
+      <CANDIDATE score="0">patraque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01279183">
+    <ORIGINALDEF/>
+    <CANDIDATES original="in-chief">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01283508">
+    <ORIGINALDEF/>
+    <CANDIDATES original="baronial">
+      <CANDIDATE score="0">baronnial</CANDIDATE>
+      <CANDIDATE score="1">seigneurial</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="imposing">
+      <CANDIDATE score="1">grandiose</CANDIDATE>
+      <CANDIDATE score="1">imposant</CANDIDATE>
+      <CANDIDATE score="1">impressionnant</CANDIDATE>
+      <CANDIDATE score="1">majestueux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="noble">
+      <CANDIDATE score="1">auguste</CANDIDATE>
+      <CANDIDATE score="1">fier</CANDIDATE>
+      <CANDIDATE score="1">grand</CANDIDATE>
+      <CANDIDATE score="0">généreux</CANDIDATE>
+      <CANDIDATE score="0">haut</CANDIDATE>
+      <CANDIDATE score="1">imposant</CANDIDATE>
+      <CANDIDATE score="0">magnanime</CANDIDATE>
+      <CANDIDATE score="1">majestueux</CANDIDATE>
+      <CANDIDATE score="0">noble</CANDIDATE>
+      <CANDIDATE score="0">précieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stately">
+      <CANDIDATE score="1">imposant</CANDIDATE>
+      <CANDIDATE score="1">majestueux</CANDIDATE>
+      <CANDIDATE score="1">seigneurial</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01291391">
+    <ORIGINALDEF/>
+    <CANDIDATES original="outboard">
+      <CANDIDATE score="1">hors-bord</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01313346">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unoccupied">
+      <CANDIDATE score="0">désœuvré</CANDIDATE>
+      <CANDIDATE score="1">inhabité</CANDIDATE>
+      <CANDIDATE score="1">inoccupé</CANDIDATE>
+      <CANDIDATE score="0">libre</CANDIDATE>
+      <CANDIDATE score="1">vacant</CANDIDATE>
+      <CANDIDATE score="0">vide</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="untenanted">
+      <CANDIDATE score="1">inoccupé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01316808">
+    <ORIGINALDEF/>
+    <CANDIDATES original="smothered"/>
+    <CANDIDATES original="stifled"/>
+    <CANDIDATES original="strangled">
+      <CANDIDATE score="1">réprimé</CANDIDATE>
+      <CANDIDATE score="1">étouffé</CANDIDATE>
+      <CANDIDATE score="1">étranglé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="suppressed">
+      <CANDIDATE score="1">contenu</CANDIDATE>
+      <CANDIDATE score="0">rentré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="swelling">
+      <CANDIDATE score="0">galbé</CANDIDATE>
+      <CANDIDATE score="1">gonflé</CANDIDATE>
+      <CANDIDATE score="0">grossissant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01333886">
+    <ORIGINALDEF/>
+    <CANDIDATES original="anti-intellectual"/>
+    <CANDIDATES original="philistine">
+      <CANDIDATE score="1">béotien</CANDIDATE>
+      <CANDIDATE score="1">philistin</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01342237">
+    <ORIGINALDEF/>
+    <CANDIDATES original="interested">
+      <CANDIDATE score="1">curieux</CANDIDATE>
+      <CANDIDATE score="1">intéressé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01348835">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inner">
+      <CANDIDATE score="0">caché</CANDIDATE>
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="1">intime</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+      <CANDIDATE score="1">profond</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="internal">
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="0">intestin</CANDIDATE>
+      <CANDIDATE score="1">intrinsèque</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="intimate">
+      <CANDIDATE score="0">familier</CANDIDATE>
+      <CANDIDATE score="1">intime</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+      <CANDIDATE score="0">étroit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01355966">
+    <ORIGINALDEF/>
+    <CANDIDATES original="invasive">
+      <CANDIDATE score="1">agressif</CANDIDATE>
+      <CANDIDATE score="0">invasif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01965512">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unasked"/>
+    <CANDIDATES original="unbid"/>
+    <CANDIDATES original="unbidden"/>
+    <CANDIDATES original="unsolicited">
+      <CANDIDATE score="0">non_sollicité</CANDIDATE>
+      <CANDIDATE score="0">spontané</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01366718">
+    <ORIGINALDEF/>
+    <CANDIDATES original="joyous">
+      <CANDIDATE score="1">joyeux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00125068">
+    <ORIGINALDEF/>
+    <CANDIDATES original="onshore"/>
+  </SYNSET>
+  <SYNSET id="01381473">
+    <ORIGINALDEF/>
+    <CANDIDATES original="oversea"/>
+    <CANDIDATES original="overseas">
+      <CANDIDATE score="0">extérieur</CANDIDATE>
+      <CANDIDATE score="1">outre-mer</CANDIDATE>
+      <CANDIDATE score="0">étranger</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01383857">
+    <ORIGINALDEF/>
+    <CANDIDATES original="biggish"/>
+    <CANDIDATES original="largish"/>
+  </SYNSET>
+  <SYNSET id="01385773">
+    <ORIGINALDEF/>
+    <CANDIDATES original="elephantine">
+      <CANDIDATE score="0">gauche</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="1">éléphantesque</CANDIDATE>
+      <CANDIDATE score="0">éléphantin</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gargantuan">
+      <CANDIDATE score="1">gargantuesque</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="giant">
+      <CANDIDATE score="1">gigantesque</CANDIDATE>
+      <CANDIDATE score="0">géant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="jumbo"/>
+  </SYNSET>
+  <SYNSET id="01400237">
+    <ORIGINALDEF/>
+    <CANDIDATES original="downwind"/>
+    <CANDIDATES original="lee">
+      <CANDIDATE score="1">sous_le_vent</CANDIDATE>
+      <CANDIDATE score="0">côté_sous_le_vent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01410222">
+    <ORIGINALDEF/>
+    <CANDIDATES original="suchlike"/>
+  </SYNSET>
+  <SYNSET id="01413247">
+    <ORIGINALDEF/>
+    <CANDIDATES original="likely">
+      <CANDIDATE score="1">plausible</CANDIDATE>
+      <CANDIDATE score="1">probable</CANDIDATE>
+      <CANDIDATE score="1">vraisemblable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="plausible">
+      <CANDIDATE score="0">convaincant</CANDIDATE>
+      <CANDIDATE score="1">plausible</CANDIDATE>
+      <CANDIDATE score="1">vraisemblable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="probable">
+      <CANDIDATE score="1">probable</CANDIDATE>
+      <CANDIDATE score="1">vraisemblable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01417105">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unilateral">
+      <CANDIDATE score="1">unilatéral</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unilateralist">
+      <CANDIDATE score="1">unilatéral</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="catalogued"/>
+  </SYNSET>
+  <SYNSET id="01424353">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unliveried"/>
+  </SYNSET>
+  <SYNSET id="01428972">
+    <ORIGINALDEF/>
+    <CANDIDATES original="guided">
+      <CANDIDATE score="1">téléguidé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01430009">
+    <ORIGINALDEF/>
+    <CANDIDATES original="legless">
+      <CANDIDATE score="0">bourré</CANDIDATE>
+      <CANDIDATE score="0">rond</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01468994">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lyric">
+      <CANDIDATE score="1">lyrique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01481513">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unbranded">
+      <CANDIDATE score="0">générique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01482551">
+    <ORIGINALDEF/>
+    <CANDIDATES original="divorced">
+      <CANDIDATE score="1">divorcé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01486960">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mated"/>
+    <CANDIDATES original="paired"/>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="high-season"/>
+    <CANDIDATES original="peak-seaason"/>
+  </SYNSET>
+  <SYNSET id="01502195">
+    <ORIGINALDEF/>
+    <CANDIDATES original="melodious">
+      <CANDIDATE score="1">mélodieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tuneful">
+      <CANDIDATE score="0">chantant</CANDIDATE>
+      <CANDIDATE score="1">mélodieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00506299">
+    <ORIGINALDEF/>
+    <CANDIDATES original="compassionate">
+      <CANDIDATE score="1">compatissant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01523450">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mechanised"/>
+    <CANDIDATES original="mechanized">
+      <CANDIDATE score="1">motorisé</CANDIDATE>
+      <CANDIDATE score="0">mécanographique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="motorized">
+      <CANDIDATE score="0">automoteur</CANDIDATE>
+      <CANDIDATE score="1">motorisé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01530076">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hemimetabolic"/>
+    <CANDIDATES original="hemimetabolous"/>
+    <CANDIDATES original="hemimetamorphic"/>
+    <CANDIDATES original="hemimetamorphous"/>
+  </SYNSET>
+  <SYNSET id="01537628">
+    <ORIGINALDEF/>
+    <CANDIDATES original="old-world">
+      <CANDIDATE score="0">démodé</CANDIDATE>
+      <CANDIDATE score="1">désuet</CANDIDATE>
+      <CANDIDATE score="1">suranné</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01539225">
+    <ORIGINALDEF/>
+    <CANDIDATES original="modest">
+      <CANDIDATE score="0">décent</CANDIDATE>
+      <CANDIDATE score="0">effacé</CANDIDATE>
+      <CANDIDATE score="0">minime</CANDIDATE>
+      <CANDIDATE score="1">modeste</CANDIDATE>
+      <CANDIDATE score="0">modique</CANDIDATE>
+      <CANDIDATE score="0">pudique</CANDIDATE>
+      <CANDIDATE score="0">réservé</CANDIDATE>
+      <CANDIDATE score="0">simple</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01541156">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unadapted">
+      <CANDIDATE score="1">inadapté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00408284">
+    <ORIGINALDEF/>
+    <CANDIDATES original="neutral">
+      <CANDIDATE score="0">incolore</CANDIDATE>
+      <CANDIDATE score="0">neutraliste</CANDIDATE>
+      <CANDIDATE score="1">neutre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01551377">
+    <ORIGINALDEF/>
+    <CANDIDATES original="high-principled"/>
+  </SYNSET>
+  <SYNSET id="01551633">
+    <ORIGINALDEF/>
+    <CANDIDATES original="many">
+      <CANDIDATE score="0">multiple</CANDIDATE>
+      <CANDIDATE score="0">nombreux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01556913">
+    <ORIGINALDEF/>
+    <CANDIDATES original="less">
+      <CANDIDATE score="0">moindre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01559270">
+    <ORIGINALDEF/>
+    <CANDIDATES original="motiveless">
+      <CANDIDATE score="1">gratuit</CANDIDATE>
+      <CANDIDATE score="1">immotivé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unprovoked"/>
+    <CANDIDATES original="wanton">
+      <CANDIDATE score="0">absurde</CANDIDATE>
+      <CANDIDATE score="0">capricieux</CANDIDATE>
+      <CANDIDATE score="0">dévergondé</CANDIDATE>
+      <CANDIDATE score="0">exubérant</CANDIDATE>
+      <CANDIDATE score="1">gratuit</CANDIDATE>
+      <CANDIDATE score="0">impudique</CANDIDATE>
+      <CANDIDATE score="1">injustifié</CANDIDATE>
+      <CANDIDATE score="0">libertin</CANDIDATE>
+      <CANDIDATE score="0">luxuriant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01560513">
+    <ORIGINALDEF/>
+    <CANDIDATES original="moving">
+      <CANDIDATE score="0">animé</CANDIDATE>
+      <CANDIDATE score="1">attendrissant</CANDIDATE>
+      <CANDIDATE score="0">mobile</CANDIDATE>
+      <CANDIDATE score="0">moteur</CANDIDATE>
+      <CANDIDATE score="0">mouvant</CANDIDATE>
+      <CANDIDATE score="1">pathétique</CANDIDATE>
+      <CANDIDATE score="0">roulant</CANDIDATE>
+      <CANDIDATE score="1">touchant</CANDIDATE>
+      <CANDIDATE score="1">émouvant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01565751">
+    <ORIGINALDEF/>
+    <CANDIDATES original="still">
+      <CANDIDATE score="0">calme</CANDIDATE>
+      <CANDIDATE score="0">dormant</CANDIDATE>
+      <CANDIDATE score="0">immobile</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">plat</CANDIDATE>
+      <CANDIDATE score="0">silencieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01568092">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nationalist">
+      <CANDIDATE score="1">nationaliste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nationalistic">
+      <CANDIDATE score="1">nationaliste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01590044">
+    <ORIGINALDEF/>
+    <CANDIDATES original="currish"/>
+  </SYNSET>
+  <SYNSET id="01601763">
+    <ORIGINALDEF/>
+    <CANDIDATES original="northeast">
+      <CANDIDATE score="1">nord-est</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="northeasterly"/>
+  </SYNSET>
+  <SYNSET id="01605081">
+    <ORIGINALDEF/>
+    <CANDIDATES original="southern">
+      <CANDIDATE score="1">austral</CANDIDATE>
+      <CANDIDATE score="1">méridional</CANDIDATE>
+      <CANDIDATE score="0">sudiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01607120">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gray">
+      <CANDIDATE score="0">gris</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="grey">
+      <CANDIDATE score="0">blême</CANDIDATE>
+      <CANDIDATE score="0">gris</CANDIDATE>
+      <CANDIDATE score="0">grisonnant</CANDIDATE>
+      <CANDIDATE score="0">morne</CANDIDATE>
+      <CANDIDATE score="0">sombre</CANDIDATE>
+      <CANDIDATE score="0">terne</CANDIDATE>
+      <CANDIDATE score="0">triste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01608127">
+    <ORIGINALDEF/>
+    <CANDIDATES original="detected"/>
+  </SYNSET>
+  <SYNSET id="01612053">
+    <ORIGINALDEF/>
+    <CANDIDATES original="obedient">
+      <CANDIDATE score="1">docile</CANDIDATE>
+      <CANDIDATE score="1">obéissant</CANDIDATE>
+      <CANDIDATE score="1">soumis</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01623088">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unclogged"/>
+  </SYNSET>
+  <SYNSET id="01625492">
+    <ORIGINALDEF/>
+    <CANDIDATES original="charnel"/>
+    <CANDIDATES original="ghastly">
+      <CANDIDATE score="0">affreux</CANDIDATE>
+      <CANDIDATE score="0">atroce</CANDIDATE>
+      <CANDIDATE score="0">blafard</CANDIDATE>
+      <CANDIDATE score="0">blême</CANDIDATE>
+      <CANDIDATE score="0">effrayant</CANDIDATE>
+      <CANDIDATE score="0">hideux</CANDIDATE>
+      <CANDIDATE score="0">horrible</CANDIDATE>
+      <CANDIDATE score="0">livide</CANDIDATE>
+      <CANDIDATE score="0">moche</CANDIDATE>
+      <CANDIDATE score="0">mortel</CANDIDATE>
+      <CANDIDATE score="0">repoussant</CANDIDATE>
+      <CANDIDATE score="0">répugnant</CANDIDATE>
+      <CANDIDATE score="0">spectral</CANDIDATE>
+      <CANDIDATE score="0">terrible</CANDIDATE>
+      <CANDIDATE score="0">épouvantable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sepulchral">
+      <CANDIDATE score="1">funèbre</CANDIDATE>
+      <CANDIDATE score="1">sépulcral</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00489491">
+    <ORIGINALDEF/>
+    <CANDIDATES original="habitual">
+      <CANDIDATE score="1">accoutumé</CANDIDATE>
+      <CANDIDATE score="1">habituel</CANDIDATE>
+      <CANDIDATE score="0">invétéré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="customary">
+      <CANDIDATE score="1">coutumier</CANDIDATE>
+      <CANDIDATE score="0">coutume</CANDIDATE>
+      <CANDIDATE score="1">habituel</CANDIDATE>
+      <CANDIDATE score="0">ordinaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wonted">
+      <CANDIDATE score="1">coutumier</CANDIDATE>
+      <CANDIDATE score="1">habituel</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="accustomed">
+      <CANDIDATE score="1">accoutumé</CANDIDATE>
+      <CANDIDATE score="1">coutumier</CANDIDATE>
+      <CANDIDATE score="0">familier</CANDIDATE>
+      <CANDIDATE score="0">habitué</CANDIDATE>
+      <CANDIDATE score="1">habituel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01638053">
+    <ORIGINALDEF/>
+    <CANDIDATES original="onstage"/>
+  </SYNSET>
+  <SYNSET id="01639720">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hand-down"/>
+    <CANDIDATES original="hand-me-down"/>
+  </SYNSET>
+  <SYNSET id="01642657">
+    <ORIGINALDEF/>
+    <CANDIDATES original="radical">
+      <CANDIDATE score="0">maximaliste</CANDIDATE>
+      <CANDIDATE score="1">radical</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="revolutionary">
+      <CANDIDATE score="1">révolutionnaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01646021">
+    <ORIGINALDEF/>
+    <CANDIDATES original="middle-aged">
+      <CANDIDATE score="1">mûr</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01649469">
+    <ORIGINALDEF/>
+    <CANDIDATES original="puppyish"/>
+    <CANDIDATES original="puppylike"/>
+  </SYNSET>
+  <SYNSET id="01655972">
+    <ORIGINALDEF/>
+    <CANDIDATES original="double-spaced"/>
+  </SYNSET>
+  <SYNSET id="01671509">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unformed">
+      <CANDIDATE score="1">informe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01698000">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thickspread"/>
+  </SYNSET>
+  <SYNSET id="01714314">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unoiled"/>
+  </SYNSET>
+  <SYNSET id="01723856">
+    <ORIGINALDEF/>
+    <CANDIDATES original="indifferent">
+      <CANDIDATE score="1">impartial</CANDIDATE>
+      <CANDIDATE score="0">indifférent</CANDIDATE>
+      <CANDIDATE score="0">médiocre</CANDIDATE>
+      <CANDIDATE score="1">neutre</CANDIDATE>
+      <CANDIDATE score="0">quelconque</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unbiased">
+      <CANDIDATE score="1">impartial</CANDIDATE>
+      <CANDIDATE score="1">objectif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unbiassed">
+      <CANDIDATE score="1">impartial</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01731108">
+    <ORIGINALDEF/>
+    <CANDIDATES original="then">
+      <CANDIDATE score="5">d'alors</CANDIDATE>
+      <CANDIDATE score="0">là</CANDIDATE>
+      <CANDIDATE score="0">puis</CANDIDATE>
+      <CANDIDATE score="0">ensuite</CANDIDATE>
+      <CANDIDATE score="0">lors</CANDIDATE>
+      <CANDIDATE score="5">de_l'époque</CANDIDATE>
+      <CANDIDATE score="0">donc</CANDIDATE>
+      <CANDIDATE score="0">à_l'époque</CANDIDATE>
+      <CANDIDATE score="0">et_puis</CANDIDATE>
+      <CANDIDATE score="0">d'ailleurs</CANDIDATE>
+      <CANDIDATE score="0">alors</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01733588">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hatched"/>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="foaled"/>
+  </SYNSET>
+  <SYNSET id="01743909">
+    <ORIGINALDEF/>
+    <CANDIDATES original="impenitent">
+      <CANDIDATE score="1">impénitent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unremorseful"/>
+    <CANDIDATES original="unrepentant">
+      <CANDIDATE score="1">impénitent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01755627">
+    <ORIGINALDEF/>
+    <CANDIDATES original="impermanent">
+      <CANDIDATE score="1">fugitif</CANDIDATE>
+      <CANDIDATE score="1">passager</CANDIDATE>
+      <CANDIDATE score="1">transitoire</CANDIDATE>
+      <CANDIDATE score="1">éphémère</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="temporary">
+      <CANDIDATE score="0">improvisé</CANDIDATE>
+      <CANDIDATE score="0">intérimaire</CANDIDATE>
+      <CANDIDATE score="1">passager</CANDIDATE>
+      <CANDIDATE score="1">provisoire</CANDIDATE>
+      <CANDIDATE score="0">suppléant</CANDIDATE>
+      <CANDIDATE score="1">temporaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01758790">
+    <ORIGINALDEF/>
+    <CANDIDATES original="deciduous">
+      <CANDIDATE score="0">caduc</CANDIDATE>
+      <CANDIDATE score="0">caducifolié</CANDIDATE>
+      <CANDIDATE score="2">décidu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01772032">
+    <ORIGINALDEF/>
+    <CANDIDATES original="permeable">
+      <CANDIDATE score="1">perméable</CANDIDATE>
+      <CANDIDATE score="0">pénétrable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01774091">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fast">
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">ferme</CANDIDATE>
+      <CANDIDATE score="0">fixe</CANDIDATE>
+      <CANDIDATE score="1">inaltérable</CANDIDATE>
+      <CANDIDATE score="0">léger</CANDIDATE>
+      <CANDIDATE score="0">précipité</CANDIDATE>
+      <CANDIDATE score="0">rapide</CANDIDATE>
+      <CANDIDATE score="0">roulant</CANDIDATE>
+      <CANDIDATE score="1">résistant</CANDIDATE>
+      <CANDIDATE score="0">solide</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01776845">
+    <ORIGINALDEF/>
+    <CANDIDATES original="self-sealing">
+      <CANDIDATE score="0">auto-adhésif</CANDIDATE>
+      <CANDIDATE score="0">autocollant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01779792">
+    <ORIGINALDEF/>
+    <CANDIDATES original="somatogenetic"/>
+    <CANDIDATES original="somatogenic">
+      <CANDIDATE score="1">somatogène</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01788994">
+    <ORIGINALDEF/>
+    <CANDIDATES original="laced"/>
+  </SYNSET>
+  <SYNSET id="01790807">
+    <ORIGINALDEF/>
+    <CANDIDATES original="striped">
+      <CANDIDATE score="1">rayé</CANDIDATE>
+      <CANDIDATE score="1">tigré</CANDIDATE>
+      <CANDIDATE score="1">zébré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stripy">
+      <CANDIDATE score="1">rayé</CANDIDATE>
+      <CANDIDATE score="1">zébré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01798828">
+    <ORIGINALDEF/>
+    <CANDIDATES original="deliberate">
+      <CANDIDATE score="0">avisé</CANDIDATE>
+      <CANDIDATE score="0">circonspect</CANDIDATE>
+      <CANDIDATE score="0">décidé</CANDIDATE>
+      <CANDIDATE score="1">délibéré</CANDIDATE>
+      <CANDIDATE score="1">intentionnel</CANDIDATE>
+      <CANDIDATE score="0">mesuré</CANDIDATE>
+      <CANDIDATE score="0">posé</CANDIDATE>
+      <CANDIDATE score="0">réfléchi</CANDIDATE>
+      <CANDIDATE score="0">voulu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="studied">
+      <CANDIDATE score="0">affecté</CANDIDATE>
+      <CANDIDATE score="0">calculé</CANDIDATE>
+      <CANDIDATE score="0">composé</CANDIDATE>
+      <CANDIDATE score="1">délibéré</CANDIDATE>
+      <CANDIDATE score="0">recherché</CANDIDATE>
+      <CANDIDATE score="0">travaillé</CANDIDATE>
+      <CANDIDATE score="1">voulu</CANDIDATE>
+      <CANDIDATE score="0">étudié</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01802165">
+    <ORIGINALDEF/>
+    <CANDIDATES original="acerb"/>
+    <CANDIDATES original="acerbic">
+      <CANDIDATE score="1">acerbe</CANDIDATE>
+      <CANDIDATE score="1">caustique</CANDIDATE>
+      <CANDIDATE score="1">âpre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="acid">
+      <CANDIDATE score="1">acerbe</CANDIDATE>
+      <CANDIDATE score="1">acide</CANDIDATE>
+      <CANDIDATE score="0">acidulé</CANDIDATE>
+      <CANDIDATE score="1">aigre</CANDIDATE>
+      <CANDIDATE score="1">mordant</CANDIDATE>
+      <CANDIDATE score="1">revêche</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="acrid">
+      <CANDIDATE score="1">acerbe</CANDIDATE>
+      <CANDIDATE score="1">mordant</CANDIDATE>
+      <CANDIDATE score="1">piquant</CANDIDATE>
+      <CANDIDATE score="0">pointu</CANDIDATE>
+      <CANDIDATE score="1">âcre</CANDIDATE>
+      <CANDIDATE score="1">âpre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bitter">
+      <CANDIDATE score="1">acerbe</CANDIDATE>
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="1">aigre</CANDIDATE>
+      <CANDIDATE score="2">aigri</CANDIDATE>
+      <CANDIDATE score="2">amer</CANDIDATE>
+      <CANDIDATE score="1">cinglant</CANDIDATE>
+      <CANDIDATE score="1">cruel</CANDIDATE>
+      <CANDIDATE score="1">cuisant</CANDIDATE>
+      <CANDIDATE score="2">dur</CANDIDATE>
+      <CANDIDATE score="2">farouche</CANDIDATE>
+      <CANDIDATE score="0">glacial</CANDIDATE>
+      <CANDIDATE score="0">perçant</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">pénétrant</CANDIDATE>
+      <CANDIDATE score="0">rigoureux</CANDIDATE>
+      <CANDIDATE score="2">rude</CANDIDATE>
+      <CANDIDATE score="0">vif</CANDIDATE>
+      <CANDIDATE score="2">violent</CANDIDATE>
+      <CANDIDATE score="1">âpre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="blistering">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="1">cinglant</CANDIDATE>
+      <CANDIDATE score="1">impitoyable</CANDIDATE>
+      <CANDIDATE score="0">torride</CANDIDATE>
+      <CANDIDATE score="0">virulent</CANDIDATE>
+      <CANDIDATE score="0">étouffant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="caustic">
+      <CANDIDATE score="1">acerbe</CANDIDATE>
+      <CANDIDATE score="1">caustique</CANDIDATE>
+      <CANDIDATE score="1">corrosif</CANDIDATE>
+      <CANDIDATE score="1">cuisant</CANDIDATE>
+      <CANDIDATE score="1">décapant</CANDIDATE>
+      <CANDIDATE score="1">mordant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sulfurous"/>
+    <CANDIDATES original="sulphurous">
+      <CANDIDATE score="1">sulfureux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="venomous">
+      <CANDIDATE score="1">fielleux</CANDIDATE>
+      <CANDIDATE score="1">venimeux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="virulent">
+      <CANDIDATE score="0">criard</CANDIDATE>
+      <CANDIDATE score="1">venimeux</CANDIDATE>
+      <CANDIDATE score="2">violent</CANDIDATE>
+      <CANDIDATE score="0">virulent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="vitriolic">
+      <CANDIDATE score="1">mordant</CANDIDATE>
+      <CANDIDATE score="1">venimeux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01819692">
+    <ORIGINALDEF/>
+    <CANDIDATES original="positive">
+      <CANDIDATE score="0">affirmatif</CANDIDATE>
+      <CANDIDATE score="0">catégorique</CANDIDATE>
+      <CANDIDATE score="0">certain</CANDIDATE>
+      <CANDIDATE score="0">concret</CANDIDATE>
+      <CANDIDATE score="0">desmodromique</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">effectif</CANDIDATE>
+      <CANDIDATE score="0">excédentaire</CANDIDATE>
+      <CANDIDATE score="0">favorable</CANDIDATE>
+      <CANDIDATE score="0">formel</CANDIDATE>
+      <CANDIDATE score="0">indéniable</CANDIDATE>
+      <CANDIDATE score="0">irréfutable</CANDIDATE>
+      <CANDIDATE score="1">positif</CANDIDATE>
+      <CANDIDATE score="0">réel</CANDIDATE>
+      <CANDIDATE score="0">sûr</CANDIDATE>
+      <CANDIDATE score="0">tangible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01821266">
+    <ORIGINALDEF/>
+    <CANDIDATES original="possible">
+      <CANDIDATE score="0">acceptable</CANDIDATE>
+      <CANDIDATE score="0">exécutable</CANDIDATE>
+      <CANDIDATE score="1">possible</CANDIDATE>
+      <CANDIDATE score="0">éventuel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01827535">
+    <ORIGINALDEF/>
+    <CANDIDATES original="powerless">
+      <CANDIDATE score="1">impuissant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="weak">
+      <CANDIDATE score="0">affaibli</CANDIDATE>
+      <CANDIDATE score="0">avare</CANDIDATE>
+      <CANDIDATE score="0">boiteux</CANDIDATE>
+      <CANDIDATE score="0">creux</CANDIDATE>
+      <CANDIDATE score="0">débile</CANDIDATE>
+      <CANDIDATE score="0">débonnaire</CANDIDATE>
+      <CANDIDATE score="0">défaillant</CANDIDATE>
+      <CANDIDATE score="0">déficient</CANDIDATE>
+      <CANDIDATE score="0">faiblard</CANDIDATE>
+      <CANDIDATE score="1">faible</CANDIDATE>
+      <CANDIDATE score="0">flasque</CANDIDATE>
+      <CANDIDATE score="0">inconsistant</CANDIDATE>
+      <CANDIDATE score="0">incontinent</CANDIDATE>
+      <CANDIDATE score="0">lâche</CANDIDATE>
+      <CANDIDATE score="0">léger</CANDIDATE>
+      <CANDIDATE score="0">maladif</CANDIDATE>
+      <CANDIDATE score="0">mince</CANDIDATE>
+      <CANDIDATE score="0">mou</CANDIDATE>
+      <CANDIDATE score="0">médiocre</CANDIDATE>
+      <CANDIDATE score="0">pauvre</CANDIDATE>
+      <CANDIDATE score="0">pâle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01836025">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unimaginative">
+      <CANDIDATE score="0">plat</CANDIDATE>
+      <CANDIDATE score="0">scolaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01836350">
+    <ORIGINALDEF/>
+    <CANDIDATES original="impractical">
+      <CANDIDATE score="0">incommode</CANDIDATE>
+      <CANDIDATE score="0">inexécutable</CANDIDATE>
+      <CANDIDATE score="0">malcommode</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01337939">
+    <ORIGINALDEF/>
+    <CANDIDATES original="calculated">
+      <CANDIDATE score="1">délibéré</CANDIDATE>
+      <CANDIDATE score="1">prémédité</CANDIDATE>
+      <CANDIDATE score="0">réfléchi</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="deliberate">
+      <CANDIDATE score="0">avisé</CANDIDATE>
+      <CANDIDATE score="0">circonspect</CANDIDATE>
+      <CANDIDATE score="0">décidé</CANDIDATE>
+      <CANDIDATE score="1">délibéré</CANDIDATE>
+      <CANDIDATE score="0">intentionnel</CANDIDATE>
+      <CANDIDATE score="1">mesuré</CANDIDATE>
+      <CANDIDATE score="0">posé</CANDIDATE>
+      <CANDIDATE score="0">réfléchi</CANDIDATE>
+      <CANDIDATE score="0">voulu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="measured">
+      <CANDIDATE score="0">avisé</CANDIDATE>
+      <CANDIDATE score="0">circonspect</CANDIDATE>
+      <CANDIDATE score="1">mesuré</CANDIDATE>
+      <CANDIDATE score="0">modéré</CANDIDATE>
+      <CANDIDATE score="0">posé</CANDIDATE>
+      <CANDIDATE score="0">rythmique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01848056">
+    <ORIGINALDEF/>
+    <CANDIDATES original="introuvable"/>
+  </SYNSET>
+  <SYNSET id="01851795">
+    <ORIGINALDEF/>
+    <CANDIDATES original="honest">
+      <CANDIDATE score="0">brave</CANDIDATE>
+      <CANDIDATE score="0">droit</CANDIDATE>
+      <CANDIDATE score="0">estimable</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="1">honnête</CANDIDATE>
+      <CANDIDATE score="0">intègre</CANDIDATE>
+      <CANDIDATE score="0">loyal</CANDIDATE>
+      <CANDIDATE score="0">ouvert</CANDIDATE>
+      <CANDIDATE score="0">probe</CANDIDATE>
+      <CANDIDATE score="0">propre</CANDIDATE>
+      <CANDIDATE score="0">réglo</CANDIDATE>
+      <CANDIDATE score="0">sincère</CANDIDATE>
+      <CANDIDATE score="0">vaillant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01877182">
+    <ORIGINALDEF/>
+    <CANDIDATES original="atavistic">
+      <CANDIDATE score="1">atavique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="throwback">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01888284">
+    <ORIGINALDEF/>
+    <CANDIDATES original="evasive">
+      <CANDIDATE score="0">fuyant</CANDIDATE>
+      <CANDIDATE score="0">évasif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01896299">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thriftless">
+      <CANDIDATE score="0">dépensier</CANDIDATE>
+      <CANDIDATE score="1">imprévoyant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01900630">
+    <ORIGINALDEF/>
+    <CANDIDATES original="on_time">
+      <CANDIDATE score="1">exact</CANDIDATE>
+      <CANDIDATE score="1">ponctuel</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="prompt">
+      <CANDIDATE score="1">diligent</CANDIDATE>
+      <CANDIDATE score="1">immédiat</CANDIDATE>
+      <CANDIDATE score="1">ponctuel</CANDIDATE>
+      <CANDIDATE score="1">prompt</CANDIDATE>
+      <CANDIDATE score="1">rapide</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01918464">
+    <ORIGINALDEF/>
+    <CANDIDATES original="acknowledged">
+      <CANDIDATE score="1">notoire</CANDIDATE>
+      <CANDIDATE score="1">reconnu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01919428">
+    <ORIGINALDEF/>
+    <CANDIDATES original="silent">
+      <CANDIDATE score="1">muet</CANDIDATE>
+      <CANDIDATE score="1">silencieux</CANDIDATE>
+      <CANDIDATE score="0">sourd</CANDIDATE>
+      <CANDIDATE score="0">taciturne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="soundless">
+      <CANDIDATE score="1">silencieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="still">
+      <CANDIDATE score="0">calme</CANDIDATE>
+      <CANDIDATE score="0">dormant</CANDIDATE>
+      <CANDIDATE score="0">immobile</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">plat</CANDIDATE>
+      <CANDIDATE score="1">silencieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01923720">
+    <ORIGINALDEF/>
+    <CANDIDATES original="disruptive">
+      <CANDIDATE score="0">disruptif</CANDIDATE>
+      <CANDIDATE score="0">perturbateur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="riotous">
+      <CANDIDATE score="1">déchaîné</CANDIDATE>
+      <CANDIDATE score="0">délirant</CANDIDATE>
+      <CANDIDATE score="0">séditieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="troubled">
+      <CANDIDATE score="1">agité</CANDIDATE>
+      <CANDIDATE score="0">chargé</CANDIDATE>
+      <CANDIDATE score="0">complexé</CANDIDATE>
+      <CANDIDATE score="0">inquiet</CANDIDATE>
+      <CANDIDATE score="0">orageux</CANDIDATE>
+      <CANDIDATE score="0">préoccupé</CANDIDATE>
+      <CANDIDATE score="1">tourmenté</CANDIDATE>
+      <CANDIDATE score="1">trouble</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tumultuous">
+      <CANDIDATE score="0">débordant</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">frénétique</CANDIDATE>
+      <CANDIDATE score="1">houleux</CANDIDATE>
+      <CANDIDATE score="0">torrentueux</CANDIDATE>
+      <CANDIDATE score="1">tumultueux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="turbulent">
+      <CANDIDATE score="1">agité</CANDIDATE>
+      <CANDIDATE score="0">endiablé</CANDIDATE>
+      <CANDIDATE score="1">houleux</CANDIDATE>
+      <CANDIDATE score="0">inquiet</CANDIDATE>
+      <CANDIDATE score="1">mouvementé</CANDIDATE>
+      <CANDIDATE score="0">orageux</CANDIDATE>
+      <CANDIDATE score="1">tempétueux</CANDIDATE>
+      <CANDIDATE score="1">tourmenté</CANDIDATE>
+      <CANDIDATE score="1">tumultueux</CANDIDATE>
+      <CANDIDATE score="0">turbulent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01932902">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unripe">
+      <CANDIDATE score="1">prématuré</CANDIDATE>
+      <CANDIDATE score="0">vert</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01935744">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fabled">
+      <CANDIDATE score="1">fabuleux</CANDIDATE>
+      <CANDIDATE score="1">légendaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="legendary">
+      <CANDIDATE score="1">fabuleux</CANDIDATE>
+      <CANDIDATE score="1">légendaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="clarified">
+      <CANDIDATE score="1">clarifié</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01959918">
+    <ORIGINALDEF/>
+    <CANDIDATES original="official">
+      <CANDIDATE score="0">employé</CANDIDATE>
+      <CANDIDATE score="0">légal</CANDIDATE>
+      <CANDIDATE score="0">officiel</CANDIDATE>
+      <CANDIDATE score="0">permanent</CANDIDATE>
+      <CANDIDATE score="0">préposé</CANDIDATE>
+      <CANDIDATE score="0">responsable</CANDIDATE>
+      <CANDIDATE score="1">réglementaire</CANDIDATE>
+      <CANDIDATE score="0">régulier</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="prescribed"/>
+  </SYNSET>
+  <SYNSET id="00543603">
+    <ORIGINALDEF/>
+    <CANDIDATES original="concerned">
+      <CANDIDATE score="0">affecté</CANDIDATE>
+      <CANDIDATE score="0">compétent</CANDIDATE>
+      <CANDIDATE score="0">inquiet</CANDIDATE>
+      <CANDIDATE score="0">intéressé</CANDIDATE>
+      <CANDIDATE score="0">préoccupé</CANDIDATE>
+      <CANDIDATE score="0">soucieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01987646">
+    <ORIGINALDEF/>
+    <CANDIDATES original="aloof">
+      <CANDIDATE score="1">distant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="distant">
+      <CANDIDATE score="1">distant</CANDIDATE>
+      <CANDIDATE score="0">distrait</CANDIDATE>
+      <CANDIDATE score="0">froid</CANDIDATE>
+      <CANDIDATE score="1">lointain</CANDIDATE>
+      <CANDIDATE score="0">reculé</CANDIDATE>
+      <CANDIDATE score="0">vague</CANDIDATE>
+      <CANDIDATE score="0">éloigné</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="upstage">
+      <CANDIDATE score="0">crâneur</CANDIDATE>
+      <CANDIDATE score="1">hautain</CANDIDATE>
+      <CANDIDATE score="0">prétentieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01992418">
+    <ORIGINALDEF/>
+    <CANDIDATES original="discouraged"/>
+  </SYNSET>
+  <SYNSET id="01997221">
+    <ORIGINALDEF/>
+    <CANDIDATES original="answerable">
+      <CANDIDATE score="1">responsable</CANDIDATE>
+      <CANDIDATE score="0">réfutable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01999306">
+    <ORIGINALDEF/>
+    <CANDIDATES original="responsive">
+      <CANDIDATE score="0">nerveux</CANDIDATE>
+      <CANDIDATE score="1">réceptif</CANDIDATE>
+      <CANDIDATE score="1">sensible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01999766">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unresponsive">
+      <CANDIDATE score="0">gelé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02002580">
+    <ORIGINALDEF/>
+    <CANDIDATES original="closed">
+      <CANDIDATE score="0">barré</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">clos</CANDIDATE>
+      <CANDIDATE score="0">couvert</CANDIDATE>
+      <CANDIDATE score="0">fermé</CANDIDATE>
+      <CANDIDATE score="0">obturé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02004685">
+    <ORIGINALDEF/>
+    <CANDIDATES original="regulative">
+      <CANDIDATE score="0">régulateur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="regulatory">
+      <CANDIDATE score="0">réglementaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="retail"/>
+  </SYNSET>
+  <SYNSET id="02013197">
+    <ORIGINALDEF/>
+    <CANDIDATES original="revived"/>
+  </SYNSET>
+  <SYNSET id="02028263">
+    <ORIGINALDEF/>
+    <CANDIDATES original="handless">
+      <CANDIDATE score="1">manchot</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02031248">
+    <ORIGINALDEF/>
+    <CANDIDATES original="leftish"/>
+  </SYNSET>
+  <SYNSET id="02031335">
+    <ORIGINALDEF/>
+    <CANDIDATES original="left-of-center"/>
+    <CANDIDATES original="left-wing">
+      <CANDIDATE score="1">gaucho</CANDIDATE>
+      <CANDIDATE score="1">rose</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="leftist">
+      <CANDIDATE score="1">gauchiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02042267">
+    <ORIGINALDEF/>
+    <CANDIDATES original="discoid">
+      <CANDIDATE score="1">discoïdal</CANDIDATE>
+      <CANDIDATE score="1">discoïde</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="discoidal">
+      <CANDIDATE score="1">discoïdal</CANDIDATE>
+      <CANDIDATE score="1">discoïde</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="disklike"/>
+    <CANDIDATES original="disclike"/>
+    <CANDIDATES original="disk-shaped">
+      <CANDIDATE score="1">discoïde</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="disc-shaped">
+      <CANDIDATE score="1">discoïde</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02046828">
+    <ORIGINALDEF/>
+    <CANDIDATES original="olive-like"/>
+    <CANDIDATES original="olivelike"/>
+  </SYNSET>
+  <SYNSET id="02053253">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rustless"/>
+  </SYNSET>
+  <SYNSET id="02055062">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sacred">
+      <CANDIDATE score="0">inviolable</CANDIDATE>
+      <CANDIDATE score="0">religieux</CANDIDATE>
+      <CANDIDATE score="0">sacral</CANDIDATE>
+      <CANDIDATE score="1">sacré</CANDIDATE>
+      <CANDIDATE score="0">saint</CANDIDATE>
+      <CANDIDATE score="0">solennel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02070711">
+    <ORIGINALDEF/>
+    <CANDIDATES original="opposite">
+      <CANDIDATE score="0">autre</CANDIDATE>
+      <CANDIDATE score="0">contraire</CANDIDATE>
+      <CANDIDATE score="0">inverse</CANDIDATE>
+      <CANDIDATE score="1">opposé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02070887">
+    <ORIGINALDEF/>
+    <CANDIDATES original="opposite">
+      <CANDIDATE score="0">autre</CANDIDATE>
+      <CANDIDATE score="0">contraire</CANDIDATE>
+      <CANDIDATE score="0">inverse</CANDIDATE>
+      <CANDIDATE score="1">opposé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02084804">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scientific">
+      <CANDIDATE score="0">méthodique</CANDIDATE>
+      <CANDIDATE score="1">scientifique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02087342">
+    <ORIGINALDEF/>
+    <CANDIDATES original="certain">
+      <CANDIDATE score="1">assuré</CANDIDATE>
+      <CANDIDATE score="1">certain</CANDIDATE>
+      <CANDIDATE score="0">certains</CANDIDATE>
+      <CANDIDATE score="0">sûr</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sealed"/>
+  </SYNSET>
+  <SYNSET id="02096382">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unbarred"/>
+    <CANDIDATES original="unbolted"/>
+    <CANDIDATES original="unlatched"/>
+    <CANDIDATES original="unlocked">
+      <CANDIDATE score="1">ouvert</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unsecured">
+      <CANDIDATE score="0">chirographaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02100236">
+    <ORIGINALDEF/>
+    <CANDIDATES original="major">
+      <CANDIDATE score="0">capital</CANDIDATE>
+      <CANDIDATE score="0">considérable</CANDIDATE>
+      <CANDIDATE score="0">incontournable</CANDIDATE>
+      <CANDIDATE score="1">majeur</CANDIDATE>
+      <CANDIDATE score="0">major</CANDIDATE>
+      <CANDIDATE score="0">maître</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02109162">
+    <ORIGINALDEF/>
+    <CANDIDATES original="telegnostic"/>
+  </SYNSET>
+  <SYNSET id="00737801">
+    <ORIGINALDEF/>
+    <CANDIDATES original="maintained"/>
+    <CANDIDATES original="repaired"/>
+    <CANDIDATES original="serviced">
+      <CANDIDATE score="1">viabilisé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="retained"/>
+  </SYNSET>
+  <SYNSET id="02162179">
+    <ORIGINALDEF/>
+    <CANDIDATES original="epoch-making"/>
+    <CANDIDATES original="epochal"/>
+  </SYNSET>
+  <SYNSET id="02175684">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unanalyzable">
+      <CANDIDATE score="1">inanalysable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="undecomposable"/>
+  </SYNSET>
+  <SYNSET id="02177872">
+    <ORIGINALDEF/>
+    <CANDIDATES original="compound">
+      <CANDIDATE score="0">combiné</CANDIDATE>
+      <CANDIDATE score="0">complexe</CANDIDATE>
+      <CANDIDATE score="0">compliqué</CANDIDATE>
+      <CANDIDATE score="1">composé</CANDIDATE>
+      <CANDIDATE score="0">compound</CANDIDATE>
+      <CANDIDATE score="0">enceinte</CANDIDATE>
+      <CANDIDATE score="0">enclos</CANDIDATE>
+      <CANDIDATE score="0">ternaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02191427">
+    <ORIGINALDEF/>
+    <CANDIDATES original="52"/>
+    <CANDIDATES original="fifty-two"/>
+    <CANDIDATES original="lii"/>
+  </SYNSET>
+  <SYNSET id="02193647">
+    <ORIGINALDEF/>
+    <CANDIDATES original="75"/>
+    <CANDIDATES original="lxxv"/>
+    <CANDIDATES original="seventy-five"/>
+  </SYNSET>
+  <SYNSET id="02196439">
+    <ORIGINALDEF/>
+    <CANDIDATES original="110"/>
+    <CANDIDATES original="cx"/>
+    <CANDIDATES original="one_hundred_ten"/>
+  </SYNSET>
+  <SYNSET id="02197007">
+    <ORIGINALDEF/>
+    <CANDIDATES original="135"/>
+    <CANDIDATES original="cxxxv"/>
+    <CANDIDATES original="one_hundred_thirty-five"/>
+  </SYNSET>
+  <SYNSET id="02206881">
+    <ORIGINALDEF/>
+    <CANDIDATES original="39th"/>
+    <CANDIDATES original="thirty-ninth"/>
+  </SYNSET>
+  <SYNSET id="02211572">
+    <ORIGINALDEF/>
+    <CANDIDATES original="175th"/>
+    <CANDIDATES original="hundred-and-seventy-fifth"/>
+  </SYNSET>
+  <SYNSET id="02225071">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unsized"/>
+  </SYNSET>
+  <SYNSET id="02237978">
+    <ORIGINALDEF/>
+    <CANDIDATES original="seamless">
+      <CANDIDATE score="0">homogène</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unlined">
+      <CANDIDATE score="0">blanc</CANDIDATE>
+      <CANDIDATE score="0">uni</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unseamed"/>
+  </SYNSET>
+  <SYNSET id="02245944">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bidentate"/>
+  </SYNSET>
+  <SYNSET id="02261013">
+    <ORIGINALDEF/>
+    <CANDIDATES original="solid-state"/>
+  </SYNSET>
+  <SYNSET id="02264366">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cavernous">
+      <CANDIDATE score="1">caverneux</CANDIDATE>
+      <CANDIDATE score="0">enfoncé</CANDIDATE>
+      <CANDIDATE score="0">immense</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">énorme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02278195">
+    <ORIGINALDEF/>
+    <CANDIDATES original="specialistic"/>
+  </SYNSET>
+  <SYNSET id="02289659">
+    <ORIGINALDEF/>
+    <CANDIDATES original="syllabled"/>
+  </SYNSET>
+  <SYNSET id="02302941">
+    <ORIGINALDEF/>
+    <CANDIDATES original="footsure"/>
+    <CANDIDATES original="surefooted"/>
+    <CANDIDATES original="sure-footed">
+      <CANDIDATE score="5">au_pied_sûr</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02315808">
+    <ORIGINALDEF/>
+    <CANDIDATES original="eellike"/>
+  </SYNSET>
+  <SYNSET id="02323726">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stiff">
+      <CANDIDATE score="0">ankylosé</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="0">chiadé</CANDIDATE>
+      <CANDIDATE score="0">chié</CANDIDATE>
+      <CANDIDATE score="0">contraint</CANDIDATE>
+      <CANDIDATE score="0">courbatu</CANDIDATE>
+      <CANDIDATE score="0">courbaturé</CANDIDATE>
+      <CANDIDATE score="0">difficile</CANDIDATE>
+      <CANDIDATE score="0">dur</CANDIDATE>
+      <CANDIDATE score="0">empesé</CANDIDATE>
+      <CANDIDATE score="0">engourdi</CANDIDATE>
+      <CANDIDATE score="0">ferme</CANDIDATE>
+      <CANDIDATE score="0">figé</CANDIDATE>
+      <CANDIDATE score="1">fort</CANDIDATE>
+      <CANDIDATE score="0">gourmé</CANDIDATE>
+      <CANDIDATE score="0">gratiné</CANDIDATE>
+      <CANDIDATE score="0">guindé</CANDIDATE>
+      <CANDIDATE score="0">ouvrier</CANDIDATE>
+      <CANDIDATE score="0">perclus</CANDIDATE>
+      <CANDIDATE score="0">pincé</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="1">raide</CANDIDATE>
+      <CANDIDATE score="0">rigide</CANDIDATE>
+      <CANDIDATE score="0">rouillé</CANDIDATE>
+      <CANDIDATE score="0">rude</CANDIDATE>
+      <CANDIDATE score="0">salé</CANDIDATE>
+      <CANDIDATE score="0">soigné</CANDIDATE>
+      <CANDIDATE score="0">sérieux</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">tenace</CANDIDATE>
+      <CANDIDATE score="0">trapu</CANDIDATE>
+      <CANDIDATE score="0">vagabond</CANDIDATE>
+      <CANDIDATE score="0">vert</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01205232">
+    <ORIGINALDEF/>
+    <CANDIDATES original="commanding">
+      <CANDIDATE score="0">dominant</CANDIDATE>
+      <CANDIDATE score="0">imposant</CANDIDATE>
+      <CANDIDATE score="0">impératif</CANDIDATE>
+      <CANDIDATE score="0">impérieux</CANDIDATE>
+      <CANDIDATE score="0">injonctif</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ranking">
+      <CANDIDATE score="0">renommé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="top-level"/>
+    <CANDIDATES original="top-ranking"/>
+    <CANDIDATES original="overlooking"/>
+    <CANDIDATES original="dominating">
+      <CANDIDATE score="0">dominateur</CANDIDATE>
+      <CANDIDATE score="0">prépondérant</CANDIDATE>
+      <CANDIDATE score="0">dominant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02348847">
+    <ORIGINALDEF/>
+    <CANDIDATES original="superjacent">
+      <CANDIDATE score="1">sus-jacent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02359308">
+    <ORIGINALDEF/>
+    <CANDIDATES original="not_surprised"/>
+    <CANDIDATES original="unsurprised"/>
+  </SYNSET>
+  <SYNSET id="02368247">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sec"/>
+    <CANDIDATES original="unsweet"/>
+  </SYNSET>
+  <SYNSET id="02368718">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sweetish">
+      <CANDIDATE score="0">douceâtre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02368787">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sour">
+      <CANDIDATE score="0">acariâtre</CANDIDATE>
+      <CANDIDATE score="0">acerbe</CANDIDATE>
+      <CANDIDATE score="0">acide</CANDIDATE>
+      <CANDIDATE score="1">aigre</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">piqué</CANDIDATE>
+      <CANDIDATE score="0">quinteux</CANDIDATE>
+      <CANDIDATE score="0">revêche</CANDIDATE>
+      <CANDIDATE score="0">rébarbatif</CANDIDATE>
+      <CANDIDATE score="0">sur</CANDIDATE>
+      <CANDIDATE score="0">tourné</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02373055">
+    <ORIGINALDEF/>
+    <CANDIDATES original="radial">
+      <CANDIDATE score="0">radiaire</CANDIDATE>
+      <CANDIDATE score="1">radial</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stellate">
+      <CANDIDATE score="1">étoilé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="radiate">
+      <CANDIDATE score="0">respirer</CANDIDATE>
+      <CANDIDATE score="0">répandre</CANDIDATE>
+      <CANDIDATE score="0">dispenser</CANDIDATE>
+      <CANDIDATE score="0">dégager</CANDIDATE>
+      <CANDIDATE score="0">rayonner</CANDIDATE>
+      <CANDIDATE score="0">émettre</CANDIDATE>
+      <CANDIDATE score="1">radié</CANDIDATE>
+      <CANDIDATE score="0">irradier</CANDIDATE>
+      <CANDIDATE score="0">partir_du_même_centre</CANDIDATE>
+      <CANDIDATE score="0">se_dégager</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02389833">
+    <ORIGINALDEF/>
+    <CANDIDATES original="undomesticated"/>
+  </SYNSET>
+  <SYNSET id="02391867">
+    <ORIGINALDEF/>
+    <CANDIDATES original="impalpable">
+      <CANDIDATE score="1">impalpable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="intangible">
+      <CANDIDATE score="1">impalpable</CANDIDATE>
+      <CANDIDATE score="0">impondérable</CANDIDATE>
+      <CANDIDATE score="0">incorporel</CANDIDATE>
+      <CANDIDATE score="1">intangible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02393086">
+    <ORIGINALDEF/>
+    <CANDIDATES original="aesthetic">
+      <CANDIDATE score="1">esthétique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="artistic">
+      <CANDIDATE score="0">artiste</CANDIDATE>
+      <CANDIDATE score="1">artistique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="esthetic">
+      <CANDIDATE score="1">esthétique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pleasing">
+      <CANDIDATE score="1">agréable</CANDIDATE>
+      <CANDIDATE score="0">aimable</CANDIDATE>
+      <CANDIDATE score="0">avenant</CANDIDATE>
+      <CANDIDATE score="1">plaisant</CANDIDATE>
+      <CANDIDATE score="0">sympathique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02406370">
+    <ORIGINALDEF/>
+    <CANDIDATES original="edgy">
+      <CANDIDATE score="1">crispé</CANDIDATE>
+      <CANDIDATE score="1">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="high-strung"/>
+    <CANDIDATES original="highly_strung"/>
+    <CANDIDATES original="jittery">
+      <CANDIDATE score="1">agité</CANDIDATE>
+      <CANDIDATE score="1">nerveux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="jumpy">
+      <CANDIDATE score="0">instable</CANDIDATE>
+      <CANDIDATE score="1">nerveux</CANDIDATE>
+      <CANDIDATE score="0">sautillant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nervy">
+      <CANDIDATE score="0">effronté</CANDIDATE>
+      <CANDIDATE score="0">irrité</CANDIDATE>
+      <CANDIDATE score="1">nerveux</CANDIDATE>
+      <CANDIDATE score="1">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overstrung"/>
+    <CANDIDATES original="restive">
+      <CANDIDATE score="1">agité</CANDIDATE>
+      <CANDIDATE score="0">impatient</CANDIDATE>
+      <CANDIDATE score="0">indocile</CANDIDATE>
+      <CANDIDATE score="1">nerveux</CANDIDATE>
+      <CANDIDATE score="0">rebelle</CANDIDATE>
+      <CANDIDATE score="0">rétif</CANDIDATE>
+      <CANDIDATE score="0">vicieux</CANDIDATE>
+      <CANDIDATE score="1">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="uptight">
+      <CANDIDATE score="0">coincé</CANDIDATE>
+      <CANDIDATE score="0">complexé</CANDIDATE>
+      <CANDIDATE score="1">crispé</CANDIDATE>
+      <CANDIDATE score="0">guindé</CANDIDATE>
+      <CANDIDATE score="0">refoulé</CANDIDATE>
+      <CANDIDATE score="0">susceptible</CANDIDATE>
+      <CANDIDATE score="1">tendu</CANDIDATE>
+      <CANDIDATE score="1">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_suspense">
+      <CANDIDATE score="0">suspens</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02412059">
+    <ORIGINALDEF/>
+    <CANDIDATES original="two-ply"/>
+  </SYNSET>
+  <SYNSET id="02415938">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coagulable"/>
+  </SYNSET>
+  <SYNSET id="02417170">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thickened"/>
+  </SYNSET>
+  <SYNSET id="02418412">
+    <ORIGINALDEF/>
+    <CANDIDATES original="presumable">
+      <CANDIDATE score="1">présumable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="supposable">
+      <CANDIDATE score="1">supposable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="surmisable"/>
+  </SYNSET>
+  <SYNSET id="02434115">
+    <ORIGINALDEF/>
+    <CANDIDATES original="drained">
+      <CANDIDATE score="0">avachi</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="knackered">
+      <CANDIDATE score="1">cassé</CANDIDATE>
+      <CANDIDATE score="1">claqué</CANDIDATE>
+      <CANDIDATE score="1">crevé</CANDIDATE>
+      <CANDIDATE score="0">foutu</CANDIDATE>
+      <CANDIDATE score="1">nase</CANDIDATE>
+      <CANDIDATE score="1">pompé</CANDIDATE>
+      <CANDIDATE score="0">ratatiné</CANDIDATE>
+      <CANDIDATE score="1">rétamé</CANDIDATE>
+      <CANDIDATE score="1">éreinté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02434797">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fresh">
+      <CANDIDATE score="0">doux</CANDIDATE>
+      <CANDIDATE score="1">frais</CANDIDATE>
+      <CANDIDATE score="0">nouveau</CANDIDATE>
+      <CANDIDATE score="0">proche</CANDIDATE>
+      <CANDIDATE score="1">reposé</CANDIDATE>
+      <CANDIDATE score="0">récent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="invigorated"/>
+    <CANDIDATES original="refreshed">
+      <CANDIDATE score="1">dispos</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="reinvigorated"/>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pruned">
+      <CANDIDATE score="1">taillé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="undocked"/>
+  </SYNSET>
+  <SYNSET id="02457932">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fraught">
+      <CANDIDATE score="0">angoissé</CANDIDATE>
+      <CANDIDATE score="1">chargé</CANDIDATE>
+      <CANDIDATE score="1">lourd</CANDIDATE>
+      <CANDIDATE score="0">plein</CANDIDATE>
+      <CANDIDATE score="0">tendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02458262">
+    <ORIGINALDEF/>
+    <CANDIDATES original="haunted">
+      <CANDIDATE score="1">hagard</CANDIDATE>
+      <CANDIDATE score="0">halluciné</CANDIDATE>
+      <CANDIDATE score="0">hanté</CANDIDATE>
+      <CANDIDATE score="0">égaré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02461438">
+    <ORIGINALDEF/>
+    <CANDIDATES original="truthful">
+      <CANDIDATE score="1">exact</CANDIDATE>
+      <CANDIDATE score="0">fidèle</CANDIDATE>
+      <CANDIDATE score="1">vrai</CANDIDATE>
+      <CANDIDATE score="1">véridique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="so">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02477557">
+    <ORIGINALDEF/>
+    <CANDIDATES original="incorporate">
+      <CANDIDATE score="1">incorporel</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="incorporated"/>
+    <CANDIDATES original="integrated">
+      <CANDIDATE score="1">intégré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="merged"/>
+    <CANDIDATES original="unified"/>
+  </SYNSET>
+  <SYNSET id="02482159">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mullioned"/>
+  </SYNSET>
+  <SYNSET id="02494499">
+    <ORIGINALDEF/>
+    <CANDIDATES original="downstream"/>
+  </SYNSET>
+  <SYNSET id="02509059">
+    <ORIGINALDEF/>
+    <CANDIDATES original="louvered"/>
+  </SYNSET>
+  <SYNSET id="02511800">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hot">
+      <CANDIDATE score="1">acharné</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">chaud</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">hot</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">pimenté</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">radioactif</CANDIDATE>
+      <CANDIDATE score="0">relevé</CANDIDATE>
+      <CANDIDATE score="0">sensationnel</CANDIDATE>
+      <CANDIDATE score="1">terrible</CANDIDATE>
+      <CANDIDATE score="0">thermal</CANDIDATE>
+      <CANDIDATE score="1">violent</CANDIDATE>
+      <CANDIDATE score="0">volé</CANDIDATE>
+      <CANDIDATE score="0">épicé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="raging">
+      <CANDIDATE score="0">ardent</CANDIDATE>
+      <CANDIDATE score="0">atroce</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="1">déchaîné</CANDIDATE>
+      <CANDIDATE score="0">démonté</CANDIDATE>
+      <CANDIDATE score="0">dévorant</CANDIDATE>
+      <CANDIDATE score="0">fanatique</CANDIDATE>
+      <CANDIDATE score="0">furieux</CANDIDATE>
+      <CANDIDATE score="1">féroce</CANDIDATE>
+      <CANDIDATE score="0">galopant</CANDIDATE>
+      <CANDIDATE score="1">houleux</CANDIDATE>
+      <CANDIDATE score="0">impétueux</CANDIDATE>
+      <CANDIDATE score="1">violent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02515001">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nefarious">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">infâme</CANDIDATE>
+      <CANDIDATE score="1">sulfureux</CANDIDATE>
+      <CANDIDATE score="1">vil</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="villainous">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">crapuleux</CANDIDATE>
+      <CANDIDATE score="1">ignoble</CANDIDATE>
+      <CANDIDATE score="1">infect</CANDIDATE>
+      <CANDIDATE score="1">infâme</CANDIDATE>
+      <CANDIDATE score="1">scélérat</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02518470">
+    <ORIGINALDEF/>
+    <CANDIDATES original="occult">
+      <CANDIDATE score="0">occulte</CANDIDATE>
+      <CANDIDATE score="0">occultiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02519292">
+    <ORIGINALDEF/>
+    <CANDIDATES original="broody">
+      <CANDIDATE score="0">cafardeux</CANDIDATE>
+      <CANDIDATE score="0">distrait</CANDIDATE>
+      <CANDIDATE score="0">mélancolique</CANDIDATE>
+      <CANDIDATE score="0">rêveur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02523664">
+    <ORIGINALDEF/>
+    <CANDIDATES original="assailable"/>
+    <CANDIDATES original="open">
+      <CANDIDATE score="0">béant</CANDIDATE>
+      <CANDIDATE score="0">dilaté</CANDIDATE>
+      <CANDIDATE score="0">débouché</CANDIDATE>
+      <CANDIDATE score="0">déboutonné</CANDIDATE>
+      <CANDIDATE score="0">décapoté</CANDIDATE>
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="1">dégagé</CANDIDATE>
+      <CANDIDATE score="0">déplié</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">open</CANDIDATE>
+      <CANDIDATE score="1">ouvert</CANDIDATE>
+      <CANDIDATE score="0">patent</CANDIDATE>
+      <CANDIDATE score="0">perméable</CANDIDATE>
+      <CANDIDATE score="0">public</CANDIDATE>
+      <CANDIDATE score="0">relâché</CANDIDATE>
+      <CANDIDATE score="0">transparent</CANDIDATE>
+      <CANDIDATE score="0">vacant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="undefendable"/>
+    <CANDIDATES original="undefended"/>
+  </SYNSET>
+  <SYNSET id="02525058">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unguarded">
+      <CANDIDATE score="0">imprudent</CANDIDATE>
+      <CANDIDATE score="0">irréfléchi</CANDIDATE>
+      <CANDIDATE score="0">spontané</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unprotected">
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="0">inabrité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02541012">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cured">
+      <CANDIDATE score="0">fumé</CANDIDATE>
+      <CANDIDATE score="1">guéri</CANDIDATE>
+      <CANDIDATE score="0">salé</CANDIDATE>
+      <CANDIDATE score="0">séché</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="healed"/>
+    <CANDIDATES original="recovered">
+      <CANDIDATE score="1">guéri</CANDIDATE>
+      <CANDIDATE score="1">remis</CANDIDATE>
+      <CANDIDATE score="1">rétabli</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02542148">
+    <ORIGINALDEF/>
+    <CANDIDATES original="afflicted"/>
+    <CANDIDATES original="stricken">
+      <CANDIDATE score="1">affligé</CANDIDATE>
+      <CANDIDATE score="1">dévasté</CANDIDATE>
+      <CANDIDATE score="1">ravagé</CANDIDATE>
+      <CANDIDATE score="0">sinistré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02543034">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bedfast"/>
+    <CANDIDATES original="bedrid"/>
+    <CANDIDATES original="bedridden">
+      <CANDIDATE score="1">alité</CANDIDATE>
+      <CANDIDATE score="1">grabataire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="infirm">
+      <CANDIDATE score="1">infirme</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sick-abed"/>
+  </SYNSET>
+  <SYNSET id="02545023">
+    <ORIGINALDEF/>
+    <CANDIDATES original="funny">
+      <CANDIDATE score="0">amusant</CANDIDATE>
+      <CANDIDATE score="1">bizarre</CANDIDATE>
+      <CANDIDATE score="0">burlesque</CANDIDATE>
+      <CANDIDATE score="0">cocasse</CANDIDATE>
+      <CANDIDATE score="0">comique</CANDIDATE>
+      <CANDIDATE score="0">drôle</CANDIDATE>
+      <CANDIDATE score="0">drôlet</CANDIDATE>
+      <CANDIDATE score="0">louche</CANDIDATE>
+      <CANDIDATE score="0">marrant</CANDIDATE>
+      <CANDIDATE score="0">plaisant</CANDIDATE>
+      <CANDIDATE score="0">rigolo</CANDIDATE>
+      <CANDIDATE score="0">risible</CANDIDATE>
+      <CANDIDATE score="1">étrange</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02549691">
+    <ORIGINALDEF/>
+    <CANDIDATES original="muggy">
+      <CANDIDATE score="1">lourd</CANDIDATE>
+      <CANDIDATE score="1">moite</CANDIDATE>
+      <CANDIDATE score="0">mou</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="steamy">
+      <CANDIDATE score="0">embué</CANDIDATE>
+      <CANDIDATE score="0">humide</CANDIDATE>
+      <CANDIDATE score="1">torride</CANDIDATE>
+      <CANDIDATE score="0">érotique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sticky">
+      <CANDIDATE score="0">adhésif</CANDIDATE>
+      <CANDIDATE score="0">chassieux</CANDIDATE>
+      <CANDIDATE score="0">collant</CANDIDATE>
+      <CANDIDATE score="0">difficile</CANDIDATE>
+      <CANDIDATE score="0">délicat</CANDIDATE>
+      <CANDIDATE score="0">gluant</CANDIDATE>
+      <CANDIDATE score="0">gommeux</CANDIDATE>
+      <CANDIDATE score="0">gommé</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="1">lourd</CANDIDATE>
+      <CANDIDATE score="1">moite</CANDIDATE>
+      <CANDIDATE score="0">poisseux</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">visqueux</CANDIDATE>
+      <CANDIDATE score="0">épineux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02553234">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dried-up">
+      <CANDIDATE score="1">desséché</CANDIDATE>
+      <CANDIDATE score="0">ratatiné</CANDIDATE>
+      <CANDIDATE score="0">tari</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sear">
+      <CANDIDATE score="1">desséché</CANDIDATE>
+      <CANDIDATE score="1">flétri</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sere"/>
+    <CANDIDATES original="shriveled"/>
+    <CANDIDATES original="shrivelled">
+      <CANDIDATE score="1">rabougri</CANDIDATE>
+      <CANDIDATE score="0">ratatiné</CANDIDATE>
+      <CANDIDATE score="0">recroquevillé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="withered">
+      <CANDIDATE score="0">atrophié</CANDIDATE>
+      <CANDIDATE score="1">desséché</CANDIDATE>
+      <CANDIDATE score="1">fané</CANDIDATE>
+      <CANDIDATE score="1">flétri</CANDIDATE>
+      <CANDIDATE score="0">ratatiné</CANDIDATE>
+      <CANDIDATE score="0">ridé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01145639">
+    <ORIGINALDEF/>
+    <CANDIDATES original="heavy">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="0">chargé</CANDIDATE>
+      <CANDIDATE score="0">costaud</CANDIDATE>
+      <CANDIDATE score="0">couvert</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">empâté</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">important</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="0">massif</CANDIDATE>
+      <CANDIDATE score="0">nourri</CANDIDATE>
+      <CANDIDATE score="0">pesant</CANDIDATE>
+      <CANDIDATE score="0">pondéreux</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+      <CANDIDATE score="1">épais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thick">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">borné</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">bête</CANDIDATE>
+      <CANDIDATE score="0">catarrheux</CANDIDATE>
+      <CANDIDATE score="0">charnu</CANDIDATE>
+      <CANDIDATE score="0">compact</CANDIDATE>
+      <CANDIDATE score="0">consistant</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">dur</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">fourni</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">obtus</CANDIDATE>
+      <CANDIDATE score="0">pâteux</CANDIDATE>
+      <CANDIDATE score="0">touffu</CANDIDATE>
+      <CANDIDATE score="0">tourte</CANDIDATE>
+      <CANDIDATE score="0">visqueux</CANDIDATE>
+      <CANDIDATE score="1">épais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02563068">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wide">
+      <CANDIDATE score="0">ample</CANDIDATE>
+      <CANDIDATE score="1">considérable</CANDIDATE>
+      <CANDIDATE score="0">dégagé</CANDIDATE>
+      <CANDIDATE score="0">extensif</CANDIDATE>
+      <CANDIDATE score="0">flottant</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">immense</CANDIDATE>
+      <CANDIDATE score="0">large</CANDIDATE>
+      <CANDIDATE score="0">ouvert</CANDIDATE>
+      <CANDIDATE score="0">riche</CANDIDATE>
+      <CANDIDATE score="0">vaste</CANDIDATE>
+      <CANDIDATE score="0">étendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02575138">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unforested"/>
+  </SYNSET>
+  <SYNSET id="02575238">
+    <ORIGINALDEF/>
+    <CANDIDATES original="untimbered"/>
+  </SYNSET>
+  <SYNSET id="00012932">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ideologic"/>
+    <CANDIDATES original="ideological">
+      <CANDIDATE score="1">idéologique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02585919">
+    <ORIGINALDEF/>
+    <CANDIDATES original="creditable">
+      <CANDIDATE score="1">estimable</CANDIDATE>
+      <CANDIDATE score="1">honorable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02589913">
+    <ORIGINALDEF/>
+    <CANDIDATES original="zonal">
+      <CANDIDATE score="1">zonal</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02591372">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unwebbed"/>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="varus">
+      <CANDIDATE score="1">varus</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02605281">
+    <ORIGINALDEF/>
+    <CANDIDATES original="antiapartheid"/>
+  </SYNSET>
+  <SYNSET id="02615921">
+    <ORIGINALDEF/>
+    <CANDIDATES original="amblyopic"/>
+  </SYNSET>
+  <SYNSET id="02617357">
+    <ORIGINALDEF/>
+    <CANDIDATES original="amitotic">
+      <CANDIDATE score="1">amitotique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01968811">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hourly">
+      <CANDIDATE score="0">constant</CANDIDATE>
+      <CANDIDATE score="1">horaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02630221">
+    <ORIGINALDEF/>
+    <CANDIDATES original="antimonic"/>
+    <CANDIDATES original="antimonious"/>
+  </SYNSET>
+  <SYNSET id="02631085">
+    <ORIGINALDEF/>
+    <CANDIDATES original="antitypic"/>
+    <CANDIDATES original="antitypical"/>
+  </SYNSET>
+  <SYNSET id="02643900">
+    <ORIGINALDEF/>
+    <CANDIDATES original="arundinaceous"/>
+  </SYNSET>
+  <SYNSET id="02644050">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ascensional"/>
+  </SYNSET>
+  <SYNSET id="02647688">
+    <ORIGINALDEF/>
+    <CANDIDATES original="atrioventricular"/>
+    <CANDIDATES original="auriculoventricular"/>
+  </SYNSET>
+  <SYNSET id="02653174">
+    <ORIGINALDEF/>
+    <CANDIDATES original="auxetic"/>
+  </SYNSET>
+  <SYNSET id="02655723">
+    <ORIGINALDEF/>
+    <CANDIDATES original="azido"/>
+  </SYNSET>
+  <SYNSET id="02655838">
+    <ORIGINALDEF/>
+    <CANDIDATES original="azimuthal">
+      <CANDIDATE score="1">azimutal</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02657741">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bacterioid"/>
+    <CANDIDATES original="bacterioidal"/>
+    <CANDIDATES original="bacteroid"/>
+    <CANDIDATES original="bacteroidal"/>
+  </SYNSET>
+  <SYNSET id="02663040">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bibliopolic"/>
+  </SYNSET>
+  <SYNSET id="02663351">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bibliotic"/>
+  </SYNSET>
+  <SYNSET id="02666132">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sociobiologic"/>
+    <CANDIDATES original="sociobiological"/>
+  </SYNSET>
+  <SYNSET id="03153361">
+    <ORIGINALDEF/>
+    <CANDIDATES original="carinate"/>
+    <CANDIDATES original="carinated"/>
+    <CANDIDATES original="keeled"/>
+    <CANDIDATES original="ridged"/>
+  </SYNSET>
+  <SYNSET id="02688523">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cercarial"/>
+  </SYNSET>
+  <SYNSET id="02692105">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chelate"/>
+    <CANDIDATES original="chelated"/>
+  </SYNSET>
+  <SYNSET id="02705254">
+    <ORIGINALDEF/>
+    <CANDIDATES original="covalent">
+      <CANDIDATE score="0">covalent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02732806">
+    <ORIGINALDEF/>
+    <CANDIDATES original="galilean">
+      <CANDIDATE score="1">galiléen</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Galilean">
+      <CANDIDATE score="1">galiléen</CANDIDATE>
+      <CANDIDATE score="0">galiléenne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02749510">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ink-jet"/>
+  </SYNSET>
+  <SYNSET id="02756346">
+    <ORIGINALDEF/>
+    <CANDIDATES original="local">
+      <CANDIDATE score="0">communal</CANDIDATE>
+      <CANDIDATE score="1">indigène</CANDIDATE>
+      <CANDIDATE score="1">local</CANDIDATE>
+      <CANDIDATE score="0">localisé</CANDIDATE>
+      <CANDIDATE score="0">municipal</CANDIDATE>
+      <CANDIDATE score="0">omnibus</CANDIDATE>
+      <CANDIDATE score="0">proche</CANDIDATE>
+      <CANDIDATE score="0">topique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02760316">
+    <ORIGINALDEF/>
+    <CANDIDATES original="biomedical">
+      <CANDIDATE score="1">biomédical</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02769128">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nominal">
+      <CANDIDATE score="0">insignifiant</CANDIDATE>
+      <CANDIDATE score="0">minimal</CANDIDATE>
+      <CANDIDATE score="1">nominal</CANDIDATE>
+      <CANDIDATE score="0">substantif</CANDIDATE>
+      <CANDIDATE score="0">symbolique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02773062">
+    <ORIGINALDEF/>
+    <CANDIDATES original="palmar">
+      <CANDIDATE score="1">palmaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="volar"/>
+  </SYNSET>
+  <SYNSET id="02803150">
+    <ORIGINALDEF/>
+    <CANDIDATES original="interstellar">
+      <CANDIDATE score="1">intersidéral</CANDIDATE>
+      <CANDIDATE score="1">interstellaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02813819">
+    <ORIGINALDEF/>
+    <CANDIDATES original="unthematic"/>
+  </SYNSET>
+  <SYNSET id="02824585">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vicarial"/>
+  </SYNSET>
+  <SYNSET id="02831979">
+    <ORIGINALDEF/>
+    <CANDIDATES original="amphibian">
+      <CANDIDATE score="1">amphibie</CANDIDATE>
+      <CANDIDATE score="1">amphibien</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="amphibious">
+      <CANDIDATE score="1">amphibie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02832382">
+    <ORIGINALDEF/>
+    <CANDIDATES original="piscine"/>
+  </SYNSET>
+  <SYNSET id="02833873">
+    <ORIGINALDEF/>
+    <CANDIDATES original="antibacterial">
+      <CANDIDATE score="1">antibactérien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02835145">
+    <ORIGINALDEF/>
+    <CANDIDATES original="expressionist">
+      <CANDIDATE score="1">expressionniste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="expressionistic">
+      <CANDIDATE score="1">expressionniste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02837404">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bisectional"/>
+  </SYNSET>
+  <SYNSET id="02840006">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wolfish">
+      <CANDIDATE score="1">vorace</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wolflike"/>
+  </SYNSET>
+  <SYNSET id="02846630">
+    <ORIGINALDEF/>
+    <CANDIDATES original="diluvial"/>
+    <CANDIDATES original="diluvian">
+      <CANDIDATE score="1">diluvien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02854013">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vinaceous"/>
+    <CANDIDATES original="vinous">
+      <CANDIDATE score="1">vineux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02870663">
+    <ORIGINALDEF/>
+    <CANDIDATES original="angelic">
+      <CANDIDATE score="1">angélique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="angelical">
+      <CANDIDATE score="1">angélique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02882135">
+    <ORIGINALDEF/>
+    <CANDIDATES original="laryngopharyngeal"/>
+  </SYNSET>
+  <SYNSET id="02883112">
+    <ORIGINALDEF/>
+    <CANDIDATES original="neurogenic">
+      <CANDIDATE score="1">neurogène</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01332386">
+    <ORIGINALDEF/>
+    <CANDIDATES original="intellectual">
+      <CANDIDATE score="1">intellectuel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02906351">
+    <ORIGINALDEF/>
+    <CANDIDATES original="demographic">
+      <CANDIDATE score="1">démographique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02924600">
+    <ORIGINALDEF/>
+    <CANDIDATES original="confucian">
+      <CANDIDATE score="1">confucianiste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Confucian">
+      <CANDIDATE score="1">confucéen</CANDIDATE>
+      <CANDIDATE score="1">confucianiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02938485">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pentatonic">
+      <CANDIDATE score="1">pentatonique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02939919">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rotatory">
+      <CANDIDATE score="1">rotatoire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="revolutionary">
+      <CANDIDATE score="0">révolutionnaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02963128">
+    <ORIGINALDEF/>
+    <CANDIDATES original="moldovan">
+      <CANDIDATE score="1">moldave</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Moldovan">
+      <CANDIDATE score="1">moldave</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02967791">
+    <ORIGINALDEF/>
+    <CANDIDATES original="korean">
+      <CANDIDATE score="1">coréen</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Korean">
+      <CANDIDATE score="1">coréen</CANDIDATE>
+      <CANDIDATE score="0">coréenne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02990819">
+    <ORIGINALDEF/>
+    <CANDIDATES original="theocratic">
+      <CANDIDATE score="1">théocratique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02998844">
+    <ORIGINALDEF/>
+    <CANDIDATES original="semicentenary"/>
+    <CANDIDATES original="semicentennial"/>
+  </SYNSET>
+  <SYNSET id="03010176">
+    <ORIGINALDEF/>
+    <CANDIDATES original="papillary">
+      <CANDIDATE score="1">papillaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="papillose"/>
+  </SYNSET>
+  <SYNSET id="03012707">
+    <ORIGINALDEF/>
+    <CANDIDATES original="myelic"/>
+  </SYNSET>
+  <SYNSET id="03013037">
+    <ORIGINALDEF/>
+    <CANDIDATES original="myeloid"/>
+  </SYNSET>
+  <SYNSET id="03027793">
+    <ORIGINALDEF/>
+    <CANDIDATES original="victorian">
+      <CANDIDATE score="1">victorien</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Victorian">
+      <CANDIDATE score="0">d'un_puritanisme_victorien</CANDIDATE>
+      <CANDIDATE score="1">victorien</CANDIDATE>
+      <CANDIDATE score="0">de_l'époque_victorienne</CANDIDATE>
+      <CANDIDATE score="0">victorienne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03048204">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bhutanese">
+      <CANDIDATE score="1">bhotia</CANDIDATE>
+      <CANDIDATE score="1">bhoutanais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Bhutanese">
+      <CANDIDATE score="0">bhoutanaise</CANDIDATE>
+      <CANDIDATE score="0">bhotia</CANDIDATE>
+      <CANDIDATE score="0">Bhoutanais</CANDIDATE>
+      <CANDIDATE score="1">bhoutanais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03050716">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blastospheric"/>
+    <CANDIDATES original="blastular"/>
+  </SYNSET>
+  <SYNSET id="03064883">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ethnographic">
+      <CANDIDATE score="1">ethnographique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ethnographical">
+      <CANDIDATE score="1">ethnographique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03079803">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lao"/>
+    <CANDIDATES original="Lao">
+      <CANDIDATE score="0">Lao</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03084397">
+    <ORIGINALDEF/>
+    <CANDIDATES original="manorial">
+      <CANDIDATE score="1">seigneurial</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03085394">
+    <ORIGINALDEF/>
+    <CANDIDATES original="megalithic">
+      <CANDIDATE score="1">mégalithique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03088384">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mozambican">
+      <CANDIDATE score="1">mozambicain</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Mozambican">
+      <CANDIDATE score="1">mozambicain</CANDIDATE>
+      <CANDIDATE score="0">mozambicaine</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03099549">
+    <ORIGINALDEF/>
+    <CANDIDATES original="phonic">
+      <CANDIDATE score="1">phonique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03102723">
+    <ORIGINALDEF/>
+    <CANDIDATES original="prefectural">
+      <CANDIDATE score="1">préfectoral</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03104740">
+    <ORIGINALDEF/>
+    <CANDIDATES original="carthaginian">
+      <CANDIDATE score="1">carthaginois</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="punic">
+      <CANDIDATE score="1">punique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Punic">
+      <CANDIDATE score="1">punique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Carthaginian">
+      <CANDIDATE score="1">carthaginois</CANDIDATE>
+      <CANDIDATE score="0">carthaginoise</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03105674">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pyogenic">
+      <CANDIDATE score="1">pyogène</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03108077">
+    <ORIGINALDEF/>
+    <CANDIDATES original="quadratic">
+      <CANDIDATE score="1">quadratique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03110322">
+    <ORIGINALDEF/>
+    <CANDIDATES original="respiratory">
+      <CANDIDATE score="1">respiratoire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03115693">
+    <ORIGINALDEF/>
+    <CANDIDATES original="semite">
+      <CANDIDATE score="1">sémite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="semitic">
+      <CANDIDATE score="1">sémite</CANDIDATE>
+      <CANDIDATE score="1">sémitique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Semite">
+      <CANDIDATE score="0">Sémite</CANDIDATE>
+      <CANDIDATE score="1">sémite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Semitic">
+      <CANDIDATE score="1">sémitique</CANDIDATE>
+      <CANDIDATE score="1">sémite</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03122400">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chinese">
+      <CANDIDATE score="1">chinois</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="formosan"/>
+    <CANDIDATES original="taiwanese">
+      <CANDIDATE score="1">taiwanais</CANDIDATE>
+      <CANDIDATE score="1">taïwanais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Formosan">
+      <CANDIDATE score="1">formosan</CANDIDATE>
+      <CANDIDATE score="0">formosane</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Chinese">
+      <CANDIDATE score="1">chinois</CANDIDATE>
+      <CANDIDATE score="0">repas_chinois</CANDIDATE>
+      <CANDIDATE score="0">chine</CANDIDATE>
+      <CANDIDATE score="0">de_chinois</CANDIDATE>
+      <CANDIDATE score="5">de_Chine</CANDIDATE>
+      <CANDIDATE score="0">restaurant_chinois</CANDIDATE>
+      <CANDIDATE score="0">chinoise</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Taiwanese">
+      <CANDIDATE score="0">taïwanaise</CANDIDATE>
+      <CANDIDATE score="0">taiwanaise</CANDIDATE>
+      <CANDIDATE score="1">taiwanais</CANDIDATE>
+      <CANDIDATE score="1">taïwanais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03123695">
+    <ORIGINALDEF/>
+    <CANDIDATES original="terpsichorean"/>
+  </SYNSET>
+  <SYNSET id="03129222">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vietnamese">
+      <CANDIDATE score="1">vietnamien</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Vietnamese">
+      <CANDIDATE score="1">vietnamien</CANDIDATE>
+      <CANDIDATE score="0">vietnamienne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03137397">
+    <ORIGINALDEF/>
+    <CANDIDATES original="onomatopoeic">
+      <CANDIDATE score="1">onomatopéique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="onomatopoetic">
+      <CANDIDATE score="1">onomatopéique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01806106">
+    <ORIGINALDEF/>
+    <CANDIDATES original="irritated">
+      <CANDIDATE score="1">irrité</CANDIDATE>
+      <CANDIDATE score="0">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="roiled"/>
+    <CANDIDATES original="pissed">
+      <CANDIDATE score="0">allumé</CANDIDATE>
+      <CANDIDATE score="0">cramé</CANDIDATE>
+      <CANDIDATE score="0">pété</CANDIDATE>
+      <CANDIDATE score="0">bituré</CANDIDATE>
+      <CANDIDATE score="0">bourré</CANDIDATE>
+      <CANDIDATE score="0">blindé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="annoyed">
+      <CANDIDATE score="0">mécontent</CANDIDATE>
+      <CANDIDATE score="0">ennuyé</CANDIDATE>
+      <CANDIDATE score="1">irrité</CANDIDATE>
+      <CANDIDATE score="0">énervé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="steamed">
+      <CANDIDATE score="0">étouffée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nettled"/>
+    <CANDIDATES original="riled"/>
+    <CANDIDATES original="peeved">
+      <CANDIDATE score="0">en_rogne</CANDIDATE>
+      <CANDIDATE score="0">fâché</CANDIDATE>
+      <CANDIDATE score="1">irrité</CANDIDATE>
+      <CANDIDATE score="0">pointu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stung"/>
+    <CANDIDATES original="pissed_off"/>
+    <CANDIDATES original="miffed"/>
+  </SYNSET>
+  <SYNSET id="03149478">
+    <ORIGINALDEF/>
+    <CANDIDATES original="streaming">
+      <CANDIDATE score="1">ruisselant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="docked"/>
+  </SYNSET>
+  <SYNSET id="03152135">
+    <ORIGINALDEF/>
+    <CANDIDATES original="plugged"/>
+  </SYNSET>
+</VERITE>
