@@ -20,7 +20,7 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
     std::string synsetId = itwn.first;
     WORDNET::WordNetEntry wne = itwn.second;
 
-    std::map<POS, std::string> string_of_POS = {{POS::Noun, "n"}, {POS::Verb, "v"}, {POS::Adj, "a"}};
+    std::map<POS, std::string> string_of_POS = {{POS::Noun, "n"}, {POS::Verb, "v"}, {POS::Adj, "a"}, {POS::Adv, "b"}};
     std::string pos = string_of_POS[wne.pos];
 
     xmlpp::Element* synsetElem = wnElem->add_child("SYNSET");

@@ -1,7 +1,7 @@
 LDFLAGS     = -L/home/qp230782/externals/xerces-c-3.1.1/lib -L/home/qp230782/externals/icu-49/install/lib -L/home/qp230782/externals/boost_1_51_0/stage/lib -L/home/qp230782/externals/libxml++-1.0.4/install/lib -L/home/qp230782/externals/protobuf-2.4.1/install/lib -I/home/qp230782/externals/protobuf-2.4.1/install/include -licuuc -licudata -licui18n -lboost_system -lboost_regex -lboost_filesystem -lprotobuf -lpthread -lxml++-1.0 -pg
 CPPFLAGS    = -std=c++0x -Wall -Wextra -I../src -I/home/qp230782/externals/boost_1_51_0/ -I/home/qp230782/externals/icu-49/install/include -I/home/qp230782/externals/protobuf-2.4.1/install/include -I/home/qp230782/externals/libxml++-1.0.4/install/include/libxml++-1.0 -pg -O3
 
-all:	translateNouns translateVerbs translateAdjs evalJAWS-WOLF
+all:	translateNouns translateVerbs translateAdjs translateAdvs evalJAWS-WOLF
 
 COMMON_SRC = WordNet.cpp TranslatorModule.cpp distance.cpp levenshtein.cpp TypeRoler.cpp Loader.cpp DEBVisDicDumper.cpp Dumper.cpp ExtractorModule.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp LastChanceModule.cpp ../src/tools.cpp WolfHandler.cpp WolfOneHandler.cpp Tools.cpp EwnLoader.cpp MeroHoloLikeHyperModule.cpp BCSBaseHandler.cpp BestTranslations.cpp knn.pb.cc repository.pb.cc GoldHandler.cpp JawsHandler.cpp Options.cpp
 
@@ -32,6 +32,12 @@ translateAdjs: translateAdjs.o $(COMMON_OBJ) $(H_FILES)
 	$(CXX) -o translateAdjs translateAdjs.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
 
 translateAdjs.o : translateAdjs.cpp $(H_FILES)
+	$(CXX) $(CPPFLAGS) -c $*.cpp
+
+translateAdvs: translateAdvs.o $(COMMON_OBJ) $(H_FILES) 
+	$(CXX) -o translateAdvs translateAdvs.o $(COMMON_OBJ)  $(LDFLAGS) $(CPPFLAGS)
+
+translateAdvss.o : translateAdvs.cpp $(H_FILES)
 	$(CXX) $(CPPFLAGS) -c $*.cpp
 
 evalJAWS-WOLF: evalJAWS-WOLF.o $(COMMON_OBJ) $(H_FILES) 

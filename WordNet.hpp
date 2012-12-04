@@ -6,7 +6,7 @@
 #include <set>
 #include <map>
 
-enum class POS { Noun, Verb, Adj };
+enum class POS { Noun, Verb, Adj, Adv };
 
 namespace WORDNET {
 

@@ -38,7 +38,8 @@ void WolfOneHandler::on_end_element(const std::string &name) {
     if (literal != "_EMPTY_") {
       if ((pos == "noun" && PartOfSpeech == "n")
           || (pos == "verb" && PartOfSpeech == "v")
-          || (pos == "adj" && PartOfSpeech == "a")) {
+          || (pos == "adj" && PartOfSpeech == "a")
+          || (pos == "adv" && PartOfSpeech == "b")) {
         //cerr << "INSERT : " << literal << " -> " << id << endl;
         wolfNet[literal].insert(id);
         wolfNetIdIdent[id].insert(literal);

@@ -85,6 +85,7 @@ bool LoaderModule::validPos(string candidatePos) {
   if (pos == "noun") { return candidatePos == "S" || candidatePos == "NP"; }
   else if (pos == "verb") { return candidatePos == "V"; }
   else if (pos == "adj") { return candidatePos == "J"; }
+  else if (pos == "adv") { return candidatePos == "D"; }
   else { exit(-1); }
 }
 
@@ -194,6 +195,8 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
           ss.ignore();
         }
         ss.ignore();
+      } else if (pos == "adv") {
+        ss.ignore(256, 'r');
       }
       // read nbSyns as an hexadecimal number
       int nbSyns = 0xaa;

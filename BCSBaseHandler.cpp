@@ -37,9 +37,10 @@ void BcsbaseHandler::on_end_element(const std::string &name) {
   } else if (name == "POS") {
     PartOfSpeech = tmpString.str();
   } else if (name == "BCS") {
-    if((pos == "noun" && PartOfSpeech.compare("n") == 0)
-        || (pos == "verb" && PartOfSpeech.compare("v") == 0)
-        || (pos == "adj" && PartOfSpeech.compare("a") == 0)) {
+    if((pos == "noun" && PartOfSpeech == "n")
+        || (pos == "verb" && PartOfSpeech == "v")
+        || (pos == "adj" && PartOfSpeech == "a")
+        || (pos == "adv" && PartOfSpeech == "b")) {
       int bcs;
       tmpString >> bcs;
       bcsbase[sensemap[id]] = bcs;

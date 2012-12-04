@@ -16,13 +16,7 @@ void DumperModule::dump(WORDNET::WordNet& wn) {
   cerr << "Writing in " << datafile << endl;
   ofstream ofs(datafile.c_str(), ios_base::out | ios_base::trunc );
   ofs << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
-  if (datafile.find("noun")!=string::npos) {
-    ofs << "<JAWS pos=\"noun\">" << endl;
-  } else if (datafile.find("verb")!=string::npos) {
-    ofs << "<JAWS pos=\"verb\">" << endl;
-  } else if (datafile.find("adj")!=string::npos) {
-    ofs << "<JAWS pos=\"adj\">" << endl;
-  }
+  ofs << "<JAWS>" << endl;
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     ofs << "\t<SYNSET id=\""<< itwn->first <<"\">" << endl;
     ofs << "\t\t<ORIGINALDEF>" << "<![CDATA[" << itwn->second.def << "]]>" <<"</ORIGINALDEF>"<<endl;

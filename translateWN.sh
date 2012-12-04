@@ -14,7 +14,7 @@
 #    * logs/evalNounsBest.e123m12  # gold / normal
 #    * logs/evalNounsGBest.e123m12 # gold / best
 
-if [ "$1" != "noun" -a "$1" != "adj" -a "$1" != "verb" ]; then
+if [ "$1" != "noun" -a "$1" != "adj" -a "$1" != "verb" -a "$1" != "adv" ]; then
   echo "Usage: ./translateWN.sh pos --extract 1 2 4 --module 5 4 3"
   exit 255
 fi
@@ -83,9 +83,11 @@ if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
 echo "Evaluating..."
-./evalJAWS-WOLF $pos $seqs > log
+./evalJAWS-WOLF $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
+
+exit
 
 # Archive relevant files to our archive.
 echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."

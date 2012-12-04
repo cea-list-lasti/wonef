@@ -14,7 +14,7 @@
 */
 
 #define EURADIC "/data/text/FrameNetLUI/externals/dicfrenelda-utf8.txt"
-#define WIKTIONARY "/data/text/FrameNetLUI/Wiktionaires/frwiktionary-20090120-eldafmt.csv"
+#define WIKTIONARY "/data/text/quentin/opendata/frwiktionary-20090120-eldafmt.stripped.csv"
 
 const std::string DATAPATH = "/data/text/quentin";
 
@@ -47,6 +47,12 @@ const std::string DATA_ADJ20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.adj";
 const std::string DATA_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.DAT";
 const std::string ADJS_LIST = DATAPATH + "/POSlist/adjectifs.list";
 const std::string ADJS_LIST_F = DATAPATH + "/POSlist/adjectifs.filtered.list";
+
+const std::string DATA_ADV30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.adv";
+const std::string DATA_ADV20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.adv";
+const std::string DATA_ADV15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADV.DAT";
+const std::string ADVS_LIST = DATAPATH + "/POSlist/others.uniq.list";
+const std::string ADVS_LIST_F = DATAPATH + "/POSlist/others.uniq.filtered.list";
 
 #define KNNSTDFILE "/data/text/FastKNN/knnall/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt"
 #define KNNSTDDIR "/data/text/FastKNN/knnall/"

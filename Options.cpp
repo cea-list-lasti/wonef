@@ -102,6 +102,9 @@ Options::Options(std::string _pos, int argc, char **argv) {
           default: assert(false);
         }
         break;
+      case POS::Adv:
+        // TODO give best heuristics
+        break;
       default: assert(false);
     }
   }
@@ -118,6 +121,7 @@ std::string Options::getWN30Data(POS pos) {
     case POS::Noun: return DATA_NOUN30;
     case POS::Verb: return DATA_VERB30;
     case POS::Adj:  return DATA_ADJ30;
+    case POS::Adv:  return DATA_ADV30;
     default: assert(false);
   }
 }
