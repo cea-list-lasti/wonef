@@ -4,6 +4,7 @@
 #include "tools.h"
 #include "Tools.hpp"
 
+#include <boost/regex.hpp>
 #include <cassert>
 
 ExtractorModule::ExtractorModule(std::string _pos, const Options& _options)
@@ -99,21 +100,51 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
                 candidate = candidates.second.verbCand[candidate];
               }
 
-              /* Desaccentuation: using the faster method, which has been
-               * corrected using the Unicode-aware one. */
-              float ldScore = levenshtein(fastDesax(desaxData, candidate), srcWord);
-              // float ldScore = levenshtein(desaxUTF8(candidate), srcWord);
+              std::map<std::string, std::string> updates = {
+                // banque -> bank, casque -> cask, disque -> disk
+                {"que$", "k"},
+                // tertiaire -> tertiairy
+                {"aire$", "ary"},
+                // chercheur -> searcher
+                {"eur$", "er"},
+                // cajolerie -> cajolery
+                {"ie$", "y"},
+                // extremité -> extremity
+                {"té$", "ty"},
+                // ordre -> order, tigre -> tiger
+                {"re$", "er"},
+                {"aise$", "ese"}, {"ois$", "ese"},
+                {"ant$", "ent"}, {"ant$", "ing"},
 
-              float strSize = (srcWord.size() + candidate.size())/2;
+                {"er$", ""},
+                {"osis$", "ose"},
+                {"", ""}
+              };
 
-              if (opt.extractions.count(ExtractionType::Levenshtein) == 1) {
-                if (ldScore/strSize <= 0.15) {
-                  addInstance(wne.frenchSynset, "levenshtein", candidate, srcWord, ldScore/strSize);
+              for (auto it : updates) {
+                std::string transformedCand;
+                transformedCand = boost::regex_replace(candidate, boost::regex(it.first), it.second);
+                if (it.first != "" && transformedCand == candidate) {
+                  continue;
                 }
-              }
 
-              if (ldScore <= 3) {
-                wne.frenchCandidates[srcWord].cand[candidate]+=3-ldScore;
+                /* Desaccentuation: using the faster method, which has been
+                 * corrected using the Unicode-aware one. */
+                float ldScore = levenshtein(fastDesax(desaxData, transformedCand), srcWord);
+                // float ldScore = levenshtein(desaxUTF8(transformedCand), srcWord);
+
+                float strSize = (srcWord.size() + transformedCand.size())/2;
+
+                if (ldScore <= 3) {
+                  wne.frenchCandidates[srcWord].cand[candidate]+=3-ldScore;
+                }
+
+                if (opt.extractions.count(ExtractionType::Levenshtein) == 1) {
+                  if (ldScore/strSize <= 0.30) {
+                    addInstance(wne.frenchSynset, "levenshtein", candidate, srcWord, ldScore/strSize);
+                    break;
+                  }
+                }
               }
             }
         }

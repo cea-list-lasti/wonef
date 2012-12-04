@@ -67,7 +67,7 @@ Options::Options(std::string _pos, int argc, char **argv) {
       case POS::Noun:
         switch(mode) {
           case Mode::Precision:
-            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq};
+            extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::Levenshtein};
             break;
           case Mode::FScore:
           case Mode::Coverage:
