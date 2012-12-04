@@ -16,9 +16,9 @@ public:
               std::map<std::string, std::set<std::string> >& _goldNetIdIdent,
               std::map<std::pair<std::string, std::string>, int>& _goldValue);
 
-  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
-  void on_characters(const std::string& characters) override;
-  void on_end_element(const std::string &name) override;
+  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties);
+  void on_characters(const std::string& characters);
+  void on_end_element(const std::string &name);
 
 protected :
   uint nbSynsets;

@@ -14,9 +14,9 @@ public:
 
   BcsbaseHandler(map<string, int >& bcsbase, map<int, int>& BCSCount, string _pos);
 
-  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
-  void on_characters(const std::string& characters) override;
-  void on_end_element(const std::string &name) override;
+  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties);
+  void on_characters(const std::string& characters);
+  void on_end_element(const std::string &name);
 
 private :
   uint nbSynsets;

@@ -24,10 +24,10 @@ public :
 
   virtual ~JawsHandler() {}
 
-  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties) override;
-  void on_characters(const std::string& characters) override;
-  void on_end_element(const std::string &name) override;
-  void on_end_document() override;
+  void on_start_element(const std::string& name, const xmlpp::SaxParser::AttributeList& properties);
+  void on_characters(const std::string& characters);
+  void on_end_element(const std::string &name);
+  void on_end_document();
 
   std::ofstream& out;
 
@@ -100,6 +100,8 @@ protected :
   const std::map<std::string, int>& BCS;
   const std::map<int, int>& BCSCount;
   std::map<int, int> BCSJawsCount;
+
+  int totalType2;
 
 private:
   std::string get_attr(const xmlpp::SaxParser::AttributeList& attrs, std::string name);
