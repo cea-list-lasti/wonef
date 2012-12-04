@@ -127,7 +127,8 @@ int main(int argc, char **argv) {
 
   std::map<POS, std::string> groundTruth = {
     {POS::Noun, WOLF},
-    {POS::Verb, EWN},
+    //{POS::Verb, EWN},
+    {POS::Verb, WOLF},
     {POS::Adj, WOLF}};
 
   std::map<POS, std::string> goldFile = {
@@ -166,14 +167,6 @@ int main(int argc, char **argv) {
     ewnLoader.load();
     cerr << t.duration() << "s" << endl;
   }
-
-  std::ofstream log("logs/eval." + suffix, ios_base::out | ios_base::trunc);
-  parseAndEvaluatePolysemous(log, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent, spos, jaws, goldValue, false);
-
-  std::ofstream logBest("logs/eval.best." + suffix, ios_base::out | ios_base::trunc);
-  parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
-      vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
   */
 
   cerr << "Loading WOLF 1.0... ";
@@ -188,6 +181,20 @@ int main(int argc, char **argv) {
   goldHandler.parse_file(goldFile[pos]);
   cerr << t.duration() << "s" << endl;
 
+  /* Evaluate with WOLF 0.1.4 */
+  /*
+  std::cout << std::endl << "-- Evaluating with Wolf 0.1.4... --" << std::endl;
+  std::cout << std::endl << "                *** Normal ***" << std::endl;
+  std::ofstream log("logs/eval.wolfold." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(log, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent, spos, jaws, goldValue, false);
+
+  std::cout << std::endl << "                *** Filtered ***" << std::endl;
+  std::ofstream logBest("logs/eval.wolfold.best." + suffix, ios_base::out | ios_base::trunc);
+  parseAndEvaluatePolysemous(logBest, bcsbase, BCSCount, litList, polysemousIdsList,
+      vtNet, vtNetIdIdent, spos, bestJaws, goldValue, false);
+  */
+
   /* Then evaluate with WOLF 1.0 */
   std::cout << std::endl << "-- Evaluating with Wolf 1.0... --" << std::endl;
   std::cout << std::endl << "                *** Normal ***" << std::endl;
@@ -195,7 +202,7 @@ int main(int argc, char **argv) {
   parseAndEvaluatePolysemous(logWolfOne, bcsbase, BCSCount, litList, polysemousIdsList,
       wolf10Net, wolf10NetIdIdent, spos, jaws, goldValue, false);
 
-  std::cout << std::endl << "                *** Gold ***" << std::endl;
+  std::cout << std::endl << "                *** Filtered ***" << std::endl;
   std::ofstream logWolfOneBest("logs/eval.wolfone.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logWolfOneBest, bcsbase, BCSCount, litList, polysemousIdsList,
       wolf10Net, wolf10NetIdIdent, spos, bestJaws, goldValue, false);
@@ -207,7 +214,7 @@ int main(int argc, char **argv) {
   parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
       goldNet, goldNetIdIdent, spos, jaws, goldValue, true);
 
-  std::cout << std::endl << "                *** Gold ***" << std::endl;
+  std::cout << std::endl << "                *** Filtered ***" << std::endl;
   std::ofstream logGoldBest("logs/eval.gold.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
       goldNet, goldNetIdIdent, spos, bestJaws, goldValue, true);
