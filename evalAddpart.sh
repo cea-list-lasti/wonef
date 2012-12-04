@@ -27,7 +27,7 @@ function extract() {
   QUERY='addPart.xq.tmp'
   sed -i "s,INPUT,$PWD/$inputjaws," $QUERY
   sed -i "s/MODULE/$module/g" $QUERY
-  java -cp /home/pradet/bin/basex.jar org.basex.BaseX < $QUERY &> $outputjaws
+  java -cp /data/text/bin/basex.jar org.basex.BaseX < $QUERY &> $outputjaws
   rm $QUERY
 
   # Mise en forme du fichier de sortie (la partie additionnelle de JAWS)

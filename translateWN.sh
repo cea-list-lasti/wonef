@@ -83,16 +83,16 @@ if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
 echo "Evaluating..."
-./evalJAWS-WOLF $pos $seqs
+./evalJAWS-WOLF $pos $seqs > log
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
-gprof evalJAWS-WOLF > profiled.eval.$pos.$seqs
+gprof evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
 
 # Archive relevant files to our archive.
 echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
 
 tmpsubdir="${pos}__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/home/pradet/archives/$day
+archivedir=/home/qp230782/archives/$day
 
 mkdir -p $tmppath
 mkdir -p $archivedir
