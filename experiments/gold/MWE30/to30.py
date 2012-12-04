@@ -29,16 +29,18 @@ from xml.etree.ElementTree import ElementTree, Element
 import sys
 
 pos = sys.argv[1]
+infile = sys.argv[2]
+outfile = sys.argv[3]
 
 to30 = get_mapping(pos)
 defs = get_definitions(pos)
-GT = ElementTree(file="GT_%ss.xml" % pos)
+GT = ElementTree(file=infile)
 
 for synset in GT.findall("SYNSET"):
   synsetid = synset.get('id')
   if len(to30[synsetid]) != 1:
-    print(synsetid)
+    print(len(to30[synsetid]), synsetid)
   synset.set('id', ' '.join(to30[synsetid]))
-  synset.find('ORIGINALDEF').text = defs[synset.get('id')]
+  synset.find('ORIGINALDEF').text = ""
 
-GT.write("GT_%ss30.xml" % pos, encoding="UTF-8")
+GT.write(outfile, encoding="UTF-8")

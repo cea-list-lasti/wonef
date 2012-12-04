@@ -35,12 +35,13 @@ for jawssynset in jaws_complet.findall("SYNSET"):
       # Finally, we want to add the new translations
       for goldoriginal in goldsynset.findall("CANDIDATES"):
         jawsoriginalcandidates = [c.text for c in jawssynset.findall("CANDIDATES[@original=\"%s\"]/CANDIDATE" % goldoriginal.get('original'))]
+        goldscores = {c.text: c.get('score') for c in jawssynset.findall("CANDIDATES[@original=\"%s\"]/CANDIDATE" % goldoriginal.get('original'))}
         goldoriginalcandidates = [c.text for c in goldoriginal.findall("CANDIDATE")]
         print("  ", goldoriginal.get('original'), " --> ", goldoriginalcandidates, jawsoriginalcandidates)
         for candidate in set(jawsoriginalcandidates) - set(goldoriginalcandidates):
           print("  add candidate %s in original %s"
               % (candidate, goldoriginal.get('original')))
-          neworiginal = Element("CANDIDATE", valide='9')
+          neworiginal = Element("CANDIDATE", score=goldscores[candidate])
           neworiginal.text = candidate
           goldoriginal.append(neworiginal)
         # also remove outdated translations (if any)!
