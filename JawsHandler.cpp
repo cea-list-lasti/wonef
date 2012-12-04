@@ -28,7 +28,8 @@ JawsHandler::JawsHandler(std::ofstream& _out,
   totalPercentageTermsOkInSynset(0.0f), totalPercentagePolyTermsOkInSynset(0.0f), totalPercentageBcsTermsOkInSynset(0),
   polyLitList(_polyLitList), polyIdsList(_polyIdsList),
   vtNet(_vtNet), vtNetIdIdent(_vtNetIdIdent),
-  goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount) {
+  goldValue(_goldValue), gold (_gold), pos(_pos), BCS(_BCS), BCSCount(_BCSCount),
+  totalType2(0) {
 
   candidates = std::map<std::string, std::set<std::string > >();
 
@@ -78,6 +79,10 @@ void JawsHandler::on_start_element(const std::string& name, const xmlpp::SaxPars
     std::string score = get_attr(attrs, "score");
     transInfos.score = boost::lexical_cast<float>(score);
     wne.frenchSynset[translation].insert(transInfos);
+    // MWE expressions don't count for now
+    //if (translation.find("_") == std::string::npos) {
+    //  std::cout << "WONEF:" << id << ":" << translation << std::endl;
+    //}
   }
 
 }
@@ -117,6 +122,9 @@ void JawsHandler::on_end_element(const std::string &name){
     original = std::string();
 
   } else if (name == "INSTANCES") {
+    /* /!\ MWE expressions don't count for now
+     * But we would want them to!
+     */
     if (translation.find("_") != std::string::npos) { return; }
 
     // check if the translation comes from polysemous source terms
@@ -248,6 +256,7 @@ void JawsHandler::on_end_element(const std::string &name){
         // translations in Jaws not in GT
         } else {
           type2.insert(jawsTerm);
+          totalType2++;
         }
       }
       // translations in GT not in Jaws
@@ -369,9 +378,11 @@ void JawsHandler::on_end_document() {
 
   out << "\t\t*** All " + terms + " ***" << std::endl;
   out << "nb" + terms + "InJaws :\t\t\t" << nbTermsInJaws << std::endl;
-  out << "In synsets known by GT :\t" << nbInJawsSynsetInGt << std::endl;
+  out << "Denominator for precision :\t" << nbInJawsSynsetInGt << std::endl;
+  out << "Denominator for recall :\t" << nbTermsInGtAndAJawsSynset << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbTermsOk << std::endl;
+  out << "Missing " << terms << " in GT:\t\t" << totalType2 << std::endl;
   out << "Precision :\t\t\t" << allPrecision*100 << "%" << std::endl;
   out << "Average pseudo precision :\t" << averagePseudoPrec*100 << "%"  << std::endl;
   out << "Pseudo precision :\t\t" << allPseudoPrec*100 << "%"  << std::endl;
@@ -381,7 +392,8 @@ void JawsHandler::on_end_document() {
 
   out << "\t\t*** Polysemous ***" << std::endl;
   out << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << std::endl;
-  out << "In synsets known by GT :\t" << nbPolyInJawsSynsetInGt << std::endl;
+  out << "Denomiator for precision :\t" << nbPolyInJawsSynsetInGt << std::endl;
+  out << "Denominator for recall :\t" << nbPolyTermsInGtAndAJawsSynset << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << std::endl;
   out << "Precision :\t\t\t" << polyPrecision*100 << "%" << std::endl;
@@ -393,7 +405,8 @@ void JawsHandler::on_end_document() {
 
   out << "\t\t*** BCS ***" << std::endl;
   out << "nb" + terms + "InJaws :\t\t\t" << nbBcsTermsInJaws << std::endl;
-  out << "In synsets known by GT :\t" << nbBcsInJawsSynsetInGt << std::endl;
+  out << "Denominator for precision :\t" << nbBcsInJawsSynsetInGt << std::endl;
+  out << "Denominator for recall :\t" << nbBcsTermsInGtAndAJawsSynset << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbBcsTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbBcsTermsOk << std::endl;
   out << "Precision :\t\t\t" << bcsPrecision*100 << "%" << std::endl;
@@ -419,14 +432,19 @@ void JawsHandler::on_end_document() {
   for(std::ostream* logTo: logs) {
     *logTo << "           All " << std::setw(5) << terms << "           Polysemous              BCS" << std::endl;
 
-    *logTo << std::setw(5) << terms << ":  ";
-    *logTo << std::setw(6) << nbTermsInJaws << " - " << std::setw(5) << coverageWN*100 << "%" << "     ";
-    *logTo << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << "     ";
-    *logTo << std::setw(6) << nbBcsTermsInJaws << " - " << std::setw(5) << bcscoverWN*100 << "%" << std::endl;
+    *logTo << std::setw(5) << terms << ":   ";
+    *logTo << std::setw(6) << nbTermsInJaws     << " - " << std::setw(5) << coverageWN*100  << "%" << " - " << std::setw(4) << nbInJawsSynsetInGt << "     ";
+    *logTo << std::setw(6) << nbPolyTermsInJaws << " - " << std::setw(5) << polycoverWN*100 << "%" << " - " << std::setw(4) << nbPolyInJawsSynsetInGt << "     ";
+    *logTo << std::setw(6) << nbBcsTermsInJaws  << " - " << std::setw(5) << bcscoverWN*100  << "%" << " - " << std::setw(4) << nbBcsInJawsSynsetInGt << std::endl;
 
-    *logTo << "P/R:    ";
-    *logTo << std::setw(5) << allPseudoPrec * 100 << "% / " << std::setw(5) << allRecGt * 100 << "%" << "     ";
-    *logTo << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "%" << "     ";
-    *logTo << std::setw(5) << bcsPseudoPrec * 100 << "% / " << std::setw(5) << bcsRecGt * 100 << "%" << std::endl;
+    *logTo << "P/R/F1:  ";
+    *logTo << std::setw(5) << allPseudoPrec * 100  << "% / " << std::setw(5) << allRecGt * 100  << "% / " << std::setw(5) << allF1 * 100  << "%     ";
+    *logTo << std::setw(5) << polyPseudoPrec * 100 << "% / " << std::setw(5) << polyRecGt * 100 << "% / " << std::setw(5) << polyF1 * 100 << "%     ";
+    *logTo << std::setw(5) << bcsPseudoPrec * 100  << "% / " << std::setw(5) << bcsRecGt * 100  << "% / " << std::setw(5) << bcsF1 * 100  << "%" << std::endl;
   }
+/* Used to put results in LaTeX */
+  std::cout
+    << allPseudoPrec * 100  << "& " << allRecGt * 100  << "& " << nbTermsInJaws     << "&     "
+    << polyPseudoPrec * 100 << "& " << polyRecGt * 100 << "& " << nbPolyTermsInJaws << "&     "
+    << bcsPseudoPrec * 100  << "& " << bcsRecGt * 100  << "& " << nbBcsTermsInJaws  << "&" << std::endl;
 }
