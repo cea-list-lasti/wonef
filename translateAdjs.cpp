@@ -27,6 +27,7 @@ int main(int argc, char **argv) {
   LastChanceModule* lastchancer= NULL;
 
   string pos = "adj";
+  WORDNET::pos = WORDNET::POS_of_string[pos];
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;

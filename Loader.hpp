@@ -37,6 +37,7 @@ private:
   void addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,
     const std::string& processed, const std::string& translation,
     const std::string& original, int score);
+  std::pair<std::string, std::vector<std::string>> readUsages(std::string s);
 };
 
 

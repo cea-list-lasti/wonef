@@ -153,7 +153,6 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   return res;
 }
 
-
 WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
   WORDNET::WordNet wn;
@@ -248,11 +247,12 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
       }
 
+      std::string buff = ss.str();
+      auto defusages = readUsages(buff.substr(buff.rfind('|')+1));
+      wne.def = defusages.first;
+      wne.usages = defusages.second;
 
-      char buff[2048];
-      ss.getline( buff, 2048);
-      wne.def=buff;
-      wne.def=wne.def.substr(wne.def.rfind('|')!=string::npos?(wne.def.rfind('|')+1):wne.def.length());
+
       wn[synsetId]=wne;
       cnt++;
 
@@ -261,5 +261,36 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
 
   dataIfs.close();
   return wn;
+}
+
+std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::string s) {
+  std::stringstream defusages(s);
+  std::string def;
+  std::vector<std::string> usages;
+
+  // read def
+  // (evil trick: we're checking for good() after peeking on purpose)
+  while (defusages.peek() != ';' && defusages.good()) {
+    def += defusages.get();
+  }
+
+  // read usages
+  while (defusages.good()) {
+    std::string usage;
+    defusages.ignore(100, '"');
+
+    while(defusages.good() && defusages.peek() != '"') {
+      usage += defusages.get();
+    }
+
+    if (usage.empty()) {
+      break;
+    }
+    usages.push_back(usage);
+    defusages.ignore(1, '"');
+    defusages.get();
+  }
+
+  return make_pair(def, usages);
 }
 

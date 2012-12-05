@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
   Timer globalTimer;
 
   string pos = "noun";
+  WORDNET::pos = WORDNET::POS_of_string[pos];
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;

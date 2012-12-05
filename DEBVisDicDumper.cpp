@@ -1,8 +1,11 @@
 #include "DEBVisDicDumper.hpp"
+#include "BCSBaseHandler.hpp"
 #include "tools.h"
+#include "Paths.hpp"
 
 #include <libxml++/libxml++.h>
 #include <boost/algorithm/string/trim.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include <iostream>
 
@@ -10,18 +13,24 @@
 void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
   std::cerr << "Writing in " << datafile << std::endl;
 
+  std::string spos = WORDNET::string_of_POS[WORDNET::pos];
+
+  std::map<string,int> bcsbase;
+  std::map<int,int> BCSCount;
+  BcsbaseHandler bcsbaseHandler(bcsbase, BCSCount, spos);
+  bcsbaseHandler.parse_file(BCSFILE);
+
   xmlpp::Document document;
   document.set_internal_subset("WN", "", "debvisdic-strict.dtd");
 
   xmlpp::Element* wnElem = document.create_root_node("WN", "", "");
-  wnElem->set_attribute("pos", "somepos", "");
+  wnElem->set_attribute("pos", spos, "");
 
   for (const auto& itwn : wn) {
     std::string synsetId = itwn.first;
     WORDNET::WordNetEntry wne = itwn.second;
 
-    std::map<POS, std::string> string_of_POS = {{POS::Noun, "n"}, {POS::Verb, "v"}, {POS::Adj, "a"}, {POS::Adv, "b"}};
-    std::string pos = string_of_POS[wne.pos];
+    std::string pos = WORDNET::BalkaNet_string_of_POS[wne.pos];
 
     xmlpp::Element* synsetElem = wnElem->add_child("SYNSET");
 
@@ -50,13 +59,19 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
       }
     }
 
-
     synsetElem->add_child("DEF")->set_child_text(boost::trim_copy(wne.def));
-    synsetElem->add_child("BCS")->set_child_text("3");
+    for(auto usage: wne.usages) {
+      synsetElem->add_child("USAGE")->set_child_text(usage);
+    }
+
+    if (bcsbase.find(synsetId) != bcsbase.end()) {
+      synsetElem->add_child("BCS")->set_child_text(boost::lexical_cast<string>(bcsbase[synsetId]));
+    }
+
     synsetElem->add_child("POS")->set_child_text(pos);
   }
 
-  document.write_to_file_formatted(datafile);
+  document.write_to_file_formatted(datafile, "UTF-8");
 
 }
 

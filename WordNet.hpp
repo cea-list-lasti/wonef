@@ -36,6 +36,7 @@ typedef struct WordNetEntry {
   //  std::string synsetId;
   POS pos;
   std::string def;
+  std::vector<std::string> usages;
   std::string newdef;
   std::set<std::string> hypos;
   std::set<std::string> hypers;
@@ -55,6 +56,9 @@ typedef std::map<std::string, WordNetEntry> WordNet;
 typedef std::map<std::string, std::set<std::string> > WordNetIndex;
 
 extern std::map<std::string, POS> POS_of_string;
+extern std::map<POS, std::string> string_of_POS;
+extern std::map<POS, std::string> BalkaNet_string_of_POS;
+extern POS pos;
 
 }
 
