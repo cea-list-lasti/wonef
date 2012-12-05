@@ -103,7 +103,7 @@ Options::Options(std::string _pos, int argc, char **argv) {
         }
         break;
       case POS::Adv:
-        // TODO give best heuristics
+        extractions = {ExtractionType::Monosemous, ExtractionType::Uniq, ExtractionType::MultipleSource, ExtractionType::Levenshtein};
         break;
       default: assert(false);
     }

@@ -445,8 +445,10 @@ void JawsHandler::on_end_document() {
     *logTo << std::setw(5) << bcsPseudoPrec * 100  << "% / " << std::setw(5) << bcsRecGt * 100  << "% / " << std::setw(5) << bcsF1 * 100  << "%" << std::endl;
   }
 /* Used to put results in LaTeX */
+/*
   std::cout
     << allPseudoPrec * 100  << "& " << allRecGt * 100  << "& " << nbTermsInJaws     << "&     "
     << polyPseudoPrec * 100 << "& " << polyRecGt * 100 << "& " << nbPolyTermsInJaws << "&     "
     << bcsPseudoPrec * 100  << "& " << bcsRecGt * 100  << "& " << nbBcsTermsInJaws  << "&" << std::endl;
+*/
 }

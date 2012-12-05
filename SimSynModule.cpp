@@ -30,6 +30,10 @@ SimSynModule::SimSynModule(string _pos, int idModuleConf, int nIteration, bool _
     rels.push_back("SUBADJPOST");
     rels.push_back("ADVADJ.reverse");
     rels.push_back("ATB_SG");
+  } else if (pos == "adv") {
+    //rels.push_back("AdvVerbe");
+    rels.push_back("AdvSub.reverse");
+    rels.push_back("ADVADJ.reverse");
   }
 
   loadKnnDistsCache();
@@ -63,7 +67,8 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
     maximumValue = 7273;
   } else if (pos == "adj") {
     maximumValue = 4700;
-
+  } else if (pos == "adv") {
+    maximumValue = 6000;
   }
 
   set<pair<string, size_t> > elected;
