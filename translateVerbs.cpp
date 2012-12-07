@@ -27,8 +27,8 @@ int main(int argc, char **argv) {
   HyperHypoModule* hyperhypoer= NULL;
   LastChanceModule* lastchancer= NULL;
 
-  WORDNET::pos = WORDNET::POS_of_string[pos];
   string pos = "verb";
+  WORDNET::pos = WORDNET::POS_of_string[pos];
   Options options(pos, argc, argv);
 
   cout << "Init " << options.suffix << endl;
