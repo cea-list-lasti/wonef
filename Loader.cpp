@@ -268,26 +268,26 @@ std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::s
   std::vector<std::string> usages;
 
   // read def
-  // (evil trick: we're checking for good() after peeking on purpose)
-  while (defusages.peek() != ';' && defusages.good()) {
+  while ((def.size() < 3 || def.substr(def.size()-3) != "; \"") && defusages.peek() != -1) {
     def += defusages.get();
   }
+  // work that should be done by the regex: if we indeed have stopped because of '; "', remove it
+  if (def.substr(def.size() - 3) == "; \"") {
+    def = def.substr(0, def.size()-3);
+  }
+  boost::trim(def);
 
   // read usages
-  while (defusages.good()) {
+  while (defusages.peek() != -1) {
     std::string usage;
-    defusages.ignore(100, '"');
 
     while(defusages.good() && defusages.peek() != '"') {
       usage += defusages.get();
     }
-
-    if (usage.empty()) {
-      break;
-    }
     usages.push_back(usage);
-    defusages.ignore(1, '"');
+
     defusages.get();
+    defusages.ignore(5, '"');
   }
 
   return make_pair(def, usages);
