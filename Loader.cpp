@@ -200,6 +200,7 @@ WORDNET::WordNet LoaderModule::load() {
       int nbSyns = 0xaa;
       ss >> hex >> nbSyns ;
 
+      /* Read literals */
       for (int i = 0; i < nbSyns; i++) {
         ss.ignore(1, ' ') ;
         string srcWord;
@@ -246,6 +247,18 @@ WORDNET::WordNet LoaderModule::load() {
 
       }
 
+      /* Read lexical relations */
+      int nbRels = 0;
+      ss >> dec >> nbRels;
+
+      for(int i = 0; i < nbRels; i++) {
+        std::string relation, synset, pos, num;
+        ss >> relation >> synset >> pos >> num;
+
+        wne.ilr[WORDNET::ILR_of_code[relation]].insert("eng-30-" + synset + "-" + pos);
+      }
+
+      /* Read defs and usage */
       std::string buff = ss.str();
       auto defusages = readUsages(buff.substr(buff.rfind('|')+1));
       wne.def = defusages.first;
@@ -260,6 +273,11 @@ WORDNET::WordNet LoaderModule::load() {
 
   dataIfs.close();
   return wn;
+}
+
+void transfer_one(std::stringstream &defusages, std::string& usage) {
+  assert(defusages.peek() != -1 && defusages.good());
+  usage += defusages.get();
 }
 
 std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::string s) {
@@ -281,14 +299,88 @@ std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::s
   while (defusages.peek() != -1) {
     std::string usage;
 
-    while(defusages.good() && defusages.peek() != '"') {
-      usage += defusages.get();
+    // one usage between quotes (eg. "long-toed")
+    while (defusages.peek() != '"' && defusages.peek() != ';' && defusages.peek() != ':' && defusages.good()) {
+readquote:
+      transfer_one(defusages, usage);
     }
-    usages.push_back(usage);
+
+    // end quote of one usage could be missing (eg. "long-toed; "five-toed")
+    if (defusages.peek() == ';') {
+      defusages.get();
+      defusages.get();
+      char peeked = defusages.peek();
+      defusages.unget();
+      defusages.unget();
+
+      if (peeked != '"') { goto readquote; }
+    }
+
+    // end quote could be ':'
+    if (defusages.peek() == ':') {
+      defusages.get();
+      if(defusages.peek() != ';') {
+        goto readquote;
+      }
+      defusages.unget();
+    }
 
     defusages.get();
-    defusages.ignore(5, '"');
+
+    // quote/paren inversion: "at the time appointed (or the appointed time")
+    if (defusages.peek() == ')') {
+      // check if previous char was indeed a quote
+      defusages.unget();
+      assert(defusages.peek() == '"');
+      defusages.get();
+
+      // advance
+      defusages.get();
+      usage =+ ")";
+    }
+
+    // authors citations
+    if (defusages.peek() == '-') {
+      while(defusages.peek() != ';' && defusages.good()) {
+        transfer_one(defusages, usage);
+      }
+    }
+
+    // special case: car"women
+    if (defusages.peek() == 'w') {
+      std::string tmp;
+      defusages >> tmp;
+      assert(tmp == "women");
+      break;
+    }
+
+    // errors in separators
+    assert(defusages.eof() || defusages.peek() == ' ' || defusages.peek() == ';' || defusages.peek() == ',' || defusages.peek() == ':' || defusages.peek() == '.');
+
+    while (defusages.peek() != '"' && defusages.peek() != '(' && defusages.good()) {
+      defusages.ignore();
+    }
+
+    // additional informations
+    if (defusages.peek() == '(') {
+      usage += " ";
+      while(defusages.peek() != ')') {
+        transfer_one(defusages, usage);
+      }
+      usage += ")";
+
+    }
+
+    // ignore everything up to the next quote
+    while(defusages.peek() != '"' && defusages.good()) { defusages.ignore(); }
+    // and the quote itself!
+    defusages.ignore();
+
+    usages.push_back(usage);
+
+
   }
+
 
   return make_pair(def, usages);
 }

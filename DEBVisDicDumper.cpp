@@ -35,16 +35,17 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
     xmlpp::Element* synsetElem = wnElem->add_child("SYNSET");
 
     /* links between synsets */
-    std::multimap<std::string, std::string> ilrs;
-    for(const std::string& it : wne.meros)  { ilrs.insert(std::make_pair("meronym", it)); }
-    for(const std::string& it : wne.hypos)  { ilrs.insert(std::make_pair("hyponym", it)); }
-    for(const std::string& it : wne.hypers) { ilrs.insert(std::make_pair("hyperonym", it)); }
-    for(const std::string& it : wne.hypos)  { ilrs.insert(std::make_pair("hyponym", it)); }
+    for (const auto& it: wne.ilr) {
+      std::string relation_name = it.first;
+      if (WORDNET::child_relations.count(relation_name) == 1) {
+        continue;
+      }
 
-    for(const auto& it: ilrs) {
-      xmlpp::Element* ilrElem = synsetElem->add_child("ILR");
-      ilrElem->set_child_text(it.second);
-      ilrElem->set_attribute("type", it.first);
+      for (const auto& ilrSynsetId: it.second) {
+        xmlpp::Element* ilrElem = synsetElem->add_child("ILR");
+        ilrElem->set_child_text(ilrSynsetId);
+        ilrElem->set_attribute("type", relation_name);
+      }
     }
 
     synsetElem->add_child("ID")->set_child_text("eng-30-" + synsetId + "-" + pos);

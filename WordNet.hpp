@@ -42,6 +42,7 @@ typedef struct WordNetEntry {
   std::set<std::string> hypers;
   std::set<std::string> meros;
   std::set<std::string> holos;
+  std::map<std::string, std::set<std::string>> ilr;
   int nbCandidates;
   /* Kept translations */
   std::map<std::string, std::set<TranslationInfos> > frenchSynset;
@@ -58,6 +59,8 @@ typedef std::map<std::string, std::set<std::string> > WordNetIndex;
 extern std::map<std::string, POS> POS_of_string;
 extern std::map<POS, std::string> string_of_POS;
 extern std::map<POS, std::string> BalkaNet_string_of_POS;
+extern std::map<std::string, std::string> ILR_of_code;
+extern std::set<std::string> child_relations;
 extern POS pos;
 
 }
