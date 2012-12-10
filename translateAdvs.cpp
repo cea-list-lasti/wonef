@@ -4,6 +4,7 @@
 #include "Options.hpp"
 #include "Loader.hpp"
 #include "Dumper.hpp"
+#include "DEBVisDicDumper.hpp"
 #include "Timer.hpp"
 
 #include "SimSynModule.hpp"
@@ -67,6 +68,7 @@ int main(int argc, char **argv) {
   t.start();
   DumperModule dumperBest("data/jaws.best.adv" + options.suffix + ".xml");
   dumperBest.dump(wn);
+  DEBVisDicDumperModule("data/jaws.best.adv" + options.suffix + ".deb.xml").dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 
 

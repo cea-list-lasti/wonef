@@ -3,6 +3,7 @@
 #include "Options.hpp"
 #include "Paths.hpp"
 #include "Loader.hpp"
+#include "DEBVisDicDumper.hpp"
 #include "Dumper.hpp"
 #include "Timer.hpp"
 
@@ -140,6 +141,7 @@ int main(int argc, char **argv) {
   t.start();
   DumperModule dumperBest("data/jaws.best.verb" + options.suffix + ".xml");
   dumperBest.dump(wn);
+  DEBVisDicDumperModule("data/jaws.best.verb" + options.suffix + ".deb.xml").dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 
 
