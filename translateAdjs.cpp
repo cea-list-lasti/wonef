@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
   Timer t;
   cout << "Loading... ";
   LoaderModule loader(options.datafile, ADJS_LIST, pos);
-  WORDNET::WordNet wn = loader.load(false, -1); // verbose false
+  WORDNET::WordNet wn = loader.load();
   cout << t.duration() << "s" << endl;
 
   t.start();

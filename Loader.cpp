@@ -153,7 +153,7 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   return res;
 }
 
-WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
+WORDNET::WordNet LoaderModule::load() {
 
   WORDNET::WordNet wn;
 
@@ -173,9 +173,8 @@ WORDNET::WordNet LoaderModule::load(bool /*verbose*/, int notmore) {
   int cnt = 0;
   string s = "";
   cerr << infile << endl;
-  cerr << "cnt : " << cnt <<"/"<< notmore << endl;
 
-  while (getline(dataIfs, s)  && (cnt < notmore || notmore==-1)) {
+  while (getline(dataIfs, s)) {
     WORDNET::WordNetEntry wne;
     wne.pos = WORDNET::POS_of_string[pos];
     wne.nbCandidates = 0;

@@ -17,7 +17,7 @@ class LoaderModule {
   static WORDNET::WordNetIndex WNIndex;
 
 
-  WORDNET::WordNet load(bool verbose, int notmore) ;
+  WORDNET::WordNet load();
 
 private:
   map<string, set<string> > src2Tgt;
