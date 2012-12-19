@@ -37,10 +37,12 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
     /* links between synsets */
     for (const auto& it: wne.ilr) {
       std::string relation_name = it.first;
+      /* Too many child relations: DEBVisDic avoids them */
       if (WORDNET::child_relations.count(relation_name) == 1) {
         continue;
       }
 
+      /* Relation to ilrSynsetId with type relation_name */
       for (const auto& ilrSynsetId: it.second) {
         xmlpp::Element* ilrElem = synsetElem->add_child("ILR");
         ilrElem->set_child_text(ilrSynsetId);
@@ -48,27 +50,46 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
       }
     }
 
+    /* IDs include WordNet version and part-of-speech */
     synsetElem->add_child("ID")->set_child_text("eng-30-" + synsetId + "-" + pos);
 
+    /* Every literal, or _EMPTY_ if the synset isn't translated */
     xmlpp::Element* synonymElem = synsetElem->add_child("SYNONYM");
     if (wne.frenchSynset.empty()) {
       synonymElem->add_child("LITERAL")->set_child_text("_EMPTY_");
     } else {
-      for (const auto& itwne : wne.frenchSynset) {
-        std::string escaped_translation = escape_xml(itwne.first);
-        synonymElem->add_child("LITERAL")->set_child_text(escaped_translation);
+      for (const auto& itfs : wne.frenchSynset) {
+        std::string escaped_translation = escape_xml(itfs.first);
+        xmlpp::Element* literalElem = synonymElem->add_child("LITERAL");
+        literalElem->set_child_text(escaped_translation);
+
+        std::map<std::string, float> scores;
+        /* Group scores by processor module */
+        for (const auto& ittranslationinfo: itfs.second) {
+          scores[ittranslationinfo.processed] += ittranslationinfo.score;
+        }
+
+        std::string lnote;
+        for (const auto& itscore: scores) {
+          lnote += "wonef-" + itscore.first + "(" + boost::lexical_cast<std::string>(itscore.second) + ")" + ";";
+        }
+        lnote.erase(lnote.size()-1); // removes the extra ";" at the end
+        literalElem->set_attribute("lnote", lnote);
       }
     }
 
+    /* definition and usage */
     synsetElem->add_child("DEF")->set_child_text(boost::trim_copy(wne.def));
     for(auto usage: wne.usages) {
       synsetElem->add_child("USAGE")->set_child_text(usage);
     }
 
+    /* Is it in a Basic Concept Set? */
     if (bcsbase.find(synsetId) != bcsbase.end()) {
       synsetElem->add_child("BCS")->set_child_text(boost::lexical_cast<string>(bcsbase[synsetId]));
     }
 
+    /* part-of-speech */
     synsetElem->add_child("POS")->set_child_text(pos);
   }
 
