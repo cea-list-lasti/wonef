@@ -113,20 +113,16 @@ int main(int argc, char **argv) {
   }
 
   cout << "Print Index  " << endl;
-  t.start();
-  DumperModule dumper("data/jaws.noun" + options.suffix + ".xml");
-  dumper.dump(wn);
+  DumperModule("data/jaws.noun" + options.suffix + ".xml").dump(wn);
+  DEBVisDicDumperModule("data/jaws.noun" + options.suffix + ".deb.xml").dump(wn);
   cout << "Print index duration : " << t.duration() << "s" << endl;
 
   cout << "Choose best translations" << endl;
-  t.start();
   BestTranslations(options).choose(wn);
   cout << "Choice duration : " << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;
-  t.start();
-  DumperModule dumperBest("data/jaws.best.noun" + options.suffix + ".xml");
-  dumperBest.dump(wn);
+  DumperModule("data/jaws.best.noun" + options.suffix + ".xml").dump(wn);
   DEBVisDicDumperModule("data/jaws.best.noun" + options.suffix + ".deb.xml").dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 

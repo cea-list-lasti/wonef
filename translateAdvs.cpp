@@ -54,20 +54,16 @@ int main(int argc, char **argv) {
   }
 
   cout << "Dumping Jaws...";
-  t.start();
-  DumperModule dumper("data/jaws.adv" + options.suffix + ".xml");
-  dumper.dump(wn);
+  DumperModule("data/jaws.adv" + options.suffix + ".xml").dump(wn);
+  DEBVisDicDumperModule("data/jaws.adv" + options.suffix + ".deb.xml").dump(wn);
   cout << t.duration() << "s" << endl;
 
   cout << "Choosing best translations...";
-  t.start();
   BestTranslations(options).choose(wn);
   cout << t.duration() << "s" << endl;
 
   cout << "Print best JAWS" << endl;
-  t.start();
-  DumperModule dumperBest("data/jaws.best.adv" + options.suffix + ".xml");
-  dumperBest.dump(wn);
+  DumperModule("data/jaws.best.adv" + options.suffix + ".xml").dump(wn);
   DEBVisDicDumperModule("data/jaws.best.adv" + options.suffix + ".deb.xml").dump(wn);
   cout << "Printing best JAWS duration : " << t.duration() << "s" << endl;
 
