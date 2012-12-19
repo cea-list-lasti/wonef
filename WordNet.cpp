@@ -29,11 +29,14 @@ namespace WORDNET {
     {"@i", "instance_hypernym"},
     {"!", "near_antonym"},
     {"\\", "derived"},
-    {";c", "category_domain"},
     {"^", "also_sees"},
     {"$", "verb_group"},
+    {";c", "category_domain"},
     {";r", "region_domain"},
     {";u", "usage_domain"},
+    {"-c", "category_domain_term"},
+    {"-r", "region_domain_term"},
+    {"-u", "usage_domain_term"},
     {"#s", "holo_portion"},
     {">", "causes"},
     {"<", "participle"},
@@ -53,7 +56,10 @@ namespace WORDNET {
     "substance_holonym",
     "member_meronym",
     "substance_meronym",
-    "part_meronym"};
+    "part_meronym",
+    "category_domain_term",
+    "region_domain_term",
+    "usage_domain_term"};
 
   POS pos;
 }
