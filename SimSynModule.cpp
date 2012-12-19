@@ -62,11 +62,11 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
   size_t maximumValue = 0;
   // TODO need to learn again when more data available and the algorithm is fixed.
   if (pos == "verb") {
-    maximumValue = 6006;
+    maximumValue = 7704;
   } else if (pos == "noun") {
-    maximumValue = 7273;
+    maximumValue = 7600;
   } else if (pos == "adj") {
-    maximumValue = 4700;
+    maximumValue = 4710;
   } else if (pos == "adv") {
     maximumValue = 6000;
   }
