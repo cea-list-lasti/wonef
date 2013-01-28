@@ -77,6 +77,15 @@ void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
         literalElem->set_attribute("lnote", lnote);
       }
     }
+   /* Temporary solution to display candidates */
+   /*
+   for (const auto& itfc: wne.frenchCandidates) {
+     for (const auto& itcand: itfc.second.cand) {
+       synonymElem->add_child("CANDIDATE")->set_child_text(itcand.first);
+     }
+   }
+   */
+
 
     /* definition and usage */
     synsetElem->add_child("DEF")->set_child_text(boost::trim_copy(wne.def));
