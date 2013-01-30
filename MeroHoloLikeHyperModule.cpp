@@ -101,7 +101,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	translationInfos.processed = "hyperlike" + suffix;
 	translationInfos.score = elected.second;
 	itwn->second.frenchSynset[elected.first].insert(translationInfos);
-	itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected.first];
+	itwn->second.newdef=Dictionaries::definition[elected.first];
 	if (verbose) {
 	  cerr << "ELECTED : " << elected.first << " score : " << translationInfos.score << endl;
 	}

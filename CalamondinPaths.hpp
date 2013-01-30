@@ -1,6 +1,8 @@
 #ifndef PATHS_HPP
 #define PATHS_HPP
 
+#include <string>
+
 //#define CONVFILE "/data/text/FastKNN/bases/semmapconversion.global.bin"
 //#define DICFILE "/data/text/FrameNetLUI/externals/dicfrenelda-utf8.txt"
 /*#define INDEX_NOUN "/data/text/WordNet-3.0/dict/index.nounk"

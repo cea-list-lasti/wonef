@@ -240,7 +240,7 @@ string MeroHoloModule::trySelecAndReplace(const WORDNET::WordNet& wn, string syn
       translationInfos.score = itElec.second;
       wne.frenchSynset[itElec.first].insert(translationInfos);
     }
-    return LoaderModule::tgt2TgtDefs[elected.begin()->first];
+    return Dictionaries::definition[elected.begin()->first];
   }
   return "";
 }

@@ -252,7 +252,7 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
         translationInfos.processed = "hyperhypo" + suffix;
         translationInfos.score = best;
         itwn->second.frenchSynset[elected].insert(translationInfos);
-        itwn->second.newdef=LoaderModule::tgt2TgtDefs[elected];
+        itwn->second.newdef=Dictionaries::definition[elected];
         nbDisamb++;
       }
     }

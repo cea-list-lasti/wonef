@@ -5,7 +5,6 @@
 #include <fstream>
 #include <boost/regex.hpp>
 #include <boost/algorithm/string.hpp>
-#include <boost/algorithm/string/split.hpp>
 #include <cassert>
 
 #include <cstdlib>
@@ -14,15 +13,13 @@ using namespace std;
 
 
 set<string> LoaderModule::posList;
-map<string, string> LoaderModule::tgt2TgtDefs;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
 LoaderModule::LoaderModule(string _infile, string posfile, string _pos) :
-  pos(_pos), infile(_infile) {
+  pos(_pos), infile(_infile), dictionaries(_pos) {
     cerr << "Loading...  " << endl;
     LoaderModule::loadPOSList(posfile);
-    LoaderModule::loadBilingualDic();
     LoaderModule::loadIndex();
     cerr << "... Loaded!" << endl;
   }
@@ -81,51 +78,6 @@ void LoaderModule::loadPOSList(string posFile) {
   idss.close();
 }
 
-bool LoaderModule::validPos(string candidatePos) {
-  if (pos == "noun") { return candidatePos == "S" || candidatePos == "NP"; }
-  else if (pos == "verb") { return candidatePos == "V"; }
-  else if (pos == "adj") { return candidatePos == "J"; }
-  else if (pos == "adv") { return candidatePos == "D"; }
-  else { exit(-1); }
-}
-
-void LoaderModule::loadBilingualDic() {
-
-  std::set<std::string> dicfiles{EURADIC, WIKTIONARY};
-
-  for (std::string dicfile : dicfiles) {
-    cerr << "Opening "<< dicfile << endl;
-    ifstream idss(dicfile, fstream::in);
-    if (idss.fail()) {
-      cerr << "Oops, " << dicfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
-      exit(-1);
-    }
-    string s;
-
-    while (getline(idss, s) ) {
-      s=boost::regex_replace(s, boost::regex(" "), "_");
-
-      vector<string> strs;
-      boost::split(strs, s, boost::is_any_of(";"));
-
-      string tgtWord = strs[0];
-      string tgtPos = strs[1];
-      string srcWord = strs[3];
-      string srcPos = strs[4];
-
-      // insert if Wiktionary or if ELDA and valid part-of-speech
-      if (dicfile == WIKTIONARY || validPos(srcPos) || validPos(tgtPos)) {
-        src2Tgt[srcWord].insert(tgtWord);
-      }
-
-      // store definition for Wiktionary
-      if (strs.size() >= 6) {
-        tgt2TgtDefs[tgtWord]=strs[5];
-      }
-    }
-    idss.close();
-  }
-}
 
 WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   WORDNET::TgtCandidates res;
@@ -134,8 +86,7 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
   }
 
   stringstream ss;
-  for (set<string>::iterator it = src2Tgt[srcWord].begin() ; it!= src2Tgt[srcWord].end(); it++) {
-    string tgtWord = *it;
+  for (const string& tgtWord : dictionaries.translations[srcWord]) {
     res.cand[tgtWord]=0;
 
     // removes the pronoun in order to compute subsequent scores
@@ -235,7 +186,7 @@ WORDNET::WordNet LoaderModule::load() {
         }
 
 
-        wne.newdef=tgt2TgtDefs[srcWord];
+        wne.newdef=dictionaries.definition[srcWord];
         wne.frenchCandidates[srcWord] = extractCandidates(srcWord);
         wne.frenchCandidates[srcWord].capital = capital;
         assert(wne.frenchCandidates[srcWord].capital == capital);

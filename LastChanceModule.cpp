@@ -53,7 +53,7 @@ string LastChanceModule::trySelecAndReplace(map<string, set<WORDNET::Translation
     translationInfos.processed = "vote-lastchance" + suffix;
     translationInfos.score = bestScore;
     synset[elected].insert(translationInfos);
-    return LoaderModule::tgt2TgtDefs[elected];
+    return Dictionaries::definition[elected];
   }
   return "";
 }
