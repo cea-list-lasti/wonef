@@ -14,9 +14,9 @@ Dictionaries::Dictionaries(std::string pos) {
   std::set<std::string> dicfiles{EURADIC, WIKTIONARY};
 
   for (std::string dicfile : dicfiles) {
-    std::cerr << "Opening "<< dicfile << std::endl;
     std::ifstream idss(dicfile, std::fstream::in);
     if (idss.fail()) {
+      std::cerr << "Opened "<< dicfile << std::endl;
       std::cerr << "Oops, " << dicfile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
       exit(-1);
     }
@@ -45,7 +45,6 @@ Dictionaries::Dictionaries(std::string pos) {
     }
     idss.close();
   }
-  std::cerr << "dictionaries opened" << std::endl;
 }
 
 bool Dictionaries::validPos(std::string wantedPos, std::string candidatePos) {

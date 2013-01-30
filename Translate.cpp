@@ -11,9 +11,8 @@ int main(int argc, char **argv) {
 
   Dictionaries dictionaries(pos);
 
-  std::cout << "Translations of " << original << " are:" << std::endl;
   for (const std::string &translation : dictionaries.translations[original]) {
-    std::cout << " - " << translation << std::endl;
+    std::cout << translation << std::endl;
   }
 
   return 0;
