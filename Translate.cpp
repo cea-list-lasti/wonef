@@ -1,5 +1,6 @@
 #include "Dictionaries.hpp"
 
+#include <boost/algorithm/string/join.hpp>
 #include <cassert>
 #include <iostream>
 
@@ -9,15 +10,17 @@ int main(int argc, char **argv) {
   std::string pos = argv[1];
 
   Dictionaries dictionaries(pos);
+  std::set<std::string> translations;
 
   for (int i = 2; i < argc; i++) {
     std::string original = argv[i];
 
     for (const std::string &translation : dictionaries.translations[original]) {
-      std::cout << translation << ", ";
+      translations.insert(translation);
     }
   }
-  std::cout << std::endl;
+
+  std::cout << boost::algorithm::join(translations, ", ") << std::endl;
 
   return 0;
 }
