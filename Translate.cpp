@@ -1,6 +1,5 @@
 #include "Dictionaries.hpp"
 
-#include <boost/algorithm/string/join.hpp>
 #include <cassert>
 #include <iostream>
 
@@ -10,23 +9,25 @@ int main(int argc, char **argv) {
   std::string pos = argv[1];
 
   Dictionaries dictionaries(pos);
-  std::set<std::string> translations;
+  std::map<std::string, int> translations;
 
   bool allFound = true;
   for (int i = 2; i < argc; i++) {
-  std::string original = argv[i];
-  if (dictionaries.translations.find(original) == dictionaries.translations.end()) {
-      std::cerr << original <<  " not found!" << std::endl;
-      allFound = false;
-    }
+      std::string original = argv[i];
+      if (dictionaries.translations.find(original) == dictionaries.translations.end()) {
+          std::cerr << original <<  " not found!" << std::endl;
+          allFound = false;
+      }
 
-    for (const std::string &translation : dictionaries.translations[original]) {
-      translations.insert(translation);
-    }
+      for (const std::string &translation : dictionaries.translations[original]) {
+          translations[translation]++;
+      }
   }
 
   if (allFound) {
-    std::cout << boost::algorithm::join(translations, ", ") << std::endl;
+      for(auto& translation: translations) {
+          std::cout << translation.second << " " << translation.first<< std::endl;
+      }
   }
 
   return 0;
