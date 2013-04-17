@@ -11,12 +11,10 @@ int main(int argc, char **argv) {
   Dictionaries dictionaries(pos);
   std::map<std::string, int> translations;
 
-  bool allFound = true;
   for (int i = 2; i < argc; i++) {
       std::string original = argv[i];
       if (dictionaries.translations.find(original) == dictionaries.translations.end()) {
           std::cerr << original <<  " not found!" << std::endl;
-          allFound = false;
       }
 
       for (const std::string &translation : dictionaries.translations[original]) {
@@ -24,10 +22,8 @@ int main(int argc, char **argv) {
       }
   }
 
-  if (allFound) {
-      for(auto& translation: translations) {
-          std::cout << translation.second << " " << translation.first<< std::endl;
-      }
+  for(auto& translation: translations) {
+      std::cout << translation.second << " " << translation.first<< std::endl;
   }
 
   return 0;
