@@ -104,24 +104,26 @@ void parseAndEvaluatePolysemous(std::ofstream& out, map<string, int>& BCS,
 }
 
 int main(int argc, char **argv) {
-  if (argc < 2) {
-    cerr << "Usage : evalJAWS-WOLF pos seqs" << endl;
+  if (argc < 3) {
+    cerr << "Usage : evalJAWS-WOLF mode pos seqs" << endl;
     return 1;
   }
 
   set<string> litList, polysemousIdsList;
   map<string, set<string>> vtNet, vtNetIdIdent;
   map<string, set<string>> wolf10Net, wolf10NetIdIdent;
-  map<string, set<string>> goldNet, goldNetIdIdent;
+  map<string, set<string>> goldNetTest, goldNetIdIdentTest;
+  map<string, set<string>> goldNetDev, goldNetIdIdentDev;
   map<string,int> bcsbase;
   map<int,int> BCSCount;
   map<string, set<string>> mapping;
-  map<pair<string, string>, int> goldValue;
+  map<pair<string, string>, int> goldValueTest, goldValueDev;
 
   Timer t, globalT;
 
-  string spos = argv[1];
-  string seqs = argv[2];
+  string mode = argv[1];
+  string spos = argv[2];
+  string seqs = argv[3];
 
   POS pos = WORDNET::POS_of_string[spos];
 
@@ -136,6 +138,11 @@ int main(int argc, char **argv) {
     {POS::Noun, GOLD_NOUN},
     {POS::Verb, GOLD_VERB},
     {POS::Adj, GOLD_ADJ}};
+
+  std::map<POS, std::string> goldDevFile = {
+    {POS::Noun, GOLD_DEV_NOUN},
+    {POS::Verb, GOLD_DEV_VERB},
+    {POS::Adj, GOLD_DEV_ADJ}};
 
   std::string suffix = spos + "." + seqs;
 
@@ -178,9 +185,15 @@ int main(int argc, char **argv) {
 
   if (pos != POS::Adv) {
     t.start();
-    cerr << "Loading Gold... ";
-    GoldHandler goldHandler(goldNet, goldNetIdIdent, goldValue);
-    goldHandler.parse_file(goldFile[pos]);
+    cerr << "Loading Gold test... ";
+    GoldHandler goldHandlerTest(goldNetTest, goldNetIdIdentTest, goldValueTest);
+    goldHandlerTest.parse_file(goldFile[pos]);
+    cerr << t.duration() << "s" << endl;
+
+    t.start();
+    cerr << "Loading Gold dev... ";
+    GoldHandler goldHandlerDev(goldNetDev, goldNetIdIdentDev, goldValueDev);
+    goldHandlerDev.parse_file(goldDevFile[pos]);
     cerr << t.duration() << "s" << endl;
   }
 
@@ -199,6 +212,7 @@ int main(int argc, char **argv) {
   */
 
   /* Then evaluate with WOLF 1.0 */
+  /*
   std::cout << std::endl << "-- Evaluating with Wolf 1.0... --" << std::endl;
   std::cout << std::endl << "                *** Normal ***" << std::endl;
   std::ofstream logWolfOne("logs/eval.wolfone." + suffix, ios_base::out | ios_base::trunc);
@@ -209,19 +223,28 @@ int main(int argc, char **argv) {
   std::ofstream logWolfOneBest("logs/eval.wolfone.best." + suffix, ios_base::out | ios_base::trunc);
   parseAndEvaluatePolysemous(logWolfOneBest, bcsbase, BCSCount, litList, polysemousIdsList,
       wolf10Net, wolf10NetIdIdent, spos, bestJaws, goldValue, false);
+  */
 
   /* Then evaluate with the gold standard */
   if (pos != POS::Adv) {
     std::cout << std::endl << "-- Evaluating with Gold... --" << std::endl;
-    std::cout << std::endl << "                *** Normal ***" << std::endl;
-    std::ofstream logGold("logs/eval.gold." + suffix, ios_base::out | ios_base::trunc);
-    parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
-        goldNet, goldNetIdIdent, spos, jaws, goldValue, true);
-
-    std::cout << std::endl << "                *** Filtered ***" << std::endl;
-    std::ofstream logGoldBest("logs/eval.gold.best." + suffix, ios_base::out | ios_base::trunc);
-    parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
-        goldNet, goldNetIdIdent, spos, bestJaws, goldValue, true);
+    if (mode == "precision") {
+      std::cout << std::endl << "                *** Filtered ***" << std::endl;
+      std::ofstream logGoldBest("logs/eval.gold.best.test." + suffix, ios_base::out | ios_base::trunc);
+      parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
+          goldNetTest, goldNetIdIdentTest, spos, bestJaws, goldValueTest, true);
+      std::ofstream logGoldBestDev("logs/eval.gold.best.dev." + suffix, ios_base::out | ios_base::trunc);
+      parseAndEvaluatePolysemous(logGoldBestDev, bcsbase, BCSCount, litList, polysemousIdsList,
+          goldNetDev, goldNetIdIdentDev, spos, bestJaws, goldValueDev, true);
+    } else {
+      std::cout << std::endl << "                *** Normal ***" << std::endl;
+      std::ofstream logGold("logs/eval.gold.test." + suffix, ios_base::out | ios_base::trunc);
+      parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
+          goldNetTest, goldNetIdIdentTest, spos, jaws, goldValueTest, true);
+      std::ofstream logGoldDev("logs/eval.gold.dev." + suffix, ios_base::out | ios_base::trunc);
+      parseAndEvaluatePolysemous(logGoldDev, bcsbase, BCSCount, litList, polysemousIdsList,
+          goldNetDev, goldNetIdIdentDev, spos, jaws, goldValueDev, true);
+    }
     std::cout << std::endl;
   }
 

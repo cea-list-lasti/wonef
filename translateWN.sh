@@ -45,6 +45,7 @@ do
     -e|--extract) mode='extract' ;;
     -m|--module) mode='module' ;;
     -p|--prefer) mode='prefer' ;;
+    -q|--quiet) quiet='quiet';;
     *) if [ "$mode" = "extract" ]; then
         extract="$extract$1"
         extractspaces="$extractspaces$1 "
@@ -60,6 +61,13 @@ done
 
 if [ -n "$extractspaces" ]; then
   extractoptions="--extract $extractspaces"
+fi
+
+if [ -z "$quiet" ]; then
+  grep_logs='Overall|note|duration'
+else
+  # unlikely to exist, right?
+  grep_logs='afasdjseadgf'
 fi
 
 # Reusing our above example, seqspaces will be "1 2 3 4" and seqs will be
@@ -78,12 +86,12 @@ rm -f logs/* data/*
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep "Overall|note|duration"
+./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep $grep_logs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
 echo "Evaluating..."
-./evalJAWS-WOLF $pos $seqs
+./evalJAWS-WOLF $prefer $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
 

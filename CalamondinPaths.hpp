@@ -20,9 +20,13 @@
 
 const std::string DATAPATH = "/data/text/quentin";
 
-const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.xml";
-const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.xml";
-const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.xml";
+const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.test.xml";
+const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.test.xml";
+const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.test.xml";
+
+const std::string GOLD_DEV_NOUN = DATAPATH + "/Gold30/GT_nouns30.dev.xml";
+const std::string GOLD_DEV_VERB = DATAPATH + "/Gold30/GT_verbs30.dev.xml";
+const std::string GOLD_DEV_ADJ = DATAPATH + "/Gold30/GT_adjs30.dev.xml";
 
 
 const std::string WOLF = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";

@@ -52,4 +52,5 @@ extract $inputbest $addpartbest
 #---------------------------------------#
 
 echo "Evaluating additional part ..."
-./evalJAWS-WOLF $pos $conf.$module
+echo ./evalJAWS-WOLF $pos $conf.$module
+./evalJAWS-WOLF coverage $pos $conf.$module
