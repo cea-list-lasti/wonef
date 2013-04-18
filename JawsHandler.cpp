@@ -394,7 +394,7 @@ void JawsHandler::on_end_document() {
 
   out << "\t\t*** Polysemous ***" << std::endl;
   out << "nb" + terms + "InJaws :\t\t\t" << nbPolyTermsInJaws << std::endl;
-  out << "Denomiator for precision :\t" << nbPolyInJawsSynsetInGt << std::endl;
+  out << "Denominator for precision :\t" << nbPolyInJawsSynsetInGt << std::endl;
   out << "Denominator for recall :\t" << nbPolyTermsInGtAndAJawsSynset << std::endl;
   out << "nb" + terms + "InGt :\t\t\t" << nbPolyTermsInGt << std::endl;
   out << "nb" + terms + "InJawsAgreeWithGt :\t" << nbPolyTermsOk << std::endl;
