@@ -21,7 +21,7 @@ with open('bcs.txt') as bcsfile:
 if 'jaws' in sys.argv:
     goldfiles = ['gold/GT_nouns30.test.xml']
 else:
-    goldfiles = ['gold/GT_nouns30.test.xml', 'gold/GT_verbs30.test.xml', 'gold/GT_adjs30.xml']
+    goldfiles = ['gold/GT_nouns30.test.xml', 'gold/GT_verbs30.test.xml', 'gold/GT_adjs30.test.xml']
 
 
 gold = {}
