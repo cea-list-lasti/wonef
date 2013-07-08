@@ -1,0 +1,93 @@
+WOLF 0.1.4
+  Nb synsets: 114210 ; n=79455 ; v=13437 ; a=17711 ; b=3607
+  Nb pairs (Source+New): 127153 ; n=90595 ; v=14323 ; a=18337 ; b=3898
+
+WOLF 1.0b
+All
+  Nb synsets: 117658 ; n=82114 ; v=13766 ; a=18156 ; b=3621
+  Nb pairs (Source+New): 107604 ; n=75314 ; v=18374 ; a=10885 ; b=3029
+
+WoNeF precision
+All
+  Nb synsets: 117659 ; n=82115 ; v=13766 ; a=18156 ; b=3621
+  Nb pairs (Source+New): 19658 ; n=12941 ; v=1815 ; a=3978 ; b=923
+
+WoNeF F-score
+All
+  Nb synsets: 117659 ; n=82115 ; v=13766 ; a=18156 ; b=3621
+  Nb pairs (Source+New): 115405 ; n=71518 ; v=13092 ; a=24813 ; b=5980
+
+WOLF 1.0b + WoNeF precision
+ All
+Source: 107604
+Merge : 8746
+New   : 10911
+Empty : 53060
+
+Nb pairs:    Nb pairs (Source+New): 118516 ; n=81818 ; v=19709 ; a=13415 ; b=3572
+ n
+Source: 75314
+Merge : 6437
+New   : 6503
+Empty : 35793
+
+Nb pairs:    Nb pairs (Source+New): 81818 ; n=81818 ; v=0 ; a=0 ; b=0
+ v
+Source: 18374
+Merge : 480
+New   : 1335
+Empty : 5440
+
+Nb pairs:    Nb pairs (Source+New): 19709 ; n=0 ; v=19709 ; a=0 ; b=0
+ a
+Source: 10885
+Merge : 1448
+New   : 2530
+Empty : 9941
+
+Nb pairs:    Nb pairs (Source+New): 13415 ; n=0 ; v=0 ; a=13415 ; b=0
+ b
+Source: 3029
+Merge : 380
+New   : 543
+Empty : 1886
+
+Nb pairs:    Nb pairs (Source+New): 3572 ; n=0 ; v=0 ; a=0 ; b=3572
+
+WOLF 1.0b + WoNeF F-score
+ All
+Source: 107604
+Merge : 34352
+New   : 81052
+Empty : 39094
+
+Nb pairs:    Nb pairs (Source+New): 188657 ; n=121654 ; v=29260 ; a=29916 ; b=7825
+ n
+Source: 75314
+Merge : 25178
+New   : 46339
+Empty : 27184
+
+Nb pairs:    Nb pairs (Source+New): 121654 ; n=121654 ; v=0 ; a=0 ; b=0
+ v
+Source: 18374
+Merge : 2206
+New   : 10886
+Empty : 4406
+
+Nb pairs:    Nb pairs (Source+New): 29260 ; n=0 ; v=29260 ; a=0 ; b=0
+ a
+Source: 10885
+Merge : 5782
+New   : 19031
+Empty : 6355
+
+Nb pairs:    Nb pairs (Source+New): 29916 ; n=0 ; v=0 ; a=29916 ; b=0
+ b
+Source: 3029
+Merge : 1184
+New   : 4796
+Empty : 1149
+
+Nb pairs:    Nb pairs (Source+New): 7825 ; n=0 ; v=0 ; a=0 ; b=7825
+
