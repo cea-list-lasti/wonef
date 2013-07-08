@@ -17,6 +17,80 @@ All
   Nb synsets: 117659 ; n=82115 ; v=13766 ; a=18156 ; b=3621
   Nb pairs (Source+New): 115405 ; n=71518 ; v=13092 ; a=24813 ; b=5980
 
+WOLF 0.1.4 + WoNeF precision
+ All
+Source: 127767
+Merge : 3821
+New   : 16737
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 144000 ; n=101260 ; v=16082 ; a=22011 ; b=4647
+ n
+Source: 90756
+Merge : 2413
+New   : 10526
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 101260 ; n=101260 ; v=0 ; a=0 ; b=0
+ v
+Source: 14395
+Merge : 118
+New   : 1743
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 16081 ; n=0 ; v=16081 ; a=0 ; b=0
+ a
+Source: 18712
+Merge : 1070
+New   : 3710
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 22011 ; n=0 ; v=0 ; a=22011 ; b=0
+ b
+Source: 3903
+Merge : 220
+New   : 757
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 4647 ; n=0 ; v=0 ; a=0 ; b=4647
+
+WOLF 0.1.4 + WoNeF F-score
+ All
+Source: 127767
+Merge : 15460
+New   : 99281
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 228108 ; n=150166 ; v=26789 ; a=41907 ; b=9246
+ n
+Source: 90756
+Merge : 12084
+New   : 58342
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 150166 ; n=150166 ; v=0 ; a=0 ; b=0
+ v
+Source: 14395
+Merge : 689
+New   : 12337
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 26787 ; n=0 ; v=26787 ; a=0 ; b=0
+ a
+Source: 18712
+Merge : 2009
+New   : 23260
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 41907 ; n=0 ; v=0 ; a=41907 ; b=0
+ b
+Source: 3903
+Merge : 678
+New   : 5340
+Empty : 0
+
+Nb pairs:    Nb pairs (Source+New): 9246 ; n=0 ; v=0 ; a=0 ; b=9246
+
 WOLF 1.0b + WoNeF precision
  All
 Source: 107604
