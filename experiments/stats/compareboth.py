@@ -21,7 +21,7 @@ def parse_id(synset_id):
     wn_lang, wn_version, numeric_id, pos = synset_id.split('-')
     return numeric_id, pos
 
-def parse_debvisdic(f, needs_mapping):
+def parse_debvisdic(f, needs_mapping, wanted_pos):
     mapping = {}
     if needs_mapping:
         mapping = parse_mapping("../mapping-20-30")
@@ -29,7 +29,7 @@ def parse_debvisdic(f, needs_mapping):
     xml = ElementTree(file = f)
     for synset in xml.findall("SYNSET"):
         synset_id, pos = parse_id(synset.find("ID").text)
-        if synset.find("POS").text != "b": continue
+        if synset.find("POS").text != wanted_pos: continue
 
         for l in synset.findall("SYNONYM/LITERAL"):
             literal = l.text
@@ -38,17 +38,26 @@ def parse_debvisdic(f, needs_mapping):
 
     return wordnet
 
+pos_name = {
+    "n": "Nouns",
+    "v": "Verbs",
+    "a": "Adjectives",
+    "b": "Adverbs"}
 
-for wolf_name, needs_mapping in [("0.1.5.format", True), ("1.0b", False)]:
-    wolf = parse_debvisdic("wolf-{}.xml".format(wolf_name), needs_mapping)
-    print("WOLF {}".format(wolf_name))
+for wanted_pos in ["n", "v", "a", "b"]:
+    print(pos_name[wanted_pos])
+    print("*" * len(pos_name[wanted_pos]))
 
-    for wonef_name in ["precision", "fscore", "coverage"]:
-        wonef = parse_debvisdic("wonef-{}-0.1.xml".format(wonef_name), False)
-        inboth = wonef & wolf
+    for wolf_name, needs_mapping in [("0.1.5.format", True), ("1.0b", False)]:
+        wolf = parse_debvisdic("wolf-{}.xml".format(wolf_name), needs_mapping, wanted_pos)
+        print("WOLF {}".format(wolf_name))
 
-        print(wonef_name)
-        print("  Précision    : {:.2%}".format(len(inboth)/len(wonef)))
-        print("  Rappel       : {:.2%}".format(len(inboth)/len(wolf)))
-        print("  Ajouts WoNeF : {}".format(len(wonef - wolf)))
-    print()
+        for wonef_name in ["precision", "fscore", "coverage"]:
+            wonef = parse_debvisdic("wonef-{}-0.1.xml".format(wonef_name), False, wanted_pos)
+            inboth = wonef & wolf
+
+            print(wonef_name)
+            print("  Précision    : {:.2%}".format(len(inboth)/len(wonef)))
+            print("  Rappel       : {:.2%}".format(len(inboth)/len(wolf)))
+            print("  Ajouts WoNeF : {}".format(len(wonef - wolf)))
+        print()
