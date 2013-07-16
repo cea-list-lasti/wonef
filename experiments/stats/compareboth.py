@@ -1,26 +1,54 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from xml.etree.ElementTree import ElementTree
+import sys
+import glob
+
 wolf, wonef = set(), set()
 
-for i in open('wolf10bpairs'): wolf.add(i.strip().split(':')[1])
-for i in open('wonefpairs'): wonef.add(i.strip().split(':')[1])
+def parse_mapping(mapping_directory):
+    mapping = {}
+    for mapping_file in glob.glob("{}/*".format(mapping_directory)):
+        for l in open(mapping_file):
+            two, three, *p = l.split()
+            mapping[two] = three
 
-inboth = len(wonef & wolf)
+    return mapping
 
-wonefspecific = len(wonef - wolf)
-wolfspecific = len(wolf - wonef)
+def parse_id(synset_id):
+    synset_id = synset_id.replace('ENG20', 'eng-20', 1)
+    wn_lang, wn_version, numeric_id, pos = synset_id.split('-')
+    return numeric_id, pos
 
-print(wonefspecific)
+def parse_debvisdic(f, needs_mapping):
+    mapping = {}
+    if needs_mapping:
+        mapping = parse_mapping("../mapping-20-30")
+    wordnet = set()
+    xml = ElementTree(file = f)
+    for synset in xml.findall("SYNSET"):
+        synset_id, pos = parse_id(synset.find("ID").text)
+        if synset.find("POS").text != "b": continue
 
-merge = wonef | wolf
-print(len(merge))
-print(len(wolf))
+        for l in synset.findall("SYNONYM/LITERAL"):
+            literal = l.text
+            if literal != "_EMPTY_":
+                wordnet.add("eng-30-{}-{}:{}".format(mapping.get(synset_id, synset_id), pos, literal))
 
-print(100 * len(merge) / len(wolf))
-print(100 * len(merge) / len(wonef))
-print("{:.2%}".format(len(wolf)/len(merge)))
-print("{:.2%}".format(len(wonef)/len(merge)))
+    return wordnet
 
-#for s in (merge):
-#  print(s)
+
+for wolf_name, needs_mapping in [("0.1.5.format", True), ("1.0b", False)]:
+    wolf = parse_debvisdic("wolf-{}.xml".format(wolf_name), needs_mapping)
+    print("WOLF {}".format(wolf_name))
+
+    for wonef_name in ["precision", "fscore", "coverage"]:
+        wonef = parse_debvisdic("wonef-{}-0.1.xml".format(wonef_name), False)
+        inboth = wonef & wolf
+
+        print(wonef_name)
+        print("  Précision    : {:.2%}".format(len(inboth)/len(wonef)))
+        print("  Rappel       : {:.2%}".format(len(inboth)/len(wolf)))
+        print("  Ajouts WoNeF : {}".format(len(wonef - wolf)))
+    print()
