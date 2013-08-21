@@ -60,7 +60,7 @@ string SimSynModule::trySelectAndReplace(WORDNET::WordNetEntry& synset,
 
   unsigned int i = 0;
   size_t maximumValue = 0;
-  // TODO need to learn again when more data available and the algorithm is fixed.
+  // thresholds learnt using WOLF manually validated data
   if (pos == "verb") {
     maximumValue = 7704;
   } else if (pos == "noun") {
