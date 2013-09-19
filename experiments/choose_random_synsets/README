@@ -1,0 +1,4 @@
+Choses random synsets with candidates to be hand-annotated with the correct choices.
+
+ * choose.py is the real thing and only applies on old-style WoNeF (not the .deb.xml file)
+ * keep_synsets.py was used when we needed to remove unvalid synsets
