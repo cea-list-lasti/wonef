@@ -1446,7 +1446,7 @@
     <USAGE>he breathed heavily</USAGE>
     <CANDIDATES original="heavily">
       <CANDIDATE valide="0">abondamment</CANDIDATE>
-      <CANDIDATE valide="0">avec_difficulté</CANDIDATE>
+      <CANDIDATE valide="1">avec_difficulté</CANDIDATE>
       <CANDIDATE valide="0">beaucoup</CANDIDATE>
       <CANDIDATE valide="0">bruyamment</CANDIDATE>
       <CANDIDATE valide="0">d'un_pas_lourd</CANDIDATE>
@@ -1460,7 +1460,7 @@
       <CANDIDATE valide="0">massivement</CANDIDATE>
       <CANDIDATE valide="0">pesamment</CANDIDATE>
       <CANDIDATE valide="0">profondément</CANDIDATE>
-      <CANDIDATE valide="0">péniblement</CANDIDATE>
+      <CANDIDATE valide="1">péniblement</CANDIDATE>
       <CANDIDATE valide="0">richement</CANDIDATE>
       <CANDIDATE valide="0">solidement</CANDIDATE>
       <CANDIDATE valide="0">très</CANDIDATE>
@@ -1480,9 +1480,9 @@
     </CANDIDATES>
     <CANDIDATES original="the_other_way_around"/>
     <CANDIDATES original="vice_versa">
-      <CANDIDATE valide="0">inversement</CANDIDATE>
-      <CANDIDATE valide="0">réciproquement</CANDIDATE>
-      <CANDIDATE valide="0">vice_versa</CANDIDATE>
+      <CANDIDATE valide="1">inversement</CANDIDATE>
+      <CANDIDATE valide="1">réciproquement</CANDIDATE>
+      <CANDIDATE valide="1">vice_versa</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00178460">
@@ -1490,7 +1490,7 @@
     <USAGE>religiously inspired art</USAGE>
     <CANDIDATES original="religiously">
       <CANDIDATE valide="0">pieusement</CANDIDATE>
-      <CANDIDATE valide="0">religieusement</CANDIDATE>
+      <CANDIDATE valide="1">religieusement</CANDIDATE>
       <CANDIDATE valide="0">rituellement</CANDIDATE>
       <CANDIDATE valide="0">scrupuleusement</CANDIDATE>
     </CANDIDATES>
@@ -1507,43 +1507,43 @@
     <USAGE>she swooped gracefully</USAGE>
     <CANDIDATES original="gracefully">
       <CANDIDATE valide="0">avec_dignité</CANDIDATE>
-      <CANDIDATE valide="0">avec_grâce</CANDIDATE>
-      <CANDIDATE valide="0">avec_élégance</CANDIDATE>
-      <CANDIDATE valide="0">gracieusement</CANDIDATE>
-      <CANDIDATE valide="0">élégamment</CANDIDATE>
+      <CANDIDATE valide="1">avec_grâce</CANDIDATE>
+      <CANDIDATE valide="1">avec_élégance</CANDIDATE>
+      <CANDIDATE valide="1">gracieusement</CANDIDATE>
+      <CANDIDATE valide="1">élégamment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00180279">
     <ORIGINALDEF>with little weight or force</ORIGINALDEF>
     <USAGE>she kissed him lightly on the forehead</USAGE>
     <CANDIDATES original="gently">
-      <CANDIDATE valide="0">avec_douceur</CANDIDATE>
+      <CANDIDATE valide="1">avec_douceur</CANDIDATE>
       <CANDIDATE valide="0">bellement</CANDIDATE>
-      <CANDIDATE valide="0">doucement</CANDIDATE>
-      <CANDIDATE valide="0">doucettement</CANDIDATE>
-      <CANDIDATE valide="0">en_douceur</CANDIDATE>
-      <CANDIDATE valide="0">gentiment</CANDIDATE>
-      <CANDIDATE valide="0">mollement</CANDIDATE>
-      <CANDIDATE valide="0">piane-piane</CANDIDATE>
-      <CANDIDATE valide="0">piano</CANDIDATE>
-      <CANDIDATE valide="0">sans_forcer</CANDIDATE>
+      <CANDIDATE valide="1">doucement</CANDIDATE>
+      <CANDIDATE valide="1">doucettement</CANDIDATE>
+      <CANDIDATE valide="1">en_douceur</CANDIDATE>
+      <CANDIDATE valide="1">gentiment</CANDIDATE>
+      <CANDIDATE valide="1">mollement</CANDIDATE>
+      <CANDIDATE valide="1">piane-piane</CANDIDATE>
+      <CANDIDATE valide="1">piano</CANDIDATE>
+      <CANDIDATE valide="1">sans_forcer</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="lightly">
       <CANDIDATE valide="0">d'un_ton_dégagé</CANDIDATE>
       <CANDIDATE valide="0">discrètement</CANDIDATE>
-      <CANDIDATE valide="0">doucement</CANDIDATE>
-      <CANDIDATE valide="0">délicatement</CANDIDATE>
-      <CANDIDATE valide="0">légèrement</CANDIDATE>
+      <CANDIDATE valide="1">doucement</CANDIDATE>
+      <CANDIDATE valide="1">délicatement</CANDIDATE>
+      <CANDIDATE valide="1">légèrement</CANDIDATE>
       <CANDIDATE valide="0">à_la_légère</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="softly">
       <CANDIDATE valide="0">bas</CANDIDATE>
-      <CANDIDATE valide="0">doucement</CANDIDATE>
+      <CANDIDATE valide="1">doucement</CANDIDATE>
       <CANDIDATE valide="0">en_sourdine</CANDIDATE>
-      <CANDIDATE valide="0">faiblement</CANDIDATE>
+      <CANDIDATE valide="1">faiblement</CANDIDATE>
       <CANDIDATE valide="0">gentiment</CANDIDATE>
-      <CANDIDATE valide="0">légèrement</CANDIDATE>
-      <CANDIDATE valide="0">mollement</CANDIDATE>
+      <CANDIDATE valide="1">légèrement</CANDIDATE>
+      <CANDIDATE valide="1">mollement</CANDIDATE>
       <CANDIDATE valide="0">sans__bruit</CANDIDATE>
       <CANDIDATE valide="0">sans_faire_de_bruit</CANDIDATE>
       <CANDIDATE valide="0">tendrement</CANDIDATE>
@@ -1565,28 +1565,28 @@
     <USAGE>it's distinctly possible</USAGE>
     <USAGE>I could clearly see myself in his situation</USAGE>
     <CANDIDATES original="clearly">
-      <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">clairement</CANDIDATE>
-      <CANDIDATE valide="0">distinctement</CANDIDATE>
+      <CANDIDATE valide="1">bien</CANDIDATE>
+      <CANDIDATE valide="1">clairement</CANDIDATE>
+      <CANDIDATE valide="1">distinctement</CANDIDATE>
       <CANDIDATE valide="0">explicitement</CANDIDATE>
-      <CANDIDATE valide="0">franchement</CANDIDATE>
+      <CANDIDATE valide="1">franchement</CANDIDATE>
       <CANDIDATE valide="0">lisiblement</CANDIDATE>
-      <CANDIDATE valide="0">lucidement</CANDIDATE>
+      <CANDIDATE valide="1">lucidement</CANDIDATE>
       <CANDIDATE valide="0">lumineusement</CANDIDATE>
-      <CANDIDATE valide="0">manifestement</CANDIDATE>
-      <CANDIDATE valide="0">nettement</CANDIDATE>
-      <CANDIDATE valide="0">précisément</CANDIDATE>
+      <CANDIDATE valide="1">manifestement</CANDIDATE>
+      <CANDIDATE valide="1">nettement</CANDIDATE>
+      <CANDIDATE valide="1">précisément</CANDIDATE>
       <CANDIDATE valide="0">pédagogiquement</CANDIDATE>
-      <CANDIDATE valide="0">visiblement</CANDIDATE>
+      <CANDIDATE valide="1">visiblement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="distinctly">
-      <CANDIDATE valide="0">clairement</CANDIDATE>
-      <CANDIDATE valide="0">distinctement</CANDIDATE>
+      <CANDIDATE valide="1">clairement</CANDIDATE>
+      <CANDIDATE valide="1">distinctement</CANDIDATE>
       <CANDIDATE valide="0">expressément</CANDIDATE>
       <CANDIDATE valide="0">formellement</CANDIDATE>
-      <CANDIDATE valide="0">nettement</CANDIDATE>
+      <CANDIDATE valide="1">nettement</CANDIDATE>
       <CANDIDATE valide="0">particulièrement</CANDIDATE>
-      <CANDIDATE valide="0">sans_équivoque</CANDIDATE>
+      <CANDIDATE valide="1">sans_équivoque</CANDIDATE>
       <CANDIDATE valide="0">vraiment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -1594,16 +1594,16 @@
     <ORIGINALDEF>with boldness, in a bold manner</ORIGINALDEF>
     <USAGE>we must tackle these tasks boldly</USAGE>
     <CANDIDATES original="boldly">
-      <CANDIDATE valide="0">audacieusement</CANDIDATE>
-      <CANDIDATE valide="0">avec_assurance</CANDIDATE>
-      <CANDIDATE valide="0">avec_audace</CANDIDATE>
+      <CANDIDATE valide="1">audacieusement</CANDIDATE>
+      <CANDIDATE valide="1">avec_assurance</CANDIDATE>
+      <CANDIDATE valide="1">avec_audace</CANDIDATE>
       <CANDIDATE valide="0">avec_impudence</CANDIDATE>
       <CANDIDATE valide="0">avec_vigueur</CANDIDATE>
-      <CANDIDATE valide="0">bravement</CANDIDATE>
+      <CANDIDATE valide="1">bravement</CANDIDATE>
       <CANDIDATE valide="0">effrontément</CANDIDATE>
       <CANDIDATE valide="0">franchement</CANDIDATE>
-      <CANDIDATE valide="0">hardiment</CANDIDATE>
-      <CANDIDATE valide="0">intrépidement</CANDIDATE>
+      <CANDIDATE valide="1">hardiment</CANDIDATE>
+      <CANDIDATE valide="1">intrépidement</CANDIDATE>
       <CANDIDATE valide="0">vigoureusement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -1618,10 +1618,10 @@
     <USAGE>he was dressed rather formally</USAGE>
     <CANDIDATES original="formally">
       <CANDIDATE valide="0">cérémonieusement</CANDIDATE>
-      <CANDIDATE valide="0">dans_les_règles</CANDIDATE>
+      <CANDIDATE valide="1">dans_les_règles</CANDIDATE>
       <CANDIDATE valide="0">en_bonne_et_due_forme</CANDIDATE>
       <CANDIDATE valide="0">en_tant_que_matière_spécifique</CANDIDATE>
-      <CANDIDATE valide="0">formellement</CANDIDATE>
+      <CANDIDATE valide="1">formellement</CANDIDATE>
       <CANDIDATE valide="0">officiellement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -1633,41 +1633,41 @@
       <CANDIDATE valide="0">du_point_de_vue_théâtral</CANDIDATE>
       <CANDIDATE valide="0">scéniquement</CANDIDATE>
       <CANDIDATE valide="0">sur_scène</CANDIDATE>
-      <CANDIDATE valide="0">théâtralement</CANDIDATE>
+      <CANDIDATE valide="1">théâtralement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00189960">
     <ORIGINALDEF>in a grave and sedate manner</ORIGINALDEF>
     <USAGE>the judge sat there solemnly</USAGE>
     <CANDIDATES original="solemnly">
-      <CANDIDATE valide="0">avec_sérieux</CANDIDATE>
-      <CANDIDATE valide="0">d'un_air_solennel</CANDIDATE>
-      <CANDIDATE valide="0">d'un_ton_solennel</CANDIDATE>
-      <CANDIDATE valide="0">gravement</CANDIDATE>
-      <CANDIDATE valide="0">solennellement</CANDIDATE>
+      <CANDIDATE valide="1">avec_sérieux</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_solennel</CANDIDATE>
+      <CANDIDATE valide="1">d'un_ton_solennel</CANDIDATE>
+      <CANDIDATE valide="1">gravement</CANDIDATE>
+      <CANDIDATE valide="1">solennellement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00190075">
     <ORIGINALDEF>by divine means</ORIGINALDEF>
     <USAGE>the divinely appointed means of rescue from temporal existence</USAGE>
     <CANDIDATES original="divinely">
-      <CANDIDATE valide="0">divinement</CANDIDATE>
+      <CANDIDATE valide="1">divinement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00190581">
     <ORIGINALDEF>in an irregular manner</ORIGINALDEF>
     <USAGE>the stomach mucosa was irregularly blackened</USAGE>
     <CANDIDATES original="irregularly">
-      <CANDIDATE valide="0">de_façon_irrégulière</CANDIDATE>
-      <CANDIDATE valide="0">irrégulièrement</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_irrégulière</CANDIDATE>
+      <CANDIDATE valide="1">irrégulièrement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00191889">
     <ORIGINALDEF>in a spontaneous manner</ORIGINALDEF>
     <USAGE>this shift occurs spontaneously</USAGE>
     <CANDIDATES original="spontaneously">
-      <CANDIDATE valide="0">soudainement</CANDIDATE>
-      <CANDIDATE valide="0">spontanément</CANDIDATE>
+      <CANDIDATE valide="1">soudainement</CANDIDATE>
+      <CANDIDATE valide="1">spontanément</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00193100">
@@ -1685,31 +1685,31 @@
     <USAGE>the sign was visibly displayed</USAGE>
     <CANDIDATES original="visibly">
       <CANDIDATE valide="0">manifestement</CANDIDATE>
-      <CANDIDATE valide="0">visiblement</CANDIDATE>
+      <CANDIDATE valide="1">visiblement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00196417">
     <ORIGINALDEF>with attention; in an attentive manner</ORIGINALDEF>
     <USAGE>he listened attentively</USAGE>
     <CANDIDATES original="attentively">
-      <CANDIDATE valide="0">attentivement</CANDIDATE>
-      <CANDIDATE valide="0">avec_attention</CANDIDATE>
+      <CANDIDATE valide="1">attentivement</CANDIDATE>
+      <CANDIDATE valide="1">avec_attention</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00197395">
     <ORIGINALDEF>in a convenient manner</ORIGINALDEF>
     <USAGE>the switch was conveniently located</USAGE>
     <CANDIDATES original="conveniently">
-      <CANDIDATE valide="0">commodément</CANDIDATE>
-      <CANDIDATE valide="0">d'une_manière_commode</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_commode</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_pratique</CANDIDATE>
-      <CANDIDATE valide="0">fort_à_propos</CANDIDATE>
+      <CANDIDATE valide="1">commodément</CANDIDATE>
+      <CANDIDATE valide="1">d'une_manière_commode</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_commode</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_pratique</CANDIDATE>
+      <CANDIDATE valide="1">fort_à_propos</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="handily">
-      <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">commodément</CANDIDATE>
-      <CANDIDATE valide="0">d'une_façon_commode</CANDIDATE>
+      <CANDIDATE valide="1">bien</CANDIDATE>
+      <CANDIDATE valide="1">commodément</CANDIDATE>
+      <CANDIDATE valide="1">d'une_façon_commode</CANDIDATE>
       <CANDIDATE valide="0">facilement</CANDIDATE>
       <CANDIDATE valide="0">haut_la_main</CANDIDATE>
     </CANDIDATES>
