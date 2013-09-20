@@ -11,38 +11,38 @@
     <ORIGINALDEF>in a negative way</ORIGINALDEF>
     <USAGE>he was negatively inclined</USAGE>
     <CANDIDATES original="negatively">
-      <CANDIDATE valide="0">d'une_manière_défavorable</CANDIDATE>
-      <CANDIDATE valide="0">négativement</CANDIDATE>
+      <CANDIDATE valide="1">d'une_manière_défavorable</CANDIDATE>
+      <CANDIDATE valide="1">négativement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00005567">
     <ORIGINALDEF>in a reflex manner</ORIGINALDEF>
     <USAGE>he answered automatically</USAGE>
     <CANDIDATES original="automatically">
-      <CANDIDATE valide="0">automatiquement</CANDIDATE>
-      <CANDIDATE valide="0">machinalement</CANDIDATE>
-      <CANDIDATE valide="0">mécaniquement</CANDIDATE>
+      <CANDIDATE valide="1">automatiquement</CANDIDATE>
+      <CANDIDATE valide="1">machinalement</CANDIDATE>
+      <CANDIDATE valide="1">mécaniquement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00006858">
     <ORIGINALDEF>in a stylish manner</ORIGINALDEF>
     <USAGE>He was smartly dressed</USAGE>
     <CANDIDATES original="modishly">
-      <CANDIDATE valide="0">à_la_mode</CANDIDATE>
+      <CANDIDATE valide="1">à_la_mode</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="smartly">
       <CANDIDATE valide="0">astucieusement</CANDIDATE>
-      <CANDIDATE valide="0">avec_beaucoup_d'allure</CANDIDATE>
-      <CANDIDATE valide="0">avec_beaucoup_d'élégance</CANDIDATE>
-      <CANDIDATE valide="0">avec_beaucoup_de_chic</CANDIDATE>
+      <CANDIDATE valide="1">avec_beaucoup_d'allure</CANDIDATE>
+      <CANDIDATE valide="1">avec_beaucoup_d'élégance</CANDIDATE>
+      <CANDIDATE valide="1">avec_beaucoup_de_chic</CANDIDATE>
       <CANDIDATE valide="0">chiquement</CANDIDATE>
-      <CANDIDATE valide="0">coquettement</CANDIDATE>
+      <CANDIDATE valide="1">coquettement</CANDIDATE>
       <CANDIDATE valide="0">du_tac_au_tac</CANDIDATE>
       <CANDIDATE valide="0">habilement</CANDIDATE>
       <CANDIDATE valide="0">promptement</CANDIDATE>
       <CANDIDATE valide="0">rapidement</CANDIDATE>
       <CANDIDATE valide="0">vivement</CANDIDATE>
-      <CANDIDATE valide="0">élégamment</CANDIDATE>
+      <CANDIDATE valide="1">élégamment</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="sprucely"/>
   </SYNSET>
@@ -51,20 +51,20 @@
     <USAGE>I felt partly to blame</USAGE>
     <USAGE>He was partially paralyzed</USAGE>
     <CANDIDATES original="part">
-      <CANDIDATE valide="0">en_partie</CANDIDATE>
+      <CANDIDATE valide="1">en_partie</CANDIDATE>
       <CANDIDATE valide="0">participation</CANDIDATE>
       <CANDIDATE valide="0">pièce_détachée</CANDIDATE>
       <CANDIDATE valide="0">raie</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="partially">
       <CANDIDATE valide="0">avec_partialité</CANDIDATE>
-      <CANDIDATE valide="0">en_partie</CANDIDATE>
+      <CANDIDATE valide="1">en_partie</CANDIDATE>
       <CANDIDATE valide="0">partialement</CANDIDATE>
-      <CANDIDATE valide="0">partiellement</CANDIDATE>
+      <CANDIDATE valide="1">partiellement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="partly">
-      <CANDIDATE valide="0">en_partie</CANDIDATE>
-      <CANDIDATE valide="0">partiellement</CANDIDATE>
+      <CANDIDATE valide="1">en_partie</CANDIDATE>
+      <CANDIDATE valide="1">partiellement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00010466">
@@ -79,19 +79,19 @@
     </CANDIDATES>
     <CANDIDATES original="fully">
       <CANDIDATE valide="0">amplement</CANDIDATE>
-      <CANDIDATE valide="0">au_maximum</CANDIDATE>
+      <CANDIDATE valide="1">au_maximum</CANDIDATE>
       <CANDIDATE valide="0">au_moins</CANDIDATE>
       <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">complètement</CANDIDATE>
-      <CANDIDATE valide="0">entièrement</CANDIDATE>
-      <CANDIDATE valide="0">intégralement</CANDIDATE>
+      <CANDIDATE valide="1">complètement</CANDIDATE>
+      <CANDIDATE valide="1">entièrement</CANDIDATE>
+      <CANDIDATE valide="1">intégralement</CANDIDATE>
       <CANDIDATE valide="0">largement</CANDIDATE>
-      <CANDIDATE valide="0">pleinement</CANDIDATE>
+      <CANDIDATE valide="1">pleinement</CANDIDATE>
       <CANDIDATE valide="0">très_bien</CANDIDATE>
-      <CANDIDATE valide="0">à_plein</CANDIDATE>
+      <CANDIDATE valide="1">à_plein</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="to_the_full">
-      <CANDIDATE valide="0">à_plein</CANDIDATE>
+      <CANDIDATE valide="1">à_plein</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00013429">
@@ -101,7 +101,7 @@
     <USAGE>his father was well pleased with his grades</USAGE>
     <CANDIDATES original="well">
       <CANDIDATE valide="0">ben</CANDIDATE>
-      <CANDIDATE valide="0">bien</CANDIDATE>
+      <CANDIDATE valide="1">bien</CANDIDATE>
       <CANDIDATE valide="0">enfin</CANDIDATE>
       <CANDIDATE valide="0">fontaine</CANDIDATE>
       <CANDIDATE valide="0">puits</CANDIDATE>
@@ -115,11 +115,11 @@
     <USAGE>still another problem must be solved</USAGE>
     <USAGE>a yet sadder tale</USAGE>
     <CANDIDATES original="even">
-      <CANDIDATE valide="0">encore</CANDIDATE>
+      <CANDIDATE valide="1">encore</CANDIDATE>
       <CANDIDATE valide="0">même</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="still">
-      <CANDIDATE valide="0">encore</CANDIDATE>
+      <CANDIDATE valide="1">encore</CANDIDATE>
       <CANDIDATE valide="0">enfin</CANDIDATE>
       <CANDIDATE valide="0">paisible</CANDIDATE>
       <CANDIDATE valide="0">quand_même</CANDIDATE>
@@ -129,7 +129,7 @@
     </CANDIDATES>
     <CANDIDATES original="yet">
       <CANDIDATE valide="0">déjà</CANDIDATE>
-      <CANDIDATE valide="0">encore</CANDIDATE>
+      <CANDIDATE valide="1">encore</CANDIDATE>
       <CANDIDATE valide="0">jusqu'ici</CANDIDATE>
       <CANDIDATE valide="0">jusqu'à_présent</CANDIDATE>
       <CANDIDATE valide="0">néanmoins</CANDIDATE>
@@ -147,13 +147,13 @@
     <USAGE>did not quite make it</USAGE>
     <CANDIDATES original="quite">
       <CANDIDATE valide="0">assez</CANDIDATE>
-      <CANDIDATE valide="0">complètement</CANDIDATE>
+      <CANDIDATE valide="1">complètement</CANDIDATE>
       <CANDIDATE valide="0">effectivement</CANDIDATE>
-      <CANDIDATE valide="0">entièrement</CANDIDATE>
-      <CANDIDATE valide="0">parfaitement</CANDIDATE>
+      <CANDIDATE valide="1">entièrement</CANDIDATE>
+      <CANDIDATE valide="1">parfaitement</CANDIDATE>
       <CANDIDATE valide="0">plutôt</CANDIDATE>
-      <CANDIDATE valide="0">tout</CANDIDATE>
-      <CANDIDATE valide="0">tout_à_fait</CANDIDATE>
+      <CANDIDATE valide="1">tout</CANDIDATE>
+      <CANDIDATE valide="1">tout_à_fait</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00019609">
@@ -162,7 +162,7 @@
     <USAGE>I shall treasure it always</USAGE>
     <USAGE>I will always love you</USAGE>
     <CANDIDATES original="always">
-      <CANDIDATE valide="0">toujours</CANDIDATE>
+      <CANDIDATE valide="1">toujours</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00019757">
@@ -170,7 +170,7 @@
     <USAGE>you can always resign if you don't like it</USAGE>
     <USAGE>you could always take a day off</USAGE>
     <CANDIDATES original="always">
-      <CANDIDATE valide="0">toujours</CANDIDATE>
+      <CANDIDATE valide="1">toujours</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00025559">
@@ -178,7 +178,7 @@
     <USAGE>None</USAGE>
     <CANDIDATES original="someplace"/>
     <CANDIDATES original="somewhere">
-      <CANDIDATE valide="0">quelque_part</CANDIDATE>
+      <CANDIDATE valide="1">quelque_part</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00028424">
@@ -188,8 +188,8 @@
     <CANDIDATES original="however">
       <CANDIDATE valide="0">cependant</CANDIDATE>
       <CANDIDATE valide="0">comment_donc</CANDIDATE>
-      <CANDIDATE valide="0">de_quelque_façon_que_ce_soit</CANDIDATE>
-      <CANDIDATE valide="0">de_quelque_manière_que_ce_soit</CANDIDATE>
+      <CANDIDATE valide="1">de_quelque_façon_que_ce_soit</CANDIDATE>
+      <CANDIDATE valide="1">de_quelque_manière_que_ce_soit</CANDIDATE>
       <CANDIDATE valide="0">néanmoins</CANDIDATE>
       <CANDIDATE valide="0">pourtant</CANDIDATE>
       <CANDIDATE valide="0">si</CANDIDATE>
@@ -209,37 +209,37 @@
     <USAGE>they have a right nice place</USAGE>
     <USAGE>they rejoiced mightily</USAGE>
     <CANDIDATES original="mightily">
-      <CANDIDATE valide="0">bigrement</CANDIDATE>
-      <CANDIDATE valide="0">considérablement</CANDIDATE>
-      <CANDIDATE valide="0">puissamment</CANDIDATE>
-      <CANDIDATE valide="0">rudement</CANDIDATE>
-      <CANDIDATE valide="0">vigoureusement</CANDIDATE>
+      <CANDIDATE valide="1">bigrement</CANDIDATE>
+      <CANDIDATE valide="1">considérablement</CANDIDATE>
+      <CANDIDATE valide="1">puissamment</CANDIDATE>
+      <CANDIDATE valide="1">rudement</CANDIDATE>
+      <CANDIDATE valide="1">vigoureusement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="mighty">
-      <CANDIDATE valide="0">bigrement</CANDIDATE>
-      <CANDIDATE valide="0">bougrement</CANDIDATE>
+      <CANDIDATE valide="1">bigrement</CANDIDATE>
+      <CANDIDATE valide="1">bougrement</CANDIDATE>
       <CANDIDATE valide="0">puissant</CANDIDATE>
-      <CANDIDATE valide="0">rudement</CANDIDATE>
-      <CANDIDATE valide="0">sacrément</CANDIDATE>
-      <CANDIDATE valide="0">vachement</CANDIDATE>
+      <CANDIDATE valide="1">rudement</CANDIDATE>
+      <CANDIDATE valide="1">sacrément</CANDIDATE>
+      <CANDIDATE valide="1">vachement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="powerful">
       <CANDIDATE valide="0">puissant</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="right">
-      <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">comme_il_faut</CANDIDATE>
+      <CANDIDATE valide="1">bien</CANDIDATE>
+      <CANDIDATE valide="1">comme_il_faut</CANDIDATE>
       <CANDIDATE valide="0">complètement</CANDIDATE>
       <CANDIDATE valide="0">correctement</CANDIDATE>
       <CANDIDATE valide="0">d'une_manière_satisfaisante</CANDIDATE>
       <CANDIDATE valide="0">directement</CANDIDATE>
       <CANDIDATE valide="0">droit</CANDIDATE>
-      <CANDIDATE valide="0">fort</CANDIDATE>
+      <CANDIDATE valide="1">fort</CANDIDATE>
       <CANDIDATE valide="0">juste</CANDIDATE>
       <CANDIDATE valide="0">tout</CANDIDATE>
       <CANDIDATE valide="0">tout_droit</CANDIDATE>
       <CANDIDATE valide="0">tout_à_fait</CANDIDATE>
-      <CANDIDATE valide="0">très</CANDIDATE>
+      <CANDIDATE valide="1">très</CANDIDATE>
       <CANDIDATE valide="0">à_droite</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -250,21 +250,21 @@
       <CANDIDATE valide="0">beaucoup</CANDIDATE>
       <CANDIDATE valide="0">maint</CANDIDATE>
       <CANDIDATE valide="0">moult</CANDIDATE>
-      <CANDIDATE valide="0">très</CANDIDATE>
+      <CANDIDATE valide="1">très</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00032863">
     <ORIGINALDEF>from this time forth; from now on</ORIGINALDEF>
     <USAGE>henceforth she will be known as Mrs. Smith</USAGE>
     <CANDIDATES original="henceforth">
-      <CANDIDATE valide="0">dorénavant</CANDIDATE>
-      <CANDIDATE valide="0">désormais</CANDIDATE>
-      <CANDIDATE valide="0">à_l'avenir</CANDIDATE>
+      <CANDIDATE valide="1">dorénavant</CANDIDATE>
+      <CANDIDATE valide="1">désormais</CANDIDATE>
+      <CANDIDATE valide="1">à_l'avenir</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="henceforward">
-      <CANDIDATE valide="0">dorénavant</CANDIDATE>
-      <CANDIDATE valide="0">désormais</CANDIDATE>
-      <CANDIDATE valide="0">à_l'avenir</CANDIDATE>
+      <CANDIDATE valide="1">dorénavant</CANDIDATE>
+      <CANDIDATE valide="1">désormais</CANDIDATE>
+      <CANDIDATE valide="1">à_l'avenir</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00033421">
@@ -274,15 +274,15 @@
       <CANDIDATE valide="0">fissa</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="instantaneously">
-      <CANDIDATE valide="0">illico</CANDIDATE>
-      <CANDIDATE valide="0">instantanément</CANDIDATE>
+      <CANDIDATE valide="1">illico</CANDIDATE>
+      <CANDIDATE valide="1">instantanément</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="instantly">
-      <CANDIDATE valide="0">immédiatement</CANDIDATE>
-      <CANDIDATE valide="0">instantanément</CANDIDATE>
-      <CANDIDATE valide="0">sur-le-champ</CANDIDATE>
-      <CANDIDATE valide="0">sur_le_coup</CANDIDATE>
-      <CANDIDATE valide="0">tout_de_suite</CANDIDATE>
+      <CANDIDATE valide="1">immédiatement</CANDIDATE>
+      <CANDIDATE valide="1">instantanément</CANDIDATE>
+      <CANDIDATE valide="1">sur-le-champ</CANDIDATE>
+      <CANDIDATE valide="1">sur_le_coup</CANDIDATE>
+      <CANDIDATE valide="1">tout_de_suite</CANDIDATE>
       <CANDIDATE valide="0">à_l'instant</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="outright">
@@ -291,7 +291,7 @@
       <CANDIDATE valide="0">franchement</CANDIDATE>
       <CANDIDATE valide="0">haut_la_main</CANDIDATE>
       <CANDIDATE valide="0">immédiat</CANDIDATE>
-      <CANDIDATE valide="0">tout_net</CANDIDATE>
+      <CANDIDATE valide="1">tout_net</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00034137">
@@ -311,15 +311,15 @@
     <ORIGINALDEF>(used as an interjection) an expression of surprise or skepticism or irony etc.</ORIGINALDEF>
     <USAGE>Wants to marry the butler? Indeed!</USAGE>
     <CANDIDATES original="indeed">
-      <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">certes</CANDIDATE>
+      <CANDIDATE valide="1">bien</CANDIDATE>
+      <CANDIDATE valide="1">certes</CANDIDATE>
       <CANDIDATE valide="0">d'ailleurs</CANDIDATE>
       <CANDIDATE valide="0">décidément</CANDIDATE>
-      <CANDIDATE valide="0">effectivement</CANDIDATE>
-      <CANDIDATE valide="0">en_effet</CANDIDATE>
+      <CANDIDATE valide="1">effectivement</CANDIDATE>
+      <CANDIDATE valide="1">en_effet</CANDIDATE>
       <CANDIDATE valide="0">en_fait</CANDIDATE>
       <CANDIDATE valide="0">voire</CANDIDATE>
-      <CANDIDATE valide="0">vraiment</CANDIDATE>
+      <CANDIDATE valide="1">vraiment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00038537">
@@ -341,9 +341,9 @@
     <CANDIDATES original="generally">
       <CANDIDATE valide="0">communément</CANDIDATE>
       <CANDIDATE valide="0">d'habitude</CANDIDATE>
-      <CANDIDATE valide="0">d'une_manière_générale</CANDIDATE>
-      <CANDIDATE valide="0">dans_l'ensemble</CANDIDATE>
-      <CANDIDATE valide="0">en_général</CANDIDATE>
+      <CANDIDATE valide="1">d'une_manière_générale</CANDIDATE>
+      <CANDIDATE valide="1">dans_l'ensemble</CANDIDATE>
+      <CANDIDATE valide="1">en_général</CANDIDATE>
       <CANDIDATE valide="0">en_règle_générale</CANDIDATE>
       <CANDIDATE valide="0">généralement</CANDIDATE>
       <CANDIDATE valide="0">habituellement</CANDIDATE>
@@ -351,29 +351,29 @@
       <CANDIDATE valide="0">partout</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_general">
-      <CANDIDATE valide="0">en_général</CANDIDATE>
+      <CANDIDATE valide="1">en_général</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_the_main"/>
   </SYNSET>
   <SYNSET id="00048138">
     <ORIGINALDEF>after an unspecified period of time or an especially long delay</ORIGINALDEF>
     <CANDIDATES original="eventually">
-      <CANDIDATE valide="0">en_définitive</CANDIDATE>
-      <CANDIDATE valide="0">en_fin_de_compte</CANDIDATE>
-      <CANDIDATE valide="0">finalement</CANDIDATE>
+      <CANDIDATE valide="1">en_définitive</CANDIDATE>
+      <CANDIDATE valide="1">en_fin_de_compte</CANDIDATE>
+      <CANDIDATE valide="1">finalement</CANDIDATE>
       <CANDIDATE valide="0">tôt_ou_tard</CANDIDATE>
       <CANDIDATE valide="0">ultimement</CANDIDATE>
-      <CANDIDATE valide="0">un_jour</CANDIDATE>
-      <CANDIDATE valide="0">à_la_fin</CANDIDATE>
-      <CANDIDATE valide="0">à_la_longue</CANDIDATE>
+      <CANDIDATE valide="1">un_jour</CANDIDATE>
+      <CANDIDATE valide="1">à_la_fin</CANDIDATE>
+      <CANDIDATE valide="1">à_la_longue</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="finally">
       <CANDIDATE valide="0">définitivement</CANDIDATE>
       <CANDIDATE valide="0">en_dernier_lieu</CANDIDATE>
-      <CANDIDATE valide="0">enfin</CANDIDATE>
-      <CANDIDATE valide="0">finalement</CANDIDATE>
-      <CANDIDATE valide="0">pour_finir</CANDIDATE>
-      <CANDIDATE valide="0">pour_terminer</CANDIDATE>
+      <CANDIDATE valide="1">enfin</CANDIDATE>
+      <CANDIDATE valide="1">finalement</CANDIDATE>
+      <CANDIDATE valide="1">pour_finir</CANDIDATE>
+      <CANDIDATE valide="1">pour_terminer</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00050681">
@@ -386,29 +386,29 @@
     <ORIGINALDEF>with indefatigable energy</ORIGINALDEF>
     <USAGE>she watched the show indefatigably</USAGE>
     <CANDIDATES original="indefatigably">
-      <CANDIDATE valide="0">infatigablement</CANDIDATE>
-      <CANDIDATE valide="0">inlassablement</CANDIDATE>
+      <CANDIDATE valide="1">infatigablement</CANDIDATE>
+      <CANDIDATE valide="1">inlassablement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="inexhaustibly">
-      <CANDIDATE valide="0">intarissablement</CANDIDATE>
-      <CANDIDATE valide="0">inépuisablement</CANDIDATE>
+      <CANDIDATE valide="1">intarissablement</CANDIDATE>
+      <CANDIDATE valide="1">inépuisablement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="tirelessly">
-      <CANDIDATE valide="0">infatigablement</CANDIDATE>
-      <CANDIDATE valide="0">inlassablement</CANDIDATE>
+      <CANDIDATE valide="1">infatigablement</CANDIDATE>
+      <CANDIDATE valide="1">inlassablement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00052882">
     <ORIGINALDEF>indicating something hard to accept</ORIGINALDEF>
     <USAGE>he was bitterly disappointed</USAGE>
     <CANDIDATES original="bitterly">
-      <CANDIDATE valide="0">amèrement</CANDIDATE>
+      <CANDIDATE valide="1">amèrement</CANDIDATE>
       <CANDIDATE valide="0">avec_acharnement</CANDIDATE>
-      <CANDIDATE valide="0">avec_amertume</CANDIDATE>
+      <CANDIDATE valide="1">avec_amertume</CANDIDATE>
       <CANDIDATE valide="0">cruellement</CANDIDATE>
-      <CANDIDATE valide="0">farouchement</CANDIDATE>
+      <CANDIDATE valide="1">farouchement</CANDIDATE>
       <CANDIDATE valide="0">horriblement</CANDIDATE>
-      <CANDIDATE valide="0">profondément</CANDIDATE>
+      <CANDIDATE valide="1">profondément</CANDIDATE>
       <CANDIDATE valide="0">âprement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -416,10 +416,10 @@
     <ORIGINALDEF>in an open way</ORIGINALDEF>
     <USAGE>he openly flaunted his affection for his sister</USAGE>
     <CANDIDATES original="openly">
-      <CANDIDATE valide="0">franchement</CANDIDATE>
+      <CANDIDATE valide="1">franchement</CANDIDATE>
       <CANDIDATE valide="0">hautement</CANDIDATE>
-      <CANDIDATE valide="0">ouvertement</CANDIDATE>
-      <CANDIDATE valide="0">publiquement</CANDIDATE>
+      <CANDIDATE valide="1">ouvertement</CANDIDATE>
+      <CANDIDATE valide="1">publiquement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00053744">
@@ -434,9 +434,9 @@
       <CANDIDATE valide="0">d'une_manière_pratique</CANDIDATE>
       <CANDIDATE valide="0">dans_la_pratique</CANDIDATE>
       <CANDIDATE valide="0">en_fait</CANDIDATE>
-      <CANDIDATE valide="0">pratiquement</CANDIDATE>
-      <CANDIDATE valide="0">presque</CANDIDATE>
-      <CANDIDATE valide="0">quasiment</CANDIDATE>
+      <CANDIDATE valide="1">pratiquement</CANDIDATE>
+      <CANDIDATE valide="1">presque</CANDIDATE>
+      <CANDIDATE valide="1">quasiment</CANDIDATE>
       <CANDIDATE valide="0">sur_le_plan_pratique</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -444,7 +444,7 @@
     <ORIGINALDEF>in a maladroit manner</ORIGINALDEF>
     <USAGE>he dealt with the situation maladroitly</USAGE>
     <CANDIDATES original="maladroitly">
-      <CANDIDATE valide="0">maladroitement</CANDIDATE>
+      <CANDIDATE valide="1">maladroitement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00056539">
@@ -453,7 +453,7 @@
     <CANDIDATES original="greatly">
       <CANDIDATE valide="0">beaucoup</CANDIDATE>
       <CANDIDATE valide="0">bien</CANDIDATE>
-      <CANDIDATE valide="0">considérablement</CANDIDATE>
+      <CANDIDATE valide="1">considérablement</CANDIDATE>
       <CANDIDATE valide="0">de_beaucoup</CANDIDATE>
       <CANDIDATE valide="0">fort</CANDIDATE>
       <CANDIDATE valide="0">fortement</CANDIDATE>
@@ -463,7 +463,7 @@
       <CANDIDATE valide="0">spectaculairement</CANDIDATE>
       <CANDIDATE valide="0">très</CANDIDATE>
       <CANDIDATE valide="0">vivement</CANDIDATE>
-      <CANDIDATE valide="0">énormément</CANDIDATE>
+      <CANDIDATE valide="1">énormément</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00060939">
@@ -474,18 +474,18 @@
     <USAGE>her parents had died four years earlier</USAGE>
     <USAGE>I mentioned that problem earlier</USAGE>
     <CANDIDATES original="before">
-      <CANDIDATE valide="0">auparavant</CANDIDATE>
-      <CANDIDATE valide="0">avant</CANDIDATE>
-      <CANDIDATE valide="0">déjà</CANDIDATE>
-      <CANDIDATE valide="0">d’avan</CANDIDATE>
+      <CANDIDATE valide="1">auparavant</CANDIDATE>
+      <CANDIDATE valide="1">avant</CANDIDATE>
+      <CANDIDATE valide="1">déjà</CANDIDATE>
+      <CANDIDATE valide="1">d’avan</CANDIDATE>
       <CANDIDATE valide="0">préalable</CANDIDATE>
-      <CANDIDATE valide="0">précédemment</CANDIDATE>
+      <CANDIDATE valide="1">précédemment</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="earlier">
-      <CANDIDATE valide="0">antérieurement</CANDIDATE>
-      <CANDIDATE valide="0">auparavant</CANDIDATE>
-      <CANDIDATE valide="0">avant</CANDIDATE>
-      <CANDIDATE valide="0">plus_tôt</CANDIDATE>
+      <CANDIDATE valide="1">antérieurement</CANDIDATE>
+      <CANDIDATE valide="1">auparavant</CANDIDATE>
+      <CANDIDATE valide="1">avant</CANDIDATE>
+      <CANDIDATE valide="1">plus_tôt</CANDIDATE>
       <CANDIDATE valide="0">précédent</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -493,13 +493,13 @@
     <ORIGINALDEF>quickly and without warning</ORIGINALDEF>
     <USAGE>he stopped suddenly</USAGE>
     <CANDIDATES original="abruptly">
-      <CANDIDATE valide="0">abruptement</CANDIDATE>
+      <CANDIDATE valide="1">abruptement</CANDIDATE>
       <CANDIDATE valide="0">avec_brusquerie</CANDIDATE>
-      <CANDIDATE valide="0">brusquement</CANDIDATE>
+      <CANDIDATE valide="1">brusquement</CANDIDATE>
       <CANDIDATE valide="0">en_pente_raide</CANDIDATE>
-      <CANDIDATE valide="0">ex_abrupto</CANDIDATE>
-      <CANDIDATE valide="0">sans_cérémonie</CANDIDATE>
-      <CANDIDATE valide="0">tout_à_coup</CANDIDATE>
+      <CANDIDATE valide="1">ex_abrupto</CANDIDATE>
+      <CANDIDATE valide="1">sans_cérémonie</CANDIDATE>
+      <CANDIDATE valide="1">tout_à_coup</CANDIDATE>
       <CANDIDATE valide="0">à_pic</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="dead">
@@ -509,34 +509,34 @@
     </CANDIDATES>
     <CANDIDATES original="short"/>
     <CANDIDATES original="suddenly">
-      <CANDIDATE valide="0">brusquement</CANDIDATE>
-      <CANDIDATE valide="0">brutalement</CANDIDATE>
-      <CANDIDATE valide="0">soudain</CANDIDATE>
-      <CANDIDATE valide="0">soudainement</CANDIDATE>
-      <CANDIDATE valide="0">subitement</CANDIDATE>
-      <CANDIDATE valide="0">tout_d'un_coup</CANDIDATE>
-      <CANDIDATE valide="0">tout_à_coup</CANDIDATE>
+      <CANDIDATE valide="1">brusquement</CANDIDATE>
+      <CANDIDATE valide="1">brutalement</CANDIDATE>
+      <CANDIDATE valide="1">soudain</CANDIDATE>
+      <CANDIDATE valide="1">soudainement</CANDIDATE>
+      <CANDIDATE valide="1">subitement</CANDIDATE>
+      <CANDIDATE valide="1">tout_d'un_coup</CANDIDATE>
+      <CANDIDATE valide="1">tout_à_coup</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00061677">
     <ORIGINALDEF>happening unexpectedly</ORIGINALDEF>
     <USAGE>suddenly she felt a sharp pain in her side</USAGE>
     <CANDIDATES original="all_of_a_sudden">
-      <CANDIDATE valide="0">soudain</CANDIDATE>
-      <CANDIDATE valide="0">soudainement</CANDIDATE>
-      <CANDIDATE valide="0">subitement</CANDIDATE>
-      <CANDIDATE valide="0">subito</CANDIDATE>
-      <CANDIDATE valide="0">subito_presto</CANDIDATE>
+      <CANDIDATE valide="1">soudain</CANDIDATE>
+      <CANDIDATE valide="1">soudainement</CANDIDATE>
+      <CANDIDATE valide="1">subitement</CANDIDATE>
+      <CANDIDATE valide="1">subito</CANDIDATE>
+      <CANDIDATE valide="1">subito_presto</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="of_a_sudden"/>
     <CANDIDATES original="suddenly">
-      <CANDIDATE valide="0">brusquement</CANDIDATE>
-      <CANDIDATE valide="0">brutalement</CANDIDATE>
-      <CANDIDATE valide="0">soudain</CANDIDATE>
-      <CANDIDATE valide="0">soudainement</CANDIDATE>
-      <CANDIDATE valide="0">subitement</CANDIDATE>
-      <CANDIDATE valide="0">tout_d'un_coup</CANDIDATE>
-      <CANDIDATE valide="0">tout_à_coup</CANDIDATE>
+      <CANDIDATE valide="1">brusquement</CANDIDATE>
+      <CANDIDATE valide="1">brutalement</CANDIDATE>
+      <CANDIDATE valide="1">soudain</CANDIDATE>
+      <CANDIDATE valide="1">soudainement</CANDIDATE>
+      <CANDIDATE valide="1">subitement</CANDIDATE>
+      <CANDIDATE valide="1">tout_d'un_coup</CANDIDATE>
+      <CANDIDATE valide="1">tout_à_coup</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00065963">
@@ -553,10 +553,10 @@
     <USAGE>we couldn't see over the heads of the people in front</USAGE>
     <USAGE>with the cross of Jesus marching on before</USAGE>
     <CANDIDATES original="ahead">
-      <CANDIDATE valide="0">au-devant</CANDIDATE>
-      <CANDIDATE valide="0">devant</CANDIDATE>
-      <CANDIDATE valide="0">en_avant</CANDIDATE>
-      <CANDIDATE valide="0">en_tête</CANDIDATE>
+      <CANDIDATE valide="1">au-devant</CANDIDATE>
+      <CANDIDATE valide="1">devant</CANDIDATE>
+      <CANDIDATE valide="1">en_avant</CANDIDATE>
+      <CANDIDATE valide="1">en_tête</CANDIDATE>
       <CANDIDATE valide="0">suivant</CANDIDATE>
       <CANDIDATE valide="0">à_l'avance</CANDIDATE>
     </CANDIDATES>
@@ -569,7 +569,7 @@
       <CANDIDATE valide="0">précédemment</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_front">
-      <CANDIDATE valide="0">devant</CANDIDATE>
+      <CANDIDATE valide="1">devant</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00067265">
@@ -580,23 +580,23 @@
     <USAGE>moved onward into the forest</USAGE>
     <USAGE>they went slowly forward in the mud</USAGE>
     <CANDIDATES original="ahead">
-      <CANDIDATE valide="0">au-devant</CANDIDATE>
-      <CANDIDATE valide="0">devant</CANDIDATE>
-      <CANDIDATE valide="0">en_avant</CANDIDATE>
+      <CANDIDATE valide="1">au-devant</CANDIDATE>
+      <CANDIDATE valide="1">devant</CANDIDATE>
+      <CANDIDATE valide="1">en_avant</CANDIDATE>
       <CANDIDATE valide="0">en_tête</CANDIDATE>
       <CANDIDATE valide="0">suivant</CANDIDATE>
       <CANDIDATE valide="0">à_l'avance</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="forrader"/>
     <CANDIDATES original="forward">
-      <CANDIDATE valide="0">en_avant</CANDIDATE>
+      <CANDIDATE valide="1">en_avant</CANDIDATE>
       <CANDIDATE valide="0">expédier</CANDIDATE>
       <CANDIDATE valide="0">précédent</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="forwards"/>
     <CANDIDATES original="onward">
-      <CANDIDATE valide="0">en_avant</CANDIDATE>
-      <CANDIDATE valide="0">plus_loin</CANDIDATE>
+      <CANDIDATE valide="1">en_avant</CANDIDATE>
+      <CANDIDATE valide="1">plus_loin</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="onwards"/>
   </SYNSET>
@@ -604,21 +604,21 @@
     <ORIGINALDEF>equally</ORIGINALDEF>
     <USAGE>parents and teachers alike demanded reforms</USAGE>
     <CANDIDATES original="alike">
-      <CANDIDATE valide="0">de_la_même_façon</CANDIDATE>
+      <CANDIDATE valide="1">de_la_même_façon</CANDIDATE>
       <CANDIDATE valide="0">pareil</CANDIDATE>
       <CANDIDATE valide="0">semblable</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="likewise">
-      <CANDIDATE valide="0">aussi</CANDIDATE>
-      <CANDIDATE valide="0">de_même</CANDIDATE>
+      <CANDIDATE valide="1">aussi</CANDIDATE>
+      <CANDIDATE valide="1">de_même</CANDIDATE>
       <CANDIDATE valide="0">de_plus</CANDIDATE>
       <CANDIDATE valide="0">en_outre</CANDIDATE>
-      <CANDIDATE valide="0">idem</CANDIDATE>
-      <CANDIDATE valide="0">itou</CANDIDATE>
-      <CANDIDATE valide="0">mêmement</CANDIDATE>
-      <CANDIDATE valide="0">pareillement</CANDIDATE>
-      <CANDIDATE valide="0">semblablement</CANDIDATE>
-      <CANDIDATE valide="0">également</CANDIDATE>
+      <CANDIDATE valide="1">idem</CANDIDATE>
+      <CANDIDATE valide="1">itou</CANDIDATE>
+      <CANDIDATE valide="1">mêmement</CANDIDATE>
+      <CANDIDATE valide="1">pareillement</CANDIDATE>
+      <CANDIDATE valide="1">semblablement</CANDIDATE>
+      <CANDIDATE valide="1">également</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00071321">
@@ -626,11 +626,11 @@
     <USAGE>she works nearby</USAGE>
     <USAGE>the planets orbiting nearby are Venus and Mars</USAGE>
     <CANDIDATES original="nearby">
-      <CANDIDATE valide="0">auprès</CANDIDATE>
-      <CANDIDATE valide="0">proche</CANDIDATE>
-      <CANDIDATE valide="0">près</CANDIDATE>
-      <CANDIDATE valide="0">tout_près</CANDIDATE>
-      <CANDIDATE valide="0">à_proximité</CANDIDATE>
+      <CANDIDATE valide="1">auprès</CANDIDATE>
+      <CANDIDATE valide="1">proche</CANDIDATE>
+      <CANDIDATE valide="1">près</CANDIDATE>
+      <CANDIDATE valide="1">tout_près</CANDIDATE>
+      <CANDIDATE valide="1">à_proximité</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00074407">
@@ -647,17 +647,17 @@
     </CANDIDATES>
     <CANDIDATES original="backward"/>
     <CANDIDATES original="backwards">
-      <CANDIDATE valide="0">en_arrière</CANDIDATE>
+      <CANDIDATE valide="1">en_arrière</CANDIDATE>
       <CANDIDATE valide="0">en_commençant_par_la_fin</CANDIDATE>
       <CANDIDATE valide="0">en_rétrogradant</CANDIDATE>
       <CANDIDATE valide="0">vers_le_passé</CANDIDATE>
       <CANDIDATE valide="0">à_l'envers</CANDIDATE>
-      <CANDIDATE valide="0">à_rebours</CANDIDATE>
-      <CANDIDATE valide="0">à_reculons</CANDIDATE>
+      <CANDIDATE valide="1">à_rebours</CANDIDATE>
+      <CANDIDATE valide="1">à_reculons</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="rearward">
       <CANDIDATE valide="0">par_derrière</CANDIDATE>
-      <CANDIDATE valide="0">vers_l'arrière</CANDIDATE>
+      <CANDIDATE valide="1">vers_l'arrière</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="rearwards"/>
   </SYNSET>
@@ -684,11 +684,11 @@
     <USAGE>he paid dearly for the food</USAGE>
     <USAGE>this cost him dear</USAGE>
     <CANDIDATES original="dear">
-      <CANDIDATE valide="0">cher</CANDIDATE>
+      <CANDIDATE valide="1">cher</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="dearly">
       <CANDIDATE valide="0">avec_tendresse</CANDIDATE>
-      <CANDIDATE valide="0">chèrement</CANDIDATE>
+      <CANDIDATE valide="1">chèrement</CANDIDATE>
       <CANDIDATE valide="0">profondément</CANDIDATE>
       <CANDIDATE valide="0">tendrement</CANDIDATE>
     </CANDIDATES>
@@ -697,10 +697,10 @@
     <ORIGINALDEF>in a sincere and heartfelt manner</ORIGINALDEF>
     <USAGE>I would dearly love to know</USAGE>
     <CANDIDATES original="dearly">
-      <CANDIDATE valide="0">avec_tendresse</CANDIDATE>
-      <CANDIDATE valide="0">chèrement</CANDIDATE>
+      <CANDIDATE valide="1">avec_tendresse</CANDIDATE>
+      <CANDIDATE valide="1">chèrement</CANDIDATE>
       <CANDIDATE valide="0">profondément</CANDIDATE>
-      <CANDIDATE valide="0">tendrement</CANDIDATE>
+      <CANDIDATE valide="1">tendrement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_a_heartfelt_way"/>
   </SYNSET>
@@ -715,8 +715,8 @@
     <CANDIDATES original="this_evening"/>
     <CANDIDATES original="this_night"/>
     <CANDIDATES original="tonight">
-      <CANDIDATE valide="0">ce_soir</CANDIDATE>
-      <CANDIDATE valide="0">cette_nuit</CANDIDATE>
+      <CANDIDATE valide="1">ce_soir</CANDIDATE>
+      <CANDIDATE valide="1">cette_nuit</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00081194">
@@ -724,17 +724,17 @@
     <USAGE>she is behaving rather sanely these days even though we know she is schizophrenic</USAGE>
     <CANDIDATES original="sanely">
       <CANDIDATE valide="0">judicieusement</CANDIDATE>
-      <CANDIDATE valide="0">raisonnablement</CANDIDATE>
-      <CANDIDATE valide="0">sainement</CANDIDATE>
+      <CANDIDATE valide="1">raisonnablement</CANDIDATE>
+      <CANDIDATE valide="1">sainement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00081375">
     <ORIGINALDEF>in a comical manner</ORIGINALDEF>
     <USAGE>the tone was comically desperate</USAGE>
     <CANDIDATES original="comically">
-      <CANDIDATE valide="0">comiquement</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_comique</CANDIDATE>
-      <CANDIDATE valide="0">drôlement</CANDIDATE>
+      <CANDIDATE valide="1">comiquement</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_comique</CANDIDATE>
+      <CANDIDATE valide="1">drôlement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00081486">
@@ -744,16 +744,16 @@
       <CANDIDATE valide="0">bijournalier</CANDIDATE>
       <CANDIDATE valide="0">diurne</CANDIDATE>
       <CANDIDATE valide="0">journalier</CANDIDATE>
-      <CANDIDATE valide="0">journellement</CANDIDATE>
+      <CANDIDATE valide="1">journellement</CANDIDATE>
       <CANDIDATE valide="0">quotidien</CANDIDATE>
-      <CANDIDATE valide="0">quotidiennement</CANDIDATE>
-      <CANDIDATE valide="0">tous_les_jours</CANDIDATE>
+      <CANDIDATE valide="1">quotidiennement</CANDIDATE>
+      <CANDIDATE valide="1">tous_les_jours</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00082039">
     <ORIGINALDEF>in a manner or to a degree that dazzles the beholder</ORIGINALDEF>
     <CANDIDATES original="dazzlingly">
-      <CANDIDATE valide="0">de_manière_éblouissante</CANDIDATE>
+      <CANDIDATE valide="1">de_manière_éblouissante</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00082842">
@@ -765,21 +765,21 @@
     <USAGE>he walked around dizzily</USAGE>
     <CANDIDATES original="dizzily">
       <CANDIDATE valide="0">avec_un_sentiment_de_vertige</CANDIDATE>
-      <CANDIDATE valide="0">bêtement</CANDIDATE>
+      <CANDIDATE valide="1">bêtement</CANDIDATE>
       <CANDIDATE valide="0">d'une_façon_vertigineuse</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_étourdie</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_étourdie</CANDIDATE>
       <CANDIDATE valide="0">en_proie_au_vertige</CANDIDATE>
       <CANDIDATE valide="0">vertigineusement</CANDIDATE>
-      <CANDIDATE valide="0">étourdiment</CANDIDATE>
+      <CANDIDATE valide="1">étourdiment</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="giddily">
-      <CANDIDATE valide="0">avec_insouciance</CANDIDATE>
+      <CANDIDATE valide="1">avec_insouciance</CANDIDATE>
       <CANDIDATE valide="0">en_titubant</CANDIDATE>
       <CANDIDATE valide="0">vertigineusement</CANDIDATE>
       <CANDIDATE valide="0">à_donnerle_vertige</CANDIDATE>
       <CANDIDATE valide="0">à_en_avoir_le_vertige</CANDIDATE>
       <CANDIDATE valide="0">à_l'étourdie</CANDIDATE>
-      <CANDIDATE valide="0">à_la_légère</CANDIDATE>
+      <CANDIDATE valide="1">à_la_légère</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="light-headedly"/>
   </SYNSET>
@@ -791,8 +791,8 @@
     <ORIGINALDEF>in a twofold manner</ORIGINALDEF>
     <USAGE>he was doubly wrong</USAGE>
     <CANDIDATES original="doubly">
-      <CANDIDATE valide="0">deux_fois_plus</CANDIDATE>
-      <CANDIDATE valide="0">doublement</CANDIDATE>
+      <CANDIDATE valide="1">deux_fois_plus</CANDIDATE>
+      <CANDIDATE valide="1">doublement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_two_ways"/>
   </SYNSET>
@@ -800,28 +800,28 @@
     <ORIGINALDEF>with rapid movements</ORIGINALDEF>
     <USAGE>he works quickly</USAGE>
     <CANDIDATES original="apace">
-      <CANDIDATE valide="0">rapidement</CANDIDATE>
-      <CANDIDATE valide="0">vite</CANDIDATE>
+      <CANDIDATE valide="1">rapidement</CANDIDATE>
+      <CANDIDATE valide="1">vite</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="chop-chop">
-      <CANDIDATE valide="0">fissa</CANDIDATE>
+      <CANDIDATE valide="1">fissa</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="quickly">
-      <CANDIDATE valide="0">promptement</CANDIDATE>
-      <CANDIDATE valide="0">rapidement</CANDIDATE>
-      <CANDIDATE valide="0">sans_tarder</CANDIDATE>
-      <CANDIDATE valide="0">vite</CANDIDATE>
+      <CANDIDATE valide="1">promptement</CANDIDATE>
+      <CANDIDATE valide="1">rapidement</CANDIDATE>
+      <CANDIDATE valide="1">sans_tarder</CANDIDATE>
+      <CANDIDATE valide="1">vite</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="rapidly">
-      <CANDIDATE valide="0">rapidement</CANDIDATE>
-      <CANDIDATE valide="0">vite</CANDIDATE>
+      <CANDIDATE valide="1">rapidement</CANDIDATE>
+      <CANDIDATE valide="1">vite</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="speedily">
       <CANDIDATE valide="0">bientôt</CANDIDATE>
-      <CANDIDATE valide="0">diligemment</CANDIDATE>
-      <CANDIDATE valide="0">promptement</CANDIDATE>
-      <CANDIDATE valide="0">rapidement</CANDIDATE>
-      <CANDIDATE valide="0">vite</CANDIDATE>
+      <CANDIDATE valide="1">diligemment</CANDIDATE>
+      <CANDIDATE valide="1">promptement</CANDIDATE>
+      <CANDIDATE valide="1">rapidement</CANDIDATE>
+      <CANDIDATE valide="1">vite</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00086926">
@@ -839,9 +839,9 @@
     <USAGE>listened intently</USAGE>
     <USAGE>stood watching intently</USAGE>
     <CANDIDATES original="intently">
-      <CANDIDATE valide="0">avec_une_vive_attention</CANDIDATE>
-      <CANDIDATE valide="0">avidement</CANDIDATE>
-      <CANDIDATE valide="0">intensément</CANDIDATE>
+      <CANDIDATE valide="1">avec_une_vive_attention</CANDIDATE>
+      <CANDIDATE valide="1">avidement</CANDIDATE>
+      <CANDIDATE valide="1">intensément</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00091032">
@@ -857,7 +857,7 @@
       <CANDIDATE valide="0">d'un_moment_à_l'autre</CANDIDATE>
       <CANDIDATE valide="0">dans_un_instant</CANDIDATE>
       <CANDIDATE valide="0">immédiatement</CANDIDATE>
-      <CANDIDATE valide="0">momentanément</CANDIDATE>
+      <CANDIDATE valide="1">momentanément</CANDIDATE>
       <CANDIDATE valide="0">sans_attendre</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="momently"/>
@@ -866,7 +866,7 @@
     <ORIGINALDEF>in an intramuscular way</ORIGINALDEF>
     <USAGE>administer the drug intramuscularly</USAGE>
     <CANDIDATES original="intramuscularly">
-      <CANDIDATE valide="0">par_voie_intramusculaire</CANDIDATE>
+      <CANDIDATE valide="1">par_voie_intramusculaire</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00095612">
