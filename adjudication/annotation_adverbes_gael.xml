@@ -2581,7 +2581,7 @@
     <ORIGINALDEF>in a dejected manner</ORIGINALDEF>
     <USAGE>when she came back Sophie and Esther were sitting dejectedly in the kitchen</USAGE>
     <CANDIDATES original="dejectedly">
-      <CANDIDATE valide="0">d'un_air_abattu</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_abattu</CANDIDATE>
       <CANDIDATE valide="0">d'un_ton_abattu</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="in_low_spirits"/>
@@ -2592,13 +2592,13 @@
     <USAGE>a thickly populated area</USAGE>
     <CANDIDATES original="densely">
       <CANDIDATE valide="0">densement</CANDIDATE>
-      <CANDIDATE valide="0">densément</CANDIDATE>
+      <CANDIDATE valide="1">densément</CANDIDATE>
       <CANDIDATE valide="0">dru</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="thickly">
       <CANDIDATE valide="0">d'une_voix_pâteuse</CANDIDATE>
       <CANDIDATE valide="0">d'une_voix_voilée</CANDIDATE>
-      <CANDIDATE valide="0">densément</CANDIDATE>
+      <CANDIDATE valide="1">densément</CANDIDATE>
       <CANDIDATE valide="0">dru</CANDIDATE>
       <CANDIDATE valide="0">en_couche_épaisse</CANDIDATE>
       <CANDIDATE valide="0">en_morceaux_épais</CANDIDATE>
@@ -2613,32 +2613,32 @@
       <CANDIDATE valide="0">bien</CANDIDATE>
       <CANDIDATE valide="0">fortement</CANDIDATE>
       <CANDIDATE valide="0">hermétiquement</CANDIDATE>
-      <CANDIDATE valide="0">étroitement</CANDIDATE>
+      <CANDIDATE valide="1">étroitement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00301840">
     <ORIGINALDEF>with desperation</ORIGINALDEF>
     <USAGE>`Why can't you understand?,' she asked despairingly</USAGE>
     <CANDIDATES original="despairingly">
-      <CANDIDATE valide="0">avec_désespoir</CANDIDATE>
-      <CANDIDATE valide="0">d'un_air_désespéré</CANDIDATE>
-      <CANDIDATE valide="0">d'un_ton_désespéré</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_désespérée</CANDIDATE>
-      <CANDIDATE valide="0">désespérément</CANDIDATE>
+      <CANDIDATE valide="1">avec_désespoir</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_désespéré</CANDIDATE>
+      <CANDIDATE valide="1">d'un_ton_désespéré</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_désespérée</CANDIDATE>
+      <CANDIDATE valide="1">désespérément</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="despondently">
-      <CANDIDATE valide="0">d'un_air_abattu</CANDIDATE>
-      <CANDIDATE valide="0">d'un_air_découragé</CANDIDATE>
-      <CANDIDATE valide="0">d'un_ton_abattu</CANDIDATE>
-      <CANDIDATE valide="0">d'un_ton_découragé</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_abattu</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_découragé</CANDIDATE>
+      <CANDIDATE valide="1">d'un_ton_abattu</CANDIDATE>
+      <CANDIDATE valide="1">d'un_ton_découragé</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00304561">
     <ORIGINALDEF>in an original manner</ORIGINALDEF>
     <USAGE>daringly he took the first step</USAGE>
     <CANDIDATES original="daringly">
-      <CANDIDATE valide="0">audacieusement</CANDIDATE>
-      <CANDIDATE valide="0">avec_audace</CANDIDATE>
+      <CANDIDATE valide="1">audacieusement</CANDIDATE>
+      <CANDIDATE valide="1">avec_audace</CANDIDATE>
       <CANDIDATE valide="0">hardiment</CANDIDATE>
       <CANDIDATE valide="0">témérairement</CANDIDATE>
     </CANDIDATES>
@@ -2648,21 +2648,21 @@
     <USAGE>penetrated deep into enemy territory</USAGE>
     <USAGE>went deep into the woods</USAGE>
     <CANDIDATES original="deep">
-      <CANDIDATE valide="0">profond</CANDIDATE>
-      <CANDIDATE valide="0">profondément</CANDIDATE>
+      <CANDIDATE valide="1">profond</CANDIDATE>
+      <CANDIDATE valide="1">profondément</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00307639">
     <ORIGINALDEF>in a distinct and distinguishable manner</ORIGINALDEF>
     <USAGE>the subtleties of this distinctly British occasion</USAGE>
     <CANDIDATES original="distinctly">
-      <CANDIDATE valide="0">clairement</CANDIDATE>
-      <CANDIDATE valide="0">distinctement</CANDIDATE>
+      <CANDIDATE valide="1">clairement</CANDIDATE>
+      <CANDIDATE valide="1">distinctement</CANDIDATE>
       <CANDIDATE valide="0">expressément</CANDIDATE>
       <CANDIDATE valide="0">formellement</CANDIDATE>
-      <CANDIDATE valide="0">nettement</CANDIDATE>
+      <CANDIDATE valide="1">nettement</CANDIDATE>
       <CANDIDATE valide="0">particulièrement</CANDIDATE>
-      <CANDIDATE valide="0">sans_équivoque</CANDIDATE>
+      <CANDIDATE valide="1">sans_équivoque</CANDIDATE>
       <CANDIDATE valide="0">vraiment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -2676,7 +2676,7 @@
     <ORIGINALDEF>in a harmless manner</ORIGINALDEF>
     <USAGE>this is a harmlessly childish game</USAGE>
     <CANDIDATES original="harmlessly">
-      <CANDIDATE valide="0">de_façon_inoffensive</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_inoffensive</CANDIDATE>
       <CANDIDATE valide="0">sans_dommages</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -2687,22 +2687,22 @@
     <USAGE>frankly, my dear, I don't give a damn</USAGE>
     <CANDIDATES original="candidly">
       <CANDIDATE valide="0">avec_franchise</CANDIDATE>
-      <CANDIDATE valide="0">franchement</CANDIDATE>
-      <CANDIDATE valide="0">sincèrement</CANDIDATE>
+      <CANDIDATE valide="1">franchement</CANDIDATE>
+      <CANDIDATE valide="1">sincèrement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="frankly">
-      <CANDIDATE valide="0">franchement</CANDIDATE>
-      <CANDIDATE valide="0">honnêtement</CANDIDATE>
-      <CANDIDATE valide="0">nûment</CANDIDATE>
+      <CANDIDATE valide="1">franchement</CANDIDATE>
+      <CANDIDATE valide="1">honnêtement</CANDIDATE>
+      <CANDIDATE valide="1">nûment</CANDIDATE>
       <CANDIDATE valide="0">rondement</CANDIDATE>
-      <CANDIDATE valide="0">sincèrement</CANDIDATE>
+      <CANDIDATE valide="1">sincèrement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="honestly">
       <CANDIDATE valide="0">droitement</CANDIDATE>
-      <CANDIDATE valide="0">honnêtement</CANDIDATE>
+      <CANDIDATE valide="1">honnêtement</CANDIDATE>
       <CANDIDATE valide="0">loyalement</CANDIDATE>
-      <CANDIDATE valide="0">sincèrement</CANDIDATE>
-      <CANDIDATE valide="0">vraiment</CANDIDATE>
+      <CANDIDATE valide="1">sincèrement</CANDIDATE>
+      <CANDIDATE valide="1">vraiment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00320408">
@@ -2710,8 +2710,8 @@
     <USAGE>she looked at him distrustfully</USAGE>
     <CANDIDATES original="distrustfully"/>
     <CANDIDATES original="mistrustfully">
-      <CANDIDATE valide="0">avec_méfiance</CANDIDATE>
-      <CANDIDATE valide="0">d'un_air_méfiant</CANDIDATE>
+      <CANDIDATE valide="1">avec_méfiance</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_méfiant</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00322255">
@@ -2735,21 +2735,21 @@
     <ORIGINALDEF>toward the west</ORIGINALDEF>
     <USAGE>we began to steer away westerly (Daniel Defoe)</USAGE>
     <CANDIDATES original="westerly">
-      <CANDIDATE valide="0">vers_l'ouest</CANDIDATE>
+      <CANDIDATE valide="1">vers_l'ouest</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00325139">
     <ORIGINALDEF>in an ecstatic manner</ORIGINALDEF>
     <USAGE>he reacted ecstatically to my plan to travel to Africa</USAGE>
     <CANDIDATES original="ecstatically">
-      <CANDIDATE valide="0">avec_extase</CANDIDATE>
-      <CANDIDATE valide="0">avec_ravissement</CANDIDATE>
-      <CANDIDATE valide="0">d'un_air_extasié</CANDIDATE>
-      <CANDIDATE valide="0">extatiquement</CANDIDATE>
+      <CANDIDATE valide="1">avec_extase</CANDIDATE>
+      <CANDIDATE valide="1">avec_ravissement</CANDIDATE>
+      <CANDIDATE valide="1">d'un_air_extasié</CANDIDATE>
+      <CANDIDATE valide="1">extatiquement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="rapturously">
       <CANDIDATE valide="0">avec_frénésie</CANDIDATE>
-      <CANDIDATE valide="0">avec_ravissement</CANDIDATE>
+      <CANDIDATE valide="1">avec_ravissement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="rhapsodically"/>
   </SYNSET>
@@ -2759,11 +2759,11 @@
     <CANDIDATES original="articulately">
       <CANDIDATE valide="0">avec_aisance</CANDIDATE>
       <CANDIDATE valide="0">avec_facilité</CANDIDATE>
-      <CANDIDATE valide="0">clairement</CANDIDATE>
+      <CANDIDATE valide="1">clairement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="eloquently">
-      <CANDIDATE valide="0">avec_éloquence</CANDIDATE>
-      <CANDIDATE valide="0">éloquemment</CANDIDATE>
+      <CANDIDATE valide="1">avec_éloquence</CANDIDATE>
+      <CANDIDATE valide="1">éloquemment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00328830">
@@ -2775,15 +2775,15 @@
     <ORIGINALDEF>in a passionately fanatic manner</ORIGINALDEF>
     <USAGE>he followed the teachings of his guru fanatically</USAGE>
     <CANDIDATES original="fanatically">
-      <CANDIDATE valide="0">fanatiquement</CANDIDATE>
+      <CANDIDATE valide="1">fanatiquement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00337313">
     <ORIGINALDEF>in a fashionable manner</ORIGINALDEF>
     <USAGE>his voice had no trace of the drawl that you would expect to find in a fashionably dressed young man</USAGE>
     <CANDIDATES original="fashionably">
-      <CANDIDATE valide="0">à_la_mode</CANDIDATE>
-      <CANDIDATE valide="0">élégamment</CANDIDATE>
+      <CANDIDATE valide="1">à_la_mode</CANDIDATE>
+      <CANDIDATE valide="1">élégamment</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00337681">
@@ -2791,32 +2791,32 @@
     <USAGE>he writes extremely musical music, of which the sound is fastidiously calculated and yet agreeably spontaneous and imaginative</USAGE>
     <CANDIDATES original="fastidiously">
       <CANDIDATE valide="0">en_faisant_le_délicat</CANDIDATE>
-      <CANDIDATE valide="0">minutieusement</CANDIDATE>
-      <CANDIDATE valide="0">méticuleusement</CANDIDATE>
+      <CANDIDATE valide="1">minutieusement</CANDIDATE>
+      <CANDIDATE valide="1">méticuleusement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00341305">
     <ORIGINALDEF>with flexibility</ORIGINALDEF>
     <USAGE>`Come whenever you are free,' he said flexibly</USAGE>
     <CANDIDATES original="flexibly">
-      <CANDIDATE valide="0">avec_flexibilité</CANDIDATE>
-      <CANDIDATE valide="0">avec_souplesse</CANDIDATE>
-      <CANDIDATE valide="0">flexiblement</CANDIDATE>
-      <CANDIDATE valide="0">souplement</CANDIDATE>
+      <CANDIDATE valide="1">avec_flexibilité</CANDIDATE>
+      <CANDIDATE valide="1">avec_souplesse</CANDIDATE>
+      <CANDIDATE valide="1">flexiblement</CANDIDATE>
+      <CANDIDATE valide="1">souplement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00343660">
     <ORIGINALDEF>used as a direction in music; to be played relatively softly</ORIGINALDEF>
     <CANDIDATES original="piano">
-      <CANDIDATE valide="0">piano</CANDIDATE>
+      <CANDIDATE valide="1">piano</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="softly">
       <CANDIDATE valide="0">bas</CANDIDATE>
-      <CANDIDATE valide="0">doucement</CANDIDATE>
-      <CANDIDATE valide="0">en_sourdine</CANDIDATE>
+      <CANDIDATE valide="1">doucement</CANDIDATE>
+      <CANDIDATE valide="1">en_sourdine</CANDIDATE>
       <CANDIDATE valide="0">faiblement</CANDIDATE>
       <CANDIDATE valide="0">gentiment</CANDIDATE>
-      <CANDIDATE valide="0">légèrement</CANDIDATE>
+      <CANDIDATE valide="1">légèrement</CANDIDATE>
       <CANDIDATE valide="0">mollement</CANDIDATE>
       <CANDIDATE valide="0">sans__bruit</CANDIDATE>
       <CANDIDATE valide="0">sans_faire_de_bruit</CANDIDATE>
@@ -2838,51 +2838,51 @@
     <USAGE>the English lived genteelly in India</USAGE>
     <CANDIDATES original="genteelly">
       <CANDIDATE valide="0">d'une_manière_affectée</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_distinguée</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_très_convenable</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_distinguée</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_très_convenable</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00347717">
     <ORIGINALDEF>with respect to geology</ORIGINALDEF>
     <USAGE>geologically speaking, this area is extremely interesting</USAGE>
     <CANDIDATES original="geologically">
-      <CANDIDATE valide="0">géologiquement</CANDIDATE>
+      <CANDIDATE valide="1">géologiquement</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00348450">
     <ORIGINALDEF>in a joyless manner; without joy</ORIGINALDEF>
     <USAGE>she greeted her guests joylessly</USAGE>
     <CANDIDATES original="joylessly">
-      <CANDIDATE valide="0">sans_joie</CANDIDATE>
+      <CANDIDATE valide="1">sans_joie</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00348592">
     <ORIGINALDEF>(musical direction) in the manner of a glissando (with a rapidly executed series of notes)</ORIGINALDEF>
     <USAGE>this should be played glissando, please</USAGE>
     <CANDIDATES original="glissando">
-      <CANDIDATE valide="0">glissando</CANDIDATE>
+      <CANDIDATE valide="1">glissando</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00350163">
     <ORIGINALDEF>in an impressively beautiful manner</ORIGINALDEF>
     <USAGE>the Princess was gorgeously dressed</USAGE>
     <CANDIDATES original="gorgeously">
-      <CANDIDATE valide="0">splendidement</CANDIDATE>
-      <CANDIDATE valide="0">superbement</CANDIDATE>
+      <CANDIDATE valide="1">splendidement</CANDIDATE>
+      <CANDIDATE valide="1">superbement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="magnificently">
-      <CANDIDATE valide="0">magnifiquement</CANDIDATE>
-      <CANDIDATE valide="0">splendidement</CANDIDATE>
+      <CANDIDATE valide="1">magnifiquement</CANDIDATE>
+      <CANDIDATE valide="1">splendidement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="resplendently">
-      <CANDIDATE valide="0">splendidement</CANDIDATE>
+      <CANDIDATE valide="1">splendidement</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="splendidly">
-      <CANDIDATE valide="0">magnifiquement</CANDIDATE>
-      <CANDIDATE valide="0">merveilleusement</CANDIDATE>
-      <CANDIDATE valide="0">splendidement</CANDIDATE>
-      <CANDIDATE valide="0">superbement</CANDIDATE>
-      <CANDIDATE valide="0">à_merveille</CANDIDATE>
+      <CANDIDATE valide="1">magnifiquement</CANDIDATE>
+      <CANDIDATE valide="1">merveilleusement</CANDIDATE>
+      <CANDIDATE valide="1">splendidement</CANDIDATE>
+      <CANDIDATE valide="1">superbement</CANDIDATE>
+      <CANDIDATE valide="1">à_merveille</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00351040">
@@ -2900,12 +2900,12 @@
     <ORIGINALDEF>at breakneck speed</ORIGINALDEF>
     <USAGE>burst headlong through the gate</USAGE>
     <CANDIDATES original="headlong">
-      <CANDIDATE valide="0">tête_baissée</CANDIDATE>
+      <CANDIDATE valide="1">tête_baissée</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="precipitately">
-      <CANDIDATE valide="0">avec_précipitation</CANDIDATE>
-      <CANDIDATE valide="0">précipitamment</CANDIDATE>
-      <CANDIDATE valide="0">à_la_hâte</CANDIDATE>
+      <CANDIDATE valide="1">avec_précipitation</CANDIDATE>
+      <CANDIDATE valide="1">précipitamment</CANDIDATE>
+      <CANDIDATE valide="1">à_la_hâte</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00355080">
@@ -2917,7 +2917,7 @@
     <ORIGINALDEF>in a heartless manner</ORIGINALDEF>
     <USAGE>she behaves rather heartlessly toward her admirers</USAGE>
     <CANDIDATES original="heartlessly">
-      <CANDIDATE valide="0">sans_pitié</CANDIDATE>
+      <CANDIDATE valide="1">sans_pitié</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00355896">
@@ -2925,15 +2925,15 @@
     <USAGE>the landlord demises unto the tenant the premises hereinafter called the demised premises</USAGE>
     <USAGE>the terms specified hereunder</USAGE>
     <CANDIDATES original="hereafter">
-      <CANDIDATE valide="0">après</CANDIDATE>
-      <CANDIDATE valide="0">ci-après</CANDIDATE>
+      <CANDIDATE valide="1">après</CANDIDATE>
+      <CANDIDATE valide="1">ci-après</CANDIDATE>
       <CANDIDATE valide="0">dans_l'autre_monde</CANDIDATE>
       <CANDIDATE valide="0">dans_l'autre_vie</CANDIDATE>
       <CANDIDATE valide="0">plus_tard</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="hereinafter">
-      <CANDIDATE valide="0">ci-après</CANDIDATE>
-      <CANDIDATE valide="0">dans_la_suite_des_présentes</CANDIDATE>
+      <CANDIDATE valide="1">ci-après</CANDIDATE>
+      <CANDIDATE valide="1">dans_la_suite_des_présentes</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="hereunder"/>
   </SYNSET>
@@ -2941,18 +2941,18 @@
     <ORIGINALDEF>immediately after this</ORIGINALDEF>
     <USAGE>hereupon, the passengers stumbled aboard</USAGE>
     <CANDIDATES original="hereupon">
-      <CANDIDATE valide="0">là-dessus</CANDIDATE>
-      <CANDIDATE valide="0">sur_ce</CANDIDATE>
+      <CANDIDATE valide="1">là-dessus</CANDIDATE>
+      <CANDIDATE valide="1">sur_ce</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00356957">
     <ORIGINALDEF>at a great altitude</ORIGINALDEF>
     <USAGE>he climbed high on the ladder</USAGE>
     <CANDIDATES original="high">
-      <CANDIDATE valide="0">en_haut</CANDIDATE>
-      <CANDIDATE valide="0">haut</CANDIDATE>
-      <CANDIDATE valide="0">à_haute_altitude</CANDIDATE>
-      <CANDIDATE valide="0">à_une_altitude_élevée</CANDIDATE>
+      <CANDIDATE valide="1">en_haut</CANDIDATE>
+      <CANDIDATE valide="1">haut</CANDIDATE>
+      <CANDIDATE valide="1">à_haute_altitude</CANDIDATE>
+      <CANDIDATE valide="1">à_une_altitude_élevée</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="high_up"/>
   </SYNSET>
@@ -2960,11 +2960,11 @@
     <ORIGINALDEF>in a hoarse or husky voice</ORIGINALDEF>
     <USAGE>`Excuse me,' he said hoarsely</USAGE>
     <CANDIDATES original="hoarsely">
-      <CANDIDATE valide="0">d'une_voix_enrouée</CANDIDATE>
-      <CANDIDATE valide="0">d'une_voix_rauque</CANDIDATE>
+      <CANDIDATE valide="1">d'une_voix_enrouée</CANDIDATE>
+      <CANDIDATE valide="1">d'une_voix_rauque</CANDIDATE>
     </CANDIDATES>
     <CANDIDATES original="huskily">
-      <CANDIDATE valide="0">d'une_voix_rauque</CANDIDATE>
+      <CANDIDATE valide="1">d'une_voix_rauque</CANDIDATE>
       <CANDIDATE valide="0">d'une_voix_voilée</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
@@ -2972,12 +2972,12 @@
     <ORIGINALDEF>in an inhospitable manner</ORIGINALDEF>
     <USAGE>she was received inhospitably by her new family</USAGE>
     <CANDIDATES original="inhospitably">
-      <CANDIDATE valide="0">d'une_manière_inhospitalière</CANDIDATE>
-      <CANDIDATE valide="0">d'une_manière_peu_hospitalière</CANDIDATE>
+      <CANDIDATE valide="1">d'une_manière_inhospitalière</CANDIDATE>
+      <CANDIDATE valide="1">d'une_manière_peu_hospitalière</CANDIDATE>
       <CANDIDATE valide="0">de_façon_désobligeante</CANDIDATE>
       <CANDIDATE valide="0">de_façon_inamicale</CANDIDATE>
-      <CANDIDATE valide="0">de_façon_inhospitalière</CANDIDATE>
-      <CANDIDATE valide="0">de_manière_inhospitalière</CANDIDATE>
+      <CANDIDATE valide="1">de_façon_inhospitalière</CANDIDATE>
+      <CANDIDATE valide="1">de_manière_inhospitalière</CANDIDATE>
     </CANDIDATES>
   </SYNSET>
   <SYNSET id="00359095">
