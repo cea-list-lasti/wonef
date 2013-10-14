@@ -14,9 +14,15 @@ const std::string WOLF = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
 const std::string WOLFONE = DATAPATH + "/opendata/wolf10b/wolf-1.0b.xml";
 const std::string EWN = DATAPATH + "/opendata/ewn/wn_fr.ewn.utf8";
 
-const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.xml";
-const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.xml";
-const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.xml";
+const std::string GOLD_NOUN = DATAPATH + "/Gold30/GT_nouns30.test.xml";
+const std::string GOLD_VERB = DATAPATH + "/Gold30/GT_verbs30.test.xml";
+const std::string GOLD_ADJ = DATAPATH + "/Gold30/GT_adjs30.test.xml";
+const std::string GOLD_ADV = DATAPATH + "/Gold30/GT_adv30.test.xml";
+
+const std::string GOLD_DEV_NOUN = DATAPATH + "/Gold30/GT_nouns30.dev.xml";
+const std::string GOLD_DEV_VERB = DATAPATH + "/Gold30/GT_verbs30.dev.xml";
+const std::string GOLD_DEV_ADJ = DATAPATH + "/Gold30/GT_adjs30.dev.xml";
+const std::string GOLD_DEV_ADV = DATAPATH + "/Gold30/GT_adv30.dev.xml";
 
 const std::string EURADIC = DATAPATH + "/dictionnaires/euradic-utf8.txt";
 const std::string WIKTIONARY = DATAPATH + "/dictionnaires/frwiktionary-20090120-eldafmt.csv";
@@ -37,6 +43,12 @@ const std::string  DATA_ADJ20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.adj"
 const std::string  DATA_ADJ15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADJ.DAT";
 const std::string  ADJS_LIST = DATAPATH + "/POSlist/adjectifs.list";
 const std::string  ADJS_LIST_F = DATAPATH + "/POSlist/adjectifs.filtered.list";
+
+const std::string DATA_ADV30 = DATAPATH + "/opendata/WordNet-3.0/dict/data.adv";
+const std::string DATA_ADV20 = DATAPATH + "/opendata/WordNet-2.0/dict/data.adv";
+const std::string DATA_ADV15 = DATAPATH + "/opendata/WordNet-1.5/DICT/ADV.DAT";
+const std::string ADVS_LIST = DATAPATH + "/POSlist/others.uniq.list";
+const std::string ADVS_LIST_F = DATAPATH + "/POSlist/others.uniq.filtered.list";
 
 const std::string  KNNSTDDIR = DATAPATH + "/FastKNN/knnall/";
 const std::string  KNNSTDFILE = "KNNSTDDIR/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt";
