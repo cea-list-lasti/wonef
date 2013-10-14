@@ -2,6 +2,7 @@
 #include "Tools.hpp"
 #include "Paths.hpp"
 #include <iostream>
+#include <sstream>
 #include <fstream>
 #include <boost/regex.hpp>
 #include <boost/algorithm/string.hpp>
