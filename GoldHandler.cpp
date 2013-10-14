@@ -21,8 +21,8 @@ std::string GoldHandler::get_attr(const xmlpp::SaxParser::AttributeList& attrs, 
   for(const xmlpp::SaxParser::Attribute& attr: attrs) {
     if (attr.name == name) return attr.value;
   }
-  std::cout << "asked for " << name << std::endl;
-  exit(-1);
+  std::cout << "Asked for " << name << ". Exiting." << std::endl;
+  exit(255);
 }
 
 void GoldHandler::on_start_element(const std::string& name,
