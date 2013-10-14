@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o errexit
+
 # Usage
 # The parameters specify which extraction and module iterations should be run.
 # For example, with # ./translateWN.sh -e 1 2 3 -m {1..4}, extraction 1 to 3
