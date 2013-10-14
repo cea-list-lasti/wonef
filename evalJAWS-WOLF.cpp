@@ -137,12 +137,14 @@ int main(int argc, char **argv) {
   std::map<POS, std::string> goldFile = {
     {POS::Noun, GOLD_NOUN},
     {POS::Verb, GOLD_VERB},
-    {POS::Adj, GOLD_ADJ}};
+    {POS::Adj, GOLD_ADJ},
+    {POS::Adv, GOLD_ADV}};
 
   std::map<POS, std::string> goldDevFile = {
     {POS::Noun, GOLD_DEV_NOUN},
     {POS::Verb, GOLD_DEV_VERB},
-    {POS::Adj, GOLD_DEV_ADJ}};
+    {POS::Adj, GOLD_DEV_ADJ},
+    {POS::Adv, GOLD_DEV_ADV}};
 
   std::string suffix = spos + "." + seqs;
 
@@ -183,19 +185,17 @@ int main(int argc, char **argv) {
   wolfOneHandler.parse_file(WOLFONE);
   cerr << t.duration() << "s" << endl;
 
-  if (pos != POS::Adv) {
-    t.start();
-    cerr << "Loading Gold test... ";
-    GoldHandler goldHandlerTest(goldNetTest, goldNetIdIdentTest, goldValueTest);
-    goldHandlerTest.parse_file(goldFile[pos]);
-    cerr << t.duration() << "s" << endl;
+  t.start();
+  cerr << "Loading Gold test... ";
+  GoldHandler goldHandlerTest(goldNetTest, goldNetIdIdentTest, goldValueTest);
+  goldHandlerTest.parse_file(goldFile[pos]);
+  cerr << t.duration() << "s" << endl;
 
-    t.start();
-    cerr << "Loading Gold dev... ";
-    GoldHandler goldHandlerDev(goldNetDev, goldNetIdIdentDev, goldValueDev);
-    goldHandlerDev.parse_file(goldDevFile[pos]);
-    cerr << t.duration() << "s" << endl;
-  }
+  t.start();
+  cerr << "Loading Gold dev... ";
+  GoldHandler goldHandlerDev(goldNetDev, goldNetIdIdentDev, goldValueDev);
+  goldHandlerDev.parse_file(goldDevFile[pos]);
+  cerr << t.duration() << "s" << endl;
 
   /* Evaluate with WOLF 0.1.4 */
   /*
@@ -226,27 +226,25 @@ int main(int argc, char **argv) {
   */
 
   /* Then evaluate with the gold standard */
-  if (pos != POS::Adv) {
-    std::cout << std::endl << "-- Evaluating with Gold... --" << std::endl;
-    if (mode == "precision") {
-      std::cout << std::endl << "                *** Filtered ***" << std::endl;
-      std::ofstream logGoldBest("logs/eval.gold.best.test." + suffix, ios_base::out | ios_base::trunc);
-      parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
-          goldNetTest, goldNetIdIdentTest, spos, bestJaws, goldValueTest, true);
-      std::ofstream logGoldBestDev("logs/eval.gold.best.dev." + suffix, ios_base::out | ios_base::trunc);
-      parseAndEvaluatePolysemous(logGoldBestDev, bcsbase, BCSCount, litList, polysemousIdsList,
-          goldNetDev, goldNetIdIdentDev, spos, bestJaws, goldValueDev, true);
-    } else {
-      std::cout << std::endl << "                *** Normal ***" << std::endl;
-      std::ofstream logGold("logs/eval.gold.test." + suffix, ios_base::out | ios_base::trunc);
-      parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
-          goldNetTest, goldNetIdIdentTest, spos, jaws, goldValueTest, true);
-      std::ofstream logGoldDev("logs/eval.gold.dev." + suffix, ios_base::out | ios_base::trunc);
-      parseAndEvaluatePolysemous(logGoldDev, bcsbase, BCSCount, litList, polysemousIdsList,
-          goldNetDev, goldNetIdIdentDev, spos, jaws, goldValueDev, true);
-    }
-    std::cout << std::endl;
+  std::cout << std::endl << "-- Evaluating with Gold... --" << std::endl;
+  if (mode == "precision") {
+    std::cout << std::endl << "                *** Filtered ***" << std::endl;
+    std::ofstream logGoldBest("logs/eval.gold.best.test." + suffix, ios_base::out | ios_base::trunc);
+    parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
+        goldNetTest, goldNetIdIdentTest, spos, bestJaws, goldValueTest, true);
+    std::ofstream logGoldBestDev("logs/eval.gold.best.dev." + suffix, ios_base::out | ios_base::trunc);
+    parseAndEvaluatePolysemous(logGoldBestDev, bcsbase, BCSCount, litList, polysemousIdsList,
+        goldNetDev, goldNetIdIdentDev, spos, bestJaws, goldValueDev, true);
+  } else {
+    std::cout << std::endl << "                *** Normal ***" << std::endl;
+    std::ofstream logGold("logs/eval.gold.test." + suffix, ios_base::out | ios_base::trunc);
+    parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
+        goldNetTest, goldNetIdIdentTest, spos, jaws, goldValueTest, true);
+    std::ofstream logGoldDev("logs/eval.gold.dev." + suffix, ios_base::out | ios_base::trunc);
+    parseAndEvaluatePolysemous(logGoldDev, bcsbase, BCSCount, litList, polysemousIdsList,
+        goldNetDev, goldNetIdIdentDev, spos, jaws, goldValueDev, true);
   }
+  std::cout << std::endl;
 
   std::cout << "Overall evaluation duration: " << globalT.duration() << " s" << std::endl;
 
