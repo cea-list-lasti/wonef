@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VERITE>
+    <SYNSET id="00074524">
+    <ORIGINALDEF>a mistake resulting from inattention</ORIGINALDEF>
+    <CANDIDATES original="lapse">
+      <CANDIDATE score="0">disparition</CANDIDATE>
+      <CANDIDATE score="0">déchéance</CANDIDATE>
+      <CANDIDATE score="0">défaillance</CANDIDATE>
+      <CANDIDATE score="2">faute</CANDIDATE>
+      <CANDIDATE score="0">intervalle</CANDIDATE>
+      <CANDIDATE score="1">oubli</CANDIDATE>
+      <CANDIDATE score="0">rechute</CANDIDATE>
+      <CANDIDATE score="0">tomber</CANDIDATE>
+      <CANDIDATE score="0">écart</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="oversight">
+      <CANDIDATE score="1">inadvertance</CANDIDATE>
+      <CANDIDATE score="1">omission</CANDIDATE>
+      <CANDIDATE score="1">oubli</CANDIDATE>
+      <CANDIDATE score="0">surveillance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00726867">
+    <ORIGINALDEF>(American football) the position of a back on a football team</ORIGINALDEF>
+    <CANDIDATES original="fullback">
+      <CANDIDATE score="1">arrière</CANDIDATE>
+      <CANDIDATE score="2">stoppeur</CANDIDATE>
+      <CANDIDATE score="2">stoppeuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00827379">
+    <ORIGINALDEF>providing something with a surface of a different material</ORIGINALDEF>
+    <CANDIDATES original="facing">
+      <CANDIDATE score="2">maçonnage</CANDIDATE>
+      <CANDIDATE score="0">parement</CANDIDATE>
+      <CANDIDATE score="0">parementure</CANDIDATE>
+      <CANDIDATE score="1">placage</CANDIDATE>
+      <CANDIDATE score="0">revers</CANDIDATE>
+      <CANDIDATE score="1">revêtement</CANDIDATE>
+      <CANDIDATE score="0">tirant</CANDIDATE>
+      <CANDIDATE score="0">face_à</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lining">
+      <CANDIDATE score="2">doublure</CANDIDATE>
+      <CANDIDATE score="0">matelassure</CANDIDATE>
+      <CANDIDATE score="0">paroi</CANDIDATE>
+      <CANDIDATE score="0">coiffe</CANDIDATE>
+      <CANDIDATE score="1">revêtement</CANDIDATE>
+      <CANDIDATE score="0">chemise</CANDIDATE>
+      <CANDIDATE score="2">plâtrage</CANDIDATE>
+      <CANDIDATE score="0">garniture</CANDIDATE>
+      <CANDIDATE score="2">doublage</CANDIDATE>
+      <CANDIDATE score="0">chemisage</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02904233">
+    <ORIGINALDEF>a carpet woven on a wide loom to obviate the need for seams</ORIGINALDEF>
+    <CANDIDATES original="broadloom" />
+  </SYNSET>
+  <SYNSET id="02912557">
+    <ORIGINALDEF>a small lightweight carriage; drawn by a single horse</ORIGINALDEF>
+    <CANDIDATES original="buggy">
+      <CANDIDATE score="0">bagnole</CANDIDATE>
+      <CANDIDATE score="1">boghei</CANDIDATE>
+      <CANDIDATE score="1">buggy</CANDIDATE>
+      <CANDIDATE score="0">poussette</CANDIDATE>
+      <CANDIDATE score="0">poussette-canne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="roadster">
+      <CANDIDATE score="0">roadster</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03115762">
+    <ORIGINALDEF>a narrow bed on which a patient lies during psychiatric or psychoanalytic treatment</ORIGINALDEF>
+    <CANDIDATES original="couch">
+      <CANDIDATE score="2">canapé</CANDIDATE>
+      <CANDIDATE score="0">chiendent</CANDIDATE>
+      <CANDIDATE score="0">couche</CANDIDATE>
+      <CANDIDATE score="1">divan</CANDIDATE>
+      <CANDIDATE score="0">gisement</CANDIDATE>
+      <CANDIDATE score="0">lit</CANDIDATE>
+      <CANDIDATE score="2">sofa</CANDIDATE>
+      <CANDIDATE score="0">sultane</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03607527">
+    <ORIGINALDEF>a cap that is wrapped around by a turban and worn by Muslim religious elders</ORIGINALDEF>
+    <CANDIDATES original="kalansuwa" />
+  </SYNSET>
+  <SYNSET id="03625646">
+    <ORIGINALDEF>needle consisting of a slender rod with pointed ends; usually used in pairs</ORIGINALDEF>
+    <CANDIDATES original="knitting_needle" />
+  </SYNSET>
+  <SYNSET id="03637027">
+    <ORIGINALDEF>housing that holds a lamp (as in a movie projector)</ORIGINALDEF>
+    <CANDIDATES original="lamp_house" />
+    <CANDIDATES original="lamp_housing" />
+    <CANDIDATES original="lamphouse" />
+  </SYNSET>
+  <SYNSET id="03642341">
+    <ORIGINALDEF>writing board used on the lap as a table or desk</ORIGINALDEF>
+    <CANDIDATES original="lapboard" />
+  </SYNSET>
+  <SYNSET id="03656011">
+    <ORIGINALDEF>a grove of lemon trees</ORIGINALDEF>
+    <CANDIDATES original="lemon_grove" />
+  </SYNSET>
+  <SYNSET id="03693293">
+    <ORIGINALDEF>a stylized or decorative knot used as an emblem of love</ORIGINALDEF>
+    <CANDIDATES original="love_knot" />
+    <CANDIDATES original="lover's_knot" />
+    <CANDIDATES original="lovers'_knot" />
+    <CANDIDATES original="true_lover's_knot" />
+    <CANDIDATES original="true_lovers'_knot" />
+  </SYNSET>
+  <SYNSET id="03695122">
+    <ORIGINALDEF>mechanical system of lubricating internal combustion engines in which a pump forces oil into the engine bearings</ORIGINALDEF>
+    <CANDIDATES original="force-feed_lubricating_system" />
+    <CANDIDATES original="force_feed" />
+    <CANDIDATES original="lubricating_system" />
+    <CANDIDATES original="pressure-feed_lubricating_system" />
+    <CANDIDATES original="pressure_feed" />
+  </SYNSET>
+  <SYNSET id="03699138">
+    <ORIGINALDEF>an antidiuretic and vasoconstrictor used to treat diabetes insipidus</ORIGINALDEF>
+    <CANDIDATES original="lypressin" />
+  </SYNSET>
+  <SYNSET id="03729131">
+    <ORIGINALDEF>a board that has a groove cut into one edge and a tongue cut into the other so they fit tightly together (as in a floor)</ORIGINALDEF>
+    <CANDIDATES original="matchboard" />
+  </SYNSET>
+  <SYNSET id="03755991">
+    <ORIGINALDEF>antihypertensive drug (trade name Aldomet) used in the treatment of high blood pressure</ORIGINALDEF>
+    <CANDIDATES original="alpha_methyl_dopa" />
+    <CANDIDATES original="methyldopa" />
+    <CANDIDATES original="Aldomet" />
+  </SYNSET>
+  <SYNSET id="03803284">
+    <ORIGINALDEF>a leather or wire restraint that fits over an animal's snout (especially a dog's nose and jaws) and prevents it from eating or biting</ORIGINALDEF>
+    <CANDIDATES original="muzzle">
+      <CANDIDATE score="0">bouche</CANDIDATE>
+      <CANDIDATE score="0">bâillon</CANDIDATE>
+      <CANDIDATE score="0">gouffre</CANDIDATE>
+      <CANDIDATE score="0">gueule</CANDIDATE>
+      <CANDIDATE score="0">mufle</CANDIDATE>
+      <CANDIDATE score="0">museau</CANDIDATE>
+      <CANDIDATE score="1">muselière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04219580">
+    <ORIGINALDEF>the brightly colored garments of a jockey; emblematic of the stable</ORIGINALDEF>
+    <CANDIDATES original="silks" />
+  </SYNSET>
+  <SYNSET id="04259468">
+    <ORIGINALDEF>armor plate that protects the foot; consists of mail with a solid toe and heel</ORIGINALDEF>
+    <CANDIDATES original="sabaton" />
+    <CANDIDATES original="solleret">
+      <CANDIDATE score="1">soleret</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04350905">
+    <ORIGINALDEF>a set of garments (usually including a jacket and trousers or skirt) for outerwear all of the same fabric and color; "they buried him in his best suit"</ORIGINALDEF>
+    <CANDIDATES original="suit">
+      <CANDIDATE score="0">combinaison</CANDIDATE>
+      <CANDIDATE score="1">complet</CANDIDATE>
+      <CANDIDATE score="0">costar</CANDIDATE>
+      <CANDIDATE score="1">costard</CANDIDATE>
+      <CANDIDATE score="1">costume</CANDIDATE>
+      <CANDIDATE score="0">couleur</CANDIDATE>
+      <CANDIDATE score="0">ensemble</CANDIDATE>
+      <CANDIDATE score="0">jogging</CANDIDATE>
+      <CANDIDATE score="0">poursuite</CANDIDATE>
+      <CANDIDATE score="0">procès</CANDIDATE>
+      <CANDIDATE score="0">pétition</CANDIDATE>
+      <CANDIDATE score="0">requête</CANDIDATE>
+      <CANDIDATE score="0">scaphandre</CANDIDATE>
+      <CANDIDATE score="1">tailleur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="suit_of_clothes" />
+  </SYNSET>
+  <SYNSET id="04795878">
+    <ORIGINALDEF>commonplaceness as a consequence of being humdrum and not exciting</ORIGINALDEF>
+    <CANDIDATES original="prosaicness" />
+    <CANDIDATES original="prosiness" />
+  </SYNSET>
+  <SYNSET id="04813283">
+    <ORIGINALDEF>elegance suggestive of a royal court</ORIGINALDEF>
+    <CANDIDATES original="courtliness" />
+  </SYNSET>
+  <SYNSET id="04820102">
+    <ORIGINALDEF>the intelligibility of speech (usually measured in the presence of noise or distortion)</ORIGINALDEF>
+    <CANDIDATES original="speech_intelligibility" />
+  </SYNSET>
+  <SYNSET id="04849241">
+    <ORIGINALDEF>moral excellence or admirableness; "there is much good to be found in people"</ORIGINALDEF>
+    <CANDIDATES original="good">
+      <CANDIDATE score="0">avantage</CANDIDATE>
+      <CANDIDATE score="0">avantageux</CANDIDATE>
+      <CANDIDATE score="0">beau</CANDIDATE>
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="0">bon</CANDIDATE>
+      <CANDIDATE score="0">brave</CANDIDATE>
+      <CANDIDATE score="0">complet</CANDIDATE>
+      <CANDIDATE score="0">expert</CANDIDATE>
+      <CANDIDATE score="0">faste</CANDIDATE>
+      <CANDIDATE score="0">finisseur</CANDIDATE>
+      <CANDIDATE score="0">finisseuse</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">gentil</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">heureux</CANDIDATE>
+      <CANDIDATE score="0">intéressant</CANDIDATE>
+      <CANDIDATE score="0">intérêt</CANDIDATE>
+      <CANDIDATE score="0">joli</CANDIDATE>
+      <CANDIDATE score="0">juste</CANDIDATE>
+      <CANDIDATE score="0">profit</CANDIDATE>
+      <CANDIDATE score="0">sage</CANDIDATE>
+      <CANDIDATE score="0">solide</CANDIDATE>
+      <CANDIDATE score="0">sympathique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="goodness">
+      <CANDIDATE score="1">bonté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06826214">
+    <ORIGINALDEF>any font whose different characters have different widths</ORIGINALDEF>
+    <CANDIDATES original="proportional_font" />
+  </SYNSET>
+  <SYNSET id="06838868">
+    <ORIGINALDEF>the 21st letter of the Hebrew alphabet</ORIGINALDEF>
+    <CANDIDATES original="sin">
+      <CANDIDATE score="0">crime</CANDIDATE>
+      <CANDIDATE score="0">faute</CANDIDATE>
+      <CANDIDATE score="0">péché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07131366">
+    <ORIGINALDEF>the same pronunciation for words of different origins</ORIGINALDEF>
+    <CANDIDATES original="homophony">
+      <CANDIDATE score="1">homophonie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07272694">
+    <ORIGINALDEF>metal plate on a dog collar bearing its registration number</ORIGINALDEF>
+    <CANDIDATES original="dog_tag" />
+  </SYNSET>
+  <SYNSET id="07300092">
+    <ORIGINALDEF>error resulting from bad code in some program involved in producing the erroneous result</ORIGINALDEF>
+    <CANDIDATES original="programming_error" />
+    <CANDIDATES original="software_error" />
+  </SYNSET>
+  <SYNSET id="07382044">
+    <ORIGINALDEF>the crackling sound heard on auscultation when patients with respiratory diseases inhale; associated with tuberculosis and pneumonia and congestive heart failure</ORIGINALDEF>
+    <CANDIDATES original="crepitation_rale" />
+  </SYNSET>
+  <SYNSET id="07405137">
+    <ORIGINALDEF>a slide of large masses of snow and ice and mud down a mountain</ORIGINALDEF>
+    <CANDIDATES original="avalanche">
+      <CANDIDATE score="1">avalanche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07445480">
+    <ORIGINALDEF>a movement upward; "they cheered the rise of the hot-air balloon"</ORIGINALDEF>
+    <CANDIDATES original="ascension">
+      <CANDIDATE score="1">ascension</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ascent">
+      <CANDIDATE score="0">ascendance</CANDIDATE>
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">avancement</CANDIDATE>
+      <CANDIDATE score="0">montaison</CANDIDATE>
+      <CANDIDATE score="1">montée</CANDIDATE>
+      <CANDIDATE score="0">remonte</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">retour</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rise">
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">augmentation</CANDIDATE>
+      <CANDIDATE score="0">crue</CANDIDATE>
+      <CANDIDATE score="0">côte</CANDIDATE>
+      <CANDIDATE score="0">flot</CANDIDATE>
+      <CANDIDATE score="0">flux</CANDIDATE>
+      <CANDIDATE score="0">hausse</CANDIDATE>
+      <CANDIDATE score="0">hauteur</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">majoration</CANDIDATE>
+      <CANDIDATE score="1">montée</CANDIDATE>
+      <CANDIDATE score="0">pente</CANDIDATE>
+      <CANDIDATE score="0">poussée</CANDIDATE>
+      <CANDIDATE score="0">progrès</CANDIDATE>
+      <CANDIDATE score="0">relèvement</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">renchérissement</CANDIDATE>
+      <CANDIDATE score="0">ressaut</CANDIDATE>
+      <CANDIDATE score="0">source</CANDIDATE>
+      <CANDIDATE score="1">élévation</CANDIDATE>
+      <CANDIDATE score="0">éminence</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rising">
+      <CANDIDATE score="0">ajournement</CANDIDATE>
+      <CANDIDATE score="0">ascendance</CANDIDATE>
+      <CANDIDATE score="0">ascendant</CANDIDATE>
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">augmentation</CANDIDATE>
+      <CANDIDATE score="0">croissant</CANDIDATE>
+      <CANDIDATE score="0">crue</CANDIDATE>
+      <CANDIDATE score="0">hausse</CANDIDATE>
+      <CANDIDATE score="0">haussier</CANDIDATE>
+      <CANDIDATE score="0">insurrection</CANDIDATE>
+      <CANDIDATE score="0">levage</CANDIDATE>
+      <CANDIDATE score="0">levant</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">montant</CANDIDATE>
+      <CANDIDATE score="0">nouveau</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">résurrection</CANDIDATE>
+      <CANDIDATE score="0">soulèvement</CANDIDATE>
+      <CANDIDATE score="1">élévation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10504090">
+    <ORIGINALDEF>a scientist trained in radiological technology</ORIGINALDEF>
+    <CANDIDATES original="radiologic_technologist" />
+  </SYNSET>
+  <SYNSET id="10510339">
+    <ORIGINALDEF>someone who reasons logically</ORIGINALDEF>
+    <CANDIDATES original="ratiocinator" />
+    <CANDIDATES original="reasoner">
+      <CANDIDATE score="1">raisonneur</CANDIDATE>
+      <CANDIDATE score="1">raisonneuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10647745">
+    <ORIGINALDEF>someone who stands in a place where one might otherwise sit (as a spectator who uses standing room in a theater or a passenger on a crowded bus or train); "the allowed number of standees is posted"</ORIGINALDEF>
+    <CANDIDATES original="standee">
+      <CANDIDATE score="0">spectateur</CANDIDATE>
+      <CANDIDATE score="0">voyageur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10697519">
+    <ORIGINALDEF>someone who transmits messages by telegraph</ORIGINALDEF>
+    <CANDIDATES original="telegraph_operator" />
+    <CANDIDATES original="telegrapher">
+      <CANDIDATE score="1">télégraphiste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="telegraphist">
+      <CANDIDATE score="1">télégraphiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10709876">
+    <ORIGINALDEF>a woman who sings popular songs</ORIGINALDEF>
+    <CANDIDATES original="thrush">
+      <CANDIDATE score="0">candidose</CANDIDATE>
+      <CANDIDATE score="0">grive</CANDIDATE>
+      <CANDIDATE score="0">muguet</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="11464784">
+    <ORIGINALDEF>the gravity of the sun; "solar gravity creates extreme pressures and temperatures"</ORIGINALDEF>
+    <CANDIDATES original="solar_gravity" />
+  </SYNSET>
+  <SYNSET id="11517656">
+    <ORIGINALDEF>atmospheric phenomena accompanying the daily appearance of the sun</ORIGINALDEF>
+    <CANDIDATES original="sunrise" />
+  </SYNSET>
+  <SYNSET id="11610602">
+    <ORIGINALDEF>very small tree similar to Rocky mountain pinon but having a single needle per fascicle; similar to Parry's pinyon in range</ORIGINALDEF>
+    <CANDIDATES original="Pinus_californiarum" />
+    <CANDIDATES original="California_single-leaf_pinyon" />
+  </SYNSET>
+  <SYNSET id="11629501">
+    <ORIGINALDEF>cypresses and junipers and many cedars</ORIGINALDEF>
+    <CANDIDATES original="cypress_family" />
+    <CANDIDATES original="family_Cupressaceae" />
+    <CANDIDATES original="Cupressaceae" />
+  </SYNSET>
+  <SYNSET id="11658104">
+    <ORIGINALDEF>mostly dioecious evergreen conifers; leaves are softer than in Podocarpus</ORIGINALDEF>
+    <CANDIDATES original="genus_Prumnopitys" />
+    <CANDIDATES original="Prumnopitys" />
+  </SYNSET>
+  <SYNSET id="11693812">
+    <ORIGINALDEF>type genus of the Annonaceae; tropical American trees or shrubs</ORIGINALDEF>
+    <CANDIDATES original="Annona" />
+    <CANDIDATES original="genus_Annona" />
+  </SYNSET>
+  <SYNSET id="11701492">
+    <ORIGINALDEF>small genus of Asian deciduous or evergreen shrubs having fragrant flowers: winter sweet</ORIGINALDEF>
+    <CANDIDATES original="Chimonanthus" />
+    <CANDIDATES original="genus_Chimonanthus" />
+  </SYNSET>
+  <SYNSET id="11787391">
+    <ORIGINALDEF>evergreen perennial herbs of tropical America with lush foliage and poisonous sap; often cultivated as houseplants</ORIGINALDEF>
+    <CANDIDATES original="Dieffenbachia" />
+    <CANDIDATES original="genus_Dieffenbachia" />
+  </SYNSET>
+  <SYNSET id="11804604">
+    <ORIGINALDEF>large family of herbs or subshrubs (usually with stems swollen at the nodes)</ORIGINALDEF>
+    <CANDIDATES original="carnation_family" />
+    <CANDIDATES original="pink_family" />
+    <CANDIDATES original="Caryophyllaceae" />
+    <CANDIDATES original="family_Caryophyllaceae" />
+  </SYNSET>
+  <SYNSET id="11865276">
+    <ORIGINALDEF>small Australian tree bearing edible fruit resembling the pomegranate</ORIGINALDEF>
+    <CANDIDATES original="native_pomegranate" />
+    <CANDIDATES original="Capparis_arborea" />
+  </SYNSET>
+  <SYNSET id="12060118">
+    <ORIGINALDEF>comprises tropical American species usually placed in genus Masdevallia: very dwarf plants having short tufted and usually unifoliate stems with usually solitary flowers</ORIGINALDEF>
+    <CANDIDATES original="Dryadella" />
+    <CANDIDATES original="genus_Dryadella" />
+  </SYNSET>
+  <SYNSET id="12070712">
+    <ORIGINALDEF>small terrestrial orchid of eastern North America and Europe having two nearly basal leaves and dull yellow-green racemose flowers</ORIGINALDEF>
+    <CANDIDATES original="fen_orchid">
+      <CANDIDATE score="1">liparis</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fen_orchis" />
+    <CANDIDATES original="Liparis_loeselii" />
+  </SYNSET>
+  <SYNSET id="12089496">
+    <ORIGINALDEF>tropical American yam with small yellow edible tubers</ORIGINALDEF>
+    <CANDIDATES original="cush-cush" />
+    <CANDIDATES original="Dioscorea_trifida" />
+  </SYNSET>
+  <SYNSET id="12106786">
+    <ORIGINALDEF>grass for pastures and lawns especially bowling and putting greens</ORIGINALDEF>
+    <CANDIDATES original="bent">
+      <CANDIDATE score="1">agrostide</CANDIDATE>
+      <CANDIDATE score="1">agrostis</CANDIDATE>
+      <CANDIDATE score="0">aptitudes</CANDIDATE>
+      <CANDIDATE score="0">dispositions</CANDIDATE>
+      <CANDIDATE score="0">goût</CANDIDATE>
+      <CANDIDATE score="0">homo</CANDIDATE>
+      <CANDIDATE score="0">homosexuel</CANDIDATE>
+      <CANDIDATE score="0">lande</CANDIDATE>
+      <CANDIDATE score="0">penchant</CANDIDATE>
+      <CANDIDATE score="0">ripou</CANDIDATE>
+      <CANDIDATE score="0">tordu</CANDIDATE>
+      <CANDIDATE score="0">tors</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bent-grass" />
+    <CANDIDATES original="bent_grass">
+      <CANDIDATE score="1">agrostis</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13391841">
+    <ORIGINALDEF>a coin used in Great Britain since 1971 worth one hundredth of a pound</ORIGINALDEF>
+    <CANDIDATES original="new_penny" />
+  </SYNSET>
+  <SYNSET id="13420544">
+    <ORIGINALDEF>stock that has not been registered with the Securities and Exchange Commission and cannot be sold to the general public</ORIGINALDEF>
+    <CANDIDATES original="letter_stock" />
+  </SYNSET>
+  <SYNSET id="11468172">
+    <ORIGINALDEF>an electrical phenomenon whereby an electromotive force (EMF) is generated in a closed circuit by a change in the flow of current</ORIGINALDEF>
+    <CANDIDATES original="induction">
+      <CANDIDATE score="0">admission</CANDIDATE>
+      <CANDIDATE score="0">déclenchement</CANDIDATE>
+      <CANDIDATE score="0">incorporation</CANDIDATE>
+      <CANDIDATE score="1">induction</CANDIDATE>
+      <CANDIDATE score="0">insertion</CANDIDATE>
+      <CANDIDATE score="0">installation</CANDIDATE>
+      <CANDIDATE score="0">intégration</CANDIDATE>
+      <CANDIDATE score="0">provocation</CANDIDATE>
+      <CANDIDATE score="0">déclenchement_provoqué</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inductance">
+      <CANDIDATE score="0">inductance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14719893">
+    <ORIGINALDEF>an unsaturated primary alcohol present in wood spirit; use to make resins and plasticizers and pharmaceuticals</ORIGINALDEF>
+    <CANDIDATES original="allyl_alcohol" />
+    <CANDIDATES original="propenyl_alcohol" />
+  </SYNSET>
+  <SYNSET id="14923962">
+    <ORIGINALDEF>an acid known only in the form of its esters</ORIGINALDEF>
+    <CANDIDATES original="isocyanic_acid" />
+  </SYNSET>
+  <SYNSET id="15070550">
+    <ORIGINALDEF>a mineral consisting of scandium yttrium silicate; a source of scandium</ORIGINALDEF>
+    <CANDIDATES original="thortveitite" />
+  </SYNSET>
+  <SYNSET id="15070897">
+    <ORIGINALDEF>a protein in blood plasma that is the inactive precursor of thrombin</ORIGINALDEF>
+    <CANDIDATES original="prothrombin">
+      <CANDIDATE score="1">prothrombine</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="factor_II" />
+  </SYNSET>
+  </VERITE>

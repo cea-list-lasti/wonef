@@ -1,0 +1,429 @@
+<VERITE><SYNSET id="01379116">
+    <ORIGINALDEF>not given sympathetic understanding; "a sorely misunderstood child"</ORIGINALDEF>
+    <CANDIDATES original="misunderstood">
+      <CANDIDATE score="1">incompris</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00032497">
+    <ORIGINALDEF>vigorously active; "an acrobatic dance"; "an athletic child"; "athletic playing"; "gymnastic exercises"</ORIGINALDEF>
+    <CANDIDATES original="acrobatic">
+      <CANDIDATE score="0">acrobatique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="athletic">
+      <CANDIDATE score="0">athlétique</CANDIDATE>
+      <CANDIDATE score="0">sportif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gymnastic">
+      <CANDIDATE score="0">acrobatique</CANDIDATE>
+      <CANDIDATE score="0">gymnique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00071427">
+    <ORIGINALDEF>infatuated with or enthralled by the theater especially the desire to act</ORIGINALDEF>
+    <CANDIDATES original="stage-struck" />
+  </SYNSET>
+  <SYNSET id="00077449">
+    <ORIGINALDEF>on a shore or reef; "a ship aground offshore"; "a boat aground on the beach waiting for the tide to lift it"</ORIGINALDEF>
+    <CANDIDATES original="aground">
+      <CANDIDATE score="1">échoué</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00151530">
+    <ORIGINALDEF>unable to speak because of a brain lesion</ORIGINALDEF>
+    <CANDIDATES original="aphasic">
+      <CANDIDATE score="1">aphasique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00221934">
+    <ORIGINALDEF>so extremely ugly as to be terrifying; "a hideous scar"; "a repulsive mask"</ORIGINALDEF>
+    <CANDIDATES original="hideous">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">affreux</CANDIDATE>
+      <CANDIDATE score="1">atroce</CANDIDATE>
+      <CANDIDATE score="1">hideux</CANDIDATE>
+      <CANDIDATE score="1">horrible</CANDIDATE>
+      <CANDIDATE score="1">immonde</CANDIDATE>
+      <CANDIDATE score="1">monstrueux</CANDIDATE>
+      <CANDIDATE score="1">repoussant</CANDIDATE>
+      <CANDIDATE score="1">répugnant</CANDIDATE>
+      <CANDIDATE score="1">terrible</CANDIDATE>
+      <CANDIDATE score="1">épouvantable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="repulsive">
+      <CANDIDATE score="1">repoussant</CANDIDATE>
+      <CANDIDATE score="1">répulsif</CANDIDATE>
+      <CANDIDATE score="1">épouvantable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00353101">
+    <ORIGINALDEF>improved or brought up to date; "a revised edition"</ORIGINALDEF>
+    <CANDIDATES original="revised" />
+  </SYNSET>
+  <SYNSET id="00359862">
+    <ORIGINALDEF>lacking love and generosity; "all pious words and uncharitable deeds"- Charles Reade</ORIGINALDEF>
+    <CANDIDATES original="uncharitable" />
+  </SYNSET>
+  <SYNSET id="00386095">
+    <ORIGINALDEF>midway between yellow and green</ORIGINALDEF>
+    <CANDIDATES original="yellow-green" />
+  </SYNSET>
+  <SYNSET id="00403505">
+    <ORIGINALDEF>brilliantly colored and apparently giving off light; "fluorescent colors"</ORIGINALDEF>
+    <CANDIDATES original="fluorescent">
+      <CANDIDATE score="1">fluo</CANDIDATE>
+      <CANDIDATE score="1">fluorescent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00464068">
+    <ORIGINALDEF>surrounded entirely or almost entirely by land; "a landlocked country"</ORIGINALDEF>
+    <CANDIDATES original="landlocked">
+      <CANDIDATE score="1">enclavé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00471348">
+    <ORIGINALDEF>made known or told about; especially presented in a formal account; "his reported opinion"; "the reported findings"</ORIGINALDEF>
+    <CANDIDATES original="reported" />
+  </SYNSET>
+  <SYNSET id="00471966">
+    <ORIGINALDEF>not reported; "unreported results"</ORIGINALDEF>
+    <CANDIDATES original="unreported" />
+  </SYNSET>
+  <SYNSET id="00475308">
+    <ORIGINALDEF>lighted up by or as by fire or flame; "forests set ablaze (or afire) by lightning"; "even the car's tires were aflame"; "a night aflare with fireworks"; "candles alight on the tables"; "blazing logs in the fireplace"; "a burning cigarette"; "a flaming crackling fire"; "houses on fire"</ORIGINALDEF>
+    <CANDIDATES original="blazing">
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="1">flamboyant</CANDIDATE>
+      <CANDIDATE score="0">fulgurant</CANDIDATE>
+      <CANDIDATE score="0">furibard</CANDIDATE>
+      <CANDIDATE score="0">furibond</CANDIDATE>
+      <CANDIDATE score="0">éclatant</CANDIDATE>
+      <CANDIDATE score="0">étincelant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="burning">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">cuisant</CANDIDATE>
+      <CANDIDATE score="0">dévorant</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="1">flambant</CANDIDATE>
+      <CANDIDATE score="1">incandescent</CANDIDATE>
+      <CANDIDATE score="0">incendié</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">passionnant</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">véhément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="flaming">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+      <CANDIDATE score="1">ardent</CANDIDATE>
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+      <CANDIDATE score="0">fichu</CANDIDATE>
+      <CANDIDATE score="1">flamboyant</CANDIDATE>
+      <CANDIDATE score="0">foutu</CANDIDATE>
+      <CANDIDATE score="0">furax</CANDIDATE>
+      <CANDIDATE score="0">furibard</CANDIDATE>
+      <CANDIDATE score="0">satané</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="afire">
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="alight">
+      <CANDIDATE score="1">allumé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="on_fire">
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ablaze">
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="aflame">
+      <CANDIDATE score="1">embrasé</CANDIDATE>
+      <CANDIDATE score="1">enflammé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="aflare">
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00866182">
+    <ORIGINALDEF>freed of a mistaken or misguided notion; "some people are still not disabused of the old idea that the universe revolves around the Earth"</ORIGINALDEF>
+    <CANDIDATES original="undeceived">
+      <CANDIDATE score="1">désabusé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="disabused">
+      <CANDIDATE score="1">désabusé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00881030">
+    <ORIGINALDEF>enlarged beyond truth or reasonableness; "had an exaggerated (or inflated) opinion of himself"; "a hyperbolic style"</ORIGINALDEF>
+    <CANDIDATES original="exaggerated">
+      <CANDIDATE score="1">exagéré</CANDIDATE>
+      <CANDIDATE score="1">outré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hyperbolic">
+      <CANDIDATE score="1">hyperbolique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inflated">
+      <CANDIDATE score="0">boursouflé</CANDIDATE>
+      <CANDIDATE score="0">dilaté</CANDIDATE>
+      <CANDIDATE score="0">enflé</CANDIDATE>
+      <CANDIDATE score="1">exagéré</CANDIDATE>
+      <CANDIDATE score="1">excessif</CANDIDATE>
+      <CANDIDATE score="0">gonflé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00976016">
+    <ORIGINALDEF>flashily stylish; "a snazzy outfit"</ORIGINALDEF>
+    <CANDIDATES original="snazzy">
+      <CANDIDATE score="0">chouette</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00977372">
+    <ORIGINALDEF>very fast; "a blistering pace"; "got off to a hot start"; "in hot pursuit"; "a red-hot line drive"</ORIGINALDEF>
+    <CANDIDATES original="blistering">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">cinglant</CANDIDATE>
+      <CANDIDATE score="0">impitoyable</CANDIDATE>
+      <CANDIDATE score="0">torride</CANDIDATE>
+      <CANDIDATE score="0">virulent</CANDIDATE>
+      <CANDIDATE score="0">étouffant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hot">
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">chaud</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">hot</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">pimenté</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">radioactif</CANDIDATE>
+      <CANDIDATE score="0">relevé</CANDIDATE>
+      <CANDIDATE score="0">sensationnel</CANDIDATE>
+      <CANDIDATE score="0">terrible</CANDIDATE>
+      <CANDIDATE score="0">thermal</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">volé</CANDIDATE>
+      <CANDIDATE score="0">épicé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="red-hot">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">rouge</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01219938">
+    <ORIGINALDEF>used of an opponent's ground; "an away game"</ORIGINALDEF>
+    <CANDIDATES original="away">
+      <CANDIDATE score="0">absent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01264336">
+    <ORIGINALDEF>full of or characterized by humor; "humorous stories"; "humorous cartoons"; "in a humorous vein"</ORIGINALDEF>
+    <CANDIDATES original="humorous">
+      <CANDIDATE score="0">amusant</CANDIDATE>
+      <CANDIDATE score="0">amusé</CANDIDATE>
+      <CANDIDATE score="0">facétieux</CANDIDATE>
+      <CANDIDATE score="0">humoriste</CANDIDATE>
+      <CANDIDATE score="1">humoristique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="humourous" />
+  </SYNSET>
+  <SYNSET id="01348835">
+    <ORIGINALDEF>innermost or essential; "the inner logic of Cubism"; "the internal contradictions of the theory"; "the intimate structure of matter"</ORIGINALDEF>
+    <CANDIDATES original="inner">
+      <CANDIDATE score="0">caché</CANDIDATE>
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="1">intime</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+      <CANDIDATE score="1">profond</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="internal">
+      <CANDIDATE score="1">interne</CANDIDATE>
+      <CANDIDATE score="0">intestin</CANDIDATE>
+      <CANDIDATE score="1">intrinsèque</CANDIDATE>
+      <CANDIDATE score="0">intérieur</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="intimate">
+      <CANDIDATE score="0">familier</CANDIDATE>
+      <CANDIDATE score="1">intime</CANDIDATE>
+      <CANDIDATE score="0">secret</CANDIDATE>
+      <CANDIDATE score="0">étroit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01646021">
+    <ORIGINALDEF>being roughly between 45 and 65 years old</ORIGINALDEF>
+    <CANDIDATES original="middle-aged">
+      <CANDIDATE score="1">mûr</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01731108">
+    <ORIGINALDEF>at a specific prior time; "the then president"</ORIGINALDEF>
+    <CANDIDATES original="then">
+      <CANDIDATE score="0">alors</CANDIDATE>
+      <CANDIDATE score="0">d'ailleurs</CANDIDATE>
+      <CANDIDATE score="1">d'alors</CANDIDATE>
+      <CANDIDATE score="1">de_l'époque</CANDIDATE>
+      <CANDIDATE score="0">donc</CANDIDATE>
+      <CANDIDATE score="0">ensuite</CANDIDATE>
+      <CANDIDATE score="0">et_puis</CANDIDATE>
+      <CANDIDATE score="0">lors</CANDIDATE>
+      <CANDIDATE score="0">là</CANDIDATE>
+      <CANDIDATE score="0">puis</CANDIDATE>
+      <CANDIDATE score="0">à_l'époque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01819692">
+    <ORIGINALDEF>greater than zero; "positive numbers"</ORIGINALDEF>
+    <CANDIDATES original="positive">
+      <CANDIDATE score="0">affirmatif</CANDIDATE>
+      <CANDIDATE score="0">catégorique</CANDIDATE>
+      <CANDIDATE score="0">certain</CANDIDATE>
+      <CANDIDATE score="0">concret</CANDIDATE>
+      <CANDIDATE score="0">desmodromique</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">effectif</CANDIDATE>
+      <CANDIDATE score="0">excédentaire</CANDIDATE>
+      <CANDIDATE score="0">favorable</CANDIDATE>
+      <CANDIDATE score="0">formel</CANDIDATE>
+      <CANDIDATE score="0">indéniable</CANDIDATE>
+      <CANDIDATE score="0">irréfutable</CANDIDATE>
+      <CANDIDATE score="1">positif</CANDIDATE>
+      <CANDIDATE score="0">réel</CANDIDATE>
+      <CANDIDATE score="0">sûr</CANDIDATE>
+      <CANDIDATE score="0">tangible</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01987646">
+    <ORIGINALDEF>remote in manner; "stood apart with aloof dignity"; "a distant smile"; "he was upstage with strangers"</ORIGINALDEF>
+    <CANDIDATES original="aloof">
+      <CANDIDATE score="1">distant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="distant">
+      <CANDIDATE score="1">distant</CANDIDATE>
+      <CANDIDATE score="0">distrait</CANDIDATE>
+      <CANDIDATE score="0">froid</CANDIDATE>
+      <CANDIDATE score="1">lointain</CANDIDATE>
+      <CANDIDATE score="0">reculé</CANDIDATE>
+      <CANDIDATE score="0">vague</CANDIDATE>
+      <CANDIDATE score="0">éloigné</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="upstage">
+      <CANDIDATE score="0">crâneur</CANDIDATE>
+      <CANDIDATE score="1">hautain</CANDIDATE>
+      <CANDIDATE score="0">prétentieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01205232">
+    <ORIGINALDEF>of the highest rank; used of persons; "the commanding officer"</ORIGINALDEF>
+    <CANDIDATES original="commanding">
+      <CANDIDATE score="0">dominant</CANDIDATE>
+      <CANDIDATE score="0">imposant</CANDIDATE>
+      <CANDIDATE score="0">impératif</CANDIDATE>
+      <CANDIDATE score="0">impérieux</CANDIDATE>
+      <CANDIDATE score="0">injonctif</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ranking">
+      <CANDIDATE score="0">renommé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="top-level" />
+    <CANDIDATES original="top-ranking" />
+    <CANDIDATES original="dominating">
+      <CANDIDATE score="0">dominant</CANDIDATE>
+      <CANDIDATE score="0">dominateur</CANDIDATE>
+      <CANDIDATE score="0">prépondérant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overlooking">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02457932">
+    <ORIGINALDEF>marked by distress; "a fraught mother-daughter relationship"</ORIGINALDEF>
+    <CANDIDATES original="fraught">
+      <CANDIDATE score="0">angoissé</CANDIDATE>
+      <CANDIDATE score="0">chargé</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="0">plein</CANDIDATE>
+      <CANDIDATE score="1">tendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02515001">
+    <ORIGINALDEF>extremely wicked; "nefarious schemes"; "a villainous plot"; "a villainous band of thieves"</ORIGINALDEF>
+    <CANDIDATES original="nefarious">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">infâme</CANDIDATE>
+      <CANDIDATE score="1">sulfureux</CANDIDATE>
+      <CANDIDATE score="1">vil</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="villainous">
+      <CANDIDATE score="1">abominable</CANDIDATE>
+      <CANDIDATE score="1">crapuleux</CANDIDATE>
+      <CANDIDATE score="1">ignoble</CANDIDATE>
+      <CANDIDATE score="1">infect</CANDIDATE>
+      <CANDIDATE score="1">infâme</CANDIDATE>
+      <CANDIDATE score="0">scélérat</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01145639">
+    <ORIGINALDEF>wide from side to side; "a heavy black mark"</ORIGINALDEF>
+    <CANDIDATES original="heavy">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">carabiné</CANDIDATE>
+      <CANDIDATE score="0">chargé</CANDIDATE>
+      <CANDIDATE score="0">costaud</CANDIDATE>
+      <CANDIDATE score="0">couvert</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">empâté</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">important</CANDIDATE>
+      <CANDIDATE score="0">intense</CANDIDATE>
+      <CANDIDATE score="0">laborieux</CANDIDATE>
+      <CANDIDATE score="0">lourd</CANDIDATE>
+      <CANDIDATE score="0">massif</CANDIDATE>
+      <CANDIDATE score="0">nourri</CANDIDATE>
+      <CANDIDATE score="0">pesant</CANDIDATE>
+      <CANDIDATE score="0">pondéreux</CANDIDATE>
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="0">pénible</CANDIDATE>
+      <CANDIDATE score="0">sévère</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+      <CANDIDATE score="1">épais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thick">
+      <CANDIDATE score="0">abondant</CANDIDATE>
+      <CANDIDATE score="0">borné</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">bête</CANDIDATE>
+      <CANDIDATE score="0">catarrheux</CANDIDATE>
+      <CANDIDATE score="0">charnu</CANDIDATE>
+      <CANDIDATE score="0">compact</CANDIDATE>
+      <CANDIDATE score="0">consistant</CANDIDATE>
+      <CANDIDATE score="0">dense</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">dur</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">fourni</CANDIDATE>
+      <CANDIDATE score="0">gras</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">obtus</CANDIDATE>
+      <CANDIDATE score="0">pâteux</CANDIDATE>
+      <CANDIDATE score="0">touffu</CANDIDATE>
+      <CANDIDATE score="0">tourte</CANDIDATE>
+      <CANDIDATE score="0">visqueux</CANDIDATE>
+      <CANDIDATE score="1">épais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  </VERITE>

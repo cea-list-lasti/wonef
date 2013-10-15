@@ -1,0 +1,3708 @@
+<VERITE><SYNSET id="00001981">
+    <ORIGINALDEF>of the period coinciding with the Christian era; preferred by some writers who are not Christians</ORIGINALDEF>
+    <USAGE>in 200 CE</USAGE>
+    <CANDIDATES original="C.E." />
+    <CANDIDATES original="CE" />
+    <CANDIDATES original="Common_Era" />
+  </SYNSET>
+  <SYNSET id="00004184">
+    <ORIGINALDEF>in a negative way</ORIGINALDEF>
+    <USAGE>he was negatively inclined</USAGE>
+    <CANDIDATES original="negatively">
+      <CANDIDATE score="1">d'une_manière_défavorable</CANDIDATE>
+      <CANDIDATE score="1">négativement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00006858">
+    <ORIGINALDEF>in a stylish manner</ORIGINALDEF>
+    <USAGE>He was smartly dressed</USAGE>
+    <CANDIDATES original="modishly">
+      <CANDIDATE score="1">à_la_mode</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="smartly">
+      <CANDIDATE score="0">astucieusement</CANDIDATE>
+      <CANDIDATE score="1">avec_beaucoup_d'allure</CANDIDATE>
+      <CANDIDATE score="1">avec_beaucoup_d'élégance</CANDIDATE>
+      <CANDIDATE score="1">avec_beaucoup_de_chic</CANDIDATE>
+      <CANDIDATE score="1">chiquement</CANDIDATE>
+      <CANDIDATE score="1">coquettement</CANDIDATE>
+      <CANDIDATE score="0">du_tac_au_tac</CANDIDATE>
+      <CANDIDATE score="0">habilement</CANDIDATE>
+      <CANDIDATE score="0">promptement</CANDIDATE>
+      <CANDIDATE score="0">rapidement</CANDIDATE>
+      <CANDIDATE score="0">vivement</CANDIDATE>
+      <CANDIDATE score="1">élégamment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sprucely" />
+  </SYNSET>
+  <SYNSET id="00007703">
+    <ORIGINALDEF>in part; in some degree; not wholly</ORIGINALDEF>
+    <USAGE>I felt partly to blame</USAGE>
+    <USAGE>He was partially paralyzed</USAGE>
+    <CANDIDATES original="part">
+      <CANDIDATE score="1">en_partie</CANDIDATE>
+      <CANDIDATE score="0">participation</CANDIDATE>
+      <CANDIDATE score="0">pièce_détachée</CANDIDATE>
+      <CANDIDATE score="0">raie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="partially">
+      <CANDIDATE score="0">avec_partialité</CANDIDATE>
+      <CANDIDATE score="1">en_partie</CANDIDATE>
+      <CANDIDATE score="0">partialement</CANDIDATE>
+      <CANDIDATE score="1">partiellement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="partly">
+      <CANDIDATE score="1">en_partie</CANDIDATE>
+      <CANDIDATE score="1">partiellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00010466">
+    <ORIGINALDEF>to the greatest degree or extent; completely or entirely; (`full' in this sense is used as a combining form)</ORIGINALDEF>
+    <USAGE>fully grown</USAGE>
+    <USAGE>he didn't fully understand</USAGE>
+    <USAGE>knew full well</USAGE>
+    <USAGE>full-grown</USAGE>
+    <USAGE>full-fledged</USAGE>
+    <CANDIDATES original="full">
+      <CANDIDATE score="0">plein</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fully">
+      <CANDIDATE score="0">amplement</CANDIDATE>
+      <CANDIDATE score="1">au_maximum</CANDIDATE>
+      <CANDIDATE score="0">au_moins</CANDIDATE>
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="1">complètement</CANDIDATE>
+      <CANDIDATE score="1">entièrement</CANDIDATE>
+      <CANDIDATE score="1">intégralement</CANDIDATE>
+      <CANDIDATE score="0">largement</CANDIDATE>
+      <CANDIDATE score="1">pleinement</CANDIDATE>
+      <CANDIDATE score="0">très_bien</CANDIDATE>
+      <CANDIDATE score="1">à_plein</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="to_the_full">
+      <CANDIDATE score="1">à_plein</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00017639">
+    <ORIGINALDEF>to a greater degree or extent; used with comparisons</ORIGINALDEF>
+    <USAGE>looked sick and felt even worse</USAGE>
+    <USAGE>an even (or still) more interesting problem</USAGE>
+    <USAGE>still another problem must be solved</USAGE>
+    <USAGE>a yet sadder tale</USAGE>
+    <CANDIDATES original="even">
+      <CANDIDATE score="1">encore</CANDIDATE>
+      <CANDIDATE score="0">même</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="still">
+      <CANDIDATE score="1">encore</CANDIDATE>
+      <CANDIDATE score="0">enfin</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">quand_même</CANDIDATE>
+      <CANDIDATE score="0">rassurer</CANDIDATE>
+      <CANDIDATE score="0">toujours</CANDIDATE>
+      <CANDIDATE score="0">tout_de_même</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="yet">
+      <CANDIDATE score="0">déjà</CANDIDATE>
+      <CANDIDATE score="1">encore</CANDIDATE>
+      <CANDIDATE score="0">jusqu'ici</CANDIDATE>
+      <CANDIDATE score="0">jusqu'à_présent</CANDIDATE>
+      <CANDIDATE score="0">néanmoins</CANDIDATE>
+      <CANDIDATE score="0">pas_encore</CANDIDATE>
+      <CANDIDATE score="0">pourtant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00018577">
+    <ORIGINALDEF>to the greatest extent; completely</ORIGINALDEF>
+    <USAGE>you're quite right</USAGE>
+    <USAGE>she was quite alone</USAGE>
+    <USAGE>was quite mistaken</USAGE>
+    <USAGE>quite the opposite</USAGE>
+    <USAGE>not quite finished</USAGE>
+    <USAGE>did not quite make it</USAGE>
+    <CANDIDATES original="quite">
+      <CANDIDATE score="0">assez</CANDIDATE>
+      <CANDIDATE score="1">complètement</CANDIDATE>
+      <CANDIDATE score="0">effectivement</CANDIDATE>
+      <CANDIDATE score="1">entièrement</CANDIDATE>
+      <CANDIDATE score="1">parfaitement</CANDIDATE>
+      <CANDIDATE score="0">plutôt</CANDIDATE>
+      <CANDIDATE score="1">tout</CANDIDATE>
+      <CANDIDATE score="1">tout_à_fait</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00019609">
+    <ORIGINALDEF>forever; throughout all time</ORIGINALDEF>
+    <USAGE>we will always be friends</USAGE>
+    <USAGE>I shall treasure it always</USAGE>
+    <USAGE>I will always love you</USAGE>
+    <CANDIDATES original="always">
+      <CANDIDATE score="1">toujours</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00019757">
+    <ORIGINALDEF>at any time or in any event</ORIGINALDEF>
+    <USAGE>you can always resign if you don't like it</USAGE>
+    <USAGE>you could always take a day off</USAGE>
+    <CANDIDATES original="always">
+      <CANDIDATE score="1">toujours</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00025559">
+    <ORIGINALDEF>in or at or to some place</ORIGINALDEF>
+    <USAGE>None</USAGE>
+    <CANDIDATES original="someplace" />
+    <CANDIDATES original="somewhere">
+      <CANDIDATE score="1">quelque_part</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00028424">
+    <ORIGINALDEF>in whatever way or manner</ORIGINALDEF>
+    <USAGE>Victory, however it was brought about, was sweet</USAGE>
+    <USAGE>however he did it, it was very clever</USAGE>
+    <CANDIDATES original="however">
+      <CANDIDATE score="0">cependant</CANDIDATE>
+      <CANDIDATE score="0">comment_donc</CANDIDATE>
+      <CANDIDATE score="1">de_quelque_façon_que_ce_soit</CANDIDATE>
+      <CANDIDATE score="1">de_quelque_manière_que_ce_soit</CANDIDATE>
+      <CANDIDATE score="0">néanmoins</CANDIDATE>
+      <CANDIDATE score="0">pourtant</CANDIDATE>
+      <CANDIDATE score="0">si</CANDIDATE>
+      <CANDIDATE score="0">toutefois</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00031214">
+    <ORIGINALDEF>in a futile and unproductive manner</ORIGINALDEF>
+    <CANDIDATES original="futilely" />
+  </SYNSET>
+  <SYNSET id="00032299">
+    <ORIGINALDEF>(Southern regional intensive) very; to a great degree</ORIGINALDEF>
+    <USAGE>the baby is mighty cute</USAGE>
+    <USAGE>he's mighty tired</USAGE>
+    <USAGE>it is powerful humid</USAGE>
+    <USAGE>that boy is powerful big now</USAGE>
+    <USAGE>they have a right nice place</USAGE>
+    <USAGE>they rejoiced mightily</USAGE>
+    <CANDIDATES original="mightily">
+      <CANDIDATE score="1">bigrement</CANDIDATE>
+      <CANDIDATE score="1">considérablement</CANDIDATE>
+      <CANDIDATE score="1">puissamment</CANDIDATE>
+      <CANDIDATE score="1">rudement</CANDIDATE>
+      <CANDIDATE score="1">vigoureusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mighty">
+      <CANDIDATE score="1">bigrement</CANDIDATE>
+      <CANDIDATE score="1">bougrement</CANDIDATE>
+      <CANDIDATE score="0">puissant</CANDIDATE>
+      <CANDIDATE score="1">rudement</CANDIDATE>
+      <CANDIDATE score="1">sacrément</CANDIDATE>
+      <CANDIDATE score="1">vachement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="powerful">
+      <CANDIDATE score="0">puissant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="right">
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="1">comme_il_faut</CANDIDATE>
+      <CANDIDATE score="0">complètement</CANDIDATE>
+      <CANDIDATE score="0">correctement</CANDIDATE>
+      <CANDIDATE score="0">d'une_manière_satisfaisante</CANDIDATE>
+      <CANDIDATE score="0">directement</CANDIDATE>
+      <CANDIDATE score="0">droit</CANDIDATE>
+      <CANDIDATE score="1">fort</CANDIDATE>
+      <CANDIDATE score="0">juste</CANDIDATE>
+      <CANDIDATE score="0">tout</CANDIDATE>
+      <CANDIDATE score="0">tout_droit</CANDIDATE>
+      <CANDIDATE score="0">tout_à_fait</CANDIDATE>
+      <CANDIDATE score="1">très</CANDIDATE>
+      <CANDIDATE score="0">à_droite</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00032863">
+    <ORIGINALDEF>from this time forth; from now on</ORIGINALDEF>
+    <USAGE>henceforth she will be known as Mrs. Smith</USAGE>
+    <CANDIDATES original="henceforth">
+      <CANDIDATE score="1">dorénavant</CANDIDATE>
+      <CANDIDATE score="1">désormais</CANDIDATE>
+      <CANDIDATE score="1">à_l'avenir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="henceforward">
+      <CANDIDATE score="1">dorénavant</CANDIDATE>
+      <CANDIDATE score="1">désormais</CANDIDATE>
+      <CANDIDATE score="1">à_l'avenir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00033421">
+    <ORIGINALDEF>without any delay</ORIGINALDEF>
+    <USAGE>he was killed outright</USAGE>
+    <CANDIDATES original="in_a_flash">
+      <CANDIDATE score="1">fissa</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="instantaneously">
+      <CANDIDATE score="1">illico</CANDIDATE>
+      <CANDIDATE score="1">instantanément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="instantly">
+      <CANDIDATE score="1">immédiatement</CANDIDATE>
+      <CANDIDATE score="1">instantanément</CANDIDATE>
+      <CANDIDATE score="1">sur-le-champ</CANDIDATE>
+      <CANDIDATE score="1">sur_le_coup</CANDIDATE>
+      <CANDIDATE score="1">tout_de_suite</CANDIDATE>
+      <CANDIDATE score="0">à_l'instant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="outright">
+      <CANDIDATE score="0">carrément</CANDIDATE>
+      <CANDIDATE score="0">catégoriquement</CANDIDATE>
+      <CANDIDATE score="0">franchement</CANDIDATE>
+      <CANDIDATE score="0">haut_la_main</CANDIDATE>
+      <CANDIDATE score="0">immédiat</CANDIDATE>
+      <CANDIDATE score="1">tout_net</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00038537">
+    <ORIGINALDEF>in isolation and without reference to anything else</ORIGINALDEF>
+    <CANDIDATES original="in_vacuo" />
+  </SYNSET>
+  <SYNSET id="00041393">
+    <ORIGINALDEF>improper; amiss;</ORIGINALDEF>
+    <CANDIDATES original="out_of_the_way" />
+  </SYNSET>
+  <SYNSET id="00041452">
+    <ORIGINALDEF>extraordinary; unusual</ORIGINALDEF>
+    <USAGE>such erratic behavior was out of the way for him</USAGE>
+    <CANDIDATES original="out_of_the_way" />
+  </SYNSET>
+  <SYNSET id="00041954">
+    <ORIGINALDEF>without distinction of one from others</ORIGINALDEF>
+    <USAGE>he is interested in snakes in general</USAGE>
+    <CANDIDATES original="generally">
+      <CANDIDATE score="0">communément</CANDIDATE>
+      <CANDIDATE score="0">d'habitude</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_générale</CANDIDATE>
+      <CANDIDATE score="1">dans_l'ensemble</CANDIDATE>
+      <CANDIDATE score="1">en_général</CANDIDATE>
+      <CANDIDATE score="0">en_règle_générale</CANDIDATE>
+      <CANDIDATE score="0">généralement</CANDIDATE>
+      <CANDIDATE score="0">habituellement</CANDIDATE>
+      <CANDIDATE score="0">normalement</CANDIDATE>
+      <CANDIDATE score="0">partout</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_general">
+      <CANDIDATE score="1">en_général</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_the_main" />
+  </SYNSET>
+  <SYNSET id="00048138">
+    <ORIGINALDEF>after an unspecified period of time or an especially long delay</ORIGINALDEF>
+    <CANDIDATES original="eventually">
+      <CANDIDATE score="1">en_définitive</CANDIDATE>
+      <CANDIDATE score="1">en_fin_de_compte</CANDIDATE>
+      <CANDIDATE score="1">finalement</CANDIDATE>
+      <CANDIDATE score="0">tôt_ou_tard</CANDIDATE>
+      <CANDIDATE score="1">ultimement</CANDIDATE>
+      <CANDIDATE score="0">un_jour</CANDIDATE>
+      <CANDIDATE score="1">à_la_fin</CANDIDATE>
+      <CANDIDATE score="1">à_la_longue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="finally">
+      <CANDIDATE score="0">définitivement</CANDIDATE>
+      <CANDIDATE score="0">en_dernier_lieu</CANDIDATE>
+      <CANDIDATE score="1">enfin</CANDIDATE>
+      <CANDIDATE score="1">finalement</CANDIDATE>
+      <CANDIDATE score="1">pour_finir</CANDIDATE>
+      <CANDIDATE score="0">pour_terminer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00050681">
+    <ORIGINALDEF>referring to the degree to which a certain quality is present</ORIGINALDEF>
+    <USAGE>he was no heavier than a child</USAGE>
+    <CANDIDATES original="no" />
+    <CANDIDATES original="no_more" />
+  </SYNSET>
+  <SYNSET id="00052489">
+    <ORIGINALDEF>with indefatigable energy</ORIGINALDEF>
+    <USAGE>she watched the show indefatigably</USAGE>
+    <CANDIDATES original="indefatigably">
+      <CANDIDATE score="1">infatigablement</CANDIDATE>
+      <CANDIDATE score="1">inlassablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inexhaustibly">
+      <CANDIDATE score="1">intarissablement</CANDIDATE>
+      <CANDIDATE score="1">inépuisablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tirelessly">
+      <CANDIDATE score="1">infatigablement</CANDIDATE>
+      <CANDIDATE score="1">inlassablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00052882">
+    <ORIGINALDEF>indicating something hard to accept</ORIGINALDEF>
+    <USAGE>he was bitterly disappointed</USAGE>
+    <CANDIDATES original="bitterly">
+      <CANDIDATE score="1">amèrement</CANDIDATE>
+      <CANDIDATE score="0">avec_acharnement</CANDIDATE>
+      <CANDIDATE score="1">avec_amertume</CANDIDATE>
+      <CANDIDATE score="1">cruellement</CANDIDATE>
+      <CANDIDATE score="0">farouchement</CANDIDATE>
+      <CANDIDATE score="0">horriblement</CANDIDATE>
+      <CANDIDATE score="1">profondément</CANDIDATE>
+      <CANDIDATE score="1">âprement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00053394">
+    <ORIGINALDEF>in an open way</ORIGINALDEF>
+    <USAGE>he openly flaunted his affection for his sister</USAGE>
+    <CANDIDATES original="openly">
+      <CANDIDATE score="1">franchement</CANDIDATE>
+      <CANDIDATE score="0">hautement</CANDIDATE>
+      <CANDIDATE score="1">ouvertement</CANDIDATE>
+      <CANDIDATE score="1">publiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00053744">
+    <ORIGINALDEF>almost; nearly</ORIGINALDEF>
+    <USAGE>practically the first thing I saw when I got off the train</USAGE>
+    <USAGE>he was practically the only guest at the party</USAGE>
+    <USAGE>there was practically no garden at all</USAGE>
+    <CANDIDATES original="practically">
+      <CANDIDATE score="0">avec_pragmatisme</CANDIDATE>
+      <CANDIDATE score="0">d'un_point_de_vue_pratique</CANDIDATE>
+      <CANDIDATE score="0">d'une_manière_pragmatique</CANDIDATE>
+      <CANDIDATE score="0">d'une_manière_pratique</CANDIDATE>
+      <CANDIDATE score="0">dans_la_pratique</CANDIDATE>
+      <CANDIDATE score="0">en_fait</CANDIDATE>
+      <CANDIDATE score="1">pratiquement</CANDIDATE>
+      <CANDIDATE score="1">presque</CANDIDATE>
+      <CANDIDATE score="1">quasiment</CANDIDATE>
+      <CANDIDATE score="0">sur_le_plan_pratique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00056200">
+    <ORIGINALDEF>in a maladroit manner</ORIGINALDEF>
+    <USAGE>he dealt with the situation maladroitly</USAGE>
+    <CANDIDATES original="maladroitly">
+      <CANDIDATE score="1">maladroitement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00056539">
+    <ORIGINALDEF>to an extraordinary extent or degree</ORIGINALDEF>
+    <USAGE>he improved greatly</USAGE>
+    <CANDIDATES original="greatly">
+      <CANDIDATE score="0">beaucoup</CANDIDATE>
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="1">considérablement</CANDIDATE>
+      <CANDIDATE score="0">de_beaucoup</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">grandement</CANDIDATE>
+      <CANDIDATE score="0">largement</CANDIDATE>
+      <CANDIDATE score="0">puissamment</CANDIDATE>
+      <CANDIDATE score="1">spectaculairement</CANDIDATE>
+      <CANDIDATE score="0">très</CANDIDATE>
+      <CANDIDATE score="0">vivement</CANDIDATE>
+      <CANDIDATE score="1">énormément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00060939">
+    <ORIGINALDEF>earlier in time; previously</ORIGINALDEF>
+    <USAGE>I had known her before</USAGE>
+    <USAGE>as I said before</USAGE>
+    <USAGE>he called me the day before but your call had come even earlier</USAGE>
+    <USAGE>her parents had died four years earlier</USAGE>
+    <USAGE>I mentioned that problem earlier</USAGE>
+    <CANDIDATES original="before">
+      <CANDIDATE score="1">auparavant</CANDIDATE>
+      <CANDIDATE score="1">avant</CANDIDATE>
+      <CANDIDATE score="1">déjà</CANDIDATE>
+      <CANDIDATE score="1">d’avan</CANDIDATE>
+      <CANDIDATE score="0">préalable</CANDIDATE>
+      <CANDIDATE score="1">précédemment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="earlier">
+      <CANDIDATE score="1">antérieurement</CANDIDATE>
+      <CANDIDATE score="1">auparavant</CANDIDATE>
+      <CANDIDATE score="1">avant</CANDIDATE>
+      <CANDIDATE score="1">plus_tôt</CANDIDATE>
+      <CANDIDATE score="0">précédent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00061528">
+    <ORIGINALDEF>quickly and without warning</ORIGINALDEF>
+    <USAGE>he stopped suddenly</USAGE>
+    <CANDIDATES original="abruptly">
+      <CANDIDATE score="1">abruptement</CANDIDATE>
+      <CANDIDATE score="1">avec_brusquerie</CANDIDATE>
+      <CANDIDATE score="1">brusquement</CANDIDATE>
+      <CANDIDATE score="0">en_pente_raide</CANDIDATE>
+      <CANDIDATE score="1">ex_abrupto</CANDIDATE>
+      <CANDIDATE score="1">sans_cérémonie</CANDIDATE>
+      <CANDIDATE score="1">tout_à_coup</CANDIDATE>
+      <CANDIDATE score="1">à_pic</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dead">
+      <CANDIDATE score="0">absolument</CANDIDATE>
+      <CANDIDATE score="0">complètement</CANDIDATE>
+      <CANDIDATE score="1">net</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="short" />
+    <CANDIDATES original="suddenly">
+      <CANDIDATE score="1">brusquement</CANDIDATE>
+      <CANDIDATE score="1">brutalement</CANDIDATE>
+      <CANDIDATE score="1">soudain</CANDIDATE>
+      <CANDIDATE score="1">soudainement</CANDIDATE>
+      <CANDIDATE score="1">subitement</CANDIDATE>
+      <CANDIDATE score="1">tout_d'un_coup</CANDIDATE>
+      <CANDIDATE score="1">tout_à_coup</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00065963">
+    <ORIGINALDEF>in addition to all the foregoing</ORIGINALDEF>
+    <USAGE>last not least he plays the saxophone</USAGE>
+    <CANDIDATES original="last_but_not_least" />
+    <CANDIDATES original="last_not_least" />
+  </SYNSET>
+  <SYNSET id="00066781">
+    <ORIGINALDEF>at or in the front</ORIGINALDEF>
+    <USAGE>I see the lights of a town ahead</USAGE>
+    <USAGE>the road ahead is foggy</USAGE>
+    <USAGE>staring straight ahead</USAGE>
+    <USAGE>we couldn't see over the heads of the people in front</USAGE>
+    <USAGE>with the cross of Jesus marching on before</USAGE>
+    <CANDIDATES original="ahead">
+      <CANDIDATE score="1">au-devant</CANDIDATE>
+      <CANDIDATE score="1">devant</CANDIDATE>
+      <CANDIDATE score="1">en_avant</CANDIDATE>
+      <CANDIDATE score="1">en_tête</CANDIDATE>
+      <CANDIDATE score="0">suivant</CANDIDATE>
+      <CANDIDATE score="0">à_l'avance</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="before">
+      <CANDIDATE score="0">auparavant</CANDIDATE>
+      <CANDIDATE score="0">avant</CANDIDATE>
+      <CANDIDATE score="0">déjà</CANDIDATE>
+      <CANDIDATE score="0">d’avan</CANDIDATE>
+      <CANDIDATE score="0">préalable</CANDIDATE>
+      <CANDIDATE score="0">précédemment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_front">
+      <CANDIDATE score="1">devant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00067265">
+    <ORIGINALDEF>in a forward direction</ORIGINALDEF>
+    <USAGE>go ahead</USAGE>
+    <USAGE>the train moved ahead slowly</USAGE>
+    <USAGE>the boat lurched ahead</USAGE>
+    <USAGE>moved onward into the forest</USAGE>
+    <USAGE>they went slowly forward in the mud</USAGE>
+    <CANDIDATES original="ahead">
+      <CANDIDATE score="1">au-devant</CANDIDATE>
+      <CANDIDATE score="1">devant</CANDIDATE>
+      <CANDIDATE score="1">en_avant</CANDIDATE>
+      <CANDIDATE score="0">en_tête</CANDIDATE>
+      <CANDIDATE score="0">suivant</CANDIDATE>
+      <CANDIDATE score="0">à_l'avance</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="forrader" />
+    <CANDIDATES original="forward">
+      <CANDIDATE score="1">en_avant</CANDIDATE>
+      <CANDIDATE score="0">expédier</CANDIDATE>
+      <CANDIDATE score="0">précédent</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="forwards" />
+    <CANDIDATES original="onward">
+      <CANDIDATE score="1">en_avant</CANDIDATE>
+      <CANDIDATE score="1">plus_loin</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="onwards" />
+  </SYNSET>
+  <SYNSET id="00069672">
+    <ORIGINALDEF>equally</ORIGINALDEF>
+    <USAGE>parents and teachers alike demanded reforms</USAGE>
+    <CANDIDATES original="alike">
+      <CANDIDATE score="1">de_la_même_façon</CANDIDATE>
+      <CANDIDATE score="0">pareil</CANDIDATE>
+      <CANDIDATE score="0">semblable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="likewise">
+      <CANDIDATE score="1">aussi</CANDIDATE>
+      <CANDIDATE score="1">de_même</CANDIDATE>
+      <CANDIDATE score="0">de_plus</CANDIDATE>
+      <CANDIDATE score="0">en_outre</CANDIDATE>
+      <CANDIDATE score="1">idem</CANDIDATE>
+      <CANDIDATE score="1">itou</CANDIDATE>
+      <CANDIDATE score="1">mêmement</CANDIDATE>
+      <CANDIDATE score="1">pareillement</CANDIDATE>
+      <CANDIDATE score="1">semblablement</CANDIDATE>
+      <CANDIDATE score="1">également</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00071321">
+    <ORIGINALDEF>not far away in relative terms</ORIGINALDEF>
+    <USAGE>she works nearby</USAGE>
+    <USAGE>the planets orbiting nearby are Venus and Mars</USAGE>
+    <CANDIDATES original="nearby">
+      <CANDIDATE score="1">auprès</CANDIDATE>
+      <CANDIDATE score="1">proche</CANDIDATE>
+      <CANDIDATE score="1">près</CANDIDATE>
+      <CANDIDATE score="1">tout_près</CANDIDATE>
+      <CANDIDATE score="1">à_proximité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00074407">
+    <ORIGINALDEF>at or to or toward the back or rear</ORIGINALDEF>
+    <USAGE>he moved back</USAGE>
+    <USAGE>tripped when he stepped backward</USAGE>
+    <USAGE>she looked rearward out the window of the car</USAGE>
+    <CANDIDATES original="back">
+      <CANDIDATE score="0">postérieur</CANDIDATE>
+      <CANDIDATE score="0">protéger</CANDIDATE>
+      <CANDIDATE score="0">recouvrir</CANDIDATE>
+      <CANDIDATE score="0">revêtir</CANDIDATE>
+      <CANDIDATE score="0">tapisser</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="backward" />
+    <CANDIDATES original="backwards">
+      <CANDIDATE score="1">en_arrière</CANDIDATE>
+      <CANDIDATE score="0">en_commençant_par_la_fin</CANDIDATE>
+      <CANDIDATE score="0">en_rétrogradant</CANDIDATE>
+      <CANDIDATE score="0">vers_le_passé</CANDIDATE>
+      <CANDIDATE score="0">à_l'envers</CANDIDATE>
+      <CANDIDATE score="1">à_rebours</CANDIDATE>
+      <CANDIDATE score="1">à_reculons</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rearward">
+      <CANDIDATE score="1">par_derrière</CANDIDATE>
+      <CANDIDATE score="1">vers_l'arrière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rearwards" />
+  </SYNSET>
+  <SYNSET id="00075442">
+    <ORIGINALDEF>toward the future; forward in time</ORIGINALDEF>
+    <USAGE>I like to look ahead in imagination to what the future may bring</USAGE>
+    <USAGE>I look forward to seeing you</USAGE>
+    <CANDIDATES original="ahead">
+      <CANDIDATE score="0">au-devant</CANDIDATE>
+      <CANDIDATE score="0">devant</CANDIDATE>
+      <CANDIDATE score="0">en_avant</CANDIDATE>
+      <CANDIDATE score="0">en_tête</CANDIDATE>
+      <CANDIDATE score="0">suivant</CANDIDATE>
+      <CANDIDATE score="0">à_l'avance</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="forward">
+      <CANDIDATE score="0">en_avant</CANDIDATE>
+      <CANDIDATE score="0">expédier</CANDIDATE>
+      <CANDIDATE score="0">précédent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00077619">
+    <ORIGINALDEF>at a great cost</ORIGINALDEF>
+    <USAGE>he paid dearly for the food</USAGE>
+    <USAGE>this cost him dear</USAGE>
+    <CANDIDATES original="dear">
+      <CANDIDATE score="1">cher</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dearly">
+      <CANDIDATE score="0">avec_tendresse</CANDIDATE>
+      <CANDIDATE score="1">chèrement</CANDIDATE>
+      <CANDIDATE score="0">profondément</CANDIDATE>
+      <CANDIDATE score="0">tendrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00077912">
+    <ORIGINALDEF>in a sincere and heartfelt manner</ORIGINALDEF>
+    <USAGE>I would dearly love to know</USAGE>
+    <CANDIDATES original="dearly">
+      <CANDIDATE score="0">avec_tendresse</CANDIDATE>
+      <CANDIDATE score="0">chèrement</CANDIDATE>
+      <CANDIDATE score="1">profondément</CANDIDATE>
+      <CANDIDATE score="0">tendrement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_a_heartfelt_way" />
+  </SYNSET>
+  <SYNSET id="00078330">
+    <ORIGINALDEF>in a decorative manner</ORIGINALDEF>
+    <USAGE>used decoratively at Christmas</USAGE>
+    <CANDIDATES original="decoratively" />
+  </SYNSET>
+  <SYNSET id="00079499">
+    <ORIGINALDEF>during the night of the present day</ORIGINALDEF>
+    <USAGE>drop by tonight</USAGE>
+    <CANDIDATES original="this_evening" />
+    <CANDIDATES original="this_night" />
+    <CANDIDATES original="tonight">
+      <CANDIDATE score="1">ce_soir</CANDIDATE>
+      <CANDIDATE score="1">cette_nuit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00081194">
+    <ORIGINALDEF>in a sane or lucid manner</ORIGINALDEF>
+    <USAGE>she is behaving rather sanely these days even though we know she is schizophrenic</USAGE>
+    <CANDIDATES original="sanely">
+      <CANDIDATE score="0">judicieusement</CANDIDATE>
+      <CANDIDATE score="1">raisonnablement</CANDIDATE>
+      <CANDIDATE score="1">sainement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00081375">
+    <ORIGINALDEF>in a comical manner</ORIGINALDEF>
+    <USAGE>the tone was comically desperate</USAGE>
+    <CANDIDATES original="comically">
+      <CANDIDATE score="1">comiquement</CANDIDATE>
+      <CANDIDATE score="1">de_façon_comique</CANDIDATE>
+      <CANDIDATE score="1">drôlement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00081486">
+    <ORIGINALDEF>every day; without missing a day</ORIGINALDEF>
+    <USAGE>he stops by daily</USAGE>
+    <CANDIDATES original="daily">
+      <CANDIDATE score="0">bijournalier</CANDIDATE>
+      <CANDIDATE score="0">diurne</CANDIDATE>
+      <CANDIDATE score="0">journalier</CANDIDATE>
+      <CANDIDATE score="1">journellement</CANDIDATE>
+      <CANDIDATE score="0">quotidien</CANDIDATE>
+      <CANDIDATE score="1">quotidiennement</CANDIDATE>
+      <CANDIDATE score="1">tous_les_jours</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00082039">
+    <ORIGINALDEF>in a manner or to a degree that dazzles the beholder</ORIGINALDEF>
+    <CANDIDATES original="dazzlingly">
+      <CANDIDATE score="1">de_manière_éblouissante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00082842">
+    <ORIGINALDEF>in a disruptive manner</ORIGINALDEF>
+    <CANDIDATES original="disruptively" />
+  </SYNSET>
+  <SYNSET id="00082923">
+    <ORIGINALDEF>in a giddy light-headed manner</ORIGINALDEF>
+    <USAGE>he walked around dizzily</USAGE>
+    <CANDIDATES original="dizzily">
+      <CANDIDATE score="1">avec_un_sentiment_de_vertige</CANDIDATE>
+      <CANDIDATE score="0">bêtement</CANDIDATE>
+      <CANDIDATE score="0">d'une_façon_vertigineuse</CANDIDATE>
+      <CANDIDATE score="1">de_façon_étourdie</CANDIDATE>
+      <CANDIDATE score="1">en_proie_au_vertige</CANDIDATE>
+      <CANDIDATE score="0">vertigineusement</CANDIDATE>
+      <CANDIDATE score="1">étourdiment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="giddily">
+      <CANDIDATE score="0">avec_insouciance</CANDIDATE>
+      <CANDIDATE score="1">en_titubant</CANDIDATE>
+      <CANDIDATE score="0">vertigineusement</CANDIDATE>
+      <CANDIDATE score="0">à_donnerle_vertige</CANDIDATE>
+      <CANDIDATE score="0">à_en_avoir_le_vertige</CANDIDATE>
+      <CANDIDATE score="0">à_l'étourdie</CANDIDATE>
+      <CANDIDATE score="0">à_la_légère</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="light-headedly" />
+  </SYNSET>
+  <SYNSET id="00085811">
+    <ORIGINALDEF>with rapid movements</ORIGINALDEF>
+    <USAGE>he works quickly</USAGE>
+    <CANDIDATES original="apace">
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="chop-chop">
+      <CANDIDATE score="1">fissa</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quickly">
+      <CANDIDATE score="1">promptement</CANDIDATE>
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="0">sans_tarder</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rapidly">
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="speedily">
+      <CANDIDATE score="0">bientôt</CANDIDATE>
+      <CANDIDATE score="1">diligemment</CANDIDATE>
+      <CANDIDATE score="1">promptement</CANDIDATE>
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00091032">
+    <ORIGINALDEF>heartily or earnestly</ORIGINALDEF>
+    <USAGE>They fell to work dingdong</USAGE>
+    <CANDIDATES original="dingdong" />
+  </SYNSET>
+  <SYNSET id="00092814">
+    <ORIGINALDEF>for an instant or moment</ORIGINALDEF>
+    <USAGE>we paused momentarily before proceeding</USAGE>
+    <USAGE>a cardinal perched momently on the dogwood branch</USAGE>
+    <CANDIDATES original="momentarily">
+      <CANDIDATE score="0">d'un_moment_à_l'autre</CANDIDATE>
+      <CANDIDATE score="0">dans_un_instant</CANDIDATE>
+      <CANDIDATE score="0">immédiatement</CANDIDATE>
+      <CANDIDATE score="1">momentanément</CANDIDATE>
+      <CANDIDATE score="0">sans_attendre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="momently" />
+  </SYNSET>
+  <SYNSET id="00094053">
+    <ORIGINALDEF>in an intramuscular way</ORIGINALDEF>
+    <USAGE>administer the drug intramuscularly</USAGE>
+    <CANDIDATES original="intramuscularly">
+      <CANDIDATE score="1">par_voie_intramusculaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00095612">
+    <ORIGINALDEF>away from a more central or a more northerly place</ORIGINALDEF>
+    <USAGE>was sent down to work at the regional office</USAGE>
+    <USAGE>worked down on the farm</USAGE>
+    <USAGE>came down for the wedding</USAGE>
+    <USAGE>flew down to Florida</USAGE>
+    <CANDIDATES original="down">
+      <CANDIDATE score="0">dépressif</CANDIDATE>
+      <CANDIDATE score="0">en_bas</CANDIDATE>
+      <CANDIDATE score="0">par_terre</CANDIDATE>
+      <CANDIDATE score="0">vers_le_bas</CANDIDATE>
+      <CANDIDATE score="0">à_terre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00098267">
+    <ORIGINALDEF>on the home team's field</ORIGINALDEF>
+    <USAGE>they played at home last night</USAGE>
+    <CANDIDATES original="at_home">
+      <CANDIDATE score="1">à_la_maison</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00099228">
+    <ORIGINALDEF>in a mordacious manner</ORIGINALDEF>
+    <USAGE>she taunted him mordaciously</USAGE>
+    <CANDIDATES original="mordaciously" />
+  </SYNSET>
+  <SYNSET id="00100883">
+    <ORIGINALDEF>(old-fashioned) at or from or to a great distance; far</ORIGINALDEF>
+    <USAGE>we traveled afar</USAGE>
+    <USAGE>we could see the ship afar off</USAGE>
+    <USAGE>the Magi came from afar</USAGE>
+    <CANDIDATES original="afar">
+      <CANDIDATE score="1">au_loin</CANDIDATE>
+      <CANDIDATE score="1">à_distance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00102463">
+    <ORIGINALDEF>in a delicate manner</ORIGINALDEF>
+    <USAGE>finely shaped features</USAGE>
+    <USAGE>her fine drawn body</USAGE>
+    <CANDIDATES original="delicately">
+      <CANDIDATE score="1">avec_délicatesse</CANDIDATE>
+      <CANDIDATE score="1">avec_finesse</CANDIDATE>
+      <CANDIDATE score="1">avec_tact</CANDIDATE>
+      <CANDIDATE score="1">délicatement</CANDIDATE>
+      <CANDIDATE score="1">finement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="exquisitely">
+      <CANDIDATE score="1">avec_beaucoup_de_finesse</CANDIDATE>
+      <CANDIDATE score="1">d'une_façon_exquise</CANDIDATE>
+      <CANDIDATE score="1">de_façon_exquise</CANDIDATE>
+      <CANDIDATE score="1">délicieusement</CANDIDATE>
+      <CANDIDATE score="0">excessivement</CANDIDATE>
+      <CANDIDATE score="1">exquisément</CANDIDATE>
+      <CANDIDATE score="0">extrêmement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fine">
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="1">finement</CANDIDATE>
+      <CANDIDATE score="0">menu</CANDIDATE>
+      <CANDIDATE score="0">ordonnance</CANDIDATE>
+      <CANDIDATE score="0">procès-verbal</CANDIDATE>
+      <CANDIDATE score="1">très_bien</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="finely">
+      <CANDIDATE score="1">admirablement</CANDIDATE>
+      <CANDIDATE score="1">avec_finesse</CANDIDATE>
+      <CANDIDATE score="1">délicatement</CANDIDATE>
+      <CANDIDATE score="0">en_tranches_fines</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="1">finement</CANDIDATE>
+      <CANDIDATE score="1">magnifiquement</CANDIDATE>
+      <CANDIDATE score="0">menu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00103194">
+    <ORIGINALDEF>at the beginning</ORIGINALDEF>
+    <USAGE>at first he didn't notice anything strange</USAGE>
+    <CANDIDATES original="ab_initio" />
+    <CANDIDATES original="initially">
+      <CANDIDATE score="1">au_commencement</CANDIDATE>
+      <CANDIDATE score="1">au_début</CANDIDATE>
+      <CANDIDATE score="1">au_départ</CANDIDATE>
+      <CANDIDATE score="1">d'abord</CANDIDATE>
+      <CANDIDATE score="1">initialement</CANDIDATE>
+      <CANDIDATE score="1">à_l'origine</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00103324">
+    <ORIGINALDEF>immediately</ORIGINALDEF>
+    <USAGE>it was love at first sight</USAGE>
+    <CANDIDATES original="at_first_glance" />
+    <CANDIDATES original="at_first_sight">
+      <CANDIDATE score="0">a_priori</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00105603">
+    <ORIGINALDEF>with little or no delay</ORIGINALDEF>
+    <USAGE>the rescue squad arrived promptly</USAGE>
+    <USAGE>come here, quick!</USAGE>
+    <CANDIDATES original="promptly">
+      <CANDIDATE score="1">aussi_sec</CANDIDATE>
+      <CANDIDATE score="1">aussitôt</CANDIDATE>
+      <CANDIDATE score="1">avec_promptitude</CANDIDATE>
+      <CANDIDATE score="1">diligemment</CANDIDATE>
+      <CANDIDATE score="1">là-dessus</CANDIDATE>
+      <CANDIDATE score="0">ponctuellement</CANDIDATE>
+      <CANDIDATE score="1">promptement</CANDIDATE>
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="1">recta</CANDIDATE>
+      <CANDIDATE score="0">à_l'heure</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quick">
+      <CANDIDATE score="0">rapide</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quickly">
+      <CANDIDATE score="1">promptement</CANDIDATE>
+      <CANDIDATE score="1">rapidement</CANDIDATE>
+      <CANDIDATE score="1">sans_tarder</CANDIDATE>
+      <CANDIDATE score="1">vite</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00106316">
+    <ORIGINALDEF>of one mind; without dissent</ORIGINALDEF>
+    <USAGE>the Senate unanimously approved the bill</USAGE>
+    <USAGE>we voted unanimously</USAGE>
+    <CANDIDATES original="nem_con" />
+    <CANDIDATES original="nemine_contradicente" />
+    <CANDIDATES original="unanimously">
+      <CANDIDATE score="1">unanimement</CANDIDATE>
+      <CANDIDATE score="1">à_l'unanimité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00108244">
+    <ORIGINALDEF>at breakneck speed</ORIGINALDEF>
+    <USAGE>they were travelling hell-for-leather</USAGE>
+    <CANDIDATES original="hell-for-leather" />
+  </SYNSET>
+  <SYNSET id="00109021">
+    <ORIGINALDEF>at this time; now</ORIGINALDEF>
+    <USAGE>we'll adjourn here for lunch and discuss the remaining issues this afternoon</USAGE>
+    <CANDIDATES original="here">
+      <CANDIDATE score="0">alors</CANDIDATE>
+      <CANDIDATE score="1">céans</CANDIDATE>
+      <CANDIDATE score="1">ici</CANDIDATE>
+      <CANDIDATE score="1">là</CANDIDATE>
+      <CANDIDATE score="1">à_ce_moment-là</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00113722">
+    <ORIGINALDEF>in an organic manner</ORIGINALDEF>
+    <USAGE>this food is grown organically</USAGE>
+    <CANDIDATES original="organically">
+      <CANDIDATE score="1">biologiquement</CANDIDATE>
+      <CANDIDATE score="0">foncièrement</CANDIDATE>
+      <CANDIDATE score="0">fondamentalement</CANDIDATE>
+      <CANDIDATE score="1">naturellement</CANDIDATE>
+      <CANDIDATE score="0">organiquement</CANDIDATE>
+      <CANDIDATE score="0">physiquement</CANDIDATE>
+      <CANDIDATE score="1">sans_engrais_chimiques</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00116180">
+    <ORIGINALDEF>in a symbiotic manner</ORIGINALDEF>
+    <CANDIDATES original="symbiotically" />
+  </SYNSET>
+  <SYNSET id="00118531">
+    <ORIGINALDEF>in spite of everything; without regard to drawbacks</ORIGINALDEF>
+    <USAGE>he carried on regardless of the difficulties</USAGE>
+    <CANDIDATES original="disregarding" />
+    <CANDIDATES original="disregardless" />
+    <CANDIDATES original="irrespective" />
+    <CANDIDATES original="no_matter" />
+    <CANDIDATES original="regardless">
+      <CANDIDATE score="1">quand_même</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00119940">
+    <ORIGINALDEF>with success; in a successful manner</ORIGINALDEF>
+    <USAGE>she performed the surgery successfully</USAGE>
+    <CANDIDATES original="successfully">
+      <CANDIDATE score="1">avec_succès</CANDIDATE>
+      <CANDIDATE score="1">heureusement</CANDIDATE>
+      <CANDIDATE score="1">victorieusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00125108">
+    <ORIGINALDEF>occurring within the predicate phrase</ORIGINALDEF>
+    <USAGE>predicatively used adjectives</USAGE>
+    <CANDIDATES original="predicatively">
+      <CANDIDATE score="1">en_tant_que_prédicat</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00125985">
+    <ORIGINALDEF>in a royal manner</ORIGINALDEF>
+    <USAGE>they were royally treated</USAGE>
+    <CANDIDATES original="like_kings" />
+    <CANDIDATES original="like_royalty" />
+    <CANDIDATES original="royally">
+      <CANDIDATE score="1">royalement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00126427">
+    <ORIGINALDEF>in a serial manner</ORIGINALDEF>
+    <USAGE>serially composed music</USAGE>
+    <CANDIDATES original="serially">
+      <CANDIDATE score="1">en_série</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00126972">
+    <ORIGINALDEF>with regard to technique</ORIGINALDEF>
+    <USAGE>technically lagging behind the Japanese</USAGE>
+    <USAGE>a technically brilliant boxer</USAGE>
+    <CANDIDATES original="technically">
+      <CANDIDATE score="0">en_principe</CANDIDATE>
+      <CANDIDATE score="0">en_termes_techniques</CANDIDATE>
+      <CANDIDATE score="0">en_théorie</CANDIDATE>
+      <CANDIDATE score="1">sur_le_plan_technique</CANDIDATE>
+      <CANDIDATE score="1">techniquement</CANDIDATE>
+      <CANDIDATE score="0">théoriquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00130129">
+    <ORIGINALDEF>with respect to race</ORIGINALDEF>
+    <USAGE>racially integrated</USAGE>
+    <CANDIDATES original="racially" />
+  </SYNSET>
+  <SYNSET id="00130322">
+    <ORIGINALDEF>by government</ORIGINALDEF>
+    <USAGE>governmentally determined policy</USAGE>
+    <CANDIDATES original="governmentally" />
+  </SYNSET>
+  <SYNSET id="00131550">
+    <ORIGINALDEF>in an algebraic manner</ORIGINALDEF>
+    <USAGE>algebraically determined</USAGE>
+    <CANDIDATES original="algebraically">
+      <CANDIDATE score="1">algébriquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00132532">
+    <ORIGINALDEF>extremely</ORIGINALDEF>
+    <USAGE>infernally clever</USAGE>
+    <USAGE>hellishly dangerous</USAGE>
+    <CANDIDATES original="hellishly">
+      <CANDIDATE score="1">atrocement</CANDIDATE>
+      <CANDIDATE score="1">horriblement</CANDIDATE>
+      <CANDIDATE score="1">vachement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="infernally">
+      <CANDIDATE score="1">abominablement</CANDIDATE>
+      <CANDIDATE score="1">atrocement</CANDIDATE>
+      <CANDIDATE score="1">épouvantablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00133041">
+    <ORIGINALDEF>in an optical manner</ORIGINALDEF>
+    <USAGE>optically distorted</USAGE>
+    <CANDIDATES original="optically" />
+  </SYNSET>
+  <SYNSET id="00135567">
+    <ORIGINALDEF>in a regional manner</ORIGINALDEF>
+    <USAGE>regionally governed</USAGE>
+    <CANDIDATES original="regionally">
+      <CANDIDATE score="1">régionalement</CANDIDATE>
+      <CANDIDATE score="1">sur_le_plan_régional</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00135902">
+    <ORIGINALDEF>by race</ORIGINALDEF>
+    <USAGE>interracially restrictive</USAGE>
+    <CANDIDATES original="interracially" />
+  </SYNSET>
+  <SYNSET id="00136088">
+    <ORIGINALDEF>below the skin</ORIGINALDEF>
+    <USAGE>inject subcutaneously</USAGE>
+    <CANDIDATES original="subcutaneously">
+      <CANDIDATE score="1">en_sous-cutané</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00142959">
+    <ORIGINALDEF>to an inconceivable degree</ORIGINALDEF>
+    <USAGE>inconceivably small</USAGE>
+    <CANDIDATES original="inconceivably">
+      <CANDIDATE score="1">inconcevablement</CANDIDATE>
+      <CANDIDATE score="1">à_un_degré_inconcevable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00143722">
+    <ORIGINALDEF>in a superficial manner</ORIGINALDEF>
+    <USAGE>he was superficially interested</USAGE>
+    <CANDIDATES original="superficially">
+      <CANDIDATE score="1">en_apparence</CANDIDATE>
+      <CANDIDATE score="1">grossièrement</CANDIDATE>
+      <CANDIDATE score="1">sommairement</CANDIDATE>
+      <CANDIDATE score="1">superficiellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00143946">
+    <ORIGINALDEF>in a monosyllabic manner</ORIGINALDEF>
+    <CANDIDATES original="monosyllabically" />
+  </SYNSET>
+  <SYNSET id="00144405">
+    <ORIGINALDEF>for a short time</ORIGINALDEF>
+    <USAGE>sit down and stay awhile</USAGE>
+    <USAGE>they settled awhile in Virginia before moving West</USAGE>
+    <USAGE>the baby was quiet for a while</USAGE>
+    <CANDIDATES original="awhile">
+      <CANDIDATE score="1">pendant_quelque_temps</CANDIDATE>
+      <CANDIDATE score="1">quelque_temps</CANDIDATE>
+      <CANDIDATE score="1">un_instant</CANDIDATE>
+      <CANDIDATE score="1">un_moment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="for_a_while" />
+  </SYNSET>
+  <SYNSET id="00148139">
+    <ORIGINALDEF>in a relaxed manner; or without hardship</ORIGINALDEF>
+    <USAGE>None</USAGE>
+    <CANDIDATES original="easy" />
+    <CANDIDATES original="soft">
+      <CANDIDATE score="1">doucement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00149744">
+    <ORIGINALDEF>as a sentence modifier to add slight emphasis</ORIGINALDEF>
+    <USAGE>actually, we all help clear up after a meal</USAGE>
+    <USAGE>actually, I haven't seen the film</USAGE>
+    <USAGE>I'm not all that surprised actually</USAGE>
+    <USAGE>she hasn't proved to be too satisfactory, actually</USAGE>
+    <CANDIDATES original="actually">
+      <CANDIDATE score="0">actuellement</CANDIDATE>
+      <CANDIDATE score="0">effectivement</CANDIDATE>
+      <CANDIDATE score="1">en_fait</CANDIDATE>
+      <CANDIDATE score="0">vraiment</CANDIDATE>
+      <CANDIDATE score="1">à_vrai_dire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00150134">
+    <ORIGINALDEF>admittedly</ORIGINALDEF>
+    <USAGE>to be sure, he is no Einstein</USAGE>
+    <CANDIDATES original="no_doubt">
+      <CANDIDATE score="1">sans_aucun_doute</CANDIDATE>
+      <CANDIDATE score="1">sans_nul_doute</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="to_be_sure" />
+    <CANDIDATES original="without_doubt" />
+  </SYNSET>
+  <SYNSET id="00151305">
+    <ORIGINALDEF>in spite of expectations</ORIGINALDEF>
+    <USAGE>came to the party after all</USAGE>
+    <USAGE>it didn't rain after all</USAGE>
+    <CANDIDATES original="after_all">
+      <CANDIDATE score="0">enfin</CANDIDATE>
+      <CANDIDATE score="1">finalement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00151957">
+    <ORIGINALDEF>without warning</ORIGINALDEF>
+    <USAGE>all at once, he started shouting</USAGE>
+    <CANDIDATES original="all_at_once" />
+    <CANDIDATES original="all_of_a_sudden">
+      <CANDIDATE score="1">soudain</CANDIDATE>
+      <CANDIDATE score="1">soudainement</CANDIDATE>
+      <CANDIDATE score="1">subitement</CANDIDATE>
+      <CANDIDATE score="1">subito</CANDIDATE>
+      <CANDIDATE score="1">subito_presto</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00152998">
+    <ORIGINALDEF>by the shortest and most direct route</ORIGINALDEF>
+    <USAGE>it's 10 miles as the crow flies</USAGE>
+    <CANDIDATES original="as_the_crow_flies" />
+  </SYNSET>
+  <SYNSET id="00156496">
+    <ORIGINALDEF>by spoken rather than written means</ORIGINALDEF>
+    <USAGE>these stories were transmitted by word of mouth</USAGE>
+    <CANDIDATES original="by_word_of_mouth">
+      <CANDIDATE score="1">oralement</CANDIDATE>
+      <CANDIDATE score="1">verbalement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="orally">
+      <CANDIDATE score="1">de_vive_voix</CANDIDATE>
+      <CANDIDATE score="1">oralement</CANDIDATE>
+      <CANDIDATE score="1">par_voie_orale</CANDIDATE>
+      <CANDIDATE score="0">per_os</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00159544">
+    <ORIGINALDEF>as a particular one of several possibilities</ORIGINALDEF>
+    <USAGE>I for one feel very grateful</USAGE>
+    <USAGE>her mother for one was worried</USAGE>
+    <CANDIDATES original="for_one" />
+  </SYNSET>
+  <SYNSET id="00159889">
+    <ORIGINALDEF>from the beginning, especially without relying on resources or other advantages</ORIGINALDEF>
+    <USAGE>he baked the torte from scratch</USAGE>
+    <USAGE>she built her business up from scratch</USAGE>
+    <CANDIDATES original="from_scratch" />
+  </SYNSET>
+  <SYNSET id="00163704">
+    <ORIGINALDEF>in disorderly haste</ORIGINALDEF>
+    <USAGE>we ran head over heels toward the shelter</USAGE>
+    <CANDIDATES original="head_over_heels">
+      <CANDIDATE score="0">à_jambes_rebindaines</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="heels_over_head" />
+    <CANDIDATES original="in_great_confusion" />
+    <CANDIDATES original="topsy-turvily" />
+    <CANDIDATES original="topsy-turvy">
+      <CANDIDATE score="0">sens_dessus_dessous</CANDIDATE>
+      <CANDIDATE score="0">à_l'envers</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00164150">
+    <ORIGINALDEF>without care or concern</ORIGINALDEF>
+    <USAGE>carelessly raised the children's hopes without thinking of their possible disappointment</USAGE>
+    <CANDIDATES original="carelessly">
+      <CANDIDATE score="1">avec_insouciance</CANDIDATE>
+      <CANDIDATE score="1">imprudemment</CANDIDATE>
+      <CANDIDATE score="1">négligemment</CANDIDATE>
+      <CANDIDATE score="1">étourdiment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="heedlessly">
+      <CANDIDATE score="1">avec_insouciance</CANDIDATE>
+      <CANDIDATE score="1">sans__attention</CANDIDATE>
+      <CANDIDATE score="1">sans_faire_attention</CANDIDATE>
+      <CANDIDATE score="1">à_la_légère</CANDIDATE>
+      <CANDIDATE score="1">étourdiment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00166318">
+    <ORIGINALDEF>for an extended distance</ORIGINALDEF>
+    <CANDIDATES original="long">
+      <CANDIDATE score="0">depuis_longtemps</CANDIDATE>
+      <CANDIDATE score="0">longtemps</CANDIDATE>
+      <CANDIDATE score="0">soupirer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00166375">
+    <ORIGINALDEF>incidentally; in the course of doing something else</ORIGINALDEF>
+    <USAGE>he made this remark in passing</USAGE>
+    <CANDIDATES original="en_passant" />
+    <CANDIDATES original="in_passing">
+      <CANDIDATE score="1">incidemment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00167920">
+    <ORIGINALDEF>to no avail</ORIGINALDEF>
+    <USAGE>he looked for her in vain</USAGE>
+    <USAGE>the city fathers tried vainly to find a solution</USAGE>
+    <CANDIDATES original="in_vain">
+      <CANDIDATE score="1">en_vain</CANDIDATE>
+      <CANDIDATE score="1">pour_rien</CANDIDATE>
+      <CANDIDATE score="1">vainement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="vainly">
+      <CANDIDATE score="0">avec_vanité</CANDIDATE>
+      <CANDIDATE score="1">en_vain</CANDIDATE>
+      <CANDIDATE score="1">inutilement</CANDIDATE>
+      <CANDIDATE score="1">vainement</CANDIDATE>
+      <CANDIDATE score="0">vaniteusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00170045">
+    <ORIGINALDEF>in theory; according to the assumed facts</ORIGINALDEF>
+    <USAGE>on paper the candidate seems promising</USAGE>
+    <CANDIDATES original="theoretically">
+      <CANDIDATE score="1">sur_le_plan_théorique</CANDIDATE>
+      <CANDIDATE score="1">théoriquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00175919">
+    <ORIGINALDEF>in an inverse or contrary manner</ORIGINALDEF>
+    <USAGE>inversely related</USAGE>
+    <USAGE>wavelength and frequency are, of course, related reciprocally (F.A.Geldard)</USAGE>
+    <CANDIDATES original="inversely">
+      <CANDIDATE score="1">inversement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="reciprocally">
+      <CANDIDATE score="1">inversement</CANDIDATE>
+      <CANDIDATE score="0">mutuellement</CANDIDATE>
+      <CANDIDATE score="0">réciproquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00176654">
+    <ORIGINALDEF>in a labored manner</ORIGINALDEF>
+    <USAGE>he breathed heavily</USAGE>
+    <CANDIDATES original="heavily">
+      <CANDIDATE score="0">abondamment</CANDIDATE>
+      <CANDIDATE score="1">avec_difficulté</CANDIDATE>
+      <CANDIDATE score="0">beaucoup</CANDIDATE>
+      <CANDIDATE score="0">bruyamment</CANDIDATE>
+      <CANDIDATE score="0">d'un_pas_lourd</CANDIDATE>
+      <CANDIDATE score="0">d'un_pas_pesant</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_accablée</CANDIDATE>
+      <CANDIDATE score="0">densément</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="1">lourdement</CANDIDATE>
+      <CANDIDATE score="0">massivement</CANDIDATE>
+      <CANDIDATE score="0">pesamment</CANDIDATE>
+      <CANDIDATE score="0">profondément</CANDIDATE>
+      <CANDIDATE score="1">péniblement</CANDIDATE>
+      <CANDIDATE score="0">richement</CANDIDATE>
+      <CANDIDATE score="0">solidement</CANDIDATE>
+      <CANDIDATE score="0">très</CANDIDATE>
+      <CANDIDATE score="0">très_fort</CANDIDATE>
+      <CANDIDATE score="0">vivement</CANDIDATE>
+      <CANDIDATE score="0">à_gros_flocons</CANDIDATE>
+      <CANDIDATE score="0">à_verse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00178460">
+    <ORIGINALDEF>by religion</ORIGINALDEF>
+    <USAGE>religiously inspired art</USAGE>
+    <CANDIDATES original="religiously">
+      <CANDIDATE score="0">pieusement</CANDIDATE>
+      <CANDIDATE score="1">religieusement</CANDIDATE>
+      <CANDIDATE score="0">rituellement</CANDIDATE>
+      <CANDIDATE score="0">scrupuleusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sacredly" />
+  </SYNSET>
+  <SYNSET id="00179333">
+    <ORIGINALDEF>otherwise stated</ORIGINALDEF>
+    <USAGE>in other words, we are broke</USAGE>
+    <CANDIDATES original="in_other_words" />
+    <CANDIDATES original="put_differently" />
+  </SYNSET>
+  <SYNSET id="00179807">
+    <ORIGINALDEF>in a graceful manner</ORIGINALDEF>
+    <USAGE>she swooped gracefully</USAGE>
+    <CANDIDATES original="gracefully">
+      <CANDIDATE score="0">avec_dignité</CANDIDATE>
+      <CANDIDATE score="1">avec_grâce</CANDIDATE>
+      <CANDIDATE score="1">avec_élégance</CANDIDATE>
+      <CANDIDATE score="1">gracieusement</CANDIDATE>
+      <CANDIDATE score="1">élégamment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00180279">
+    <ORIGINALDEF>with little weight or force</ORIGINALDEF>
+    <USAGE>she kissed him lightly on the forehead</USAGE>
+    <CANDIDATES original="gently">
+      <CANDIDATE score="1">avec_douceur</CANDIDATE>
+      <CANDIDATE score="0">bellement</CANDIDATE>
+      <CANDIDATE score="1">doucement</CANDIDATE>
+      <CANDIDATE score="1">doucettement</CANDIDATE>
+      <CANDIDATE score="1">en_douceur</CANDIDATE>
+      <CANDIDATE score="1">gentiment</CANDIDATE>
+      <CANDIDATE score="1">mollement</CANDIDATE>
+      <CANDIDATE score="1">piane-piane</CANDIDATE>
+      <CANDIDATE score="1">piano</CANDIDATE>
+      <CANDIDATE score="1">sans_forcer</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lightly">
+      <CANDIDATE score="0">d'un_ton_dégagé</CANDIDATE>
+      <CANDIDATE score="0">discrètement</CANDIDATE>
+      <CANDIDATE score="1">doucement</CANDIDATE>
+      <CANDIDATE score="1">délicatement</CANDIDATE>
+      <CANDIDATE score="1">légèrement</CANDIDATE>
+      <CANDIDATE score="0">à_la_légère</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="softly">
+      <CANDIDATE score="0">bas</CANDIDATE>
+      <CANDIDATE score="1">doucement</CANDIDATE>
+      <CANDIDATE score="0">en_sourdine</CANDIDATE>
+      <CANDIDATE score="1">faiblement</CANDIDATE>
+      <CANDIDATE score="0">gentiment</CANDIDATE>
+      <CANDIDATE score="1">légèrement</CANDIDATE>
+      <CANDIDATE score="1">mollement</CANDIDATE>
+      <CANDIDATE score="0">sans__bruit</CANDIDATE>
+      <CANDIDATE score="0">sans_faire_de_bruit</CANDIDATE>
+      <CANDIDATE score="1">tendrement</CANDIDATE>
+      <CANDIDATE score="0">à_mi-voix</CANDIDATE>
+      <CANDIDATE score="0">à_pas_feutrés</CANDIDATE>
+      <CANDIDATE score="0">à_voix_basse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00181418">
+    <ORIGINALDEF>according to need (physicians use PRN in writing prescriptions)</ORIGINALDEF>
+    <USAGE>add water as needed</USAGE>
+    <CANDIDATES original="PRN" />
+    <CANDIDATES original="as_needed" />
+    <CANDIDATES original="as_required" />
+    <CANDIDATES original="pro_re_nata" />
+  </SYNSET>
+  <SYNSET id="00181901">
+    <ORIGINALDEF>clear to the mind; with distinct mental discernment</ORIGINALDEF>
+    <USAGE>it's distinctly possible</USAGE>
+    <USAGE>I could clearly see myself in his situation</USAGE>
+    <CANDIDATES original="clearly">
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="1">clairement</CANDIDATE>
+      <CANDIDATE score="1">distinctement</CANDIDATE>
+      <CANDIDATE score="0">explicitement</CANDIDATE>
+      <CANDIDATE score="1">franchement</CANDIDATE>
+      <CANDIDATE score="0">lisiblement</CANDIDATE>
+      <CANDIDATE score="1">lucidement</CANDIDATE>
+      <CANDIDATE score="0">lumineusement</CANDIDATE>
+      <CANDIDATE score="1">manifestement</CANDIDATE>
+      <CANDIDATE score="1">nettement</CANDIDATE>
+      <CANDIDATE score="1">précisément</CANDIDATE>
+      <CANDIDATE score="0">pédagogiquement</CANDIDATE>
+      <CANDIDATE score="1">visiblement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="distinctly">
+      <CANDIDATE score="1">clairement</CANDIDATE>
+      <CANDIDATE score="1">distinctement</CANDIDATE>
+      <CANDIDATE score="0">expressément</CANDIDATE>
+      <CANDIDATE score="0">formellement</CANDIDATE>
+      <CANDIDATE score="1">nettement</CANDIDATE>
+      <CANDIDATE score="0">particulièrement</CANDIDATE>
+      <CANDIDATE score="1">sans_équivoque</CANDIDATE>
+      <CANDIDATE score="0">vraiment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00185400">
+    <ORIGINALDEF>in an incompetent manner</ORIGINALDEF>
+    <USAGE>he did the job rather incompetently</USAGE>
+    <CANDIDATES original="displaying_incompetence" />
+    <CANDIDATES original="incompetently" />
+  </SYNSET>
+  <SYNSET id="00186366">
+    <ORIGINALDEF>in a formal manner</ORIGINALDEF>
+    <USAGE>he was dressed rather formally</USAGE>
+    <CANDIDATES original="formally">
+      <CANDIDATE score="1">cérémonieusement</CANDIDATE>
+      <CANDIDATE score="1">dans_les_règles</CANDIDATE>
+      <CANDIDATE score="0">en_bonne_et_due_forme</CANDIDATE>
+      <CANDIDATE score="0">en_tant_que_matière_spécifique</CANDIDATE>
+      <CANDIDATE score="1">formellement</CANDIDATE>
+      <CANDIDATE score="0">officiellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00188248">
+    <ORIGINALDEF>in a theatrical manner</ORIGINALDEF>
+    <USAGE>theatrically dressed</USAGE>
+    <CANDIDATES original="theatrically">
+      <CANDIDATE score="0">dans_les_salles</CANDIDATE>
+      <CANDIDATE score="0">du_point_de_vue_théâtral</CANDIDATE>
+      <CANDIDATE score="0">scéniquement</CANDIDATE>
+      <CANDIDATE score="0">sur_scène</CANDIDATE>
+      <CANDIDATE score="1">théâtralement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00189960">
+    <ORIGINALDEF>in a grave and sedate manner</ORIGINALDEF>
+    <USAGE>the judge sat there solemnly</USAGE>
+    <CANDIDATES original="solemnly">
+      <CANDIDATE score="1">avec_sérieux</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_solennel</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_solennel</CANDIDATE>
+      <CANDIDATE score="1">gravement</CANDIDATE>
+      <CANDIDATE score="1">solennellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00190075">
+    <ORIGINALDEF>by divine means</ORIGINALDEF>
+    <USAGE>the divinely appointed means of rescue from temporal existence</USAGE>
+    <CANDIDATES original="divinely">
+      <CANDIDATE score="1">divinement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00190581">
+    <ORIGINALDEF>in an irregular manner</ORIGINALDEF>
+    <USAGE>the stomach mucosa was irregularly blackened</USAGE>
+    <CANDIDATES original="irregularly">
+      <CANDIDATE score="1">de_façon_irrégulière</CANDIDATE>
+      <CANDIDATE score="1">irrégulièrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00191889">
+    <ORIGINALDEF>in a spontaneous manner</ORIGINALDEF>
+    <USAGE>this shift occurs spontaneously</USAGE>
+    <CANDIDATES original="spontaneously">
+      <CANDIDATE score="1">soudainement</CANDIDATE>
+      <CANDIDATE score="1">spontanément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00193100">
+    <ORIGINALDEF>in a manner characteristic of a thief</ORIGINALDEF>
+    <CANDIDATES original="thievishly" />
+  </SYNSET>
+  <SYNSET id="00193194">
+    <ORIGINALDEF>no longer on or in contact or attached</ORIGINALDEF>
+    <USAGE>clean off the dirt</USAGE>
+    <USAGE>he shaved off his mustache</USAGE>
+    <CANDIDATES original="off" />
+  </SYNSET>
+  <SYNSET id="00193652">
+    <ORIGINALDEF>so as to be visible</ORIGINALDEF>
+    <USAGE>the sign was visibly displayed</USAGE>
+    <CANDIDATES original="visibly">
+      <CANDIDATE score="1">manifestement</CANDIDATE>
+      <CANDIDATE score="1">visiblement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00196417">
+    <ORIGINALDEF>with attention; in an attentive manner</ORIGINALDEF>
+    <USAGE>he listened attentively</USAGE>
+    <CANDIDATES original="attentively">
+      <CANDIDATE score="1">attentivement</CANDIDATE>
+      <CANDIDATE score="1">avec_attention</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00197395">
+    <ORIGINALDEF>in a convenient manner</ORIGINALDEF>
+    <USAGE>the switch was conveniently located</USAGE>
+    <CANDIDATES original="conveniently">
+      <CANDIDATE score="1">commodément</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_commode</CANDIDATE>
+      <CANDIDATE score="1">de_façon_commode</CANDIDATE>
+      <CANDIDATE score="1">de_façon_pratique</CANDIDATE>
+      <CANDIDATE score="1">fort_à_propos</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="handily">
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="1">commodément</CANDIDATE>
+      <CANDIDATE score="1">d'une_façon_commode</CANDIDATE>
+      <CANDIDATE score="0">facilement</CANDIDATE>
+      <CANDIDATE score="0">haut_la_main</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00198531">
+    <ORIGINALDEF>with convulsions, in a convulsive way</ORIGINALDEF>
+    <USAGE>her leg twitched convulsively</USAGE>
+    <CANDIDATES original="convulsively">
+      <CANDIDATE score="1">convulsivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00202833">
+    <ORIGINALDEF>in alphabetical order</ORIGINALDEF>
+    <USAGE>the list was arranged alphabetically</USAGE>
+    <CANDIDATES original="alphabetically">
+      <CANDIDATE score="1">alphabétiquement</CANDIDATE>
+      <CANDIDATE score="1">par_ordre_alphabétique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00205929">
+    <ORIGINALDEF>in a sluggish manner</ORIGINALDEF>
+    <USAGE>the smoke rose sluggishly</USAGE>
+    <CANDIDATES original="sluggishly">
+      <CANDIDATE score="0">faiblement</CANDIDATE>
+      <CANDIDATE score="1">lentement</CANDIDATE>
+      <CANDIDATE score="1">mollement</CANDIDATE>
+      <CANDIDATE score="1">paresseusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00207366">
+    <ORIGINALDEF>on this day as distinct from yesterday or tomorrow</ORIGINALDEF>
+    <USAGE>I can't meet with you today</USAGE>
+    <CANDIDATES original="today">
+      <CANDIDATE score="1">aujourd'hui</CANDIDATE>
+      <CANDIDATE score="0">de_nos_jours</CANDIDATE>
+      <CANDIDATE score="0">maintenant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00208557">
+    <ORIGINALDEF>by necessity</ORIGINALDEF>
+    <USAGE>the situation slid inescapably toward disaster </USAGE>
+    <CANDIDATES original="ineluctably">
+      <CANDIDATE score="1">inéluctablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inescapably">
+      <CANDIDATE score="1">inéluctablement</CANDIDATE>
+      <CANDIDATE score="1">inévitablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inevitably">
+      <CANDIDATE score="1">fatalement</CANDIDATE>
+      <CANDIDATE score="1">forcément</CANDIDATE>
+      <CANDIDATE score="1">immanquablement</CANDIDATE>
+      <CANDIDATE score="1">infailliblement</CANDIDATE>
+      <CANDIDATE score="1">inéluctablement</CANDIDATE>
+      <CANDIDATE score="1">inévitablement</CANDIDATE>
+      <CANDIDATE score="0">obligatoirement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unavoidably">
+      <CANDIDATE score="1">inévitablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00209518">
+    <ORIGINALDEF>without shame</ORIGINALDEF>
+    <USAGE>he unashamedly abandoned the project when he realized he would not gain from it</USAGE>
+    <CANDIDATES original="barefacedly" />
+    <CANDIDATES original="shamelessly">
+      <CANDIDATE score="1">de_façon_impudique</CANDIDATE>
+      <CANDIDATE score="1">effrontément</CANDIDATE>
+      <CANDIDATE score="1">honteusement</CANDIDATE>
+      <CANDIDATE score="0">immodestement</CANDIDATE>
+      <CANDIDATE score="0">impudemment</CANDIDATE>
+      <CANDIDATE score="1">impudiquement</CANDIDATE>
+      <CANDIDATE score="1">sans_honte</CANDIDATE>
+      <CANDIDATE score="1">sans_la_moindre_gêne</CANDIDATE>
+      <CANDIDATE score="1">sans_pudeur</CANDIDATE>
+      <CANDIDATE score="1">sans_vergogne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unashamedly">
+      <CANDIDATE score="1">insolemment</CANDIDATE>
+      <CANDIDATE score="1">sans_aucune_gêne</CANDIDATE>
+      <CANDIDATE score="1">sans_honte</CANDIDATE>
+      <CANDIDATE score="1">sans_vergogne</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00210651">
+    <ORIGINALDEF>in a free manner</ORIGINALDEF>
+    <USAGE>the painting featured freely brushed strokes</USAGE>
+    <CANDIDATES original="freely">
+      <CANDIDATE score="0">abondamment</CANDIDATE>
+      <CANDIDATE score="1">en_toute_liberté</CANDIDATE>
+      <CANDIDATE score="0">franchement</CANDIDATE>
+      <CANDIDATE score="1">généreusement</CANDIDATE>
+      <CANDIDATE score="1">librement</CANDIDATE>
+      <CANDIDATE score="0">sans_compter</CANDIDATE>
+      <CANDIDATE score="0">volontiers</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00210935">
+    <ORIGINALDEF>according to routine or established practice</ORIGINALDEF>
+    <USAGE>he routinely parked in a no-parking zone</USAGE>
+    <CANDIDATES original="routinely">
+      <CANDIDATE score="1">couramment</CANDIDATE>
+      <CANDIDATE score="1">de_façon_routinière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00211964">
+    <ORIGINALDEF>with a dim light</ORIGINALDEF>
+    <USAGE>a dimly lit room</USAGE>
+    <CANDIDATES original="dimly">
+      <CANDIDATE score="1">faiblement</CANDIDATE>
+      <CANDIDATE score="0">imparfaitement</CANDIDATE>
+      <CANDIDATE score="0">sans_éclat</CANDIDATE>
+      <CANDIDATE score="1">vaguement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="murkily" />
+  </SYNSET>
+  <SYNSET id="00215048">
+    <ORIGINALDEF>in a tedious manner</ORIGINALDEF>
+    <USAGE>boringly slow work</USAGE>
+    <USAGE>he plodded tediously forward</USAGE>
+    <CANDIDATES original="boringly">
+      <CANDIDATE score="1">de_façon_ennuyeuse</CANDIDATE>
+      <CANDIDATE score="1">fastidieusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tediously">
+      <CANDIDATE score="1">d'une_façon_assommante</CANDIDATE>
+      <CANDIDATE score="1">d'une_façon_ennuyeuse</CANDIDATE>
+      <CANDIDATE score="1">fastidieusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tiresomely">
+      <CANDIDATE score="1">fastidieusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00216100">
+    <ORIGINALDEF>not in a reasonable or intelligent manner</ORIGINALDEF>
+    <USAGE>she reacted unreasonably when she learned she had failed</USAGE>
+    <CANDIDATES original="unreasonably">
+      <CANDIDATE score="1">de_façon_déraisonnable</CANDIDATE>
+      <CANDIDATE score="1">déraisonnablement</CANDIDATE>
+      <CANDIDATE score="1">exagérément</CANDIDATE>
+      <CANDIDATE score="1">excessivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00219325">
+    <ORIGINALDEF>in a cheerful manner</ORIGINALDEF>
+    <USAGE>`I'll do the dishes,' he said pleasantly</USAGE>
+    <CANDIDATES original="cheerily">
+      <CANDIDATE score="1">avec_entrain</CANDIDATE>
+      <CANDIDATE score="1">gaiement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pleasantly">
+      <CANDIDATE score="0">agréablement</CANDIDATE>
+      <CANDIDATE score="0">aimablement</CANDIDATE>
+      <CANDIDATE score="0">plaisamment</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sunnily" />
+  </SYNSET>
+  <SYNSET id="00221583">
+    <ORIGINALDEF>without regard to specific details or exceptions</ORIGINALDEF>
+    <USAGE>he interprets the law broadly</USAGE>
+    <CANDIDATES original="broadly">
+      <CANDIDATE score="1">d'une_manière_générale</CANDIDATE>
+      <CANDIDATE score="1">dans_les_grandes_lignes</CANDIDATE>
+      <CANDIDATE score="1">en_gros</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">généralement</CANDIDATE>
+      <CANDIDATE score="0">largement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="broadly_speaking" />
+    <CANDIDATES original="generally">
+      <CANDIDATE score="0">communément</CANDIDATE>
+      <CANDIDATE score="0">d'habitude</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_générale</CANDIDATE>
+      <CANDIDATE score="1">dans_l'ensemble</CANDIDATE>
+      <CANDIDATE score="1">en_général</CANDIDATE>
+      <CANDIDATE score="1">en_règle_générale</CANDIDATE>
+      <CANDIDATE score="1">généralement</CANDIDATE>
+      <CANDIDATE score="0">habituellement</CANDIDATE>
+      <CANDIDATE score="0">normalement</CANDIDATE>
+      <CANDIDATE score="0">partout</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="loosely">
+      <CANDIDATE score="1">approximativement</CANDIDATE>
+      <CANDIDATE score="1">assez_librement</CANDIDATE>
+      <CANDIDATE score="1">librement</CANDIDATE>
+      <CANDIDATE score="0">lâchement</CANDIDATE>
+      <CANDIDATE score="0">sans_serrer</CANDIDATE>
+      <CANDIDATE score="0">sans_trop_de_rigueur</CANDIDATE>
+      <CANDIDATE score="0">sans_être_serré</CANDIDATE>
+      <CANDIDATE score="0">vaguement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00221795">
+    <ORIGINALDEF>in a wide fashion</ORIGINALDEF>
+    <USAGE>he smiled broadly</USAGE>
+    <CANDIDATES original="broadly">
+      <CANDIDATE score="0">d'une_manière_générale</CANDIDATE>
+      <CANDIDATE score="0">dans_les_grandes_lignes</CANDIDATE>
+      <CANDIDATE score="0">en_gros</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">généralement</CANDIDATE>
+      <CANDIDATE score="1">largement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00222180">
+    <ORIGINALDEF>remaining in a place or condition that has been left or departed from</ORIGINALDEF>
+    <USAGE>when he died he left much unfinished work behind</USAGE>
+    <USAGE>left a large family behind</USAGE>
+    <USAGE>the children left their books behind</USAGE>
+    <USAGE>he took off with a squeal of tires and left the other cars far behind</USAGE>
+    <CANDIDATES original="behind">
+      <CANDIDATE score="1">derrière</CANDIDATE>
+      <CANDIDATE score="1">en_arrière</CANDIDATE>
+      <CANDIDATE score="0">en_retard</CANDIDATE>
+      <CANDIDATE score="0">postérieur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00224280">
+    <ORIGINALDEF>in an impassioned or very angry manner</ORIGINALDEF>
+    <USAGE>she screamed furiously at her tormentors</USAGE>
+    <CANDIDATES original="furiously">
+      <CANDIDATE score="1">avec_acharnement</CANDIDATE>
+      <CANDIDATE score="1">avec_emportement</CANDIDATE>
+      <CANDIDATE score="1">comme_un_forcené</CANDIDATE>
+      <CANDIDATE score="1">comme_une_forcenée</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_furieux</CANDIDATE>
+      <CANDIDATE score="1">frénétiquement</CANDIDATE>
+      <CANDIDATE score="1">furieusement</CANDIDATE>
+      <CANDIDATE score="0">à_bride_abattue</CANDIDATE>
+      <CANDIDATE score="0">à_une_allure_folle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00224700">
+    <ORIGINALDEF>in a secure manner; in a manner free from danger</ORIGINALDEF>
+    <USAGE>she held the child securely</USAGE>
+    <CANDIDATES original="firmly">
+      <CANDIDATE score="1">avec_fermeté</CANDIDATE>
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_ferme</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_ferme</CANDIDATE>
+      <CANDIDATE score="0">dur_comme_fer</CANDIDATE>
+      <CANDIDATE score="1">fermement</CANDIDATE>
+      <CANDIDATE score="0">formellement</CANDIDATE>
+      <CANDIDATE score="0">profondément</CANDIDATE>
+      <CANDIDATE score="1">solidement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="securely">
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="1">en_sécurité</CANDIDATE>
+      <CANDIDATE score="1">solidement</CANDIDATE>
+      <CANDIDATE score="1">sûrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00226458">
+    <ORIGINALDEF>throughout a period of time</ORIGINALDEF>
+    <USAGE>stay over the weekend</USAGE>
+    <CANDIDATES original="o'er" />
+    <CANDIDATES original="over">
+      <CANDIDATE score="0">dessus</CANDIDATE>
+      <CANDIDATE score="0">outre</CANDIDATE>
+      <CANDIDATE score="0">par-dessus</CANDIDATE>
+      <CANDIDATE score="0">plus</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00227323">
+    <ORIGINALDEF>with anger</ORIGINALDEF>
+    <USAGE>he angrily denied the accusation</USAGE>
+    <CANDIDATES original="angrily">
+      <CANDIDATE score="1">avec_colère</CANDIDATE>
+      <CANDIDATE score="1">avec_emportement</CANDIDATE>
+      <CANDIDATE score="1">en_colère</CANDIDATE>
+      <CANDIDATE score="1">furieusement</CANDIDATE>
+      <CANDIDATE score="1">rageusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00227968">
+    <ORIGINALDEF>everlastingly; for all time</ORIGINALDEF>
+    <USAGE>rays...streaming perpetually from the sun (Stuart Chase)</USAGE>
+    <CANDIDATES original="perpetually">
+      <CANDIDATE score="1">continuellement</CANDIDATE>
+      <CANDIDATE score="1">immuablement</CANDIDATE>
+      <CANDIDATE score="1">perpétuellement</CANDIDATE>
+      <CANDIDATE score="1">sans_cesse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00228417">
+    <ORIGINALDEF>in an infelicitous manner</ORIGINALDEF>
+    <USAGE>this function is ineptly left to a small voice</USAGE>
+    <CANDIDATES original="ineptly">
+      <CANDIDATE score="1">de_façon_inepte</CANDIDATE>
+      <CANDIDATE score="1">ineptement</CANDIDATE>
+      <CANDIDATE score="0">inhabilement</CANDIDATE>
+      <CANDIDATE score="1">stupidement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00231244">
+    <ORIGINALDEF>in a square position</ORIGINALDEF>
+    <USAGE>the building stood foursquare</USAGE>
+    <CANDIDATES original="foursquare" />
+  </SYNSET>
+  <SYNSET id="00232314">
+    <ORIGINALDEF>with gloom</ORIGINALDEF>
+    <USAGE>such a change is gloomily foreseen by many</USAGE>
+    <CANDIDATES original="gloomily">
+      <CANDIDATE score="1">d'un_air_lugubre</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_morne</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_sombre</CANDIDATE>
+      <CANDIDATE score="1">lugubrement</CANDIDATE>
+      <CANDIDATE score="0">mélancoliquement</CANDIDATE>
+      <CANDIDATE score="1">sombrement</CANDIDATE>
+      <CANDIDATE score="0">tristement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00232425">
+    <ORIGINALDEF>excessively</ORIGINALDEF>
+    <USAGE>a cruelly bitter winter</USAGE>
+    <CANDIDATES original="cruelly">
+      <CANDIDATE score="1">cruellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00234747">
+    <ORIGINALDEF>indicating continuing action; continuously or steadily</ORIGINALDEF>
+    <USAGE>he worked away at the project for more than a year</USAGE>
+    <USAGE>the child kept hammering away as if his life depended on it</USAGE>
+    <CANDIDATES original="away">
+      <CANDIDATE score="0">au_loin</CANDIDATE>
+      <CANDIDATE score="0">loin</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00236763">
+    <ORIGINALDEF>in a charming manner</ORIGINALDEF>
+    <CANDIDATES original="charmingly">
+      <CANDIDATE score="1">d'une_façon_charmante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00238794">
+    <ORIGINALDEF>without any excuse</ORIGINALDEF>
+    <USAGE>he is unjustifiably harsh on her</USAGE>
+    <CANDIDATES original="inexcusably">
+      <CANDIDATE score="1">de_façon_impardonnable</CANDIDATE>
+      <CANDIDATE score="1">de_façon_inexcusable</CANDIDATE>
+      <CANDIDATE score="1">inexcusablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unjustifiably">
+      <CANDIDATE score="1">de_façon_injustifiable</CANDIDATE>
+      <CANDIDATE score="1">sans_justification</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00240265">
+    <ORIGINALDEF>at the same pitch</ORIGINALDEF>
+    <USAGE>they sang in unison</USAGE>
+    <CANDIDATES original="in_unison" />
+  </SYNSET>
+  <SYNSET id="00244342">
+    <ORIGINALDEF>during or for the length of one night</ORIGINALDEF>
+    <USAGE>the fish marinates overnight</USAGE>
+    <CANDIDATES original="overnight">
+      <CANDIDATE score="0">du_jour_au_lendemain</CANDIDATE>
+      <CANDIDATE score="1">jusqu'au_lendemain</CANDIDATE>
+      <CANDIDATE score="1">la_nuit</CANDIDATE>
+      <CANDIDATE score="1">pendant_la_nuit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00245305">
+    <ORIGINALDEF>with the feet foremost</ORIGINALDEF>
+    <USAGE>he jumped into the pool feetfirst</USAGE>
+    <CANDIDATES original="feetfirst" />
+  </SYNSET>
+  <SYNSET id="00246802">
+    <ORIGINALDEF>in a very impressive manner</ORIGINALDEF>
+    <USAGE>your performance will improve dramatically</USAGE>
+    <CANDIDATES original="dramatically">
+      <CANDIDATE score="1">de_façon_spectaculaire</CANDIDATE>
+      <CANDIDATE score="1">de_manière_dramatique</CANDIDATE>
+      <CANDIDATE score="0">de_manière_théâtrale</CANDIDATE>
+      <CANDIDATE score="1">dramatiquement</CANDIDATE>
+      <CANDIDATE score="0">du_point_de_vue_théâtral</CANDIDATE>
+      <CANDIDATE score="0">du_point_du_vue_théâtral</CANDIDATE>
+      <CANDIDATE score="1">extraordinairement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00246934">
+    <ORIGINALDEF>in the manner of Greek and Roman culture</ORIGINALDEF>
+    <USAGE>this exercise develops a classically shaped body</USAGE>
+    <CANDIDATES original="classically">
+      <CANDIDATE score="1">classiquement</CANDIDATE>
+      <CANDIDATE score="0">typiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00247084">
+    <ORIGINALDEF>in an obscure manner</ORIGINALDEF>
+    <USAGE>this work is obscurely written</USAGE>
+    <CANDIDATES original="obscurely">
+      <CANDIDATE score="1">hermétiquement</CANDIDATE>
+      <CANDIDATE score="1">obscurément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00248249">
+    <ORIGINALDEF>in a prophetic manner</ORIGINALDEF>
+    <USAGE>he prophetically anticipated the disaster</USAGE>
+    <CANDIDATES original="prophetically">
+      <CANDIDATE score="1">prophétiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00251166">
+    <ORIGINALDEF>in proportion to the estimated value of the goods taxed</ORIGINALDEF>
+    <USAGE>the goods were taxed ad valorem</USAGE>
+    <CANDIDATES original="ad_val" />
+    <CANDIDATES original="ad_valorem">
+      <CANDIDATE score="1">ad_valorem</CANDIDATE>
+      <CANDIDATE score="1">sur_la_valeur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00252348">
+    <ORIGINALDEF>in ordinary language</ORIGINALDEF>
+    <CANDIDATES original="en_clair" />
+  </SYNSET>
+  <SYNSET id="00252965">
+    <ORIGINALDEF>with the involvement of two parties or governments</ORIGINALDEF>
+    <USAGE>they worked out an agreement bilaterally</USAGE>
+    <CANDIDATES original="bilaterally">
+      <CANDIDATE score="1">bilatéralement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00253609">
+    <ORIGINALDEF>as completely as possible</ORIGINALDEF>
+    <USAGE>it was chock-a-block full</USAGE>
+    <CANDIDATES original="chock" />
+    <CANDIDATES original="chock-a-block" />
+  </SYNSET>
+  <SYNSET id="00253794">
+    <ORIGINALDEF>make a telephone call or mail a package so that the recipient pays</ORIGINALDEF>
+    <USAGE>call collect</USAGE>
+    <USAGE>send a package collect</USAGE>
+    <CANDIDATES original="collect">
+      <CANDIDATE score="0">ramasser</CANDIDATE>
+      <CANDIDATE score="0">rassembler</CANDIDATE>
+      <CANDIDATE score="0">recueillir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00254527">
+    <ORIGINALDEF>to a degree resembling death</ORIGINALDEF>
+    <USAGE>he was deathly pale</USAGE>
+    <CANDIDATES original="deathly">
+      <CANDIDATE score="1">comme_la_mort</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00254614">
+    <ORIGINALDEF>prominently forward</ORIGINALDEF>
+    <USAGE>he put his best foot foremost</USAGE>
+    <CANDIDATES original="first">
+      <CANDIDATE score="0">au_début</CANDIDATE>
+      <CANDIDATE score="0">au_préalable</CANDIDATE>
+      <CANDIDATE score="0">auparavant</CANDIDATE>
+      <CANDIDATE score="0">avant</CANDIDATE>
+      <CANDIDATE score="0">d'abord</CANDIDATE>
+      <CANDIDATE score="0">plutôt</CANDIDATE>
+      <CANDIDATE score="0">pour_la_première_fois</CANDIDATE>
+      <CANDIDATE score="0">premièrement</CANDIDATE>
+      <CANDIDATE score="0">primo</CANDIDATE>
+      <CANDIDATE score="0">préalablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="foremost">
+      <CANDIDATE score="1">en_avant</CANDIDATE>
+      <CANDIDATE score="0">tout_d'abord</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00255415">
+    <ORIGINALDEF>at half the distance; at the middle</ORIGINALDEF>
+    <USAGE>he was halfway down the ladder when he fell</USAGE>
+    <CANDIDATES original="halfway">
+      <CANDIDATE score="1">à_mi-chemin</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="midway">
+      <CANDIDATE score="1">à_mi-chemin</CANDIDATE>
+      <CANDIDATE score="1">à_mi-route</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00257026">
+    <ORIGINALDEF>used in legal language</ORIGINALDEF>
+    <CANDIDATES original="at_an_equal_rate" />
+    <CANDIDATES original="pari_passu">
+      <CANDIDATE score="1">de_pair</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00257418">
+    <ORIGINALDEF>in an undertone</ORIGINALDEF>
+    <USAGE>he uttered a curse sotto voce</USAGE>
+    <CANDIDATES original="in_a_low_voice">
+      <CANDIDATE score="1">bas</CANDIDATE>
+      <CANDIDATE score="1">à_mi-voix</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sotto_voce">
+      <CANDIDATE score="1">bas</CANDIDATE>
+      <CANDIDATE score="1">sotto-voce</CANDIDATE>
+      <CANDIDATE score="1">sotto_voce</CANDIDATE>
+      <CANDIDATE score="1">tout_bas</CANDIDATE>
+      <CANDIDATE score="1">à_mi-voix</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00258796">
+    <ORIGINALDEF>up to the knees</ORIGINALDEF>
+    <USAGE>we were standing knee-deep in the water</USAGE>
+    <CANDIDATES original="knee-deep" />
+    <CANDIDATES original="knee-high" />
+  </SYNSET>
+  <SYNSET id="00259653">
+    <ORIGINALDEF>behind the scenes; not on stage</ORIGINALDEF>
+    <USAGE>the actors were waiting offstage</USAGE>
+    <CANDIDATES original="offstage">
+      <CANDIDATE score="1">dans_les_coulisses</CANDIDATE>
+      <CANDIDATE score="1">en_coulisse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00260088">
+    <ORIGINALDEF>by necessity; by force of circumstance</ORIGINALDEF>
+    <CANDIDATES original="perforce">
+      <CANDIDATE score="1">forcément</CANDIDATE>
+      <CANDIDATE score="1">nécessairement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00262552">
+    <ORIGINALDEF>in an amicable manner</ORIGINALDEF>
+    <USAGE>they separated amicably</USAGE>
+    <CANDIDATES original="amicably">
+      <CANDIDATE score="1">amicalement</CANDIDATE>
+      <CANDIDATE score="1">à_l'amiable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00264027">
+    <ORIGINALDEF>at or toward the rear of the stage</ORIGINALDEF>
+    <USAGE>the dancers were directed to move upstage</USAGE>
+    <CANDIDATES original="upstage">
+      <CANDIDATE score="1">au_fond_de_la_scène</CANDIDATE>
+      <CANDIDATE score="0">dans_le_lointain</CANDIDATE>
+      <CANDIDATE score="0">par_le_fond_de_la_scène</CANDIDATE>
+      <CANDIDATE score="1">vers_le_fond_de_la_scène</CANDIDATE>
+      <CANDIDATE score="1">à_l'arrière-plan</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00264927">
+    <ORIGINALDEF>with increasing speed</ORIGINALDEF>
+    <USAGE>here you must play accelerando</USAGE>
+    <CANDIDATES original="accelerando">
+      <CANDIDATE score="1">accelerando</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00265579">
+    <ORIGINALDEF>in an anterior direction</ORIGINALDEF>
+    <CANDIDATES original="anteriorly" />
+  </SYNSET>
+  <SYNSET id="00267137">
+    <ORIGINALDEF>in an avid manner</ORIGINALDEF>
+    <USAGE>whatever the flavor or color of your local paper, do remember that these are read avidly for local information</USAGE>
+    <CANDIDATES original="avidly">
+      <CANDIDATE score="1">avec_avidité</CANDIDATE>
+      <CANDIDATE score="1">avidement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00267321">
+    <ORIGINALDEF>as an adjective</ORIGINALDEF>
+    <USAGE>nouns are frequently used adjectively</USAGE>
+    <CANDIDATES original="adjectively" />
+  </SYNSET>
+  <SYNSET id="00267558">
+    <ORIGINALDEF>off course, wandering aimlessly</ORIGINALDEF>
+    <USAGE>there was a search for beauty that had somehow gone adrift</USAGE>
+    <CANDIDATES original="adrift">
+      <CANDIDATE score="1">à_l'abandon</CANDIDATE>
+      <CANDIDATE score="1">à_la_dérive</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00268165">
+    <ORIGINALDEF>with regard to architecture</ORIGINALDEF>
+    <USAGE>this building is ugly, but architecturally interesting</USAGE>
+    <CANDIDATES original="architecturally">
+      <CANDIDATE score="1">architecturalement</CANDIDATE>
+      <CANDIDATE score="1">du_point_de_vue_architectural</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00270446">
+    <ORIGINALDEF>as known or named at another time or place</ORIGINALDEF>
+    <USAGE>Mr. Smith, alias Mr. Lafayette</USAGE>
+    <CANDIDATES original="a.k.a." />
+    <CANDIDATES original="alias">
+      <CANDIDATE score="1">alias</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="also_known_as">
+      <CANDIDATE score="1">alias</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00272305">
+    <ORIGINALDEF>with care and persistence</ORIGINALDEF>
+    <USAGE>she worked assiduously on the senior thesis</USAGE>
+    <CANDIDATES original="assiduously">
+      <CANDIDATE score="1">assidûment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00272435">
+    <ORIGINALDEF>with perseverance</ORIGINALDEF>
+    <CANDIDATES original="perseveringly">
+      <CANDIDATE score="1">assidûment</CANDIDATE>
+      <CANDIDATE score="1">avec_assiduité</CANDIDATE>
+      <CANDIDATE score="1">avec_obstination</CANDIDATE>
+      <CANDIDATE score="1">avec_persévérance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00273048">
+    <ORIGINALDEF>with all your strength</ORIGINALDEF>
+    <USAGE>he pulled the ropes amain</USAGE>
+    <CANDIDATES original="amain" />
+  </SYNSET>
+  <SYNSET id="00276279">
+    <ORIGINALDEF>in an austere fashion</ORIGINALDEF>
+    <USAGE>the church was austerely simple</USAGE>
+    <CANDIDATES original="austerely">
+      <CANDIDATE score="1">austèrement</CANDIDATE>
+      <CANDIDATE score="1">avec_austérité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00276391">
+    <ORIGINALDEF>in a greedy manner</ORIGINALDEF>
+    <CANDIDATES original="avariciously" />
+    <CANDIDATES original="covetously">
+      <CANDIDATE score="1">avec_convoitise</CANDIDATE>
+      <CANDIDATE score="1">avidement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="greedily">
+      <CANDIDATE score="1">avec_avidité</CANDIDATE>
+      <CANDIDATE score="1">avidement</CANDIDATE>
+      <CANDIDATE score="1">cupidement</CANDIDATE>
+      <CANDIDATE score="1">gloutonnement</CANDIDATE>
+      <CANDIDATE score="1">goulûment</CANDIDATE>
+      <CANDIDATE score="1">voracement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00276729">
+    <ORIGINALDEF>in or to a backstage area of a theater</ORIGINALDEF>
+    <USAGE>costumes were changed backstage</USAGE>
+    <CANDIDATES original="backstage">
+      <CANDIDATE score="1">dans_les_coulisses</CANDIDATE>
+      <CANDIDATE score="1">derrière_la_scène</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00280283">
+    <ORIGINALDEF>in a brisk manner</ORIGINALDEF>
+    <USAGE>she walked briskly in the cold air</USAGE>
+    <USAGE>`after lunch,' she said briskly</USAGE>
+    <CANDIDATES original="briskly">
+      <CANDIDATE score="0">brusquement</CANDIDATE>
+      <CANDIDATE score="1">d'un_bon_pas</CANDIDATE>
+      <CANDIDATE score="0">rondement</CANDIDATE>
+      <CANDIDATE score="1">sans_tarder</CANDIDATE>
+      <CANDIDATE score="1">vivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00280886">
+    <ORIGINALDEF>very happily</ORIGINALDEF>
+    <USAGE>we were floating on air at the news</USAGE>
+    <CANDIDATES original="on_air" />
+  </SYNSET>
+  <SYNSET id="00283235">
+    <ORIGINALDEF>all the time; seemingly without stopping</ORIGINALDEF>
+    <USAGE>a theological student with whom I argued interminably</USAGE>
+    <USAGE>her nagging went on endlessly</USAGE>
+    <CANDIDATES original="endlessly">
+      <CANDIDATE score="1">continuellement</CANDIDATE>
+      <CANDIDATE score="1">infatigablement</CANDIDATE>
+      <CANDIDATE score="1">interminablement</CANDIDATE>
+      <CANDIDATE score="1">sans_arrêt</CANDIDATE>
+      <CANDIDATE score="1">sans_cesse</CANDIDATE>
+      <CANDIDATE score="1">sans_fin</CANDIDATE>
+      <CANDIDATE score="0">à_perte_de_vue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="interminably">
+      <CANDIDATE score="1">interminablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00283454">
+    <ORIGINALDEF>every hundred years; once in a century</ORIGINALDEF>
+    <USAGE>the birthday of this city is being celebrated centennially</USAGE>
+    <CANDIDATES original="centennially" />
+  </SYNSET>
+  <SYNSET id="00284183">
+    <ORIGINALDEF>with little expenditure of money</ORIGINALDEF>
+    <USAGE>I bought this car very cheaply</USAGE>
+    <CANDIDATES original="cheaply">
+      <CANDIDATE score="1">bon_marché</CANDIDATE>
+      <CANDIDATE score="1">à_bon_marché</CANDIDATE>
+      <CANDIDATE score="1">à_moindre_prix</CANDIDATE>
+      <CANDIDATE score="1">à_peu_de_frais</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inexpensively">
+      <CANDIDATE score="1">à_bon_compte</CANDIDATE>
+      <CANDIDATE score="1">à_bon_marché</CANDIDATE>
+      <CANDIDATE score="1">à_peu_de_frais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00284319">
+    <ORIGINALDEF>in a brash cheeky manner</ORIGINALDEF>
+    <USAGE>brashly, she asked for a rebate</USAGE>
+    <CANDIDATES original="brashly">
+      <CANDIDATE score="1">avec_impertinence</CANDIDATE>
+      <CANDIDATE score="1">avec_outrecuidance</CANDIDATE>
+      <CANDIDATE score="1">effrontément</CANDIDATE>
+      <CANDIDATE score="0">fougueusement</CANDIDATE>
+      <CANDIDATE score="0">impétueusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="cheekily">
+      <CANDIDATE score="1">avec_insolence</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_effronté</CANDIDATE>
+      <CANDIDATE score="1">effrontément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nervily">
+      <CANDIDATE score="0">nerveusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00284813">
+    <ORIGINALDEF>in a circular manner</ORIGINALDEF>
+    <CANDIDATES original="circularly" />
+  </SYNSET>
+  <SYNSET id="00284890">
+    <ORIGINALDEF>in a clannish manner</ORIGINALDEF>
+    <USAGE>these four friends always act clannishly, and don't let us participate in their activities</USAGE>
+    <CANDIDATES original="clannishly" />
+    <CANDIDATES original="cliquishly" />
+  </SYNSET>
+  <SYNSET id="00286026">
+    <ORIGINALDEF>with respect to climate</ORIGINALDEF>
+    <USAGE>they were used to a climatically different environment</USAGE>
+    <CANDIDATES original="climatically">
+      <CANDIDATE score="1">climatiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00287399">
+    <ORIGINALDEF>in a comforting or consoling manner</ORIGINALDEF>
+    <USAGE>one part of a strange world should be given a comfortingly familiar form</USAGE>
+    <CANDIDATES original="comfortingly" />
+    <CANDIDATES original="consolingly" />
+  </SYNSET>
+  <SYNSET id="00288556">
+    <ORIGINALDEF>in a limited way</ORIGINALDEF>
+    <CANDIDATES original="noncomprehensively" />
+  </SYNSET>
+  <SYNSET id="00289294">
+    <ORIGINALDEF>in opposition to a proposition, opinion, etc.</ORIGINALDEF>
+    <USAGE>much was written pro and con</USAGE>
+    <CANDIDATES original="con" />
+  </SYNSET>
+  <SYNSET id="00289748">
+    <ORIGINALDEF>in a manner showing concern</ORIGINALDEF>
+    <USAGE>`Are you all right,' he asked concernedly</USAGE>
+    <CANDIDATES original="concernedly" />
+  </SYNSET>
+  <SYNSET id="00290527">
+    <ORIGINALDEF>in a conical manner</ORIGINALDEF>
+    <USAGE>conically shaped</USAGE>
+    <CANDIDATES original="conically" />
+  </SYNSET>
+  <SYNSET id="00291589">
+    <ORIGINALDEF>in violation of the law; in a criminal manner</ORIGINALDEF>
+    <USAGE>the alterations in the document were ruled to be criminally fraudulent</USAGE>
+    <CANDIDATES original="criminally">
+      <CANDIDATE score="1">criminellement</CANDIDATE>
+      <CANDIDATE score="0">pénalement</CANDIDATE>
+      <CANDIDATE score="0">scandaleusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00293329">
+    <ORIGINALDEF>in a counteractive manner</ORIGINALDEF>
+    <CANDIDATES original="counteractively" />
+  </SYNSET>
+  <SYNSET id="00295545">
+    <ORIGINALDEF>in a composed and unconcerned manner</ORIGINALDEF>
+    <USAGE>without more ado Barker borrowed a knife from his brigade Major and honed it on a carborundum stone as coolly as a butcher</USAGE>
+    <CANDIDATES original="coolly">
+      <CANDIDATE score="1">avec__culot</CANDIDATE>
+      <CANDIDATE score="0">avec_froideur</CANDIDATE>
+      <CANDIDATE score="0">avec_impertinence</CANDIDATE>
+      <CANDIDATE score="1">avec_le_plus_grand_culot</CANDIDATE>
+      <CANDIDATE score="1">avec_une_décontraction_insolente</CANDIDATE>
+      <CANDIDATE score="0">calmement</CANDIDATE>
+      <CANDIDATE score="0">de_sang-froid</CANDIDATE>
+      <CANDIDATE score="0">fraichement</CANDIDATE>
+      <CANDIDATE score="0">fraîchement</CANDIDATE>
+      <CANDIDATE score="0">froidement</CANDIDATE>
+      <CANDIDATE score="1">sans_la_moindre_gêne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nervelessly" />
+    <CANDIDATES original="nonchalantly">
+      <CANDIDATE score="1">avec_nonchalance</CANDIDATE>
+      <CANDIDATE score="1">nonchalamment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00299161">
+    <ORIGINALDEF>in a dejected manner</ORIGINALDEF>
+    <USAGE>when she came back Sophie and Esther were sitting dejectedly in the kitchen</USAGE>
+    <CANDIDATES original="dejectedly">
+      <CANDIDATE score="1">d'un_air_abattu</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_abattu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="in_low_spirits" />
+  </SYNSET>
+  <SYNSET id="00299753">
+    <ORIGINALDEF>in a concentrated manner</ORIGINALDEF>
+    <USAGE>old houses are often so densely packed that perhaps three or four have to be demolished for every new one built</USAGE>
+    <USAGE>a thickly populated area</USAGE>
+    <CANDIDATES original="densely">
+      <CANDIDATE score="0">densement</CANDIDATE>
+      <CANDIDATE score="1">densément</CANDIDATE>
+      <CANDIDATE score="1">dru</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thickly">
+      <CANDIDATE score="0">d'une_voix_pâteuse</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_voilée</CANDIDATE>
+      <CANDIDATE score="1">densément</CANDIDATE>
+      <CANDIDATE score="1">dru</CANDIDATE>
+      <CANDIDATE score="0">en_couche_épaisse</CANDIDATE>
+      <CANDIDATE score="0">en_morceaux_épais</CANDIDATE>
+      <CANDIDATE score="0">en_tranches_épaisses</CANDIDATE>
+      <CANDIDATE score="0">en_une_couche_épaisse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00300137">
+    <ORIGINALDEF>in a tight or constricted manner</ORIGINALDEF>
+    <USAGE>a tightly packed pub</USAGE>
+    <CANDIDATES original="tightly">
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">hermétiquement</CANDIDATE>
+      <CANDIDATE score="1">étroitement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00301840">
+    <ORIGINALDEF>with desperation</ORIGINALDEF>
+    <USAGE>`Why can't you understand?,' she asked despairingly</USAGE>
+    <CANDIDATES original="despairingly">
+      <CANDIDATE score="1">avec_désespoir</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_désespéré</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_désespéré</CANDIDATE>
+      <CANDIDATE score="1">de_façon_désespérée</CANDIDATE>
+      <CANDIDATE score="1">désespérément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="despondently">
+      <CANDIDATE score="1">d'un_air_abattu</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_découragé</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_abattu</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_découragé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00304561">
+    <ORIGINALDEF>in an original manner</ORIGINALDEF>
+    <USAGE>daringly he took the first step</USAGE>
+    <CANDIDATES original="daringly">
+      <CANDIDATE score="1">audacieusement</CANDIDATE>
+      <CANDIDATE score="1">avec_audace</CANDIDATE>
+      <CANDIDATE score="0">hardiment</CANDIDATE>
+      <CANDIDATE score="0">témérairement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00305683">
+    <ORIGINALDEF>to a great distance</ORIGINALDEF>
+    <USAGE>penetrated deep into enemy territory</USAGE>
+    <USAGE>went deep into the woods</USAGE>
+    <CANDIDATES original="deep">
+      <CANDIDATE score="0">profond</CANDIDATE>
+      <CANDIDATE score="1">profondément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00307639">
+    <ORIGINALDEF>in a distinct and distinguishable manner</ORIGINALDEF>
+    <USAGE>the subtleties of this distinctly British occasion</USAGE>
+    <CANDIDATES original="distinctly">
+      <CANDIDATE score="1">clairement</CANDIDATE>
+      <CANDIDATE score="1">distinctement</CANDIDATE>
+      <CANDIDATE score="0">expressément</CANDIDATE>
+      <CANDIDATE score="0">formellement</CANDIDATE>
+      <CANDIDATE score="1">nettement</CANDIDATE>
+      <CANDIDATE score="0">particulièrement</CANDIDATE>
+      <CANDIDATE score="1">sans_équivoque</CANDIDATE>
+      <CANDIDATE score="0">vraiment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00309875">
+    <ORIGINALDEF>in a detrimental manner</ORIGINALDEF>
+    <CANDIDATES original="detrimentally" />
+    <CANDIDATES original="harmfully" />
+    <CANDIDATES original="noxiously" />
+  </SYNSET>
+  <SYNSET id="00310036">
+    <ORIGINALDEF>in a harmless manner</ORIGINALDEF>
+    <USAGE>this is a harmlessly childish game</USAGE>
+    <CANDIDATES original="harmlessly">
+      <CANDIDATE score="1">de_façon_inoffensive</CANDIDATE>
+      <CANDIDATE score="0">sans_dommages</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00314835">
+    <ORIGINALDEF>(used as intensives reflecting the speaker's attitude) it is sincerely the case that</ORIGINALDEF>
+    <USAGE>honestly, I don't believe it</USAGE>
+    <USAGE>candidly, I think she doesn't have a conscience</USAGE>
+    <USAGE>frankly, my dear, I don't give a damn</USAGE>
+    <CANDIDATES original="candidly">
+      <CANDIDATE score="1">avec_franchise</CANDIDATE>
+      <CANDIDATE score="1">franchement</CANDIDATE>
+      <CANDIDATE score="1">sincèrement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="frankly">
+      <CANDIDATE score="1">franchement</CANDIDATE>
+      <CANDIDATE score="1">honnêtement</CANDIDATE>
+      <CANDIDATE score="1">nûment</CANDIDATE>
+      <CANDIDATE score="0">rondement</CANDIDATE>
+      <CANDIDATE score="1">sincèrement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="honestly">
+      <CANDIDATE score="0">droitement</CANDIDATE>
+      <CANDIDATE score="1">honnêtement</CANDIDATE>
+      <CANDIDATE score="1">loyalement</CANDIDATE>
+      <CANDIDATE score="1">sincèrement</CANDIDATE>
+      <CANDIDATE score="1">vraiment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00322255">
+    <ORIGINALDEF>in a dowdy unfashionable manner</ORIGINALDEF>
+    <USAGE>she dresses dowdily</USAGE>
+    <CANDIDATES original="dowdily" />
+    <CANDIDATES original="frumpily" />
+    <CANDIDATES original="frumpishly" />
+  </SYNSET>
+  <SYNSET id="00322533">
+    <ORIGINALDEF>toward a lower or inferior state</ORIGINALDEF>
+    <USAGE>your performance has been going downhill for a long time now</USAGE>
+    <CANDIDATES original="downhill" />
+  </SYNSET>
+  <SYNSET id="00322666">
+    <ORIGINALDEF>in a drab manner</ORIGINALDEF>
+    <USAGE>she dresses drably</USAGE>
+    <CANDIDATES original="drably" />
+  </SYNSET>
+  <SYNSET id="00324470">
+    <ORIGINALDEF>toward the west</ORIGINALDEF>
+    <USAGE>we began to steer away westerly (Daniel Defoe)</USAGE>
+    <CANDIDATES original="westerly">
+      <CANDIDATE score="1">vers_l'ouest</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00325139">
+    <ORIGINALDEF>in an ecstatic manner</ORIGINALDEF>
+    <USAGE>he reacted ecstatically to my plan to travel to Africa</USAGE>
+    <CANDIDATES original="ecstatically">
+      <CANDIDATE score="1">avec_extase</CANDIDATE>
+      <CANDIDATE score="1">avec_ravissement</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_extasié</CANDIDATE>
+      <CANDIDATE score="1">extatiquement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rapturously">
+      <CANDIDATE score="0">avec_frénésie</CANDIDATE>
+      <CANDIDATE score="1">avec_ravissement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rhapsodically" />
+  </SYNSET>
+  <SYNSET id="00328830">
+    <ORIGINALDEF>in a discouraging manner</ORIGINALDEF>
+    <USAGE>the failure rate on the bar exam is discouragingly high</USAGE>
+    <CANDIDATES original="discouragingly" />
+  </SYNSET>
+  <SYNSET id="00336925">
+    <ORIGINALDEF>in a passionately fanatic manner</ORIGINALDEF>
+    <USAGE>he followed the teachings of his guru fanatically</USAGE>
+    <CANDIDATES original="fanatically">
+      <CANDIDATE score="1">fanatiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00337313">
+    <ORIGINALDEF>in a fashionable manner</ORIGINALDEF>
+    <USAGE>his voice had no trace of the drawl that you would expect to find in a fashionably dressed young man</USAGE>
+    <CANDIDATES original="fashionably">
+      <CANDIDATE score="1">à_la_mode</CANDIDATE>
+      <CANDIDATE score="1">élégamment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00337681">
+    <ORIGINALDEF>in a fastidious manner</ORIGINALDEF>
+    <USAGE>he writes extremely musical music, of which the sound is fastidiously calculated and yet agreeably spontaneous and imaginative</USAGE>
+    <CANDIDATES original="fastidiously">
+      <CANDIDATE score="0">en_faisant_le_délicat</CANDIDATE>
+      <CANDIDATE score="1">minutieusement</CANDIDATE>
+      <CANDIDATE score="1">méticuleusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00341305">
+    <ORIGINALDEF>with flexibility</ORIGINALDEF>
+    <USAGE>`Come whenever you are free,' he said flexibly</USAGE>
+    <CANDIDATES original="flexibly">
+      <CANDIDATE score="1">avec_flexibilité</CANDIDATE>
+      <CANDIDATE score="1">avec_souplesse</CANDIDATE>
+      <CANDIDATE score="1">flexiblement</CANDIDATE>
+      <CANDIDATE score="1">souplement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00343660">
+    <ORIGINALDEF>used as a direction in music; to be played relatively softly</ORIGINALDEF>
+    <CANDIDATES original="piano">
+      <CANDIDATE score="1">piano</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="softly">
+      <CANDIDATE score="0">bas</CANDIDATE>
+      <CANDIDATE score="1">doucement</CANDIDATE>
+      <CANDIDATE score="1">en_sourdine</CANDIDATE>
+      <CANDIDATE score="0">faiblement</CANDIDATE>
+      <CANDIDATE score="0">gentiment</CANDIDATE>
+      <CANDIDATE score="1">légèrement</CANDIDATE>
+      <CANDIDATE score="0">mollement</CANDIDATE>
+      <CANDIDATE score="0">sans__bruit</CANDIDATE>
+      <CANDIDATE score="0">sans_faire_de_bruit</CANDIDATE>
+      <CANDIDATE score="0">tendrement</CANDIDATE>
+      <CANDIDATE score="0">à_mi-voix</CANDIDATE>
+      <CANDIDATE score="0">à_pas_feutrés</CANDIDATE>
+      <CANDIDATE score="0">à_voix_basse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00347474">
+    <ORIGINALDEF>without a trademark or brand name</ORIGINALDEF>
+    <USAGE>we market these drugs generically</USAGE>
+    <CANDIDATES original="generically">
+      <CANDIDATE score="0">génériquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00347602">
+    <ORIGINALDEF>in a genteel manner</ORIGINALDEF>
+    <USAGE>the English lived genteelly in India</USAGE>
+    <CANDIDATES original="genteelly">
+      <CANDIDATE score="0">d'une_manière_affectée</CANDIDATE>
+      <CANDIDATE score="1">de_façon_distinguée</CANDIDATE>
+      <CANDIDATE score="1">de_façon_très_convenable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00347717">
+    <ORIGINALDEF>with respect to geology</ORIGINALDEF>
+    <USAGE>geologically speaking, this area is extremely interesting</USAGE>
+    <CANDIDATES original="geologically">
+      <CANDIDATE score="1">géologiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00348450">
+    <ORIGINALDEF>in a joyless manner; without joy</ORIGINALDEF>
+    <USAGE>she greeted her guests joylessly</USAGE>
+    <CANDIDATES original="joylessly">
+      <CANDIDATE score="1">sans_joie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00348592">
+    <ORIGINALDEF>(musical direction) in the manner of a glissando (with a rapidly executed series of notes)</ORIGINALDEF>
+    <USAGE>this should be played glissando, please</USAGE>
+    <CANDIDATES original="glissando">
+      <CANDIDATE score="1">glissando</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00350163">
+    <ORIGINALDEF>in an impressively beautiful manner</ORIGINALDEF>
+    <USAGE>the Princess was gorgeously dressed</USAGE>
+    <CANDIDATES original="gorgeously">
+      <CANDIDATE score="1">splendidement</CANDIDATE>
+      <CANDIDATE score="1">superbement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="magnificently">
+      <CANDIDATE score="1">magnifiquement</CANDIDATE>
+      <CANDIDATE score="1">splendidement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="resplendently">
+      <CANDIDATE score="1">splendidement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="splendidly">
+      <CANDIDATE score="1">magnifiquement</CANDIDATE>
+      <CANDIDATE score="1">merveilleusement</CANDIDATE>
+      <CANDIDATE score="1">splendidement</CANDIDATE>
+      <CANDIDATE score="1">superbement</CANDIDATE>
+      <CANDIDATE score="1">à_merveille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00351040">
+    <ORIGINALDEF>having a grey appearance</ORIGINALDEF>
+    <USAGE>lonely creeks are opal in the dawn, sword-blue in the sun, greyly silver under misty moons</USAGE>
+    <CANDIDATES original="grayly" />
+    <CANDIDATES original="greyly" />
+  </SYNSET>
+  <SYNSET id="00352482">
+    <ORIGINALDEF>in a gushing manner</ORIGINALDEF>
+    <USAGE>a gushingly prolific writer</USAGE>
+    <CANDIDATES original="gushingly" />
+  </SYNSET>
+  <SYNSET id="00354938">
+    <ORIGINALDEF>at breakneck speed</ORIGINALDEF>
+    <USAGE>burst headlong through the gate</USAGE>
+    <CANDIDATES original="headlong">
+      <CANDIDATE score="1">tête_baissée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="precipitately">
+      <CANDIDATE score="1">avec_précipitation</CANDIDATE>
+      <CANDIDATE score="1">précipitamment</CANDIDATE>
+      <CANDIDATE score="1">à_la_hâte</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00355896">
+    <ORIGINALDEF>in a subsequent part of this document or statement or matter etc.</ORIGINALDEF>
+    <USAGE>the landlord demises unto the tenant the premises hereinafter called the demised premises</USAGE>
+    <USAGE>the terms specified hereunder</USAGE>
+    <CANDIDATES original="hereafter">
+      <CANDIDATE score="1">après</CANDIDATE>
+      <CANDIDATE score="1">ci-après</CANDIDATE>
+      <CANDIDATE score="0">dans_l'autre_monde</CANDIDATE>
+      <CANDIDATE score="0">dans_l'autre_vie</CANDIDATE>
+      <CANDIDATE score="0">plus_tard</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hereinafter">
+      <CANDIDATE score="1">ci-après</CANDIDATE>
+      <CANDIDATE score="1">dans_la_suite_des_présentes</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hereunder" />
+  </SYNSET>
+  <SYNSET id="00356412">
+    <ORIGINALDEF>immediately after this</ORIGINALDEF>
+    <USAGE>hereupon, the passengers stumbled aboard</USAGE>
+    <CANDIDATES original="hereupon">
+      <CANDIDATE score="1">là-dessus</CANDIDATE>
+      <CANDIDATE score="1">sur_ce</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00358200">
+    <ORIGINALDEF>in a hoarse or husky voice</ORIGINALDEF>
+    <USAGE>`Excuse me,' he said hoarsely</USAGE>
+    <CANDIDATES original="hoarsely">
+      <CANDIDATE score="1">d'une_voix_enrouée</CANDIDATE>
+      <CANDIDATE score="1">d'une_voix_rauque</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="huskily">
+      <CANDIDATE score="1">d'une_voix_rauque</CANDIDATE>
+      <CANDIDATE score="1">d'une_voix_voilée</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00358832">
+    <ORIGINALDEF>in an inhospitable manner</ORIGINALDEF>
+    <USAGE>she was received inhospitably by her new family</USAGE>
+    <CANDIDATES original="inhospitably">
+      <CANDIDATE score="1">d'une_manière_inhospitalière</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_peu_hospitalière</CANDIDATE>
+      <CANDIDATE score="1">de_façon_désobligeante</CANDIDATE>
+      <CANDIDATE score="1">de_façon_inamicale</CANDIDATE>
+      <CANDIDATE score="1">de_façon_inhospitalière</CANDIDATE>
+      <CANDIDATE score="1">de_manière_inhospitalière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00359095">
+    <ORIGINALDEF>in a huffy manner</ORIGINALDEF>
+    <USAGE>`Don't bother to call me back,' he said huffily</USAGE>
+    <CANDIDATES original="huffily">
+      <CANDIDATE score="1">avec_humeur</CANDIDATE>
+      <CANDIDATE score="1">avec_mauvaise_humeur</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_froissé</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_fâché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00359302">
+    <ORIGINALDEF>in a humane manner</ORIGINALDEF>
+    <USAGE>let's treat the prisoners of war humanely</USAGE>
+    <CANDIDATES original="humanely">
+      <CANDIDATE score="1">avec_humanité</CANDIDATE>
+      <CANDIDATE score="1">humainement</CANDIDATE>
+      <CANDIDATE score="1">sans_cruauté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00363744">
+    <ORIGINALDEF>according to logical reasoning</ORIGINALDEF>
+    <USAGE>logically, you should now do the same to him</USAGE>
+    <CANDIDATES original="logically">
+      <CANDIDATE score="1">logiquement</CANDIDATE>
+      <CANDIDATE score="1">rationnellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00364794">
+    <ORIGINALDEF>in an impassive manner</ORIGINALDEF>
+    <USAGE>he submitted impassively to his arrest</USAGE>
+    <CANDIDATES original="impassively">
+      <CANDIDATE score="1">impassiblement</CANDIDATE>
+      <CANDIDATE score="1">imperturbablement</CANDIDATE>
+      <CANDIDATE score="1">sans_s'émouvoir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00365110">
+    <ORIGINALDEF>showing remorse</ORIGINALDEF>
+    <CANDIDATES original="penitentially" />
+    <CANDIDATES original="penitently">
+      <CANDIDATE score="1">d'un_air_contrit</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_contrit</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="repentantly" />
+  </SYNSET>
+  <SYNSET id="00366975">
+    <ORIGINALDEF>in an impious manner</ORIGINALDEF>
+    <USAGE>the young members challenged their leader impiously</USAGE>
+    <CANDIDATES original="impiously">
+      <CANDIDATE score="1">avec_impiété</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00367418">
+    <ORIGINALDEF>in an explicit manner</ORIGINALDEF>
+    <USAGE>in his foreword Professor Clark puts it explicitly</USAGE>
+    <CANDIDATES original="explicitly">
+      <CANDIDATE score="0">catégoriquement</CANDIDATE>
+      <CANDIDATE score="1">explicitement</CANDIDATE>
+      <CANDIDATE score="0">formellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00368663">
+    <ORIGINALDEF>just as it should be</ORIGINALDEF>
+    <USAGE>`Precisely, my lord,' he said</USAGE>
+    <CANDIDATES original="exactly">
+      <CANDIDATE score="0">avec_précision</CANDIDATE>
+      <CANDIDATE score="1">exactement</CANDIDATE>
+      <CANDIDATE score="0">juste</CANDIDATE>
+      <CANDIDATE score="1">justement</CANDIDATE>
+      <CANDIDATE score="0">montre_en_main</CANDIDATE>
+      <CANDIDATE score="0">proprement</CANDIDATE>
+      <CANDIDATE score="1">précisément</CANDIDATE>
+      <CANDIDATE score="1">tout_juste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="on_the_button" />
+    <CANDIDATES original="on_the_dot">
+      <CANDIDATE score="1">recta</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="on_the_nose" />
+    <CANDIDATES original="precisely">
+      <CANDIDATE score="0">avec_précision</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_très_nette</CANDIDATE>
+      <CANDIDATE score="0">de_façon_précise</CANDIDATE>
+      <CANDIDATE score="1">exactement</CANDIDATE>
+      <CANDIDATE score="1">justement</CANDIDATE>
+      <CANDIDATE score="0">montre_en_main</CANDIDATE>
+      <CANDIDATE score="1">précisément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00372660">
+    <ORIGINALDEF>with discretion; prudently and with wise self-restraint</ORIGINALDEF>
+    <USAGE>I sent for the sergeant of the platoon both men were in and asked him to try to find out discreetly what lay behind this</USAGE>
+    <CANDIDATES original="discreetly">
+      <CANDIDATE score="0">avec_sobriété</CANDIDATE>
+      <CANDIDATE score="1">discrètement</CANDIDATE>
+      <CANDIDATE score="0">pudiquement</CANDIDATE>
+      <CANDIDATE score="0">sobrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00373216">
+    <ORIGINALDEF>in a manner or to a degree that could not be doubted</ORIGINALDEF>
+    <USAGE>it was immediately and indubitably apparent that I had interrupted a scene of lovers</USAGE>
+    <USAGE>his guilt was established beyond a shadow of a doubt</USAGE>
+    <CANDIDATES original="beyond_a_doubt" />
+    <CANDIDATES original="beyond_a_shadow_of_a_doubt" />
+    <CANDIDATES original="beyond_doubt" />
+    <CANDIDATES original="indubitably">
+      <CANDIDATE score="1">incontestablement</CANDIDATE>
+      <CANDIDATE score="1">indubitablement</CANDIDATE>
+      <CANDIDATE score="1">sans_aucun_doute</CANDIDATE>
+      <CANDIDATE score="1">sans_conteste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00377522">
+    <ORIGINALDEF>in a confident and unselfconscious manner</ORIGINALDEF>
+    <USAGE>he acts very securely in front of the camera</USAGE>
+    <CANDIDATES original="securely">
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="0">en_sécurité</CANDIDATE>
+      <CANDIDATE score="0">solidement</CANDIDATE>
+      <CANDIDATE score="1">sûrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00379674">
+    <ORIGINALDEF>in a disrespectful and insulting manner</ORIGINALDEF>
+    <USAGE>he behaves insultingly toward his parents</USAGE>
+    <CANDIDATES original="insultingly">
+      <CANDIDATE score="1">d'un_ton_insultant</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_insultante</CANDIDATE>
+      <CANDIDATE score="1">d'une_voix_insultante</CANDIDATE>
+      <CANDIDATE score="1">de_façon_insultante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00380325">
+    <ORIGINALDEF>(spatial sense) without bounds</ORIGINALDEF>
+    <USAGE>the Nubian desert seemed to stretch out before them endlessly</USAGE>
+    <CANDIDATES original="endlessly">
+      <CANDIDATE score="0">continuellement</CANDIDATE>
+      <CANDIDATE score="0">infatigablement</CANDIDATE>
+      <CANDIDATE score="1">interminablement</CANDIDATE>
+      <CANDIDATE score="0">sans_arrêt</CANDIDATE>
+      <CANDIDATE score="0">sans_cesse</CANDIDATE>
+      <CANDIDATE score="1">sans_fin</CANDIDATE>
+      <CANDIDATE score="1">à_perte_de_vue</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00380458">
+    <ORIGINALDEF>in an intermittent manner</ORIGINALDEF>
+    <USAGE>intermittently we questioned the barometer</USAGE>
+    <CANDIDATES original="intermittently">
+      <CANDIDATE score="1">par_intermittence</CANDIDATE>
+      <CANDIDATE score="1">par_intervalles</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00381942">
+    <ORIGINALDEF>in a manner arousing resentment</ORIGINALDEF>
+    <CANDIDATES original="invidiously" />
+  </SYNSET>
+  <SYNSET id="00383972">
+    <ORIGINALDEF>in a mature manner</ORIGINALDEF>
+    <USAGE>she acts very maturely for her age</USAGE>
+    <CANDIDATES original="maturely">
+      <CANDIDATE score="1">en_adulte</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00384101">
+    <ORIGINALDEF>with jerking motions</ORIGINALDEF>
+    <USAGE>She rose stiffly, jerkily from the window seat</USAGE>
+    <CANDIDATES original="jerkily">
+      <CANDIDATE score="1">d'une_démarche_saccadée</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_entrecoupée</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_saccadée</CANDIDATE>
+      <CANDIDATE score="1">par_saccades</CANDIDATE>
+      <CANDIDATE score="1">par_à-coups</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00386050">
+    <ORIGINALDEF>in a languid and lethargic manner</ORIGINALDEF>
+    <USAGE>the men languidly put on their jackets</USAGE>
+    <CANDIDATES original="languidly">
+      <CANDIDATE score="1">avec_langueur</CANDIDATE>
+      <CANDIDATE score="1">languissamment</CANDIDATE>
+      <CANDIDATE score="1">mollement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00386181">
+    <ORIGINALDEF>in a languorous manner</ORIGINALDEF>
+    <USAGE>he was sprawling languorously on the sofa</USAGE>
+    <CANDIDATES original="languorously">
+      <CANDIDATE score="1">langoureusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00387983">
+    <ORIGINALDEF>connecting the notes; in music</ORIGINALDEF>
+    <USAGE>play this legato, please</USAGE>
+    <CANDIDATES original="legato">
+      <CANDIDATE score="1">legato</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00388379">
+    <ORIGINALDEF>across time</ORIGINALDEF>
+    <USAGE>We studied the development of the children longitudinally</USAGE>
+    <CANDIDATES original="longitudinally">
+      <CANDIDATE score="1">longitudinalement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00389421">
+    <ORIGINALDEF>in a yearning manner</ORIGINALDEF>
+    <USAGE>he spent the rest of the act gazing longingly over my right shoulder at the illuminated word `Exit'</USAGE>
+    <CANDIDATES original="longingly">
+      <CANDIDATE score="1">avec_convoitise</CANDIDATE>
+      <CANDIDATE score="1">avec_désir</CANDIDATE>
+      <CANDIDATE score="1">avec_envie</CANDIDATE>
+      <CANDIDATE score="0">avec_nostalgie</CANDIDATE>
+      <CANDIDATE score="0">avec_regret</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="yearningly">
+      <CANDIDATE score="1">avec_désir</CANDIDATE>
+      <CANDIDATE score="1">avec_envie</CANDIDATE>
+      <CANDIDATE score="0">avec_tendresse</CANDIDATE>
+      <CANDIDATE score="0">tendrement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00394593">
+    <ORIGINALDEF>in a benevolent manner</ORIGINALDEF>
+    <USAGE>she looked on benevolently</USAGE>
+    <CANDIDATES original="benevolently">
+      <CANDIDATE score="1">avec_bienveillance</CANDIDATE>
+      <CANDIDATE score="1">avec_bonté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00396055">
+    <ORIGINALDEF>in a maternal manner; as a mother</ORIGINALDEF>
+    <USAGE>she loved her students almost maternally</USAGE>
+    <CANDIDATES original="maternally">
+      <CANDIDATE score="1">maternellement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="motherly" />
+  </SYNSET>
+  <SYNSET id="00398528">
+    <ORIGINALDEF>in a medial position</ORIGINALDEF>
+    <USAGE>this consonant always occurs medially</USAGE>
+    <CANDIDATES original="medially" />
+  </SYNSET>
+  <SYNSET id="00403249">
+    <ORIGINALDEF>in a momentous way</ORIGINALDEF>
+    <CANDIDATES original="momentously" />
+  </SYNSET>
+  <SYNSET id="00404501">
+    <ORIGINALDEF>with sadness; in a sad manner</ORIGINALDEF>
+    <USAGE>`She died last night,' he said sadly</USAGE>
+    <CANDIDATES original="sadly">
+      <CANDIDATE score="1">avec_tristesse</CANDIDATE>
+      <CANDIDATE score="0">fâcheusement</CANDIDATE>
+      <CANDIDATE score="1">malheureusement</CANDIDATE>
+      <CANDIDATE score="0">profondément</CANDIDATE>
+      <CANDIDATE score="1">tristement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00404749">
+    <ORIGINALDEF>in a mundane manner</ORIGINALDEF>
+    <USAGE>the young man spoke so mundanely of university life</USAGE>
+    <CANDIDATES original="mundanely" />
+  </SYNSET>
+  <SYNSET id="00404879">
+    <ORIGINALDEF>in a worldly manner</ORIGINALDEF>
+    <USAGE>terrestrially changeable</USAGE>
+    <CANDIDATES original="mundanely" />
+    <CANDIDATES original="terrestrially" />
+  </SYNSET>
+  <SYNSET id="00406288">
+    <ORIGINALDEF>without clothing</ORIGINALDEF>
+    <USAGE>Henriette saw the weaving figure of an Apache warrior reel nakedly on a pony and rush by with a rifle raised</USAGE>
+    <CANDIDATES original="nakedly">
+      <CANDIDATE score="0">ouvertement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00409459">
+    <ORIGINALDEF>with nervous excitement</ORIGINALDEF>
+    <USAGE>our bodies jumped nervously away at the slightest touch</USAGE>
+    <CANDIDATES original="nervously">
+      <CANDIDATE score="0">avec_inquiétude</CANDIDATE>
+      <CANDIDATE score="1">nerveusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00409709">
+    <ORIGINALDEF>near in time or place or relationship</ORIGINALDEF>
+    <USAGE>as the wedding day drew near</USAGE>
+    <USAGE>stood near the door</USAGE>
+    <USAGE>don't shoot until they come near</USAGE>
+    <USAGE>getting near to the true explanation</USAGE>
+    <USAGE>her mother is always near</USAGE>
+    <USAGE>The end draws nigh</USAGE>
+    <USAGE>the bullet didn't come close</USAGE>
+    <USAGE>don't get too close to the fire</USAGE>
+    <CANDIDATES original="close">
+      <CANDIDATE score="0">close</CANDIDATE>
+      <CANDIDATE score="1">proche</CANDIDATE>
+      <CANDIDATE score="1">près</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="near">
+      <CANDIDATE score="0">en_serrant_le_vent</CANDIDATE>
+      <CANDIDATE score="1">presque</CANDIDATE>
+      <CANDIDATE score="1">proche</CANDIDATE>
+      <CANDIDATE score="1">près</CANDIDATE>
+      <CANDIDATE score="0">près_du_vent</CANDIDATE>
+      <CANDIDATE score="1">quasi</CANDIDATE>
+      <CANDIDATE score="1">tout_près</CANDIDATE>
+      <CANDIDATE score="1">à_proximité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="nigh" />
+  </SYNSET>
+  <SYNSET id="00410520">
+    <ORIGINALDEF>in no manner; in no way</ORIGINALDEF>
+    <USAGE>We could nohow make out his handwriting</USAGE>
+    <CANDIDATES original="nohow">
+      <CANDIDATE score="1">aucunement</CANDIDATE>
+      <CANDIDATE score="1">en_aucune_façon</CANDIDATE>
+      <CANDIDATE score="1">pas_du_tout</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00410720">
+    <ORIGINALDEF>in a nostalgic manner</ORIGINALDEF>
+    <USAGE>they spent an hour together, talking nostalgically as they wandered slowly down the coast road</USAGE>
+    <CANDIDATES original="nostalgically">
+      <CANDIDATE score="1">avec_nostalgie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00411947">
+    <ORIGINALDEF>to, toward, or in the north-northwest</ORIGINALDEF>
+    <CANDIDATES original="nor'-nor'-west" />
+    <CANDIDATES original="north-northwest">
+      <CANDIDATE score="1">nord-nord-ouest</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00412409">
+    <ORIGINALDEF>in an obsequious manner</ORIGINALDEF>
+    <USAGE>she acts obsequiously toward her boss</USAGE>
+    <CANDIDATES original="obsequiously">
+      <CANDIDATE score="1">obséquieusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="servilely">
+      <CANDIDATE score="1">servilement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="subserviently">
+      <CANDIDATE score="1">obséquieusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00414750">
+    <ORIGINALDEF>in an obligatory manner</ORIGINALDEF>
+    <USAGE>this rule applies obligatorily</USAGE>
+    <CANDIDATES original="obligatorily">
+      <CANDIDATE score="1">obligatoirement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00415058">
+    <ORIGINALDEF>with regard to organization</ORIGINALDEF>
+    <USAGE>organizationally, the conference was a disaster!</USAGE>
+    <CANDIDATES original="organizationally" />
+  </SYNSET>
+  <SYNSET id="00415496">
+    <ORIGINALDEF>in an outlandish manner</ORIGINALDEF>
+    <USAGE>the Bavarian was outlandishly dressed in lederhosen</USAGE>
+    <CANDIDATES original="outlandishly" />
+  </SYNSET>
+  <SYNSET id="00417139">
+    <ORIGINALDEF>in a manner lacking interest or vitality</ORIGINALDEF>
+    <USAGE>a palely entertaining show</USAGE>
+    <CANDIDATES original="dimly">
+      <CANDIDATE score="1">faiblement</CANDIDATE>
+      <CANDIDATE score="0">imparfaitement</CANDIDATE>
+      <CANDIDATE score="1">sans_éclat</CANDIDATE>
+      <CANDIDATE score="0">vaguement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="palely" />
+    <CANDIDATES original="pallidly" />
+  </SYNSET>
+  <SYNSET id="00418985">
+    <ORIGINALDEF>in a pedantic manner</ORIGINALDEF>
+    <USAGE>these interpretations are called `schemas' or, more pedantically, `schemata'</USAGE>
+    <CANDIDATES original="pedantically">
+      <CANDIDATE score="1">avec_pédantisme</CANDIDATE>
+      <CANDIDATE score="1">de_façon_pédante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00419795">
+    <ORIGINALDEF>in a perceptive manner</ORIGINALDEF>
+    <CANDIDATES original="perceptively">
+      <CANDIDATE score="1">avec_perspicacité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00420525">
+    <ORIGINALDEF>in a perplexed manner</ORIGINALDEF>
+    <USAGE>he looked at his professor perplexedly</USAGE>
+    <CANDIDATES original="confoundedly">
+      <CANDIDATE score="0">bigrement</CANDIDATE>
+      <CANDIDATE score="0">diablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="perplexedly">
+      <CANDIDATE score="1">avec_perplexité</CANDIDATE>
+      <CANDIDATE score="0">d'un_air_embarrassé</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_perplexe</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_perplexe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00422281">
+    <ORIGINALDEF>a little bit at a time</ORIGINALDEF>
+    <USAGE>the research structure has developed piecemeal</USAGE>
+    <CANDIDATES original="bit_by_bit" />
+    <CANDIDATES original="in_stages" />
+    <CANDIDATES original="little_by_little">
+      <CANDIDATE score="1">petit_à_petit</CANDIDATE>
+      <CANDIDATE score="1">peu_à_peu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="piecemeal">
+      <CANDIDATE score="1">au_coup_par_coup</CANDIDATE>
+      <CANDIDATE score="1">par_bribes</CANDIDATE>
+      <CANDIDATE score="1">par_morceaux</CANDIDATE>
+      <CANDIDATE score="1">petit_à_petit</CANDIDATE>
+      <CANDIDATE score="0">sans_plan_d'ensemble</CANDIDATE>
+      <CANDIDATE score="0">sans_véritable_plan_d'ensemble</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00422619">
+    <ORIGINALDEF>in a piggish manner</ORIGINALDEF>
+    <USAGE>piggishly, he took two pieces of cake</USAGE>
+    <CANDIDATES original="piggishly" />
+  </SYNSET>
+  <SYNSET id="00423098">
+    <ORIGINALDEF>in a placid and good-natured manner</ORIGINALDEF>
+    <USAGE>I put the questions, and she answered them placidly</USAGE>
+    <CANDIDATES original="placidly">
+      <CANDIDATE score="1">avec_calme</CANDIDATE>
+      <CANDIDATE score="1">avec_placidité</CANDIDATE>
+      <CANDIDATE score="1">placidement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00425762">
+    <ORIGINALDEF>in a pleasing manner</ORIGINALDEF>
+    <USAGE>the room was pleasingly large</USAGE>
+    <CANDIDATES original="pleasingly">
+      <CANDIDATE score="1">agréablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00427243">
+    <ORIGINALDEF>in an uninterestingly ponderous manner</ORIGINALDEF>
+    <USAGE>the play was staged with ponderously realistic sets</USAGE>
+    <CANDIDATES original="ponderously">
+      <CANDIDATE score="1">avec_lourdeur</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_solennel_et_pesant</CANDIDATE>
+      <CANDIDATE score="1">d'une_voix_pesante_et_solennelle</CANDIDATE>
+      <CANDIDATE score="1">lourdement</CANDIDATE>
+      <CANDIDATE score="1">pesamment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00429097">
+    <ORIGINALDEF>in a precarious manner</ORIGINALDEF>
+    <USAGE>being a precariously dominant minority is a difficult position for human nature to cope with</USAGE>
+    <CANDIDATES original="precariously">
+      <CANDIDATE score="1">d'une_manière_instable</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_précaire</CANDIDATE>
+      <CANDIDATE score="1">précairement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00429390">
+    <ORIGINALDEF>abruptly; in a precipitous manner</ORIGINALDEF>
+    <USAGE>the mountains rose precipitously from the shore</USAGE>
+    <CANDIDATES original="precipitously">
+      <CANDIDATE score="1">abruptement</CANDIDATE>
+      <CANDIDATE score="1">à_pic</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00429534">
+    <ORIGINALDEF>very suddenly and to a great degree</ORIGINALDEF>
+    <USAGE>conditions that precipitously increase the birthrate</USAGE>
+    <USAGE>prices rose sharply</USAGE>
+    <CANDIDATES original="precipitously">
+      <CANDIDATE score="1">abruptement</CANDIDATE>
+      <CANDIDATE score="0">à_pic</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sharply">
+      <CANDIDATE score="1">avec_brusquerie</CANDIDATE>
+      <CANDIDATE score="0">avec_intérêt</CANDIDATE>
+      <CANDIDATE score="1">brusquement</CANDIDATE>
+      <CANDIDATE score="0">net</CANDIDATE>
+      <CANDIDATE score="0">nettement</CANDIDATE>
+      <CANDIDATE score="0">rapidement</CANDIDATE>
+      <CANDIDATE score="0">sèchement</CANDIDATE>
+      <CANDIDATE score="0">sévèrement</CANDIDATE>
+      <CANDIDATE score="0">vertement</CANDIDATE>
+      <CANDIDATE score="1">vivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00429964">
+    <ORIGINALDEF>too soon; in a premature manner</ORIGINALDEF>
+    <USAGE>I spoke prematurely</USAGE>
+    <CANDIDATES original="prematurely">
+      <CANDIDATE score="1">avant_terme</CANDIDATE>
+      <CANDIDATE score="1">prématurément</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="untimely">
+      <CANDIDATE score="0">prématuré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00430105">
+    <ORIGINALDEF>(of childbirth) before the end of the normal period of gestation</ORIGINALDEF>
+    <USAGE>the child was born prematurely</USAGE>
+    <CANDIDATES original="prematurely">
+      <CANDIDATE score="1">avant_terme</CANDIDATE>
+      <CANDIDATE score="1">prématurément</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00430261">
+    <ORIGINALDEF>with foresight</ORIGINALDEF>
+    <USAGE>more presciently than they superiors, these workers grasped the economic situation</USAGE>
+    <CANDIDATES original="cannily">
+      <CANDIDATE score="0">astucieusement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="presciently" />
+  </SYNSET>
+  <SYNSET id="00430921">
+    <ORIGINALDEF>in a pretentious manner</ORIGINALDEF>
+    <USAGE>this author writes pretentiously</USAGE>
+    <CANDIDATES original="pretentiously">
+      <CANDIDATE score="1">pompeusement</CANDIDATE>
+      <CANDIDATE score="1">prétentieusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00431238">
+    <ORIGINALDEF>in a supernatural manner</ORIGINALDEF>
+    <USAGE>she was preternaturally beautiful</USAGE>
+    <CANDIDATES original="preternaturally">
+      <CANDIDATE score="1">surnaturellement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="supernaturally" />
+  </SYNSET>
+  <SYNSET id="00432751">
+    <ORIGINALDEF>in an irreverent or profane manner</ORIGINALDEF>
+    <USAGE>he kept wondering profanely why everything bad happened to him</USAGE>
+    <CANDIDATES original="profanely" />
+  </SYNSET>
+  <SYNSET id="00434213">
+    <ORIGINALDEF>in a fortunately providential manner</ORIGINALDEF>
+    <USAGE>providentially the weather remained good</USAGE>
+    <CANDIDATES original="providentially">
+      <CANDIDATE score="1">providentiellement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00434687">
+    <ORIGINALDEF>in a prurient manner</ORIGINALDEF>
+    <CANDIDATES original="pruriently">
+      <CANDIDATE score="1">lascivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00435261">
+    <ORIGINALDEF>in a pugnacious manner</ORIGINALDEF>
+    <CANDIDATES original="pugnaciously">
+      <CANDIDATE score="1">avec_pugnacité</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_querelleur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00437796">
+    <ORIGINALDEF>in a questionable and dubious manner</ORIGINALDEF>
+    <USAGE>these were estates his father questionably acquired</USAGE>
+    <CANDIDATES original="dubiously">
+      <CANDIDATE score="0">avec_doute</CANDIDATE>
+      <CANDIDATE score="0">d'un_air_de_doute</CANDIDATE>
+      <CANDIDATE score="0">d'un_air_dubitatif</CANDIDATE>
+      <CANDIDATE score="0">d'un_air_incertain</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_de_doute</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_dubitatif</CANDIDATE>
+      <CANDIDATE score="0">d'un_ton_incertain</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="questionably" />
+  </SYNSET>
+  <SYNSET id="00438146">
+    <ORIGINALDEF>in a restful manner</ORIGINALDEF>
+    <USAGE>the streets are restfully sunny and still for the town is at mass</USAGE>
+    <CANDIDATES original="quietly">
+      <CANDIDATE score="1">calmement</CANDIDATE>
+      <CANDIDATE score="0">de_son_plein_gré</CANDIDATE>
+      <CANDIDATE score="0">discrètement</CANDIDATE>
+      <CANDIDATE score="0">doucement</CANDIDATE>
+      <CANDIDATE score="0">doucettement</CANDIDATE>
+      <CANDIDATE score="0">en_cachette</CANDIDATE>
+      <CANDIDATE score="0">en_douce</CANDIDATE>
+      <CANDIDATE score="0">en_sourdine</CANDIDATE>
+      <CANDIDATE score="0">en_toute_simplicité</CANDIDATE>
+      <CANDIDATE score="1">peinardement</CANDIDATE>
+      <CANDIDATE score="0">sagement</CANDIDATE>
+      <CANDIDATE score="0">sans__bruit</CANDIDATE>
+      <CANDIDATE score="0">sans_bruit</CANDIDATE>
+      <CANDIDATE score="0">sans_faire_de_bruit</CANDIDATE>
+      <CANDIDATE score="0">secrètement</CANDIDATE>
+      <CANDIDATE score="0">silencieusement</CANDIDATE>
+      <CANDIDATE score="1">tranquillement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="restfully">
+      <CANDIDATE score="1">paisiblement</CANDIDATE>
+      <CANDIDATE score="1">tranquillement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00443248">
+    <ORIGINALDEF>in a vindictive, revengeful manner</ORIGINALDEF>
+    <USAGE>he plotted vindictively against his former superiors</USAGE>
+    <CANDIDATES original="revengefully">
+      <CANDIDATE score="0">par__vengeance</CANDIDATE>
+      <CANDIDATE score="0">par_esprit_de_vengeance</CANDIDATE>
+      <CANDIDATE score="1">vindicativement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="vengefully" />
+    <CANDIDATES original="vindictively">
+      <CANDIDATE score="0">par_vengeance</CANDIDATE>
+      <CANDIDATE score="1">vindicativement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00443948">
+    <ORIGINALDEF>in a righteous manner</ORIGINALDEF>
+    <USAGE>righteously indignant</USAGE>
+    <CANDIDATES original="righteously">
+      <CANDIDATE score="1">vertueusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00444070">
+    <ORIGINALDEF>in an unrighteous manner</ORIGINALDEF>
+    <USAGE>he acted unrighteously</USAGE>
+    <CANDIDATES original="unrighteously" />
+  </SYNSET>
+  <SYNSET id="00444832">
+    <ORIGINALDEF>with ample room</ORIGINALDEF>
+    <USAGE>the furniture was spaciously spread out</USAGE>
+    <CANDIDATES original="roomily" />
+    <CANDIDATES original="spaciously">
+      <CANDIDATE score="1">spacieusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00446291">
+    <ORIGINALDEF>in a scandalous manner</ORIGINALDEF>
+    <USAGE>you behaved scandalously when you walked out of that meeting!</USAGE>
+    <CANDIDATES original="scandalously">
+      <CANDIDATE score="1">de_façon_scandaleuse</CANDIDATE>
+      <CANDIDATE score="1">scandaleusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00449308">
+    <ORIGINALDEF>in an indulgently voluptuous manner</ORIGINALDEF>
+    <USAGE>he sniffed the perfume voluptuously</USAGE>
+    <CANDIDATES original="voluptuously">
+      <CANDIDATE score="1">voluptueusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00451806">
+    <ORIGINALDEF>in a shapeless manner</ORIGINALDEF>
+    <USAGE>the dress hung shapelessly on her thin body</USAGE>
+    <CANDIDATES original="shapelessly" />
+  </SYNSET>
+  <SYNSET id="00453333">
+    <ORIGINALDEF>on or as if on a sidesaddle</ORIGINALDEF>
+    <USAGE>she rode sidesaddle</USAGE>
+    <CANDIDATES original="sidesaddle" />
+  </SYNSET>
+  <SYNSET id="00453580">
+    <ORIGINALDEF>to, toward or at one side</ORIGINALDEF>
+    <USAGE>darting eyes looking sidelong out of a wizened face</USAGE>
+    <CANDIDATES original="obliquely">
+      <CANDIDATE score="1">de_biais</CANDIDATE>
+      <CANDIDATE score="1">en_biais</CANDIDATE>
+      <CANDIDATE score="1">en_oblique</CANDIDATE>
+      <CANDIDATE score="1">indirectement</CANDIDATE>
+      <CANDIDATE score="1">obliquement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sidelong">
+      <CANDIDATE score="1">de_côté</CANDIDATE>
+      <CANDIDATE score="1">en_oblique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sideways">
+      <CANDIDATE score="1">de_biais</CANDIDATE>
+      <CANDIDATE score="1">de_côté</CANDIDATE>
+      <CANDIDATE score="1">de_profil</CANDIDATE>
+      <CANDIDATE score="1">en_crabe</CANDIDATE>
+      <CANDIDATE score="1">latéralement</CANDIDATE>
+      <CANDIDATE score="1">sur_le_côté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00457757">
+    <ORIGINALDEF>in a slavish manner</ORIGINALDEF>
+    <USAGE>his followers slavishly believed in his new diet</USAGE>
+    <CANDIDATES original="slavishly">
+      <CANDIDATE score="1">aveuglément</CANDIDATE>
+      <CANDIDATE score="1">bêtement</CANDIDATE>
+      <CANDIDATE score="1">servilement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00458454">
+    <ORIGINALDEF>in a smooth and diplomatic manner</ORIGINALDEF>
+    <USAGE>`And now,' he said smoothly, `we will continue the conversation'</USAGE>
+    <CANDIDATES original="smoothly">
+      <CANDIDATE score="0">d'un_ton_doucereux</CANDIDATE>
+      <CANDIDATE score="1">doucement</CANDIDATE>
+      <CANDIDATE score="1">en_douceur</CANDIDATE>
+      <CANDIDATE score="0">habilement</CANDIDATE>
+      <CANDIDATE score="0">sans_à-coups</CANDIDATE>
+      <CANDIDATE score="1">uniment</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00458610">
+    <ORIGINALDEF>in a sloppy manner</ORIGINALDEF>
+    <USAGE>this work was done rather sloppily</USAGE>
+    <CANDIDATES original="sloppily">
+      <CANDIDATE score="0">avec_sensiblerie</CANDIDATE>
+      <CANDIDATE score="1">de_façon_négligée</CANDIDATE>
+      <CANDIDATE score="0">mal</CANDIDATE>
+      <CANDIDATE score="1">n'importe_comment</CANDIDATE>
+      <CANDIDATE score="0">salement</CANDIDATE>
+      <CANDIDATE score="1">sans_soin</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00461755">
+    <ORIGINALDEF>in a sorrowful manner</ORIGINALDEF>
+    <CANDIDATES original="sorrowfully">
+      <CANDIDATE score="1">avec_chagrin</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_désolé</CANDIDATE>
+      <CANDIDATE score="1">d'un_air_triste</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_désolé</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_triste</CANDIDATE>
+      <CANDIDATE score="1">tristement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00469302">
+    <ORIGINALDEF>in a stringent manner</ORIGINALDEF>
+    <USAGE>the laws are stringently enforced</USAGE>
+    <USAGE>stringently controlled</USAGE>
+    <CANDIDATES original="strictly">
+      <CANDIDATE score="0">absolument</CANDIDATE>
+      <CANDIDATE score="1">avec_rigueur</CANDIDATE>
+      <CANDIDATE score="1">avec_sévérité</CANDIDATE>
+      <CANDIDATE score="1">d'une_manière_stricte</CANDIDATE>
+      <CANDIDATE score="0">exactement</CANDIDATE>
+      <CANDIDATE score="0">formellement</CANDIDATE>
+      <CANDIDATE score="0">proprement</CANDIDATE>
+      <CANDIDATE score="1">rigidement</CANDIDATE>
+      <CANDIDATE score="1">rigoureusement</CANDIDATE>
+      <CANDIDATE score="1">strictement</CANDIDATE>
+      <CANDIDATE score="1">sévèrement</CANDIDATE>
+      <CANDIDATE score="1">étroitement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stringently">
+      <CANDIDATE score="1">rigoureusement</CANDIDATE>
+      <CANDIDATE score="1">strictement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00470354">
+    <ORIGINALDEF>in a subtle manner</ORIGINALDEF>
+    <USAGE>late nineteenth-century French opera at its most beautiful, subtly romantic with a twilight melancholy</USAGE>
+    <CANDIDATES original="subtly">
+      <CANDIDATE score="1">de_façon_subtile</CANDIDATE>
+      <CANDIDATE score="1">discrètement</CANDIDATE>
+      <CANDIDATE score="1">finement</CANDIDATE>
+      <CANDIDATE score="1">subtilement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00472068">
+    <ORIGINALDEF>in the manner of one who is surprised</ORIGINALDEF>
+    <CANDIDATES original="surprisedly" />
+  </SYNSET>
+  <SYNSET id="00473698">
+    <ORIGINALDEF>in a tame manner</ORIGINALDEF>
+    <USAGE>the labour movement allowed itself to be run out of power tamely</USAGE>
+    <CANDIDATES original="tamely">
+      <CANDIDATE score="1">docilement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00474385">
+    <ORIGINALDEF>in a tasty manner</ORIGINALDEF>
+    <USAGE>the meal was tastily cooked</USAGE>
+    <CANDIDATES original="tastily" />
+  </SYNSET>
+  <SYNSET id="00476116">
+    <ORIGINALDEF>in an ill-natured and tetchy manner</ORIGINALDEF>
+    <USAGE>`Are you sure?' he asked her tetchily</USAGE>
+    <CANDIDATES original="tetchily">
+      <CANDIDATE score="1">avec_irritation</CANDIDATE>
+      <CANDIDATE score="1">d'un_ton_irrité</CANDIDATE>
+      <CANDIDATE score="1">irritablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00478821">
+    <ORIGINALDEF>from beginning to end</ORIGINALDEF>
+    <USAGE>read this book through</USAGE>
+    <CANDIDATES original="through" />
+  </SYNSET>
+  <SYNSET id="00478904">
+    <ORIGINALDEF>to completion</ORIGINALDEF>
+    <USAGE>think this through very carefully!</USAGE>
+    <CANDIDATES original="through" />
+  </SYNSET>
+  <SYNSET id="00481300">
+    <ORIGINALDEF>in a frivolously trivial manner</ORIGINALDEF>
+    <USAGE>trivially motivated requests</USAGE>
+    <CANDIDATES original="trivially">
+      <CANDIDATE score="0">de_façon_banalisée</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00482810">
+    <ORIGINALDEF>in an unalterable and unchangeable manner</ORIGINALDEF>
+    <USAGE>his views were unchangeably fixed</USAGE>
+    <CANDIDATES original="immutably">
+      <CANDIDATE score="1">immuablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unalterably">
+      <CANDIDATE score="1">de_façon_permanente</CANDIDATE>
+      <CANDIDATE score="1">définitivement</CANDIDATE>
+      <CANDIDATE score="1">immuablement</CANDIDATE>
+      <CANDIDATE score="1">invariablement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unassailably" />
+    <CANDIDATES original="unchangeably" />
+  </SYNSET>
+  <SYNSET id="00486223">
+    <ORIGINALDEF>below the horizon</ORIGINALDEF>
+    <USAGE>the sun went under</USAGE>
+    <CANDIDATES original="under">
+      <CANDIDATE score="0">au-dessous</CANDIDATE>
+      <CANDIDATE score="0">en_dessous</CANDIDATE>
+      <CANDIDATE score="0">par-dessous</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00486296">
+    <ORIGINALDEF>below some quantity or limit</ORIGINALDEF>
+    <USAGE>fifty dollars or under</USAGE>
+    <CANDIDATES original="under">
+      <CANDIDATE score="1">au-dessous</CANDIDATE>
+      <CANDIDATE score="1">en_dessous</CANDIDATE>
+      <CANDIDATE score="0">par-dessous</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00490498">
+    <ORIGINALDEF>against difficulties</ORIGINALDEF>
+    <USAGE>she was talking uphill</USAGE>
+    <CANDIDATES original="uphill">
+      <CANDIDATE score="0">en_amont</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00490579">
+    <ORIGINALDEF>in or into the highest position</ORIGINALDEF>
+    <USAGE>the blade turned uppermost</USAGE>
+    <CANDIDATES original="uppermost">
+      <CANDIDATE score="0">en_dessus</CANDIDATE>
+      <CANDIDATE score="0">vers_le_haut</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00491150">
+    <ORIGINALDEF>in an urbane manner</ORIGINALDEF>
+    <USAGE>`I had tea occasionally with the Duke,' said Mr. Eggers urbanely</USAGE>
+    <CANDIDATES original="urbanely">
+      <CANDIDATE score="1">courtoisement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00492414">
+    <ORIGINALDEF>in a vehement manner</ORIGINALDEF>
+    <USAGE>he vehemently denied the accusations against him</USAGE>
+    <CANDIDATES original="vehemently">
+      <CANDIDATE score="1">avec_passion</CANDIDATE>
+      <CANDIDATE score="0">avec_violence</CANDIDATE>
+      <CANDIDATE score="1">avec_véhémence</CANDIDATE>
+      <CANDIDATE score="1">vigoureusement</CANDIDATE>
+      <CANDIDATE score="0">violemment</CANDIDATE>
+      <CANDIDATE score="1">véhémentement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00493608">
+    <ORIGINALDEF>in a shapely and voluptuous manner</ORIGINALDEF>
+    <USAGE>a voluptuously curved woman</USAGE>
+    <CANDIDATES original="voluptuously">
+      <CANDIDATE score="1">voluptueusement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00495446">
+    <ORIGINALDEF>extremely</ORIGINALDEF>
+    <USAGE>they all were whopping drunk</USAGE>
+    <CANDIDATES original="whopping" />
+  </SYNSET>
+  <SYNSET id="00496127">
+    <ORIGINALDEF>in a willful manner</ORIGINALDEF>
+    <USAGE>she had willfully deceived me</USAGE>
+    <CANDIDATES original="wilfully">
+      <CANDIDATE score="0">avec_entêtement</CANDIDATE>
+      <CANDIDATE score="0">avec_obstination</CANDIDATE>
+      <CANDIDATE score="1">de_propos_délibéré</CANDIDATE>
+      <CANDIDATE score="1">délibérément</CANDIDATE>
+      <CANDIDATE score="0">obstinément</CANDIDATE>
+      <CANDIDATE score="1">à_dessein</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="willfully" />
+  </SYNSET>
+  <SYNSET id="00498068">
+    <ORIGINALDEF>in a zigzag course or on a zigzag path</ORIGINALDEF>
+    <USAGE>birds flew zigzag across the blue sky</USAGE>
+    <CANDIDATES original="zigzag">
+      <CANDIDATE score="1">en_zigzag</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00500915">
+    <ORIGINALDEF>in a martial manner</ORIGINALDEF>
+    <CANDIDATES original="martially">
+      <CANDIDATE score="1">martialement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00502325">
+    <ORIGINALDEF>in an acute manner</ORIGINALDEF>
+    <USAGE>she pitied her sister acutely</USAGE>
+    <USAGE>acutely aware</USAGE>
+    <CANDIDATES original="acutely">
+      <CANDIDATE score="0">avec_perspicacité</CANDIDATE>
+      <CANDIDATE score="1">extrêmement</CANDIDATE>
+      <CANDIDATE score="1">intensément</CANDIDATE>
+      <CANDIDATE score="1">pleinement</CANDIDATE>
+      <CANDIDATE score="1">vivement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00502575">
+    <ORIGINALDEF>in a manner designed for heavy duty</ORIGINALDEF>
+    <USAGE>a heavily constructed car</USAGE>
+    <USAGE>heavily armed</USAGE>
+    <CANDIDATES original="heavily">
+      <CANDIDATE score="0">abondamment</CANDIDATE>
+      <CANDIDATE score="0">avec_difficulté</CANDIDATE>
+      <CANDIDATE score="0">beaucoup</CANDIDATE>
+      <CANDIDATE score="0">bruyamment</CANDIDATE>
+      <CANDIDATE score="0">d'un_pas_lourd</CANDIDATE>
+      <CANDIDATE score="0">d'un_pas_pesant</CANDIDATE>
+      <CANDIDATE score="0">d'une_voix_accablée</CANDIDATE>
+      <CANDIDATE score="0">densément</CANDIDATE>
+      <CANDIDATE score="0">dru</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">gros</CANDIDATE>
+      <CANDIDATE score="1">lourdement</CANDIDATE>
+      <CANDIDATE score="1">massivement</CANDIDATE>
+      <CANDIDATE score="0">pesamment</CANDIDATE>
+      <CANDIDATE score="0">profondément</CANDIDATE>
+      <CANDIDATE score="0">péniblement</CANDIDATE>
+      <CANDIDATE score="0">richement</CANDIDATE>
+      <CANDIDATE score="1">solidement</CANDIDATE>
+      <CANDIDATE score="0">très</CANDIDATE>
+      <CANDIDATE score="0">très_fort</CANDIDATE>
+      <CANDIDATE score="0">vivement</CANDIDATE>
+      <CANDIDATE score="0">à_gros_flocons</CANDIDATE>
+      <CANDIDATE score="0">à_verse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00503945">
+    <ORIGINALDEF>in a manner that is pleasing to the senses</ORIGINALDEF>
+    <USAGE>she smiled softly</USAGE>
+    <CANDIDATES original="softly">
+      <CANDIDATE score="0">bas</CANDIDATE>
+      <CANDIDATE score="0">doucement</CANDIDATE>
+      <CANDIDATE score="0">en_sourdine</CANDIDATE>
+      <CANDIDATE score="0">faiblement</CANDIDATE>
+      <CANDIDATE score="0">gentiment</CANDIDATE>
+      <CANDIDATE score="0">légèrement</CANDIDATE>
+      <CANDIDATE score="0">mollement</CANDIDATE>
+      <CANDIDATE score="0">sans__bruit</CANDIDATE>
+      <CANDIDATE score="0">sans_faire_de_bruit</CANDIDATE>
+      <CANDIDATE score="0">tendrement</CANDIDATE>
+      <CANDIDATE score="0">à_mi-voix</CANDIDATE>
+      <CANDIDATE score="0">à_pas_feutrés</CANDIDATE>
+      <CANDIDATE score="0">à_voix_basse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00504492">
+    <ORIGINALDEF>from a source of previously owned goods</ORIGINALDEF>
+    <USAGE>I prefer to buy second hand</USAGE>
+    <CANDIDATES original="second_hand" />
+  </SYNSET>
+  <SYNSET id="00505226">
+    <ORIGINALDEF>in an attentive manner</ORIGINALDEF>
+    <USAGE>he remained close on his guard</USAGE>
+    <CANDIDATES original="close">
+      <CANDIDATE score="0">close</CANDIDATE>
+      <CANDIDATE score="0">proche</CANDIDATE>
+      <CANDIDATE score="0">près</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="closely">
+      <CANDIDATE score="1">attentivement</CANDIDATE>
+      <CANDIDATE score="0">beaucoup</CANDIDATE>
+      <CANDIDATE score="0">de_près</CANDIDATE>
+      <CANDIDATE score="0">âprement</CANDIDATE>
+      <CANDIDATE score="0">étroitement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tight">
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="0">fortement</CANDIDATE>
+      <CANDIDATE score="0">hermétiquement</CANDIDATE>
+      <CANDIDATE score="0">raide</CANDIDATE>
+      <CANDIDATE score="0">serré</CANDIDATE>
+      <CANDIDATE score="0">solidement</CANDIDATE>
+      <CANDIDATE score="0">très_fort</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00506928">
+    <ORIGINALDEF>before another in time, space, or importance</ORIGINALDEF>
+    <USAGE>I was here first</USAGE>
+    <USAGE>let's do this job first</USAGE>
+    <CANDIDATES original="first">
+      <CANDIDATE score="0">au_début</CANDIDATE>
+      <CANDIDATE score="1">au_préalable</CANDIDATE>
+      <CANDIDATE score="1">auparavant</CANDIDATE>
+      <CANDIDATE score="1">avant</CANDIDATE>
+      <CANDIDATE score="1">d'abord</CANDIDATE>
+      <CANDIDATE score="1">plutôt</CANDIDATE>
+      <CANDIDATE score="0">pour_la_première_fois</CANDIDATE>
+      <CANDIDATE score="0">premièrement</CANDIDATE>
+      <CANDIDATE score="0">primo</CANDIDATE>
+      <CANDIDATE score="1">préalablement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00508255">
+    <ORIGINALDEF>used with question words to convey surprise</ORIGINALDEF>
+    <USAGE>what on earth are you doing?</USAGE>
+    <CANDIDATES original="on_earth" />
+  </SYNSET>
+  <SYNSET id="00508771">
+    <ORIGINALDEF>in a menacing or scowling way</ORIGINALDEF>
+    <USAGE>he looked up loweringly</USAGE>
+    <CANDIDATES original="loweringly" />
+  </SYNSET>
+  <SYNSET id="00511029">
+    <ORIGINALDEF>in a polygonal manner</ORIGINALDEF>
+    <CANDIDATES original="polygonally" />
+  </SYNSET>
+  <SYNSET id="00511284">
+    <ORIGINALDEF>in a manner that is schismatic</ORIGINALDEF>
+    <CANDIDATES original="schismatically" />
+  </SYNSET>
+  <SYNSET id="00511375">
+    <ORIGINALDEF>in an unreasoning visceral manner</ORIGINALDEF>
+    <CANDIDATES original="unreasoningly" />
+    <CANDIDATES original="viscerally">
+      <CANDIDATE score="1">viscéralement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00511481">
+    <ORIGINALDEF>in a loose manner</ORIGINALDEF>
+    <USAGE>a union of loosely federated states</USAGE>
+    <CANDIDATES original="loosely">
+      <CANDIDATE score="0">approximativement</CANDIDATE>
+      <CANDIDATE score="0">assez_librement</CANDIDATE>
+      <CANDIDATE score="0">librement</CANDIDATE>
+      <CANDIDATE score="1">lâchement</CANDIDATE>
+      <CANDIDATE score="0">sans_serrer</CANDIDATE>
+      <CANDIDATE score="0">sans_trop_de_rigueur</CANDIDATE>
+      <CANDIDATE score="0">sans_être_serré</CANDIDATE>
+      <CANDIDATE score="0">vaguement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00512992">
+    <ORIGINALDEF>with regard to cognition</ORIGINALDEF>
+    <USAGE>cognitively skillful</USAGE>
+    <CANDIDATES original="cognitively" />
+  </SYNSET>
+  <SYNSET id="00513675">
+    <ORIGINALDEF>in an erotic manner</ORIGINALDEF>
+    <CANDIDATES original="erotically">
+      <CANDIDATE score="1">érotiquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00515072">
+    <ORIGINALDEF>in a sinuous manner</ORIGINALDEF>
+    <CANDIDATES original="sinuously" />
+  </SYNSET>
+  <SYNSET id="00515228">
+    <ORIGINALDEF>towards outer space</ORIGINALDEF>
+    <CANDIDATES original="spaceward" />
+    <CANDIDATES original="spacewards" />
+  </SYNSET>
+  <SYNSET id="00515803">
+    <ORIGINALDEF>(of group) in a synergistic or cooperative manner</ORIGINALDEF>
+    <CANDIDATES original="synergistically" />
+  </SYNSET>
+</VERITE>
