@@ -113,7 +113,6 @@ int main(int argc, char **argv) {
   map<string, set<string>> vtNet, vtNetIdIdent;
   map<string, set<string>> wolf10Net, wolf10NetIdIdent;
   map<string, set<string>> goldNetTest, goldNetIdIdentTest;
-  map<string, set<string>> goldNetDev, goldNetIdIdentDev;
   map<string,int> bcsbase;
   map<int,int> BCSCount;
   map<string, set<string>> mapping;
@@ -191,12 +190,6 @@ int main(int argc, char **argv) {
   goldHandlerTest.parse_file(goldFile[pos]);
   cerr << t.duration() << "s" << endl;
 
-  t.start();
-  cerr << "Loading Gold dev... ";
-  GoldHandler goldHandlerDev(goldNetDev, goldNetIdIdentDev, goldValueDev);
-  goldHandlerDev.parse_file(goldDevFile[pos]);
-  cerr << t.duration() << "s" << endl;
-
   /* Evaluate with WOLF 0.1.4 */
   /*
   std::cout << std::endl << "-- Evaluating with Wolf 0.1.4... --" << std::endl;
@@ -232,17 +225,11 @@ int main(int argc, char **argv) {
     std::ofstream logGoldBest("logs/eval.gold.best.test." + suffix, ios_base::out | ios_base::trunc);
     parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
         goldNetTest, goldNetIdIdentTest, spos, bestJaws, goldValueTest, true);
-    std::ofstream logGoldBestDev("logs/eval.gold.best.dev." + suffix, ios_base::out | ios_base::trunc);
-    parseAndEvaluatePolysemous(logGoldBestDev, bcsbase, BCSCount, litList, polysemousIdsList,
-        goldNetDev, goldNetIdIdentDev, spos, bestJaws, goldValueDev, true);
   } else {
     std::cout << std::endl << "                *** Normal ***" << std::endl;
     std::ofstream logGold("logs/eval.gold.test." + suffix, ios_base::out | ios_base::trunc);
     parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
         goldNetTest, goldNetIdIdentTest, spos, jaws, goldValueTest, true);
-    std::ofstream logGoldDev("logs/eval.gold.dev." + suffix, ios_base::out | ios_base::trunc);
-    parseAndEvaluatePolysemous(logGoldDev, bcsbase, BCSCount, litList, polysemousIdsList,
-        goldNetDev, goldNetIdIdentDev, spos, jaws, goldValueDev, true);
   }
   std::cout << std::endl;
 
