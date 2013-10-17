@@ -1,5 +1,5 @@
 LDFLAGS     = -L/home/pradet/externals/install/lib -L/home/pradet/externals/gcc/rtf/lib -I/home/pradet/externals/install/include -licuuc -licudata -licui18n -lboost_system -lboost_regex -lboost_filesystem -lprotobuf -lpthread -lxml++-1.0 -pg
-CPPFLAGS    = -std=c++11 -Wall -Wextra -I../src -I/home/pradet/externals/install/include -I/home/pradet/externals/gcc/rtf/include  -I/home/pradet/externals/install/include/libxml++-1.0 -pg -ggdb
+CPPFLAGS    = -std=c++11 -Wall -Wextra -I../src -I/home/pradet/externals/install/include -I/home/pradet/externals/gcc/rtf/include  -I/home/pradet/externals/install/include/libxml++-1.0 -pg -O3 -msse4.2 -march=native
 
 all:	translateNouns translateVerbs translateAdjs translateAdvs evalJAWS-WOLF
 
