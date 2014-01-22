@@ -1,6 +1,6 @@
 #include "MeroHoloLikeHyperModule.hpp"
 #include "Paths.hpp"
-#include "../src/tools.h"
+#include "tools.h"
 #include <iostream>
 #include <fstream>
 

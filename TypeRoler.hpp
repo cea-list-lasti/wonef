@@ -1,8 +1,7 @@
 #ifndef TYPEROLER_HPP
 #define TYPEROLER_HPP
 
-#include "../src/knn_search.h"
-#include "../src/tools.h"
+#include "tools.h"
 #include "Paths.hpp"
 #include <set>
 #include <utility>

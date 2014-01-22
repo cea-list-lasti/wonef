@@ -1,4 +1,4 @@
-#include "../src/tools.h"
+#include "tools.h"
 #include "Dumper.hpp"
 #include "Loader.hpp"
 #include <iostream>

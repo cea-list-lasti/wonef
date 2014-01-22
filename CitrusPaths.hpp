@@ -1,6 +1,8 @@
 #ifndef PATHS_HPP
 #define PATHS_HPP
 
+#include <string>
+
 /*
 const std::string  INDEX_VERB "/data/text/WordNet-3.0/dict/index.verb";
 const std::string  DATA_VERB "/data/text/WordNet-3.0/dict/data.verb";

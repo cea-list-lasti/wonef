@@ -2,7 +2,6 @@
 #define MEROHOLOMODULE_HPP
 
 
-#include "../src/knn_search.h"
 #include "TranslatorModule.hpp"
 #include "Loader.hpp"
 #include "TypeRoler.hpp"

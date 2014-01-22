@@ -1,7 +1,7 @@
 #include "MeroHoloModule.hpp"
 #include "Paths.hpp"
 #include "Timer.hpp"
-#include "../src/tools.h"
+#include "tools.h"
 
 #include <iostream>
 #include <fstream>

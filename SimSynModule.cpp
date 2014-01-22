@@ -1,7 +1,7 @@
 #include "SimSynModule.hpp"
 #include "knn.pb.h"
 #include "Paths.hpp"
-#include "../src/tools.h"
+#include "tools.h"
 #include <iostream>
 #include <fstream>
 #include <boost/foreach.hpp>
