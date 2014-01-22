@@ -227,7 +227,7 @@ WORDNET::WordNet LoaderModule::load() {
   return wn;
 }
 
-void transfer_one(std::stringstream &defusages, std::string& usage) {
+void transfer_one_char(std::stringstream &defusages, std::string& usage) {
   assert(defusages.peek() != -1 && defusages.good());
   usage += defusages.get();
 }
@@ -241,7 +241,7 @@ std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::s
   while ((def.size() < 3 || def.substr(def.size()-3) != "; \"") && defusages.peek() != -1) {
     def += defusages.get();
   }
-  // work that should be done by the regex: if we indeed have stopped because of '; "', remove it
+  // if we indeed have stopped because of '; "', remove that
   if (def.substr(def.size() - 3) == "; \"") {
     def = def.substr(0, def.size()-3);
   }
@@ -254,7 +254,7 @@ std::pair<std::string, std::vector<std::string>> LoaderModule::readUsages(std::s
     // one usage between quotes (eg. "long-toed")
     while (defusages.peek() != '"' && defusages.peek() != ';' && defusages.peek() != ':' && defusages.good()) {
 readquote:
-      transfer_one(defusages, usage);
+      transfer_one_char(defusages, usage);
     }
 
     // end quote of one usage could be missing (eg. "long-toed; "five-toed")
@@ -294,7 +294,7 @@ readquote:
     // authors citations
     if (defusages.peek() == '-') {
       while(defusages.peek() != ';' && defusages.good()) {
-        transfer_one(defusages, usage);
+        transfer_one_char(defusages, usage);
       }
     }
 
@@ -304,6 +304,11 @@ readquote:
       defusages >> tmp;
       assert(tmp == "women");
       break;
+    }
+
+    // special case: "I"m siding against the current candidate"
+    if (defusages.peek() == 'm') {
+        goto readquote;
     }
 
     // errors in separators
@@ -317,7 +322,7 @@ readquote:
     if (defusages.peek() == '(') {
       usage += " ";
       while(defusages.peek() != ')') {
-        transfer_one(defusages, usage);
+        transfer_one_char(defusages, usage);
       }
       usage += ")";
 

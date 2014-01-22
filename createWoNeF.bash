@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o errexit
+
 # This script is a wrapper around translateWN.sh *when translateWN.sh already works*!
 # The goal is to create WoNeF in one fell swoop.
 

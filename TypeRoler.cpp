@@ -25,7 +25,7 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
   initializeDicMap(dicmap, WORDS_IDS);
   initializeDicMapReverse(dicmapReverse, WORDS_IDS, false);
 
-  std::string protofile = "/tmp/protobuf/" + relation;
+  std::string protofile = KNNPROTODIR + relation;
   if (ifstream(protofile.c_str(), std::ios::in).good()) {
     readRepository(protofile, relation);
   } else {

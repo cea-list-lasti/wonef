@@ -8,7 +8,7 @@ const std::string  INDEX_ADJ "/data/text/WordNet-3.0/dict/index.adj";
 const std::string  DATA_ADJ "/data/text/WordNet-3.0/dict/data.adj";
 */
 
-const std::string  DATAPATH = "/home/pradet/data";
+const std::string  DATAPATH = "/scratch_global/DATASETS/WoNeF";
 
 const std::string WOLF = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";
 const std::string WOLFONE = DATAPATH + "/opendata/wolf10b/wolf-1.0b.xml";
@@ -75,7 +75,7 @@ const std::string  CONVFILE = DATAPATH + "/FastKNN/SemMap/semmapconversion.globa
 const std::string  MAPVERB20_15 = DATAPATH + "/opendata/mappings-upc-2007/mapping-20-15/wn20-15.verb";
 const std::string  MAPVERB15_20 = DATAPATH + "/opendata/mappings-upc-2007/mapping-15-20/wn15-20.verb";
 
-const std::string  KNNPROTODIR = "/tmp/protobuf/";
+const std::string  KNNPROTODIR = DATAPATH + "/protobuf/";
 const std::string  KNNPROTOFILE = KNNPROTODIR + "knndists_";
 
 const std::string  BCSFILE = DATAPATH + "/opendata/wolf/wolf-0.1.5.format.xml";

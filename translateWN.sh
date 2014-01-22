@@ -88,15 +88,16 @@ rm -f logs/* data/*
 
 echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
-./translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep $grep_logs
+./build/translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep $grep_logs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
-gprof translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
+gprof build/translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
 
 echo "Evaluating..."
-./evalJAWS-WOLF $prefer $pos $seqs
+./build/evalJAWS-WOLF $prefer $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
-gprof evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
+gprof build/evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
 
+echo "Done! (not archiving)"
 exit
 
 # Archive relevant files to our archive.
@@ -104,7 +105,7 @@ echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
 
 tmpsubdir="${pos}__${day}__${time}"
 tmppath=/tmp/$tmpsubdir
-archivedir=/home/qp230782/archives/$day
+archivedir=/home/pradet/archives/$day
 
 mkdir -p $tmppath
 mkdir -p $archivedir
