@@ -22,6 +22,15 @@ include_directories($ENV{LIBXMLPP_INCLUDE_DIR})
 link_directories($ENV{LIBXMLPP_LIBRARY})
 link_libraries(xml++-1.0)
 
+
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/knn.pb.cc
+	COMMAND protoc knn.proto --cpp_out=.
+	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/repository.pb.cc
+	COMMAND protoc repository.proto --cpp_out=.
+	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
 # The wonef library simply contains all object codes
 add_library(wonef
     ExtractorModule.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp
