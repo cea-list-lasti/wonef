@@ -1,0 +1,363 @@
+<root><SYNSET id="00032497" issue="toomuch">
+    <ORIGINALDEF>vigorously active; "an acrobatic dance"; "an athletic child"; "athletic playing"; "gymnastic exercises"</ORIGINALDEF>
+    <CANDIDATES original="acrobatic">
+      <CANDIDATE score="0">acrobatique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="athletic">
+      <CANDIDATE score="0">athlétique</CANDIDATE>
+      <CANDIDATE score="0">sportif</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gymnastic">
+      <CANDIDATE score="0">acrobatique</CANDIDATE>
+      <CANDIDATE score="0">gymnique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00071242" issue="toomuch">
+    <ORIGINALDEF>(used in combination) affected by something overwhelming; "conscience-smitten"; "awe-struck"</ORIGINALDEF>
+    <CANDIDATES original="smitten">
+      <CANDIDATE score="0">amoureux</CANDIDATE>
+      <CANDIDATE score="0">mordu</CANDIDATE>
+      <CANDIDATE score="0">épris</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stricken">
+      <CANDIDATE score="0">affligé</CANDIDATE>
+      <CANDIDATE score="0">dévasté</CANDIDATE>
+      <CANDIDATE score="0">ravagé</CANDIDATE>
+      <CANDIDATE score="0">sinistré</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="struck">
+      <CANDIDATE score="0">frappé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00231103" issue="toomuch">
+    <ORIGINALDEF>become or made better in quality; "was proud of his improved grades"; "an improved viewfinder"</ORIGINALDEF>
+    <CANDIDATES original="improved">
+      <CANDIDATE score="0">enrichi</CANDIDATE>
+      <CANDIDATE score="0">meilleur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00252310" issue="missing">
+    <ORIGINALDEF>modestly or warily rejecting approaches or overtures; "like a wild young colt, very inquisitive but very coy and not to be easily cajoled"</ORIGINALDEF>
+    <CANDIDATES original="coy">
+      <CANDIDATE score="0">mièvre</CANDIDATE>
+      <CANDIDATE score="0">évasif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00424240" issue="missing">
+    <ORIGINALDEF>(extended sense) of exceptionally clean language; "lyrics as antiseptic as Sunday School"</ORIGINALDEF>
+    <CANDIDATES original="antiseptic">
+      <CANDIDATE score="0">antiseptique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00585856" issue="toomuch">
+    <ORIGINALDEF>helping to restore to good condition; "reconstructive surgery"; "rehabilitative exercises"</ORIGINALDEF>
+    <CANDIDATES original="reconstructive">
+      <CANDIDATE score="0">reconstructeur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rehabilitative" />
+  </SYNSET>
+  <SYNSET id="00765862" issue="toomuch">
+    <ORIGINALDEF>direct and obvious in meaning or reference; often unpleasant; "a pointed critique"; "a pointed allusion to what was going on"; "another pointed look in their direction"</ORIGINALDEF>
+    <CANDIDATES original="pointed">
+      <CANDIDATE score="0">aigu</CANDIDATE>
+      <CANDIDATE score="0">direct</CANDIDATE>
+      <CANDIDATE score="0">fin</CANDIDATE>
+      <CANDIDATE score="0">ogival</CANDIDATE>
+      <CANDIDATE score="0">pointu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00976016" issue="toomuch">
+    <ORIGINALDEF>flashily stylish; "a snazzy outfit"</ORIGINALDEF>
+    <CANDIDATES original="snazzy">
+      <CANDIDATE score="0">chouette</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00977372" issue="toomuch">
+    <ORIGINALDEF>very fast; "a blistering pace"; "got off to a hot start"; "in hot pursuit"; "a red-hot line drive"</ORIGINALDEF>
+    <CANDIDATES original="blistering">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">cinglant</CANDIDATE>
+      <CANDIDATE score="0">impitoyable</CANDIDATE>
+      <CANDIDATE score="0">torride</CANDIDATE>
+      <CANDIDATE score="0">virulent</CANDIDATE>
+      <CANDIDATE score="0">étouffant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hot">
+      <CANDIDATE score="0">acharné</CANDIDATE>
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">chaud</CANDIDATE>
+      <CANDIDATE score="0">enthousiaste</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">hot</CANDIDATE>
+      <CANDIDATE score="0">passionné</CANDIDATE>
+      <CANDIDATE score="0">pimenté</CANDIDATE>
+      <CANDIDATE score="0">piquant</CANDIDATE>
+      <CANDIDATE score="0">radioactif</CANDIDATE>
+      <CANDIDATE score="0">relevé</CANDIDATE>
+      <CANDIDATE score="0">sensationnel</CANDIDATE>
+      <CANDIDATE score="0">terrible</CANDIDATE>
+      <CANDIDATE score="0">thermal</CANDIDATE>
+      <CANDIDATE score="0">violent</CANDIDATE>
+      <CANDIDATE score="0">volé</CANDIDATE>
+      <CANDIDATE score="0">épicé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="red-hot">
+      <CANDIDATE score="0">brûlant</CANDIDATE>
+      <CANDIDATE score="0">rouge</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01505041" issue="toomuch">
+    <ORIGINALDEF>yielding; lacking any hint of hardness; "the liquid stillness of the night enveloping him"; "the liquid brown eyes of a spaniel"</ORIGINALDEF>
+    <CANDIDATES original="liquid">
+      <CANDIDATE score="0">clair</CANDIDATE>
+      <CANDIDATE score="0">harmonieux</CANDIDATE>
+      <CANDIDATE score="0">limpide</CANDIDATE>
+      <CANDIDATE score="0">liquide</CANDIDATE>
+      <CANDIDATE score="0">liquidien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01160584" issue="toomuch">
+    <ORIGINALDEF>characterized by physical or psychological maltreatment; "abusive punishment"; "argued...that foster homes are abusive"</ORIGINALDEF>
+    <CANDIDATES original="abusive">
+      <CANDIDATE score="0">abusif</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">injurieux</CANDIDATE>
+      <CANDIDATE score="0">maltraitant</CANDIDATE>
+      <CANDIDATE score="0">mauvais</CANDIDATE>
+      <CANDIDATE score="0">offensant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01208492" issue="missing">
+    <ORIGINALDEF>shut; "the shades were down"</ORIGINALDEF>
+    <CANDIDATES original="down">
+      <CANDIDATE score="0">descendant</CANDIDATE>
+      <CANDIDATE score="0">dépressif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01219938" issue="missing">
+    <ORIGINALDEF>used of an opponent's ground; "an away game"</ORIGINALDEF>
+    <CANDIDATES original="away">
+      <CANDIDATE score="0">absent</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01274741" issue="missing">
+    <ORIGINALDEF>(British informal) faulty; "I've got this dicky heart"- John le Carre</ORIGINALDEF>
+    <CANDIDATES original="dickey" />
+    <CANDIDATES original="dicky">
+      <CANDIDATE score="0">patraque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01430009" issue="missing">
+    <ORIGINALDEF>not having legs; "a legless man in a wheelchair"</ORIGINALDEF>
+    <CANDIDATES original="legless">
+      <CANDIDATE score="0">bourré</CANDIDATE>
+      <CANDIDATE score="0">rond</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01556913" issue="missing">
+    <ORIGINALDEF>(nonstandard in some uses but often idiomatic with measure phrases) fewer; "less than three weeks"; "no less than 50 people attended"; "in 25 words or less"</ORIGINALDEF>
+    <CANDIDATES original="less">
+      <CANDIDATE score="0">moindre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01565751" issue="missing">
+    <ORIGINALDEF>used of pictures; of a single or static photograph not presented so as to create the illusion of motion; or representing objects not capable of motion; "a still photograph"; "Cezanne's still life of apples"</ORIGINALDEF>
+    <CANDIDATES original="still">
+      <CANDIDATE score="0">calme</CANDIDATE>
+      <CANDIDATE score="0">dormant</CANDIDATE>
+      <CANDIDATE score="0">immobile</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">plat</CANDIDATE>
+      <CANDIDATE score="0">silencieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01607120" issue="english">
+    <ORIGINALDEF>used to signify the Confederate forces in the Civil War (who wore gray uniforms); "a stalwart gray figure"</ORIGINALDEF>
+    <CANDIDATES original="gray">
+      <CANDIDATE score="0">gris</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="grey">
+      <CANDIDATE score="0">blême</CANDIDATE>
+      <CANDIDATE score="0">gris</CANDIDATE>
+      <CANDIDATE score="0">grisonnant</CANDIDATE>
+      <CANDIDATE score="0">morne</CANDIDATE>
+      <CANDIDATE score="0">sombre</CANDIDATE>
+      <CANDIDATE score="0">terne</CANDIDATE>
+      <CANDIDATE score="0">triste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01671509" issue="missing">
+    <ORIGINALDEF>not formed or organized; "an as yet unformed government"</ORIGINALDEF>
+    <CANDIDATES original="unformed">
+      <CANDIDATE score="0">informe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01776845" issue="missing">
+    <ORIGINALDEF>capable of sealing itself as after being pierced; "self-sealing tires"</ORIGINALDEF>
+    <CANDIDATES original="self-sealing">
+      <CANDIDATE score="0">auto-adhésif</CANDIDATE>
+      <CANDIDATE score="0">autocollant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01836025" issue="missing">
+    <ORIGINALDEF>dealing only with concrete facts</ORIGINALDEF>
+    <CANDIDATES original="unimaginative">
+      <CANDIDATE score="0">plat</CANDIDATE>
+      <CANDIDATE score="0">scolaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01888284" issue="missing">
+    <ORIGINALDEF>avoiding or escaping from difficulty or danger especially enemy fire; "pilots are taught to take evasive action"</ORIGINALDEF>
+    <CANDIDATES original="evasive">
+      <CANDIDATE score="0">fuyant</CANDIDATE>
+      <CANDIDATE score="0">évasif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01932902" issue="notenough">
+    <ORIGINALDEF>not fully prepared</ORIGINALDEF>
+    <CANDIDATES original="unripe">
+      <CANDIDATE score="0">prématuré</CANDIDATE>
+      <CANDIDATE score="0">vert</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00543603" issue="notenough">
+    <ORIGINALDEF>in relation (or in regard) to; especially as in the phrases; "as far as x is concerned"; "where x is concerned"</ORIGINALDEF>
+    <CANDIDATES original="concerned">
+      <CANDIDATE score="0">affecté</CANDIDATE>
+      <CANDIDATE score="0">compétent</CANDIDATE>
+      <CANDIDATE score="0">inquiet</CANDIDATE>
+      <CANDIDATE score="0">intéressé</CANDIDATE>
+      <CANDIDATE score="0">préoccupé</CANDIDATE>
+      <CANDIDATE score="0">soucieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01999766" issue="notenough">
+    <ORIGINALDEF>not responsive</ORIGINALDEF>
+    <CANDIDATES original="unresponsive">
+      <CANDIDATE score="0">gelé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02002580" issue="notenough">
+    <ORIGINALDEF>not open to the general public; "a closed meeting"</ORIGINALDEF>
+    <CANDIDATES original="closed">
+      <CANDIDATE score="0">barré</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">clos</CANDIDATE>
+      <CANDIDATE score="0">couvert</CANDIDATE>
+      <CANDIDATE score="0">fermé</CANDIDATE>
+      <CANDIDATE score="0">obturé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02100236" issue="english">
+    <ORIGINALDEF>of the elder of two boys with the same family name; "Jones major"</ORIGINALDEF>
+    <CANDIDATES original="major">
+      <CANDIDATE score="0">capital</CANDIDATE>
+      <CANDIDATE score="0">considérable</CANDIDATE>
+      <CANDIDATE score="0">incontournable</CANDIDATE>
+      <CANDIDATE score="0">majeur</CANDIDATE>
+      <CANDIDATE score="0">major</CANDIDATE>
+      <CANDIDATE score="0">maître</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02175684" issue="toomuch">
+    <ORIGINALDEF>representing the furthest possible extent of analysis or division into parts; "a feeling is a simple and undecomposable mental state"- G.S.Brett; "this weight of evidence is something mystical and unanalyzable"-M.R.Cohen</ORIGINALDEF>
+    <CANDIDATES original="unanalyzable">
+      <CANDIDATE score="0">inanalysable</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="undecomposable" />
+  </SYNSET>
+  <SYNSET id="02237978" issue="missing">
+    <ORIGINALDEF>used especially of skin; "his cheeks were unlined"; "his unseamed face"</ORIGINALDEF>
+    <CANDIDATES original="seamless">
+      <CANDIDATE score="0">homogène</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unlined">
+      <CANDIDATE score="0">blanc</CANDIDATE>
+      <CANDIDATE score="0">uni</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unseamed" />
+  </SYNSET>
+  <SYNSET id="01205232" issue="toomuch">
+    <ORIGINALDEF>of the highest rank; used of persons; "the commanding officer"</ORIGINALDEF>
+    <CANDIDATES original="commanding">
+      <CANDIDATE score="0">dominant</CANDIDATE>
+      <CANDIDATE score="0">imposant</CANDIDATE>
+      <CANDIDATE score="0">impératif</CANDIDATE>
+      <CANDIDATE score="0">impérieux</CANDIDATE>
+      <CANDIDATE score="0">injonctif</CANDIDATE>
+      <CANDIDATE score="0">élevé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ranking">
+      <CANDIDATE score="0">renommé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="top-level" />
+    <CANDIDATES original="top-ranking" />
+    <CANDIDATES original="dominating">
+      <CANDIDATE score="0">dominant</CANDIDATE>
+      <CANDIDATE score="0">dominateur</CANDIDATE>
+      <CANDIDATE score="0">prépondérant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overlooking">
+		</CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02519292" issue="missing">
+    <ORIGINALDEF>physiologically ready to incubate eggs; "a broody hen"</ORIGINALDEF>
+    <CANDIDATES original="broody">
+      <CANDIDATE score="0">cafardeux</CANDIDATE>
+      <CANDIDATE score="0">distrait</CANDIDATE>
+      <CANDIDATE score="0">mélancolique</CANDIDATE>
+      <CANDIDATE score="0">rêveur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02523664" issue="toomuch">
+    <ORIGINALDEF>not defended or capable of being defended; "an open city"; "open to attack"</ORIGINALDEF>
+    <CANDIDATES original="assailable" />
+    <CANDIDATES original="open">
+      <CANDIDATE score="0">béant</CANDIDATE>
+      <CANDIDATE score="0">dilaté</CANDIDATE>
+      <CANDIDATE score="0">débouché</CANDIDATE>
+      <CANDIDATE score="0">déboutonné</CANDIDATE>
+      <CANDIDATE score="0">décapoté</CANDIDATE>
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="0">dégagé</CANDIDATE>
+      <CANDIDATE score="0">déplié</CANDIDATE>
+      <CANDIDATE score="0">franc</CANDIDATE>
+      <CANDIDATE score="0">open</CANDIDATE>
+      <CANDIDATE score="0">ouvert</CANDIDATE>
+      <CANDIDATE score="0">patent</CANDIDATE>
+      <CANDIDATE score="0">perméable</CANDIDATE>
+      <CANDIDATE score="0">public</CANDIDATE>
+      <CANDIDATE score="0">relâché</CANDIDATE>
+      <CANDIDATE score="0">transparent</CANDIDATE>
+      <CANDIDATE score="0">vacant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="undefendable" />
+    <CANDIDATES original="undefended" />
+  </SYNSET>
+  <SYNSET id="02525058" issue="toomuch">
+    <ORIGINALDEF>lacking protection or a guard; "an unguarded gate"; "his unguarded queen was open to attack"</ORIGINALDEF>
+    <CANDIDATES original="unguarded">
+      <CANDIDATE score="0">imprudent</CANDIDATE>
+      <CANDIDATE score="0">irréfléchi</CANDIDATE>
+      <CANDIDATE score="0">spontané</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unprotected">
+      <CANDIDATE score="0">découvert</CANDIDATE>
+      <CANDIDATE score="0">inabrité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02840006" issue="english">
+    <ORIGINALDEF>resembling or characteristic (or considered characteristic) of a wolf; "ran in wolflike packs"; "wolfish rapacity"</ORIGINALDEF>
+    <CANDIDATES original="wolfish">
+      <CANDIDATE score="0">vorace</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wolflike" />
+  </SYNSET>
+  <SYNSET id="03079803" issue="missing">
+    <ORIGINALDEF>of or relating to a member of the Buddhist people inhabiting the Mekong river in Laos and Thailand</ORIGINALDEF>
+    <CANDIDATES original="lao" />
+    <CANDIDATES original="Lao">
+      <CANDIDATE score="0">Lao</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  </root>

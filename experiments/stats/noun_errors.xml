@@ -1,0 +1,364 @@
+<root><SYNSET id="00160073" issue="missing">
+    <ORIGINALDEF>the act of gaining acceptance or affection for yourself by persuasive and subtle blandishments; "she refused to use insinuation in order to gain favor"</ORIGINALDEF>
+    <CANDIDATES original="ingratiation" />
+    <CANDIDATES original="insinuation">
+      <CANDIDATE score="0">allusion</CANDIDATE>
+      <CANDIDATE score="0">insinuation</CANDIDATE>
+      <CANDIDATE score="0">propos</CANDIDATE>
+      <CANDIDATE score="0">sous-entendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00279235" issue="missing">
+    <ORIGINALDEF>ineffectual chewing (as if without teeth)</ORIGINALDEF>
+    <CANDIDATES original="gumming">
+      <CANDIDATE score="0">gommage</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mumbling">
+      <CANDIDATE score="0">balbutiement</CANDIDATE>
+      <CANDIDATE score="0">bredouillage</CANDIDATE>
+      <CANDIDATE score="0">bredouilleur</CANDIDATE>
+      <CANDIDATE score="0">marmonnement</CANDIDATE>
+      <CANDIDATE score="0">marmottement</CANDIDATE>
+      <CANDIDATE score="0">ânonnement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00575083" issue="missing">
+    <ORIGINALDEF>a swimming kick used while treading water</ORIGINALDEF>
+    <CANDIDATES original="thrash">
+      <CANDIDATE score="0">sauterie</CANDIDATE>
+      <CANDIDATE score="0">thrash</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00797581" issue="toomuch">
+    <ORIGINALDEF>a task to be dealt with; "securing adequate funding is a time-consuming proposition"</ORIGINALDEF>
+    <CANDIDATES original="proposition">
+      <CANDIDATE score="0">offre</CANDIDATE>
+      <CANDIDATE score="0">proposition</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00840363" issue="missing">
+    <ORIGINALDEF>a spasmodic reflex of the throat made as if in swallowing</ORIGINALDEF>
+    <CANDIDATES original="gulp">
+      <CANDIDATE score="0">bouchée</CANDIDATE>
+      <CANDIDATE score="0">gorgée</CANDIDATE>
+      <CANDIDATE score="0">goulée</CANDIDATE>
+      <CANDIDATE score="0">lampée</CANDIDATE>
+      <CANDIDATE score="0">trait</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gulping" />
+  </SYNSET>
+  <SYNSET id="00880563" issue="missing">
+    <ORIGINALDEF>observation of the stars</ORIGINALDEF>
+    <CANDIDATES original="stargazing">
+      <CANDIDATE score="0">rêvasserie</CANDIDATE>
+      <CANDIDATE score="0">rêverie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01809106" issue="missing">
+    <ORIGINALDEF>a west African bird having dark plumage mottled with white; native to Africa but raised for food in many parts of the world</ORIGINALDEF>
+    <CANDIDATES original="guinea">
+      <CANDIDATE score="0">guinée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="guinea_fowl" />
+    <CANDIDATES original="Numida_meleagris" />
+  </SYNSET>
+  <SYNSET id="02395931" issue="missing">
+    <ORIGINALDEF>a pig fattened to provide meat</ORIGINALDEF>
+    <CANDIDATES original="porker">
+      <CANDIDATE score="0">goret</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02476736" issue="missing">
+    <ORIGINALDEF>incomplete skeleton of female found in eastern Ethiopia in 1974</ORIGINALDEF>
+    <CANDIDATES original="Lucy">
+      <CANDIDATE score="0">Lucie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02577164" issue="missing">
+    <ORIGINALDEF>fish of western Atlantic: Cape Cod to Brazil</ORIGINALDEF>
+    <CANDIDATES original="blue_runner" />
+    <CANDIDATES original="runner">
+      <CANDIDATE score="0">contrebandier</CANDIDATE>
+      <CANDIDATE score="0">coulant</CANDIDATE>
+      <CANDIDATE score="0">coulisse</CANDIDATE>
+      <CANDIDATE score="0">coulisseau</CANDIDATE>
+      <CANDIDATE score="0">coureur</CANDIDATE>
+      <CANDIDATE score="0">coureuse</CANDIDATE>
+      <CANDIDATE score="0">courrier</CANDIDATE>
+      <CANDIDATE score="0">engagé</CANDIDATE>
+      <CANDIDATE score="0">glissière</CANDIDATE>
+      <CANDIDATE score="0">lame</CANDIDATE>
+      <CANDIDATE score="0">marcotte</CANDIDATE>
+      <CANDIDATE score="0">messager</CANDIDATE>
+      <CANDIDATE score="0">partant</CANDIDATE>
+      <CANDIDATE score="0">partante</CANDIDATE>
+      <CANDIDATE score="0">patin</CANDIDATE>
+      <CANDIDATE score="0">stolon</CANDIDATE>
+      <CANDIDATE score="0">suspendeur</CANDIDATE>
+      <CANDIDATE score="0">tendeur</CANDIDATE>
+      <CANDIDATE score="0">tenseur</CANDIDATE>
+      <CANDIDATE score="0">chemin_de_table</CANDIDATE>
+      <CANDIDATE score="0">couronne_mobile</CANDIDATE>
+      <CANDIDATE score="0">chemin_de_couloir</CANDIDATE>
+      <CANDIDATE score="0">chemin_d'escalier</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Caranx_crysos" />
+  </SYNSET>
+  <SYNSET id="02811468" issue="missing">
+    <ORIGINALDEF>a broadax used as a weapon</ORIGINALDEF>
+    <CANDIDATES original="battle-ax" />
+    <CANDIDATES original="battle-axe">
+      <CANDIDATE score="0">virago</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03358380" issue="toomuch">
+    <ORIGINALDEF>a bright patch of color used for decoration or identification; "red flashes adorned the airplane"; "a flash sewn on his sleeve indicated the unit he belonged to"</ORIGINALDEF>
+    <CANDIDATES original="flash">
+      <CANDIDATE score="0">flamboiement</CANDIDATE>
+      <CANDIDATE score="0">flash</CANDIDATE>
+      <CANDIDATE score="0">fulguration</CANDIDATE>
+      <CANDIDATE score="0">petitdoué</CANDIDATE>
+      <CANDIDATE score="0">éclair</CANDIDATE>
+      <CANDIDATE score="0">éclat</CANDIDATE>
+      <CANDIDATE score="0">écusson</CANDIDATE>
+      <CANDIDATE score="0">étincelle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03519081" issue="missing">
+    <ORIGINALDEF>a cosmetic used to highlight the eyes or cheekbones</ORIGINALDEF>
+    <CANDIDATES original="highlighter">
+      <CANDIDATE score="0">surligneur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05557723" issue="missing">
+    <ORIGINALDEF>the soft belly or underside of an animal's body</ORIGINALDEF>
+    <CANDIDATES original="underbelly">
+      <CANDIDATE score="0">bas-ventre</CANDIDATE>
+      <CANDIDATE score="0">ventre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="underbody" />
+  </SYNSET>
+  <SYNSET id="05934029" issue="notenough">
+    <ORIGINALDEF>the area within view; "the coast is clear"</ORIGINALDEF>
+    <CANDIDATES original="coast">
+      <CANDIDATE score="0">côte</CANDIDATE>
+      <CANDIDATE score="0">littoral</CANDIDATE>
+      <CANDIDATE score="0">rive</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06041955" issue="missing">
+    <ORIGINALDEF>the study of the whorls and loops and arches in the fingertips and on the palms of the hand and the soles of the feet; "some criminologists specialize in dermatoglyphics"</ORIGINALDEF>
+    <CANDIDATES original="dermatoglyphics">
+      <CANDIDATE score="0">dermatoglyphes</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06269785" issue="missing">
+    <ORIGINALDEF>a separately printed article that originally appeared in a larger publication</ORIGINALDEF>
+    <CANDIDATES original="offprint" />
+    <CANDIDATES original="reprint">
+      <CANDIDATE score="0">reprint</CANDIDATE>
+      <CANDIDATE score="0">retirage</CANDIDATE>
+      <CANDIDATE score="0">réimpression</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="separate">
+      <CANDIDATE score="0">indépendant</CANDIDATE>
+      <CANDIDATE score="0">parallèle</CANDIDATE>
+      <CANDIDATE score="0">particulier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06838868" issue="missing">
+    <ORIGINALDEF>the 21st letter of the Hebrew alphabet</ORIGINALDEF>
+    <CANDIDATES original="sin">
+      <CANDIDATE score="0">crime</CANDIDATE>
+      <CANDIDATE score="0">faute</CANDIDATE>
+      <CANDIDATE score="0">péché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07137950" issue="missing">
+    <ORIGINALDEF>a lengthy discussion (spoken or written) on a particular topic</ORIGINALDEF>
+    <CANDIDATES original="dilation">
+      <CANDIDATE score="0">dilatation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07606278" issue="missing">
+    <ORIGINALDEF>a candy that is flavored with a mint oil</ORIGINALDEF>
+    <CANDIDATES original="mint">
+      <CANDIDATE score="0">menthe</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mint_candy" />
+  </SYNSET>
+  <SYNSET id="08189581" issue="missing">
+    <ORIGINALDEF>a troupe of minstrels</ORIGINALDEF>
+    <CANDIDATES original="minstrelsy">
+      <CANDIDATE score="0">chants</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08256005" issue="english">
+    <ORIGINALDEF>a party for men only (or one considered suitable for men only)</ORIGINALDEF>
+    <CANDIDATES original="smoker">
+      <CANDIDATE score="0">fumeur</CANDIDATE>
+      <CANDIDATE score="0">fumeuse</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stag_party" />
+  </SYNSET>
+  <SYNSET id="08480512" issue="missing">
+    <ORIGINALDEF>a select company of people; "I hope to become one of their number before I die"</ORIGINALDEF>
+    <CANDIDATES original="number">
+      <CANDIDATE score="0">attraction</CANDIDATE>
+      <CANDIDATE score="0">chanson</CANDIDATE>
+      <CANDIDATE score="0">chiffre</CANDIDATE>
+      <CANDIDATE score="0">compte</CANDIDATE>
+      <CANDIDATE score="0">danse</CANDIDATE>
+      <CANDIDATE score="0">dossard</CANDIDATE>
+      <CANDIDATE score="0">livraison</CANDIDATE>
+      <CANDIDATE score="0">modèle</CANDIDATE>
+      <CANDIDATE score="0">morceau</CANDIDATE>
+      <CANDIDATE score="0">nombre</CANDIDATE>
+      <CANDIDATE score="0">numéro</CANDIDATE>
+      <CANDIDATE score="0">quantité</CANDIDATE>
+      <CANDIDATE score="0">rythme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09273776" issue="toomuch">
+    <ORIGINALDEF>a natural covering (as by a fluid); "the spacecraft detected an envelope of gas around the comet"</ORIGINALDEF>
+    <CANDIDATES original="envelope">
+      <CANDIDATE score="0">enveloppe</CANDIDATE>
+      <CANDIDATE score="0">pli</CANDIDATE>
+      <CANDIDATE score="0">pochette</CANDIDATE>
+      <CANDIDATE score="0">tunique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09330467" issue="missing">
+    <ORIGINALDEF>a lake in north central Africa; fed by the Shari river</ORIGINALDEF>
+    <CANDIDATES original="Chad">
+      <CANDIDATE score="0">tchadien</CANDIDATE>
+      <CANDIDATE score="0">Tchad</CANDIDATE>
+      <CANDIDATE score="0">tchadienne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Lake_Chad" />
+  </SYNSET>
+  <SYNSET id="01827202" issue="missing">
+    <ORIGINALDEF>a mythical bird said to breed at the time of the winter solstice in a nest floating on the sea and to have the power of calming the winds and waves</ORIGINALDEF>
+    <CANDIDATES original="halcyon">
+      <CANDIDATE score="0">alcyon</CANDIDATE>
+      <CANDIDATE score="0">martin-pêcheur</CANDIDATE>
+      <CANDIDATE score="0">serein</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">de_bonheur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09759311" issue="toomuch">
+    <ORIGINALDEF>a scholar who is skilled in academic disputation</ORIGINALDEF>
+    <CANDIDATES original="academician">
+      <CANDIDATE score="0">académicien</CANDIDATE>
+      <CANDIDATE score="0">académicienne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="schoolman">
+      <CANDIDATE score="0">scolastique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09893015" issue="english">
+    <ORIGINALDEF>a policeman in charge of a precinct</ORIGINALDEF>
+    <CANDIDATES original="captain">
+      <CANDIDATE score="0">capitaine</CANDIDATE>
+      <CANDIDATE score="0">cheftaine</CANDIDATE>
+      <CANDIDATE score="0">commandant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="police_captain" />
+    <CANDIDATES original="police_chief" />
+  </SYNSET>
+  <SYNSET id="09933324" issue="english">
+    <ORIGINALDEF>a person who performs fellatio</ORIGINALDEF>
+    <CANDIDATES original="cocksucker">
+      <CANDIDATE score="0">enculé</CANDIDATE>
+      <CANDIDATE score="0">enfoiré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09935233" issue="missing">
+    <ORIGINALDEF>a maker of counterfeit coins</ORIGINALDEF>
+    <CANDIDATES original="coiner">
+      <CANDIDATE score="0">monnayeur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10096855" issue="missing">
+    <ORIGINALDEF>an employee who is reassigned from job to job as needed</ORIGINALDEF>
+    <CANDIDATES original="floater">
+      <CANDIDATE score="0">flotteur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10346392" issue="missing">
+    <ORIGINALDEF>someone regarded as certain to succeed; "he's a natural for the job"</ORIGINALDEF>
+    <CANDIDATES original="natural">
+      <CANDIDATE score="0">bécarre</CANDIDATE>
+      <CANDIDATE score="0">demeuré</CANDIDATE>
+      <CANDIDATE score="0">demeurée</CANDIDATE>
+      <CANDIDATE score="0">idiot</CANDIDATE>
+      <CANDIDATE score="0">idiote</CANDIDATE>
+      <CANDIDATE score="0">nature</CANDIDATE>
+      <CANDIDATE score="0">naturel</CANDIDATE>
+      <CANDIDATE score="0">normal</CANDIDATE>
+      <CANDIDATE score="0">simple</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10647745" issue="english">
+    <ORIGINALDEF>someone who stands in a place where one might otherwise sit (as a spectator who uses standing room in a theater or a passenger on a crowded bus or train); "the allowed number of standees is posted"</ORIGINALDEF>
+    <CANDIDATES original="standee">
+      <CANDIDATE score="0">spectateur</CANDIDATE>
+      <CANDIDATE score="0">voyageur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10709876" issue="english">
+    <ORIGINALDEF>a woman who sings popular songs</ORIGINALDEF>
+    <CANDIDATES original="thrush">
+      <CANDIDATE score="0">candidose</CANDIDATE>
+      <CANDIDATE score="0">grive</CANDIDATE>
+      <CANDIDATE score="0">muguet</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06341525" issue="missing">
+    <ORIGINALDEF>a form of address for a woman</ORIGINALDEF>
+    <CANDIDATES original="Ms.">
+      <CANDIDATE score="0">Mlle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Ms" />
+  </SYNSET>
+  <SYNSET id="11210806" issue="missing">
+    <ORIGINALDEF>United States sharpshooter who was featured in Buffalo Bill's Wild West Show (1860-1926)</ORIGINALDEF>
+    <CANDIDATES original="Annie_Oakley">
+      <CANDIDATE score="0">billet_de_faveur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Oakley" />
+  </SYNSET>
+  <SYNSET id="14475992" issue="toomuch">
+    <ORIGINALDEF>misfortune resulting in lost effort or money; "his career was in the gutter"; "all that work went down the sewer"; "pensions are in the toilet"</ORIGINALDEF>
+    <CANDIDATES original="gutter">
+      <CANDIDATE score="0">caniveau</CANDIDATE>
+      <CANDIDATE score="0">chéneau</CANDIDATE>
+      <CANDIDATE score="0">gouttière</CANDIDATE>
+      <CANDIDATE score="0">rigole</CANDIDATE>
+      <CANDIDATE score="0">ruisseau</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sewer">
+      <CANDIDATE score="0">couseuse</CANDIDATE>
+      <CANDIDATE score="0">égout</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="toilet">
+      <CANDIDATE score="0">cabinets</CANDIDATE>
+      <CANDIDATE score="0">toilette</CANDIDATE>
+      <CANDIDATE score="0">toilettes</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15240888" issue="missing">
+    <ORIGINALDEF>the season during which it is legal to catch fish</ORIGINALDEF>
+    <CANDIDATES original="fishing_season">
+      <CANDIDATE score="0">pêche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15246258" issue="toomuch">
+    <ORIGINALDEF>a short time; "bide a wee"</ORIGINALDEF>
+    <CANDIDATES original="wee">
+      <CANDIDATE score="0">petit</CANDIDATE>
+      <CANDIDATE score="0">pipi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+</root>

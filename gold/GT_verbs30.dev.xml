@@ -1,0 +1,597 @@
+<VERITE><SYNSET id="00033599">
+    <ORIGINALDEF>have a certain outward or facial expression; "How does she look?"; "The child looks unhappy"; "She looked pale after the surgery"</ORIGINALDEF>
+    <CANDIDATES original="look">
+      <CANDIDATE score="0">chercher</CANDIDATE>
+      <CANDIDATE score="0">donner</CANDIDATE>
+      <CANDIDATE score="0">faire</CANDIDATE>
+      <CANDIDATE score="1">paraître</CANDIDATE>
+      <CANDIDATE score="0">regarder</CANDIDATE>
+      <CANDIDATE score="1">sembler</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00066191">
+    <ORIGINALDEF>shed tears because of sadness, rage, or pain; "She cried bitterly when she heard the news of his death"; "The girl in the wheelchair wept with frustration when she could not get up the stairs"</ORIGINALDEF>
+    <CANDIDATES original="cry">
+      <CANDIDATE score="0">aboyer</CANDIDATE>
+      <CANDIDATE score="0">crier</CANDIDATE>
+      <CANDIDATE score="0">hurler</CANDIDATE>
+      <CANDIDATE score="1">pleurer</CANDIDATE>
+      <CANDIDATE score="0">tambouriner</CANDIDATE>
+      <CANDIDATE score="2">vagir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="weep">
+      <CANDIDATE score="1">pleurer</CANDIDATE>
+      <CANDIDATE score="0">répandre</CANDIDATE>
+      <CANDIDATE score="0">suinter</CANDIDATE>
+      <CANDIDATE score="0">verser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00090075">
+    <ORIGINALDEF>become infected with a canker</ORIGINALDEF>
+    <CANDIDATES original="canker">
+      <CANDIDATE score="0">ronger</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00117346">
+    <ORIGINALDEF>convert into sounds or pictures; "receive the incoming radio signals"</ORIGINALDEF>
+    <CANDIDATES original="receive">
+      <CANDIDATE score="0">accueillir</CANDIDATE>
+      <CANDIDATE score="0">admettre</CANDIDATE>
+      <CANDIDATE score="1">capter</CANDIDATE>
+      <CANDIDATE score="0">encaisser</CANDIDATE>
+      <CANDIDATE score="0">essuyer</CANDIDATE>
+      <CANDIDATE score="0">obtenir</CANDIDATE>
+      <CANDIDATE score="0">percevoir</CANDIDATE>
+      <CANDIDATE score="0">prendre</CANDIDATE>
+      <CANDIDATE score="0">receler</CANDIDATE>
+      <CANDIDATE score="1">recevoir</CANDIDATE>
+      <CANDIDATE score="0">recueillir</CANDIDATE>
+      <CANDIDATE score="0">revêtir</CANDIDATE>
+      <CANDIDATE score="1">réceptionner</CANDIDATE>
+      <CANDIDATE score="0">souffrir</CANDIDATE>
+      <CANDIDATE score="0">subir</CANDIDATE>
+      <CANDIDATE score="0">toucher</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00295120">
+    <ORIGINALDEF>make fit; "This trip will season even the hardiest traveller"</ORIGINALDEF>
+    <CANDIDATES original="harden">
+      <CANDIDATE score="1">affermir</CANDIDATE>
+      <CANDIDATE score="1">aguerrir</CANDIDATE>
+      <CANDIDATE score="1">blinder</CANDIDATE>
+      <CANDIDATE score="1">cuirasser</CANDIDATE>
+      <CANDIDATE score="0">dessécher</CANDIDATE>
+      <CANDIDATE score="0">durcir</CANDIDATE>
+      <CANDIDATE score="1">endurcir</CANDIDATE>
+      <CANDIDATE score="0">indurer</CANDIDATE>
+      <CANDIDATE score="0">racornir</CANDIDATE>
+      <CANDIDATE score="0">radicaliser</CANDIDATE>
+      <CANDIDATE score="0">raffermir</CANDIDATE>
+      <CANDIDATE score="4">s'endurcir</CANDIDATE>
+      <CANDIDATE score="0">s'indurer</CANDIDATE>
+      <CANDIDATE score="0">scléroser</CANDIDATE>
+      <CANDIDATE score="0">se_durcir</CANDIDATE>
+      <CANDIDATE score="0">se_raffermir</CANDIDATE>
+      <CANDIDATE score="0">se_raidir</CANDIDATE>
+      <CANDIDATE score="0">se_scléroser</CANDIDATE>
+      <CANDIDATE score="0">se_tremper</CANDIDATE>
+      <CANDIDATE score="0">tremper</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="season">
+      <CANDIDATE score="0">abreuver</CANDIDATE>
+      <CANDIDATE score="0">assaisonner</CANDIDATE>
+      <CANDIDATE score="0">culotter</CANDIDATE>
+      <CANDIDATE score="0">dessécher</CANDIDATE>
+      <CANDIDATE score="0">relever</CANDIDATE>
+      <CANDIDATE score="0">se_culotter</CANDIDATE>
+      <CANDIDATE score="0">tremper</CANDIDATE>
+      <CANDIDATE score="0">épicer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00432281">
+    <ORIGINALDEF>make more extreme; raise in quantity, degree, or intensity; "heightened interest"</ORIGINALDEF>
+    <CANDIDATES original="heighten">
+      <CANDIDATE score="1">accroître</CANDIDATE>
+      <CANDIDATE score="0">aggraver</CANDIDATE>
+      <CANDIDATE score="1">augmenter</CANDIDATE>
+      <CANDIDATE score="1">exacerber</CANDIDATE>
+      <CANDIDATE score="2">hausser</CANDIDATE>
+      <CANDIDATE score="1">intensifier</CANDIDATE>
+      <CANDIDATE score="0">monter</CANDIDATE>
+      <CANDIDATE score="0">rehausser</CANDIDATE>
+      <CANDIDATE score="2">relever</CANDIDATE>
+      <CANDIDATE score="2">remonter</CANDIDATE>
+      <CANDIDATE score="4">s'intensifier</CANDIDATE>
+      <CANDIDATE score="0">surélever</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00453803">
+    <ORIGINALDEF>fill something that had previously been emptied; "refill my glass, please"</ORIGINALDEF>
+    <CANDIDATES original="fill_again">
+      <CANDIDATE score="0">regarnir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="refill">
+      <CANDIDATE score="2">recharger</CANDIDATE>
+      <CANDIDATE score="2">regarnir</CANDIDATE>
+      <CANDIDATE score="0">remastiquer</CANDIDATE>
+      <CANDIDATE score="1">remplir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="replenish">
+      <CANDIDATE score="2">regarnir</CANDIDATE>
+      <CANDIDATE score="0">remonter</CANDIDATE>
+      <CANDIDATE score="0">renouveler</CANDIDATE>
+      <CANDIDATE score="0">réassortir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00479598">
+    <ORIGINALDEF>make mechanical; "mechanize the procedure"</ORIGINALDEF>
+    <CANDIDATES original="mechanise" />
+    <CANDIDATES original="mechanize">
+      <CANDIDATE score="0">motoriser</CANDIDATE>
+      <CANDIDATE score="1">mécaniser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00530017">
+    <ORIGINALDEF>issue or leak, as from a small opening; "Gas escaped into the bedroom"</ORIGINALDEF>
+    <CANDIDATES original="escape">
+      <CANDIDATE score="1">fuir</CANDIDATE>
+      <CANDIDATE score="0">s'enfuir</CANDIDATE>
+      <CANDIDATE score="1">s'échapper</CANDIDATE>
+      <CANDIDATE score="0">s'évader</CANDIDATE>
+      <CANDIDATE score="4">échapper</CANDIDATE>
+      <CANDIDATE score="0">éviter</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00565481">
+    <ORIGINALDEF>coat with gelatin</ORIGINALDEF>
+    <CANDIDATES original="gelatinize">
+      <CANDIDATE score="1">gélatiner</CANDIDATE>
+      <CANDIDATE score="0">gélatiniser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00576979">
+    <ORIGINALDEF>organize the production of into an industry; "The Chinese industrialized textile production"</ORIGINALDEF>
+    <CANDIDATES original="industrialise" />
+    <CANDIDATES original="industrialize">
+      <CANDIDATE score="1">industrialiser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00588888">
+    <ORIGINALDEF>know and comprehend the nature or meaning of; "She did not understand her husband"; "I understand what she means"</ORIGINALDEF>
+    <CANDIDATES original="understand">
+      <CANDIDATE score="0">capter</CANDIDATE>
+      <CANDIDATE score="1">comprendre</CANDIDATE>
+      <CANDIDATE score="0">concevoir</CANDIDATE>
+      <CANDIDATE score="0">décoder</CANDIDATE>
+      <CANDIDATE score="0">entendre</CANDIDATE>
+      <CANDIDATE score="0">percevoir</CANDIDATE>
+      <CANDIDATE score="0">pénétrer</CANDIDATE>
+      <CANDIDATE score="0">s'expliquer</CANDIDATE>
+      <CANDIDATE score="0">saisir</CANDIDATE>
+      <CANDIDATE score="0">sous-entendre</CANDIDATE>
+      <CANDIDATE score="0">tilter</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00666510">
+    <ORIGINALDEF>support or supply with references; "Can you document your claims?"</ORIGINALDEF>
+    <CANDIDATES original="document">
+      <CANDIDATE score="0">consigner</CANDIDATE>
+      <CANDIDATE score="1">documenter</CANDIDATE>
+      <CANDIDATE score="0">décrire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00733804">
+    <ORIGINALDEF>agree on (a position, for example)</ORIGINALDEF>
+    <CANDIDATES original="fall_in_line" />
+  </SYNSET>
+  <SYNSET id="00747418">
+    <ORIGINALDEF>impose or thrust urgently, importunately, or inexorably; "She forced her diet fads on him"</ORIGINALDEF>
+    <CANDIDATES original="force">
+      <CANDIDATE score="0">arracher</CANDIDATE>
+      <CANDIDATE score="1">contraindre</CANDIDATE>
+      <CANDIDATE score="0">extorquer</CANDIDATE>
+      <CANDIDATE score="1">forcer</CANDIDATE>
+      <CANDIDATE score="0">hâter</CANDIDATE>
+      <CANDIDATE score="1">imposer</CANDIDATE>
+      <CANDIDATE score="1">obliger</CANDIDATE>
+      <CANDIDATE score="2">pousser</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="thrust">
+      <CANDIDATE score="0">assener</CANDIDATE>
+      <CANDIDATE score="0">asséner</CANDIDATE>
+      <CANDIDATE score="0">conférer</CANDIDATE>
+      <CANDIDATE score="0">enfoncer</CANDIDATE>
+      <CANDIDATE score="0">fourrer</CANDIDATE>
+      <CANDIDATE score="1">imposer</CANDIDATE>
+      <CANDIDATE score="0">plonger</CANDIDATE>
+      <CANDIDATE score="2">pousser</CANDIDATE>
+      <CANDIDATE score="0">s'élancer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00973888">
+    <ORIGINALDEF>broadcast again, as of a film</ORIGINALDEF>
+    <CANDIDATES original="rebroadcast">
+      <CANDIDATE score="1">retransmettre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rerun">
+      <CANDIDATE score="1">rediffuser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00991264">
+    <ORIGINALDEF>put a new address on (an envelope), as for forwarding</ORIGINALDEF>
+    <CANDIDATES original="re-address" />
+  </SYNSET>
+  <SYNSET id="01004062">
+    <ORIGINALDEF>make underscoring marks</ORIGINALDEF>
+    <CANDIDATES original="mark">
+      <CANDIDATE score="0">biseauter</CANDIDATE>
+      <CANDIDATE score="0">chiffrer</CANDIDATE>
+      <CANDIDATE score="0">corriger</CANDIDATE>
+      <CANDIDATE score="0">coter</CANDIDATE>
+      <CANDIDATE score="0">estampiller</CANDIDATE>
+      <CANDIDATE score="0">flécher</CANDIDATE>
+      <CANDIDATE score="0">indiquer</CANDIDATE>
+      <CANDIDATE score="0">marbrer</CANDIDATE>
+      <CANDIDATE score="0">marquer</CANDIDATE>
+      <CANDIDATE score="0">matérialiser</CANDIDATE>
+      <CANDIDATE score="0">noter</CANDIDATE>
+      <CANDIDATE score="0">piper</CANDIDATE>
+      <CANDIDATE score="0">se_tacher</CANDIDATE>
+      <CANDIDATE score="0">stigmatiser</CANDIDATE>
+      <CANDIDATE score="0">tacher</CANDIDATE>
+      <CANDIDATE score="0">taveler</CANDIDATE>
+      <CANDIDATE score="0">typer</CANDIDATE>
+      <CANDIDATE score="0">étiqueter</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="score">
+      <CANDIDATE score="0">adapter</CANDIDATE>
+      <CANDIDATE score="0">composer</CANDIDATE>
+      <CANDIDATE score="0">conclure</CANDIDATE>
+      <CANDIDATE score="0">concrétiser</CANDIDATE>
+      <CANDIDATE score="0">entailler</CANDIDATE>
+      <CANDIDATE score="0">entamer</CANDIDATE>
+      <CANDIDATE score="0">inciser</CANDIDATE>
+      <CANDIDATE score="0">inscrire</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">marquer</CANDIDATE>
+      <CANDIDATE score="0">orchestrer</CANDIDATE>
+      <CANDIDATE score="0">rayer</CANDIDATE>
+      <CANDIDATE score="0">saisir</CANDIDATE>
+      <CANDIDATE score="0">strier</CANDIDATE>
+      <CANDIDATE score="0">érafler</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01134375">
+    <ORIGINALDEF>fire as from a gun; "The soldiers let drive their bullets"</ORIGINALDEF>
+    <CANDIDATES original="let_drive" />
+    <CANDIDATES original="let_fly">
+      <CANDIDATE score="0">décocher</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="loose_off">
+      <CANDIDATE score="1">tirer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01138204">
+    <ORIGINALDEF>wait in hiding to attack</ORIGINALDEF>
+    <CANDIDATES original="ambuscade" />
+    <CANDIDATES original="ambush" />
+    <CANDIDATES original="bushwhack" />
+    <CANDIDATES original="lie_in_wait" />
+    <CANDIDATES original="lurk">
+      <CANDIDATE score="0">menacer</CANDIDATE>
+      <CANDIDATE score="0">persister</CANDIDATE>
+      <CANDIDATE score="2">ramper</CANDIDATE>
+      <CANDIDATE score="0">rôder</CANDIDATE>
+      <CANDIDATE score="2">se_cacher</CANDIDATE>
+      <CANDIDATE score="1">se_tapir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="scupper">
+      <CANDIDATE score="0">saborder</CANDIDATE>
+      <CANDIDATE score="0">saboter</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="waylay">
+      <CANDIDATE score="0">assaillir</CANDIDATE>
+      <CANDIDATE score="0">attaquer</CANDIDATE>
+      <CANDIDATE score="0">harponner</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01300655">
+    <ORIGINALDEF>put a bridle on; "bridle horses"</ORIGINALDEF>
+    <CANDIDATES original="bridle">
+      <CANDIDATE score="1">brider</CANDIDATE>
+      <CANDIDATE score="0">refréner</CANDIDATE>
+      <CANDIDATE score="0">regimber</CANDIDATE>
+      <CANDIDATE score="0">réprimer</CANDIDATE>
+      <CANDIDATE score="0">se_rebiffer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01325128">
+    <ORIGINALDEF>kill without delay; "the traitor was dispatched by the conspirators"</ORIGINALDEF>
+    <CANDIDATES original="dispatch">
+      <CANDIDATE score="1">abattre</CANDIDATE>
+      <CANDIDATE score="0">acheminer</CANDIDATE>
+      <CANDIDATE score="0">dispatcher</CANDIDATE>
+      <CANDIDATE score="0">dépêcher</CANDIDATE>
+      <CANDIDATE score="0">détacher</CANDIDATE>
+      <CANDIDATE score="0">envoyer</CANDIDATE>
+      <CANDIDATE score="0">expédier</CANDIDATE>
+      <CANDIDATE score="2">tuer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01349493">
+    <ORIGINALDEF>twist or pull violently or suddenly, especially so as to remove (something) from that to which it is attached or from where it originates; "wrench a window off its hinges"; "wrench oneself free from somebody's grip"; "a deep sigh was wrenched from his chest"</ORIGINALDEF>
+    <CANDIDATES original="twist">
+      <CANDIDATE score="0">altérer</CANDIDATE>
+      <CANDIDATE score="0">avoir</CANDIDATE>
+      <CANDIDATE score="0">contourner</CANDIDATE>
+      <CANDIDATE score="0">corder</CANDIDATE>
+      <CANDIDATE score="0">cordonner</CANDIDATE>
+      <CANDIDATE score="0">distordre</CANDIDATE>
+      <CANDIDATE score="0">déformer</CANDIDATE>
+      <CANDIDATE score="0">dénaturer</CANDIDATE>
+      <CANDIDATE score="0">détourner</CANDIDATE>
+      <CANDIDATE score="0">enrouler</CANDIDATE>
+      <CANDIDATE score="0">entortiller</CANDIDATE>
+      <CANDIDATE score="0">estropier</CANDIDATE>
+      <CANDIDATE score="0">fausser</CANDIDATE>
+      <CANDIDATE score="0">mailler</CANDIDATE>
+      <CANDIDATE score="0">rouler</CANDIDATE>
+      <CANDIDATE score="0">s'enrouler</CANDIDATE>
+      <CANDIDATE score="0">s'entortiller</CANDIDATE>
+      <CANDIDATE score="0">se_retourner</CANDIDATE>
+      <CANDIDATE score="0">se_tordre</CANDIDATE>
+      <CANDIDATE score="0">tirebouchonner</CANDIDATE>
+      <CANDIDATE score="0">tordre</CANDIDATE>
+      <CANDIDATE score="0">torsader</CANDIDATE>
+      <CANDIDATE score="0">tortiller</CANDIDATE>
+      <CANDIDATE score="0">tourner</CANDIDATE>
+      <CANDIDATE score="0">tresser</CANDIDATE>
+      <CANDIDATE score="0">twister</CANDIDATE>
+      <CANDIDATE score="0">visser</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="wrench">
+      <CANDIDATE score="0">se_retourner</CANDIDATE>
+      <CANDIDATE score="0">tordre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01504480">
+    <ORIGINALDEF>fight or struggle in a confused way at close quarters; "the drunken men started to scuffle"</ORIGINALDEF>
+    <CANDIDATES original="scuffle">
+      <CANDIDATE score="1">bagarrer</CANDIDATE>
+      <CANDIDATE score="1">se_bagarrer</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tussle">
+      <CANDIDATE score="1">se_battre</CANDIDATE>
+      <CANDIDATE score="1">se_colleter</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01603303">
+    <ORIGINALDEF>cover with metal</ORIGINALDEF>
+    <CANDIDATES original="metal">
+      <CANDIDATE score="0">caillouter</CANDIDATE>
+      <CANDIDATE score="0">empierrer</CANDIDATE>
+      <CANDIDATE score="1">métalliser</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01682761">
+    <ORIGINALDEF>coat with lacquer; "A lacquered box from China"</ORIGINALDEF>
+    <CANDIDATES original="lacquer">
+      <CANDIDATE score="1">laquer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01751173">
+    <ORIGINALDEF>exaggerate one's acting</ORIGINALDEF>
+    <CANDIDATES original="ham" />
+    <CANDIDATES original="ham_it_up">
+      <CANDIDATE score="1">cabotiner</CANDIDATE>
+      <CANDIDATE score="1">charger</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overact">
+      <CANDIDATE score="1">charger</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="overplay" />
+  </SYNSET>
+  <SYNSET id="01766952">
+    <ORIGINALDEF>lose interest; "he retired from life when his wife died"</ORIGINALDEF>
+    <CANDIDATES original="retire">
+      <CANDIDATE score="0">abandonner</CANDIDATE>
+      <CANDIDATE score="0">partir</CANDIDATE>
+      <CANDIDATE score="0">raccrocher</CANDIDATE>
+      <CANDIDATE score="0">reculer</CANDIDATE>
+      <CANDIDATE score="0">se_coucher</CANDIDATE>
+      <CANDIDATE score="0">se_replier</CANDIDATE>
+      <CANDIDATE score="0">se_retirer</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="withdraw">
+      <CANDIDATE score="0">annuler</CANDIDATE>
+      <CANDIDATE score="0">arrêter</CANDIDATE>
+      <CANDIDATE score="0">désaffecter</CANDIDATE>
+      <CANDIDATE score="4">désengager</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">prélever</CANDIDATE>
+      <CANDIDATE score="0">rappeler</CANDIDATE>
+      <CANDIDATE score="0">replier</CANDIDATE>
+      <CANDIDATE score="0">retirer</CANDIDATE>
+      <CANDIDATE score="0">rétracter</CANDIDATE>
+      <CANDIDATE score="0">s'effacer</CANDIDATE>
+      <CANDIDATE score="0">s'écarter</CANDIDATE>
+      <CANDIDATE score="0">s'éloigner</CANDIDATE>
+      <CANDIDATE score="0">se_dédire</CANDIDATE>
+      <CANDIDATE score="1">se_désengager</CANDIDATE>
+      <CANDIDATE score="0">se_désister</CANDIDATE>
+      <CANDIDATE score="0">se_replier</CANDIDATE>
+      <CANDIDATE score="0">se_retirer</CANDIDATE>
+      <CANDIDATE score="0">se_rétracter</CANDIDATE>
+      <CANDIDATE score="0">supprimer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01939811">
+    <ORIGINALDEF>ride a bobsled; "The boys bobbed down the hill screaming with pleasure"</ORIGINALDEF>
+    <CANDIDATES original="bob">
+      <CANDIDATE score="0">danser</CANDIDATE>
+      <CANDIDATE score="0">écourter</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bobsled" />
+  </SYNSET>
+  <SYNSET id="01973759">
+    <ORIGINALDEF>move upwards; "lift one's eyes"</ORIGINALDEF>
+    <CANDIDATES original="lift">
+      <CANDIDATE score="0">abolir</CANDIDATE>
+      <CANDIDATE score="0">absorber</CANDIDATE>
+      <CANDIDATE score="0">arracher</CANDIDATE>
+      <CANDIDATE score="0">chiper</CANDIDATE>
+      <CANDIDATE score="0">disparaître</CANDIDATE>
+      <CANDIDATE score="0">dresser</CANDIDATE>
+      <CANDIDATE score="0">décrocher</CANDIDATE>
+      <CANDIDATE score="0">déposer</CANDIDATE>
+      <CANDIDATE score="0">enlever</CANDIDATE>
+      <CANDIDATE score="0">grappiller</CANDIDATE>
+      <CANDIDATE score="1">lever</CANDIDATE>
+      <CANDIDATE score="0">piquer</CANDIDATE>
+      <CANDIDATE score="0">prendre</CANDIDATE>
+      <CANDIDATE score="0">ramasser</CANDIDATE>
+      <CANDIDATE score="0">relever</CANDIDATE>
+      <CANDIDATE score="0">se_dissiper</CANDIDATE>
+      <CANDIDATE score="0">se_lever</CANDIDATE>
+      <CANDIDATE score="0">se_soulever</CANDIDATE>
+      <CANDIDATE score="0">soulever</CANDIDATE>
+      <CANDIDATE score="0">supprimer</CANDIDATE>
+      <CANDIDATE score="0">voler</CANDIDATE>
+      <CANDIDATE score="1">élever</CANDIDATE>
+      <CANDIDATE score="0">ôter</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="raise">
+      <CANDIDATE score="0">augmenter</CANDIDATE>
+      <CANDIDATE score="0">bâtir</CANDIDATE>
+      <CANDIDATE score="0">contacter</CANDIDATE>
+      <CANDIDATE score="0">cultiver</CANDIDATE>
+      <CANDIDATE score="0">dresser</CANDIDATE>
+      <CANDIDATE score="0">enfler</CANDIDATE>
+      <CANDIDATE score="0">exhausser</CANDIDATE>
+      <CANDIDATE score="0">forcer</CANDIDATE>
+      <CANDIDATE score="0">grossir</CANDIDATE>
+      <CANDIDATE score="0">guinder</CANDIDATE>
+      <CANDIDATE score="0">hausser</CANDIDATE>
+      <CANDIDATE score="1">lever</CANDIDATE>
+      <CANDIDATE score="0">majorer</CANDIDATE>
+      <CANDIDATE score="0">mobiliser</CANDIDATE>
+      <CANDIDATE score="0">provoquer</CANDIDATE>
+      <CANDIDATE score="0">présenter</CANDIDATE>
+      <CANDIDATE score="0">ramasser</CANDIDATE>
+      <CANDIDATE score="0">rassembler</CANDIDATE>
+      <CANDIDATE score="0">recueillir</CANDIDATE>
+      <CANDIDATE score="0">reculer</CANDIDATE>
+      <CANDIDATE score="0">rehausser</CANDIDATE>
+      <CANDIDATE score="0">relancer</CANDIDATE>
+      <CANDIDATE score="2">relever</CANDIDATE>
+      <CANDIDATE score="2">remonter</CANDIDATE>
+      <CANDIDATE score="0">rentrer</CANDIDATE>
+      <CANDIDATE score="0">ressusciter</CANDIDATE>
+      <CANDIDATE score="0">revaloriser</CANDIDATE>
+      <CANDIDATE score="0">réunir</CANDIDATE>
+      <CANDIDATE score="0">se_procurer</CANDIDATE>
+      <CANDIDATE score="2">soulever</CANDIDATE>
+      <CANDIDATE score="0">surhausser</CANDIDATE>
+      <CANDIDATE score="2">surélever</CANDIDATE>
+      <CANDIDATE score="0">édifier</CANDIDATE>
+      <CANDIDATE score="0">éduquer</CANDIDATE>
+      <CANDIDATE score="1">élever</CANDIDATE>
+      <CANDIDATE score="0">épauler</CANDIDATE>
+      <CANDIDATE score="0">ériger</CANDIDATE>
+      <CANDIDATE score="0">évoquer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02313250">
+    <ORIGINALDEF>keep from having, keeping, or obtaining</ORIGINALDEF>
+    <CANDIDATES original="deprive">
+      <CANDIDATE score="1">déposséder</CANDIDATE>
+      <CANDIDATE score="2">déshériter</CANDIDATE>
+      <CANDIDATE score="1">enlever</CANDIDATE>
+      <CANDIDATE score="1">priver</CANDIDATE>
+      <CANDIDATE score="1">ôter</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02330583">
+    <ORIGINALDEF>furnish with a grate; "a grated fireplace"</ORIGINALDEF>
+    <CANDIDATES original="grate">
+      <CANDIDATE score="0">crisser</CANDIDATE>
+      <CANDIDATE score="0">grincer</CANDIDATE>
+      <CANDIDATE score="0">râper</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02362130">
+    <ORIGINALDEF>move from one place to another, especially of wild animals; "The endangered turtles were translocated to a safe environment"</ORIGINALDEF>
+    <CANDIDATES original="translocate" />
+  </SYNSET>
+  <SYNSET id="02363742">
+    <ORIGINALDEF>record, add up, and receive payment for items purchased; "She was checking out the apples that the customer had put on the conveyer belt"</ORIGINALDEF>
+    <CANDIDATES original="check_out">
+      <CANDIDATE score="0">mourir</CANDIDATE>
+      <CANDIDATE score="0">retirer</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02385813">
+    <ORIGINALDEF>assign the roles of (a movie or a play) to actors; "Who cast this beautiful movie?"</ORIGINALDEF>
+    <CANDIDATES original="cast">
+      <CANDIDATE score="0">ancrer</CANDIDATE>
+      <CANDIDATE score="0">cataloguer</CANDIDATE>
+      <CANDIDATE score="0">couler</CANDIDATE>
+      <CANDIDATE score="0">fondre</CANDIDATE>
+      <CANDIDATE score="0">jeter</CANDIDATE>
+      <CANDIDATE score="0">lancer</CANDIDATE>
+      <CANDIDATE score="0">mouler</CANDIDATE>
+      <CANDIDATE score="0">projeter</CANDIDATE>
+      <CANDIDATE score="0">étiqueter</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02483564">
+    <ORIGINALDEF>pull (a person) apart with four horses tied to his extremities, so as to execute him; "in the old days, people were drawn and quartered for certain crimes"</ORIGINALDEF>
+    <CANDIDATES original="draw">
+      <CANDIDATE score="0">arracher</CANDIDATE>
+      <CANDIDATE score="0">aspirer</CANDIDATE>
+      <CANDIDATE score="0">attirer</CANDIDATE>
+      <CANDIDATE score="0">dessiner</CANDIDATE>
+      <CANDIDATE score="0">défourailler</CANDIDATE>
+      <CANDIDATE score="0">dégager</CANDIDATE>
+      <CANDIDATE score="0">dégainer</CANDIDATE>
+      <CANDIDATE score="0">dégrosser</CANDIDATE>
+      <CANDIDATE score="0">dépeindre</CANDIDATE>
+      <CANDIDATE score="0">engrener</CANDIDATE>
+      <CANDIDATE score="0">enlever</CANDIDATE>
+      <CANDIDATE score="0">extraire</CANDIDATE>
+      <CANDIDATE score="0">faire</CANDIDATE>
+      <CANDIDATE score="0">fermer</CANDIDATE>
+      <CANDIDATE score="0">fileter</CANDIDATE>
+      <CANDIDATE score="0">infuser</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">peindre</CANDIDATE>
+      <CANDIDATE score="0">puiser</CANDIDATE>
+      <CANDIDATE score="0">ramener</CANDIDATE>
+      <CANDIDATE score="0">remorquer</CANDIDATE>
+      <CANDIDATE score="0">retirer</CANDIDATE>
+      <CANDIDATE score="0">se_diriger</CANDIDATE>
+      <CANDIDATE score="0">solliciter</CANDIDATE>
+      <CANDIDATE score="0">tirer</CANDIDATE>
+      <CANDIDATE score="0">toucher</CANDIDATE>
+      <CANDIDATE score="0">tracer</CANDIDATE>
+      <CANDIDATE score="0">tracter</CANDIDATE>
+      <CANDIDATE score="0">traire</CANDIDATE>
+      <CANDIDATE score="0">traîner</CANDIDATE>
+      <CANDIDATE score="0">tréfiler</CANDIDATE>
+      <CANDIDATE score="0">vider</CANDIDATE>
+      <CANDIDATE score="0">écarter</CANDIDATE>
+      <CANDIDATE score="0">émettre</CANDIDATE>
+      <CANDIDATE score="0">établir</CANDIDATE>
+      <CANDIDATE score="0">étirer</CANDIDATE>
+      <CANDIDATE score="0">étriper</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="draw_and_quarter" />
+    <CANDIDATES original="quarter">
+      <CANDIDATE score="0">cantonner</CANDIDATE>
+      <CANDIDATE score="0">caserner</CANDIDATE>
+      <CANDIDATE score="0">loger</CANDIDATE>
+      <CANDIDATE score="1">écarteler</CANDIDATE>
+      <CANDIDATE score="0">équarrir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  </VERITE>

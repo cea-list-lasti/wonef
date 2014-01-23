@@ -1,0 +1,10 @@
+Various python scripts that helped the paper (mostly stats about wordnets)
+
+* nocandidates.py finds the amount of synsets with no translations in WoNeF
+* badsynsets.py finds synsets without any valid candidates: it's an easy to find synsets that don't map properly to French
+* reasonbads.py reads an gold standard annotated with error informations and display stats on those errors
+* bestexamples.py was used for the paper to find a good meronymy example
+* compareboth.py compares WOLF against WoNeF to show how large a merger would be
+* mwe.py computes the number of MWE in PWN
+* nbpolysemous counts the number of polysemous synsets in PWN
+

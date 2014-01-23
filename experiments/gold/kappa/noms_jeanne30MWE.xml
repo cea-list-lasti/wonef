@@ -1,0 +1,5089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VERITE>
+  <SYNSET id="00031921">
+    <ORIGINALDEF/>
+    <CANDIDATES original="relation">
+      <CANDIDATE score="0">connexité</CANDIDATE>
+      <CANDIDATE score="0">correspondance</CANDIDATE>
+      <CANDIDATE score="0">filiation</CANDIDATE>
+      <CANDIDATE score="0">parent</CANDIDATE>
+      <CANDIDATE score="0">parente</CANDIDATE>
+      <CANDIDATE score="0">rapport</CANDIDATE>
+      <CANDIDATE score="1">relation</CANDIDATE>
+      <CANDIDATE score="0">récit</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00074524">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lapse">
+      <CANDIDATE score="0">disparition</CANDIDATE>
+      <CANDIDATE score="0">déchéance</CANDIDATE>
+      <CANDIDATE score="0">défaillance</CANDIDATE>
+      <CANDIDATE score="0">faute</CANDIDATE>
+      <CANDIDATE score="0">intervalle</CANDIDATE>
+      <CANDIDATE score="1">oubli</CANDIDATE>
+      <CANDIDATE score="0">rechute</CANDIDATE>
+      <CANDIDATE score="0">tomber</CANDIDATE>
+      <CANDIDATE score="0">écart</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="oversight">
+      <CANDIDATE score="0">inadvertance</CANDIDATE>
+      <CANDIDATE score="1">omission</CANDIDATE>
+      <CANDIDATE score="1">oubli</CANDIDATE>
+      <CANDIDATE score="0">surveillance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00098625">
+    <ORIGINALDEF/>
+    <CANDIDATES original="service">
+      <CANDIDATE score="0">culte</CANDIDATE>
+      <CANDIDATE score="0">engagement</CANDIDATE>
+      <CANDIDATE score="0">entretien</CANDIDATE>
+      <CANDIDATE score="0">office</CANDIDATE>
+      <CANDIDATE score="1">prestation</CANDIDATE>
+      <CANDIDATE score="0">révision</CANDIDATE>
+      <CANDIDATE score="1">service</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00143885">
+    <ORIGINALDEF/>
+    <CANDIDATES original="palpation">
+      <CANDIDATE score="0">attouchement</CANDIDATE>
+      <CANDIDATE score="1">palpation</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tactual_exploration"/>
+  </SYNSET>
+  <SYNSET id="00160073">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ingratiation"/>
+    <CANDIDATES original="insinuation">
+      <CANDIDATE score="0">allusion</CANDIDATE>
+      <CANDIDATE score="0">insinuation</CANDIDATE>
+      <CANDIDATE score="0">propos</CANDIDATE>
+      <CANDIDATE score="0">sous-entendu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00166355">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chess_move"/>
+  </SYNSET>
+  <SYNSET id="00183084">
+    <ORIGINALDEF/>
+    <CANDIDATES original="open_primary"/>
+  </SYNSET>
+  <SYNSET id="00231567">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nullification">
+      <CANDIDATE score="1">annulation</CANDIDATE>
+      <CANDIDATE score="0">infirmation</CANDIDATE>
+      <CANDIDATE score="1">invalidation</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="override"/>
+  </SYNSET>
+  <SYNSET id="00239910">
+    <ORIGINALDEF/>
+    <CANDIDATES original="inauguration">
+      <CANDIDATE score="1">inauguration</CANDIDATE>
+      <CANDIDATE score="0">intronisation</CANDIDATE>
+      <CANDIDATE score="0">investiture</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="startup"/>
+  </SYNSET>
+  <SYNSET id="00265992">
+    <ORIGINALDEF/>
+    <CANDIDATES original="enhancement">
+      <CANDIDATE score="1">amélioration</CANDIDATE>
+      <CANDIDATE score="0">majoration</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sweetening">
+      <CANDIDATE score="0">adoucissement</CANDIDATE>
+      <CANDIDATE score="0">sucrage</CANDIDATE>
+      <CANDIDATE score="0">sucrant</CANDIDATE>
+      <CANDIDATE score="0">édulcorant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00279235">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gumming">
+      <CANDIDATE score="0">gommage</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mumbling">
+      <CANDIDATE score="0">balbutiement</CANDIDATE>
+      <CANDIDATE score="0">bredouillage</CANDIDATE>
+      <CANDIDATE score="0">bredouilleur</CANDIDATE>
+      <CANDIDATE score="0">marmonnement</CANDIDATE>
+      <CANDIDATE score="0">marmottement</CANDIDATE>
+      <CANDIDATE score="0">ânonnement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00299680">
+    <ORIGINALDEF/>
+    <CANDIDATES original="roping"/>
+  </SYNSET>
+  <SYNSET id="00316460">
+    <ORIGINALDEF/>
+    <CANDIDATES original="transshipment">
+      <CANDIDATE score="1">transbordement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00357680">
+    <ORIGINALDEF/>
+    <CANDIDATES original="condensation">
+      <CANDIDATE score="0">buée</CANDIDATE>
+      <CANDIDATE score="1">condensation</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="condensing"/>
+  </SYNSET>
+  <SYNSET id="00362103">
+    <ORIGINALDEF/>
+    <CANDIDATES original="deduction">
+      <CANDIDATE score="0">décomptage</CANDIDATE>
+      <CANDIDATE score="1">décompte</CANDIDATE>
+      <CANDIDATE score="1">déduction</CANDIDATE>
+      <CANDIDATE score="0">défalcation</CANDIDATE>
+      <CANDIDATE score="0">précompte</CANDIDATE>
+      <CANDIDATE score="0">prélèvement</CANDIDATE>
+      <CANDIDATE score="0">retenue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="discount">
+      <CANDIDATE score="0">bonification</CANDIDATE>
+      <CANDIDATE score="0">discount</CANDIDATE>
+      <CANDIDATE score="0">discounter</CANDIDATE>
+      <CANDIDATE score="0">décote</CANDIDATE>
+      <CANDIDATE score="0">déport</CANDIDATE>
+      <CANDIDATE score="0">escompte</CANDIDATE>
+      <CANDIDATE score="1">rabais</CANDIDATE>
+      <CANDIDATE score="1">remise</CANDIDATE>
+      <CANDIDATE score="1">ristourne</CANDIDATE>
+      <CANDIDATE score="1">réduction</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="price_reduction"/>
+  </SYNSET>
+  <SYNSET id="00387326">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scission">
+      <CANDIDATE score="1">scission</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00413554">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Americanism">
+      <CANDIDATE score="0">américanisme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00441686">
+    <ORIGINALDEF/>
+    <CANDIDATES original="telemark">
+      <CANDIDATE score="1">télémark</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00442981">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dive">
+      <CANDIDATE score="0">bouge</CANDIDATE>
+      <CANDIDATE score="0">estaminet</CANDIDATE>
+      <CANDIDATE score="1">piqué</CANDIDATE>
+      <CANDIDATE score="1">plongeon</CANDIDATE>
+      <CANDIDATE score="0">plongée</CANDIDATE>
+      <CANDIDATE score="0">tripot</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="diving">
+      <CANDIDATE score="0">immersion</CANDIDATE>
+      <CANDIDATE score="1">plongeon</CANDIDATE>
+      <CANDIDATE score="0">plongeur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00485081">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hopscotch">
+      <CANDIDATE score="1">marelle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00508091">
+    <ORIGINALDEF/>
+    <CANDIDATES original="drawing">
+      <CANDIDATE score="0">crayonnage</CANDIDATE>
+      <CANDIDATE score="0">dessin</CANDIDATE>
+      <CANDIDATE score="0">puisage</CANDIDATE>
+      <CANDIDATE score="1">tirage</CANDIDATE>
+      <CANDIDATE score="0">traçage</CANDIDATE>
+      <CANDIDATE score="0">émission</CANDIDATE>
+      <CANDIDATE score="0">étirage</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lottery">
+      <CANDIDATE score="1">loterie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00515159">
+    <ORIGINALDEF/>
+    <CANDIDATES original="leg-pull">
+      <CANDIDATE score="1">canular</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="leg-pulling">
+      <CANDIDATE score="0">canulars</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00540211">
+    <ORIGINALDEF/>
+    <CANDIDATES original="reel">
+      <CANDIDATE score="0">bande</CANDIDATE>
+      <CANDIDATE score="0">bobine</CANDIDATE>
+      <CANDIDATE score="0">bobinot</CANDIDATE>
+      <CANDIDATE score="0">dévidoir</CANDIDATE>
+      <CANDIDATE score="0">moulinet</CANDIDATE>
+      <CANDIDATE score="0">rabatteur</CANDIDATE>
+      <CANDIDATE score="0">reel</CANDIDATE>
+      <CANDIDATE score="0">rouleau</CANDIDATE>
+      <CANDIDATE score="0">touret</CANDIDATE>
+      <CANDIDATE score="0">vaciller</CANDIDATE>
+      <CANDIDATE score="0">chanceler</CANDIDATE>
+      <CANDIDATE score="1">quadrille_écossais</CANDIDATE>
+      <CANDIDATE score="0">tituber</CANDIDATE>
+      <CANDIDATE score="0">bobiner</CANDIDATE>
+      <CANDIDATE score="0">tanguer</CANDIDATE>
+      <CANDIDATE score="0">chavirer</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Scottish_reel"/>
+  </SYNSET>
+  <SYNSET id="00569361">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lob">
+      <CANDIDATE score="1">chandelle</CANDIDATE>
+      <CANDIDATE score="0">lancer</CANDIDATE>
+      <CANDIDATE score="1">lob</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00575083">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thrash">
+      <CANDIDATE score="0">sauterie</CANDIDATE>
+      <CANDIDATE score="0">thrash</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00596193">
+    <ORIGINALDEF/>
+    <CANDIDATES original="praetorship"/>
+  </SYNSET>
+  <SYNSET id="00677038">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hypophysectomy"/>
+  </SYNSET>
+  <SYNSET id="00690132">
+    <ORIGINALDEF/>
+    <CANDIDATES original="phlebectomy"/>
+  </SYNSET>
+  <SYNSET id="00696650">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gastric_lavage"/>
+  </SYNSET>
+  <SYNSET id="00699872">
+    <ORIGINALDEF/>
+    <CANDIDATES original="laying_on_of_hands"/>
+  </SYNSET>
+  <SYNSET id="00719148">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scumble">
+      <CANDIDATE score="1">frottis</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00722479">
+    <ORIGINALDEF/>
+    <CANDIDATES original="position">
+      <CANDIDATE score="0">condition</CANDIDATE>
+      <CANDIDATE score="0">emplacement</CANDIDATE>
+      <CANDIDATE score="0">emploi</CANDIDATE>
+      <CANDIDATE score="0">opinion</CANDIDATE>
+      <CANDIDATE score="0">place</CANDIDATE>
+      <CANDIDATE score="0">placer</CANDIDATE>
+      <CANDIDATE score="0">point</CANDIDATE>
+      <CANDIDATE score="1">position</CANDIDATE>
+      <CANDIDATE score="1">poste</CANDIDATE>
+      <CANDIDATE score="0">poster</CANDIDATE>
+      <CANDIDATE score="0">posture</CANDIDATE>
+      <CANDIDATE score="0">qualité</CANDIDATE>
+      <CANDIDATE score="0">situation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00726867">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fullback">
+      <CANDIDATE score="1">arrière</CANDIDATE>
+      <CANDIDATE score="2">stoppeur</CANDIDATE>
+      <CANDIDATE score="2">stoppeuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00749767">
+    <ORIGINALDEF/>
+    <CANDIDATES original="betrayal">
+      <CANDIDATE score="0">divulgation</CANDIDATE>
+      <CANDIDATE score="0">manifestation</CANDIDATE>
+      <CANDIDATE score="1">parjure</CANDIDATE>
+      <CANDIDATE score="0">révélation</CANDIDATE>
+      <CANDIDATE score="1">trahison</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="perfidy">
+      <CANDIDATE score="1">félonie</CANDIDATE>
+      <CANDIDATE score="0">perfidie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="treachery">
+      <CANDIDATE score="0">déloyauté</CANDIDATE>
+      <CANDIDATE score="0">fourberie</CANDIDATE>
+      <CANDIDATE score="0">perfidie</CANDIDATE>
+      <CANDIDATE score="1">trahison</CANDIDATE>
+      <CANDIDATE score="1">traîtrise</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="treason">
+      <CANDIDATE score="1">trahison</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00779248">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bunco">
+      <CANDIDATE score="1">arnaque</CANDIDATE>
+      <CANDIDATE score="1">escroquerie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bunco_game"/>
+    <CANDIDATES original="bunko"/>
+    <CANDIDATES original="bunko_game"/>
+    <CANDIDATES original="con">
+      <CANDIDATE score="1">arnaque</CANDIDATE>
+      <CANDIDATE score="1">attrape-couillon</CANDIDATE>
+      <CANDIDATE score="1">attrape-nigaud</CANDIDATE>
+      <CANDIDATE score="0">avoir</CANDIDATE>
+      <CANDIDATE score="0">taulard</CANDIDATE>
+      <CANDIDATE score="0">taularde</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="con_game">
+      <CANDIDATE score="1">attrape-couillon</CANDIDATE>
+      <CANDIDATE score="1">attrape-nigaud</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="confidence_game">
+      <CANDIDATE score="1">escroquerie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="confidence_trick"/>
+    <CANDIDATES original="flimflam">
+      <CANDIDATE score="0">balivernes</CANDIDATE>
+      <CANDIDATE score="0">blague</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gyp">
+      <CANDIDATE score="0">arnaqueur</CANDIDATE>
+      <CANDIDATE score="0">carotteur</CANDIDATE>
+      <CANDIDATE score="0">domestique</CANDIDATE>
+      <CANDIDATE score="0">escroc</CANDIDATE>
+      <CANDIDATE score="1">escroquerie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hustle">
+      <CANDIDATE score="0">bousculade</CANDIDATE>
+      <CANDIDATE score="0">racket</CANDIDATE>
+      <CANDIDATE score="0">tohu-bohu</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sting">
+      <CANDIDATE score="0">aiguillon</CANDIDATE>
+      <CANDIDATE score="1">arnaque</CANDIDATE>
+      <CANDIDATE score="0">avoir</CANDIDATE>
+      <CANDIDATE score="0">brûlure</CANDIDATE>
+      <CANDIDATE score="0">causticité</CANDIDATE>
+      <CANDIDATE score="0">dard</CANDIDATE>
+      <CANDIDATE score="0">mordant</CANDIDATE>
+      <CANDIDATE score="0">piqûre</CANDIDATE>
+      <CANDIDATE score="0">vigueur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00827379">
+    <ORIGINALDEF/>
+    <CANDIDATES original="facing">
+      <CANDIDATE score="0">maçonnage</CANDIDATE>
+      <CANDIDATE score="0">parement</CANDIDATE>
+      <CANDIDATE score="0">parementure</CANDIDATE>
+      <CANDIDATE score="0">placage</CANDIDATE>
+      <CANDIDATE score="0">revers</CANDIDATE>
+      <CANDIDATE score="0">revêtement</CANDIDATE>
+      <CANDIDATE score="0">tirant</CANDIDATE>
+      <CANDIDATE score="0">face_à</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lining">
+      <CANDIDATE score="0">matelassure</CANDIDATE>
+      <CANDIDATE score="0">doublage</CANDIDATE>
+      <CANDIDATE score="2">plâtrage</CANDIDATE>
+      <CANDIDATE score="0">paroi</CANDIDATE>
+      <CANDIDATE score="0">coiffe</CANDIDATE>
+      <CANDIDATE score="0">chemisage</CANDIDATE>
+      <CANDIDATE score="0">chemise</CANDIDATE>
+      <CANDIDATE score="0">garniture</CANDIDATE>
+      <CANDIDATE score="1">revêtement</CANDIDATE>
+      <CANDIDATE score="2">doublure</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00792954">
+    <ORIGINALDEF/>
+    <CANDIDATES original="phase_II_clinical_trial"/>
+    <CANDIDATES original="phase_II"/>
+  </SYNSET>
+  <SYNSET id="00797581">
+    <ORIGINALDEF/>
+    <CANDIDATES original="proposition">
+      <CANDIDATE score="1">offre</CANDIDATE>
+      <CANDIDATE score="1">proposition</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00818678">
+    <ORIGINALDEF/>
+    <CANDIDATES original="custody">
+      <CANDIDATE score="0">captivité</CANDIDATE>
+      <CANDIDATE score="0">emprisonnement</CANDIDATE>
+      <CANDIDATE score="1">garde</CANDIDATE>
+      <CANDIDATE score="0">prévention</CANDIDATE>
+      <CANDIDATE score="0">tenue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="hands"/>
+  </SYNSET>
+  <SYNSET id="00820232">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Manhattan_Project"/>
+  </SYNSET>
+  <SYNSET id="00840363">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gulp">
+      <CANDIDATE score="0">bouchée</CANDIDATE>
+      <CANDIDATE score="0">gorgée</CANDIDATE>
+      <CANDIDATE score="0">goulée</CANDIDATE>
+      <CANDIDATE score="0">lampée</CANDIDATE>
+      <CANDIDATE score="0">trait</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gulping"/>
+  </SYNSET>
+  <SYNSET id="00880563">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stargazing">
+      <CANDIDATE score="0">rêvasserie</CANDIDATE>
+      <CANDIDATE score="0">rêverie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00887081">
+    <ORIGINALDEF/>
+    <CANDIDATES original="instruction">
+      <CANDIDATE score="0">directive</CANDIDATE>
+      <CANDIDATE score="1">enseignement</CANDIDATE>
+      <CANDIDATE score="0">indication</CANDIDATE>
+      <CANDIDATE score="1">instruction</CANDIDATE>
+      <CANDIDATE score="0">prescription</CANDIDATE>
+      <CANDIDATE score="0">réquisitoire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pedagogy">
+      <CANDIDATE score="1">pédagogie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="teaching">
+      <CANDIDATE score="0">enseignant</CANDIDATE>
+      <CANDIDATE score="1">enseignement</CANDIDATE>
+      <CANDIDATE score="4">enseignements</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00943600">
+    <ORIGINALDEF/>
+    <CANDIDATES original="amnio"/>
+    <CANDIDATES original="amniocentesis">
+      <CANDIDATE score="1">amniocentèse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="00979742">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bombing">
+      <CANDIDATE score="1">bombardement</CANDIDATE>
+      <CANDIDATE score="1">plasticage</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01013434">
+    <ORIGINALDEF/>
+    <CANDIDATES original="relegation">
+      <CANDIDATE score="0">déclassement</CANDIDATE>
+      <CANDIDATE score="0">relégation</CANDIDATE>
+      <CANDIDATE score="0">renvoi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01086945">
+    <ORIGINALDEF/>
+    <CANDIDATES original="social_welfare">
+      <CANDIDATE score="1">sécurité_sociale</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="welfare">
+      <CANDIDATE score="0">bien</CANDIDATE>
+      <CANDIDATE score="0">bien-être</CANDIDATE>
+      <CANDIDATE score="0">chômedu</CANDIDATE>
+      <CANDIDATE score="0">salut</CANDIDATE>
+      <CANDIDATE score="0">gratuit</CANDIDATE>
+      <CANDIDATE score="1">aide_sociale</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="public_assistance"/>
+  </SYNSET>
+  <SYNSET id="01109467">
+    <ORIGINALDEF/>
+    <CANDIDATES original="exchange">
+      <CANDIDATE score="0">bourse</CANDIDATE>
+      <CANDIDATE score="0">central</CANDIDATE>
+      <CANDIDATE score="0">change</CANDIDATE>
+      <CANDIDATE score="0">duo</CANDIDATE>
+      <CANDIDATE score="1">troc</CANDIDATE>
+      <CANDIDATE score="1">échange</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01125959">
+    <ORIGINALDEF/>
+    <CANDIDATES original="criminalisation"/>
+    <CANDIDATES original="criminalization">
+      <CANDIDATE score="0">criminalisation</CANDIDATE>
+      <CANDIDATE score="1">pénalisation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01153548"><ORIGINALDEF/>?
+    <CANDIDATES original="discrimination"><CANDIDATE score="0">discernement</CANDIDATE><CANDIDATE score="1">discrimination</CANDIDATE><CANDIDATE score="0">distinction</CANDIDATE><CANDIDATE score="0">jugement</CANDIDATE><CANDIDATE score="0">séparation</CANDIDATE></CANDIDATES><CANDIDATES original="favoritism"><CANDIDATE score="1">favoritisme</CANDIDATE></CANDIDATES><CANDIDATES original="favouritism"><CANDIDATE score="1">favoritisme</CANDIDATE></CANDIDATES></SYNSET>
+  <SYNSET id="01158190">
+    <ORIGINALDEF/>
+    <CANDIDATES original="demobilisation"/>
+    <CANDIDATES original="demobilization">
+      <CANDIDATE score="1">démobilisation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01237872">
+    <ORIGINALDEF/>
+    <CANDIDATES original="centralisation"/>
+    <CANDIDATES original="centralization">
+      <CANDIDATE score="1">centralisation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01285784">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Battle_of_Magenta"/>
+    <CANDIDATES original="Magenta"/>
+  </SYNSET>
+  <SYNSET id="01320093">
+    <ORIGINALDEF/>
+    <CANDIDATES original="diploid"/>
+  </SYNSET>
+  <SYNSET id="01333082">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Arenaviridae"/>
+  </SYNSET>
+  <SYNSET id="01338685">
+    <ORIGINALDEF/>
+    <CANDIDATES original="herpes">
+      <CANDIDATE score="1">herpès</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="herpes_virus"/>
+  </SYNSET>
+  <SYNSET id="01351170">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Brucella">
+      <CANDIDATE score="1">brucella</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01359070">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Nostocaceae"/>
+    <CANDIDATES original="family_Nostocaceae"/>
+  </SYNSET>
+  <SYNSET id="01366881">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Listeria"/>
+  </SYNSET>
+  <SYNSET id="01371483">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rickettsia">
+      <CANDIDATE score="1">rickettsie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01386494">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Protoctista"/>
+    <CANDIDATES original="kingdom_Protoctista"/>
+  </SYNSET>
+  <SYNSET id="01428003">
+    <ORIGINALDEF/>
+    <CANDIDATES original="plasmodium">
+      <CANDIDATE score="1">plasmode</CANDIDATE>
+      <CANDIDATE score="1">plasmodium</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01531344">
+    <ORIGINALDEF/>
+    <CANDIDATES original="linnet">
+      <CANDIDATE score="1">linotte</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="lintwhite"/>
+    <CANDIDATES original="Carduelis_cannabina"/>
+  </SYNSET>
+  <SYNSET id="01601410">
+    <ORIGINALDEF/>
+    <CANDIDATES original="great_bowerbird"/>
+    <CANDIDATES original="Chlamydera_nuchalis"/>
+  </SYNSET>
+  <SYNSET id="01623425">
+    <ORIGINALDEF/>
+    <CANDIDATES original="screech_owl">
+      <CANDIDATE score="1">chat-huant</CANDIDATE>
+      <CANDIDATE score="0">chouette-effraie</CANDIDATE>
+      <CANDIDATE score="0">chouette_effraie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Otus_asio"/>
+  </SYNSET>
+  <SYNSET id="01773549">
+    <ORIGINALDEF/>
+    <CANDIDATES original="barn_spider"/>
+    <CANDIDATES original="Araneus_cavaticus"/>
+  </SYNSET>
+  <SYNSET id="01787191">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Merostomata"/>
+    <CANDIDATES original="class_Merostomata"/>
+  </SYNSET>
+  <SYNSET id="01809106">
+    <ORIGINALDEF/>
+    <CANDIDATES original="guinea">
+      <CANDIDATE score="0">guinée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="guinea_fowl"/>
+    <CANDIDATES original="Numida_meleagris"/>
+  </SYNSET>
+  <SYNSET id="01813532">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Streptopelia_turtur"/>
+  </SYNSET>
+  <SYNSET id="01820937">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Trichoglossus"/>
+    <CANDIDATES original="Trichoglossus"/>
+  </SYNSET>
+  <SYNSET id="01923171">
+    <ORIGINALDEF/>
+    <CANDIDATES original="phylum_Acanthocephala"/>
+    <CANDIDATES original="Acanthocephala">
+      <CANDIDATE score="1">acanthocéphale</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="01982482">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Reptantia"/>
+    <CANDIDATES original="suborder_Reptantia"/>
+  </SYNSET>
+  <SYNSET id="02046759">
+    <ORIGINALDEF/>
+    <CANDIDATES original="guillemot">
+      <CANDIDATE score="1">guillemot</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02081927">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Odobenus_divergens"/>
+    <CANDIDATES original="Pacific_walrus"/>
+  </SYNSET>
+  <SYNSET id="02086478">
+    <ORIGINALDEF/>
+    <CANDIDATES original="English_toy_spaniel"/>
+  </SYNSET>
+  <SYNSET id="02120079">
+    <ORIGINALDEF/>
+    <CANDIDATES original="white_fox">
+      <CANDIDATE score="1">renard_blanc</CANDIDATE>
+      <CANDIDATE score="1">renard_polaire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Arctic_fox"/>
+    <CANDIDATES original="Alopex_lagopus"/>
+  </SYNSET>
+  <SYNSET id="02137015">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genet">
+      <CANDIDATE score="1">genette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Genetta_genetta"/>
+  </SYNSET>
+  <SYNSET id="02156732">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tetrapod">
+      <CANDIDATE score="1">tétrapode</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02162404">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Panorpidae"/>
+    <CANDIDATES original="family_Panorpidae"/>
+  </SYNSET>
+  <SYNSET id="02202006">
+    <ORIGINALDEF/>
+    <CANDIDATES original="common_mosquito"/>
+    <CANDIDATES original="Culex_pipiens"/>
+  </SYNSET>
+  <SYNSET id="02236355">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bug">
+      <CANDIDATE score="1">bestiole</CANDIDATE>
+      <CANDIDATE score="0">bibite</CANDIDATE>
+      <CANDIDATE score="0">bibitte</CANDIDATE>
+      <CANDIDATE score="0">bogue</CANDIDATE>
+      <CANDIDATE score="0">bug</CANDIDATE>
+      <CANDIDATE score="0">bébête</CANDIDATE>
+      <CANDIDATE score="0">coccinelle</CANDIDATE>
+      <CANDIDATE score="0">défaut</CANDIDATE>
+      <CANDIDATE score="0">erreur</CANDIDATE>
+      <CANDIDATE score="0">inconvénient</CANDIDATE>
+      <CANDIDATE score="0">insecte</CANDIDATE>
+      <CANDIDATE score="0">micro</CANDIDATE>
+      <CANDIDATE score="0">microbe</CANDIDATE>
+      <CANDIDATE score="0">punaise</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02255391">
+    <ORIGINALDEF/>
+    <CANDIDATES original="woolly_adelgid"/>
+  </SYNSET>
+  <SYNSET id="02265177">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Hemerobiidae"/>
+    <CANDIDATES original="family_Hemerobiidae"/>
+  </SYNSET>
+  <SYNSET id="02272428">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Thrips"/>
+  </SYNSET>
+  <SYNSET id="02298379">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Sphingidae"/>
+    <CANDIDATES original="family_Sphingidae"/>
+  </SYNSET>
+  <SYNSET id="02302969">
+    <ORIGINALDEF/>
+    <CANDIDATES original="luna_moth"/>
+    <CANDIDATES original="Actias_luna"/>
+  </SYNSET>
+  <SYNSET id="02322387">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tube_foot"/>
+  </SYNSET>
+  <SYNSET id="02323186">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lagomorpha"/>
+    <CANDIDATES original="order_Lagomorpha"/>
+  </SYNSET>
+  <SYNSET id="02332755">
+    <ORIGINALDEF/>
+    <CANDIDATES original="field_mouse">
+      <CANDIDATE score="1">mulot</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fieldmouse">
+      <CANDIDATE score="1">mulot</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02338592">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Sigmodon"/>
+    <CANDIDATES original="Sigmodon"/>
+  </SYNSET>
+  <SYNSET id="02361587">
+    <ORIGINALDEF/>
+    <CANDIDATES original="groundhog">
+      <CANDIDATE score="1">siffleux</CANDIDATE>
+      <CANDIDATE score="1">marmotte_d'Amérique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="woodchuck">
+      <CANDIDATE score="1">siffleux</CANDIDATE>
+      <CANDIDATE score="1">marmotte_d'Amérique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Marmota_monax"/>
+  </SYNSET>
+  <SYNSET id="02395931">
+    <ORIGINALDEF/>
+    <CANDIDATES original="porker">
+      <CANDIDATE score="0">goret</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02406046">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Africander"/>
+  </SYNSET>
+  <SYNSET id="02442572">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Old_World_least_weasel"/>
+    <CANDIDATES original="Mustela_nivalis"/>
+  </SYNSET>
+  <SYNSET id="02449183">
+    <ORIGINALDEF/>
+    <CANDIDATES original="carcajou"/>
+    <CANDIDATES original="skunk_bear"/>
+    <CANDIDATES original="wolverine">
+      <CANDIDATE score="1">carcajou</CANDIDATE>
+      <CANDIDATE score="1">glouton</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Gulo_luscus"/>
+  </SYNSET>
+  <SYNSET id="02476736">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lucy">
+      <CANDIDATE score="1">Lucie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02511633">
+    <ORIGINALDEF/>
+    <CANDIDATES original="syrinx">
+      <CANDIDATE score="1">syrinx</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02522637">
+    <ORIGINALDEF/>
+    <CANDIDATES original="codling">
+      <CANDIDATE score="0">colinot</CANDIDATE>
+      <CANDIDATE score="0">morue</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02528949">
+    <ORIGINALDEF/>
+    <CANDIDATES original="family_Gonorhynchidae"/>
+    <CANDIDATES original="Gonorhynchidae"/>
+  </SYNSET>
+  <SYNSET id="02536165">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blueback_salmon"/>
+    <CANDIDATES original="red_salmon">
+      <CANDIDATE score="1">saumon_rouge</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sockeye">
+      <CANDIDATE score="1">saumon_du_Pacifique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sockeye_salmon"/>
+    <CANDIDATES original="Oncorhynchus_nerka"/>
+  </SYNSET>
+  <SYNSET id="02555863">
+    <ORIGINALDEF/>
+    <CANDIDATES original="perch">
+      <CANDIDATE score="0">juchoir</CANDIDATE>
+      <CANDIDATE score="0">juchée</CANDIDATE>
+      <CANDIDATE score="1">perche</CANDIDATE>
+      <CANDIDATE score="0">perchoir</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02571167">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rainbow_perch"/>
+    <CANDIDATES original="rainbow_seaperch"/>
+    <CANDIDATES original="Hipsurus_caryi"/>
+  </SYNSET>
+  <SYNSET id="02571810">
+    <ORIGINALDEF/>
+    <CANDIDATES original="catalufa"/>
+    <CANDIDATES original="Priacanthus_arenatus"/>
+  </SYNSET>
+  <SYNSET id="02577164">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blue_runner"/>
+    <CANDIDATES original="runner">
+      <CANDIDATE score="0">contrebandier</CANDIDATE>
+      <CANDIDATE score="0">coulant</CANDIDATE>
+      <CANDIDATE score="0">coulisse</CANDIDATE>
+      <CANDIDATE score="0">coulisseau</CANDIDATE>
+      <CANDIDATE score="0">coureur</CANDIDATE>
+      <CANDIDATE score="0">coureuse</CANDIDATE>
+      <CANDIDATE score="0">courrier</CANDIDATE>
+      <CANDIDATE score="0">engagé</CANDIDATE>
+      <CANDIDATE score="0">glissière</CANDIDATE>
+      <CANDIDATE score="0">lame</CANDIDATE>
+      <CANDIDATE score="0">marcotte</CANDIDATE>
+      <CANDIDATE score="0">messager</CANDIDATE>
+      <CANDIDATE score="0">partant</CANDIDATE>
+      <CANDIDATE score="0">partante</CANDIDATE>
+      <CANDIDATE score="0">patin</CANDIDATE>
+      <CANDIDATE score="0">stolon</CANDIDATE>
+      <CANDIDATE score="0">suspendeur</CANDIDATE>
+      <CANDIDATE score="0">tendeur</CANDIDATE>
+      <CANDIDATE score="0">tenseur</CANDIDATE>
+      <CANDIDATE score="0">chemin_de_couloir</CANDIDATE>
+      <CANDIDATE score="0">chemin_d'escalier</CANDIDATE>
+      <CANDIDATE score="0">couronne_mobile</CANDIDATE>
+      <CANDIDATE score="0">chemin_de_table</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Caranx_crysos"/>
+  </SYNSET>
+  <SYNSET id="02597367">
+    <ORIGINALDEF/>
+    <CANDIDATES original="whiting">
+      <CANDIDATE score="0">blanc</CANDIDATE>
+      <CANDIDATE score="1">merlan</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02608547">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hog_snapper"/>
+    <CANDIDATES original="hogfish"/>
+    <CANDIDATES original="Lachnolaimus_maximus"/>
+  </SYNSET>
+  <SYNSET id="02618094">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ocean_pout"/>
+    <CANDIDATES original="Macrozoarces_americanus"/>
+  </SYNSET>
+  <SYNSET id="02622130">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Gempylus"/>
+    <CANDIDATES original="genus_Gempylus"/>
+  </SYNSET>
+  <SYNSET id="02651412">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Peristedion"/>
+    <CANDIDATES original="genus_Peristedion"/>
+  </SYNSET>
+  <SYNSET id="02696384">
+    <ORIGINALDEF/>
+    <CANDIDATES original="alendronate"/>
+    <CANDIDATES original="Fosamax"/>
+  </SYNSET>
+  <SYNSET id="02767665">
+    <ORIGINALDEF/>
+    <CANDIDATES original="back">
+      <CANDIDATE score="0">arrière</CANDIDATE>
+      <CANDIDATE score="0">arriéré</CANDIDATE>
+      <CANDIDATE score="0">dernier</CANDIDATE>
+      <CANDIDATE score="0">derrière</CANDIDATE>
+      <CANDIDATE score="0">derrières</CANDIDATE>
+      <CANDIDATE score="0">dessous</CANDIDATE>
+      <CANDIDATE score="1">dos</CANDIDATE>
+      <CANDIDATE score="0">dossier</CANDIDATE>
+      <CANDIDATE score="0">envers</CANDIDATE>
+      <CANDIDATE score="0">fond</CANDIDATE>
+      <CANDIDATE score="0">postérieur</CANDIDATE>
+      <CANDIDATE score="0">revers</CANDIDATE>
+      <CANDIDATE score="0">râble</CANDIDATE>
+      <CANDIDATE score="0">verso</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02770441">
+    <ORIGINALDEF/>
+    <CANDIDATES original="backroom"/>
+  </SYNSET>
+  <SYNSET id="02781121">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ball_gown"/>
+  </SYNSET>
+  <SYNSET id="02786837">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bandsaw">
+      <CANDIDATE score="1">scieuse</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="band_saw"/>
+  </SYNSET>
+  <SYNSET id="02787269">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bangalore_torpedo"/>
+  </SYNSET>
+  <SYNSET id="02811468">
+    <ORIGINALDEF/>
+    <CANDIDATES original="battle-ax"/>
+    <CANDIDATES original="battle-axe">
+      <CANDIDATE score="0">virago</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02902411">
+    <ORIGINALDEF/>
+    <CANDIDATES original="briquet">
+      <CANDIDATE score="1">aggloméré</CANDIDATE>
+      <CANDIDATE score="1">briquette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="briquette">
+      <CANDIDATE score="1">aggloméré</CANDIDATE>
+      <CANDIDATE score="1">briquette</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02904233">
+    <ORIGINALDEF/>
+    <CANDIDATES original="broadloom"/>
+  </SYNSET>
+  <SYNSET id="02912557">
+    <ORIGINALDEF/>
+    <CANDIDATES original="buggy">
+      <CANDIDATE score="0">bagnole</CANDIDATE>
+      <CANDIDATE score="1">boghei</CANDIDATE>
+      <CANDIDATE score="1">buggy</CANDIDATE>
+      <CANDIDATE score="0">poussette</CANDIDATE>
+      <CANDIDATE score="0">poussette-canne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="roadster">
+      <CANDIDATE score="0">roadster</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02949202">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cane">
+      <CANDIDATE score="0">badine</CANDIDATE>
+      <CANDIDATE score="0">baguette</CANDIDATE>
+      <CANDIDATE score="0">bâton</CANDIDATE>
+      <CANDIDATE score="1">canne</CANDIDATE>
+      <CANDIDATE score="0">jonc</CANDIDATE>
+      <CANDIDATE score="0">roseau</CANDIDATE>
+      <CANDIDATE score="0">rotin</CANDIDATE>
+      <CANDIDATE score="0">trique</CANDIDATE>
+      <CANDIDATE score="0">tuteur</CANDIDATE>
+      <CANDIDATE score="0">verge</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02951703">
+    <ORIGINALDEF/>
+    <CANDIDATES original="canopic_jar">
+      <CANDIDATE score="1">canope</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="canopic_vase">
+      <CANDIDATE score="1">canope</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02960501">
+    <ORIGINALDEF/>
+    <CANDIDATES original="car">
+      <CANDIDATE score="0">auto</CANDIDATE>
+      <CANDIDATE score="0">automobile</CANDIDATE>
+      <CANDIDATE score="0">bagnole</CANDIDATE>
+      <CANDIDATE score="0">bahut</CANDIDATE>
+      <CANDIDATE score="0">benne</CANDIDATE>
+      <CANDIDATE score="0">cabine</CANDIDATE>
+      <CANDIDATE score="0">char</CANDIDATE>
+      <CANDIDATE score="1">nacelle</CANDIDATE>
+      <CANDIDATE score="0">tire</CANDIDATE>
+      <CANDIDATE score="0">tram</CANDIDATE>
+      <CANDIDATE score="0">tramway</CANDIDATE>
+      <CANDIDATE score="0">voiture</CANDIDATE>
+      <CANDIDATE score="0">wagon</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gondola">
+      <CANDIDATE score="0">gondole</CANDIDATE>
+      <CANDIDATE score="1">nacelle</CANDIDATE>
+      <CANDIDATE score="0">wagon-tombereau</CANDIDATE>
+      <CANDIDATE score="0">îlot</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="02981565">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cat_cracker"/>
+    <CANDIDATES original="catalytic_cracker"/>
+  </SYNSET>
+  <SYNSET id="03020927">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Chisholm_Trail"/>
+  </SYNSET>
+  <SYNSET id="03027505">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chuck_wagon"/>
+  </SYNSET>
+  <SYNSET id="03036022">
+    <ORIGINALDEF/>
+    <CANDIDATES original="city_hall">
+      <CANDIDATE score="1">mairie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03045698">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cloak">
+      <CANDIDATE score="0">cape</CANDIDATE>
+      <CANDIDATE score="0">houppelande</CANDIDATE>
+      <CANDIDATE score="0">limousine</CANDIDATE>
+      <CANDIDATE score="0">mante</CANDIDATE>
+      <CANDIDATE score="1">manteau</CANDIDATE>
+      <CANDIDATE score="0">voile</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03053474">
+    <ORIGINALDEF/>
+    <CANDIDATES original="club">
+      <CANDIDATE score="0">amicale</CANDIDATE>
+      <CANDIDATE score="0">assommoir</CANDIDATE>
+      <CANDIDATE score="0">boîte</CANDIDATE>
+      <CANDIDATE score="0">bâton</CANDIDATE>
+      <CANDIDATE score="0">casse-tête</CANDIDATE>
+      <CANDIDATE score="0">cercle</CANDIDATE>
+      <CANDIDATE score="0">club</CANDIDATE>
+      <CANDIDATE score="0">foyer</CANDIDATE>
+      <CANDIDATE score="0">gourdin</CANDIDATE>
+      <CANDIDATE score="0">guilde</CANDIDATE>
+      <CANDIDATE score="1">massue</CANDIDATE>
+      <CANDIDATE score="1">matraque</CANDIDATE>
+      <CANDIDATE score="0">société</CANDIDATE>
+      <CANDIDATE score="0">trèfle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03054901">
+    <ORIGINALDEF/>
+    <CANDIDATES original="clutch">
+      <CANDIDATE score="0">couvée</CANDIDATE>
+      <CANDIDATE score="0">crise</CANDIDATE>
+      <CANDIDATE score="0">débrayage</CANDIDATE>
+      <CANDIDATE score="1">embrayage</CANDIDATE>
+      <CANDIDATE score="0">ponte</CANDIDATE>
+      <CANDIDATE score="0">prise</CANDIDATE>
+      <CANDIDATE score="0">étreinte</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03115762">
+    <ORIGINALDEF/>
+    <CANDIDATES original="couch">
+      <CANDIDATE score="0">canapé</CANDIDATE>
+      <CANDIDATE score="0">chiendent</CANDIDATE>
+      <CANDIDATE score="0">couche</CANDIDATE>
+      <CANDIDATE score="1">divan</CANDIDATE>
+      <CANDIDATE score="0">gisement</CANDIDATE>
+      <CANDIDATE score="0">lit</CANDIDATE>
+      <CANDIDATE score="1">sofa</CANDIDATE>
+      <CANDIDATE score="0">sultane</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03163649">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dasymeter"/>
+  </SYNSET>
+  <SYNSET id="03208556">
+    <ORIGINALDEF/>
+    <CANDIDATES original="disc">
+      <CANDIDATE score="1">disque</CANDIDATE>
+      <CANDIDATE score="0">palet</CANDIDATE>
+      <CANDIDATE score="0">pastille</CANDIDATE>
+      <CANDIDATE score="0">rondelle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="disk">
+      <CANDIDATE score="1">disque</CANDIDATE>
+      <CANDIDATE score="0">palet</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03231912">
+    <ORIGINALDEF/>
+    <CANDIDATES original="drain">
+      <CANDIDATE score="1">drain</CANDIDATE>
+      <CANDIDATE score="0">drainage</CANDIDATE>
+      <CANDIDATE score="0">ponction</CANDIDATE>
+      <CANDIDATE score="0">puisard</CANDIDATE>
+      <CANDIDATE score="1">rigole</CANDIDATE>
+      <CANDIDATE score="0">égout</CANDIDATE>
+      <CANDIDATE score="0">épuisement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="drainpipe">
+      <CANDIDATE score="1">gouttière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="waste_pipe">
+      <CANDIDATE score="0">vidange</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03323096">
+    <ORIGINALDEF/>
+    <CANDIDATES original="farm-place"/>
+    <CANDIDATES original="farmplace"/>
+    <CANDIDATES original="farmstead">
+      <CANDIDATE score="1">ferme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03335333">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fighting_chair"/>
+  </SYNSET>
+  <SYNSET id="03358172">
+    <ORIGINALDEF/>
+    <CANDIDATES original="flash">
+      <CANDIDATE score="0">flamboiement</CANDIDATE>
+      <CANDIDATE score="1">flash</CANDIDATE>
+      <CANDIDATE score="0">fulguration</CANDIDATE>
+      <CANDIDATE score="0">petitdoué</CANDIDATE>
+      <CANDIDATE score="0">éclair</CANDIDATE>
+      <CANDIDATE score="0">éclat</CANDIDATE>
+      <CANDIDATE score="0">écusson</CANDIDATE>
+      <CANDIDATE score="0">étincelle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="flash_bulb"/>
+    <CANDIDATES original="flash_lamp"/>
+    <CANDIDATES original="flashbulb"/>
+    <CANDIDATES original="flashgun"/>
+    <CANDIDATES original="photoflash">
+      <CANDIDATE score="1">flash</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03358380">
+    <ORIGINALDEF/>
+    <CANDIDATES original="flash">
+      <CANDIDATE score="0">flamboiement</CANDIDATE>
+      <CANDIDATE score="0">flash</CANDIDATE>
+      <CANDIDATE score="0">fulguration</CANDIDATE>
+      <CANDIDATE score="0">petitdoué</CANDIDATE>
+      <CANDIDATE score="0">éclair</CANDIDATE>
+      <CANDIDATE score="0">éclat</CANDIDATE>
+      <CANDIDATE score="0">écusson</CANDIDATE>
+      <CANDIDATE score="0">étincelle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03372029">
+    <ORIGINALDEF/>
+    <CANDIDATES original="flute">
+      <CANDIDATE score="0">cannelure</CANDIDATE>
+      <CANDIDATE score="1">flûte</CANDIDATE>
+      <CANDIDATE score="0">tuyau</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="transverse_flute"/>
+  </SYNSET>
+  <SYNSET id="03473704">
+    <ORIGINALDEF/>
+    <CANDIDATES original="haberdashery">
+      <CANDIDATE score="0">chemiserie</CANDIDATE>
+      <CANDIDATE score="1">mercerie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="men's_furnishings"/>
+  </SYNSET>
+  <SYNSET id="03475674">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hair">
+      <CANDIDATE score="1">bourre</CANDIDATE>
+      <CANDIDATE score="0">capillaire</CANDIDATE>
+      <CANDIDATE score="0">chevelure</CANDIDATE>
+      <CANDIDATE score="0">cheveu</CANDIDATE>
+      <CANDIDATE score="0">cheveux</CANDIDATE>
+      <CANDIDATE score="0">crin</CANDIDATE>
+      <CANDIDATE score="0">pelage</CANDIDATE>
+      <CANDIDATE score="0">poil</CANDIDATE>
+      <CANDIDATE score="0">poils</CANDIDATE>
+      <CANDIDATE score="0">robe</CANDIDATE>
+      <CANDIDATE score="0">soies</CANDIDATE>
+      <CANDIDATE score="0">tif</CANDIDATE>
+      <CANDIDATE score="0">tifs</CANDIDATE>
+      <CANDIDATE score="0">tignasse</CANDIDATE>
+      <CANDIDATE score="0">tête</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="haircloth"/>
+  </SYNSET>
+  <SYNSET id="03478033">
+    <ORIGINALDEF/>
+    <CANDIDATES original="half-length"/>
+  </SYNSET>
+  <SYNSET id="03482988">
+    <ORIGINALDEF/>
+    <CANDIDATES original="handball_court"/>
+  </SYNSET>
+  <SYNSET id="03490649">
+    <ORIGINALDEF/>
+    <CANDIDATES original="handwheel">
+      <CANDIDATE score="1">volant</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03519081">
+    <ORIGINALDEF/>
+    <CANDIDATES original="highlighter">
+      <CANDIDATE score="0">surligneur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03530511">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hone"/>
+  </SYNSET>
+  <SYNSET id="03556679">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ice_ax"/>
+    <CANDIDATES original="ice_axe">
+      <CANDIDATE score="1">piolet</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="piolet"/>
+  </SYNSET>
+  <SYNSET id="03599761">
+    <ORIGINALDEF/>
+    <CANDIDATES original="job">
+      <CANDIDATE score="0">activité</CANDIDATE>
+      <CANDIDATE score="0">besogne</CANDIDATE>
+      <CANDIDATE score="0">boulot</CANDIDATE>
+      <CANDIDATE score="0">chantier</CANDIDATE>
+      <CANDIDATE score="0">combine</CANDIDATE>
+      <CANDIDATE score="0">coup</CANDIDATE>
+      <CANDIDATE score="0">emploi</CANDIDATE>
+      <CANDIDATE score="0">job</CANDIDATE>
+      <CANDIDATE score="0">métier</CANDIDATE>
+      <CANDIDATE score="0">occupation</CANDIDATE>
+      <CANDIDATE score="0">place</CANDIDATE>
+      <CANDIDATE score="0">poste</CANDIDATE>
+      <CANDIDATE score="0">rôle</CANDIDATE>
+      <CANDIDATE score="0">situation</CANDIDATE>
+      <CANDIDATE score="1">travail</CANDIDATE>
+      <CANDIDATE score="0">tripotage</CANDIDATE>
+      <CANDIDATE score="0">truc</CANDIDATE>
+      <CANDIDATE score="0">turbin</CANDIDATE>
+      <CANDIDATE score="0">tâche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03607527">
+    <ORIGINALDEF/>
+    <CANDIDATES original="kalansuwa"/>
+  </SYNSET>
+  <SYNSET id="03625646">
+    <ORIGINALDEF/>
+    <CANDIDATES original="knitting_needle"/>
+  </SYNSET>
+  <SYNSET id="03637027">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lamp_house"/>
+    <CANDIDATES original="lamp_housing"/>
+    <CANDIDATES original="lamphouse"/>
+  </SYNSET>
+  <SYNSET id="03642341">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lapboard"/>
+  </SYNSET>
+  <SYNSET id="03656011">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lemon_grove"/>
+  </SYNSET>
+  <SYNSET id="03693293">
+    <ORIGINALDEF/>
+    <CANDIDATES original="love_knot"/>
+    <CANDIDATES original="lover's_knot"/>
+    <CANDIDATES original="true_lover's_knot"/>
+    <CANDIDATES original="lovers'_knot"/>
+    <CANDIDATES original="true_lovers'_knot"/>
+  </SYNSET>
+  <SYNSET id="03695122">
+    <ORIGINALDEF/>
+    <CANDIDATES original="force-feed_lubricating_system"/>
+    <CANDIDATES original="force_feed"/>
+    <CANDIDATES original="lubricating_system"/>
+    <CANDIDATES original="pressure-feed_lubricating_system"/>
+    <CANDIDATES original="pressure_feed"/>
+  </SYNSET>
+  <SYNSET id="03699138">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lypressin"/>
+  </SYNSET>
+  <SYNSET id="03729131">
+    <ORIGINALDEF/>
+    <CANDIDATES original="matchboard"/>
+  </SYNSET>
+  <SYNSET id="03755991">
+    <ORIGINALDEF/>
+    <CANDIDATES original="alpha_methyl_dopa"/>
+    <CANDIDATES original="methyldopa"/>
+    <CANDIDATES original="Aldomet"/>
+  </SYNSET>
+  <SYNSET id="03803284">
+    <ORIGINALDEF/>
+    <CANDIDATES original="muzzle">
+      <CANDIDATE score="0">bouche</CANDIDATE>
+      <CANDIDATE score="0">bâillon</CANDIDATE>
+      <CANDIDATE score="0">gouffre</CANDIDATE>
+      <CANDIDATE score="0">gueule</CANDIDATE>
+      <CANDIDATE score="0">mufle</CANDIDATE>
+      <CANDIDATE score="0">museau</CANDIDATE>
+      <CANDIDATE score="1">muselière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03805280">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nailfile"/>
+  </SYNSET>
+  <SYNSET id="03834836">
+    <ORIGINALDEF/>
+    <CANDIDATES original="nucleoside_reverse_transcriptase_inhibitor"/>
+    <CANDIDATES original="NRTI"/>
+  </SYNSET>
+  <SYNSET id="03849412">
+    <ORIGINALDEF/>
+    <CANDIDATES original="open_sight"/>
+  </SYNSET>
+  <SYNSET id="03862984">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ovenware"/>
+  </SYNSET>
+  <SYNSET id="03896419">
+    <ORIGINALDEF/>
+    <CANDIDATES original="passenger_van"/>
+  </SYNSET>
+  <SYNSET id="03942692">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pinger"/>
+  </SYNSET>
+  <SYNSET id="03951971">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pin">
+      <CANDIDATE score="0">badge</CANDIDATE>
+      <CANDIDATE score="0">broche</CANDIDATE>
+      <CANDIDATE score="0">cheville</CANDIDATE>
+      <CANDIDATE score="0">essieu</CANDIDATE>
+      <CANDIDATE score="0">fiche</CANDIDATE>
+      <CANDIDATE score="0">goujon</CANDIDATE>
+      <CANDIDATE score="0">goupille</CANDIDATE>
+      <CANDIDATE score="0">pin</CANDIDATE>
+      <CANDIDATE score="0">plot</CANDIDATE>
+      <CANDIDATE score="0">punaise</CANDIDATE>
+      <CANDIDATE score="0">quille</CANDIDATE>
+      <CANDIDATE score="0">tourillon</CANDIDATE>
+      <CANDIDATE score="0">épingle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pivot">
+      <CANDIDATE score="0">centre</CANDIDATE>
+      <CANDIDATE score="0">charnière</CANDIDATE>
+      <CANDIDATE score="0">pivot</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="03968479">
+    <ORIGINALDEF/>
+    <CANDIDATES original="plug_fuse"/>
+  </SYNSET>
+  <SYNSET id="04001845">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pressure_suit"/>
+  </SYNSET>
+  <SYNSET id="04004475">
+    <ORIGINALDEF/>
+    <CANDIDATES original="printer">
+      <CANDIDATE score="1">imprimante</CANDIDATE>
+      <CANDIDATE score="0">imprimeur</CANDIDATE>
+      <CANDIDATE score="0">tireur</CANDIDATE>
+      <CANDIDATE score="0">tireuse</CANDIDATE>
+      <CANDIDATE score="0">typographe</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="printing_machine"/>
+  </SYNSET>
+  <SYNSET id="04028074">
+    <ORIGINALDEF/>
+    <CANDIDATES original="putter">
+      <CANDIDATE score="1">putter</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="putting_iron"/>
+  </SYNSET>
+  <SYNSET id="04049303">
+    <ORIGINALDEF/>
+    <CANDIDATES original="rain_barrel"/>
+  </SYNSET>
+  <SYNSET id="04073208">
+    <ORIGINALDEF/>
+    <CANDIDATES original="release">
+      <CANDIDATE score="0">congé</CANDIDATE>
+      <CANDIDATE score="0">desserrage</CANDIDATE>
+      <CANDIDATE score="0">dispense</CANDIDATE>
+      <CANDIDATE score="0">déclenchement</CANDIDATE>
+      <CANDIDATE score="0">défoulement</CANDIDATE>
+      <CANDIDATE score="0">dégagement</CANDIDATE>
+      <CANDIDATE score="0">délivrance</CANDIDATE>
+      <CANDIDATE score="0">détente</CANDIDATE>
+      <CANDIDATE score="0">exemption</CANDIDATE>
+      <CANDIDATE score="0">largage</CANDIDATE>
+      <CANDIDATE score="0">libération</CANDIDATE>
+      <CANDIDATE score="0">lâchage</CANDIDATE>
+      <CANDIDATE score="0">lâcher</CANDIDATE>
+      <CANDIDATE score="2">parution</CANDIDATE>
+      <CANDIDATE score="0">relaxation</CANDIDATE>
+      <CANDIDATE score="0">relaxe</CANDIDATE>
+      <CANDIDATE score="0">relâchement</CANDIDATE>
+      <CANDIDATE score="0">restitution</CANDIDATE>
+      <CANDIDATE score="0">sortie</CANDIDATE>
+      <CANDIDATE score="0">échappement</CANDIDATE>
+      <CANDIDATE score="0">élargissement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04100620">
+    <ORIGINALDEF/>
+    <CANDIDATES original="roentgenogram"/>
+    <CANDIDATES original="X-ray_picture">
+      <CANDIDATE score="1">radio</CANDIDATE>
+      <CANDIDATE score="1">radiographie</CANDIDATE>
+      <CANDIDATE score="1">radioscopie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="X-ray">
+      <CANDIDATE score="0">radiographier</CANDIDATE>
+      <CANDIDATE score="0">faire_une_radio_à</CANDIDATE>
+      <CANDIDATE score="0">radiographique</CANDIDATE>
+      <CANDIDATE score="0">radioscopique</CANDIDATE>
+      <CANDIDATE score="1">radio</CANDIDATE>
+      <CANDIDATE score="0">rayons_X</CANDIDATE>
+      <CANDIDATE score="1">radiographie</CANDIDATE>
+      <CANDIDATE score="0">faire_une_radio_de</CANDIDATE>
+      <CANDIDATE score="0">rayon_X</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="X-ray_photograph">
+      <CANDIDATE score="1">radio</CANDIDATE>
+      <CANDIDATE score="1">radiographie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="X_ray"/>
+  </SYNSET>
+  <SYNSET id="04219580">
+    <ORIGINALDEF/>
+    <CANDIDATES original="silks"/>
+  </SYNSET>
+  <SYNSET id="04259468">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sabaton"/>
+    <CANDIDATES original="solleret">
+      <CANDIDATE score="1">soleret</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04263336">
+    <ORIGINALDEF/>
+    <CANDIDATES original="soup_ladle"/>
+  </SYNSET>
+  <SYNSET id="04281880">
+    <ORIGINALDEF/>
+    <CANDIDATES original="splay">
+      <CANDIDATE score="0">abat-jour</CANDIDATE>
+      <CANDIDATE score="1">ébrasement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04297327">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stage_door"/>
+  </SYNSET>
+  <SYNSET id="04324387">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stock_room"/>
+    <CANDIDATES original="stockroom">
+      <CANDIDATE score="1">magasin</CANDIDATE>
+      <CANDIDATE score="1">resserre</CANDIDATE>
+      <CANDIDATE score="1">réserve</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04333500">
+    <ORIGINALDEF/>
+    <CANDIDATES original="shoulder_strap">
+      <CANDIDATE score="3">bandoulière</CANDIDATE>
+      <CANDIDATE score="3">bretelle</CANDIDATE>
+      <CANDIDATE score="0">épaulette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="strap">
+      <CANDIDATE score="0">attache</CANDIDATE>
+      <CANDIDATE score="0">bande</CANDIDATE>
+      <CANDIDATE score="3">bandoulière</CANDIDATE>
+      <CANDIDATE score="0">bracelet</CANDIDATE>
+      <CANDIDATE score="3">bretelle</CANDIDATE>
+      <CANDIDATE score="0">bride</CANDIDATE>
+      <CANDIDATE score="0">chape</CANDIDATE>
+      <CANDIDATE score="0">courroie</CANDIDATE>
+      <CANDIDATE score="0">cuir</CANDIDATE>
+      <CANDIDATE score="0">guiche</CANDIDATE>
+      <CANDIDATE score="0">lanière</CANDIDATE>
+      <CANDIDATE score="0">lien</CANDIDATE>
+      <CANDIDATE score="0">martinet</CANDIDATE>
+      <CANDIDATE score="0">mentonnière</CANDIDATE>
+      <CANDIDATE score="0">patte</CANDIDATE>
+      <CANDIDATE score="0">sangle</CANDIDATE>
+      <CANDIDATE score="0">sous-pied</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04350905">
+    <ORIGINALDEF/>
+    <CANDIDATES original="suit">
+      <CANDIDATE score="0">combinaison</CANDIDATE>
+      <CANDIDATE score="3">complet</CANDIDATE>
+      <CANDIDATE score="0">costar</CANDIDATE>
+      <CANDIDATE score="0">costard</CANDIDATE>
+      <CANDIDATE score="3">costume</CANDIDATE>
+      <CANDIDATE score="0">couleur</CANDIDATE>
+      <CANDIDATE score="0">ensemble</CANDIDATE>
+      <CANDIDATE score="0">jogging</CANDIDATE>
+      <CANDIDATE score="0">poursuite</CANDIDATE>
+      <CANDIDATE score="0">procès</CANDIDATE>
+      <CANDIDATE score="0">pétition</CANDIDATE>
+      <CANDIDATE score="0">requête</CANDIDATE>
+      <CANDIDATE score="0">scaphandre</CANDIDATE>
+      <CANDIDATE score="3">tailleur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="suit_of_clothes"/>
+  </SYNSET>
+  <SYNSET id="04374735">
+    <ORIGINALDEF/>
+    <CANDIDATES original="synagogue">
+      <CANDIDATE score="1">synagogue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tabernacle">
+      <CANDIDATE score="1">tabernacle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="temple">
+      <CANDIDATE score="0">larmier</CANDIDATE>
+      <CANDIDATE score="0">tempe</CANDIDATE>
+      <CANDIDATE score="1">temple</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04409384">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tenement">
+      <CANDIDATE score="0">appartement</CANDIDATE>
+      <CANDIDATE score="0">immeuble</CANDIDATE>
+      <CANDIDATE score="0">logement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tenement_house"/>
+  </SYNSET>
+  <SYNSET id="04410760">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tensiometer">
+      <CANDIDATE score="1">tensiomètre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04442831">
+    <ORIGINALDEF/>
+    <CANDIDATES original="baccy">
+      <CANDIDATE score="1">tabac</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tobacco">
+      <CANDIDATE score="1">tabac</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04459122">
+    <ORIGINALDEF/>
+    <CANDIDATES original="phaeton">
+      <CANDIDATE score="1">phaéton</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tourer">
+      <CANDIDATE score="0">caravane</CANDIDATE>
+      <CANDIDATE score="0">routière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="touring_car">
+      <CANDIDATE score="0">routière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04468476">
+    <ORIGINALDEF/>
+    <CANDIDATES original="train">
+      <CANDIDATE score="0">caravane</CANDIDATE>
+      <CANDIDATE score="0">convoi</CANDIDATE>
+      <CANDIDATE score="0">cortège</CANDIDATE>
+      <CANDIDATE score="0">escorte</CANDIDATE>
+      <CANDIDATE score="0">file</CANDIDATE>
+      <CANDIDATE score="0">métro</CANDIDATE>
+      <CANDIDATE score="0">pointer</CANDIDATE>
+      <CANDIDATE score="0">rame</CANDIDATE>
+      <CANDIDATE score="0">succession</CANDIDATE>
+      <CANDIDATE score="0">suite</CANDIDATE>
+      <CANDIDATE score="0">série</CANDIDATE>
+      <CANDIDATE score="0">train</CANDIDATE>
+      <CANDIDATE score="1">traîne</CANDIDATE>
+      <CANDIDATE score="0">traînée</CANDIDATE>
+      <CANDIDATE score="0">équipage</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04477219">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tread-wheel"/>
+    <CANDIDATES original="treadmill">
+      <CANDIDATE score="1">trépigneuse</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="treadwheel"/>
+  </SYNSET>
+  <SYNSET id="04477825">
+    <ORIGINALDEF/>
+    <CANDIDATES original="treasury">
+      <CANDIDATE score="1">trésor</CANDIDATE>
+      <CANDIDATE score="1">trésorerie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04545471">
+    <ORIGINALDEF/>
+    <CANDIDATES original="walker">
+      <CANDIDATE score="1">déambulateur</CANDIDATE>
+      <CANDIDATE score="0">excursionniste</CANDIDATE>
+      <CANDIDATE score="0">marcheur</CANDIDATE>
+      <CANDIDATE score="0">marcheuse</CANDIDATE>
+      <CANDIDATE score="0">promeneur</CANDIDATE>
+      <CANDIDATE score="0">promeneuse</CANDIDATE>
+      <CANDIDATE score="0">trotte-bébé</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Zimmer">
+      <CANDIDATE score="1">déambulateur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Zimmer_frame"/>
+  </SYNSET>
+  <SYNSET id="04568713">
+    <ORIGINALDEF/>
+    <CANDIDATES original="web">
+      <CANDIDATE score="0">lacis</CANDIDATE>
+      <CANDIDATE score="0">palmature</CANDIDATE>
+      <CANDIDATE score="0">palmure</CANDIDATE>
+      <CANDIDATE score="0">tissu</CANDIDATE>
+      <CANDIDATE score="0">toile</CANDIDATE>
+      <CANDIDATE score="1">trame</CANDIDATE>
+      <CANDIDATE score="0">web</CANDIDATE>
+      <CANDIDATE score="0">écheveau</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04569205">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wedding_picture"/>
+  </SYNSET>
+  <SYNSET id="04647826">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sedateness">
+      <CANDIDATE score="0">calme</CANDIDATE>
+      <CANDIDATE score="0">lenteur</CANDIDATE>
+      <CANDIDATE score="0">pondération</CANDIDATE>
+      <CANDIDATE score="0">tranquillité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="solemness"/>
+    <CANDIDATES original="solemnity">
+      <CANDIDATE score="1">gravité</CANDIDATE>
+      <CANDIDATE score="1">solennité</CANDIDATE>
+      <CANDIDATE score="1">sérieux</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="staidness">
+      <CANDIDATE score="0">sclérose</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04693900">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mark">
+      <CANDIDATE score="0">barre</CANDIDATE>
+      <CANDIDATE score="0">but</CANDIDATE>
+      <CANDIDATE score="0">cerne</CANDIDATE>
+      <CANDIDATE score="0">cible</CANDIDATE>
+      <CANDIDATE score="0">cote</CANDIDATE>
+      <CANDIDATE score="0">croix</CANDIDATE>
+      <CANDIDATE score="1">empreinte</CANDIDATE>
+      <CANDIDATE score="0">marc</CANDIDATE>
+      <CANDIDATE score="0">mark</CANDIDATE>
+      <CANDIDATE score="1">marque</CANDIDATE>
+      <CANDIDATE score="0">médaille</CANDIDATE>
+      <CANDIDATE score="0">note</CANDIDATE>
+      <CANDIDATE score="0">point</CANDIDATE>
+      <CANDIDATE score="0">raie</CANDIDATE>
+      <CANDIDATE score="0">repère</CANDIDATE>
+      <CANDIDATE score="0">sceau</CANDIDATE>
+      <CANDIDATE score="0">signature</CANDIDATE>
+      <CANDIDATE score="0">signe</CANDIDATE>
+      <CANDIDATE score="1">stigmate</CANDIDATE>
+      <CANDIDATE score="0">série</CANDIDATE>
+      <CANDIDATE score="0">tache</CANDIDATE>
+      <CANDIDATE score="0">tavelure</CANDIDATE>
+      <CANDIDATE score="0">trace</CANDIDATE>
+      <CANDIDATE score="0">témoignage</CANDIDATE>
+      <CANDIDATE score="0">étiquette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="scar">
+      <CANDIDATE score="1">balafre</CANDIDATE>
+      <CANDIDATE score="1">cicatrice</CANDIDATE>
+      <CANDIDATE score="0">couture</CANDIDATE>
+      <CANDIDATE score="1">meurtrissure</CANDIDATE>
+      <CANDIDATE score="1">stigmate</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="scrape">
+      <CANDIDATE score="0">grattement</CANDIDATE>
+      <CANDIDATE score="0">lichette</CANDIDATE>
+      <CANDIDATE score="0">pétrin</CANDIDATE>
+      <CANDIDATE score="0">raclement</CANDIDATE>
+      <CANDIDATE score="1">égratignure</CANDIDATE>
+      <CANDIDATE score="1">éraflure</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="scratch">
+      <CANDIDATE score="0">grattement</CANDIDATE>
+      <CANDIDATE score="0">griffade</CANDIDATE>
+      <CANDIDATE score="1">griffure</CANDIDATE>
+      <CANDIDATE score="0">grincement</CANDIDATE>
+      <CANDIDATE score="0">raie</CANDIDATE>
+      <CANDIDATE score="0">rayure</CANDIDATE>
+      <CANDIDATE score="1">écorchure</CANDIDATE>
+      <CANDIDATE score="1">égratignure</CANDIDATE>
+      <CANDIDATE score="1">éraflure</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04735075">
+    <ORIGINALDEF/>
+    <CANDIDATES original="capriciousness">
+      <CANDIDATE score="1">versatilité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="unpredictability">
+      <CANDIDATE score="1">imprévisibilité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04769234">
+    <ORIGINALDEF/>
+    <CANDIDATES original="homogeneity">
+      <CANDIDATE score="1">homogénéité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04777852">
+    <ORIGINALDEF/>
+    <CANDIDATES original="firmness">
+      <CANDIDATE score="0">assurance</CANDIDATE>
+      <CANDIDATE score="0">détermination</CANDIDATE>
+      <CANDIDATE score="1">fermeté</CANDIDATE>
+      <CANDIDATE score="0">résolution</CANDIDATE>
+      <CANDIDATE score="1">solidité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="steadiness">
+      <CANDIDATE score="0">constance</CANDIDATE>
+      <CANDIDATE score="1">fermeté</CANDIDATE>
+      <CANDIDATE score="1">fixité</CANDIDATE>
+      <CANDIDATE score="0">régularité</CANDIDATE>
+      <CANDIDATE score="1">solidité</CANDIDATE>
+      <CANDIDATE score="1">stabilité</CANDIDATE>
+      <CANDIDATE score="0">sérieux</CANDIDATE>
+      <CANDIDATE score="0">sûreté</CANDIDATE>
+      <CANDIDATE score="0">uniformité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04795878">
+    <ORIGINALDEF/>
+    <CANDIDATES original="prosaicness"/>
+    <CANDIDATES original="prosiness"/>
+  </SYNSET>
+  <SYNSET id="04813283">
+    <ORIGINALDEF/>
+    <CANDIDATES original="courtliness"/>
+  </SYNSET>
+  <SYNSET id="04820102">
+    <ORIGINALDEF/>
+    <CANDIDATES original="speech_intelligibility"/>
+  </SYNSET>
+  <SYNSET id="04849241">
+    <ORIGINALDEF/>
+    <CANDIDATES original="good">
+      <CANDIDATE score="0">avantage</CANDIDATE>
+      <CANDIDATE score="0">avantageux</CANDIDATE>
+      <CANDIDATE score="0">beau</CANDIDATE>
+      <CANDIDATE score="1">bien</CANDIDATE>
+      <CANDIDATE score="0">bon</CANDIDATE>
+      <CANDIDATE score="0">brave</CANDIDATE>
+      <CANDIDATE score="0">complet</CANDIDATE>
+      <CANDIDATE score="0">expert</CANDIDATE>
+      <CANDIDATE score="0">faste</CANDIDATE>
+      <CANDIDATE score="0">finisseur</CANDIDATE>
+      <CANDIDATE score="0">finisseuse</CANDIDATE>
+      <CANDIDATE score="0">fort</CANDIDATE>
+      <CANDIDATE score="0">gentil</CANDIDATE>
+      <CANDIDATE score="0">grand</CANDIDATE>
+      <CANDIDATE score="0">heureux</CANDIDATE>
+      <CANDIDATE score="0">intéressant</CANDIDATE>
+      <CANDIDATE score="0">intérêt</CANDIDATE>
+      <CANDIDATE score="0">joli</CANDIDATE>
+      <CANDIDATE score="0">juste</CANDIDATE>
+      <CANDIDATE score="0">profit</CANDIDATE>
+      <CANDIDATE score="0">sage</CANDIDATE>
+      <CANDIDATE score="0">solide</CANDIDATE>
+      <CANDIDATE score="0">sympathique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="goodness">
+      <CANDIDATE score="1">bonté</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="04999741">
+    <ORIGINALDEF/>
+    <CANDIDATES original="adiposeness"/>
+    <CANDIDATES original="adiposity">
+      <CANDIDATE score="1">adiposité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fattiness"/>
+  </SYNSET>
+  <SYNSET id="05018785">
+    <ORIGINALDEF/>
+    <CANDIDATES original="glow">
+      <CANDIDATE score="0">ardeur</CANDIDATE>
+      <CANDIDATE score="0">embrasement</CANDIDATE>
+      <CANDIDATE score="0">feu</CANDIDATE>
+      <CANDIDATE score="0">feux</CANDIDATE>
+      <CANDIDATE score="1">lueur</CANDIDATE>
+      <CANDIDATE score="0">rougeoiement</CANDIDATE>
+      <CANDIDATE score="1">éclat</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="luminescence">
+      <CANDIDATE score="1">luminescence</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05048690">
+    <ORIGINALDEF/>
+    <CANDIDATES original="concomitance">
+      <CANDIDATE score="1">concomitance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05052387">
+    <ORIGINALDEF/>
+    <CANDIDATES original="endlessness"/>
+  </SYNSET>
+  <SYNSET id="05065717">
+    <ORIGINALDEF/>
+    <CANDIDATES original="asymmetry">
+      <CANDIDATE score="1">asymétrie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="imbalance">
+      <CANDIDATE score="0">distorsion</CANDIDATE>
+      <CANDIDATE score="0">déséquilibre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dissymmetry">
+      <CANDIDATE score="1">dissymétrie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05072078">
+    <ORIGINALDEF/>
+    <CANDIDATES original="orthogonality">
+      <CANDIDATE score="1">orthogonalité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05130028">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gauge">
+      <CANDIDATE score="0">calibre</CANDIDATE>
+      <CANDIDATE score="1">entre-rail</CANDIDATE>
+      <CANDIDATE score="0">gabarier</CANDIDATE>
+      <CANDIDATE score="0">gabarit</CANDIDATE>
+      <CANDIDATE score="0">indicateur</CANDIDATE>
+      <CANDIDATE score="0">jauge</CANDIDATE>
+      <CANDIDATE score="0">largeur</CANDIDATE>
+      <CANDIDATE score="0">manomètre</CANDIDATE>
+      <CANDIDATE score="0">mesureur</CANDIDATE>
+      <CANDIDATE score="0">niveau</CANDIDATE>
+      <CANDIDATE score="0">section</CANDIDATE>
+      <CANDIDATE score="0">écartement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05278922">
+    <ORIGINALDEF/>
+    <CANDIDATES original="punctum"/>
+  </SYNSET>
+  <SYNSET id="05314549">
+    <ORIGINALDEF/>
+    <CANDIDATES original="temporal_canthus"/>
+  </SYNSET>
+  <SYNSET id="05350256">
+    <ORIGINALDEF/>
+    <CANDIDATES original="arteria_lingualis"/>
+    <CANDIDATES original="lingual_artery"/>
+  </SYNSET>
+  <SYNSET id="05368100">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genicular_vein"/>
+    <CANDIDATES original="vena_genus"/>
+  </SYNSET>
+  <SYNSET id="05405139">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lachrymal_secretion"/>
+    <CANDIDATES original="lacrimal_secretion"/>
+  </SYNSET>
+  <SYNSET id="05417821">
+    <ORIGINALDEF/>
+    <CANDIDATES original="leucorrhea"/>
+    <CANDIDATES original="leukorrhea"/>
+  </SYNSET>
+  <SYNSET id="05424199">
+    <ORIGINALDEF/>
+    <CANDIDATES original="venae_renis"/>
+  </SYNSET>
+  <SYNSET id="05443651">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sex_chromosome">
+      <CANDIDATE score="1">hétérochromosome</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05445546">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sarcosome"/>
+  </SYNSET>
+  <SYNSET id="05458412">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gametocyte"/>
+  </SYNSET>
+  <SYNSET id="05506507">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cervical_plexus"/>
+    <CANDIDATES original="plexus_cervicalis"/>
+  </SYNSET>
+  <SYNSET id="05512835">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ureter">
+      <CANDIDATE score="1">uretère</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05521514">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cunt">
+      <CANDIDATE score="1">chatte</CANDIDATE>
+      <CANDIDATE score="1">con</CANDIDATE>
+      <CANDIDATE score="1">moule</CANDIDATE>
+      <CANDIDATE score="0">nana</CANDIDATE>
+      <CANDIDATE score="0">salaud</CANDIDATE>
+      <CANDIDATE score="0">salope</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="puss">
+      <CANDIDATE score="0">gueule</CANDIDATE>
+      <CANDIDATE score="0">margoulette</CANDIDATE>
+      <CANDIDATE score="0">mimi</CANDIDATE>
+      <CANDIDATE score="1">minet</CANDIDATE>
+      <CANDIDATE score="1">minette</CANDIDATE>
+      <CANDIDATE score="1">minou</CANDIDATE>
+      <CANDIDATE score="0">nana</CANDIDATE>
+      <CANDIDATE score="0">souris</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pussy">
+      <CANDIDATE score="0">baise</CANDIDATE>
+      <CANDIDATE score="1">chat</CANDIDATE>
+      <CANDIDATE score="1">chatte</CANDIDATE>
+      <CANDIDATE score="1">foufoune</CANDIDATE>
+      <CANDIDATE score="0">mimi</CANDIDATE>
+      <CANDIDATE score="1">minet</CANDIDATE>
+      <CANDIDATE score="1">minette</CANDIDATE>
+      <CANDIDATE score="1">minou</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="slit">
+      <CANDIDATE score="0">créneau</CANDIDATE>
+      <CANDIDATE score="0">déchirure</CANDIDATE>
+      <CANDIDATE score="1">fente</CANDIDATE>
+      <CANDIDATE score="0">incision</CANDIDATE>
+      <CANDIDATE score="0">interstice</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="snatch">
+      <CANDIDATE score="0">arraché</CANDIDATE>
+      <CANDIDATE score="1">chatte</CANDIDATE>
+      <CANDIDATE score="0">enlèvement</CANDIDATE>
+      <CANDIDATE score="0">fragment</CANDIDATE>
+      <CANDIDATE score="0">jeté</CANDIDATE>
+      <CANDIDATE score="0">vol</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="twat">
+      <CANDIDATE score="1">con</CANDIDATE>
+      <CANDIDATE score="0">gonzesse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05531161">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cartilaginous_structure"/>
+  </SYNSET>
+  <SYNSET id="05557723">
+    <ORIGINALDEF/>
+    <CANDIDATES original="underbelly">
+      <CANDIDATE score="0">bas-ventre</CANDIDATE>
+      <CANDIDATE score="0">ventre</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="underbody"/>
+  </SYNSET>
+  <SYNSET id="05695446">
+    <ORIGINALDEF/>
+    <CANDIDATES original="allurement"/>
+  </SYNSET>
+  <SYNSET id="05705075">
+    <ORIGINALDEF/>
+    <CANDIDATES original="particularism">
+      <CANDIDATE score="1">particularisme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05712892">
+    <ORIGINALDEF/>
+    <CANDIDATES original="difference_limen"/>
+    <CANDIDATES original="difference_threshold"/>
+    <CANDIDATES original="differential_limen"/>
+    <CANDIDATES original="differential_threshold"/>
+  </SYNSET>
+  <SYNSET id="05742551">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blood_test"/>
+  </SYNSET>
+  <SYNSET id="05743174">
+    <ORIGINALDEF/>
+    <CANDIDATES original="needle_biopsy"/>
+  </SYNSET>
+  <SYNSET id="05772215">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gestation">
+      <CANDIDATE score="1">gestation</CANDIDATE>
+      <CANDIDATE score="1">maturation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05781347">
+    <ORIGINALDEF/>
+    <CANDIDATES original="presumption">
+      <CANDIDATE score="0">audace</CANDIDATE>
+      <CANDIDATE score="0">impertinence</CANDIDATE>
+      <CANDIDATE score="1">présomption</CANDIDATE>
+      <CANDIDATE score="0">supposition</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05808102">
+    <ORIGINALDEF/>
+    <CANDIDATES original="revelation">
+      <CANDIDATE score="0">déclaration</CANDIDATE>
+      <CANDIDATE score="0">dévoilement</CANDIDATE>
+      <CANDIDATE score="0">manifestation</CANDIDATE>
+      <CANDIDATE score="0">révélateur</CANDIDATE>
+      <CANDIDATE score="1">révélation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05814291">
+    <ORIGINALDEF/>
+    <CANDIDATES original="issue">
+      <CANDIDATE score="0">considération</CANDIDATE>
+      <CANDIDATE score="0">descendance</CANDIDATE>
+      <CANDIDATE score="0">distribution</CANDIDATE>
+      <CANDIDATE score="0">dossier</CANDIDATE>
+      <CANDIDATE score="0">délivrance</CANDIDATE>
+      <CANDIDATE score="1">enjeu</CANDIDATE>
+      <CANDIDATE score="0">faire</CANDIDATE>
+      <CANDIDATE score="0">lancement</CANDIDATE>
+      <CANDIDATE score="0">lancer</CANDIDATE>
+      <CANDIDATE score="0">livraison</CANDIDATE>
+      <CANDIDATE score="0">numéro</CANDIDATE>
+      <CANDIDATE score="0">parution</CANDIDATE>
+      <CANDIDATE score="0">point</CANDIDATE>
+      <CANDIDATE score="1">problème</CANDIDATE>
+      <CANDIDATE score="0">problématique</CANDIDATE>
+      <CANDIDATE score="0">progéniture</CANDIDATE>
+      <CANDIDATE score="0">publication</CANDIDATE>
+      <CANDIDATE score="1">question</CANDIDATE>
+      <CANDIDATE score="0">résultat</CANDIDATE>
+      <CANDIDATE score="0">sortie</CANDIDATE>
+      <CANDIDATE score="0">écoulement</CANDIDATE>
+      <CANDIDATE score="0">émission</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="matter">
+      <CANDIDATE score="1">affaire</CANDIDATE>
+      <CANDIDATE score="0">chapitre</CANDIDATE>
+      <CANDIDATE score="0">contenu</CANDIDATE>
+      <CANDIDATE score="0">copie</CANDIDATE>
+      <CANDIDATE score="0">fond</CANDIDATE>
+      <CANDIDATE score="0">matière</CANDIDATE>
+      <CANDIDATE score="0">pus</CANDIDATE>
+      <CANDIDATE score="1">question</CANDIDATE>
+      <CANDIDATE score="0">substance</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="subject">
+      <CANDIDATE score="0">assujetti</CANDIDATE>
+      <CANDIDATE score="0">branche</CANDIDATE>
+      <CANDIDATE score="0">chapitre</CANDIDATE>
+      <CANDIDATE score="0">discipline</CANDIDATE>
+      <CANDIDATE score="0">matière</CANDIDATE>
+      <CANDIDATE score="0">motif</CANDIDATE>
+      <CANDIDATE score="0">objet</CANDIDATE>
+      <CANDIDATE score="0">partie</CANDIDATE>
+      <CANDIDATE score="1">sujet</CANDIDATE>
+      <CANDIDATE score="0">sujette</CANDIDATE>
+      <CANDIDATE score="0">texte</CANDIDATE>
+      <CANDIDATE score="0">thème</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="topic">
+      <CANDIDATE score="0">dossier</CANDIDATE>
+      <CANDIDATE score="1">sujet</CANDIDATE>
+      <CANDIDATE score="0">texte</CANDIDATE>
+      <CANDIDATE score="0">thème</CANDIDATE>
+      <CANDIDATE score="0">topique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05833371">
+    <ORIGINALDEF/>
+    <CANDIDATES original="imposition">
+      <CANDIDATE score="1">imposition</CANDIDATE>
+      <CANDIDATE score="0">impôt</CANDIDATE>
+      <CANDIDATE score="0">instauration</CANDIDATE>
+      <CANDIDATE score="0">prélèvement</CANDIDATE>
+      <CANDIDATE score="0">punition</CANDIDATE>
+      <CANDIDATE score="0">taxe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05843895">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Victorian_architecture"/>
+  </SYNSET>
+  <SYNSET id="05858699">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dependent_variable"/>
+  </SYNSET>
+  <SYNSET id="05863736">
+    <ORIGINALDEF/>
+    <CANDIDATES original="predictor_variable"/>
+  </SYNSET>
+  <SYNSET id="05878440">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Gestalt_law_of_organization"/>
+    <CANDIDATES original="Gestalt_principle_of_organization"/>
+  </SYNSET>
+  <SYNSET id="05885412">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Naegele's_rule"/>
+  </SYNSET>
+  <SYNSET id="05915811">
+    <ORIGINALDEF/>
+    <CANDIDATES original="feng_shui">
+      <CANDIDATE score="1">feng-shui</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05934029">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coast">
+      <CANDIDATE score="0">côte</CANDIDATE>
+      <CANDIDATE score="0">littoral</CANDIDATE>
+      <CANDIDATE score="0">rive</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05965749">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pluralism">
+      <CANDIDATE score="0">cumul</CANDIDATE>
+      <CANDIDATE score="1">pluralisme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="05968553">
+    <ORIGINALDEF/>
+    <CANDIDATES original="reincarnationism"/>
+  </SYNSET>
+  <SYNSET id="05983801">
+    <ORIGINALDEF/>
+    <CANDIDATES original="business">
+      <CANDIDATE score="1">activité</CANDIDATE>
+      <CANDIDATE score="0">affaire</CANDIDATE>
+      <CANDIDATE score="0">affaires</CANDIDATE>
+      <CANDIDATE score="0">business</CANDIDATE>
+      <CANDIDATE score="0">clientèle</CANDIDATE>
+      <CANDIDATE score="0">commerce</CANDIDATE>
+      <CANDIDATE score="0">devoir</CANDIDATE>
+      <CANDIDATE score="0">histoire</CANDIDATE>
+      <CANDIDATE score="0">négoce</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06020737">
+    <ORIGINALDEF/>
+    <CANDIDATES original="statistical_method"/>
+    <CANDIDATES original="statistical_procedure"/>
+  </SYNSET>
+  <SYNSET id="06022291">
+    <ORIGINALDEF/>
+    <CANDIDATES original="deviation">
+      <CANDIDATE score="0">dérivation</CANDIDATE>
+      <CANDIDATE score="0">dérive</CANDIDATE>
+      <CANDIDATE score="0">dérogation</CANDIDATE>
+      <CANDIDATE score="0">déviance</CANDIDATE>
+      <CANDIDATE score="0">déviation</CANDIDATE>
+      <CANDIDATE score="0">manquement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06029547">
+    <ORIGINALDEF/>
+    <CANDIDATES original="time_series"/>
+  </SYNSET>
+  <SYNSET id="06041955">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dermatoglyphics">
+      <CANDIDATE score="0">dermatoglyphes</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06064838">
+    <ORIGINALDEF/>
+    <CANDIDATES original="accident_surgery"/>
+    <CANDIDATES original="traumatology">
+      <CANDIDATE score="1">traumatologie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06082025">
+    <ORIGINALDEF/>
+    <CANDIDATES original="brain_science"/>
+  </SYNSET>
+  <SYNSET id="06111253">
+    <ORIGINALDEF/>
+    <CANDIDATES original="harmonics">
+      <CANDIDATE score="1">harmonie</CANDIDATE>
+      <CANDIDATE score="0">harmoniques</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06203472">
+    <ORIGINALDEF/>
+    <CANDIDATES original="homophobia">
+      <CANDIDATE score="1">homophobie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="orelanism"/>
+  </SYNSET>
+  <SYNSET id="06223669">
+    <ORIGINALDEF/>
+    <CANDIDATES original="theism">
+      <CANDIDATE score="1">théisme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06265983">
+    <ORIGINALDEF/>
+    <CANDIDATES original="parcel_post"/>
+  </SYNSET>
+  <SYNSET id="06269785">
+    <ORIGINALDEF/>
+    <CANDIDATES original="offprint"/>
+    <CANDIDATES original="reprint">
+      <CANDIDATE score="0">reprint</CANDIDATE>
+      <CANDIDATE score="0">retirage</CANDIDATE>
+      <CANDIDATE score="0">réimpression</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="separate">
+      <CANDIDATE score="0">indépendant</CANDIDATE>
+      <CANDIDATE score="0">parallèle</CANDIDATE>
+      <CANDIDATE score="0">particulier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06370522">
+    <ORIGINALDEF/>
+    <CANDIDATES original="saga">
+      <CANDIDATE score="1">roman-fleuve</CANDIDATE>
+      <CANDIDATE score="1">saga</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06379094">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dithyramb">
+      <CANDIDATE score="1">dithyrambe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06379721">
+    <ORIGINALDEF/>
+    <CANDIDATES original="epic">
+      <CANDIDATE score="1">péplum</CANDIDATE>
+      <CANDIDATE score="1">épopée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="epic_poem"/>
+    <CANDIDATES original="epos"/>
+    <CANDIDATES original="heroic_poem"/>
+  </SYNSET>
+  <SYNSET id="06380373">
+    <ORIGINALDEF/>
+    <CANDIDATES original="free_verse"/>
+    <CANDIDATES original="vers_libre"/>
+  </SYNSET>
+  <SYNSET id="06390805">
+    <ORIGINALDEF/>
+    <CANDIDATES original="back_matter"/>
+    <CANDIDATES original="end_matter"/>
+  </SYNSET>
+  <SYNSET id="06392787">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sports_section"/>
+  </SYNSET>
+  <SYNSET id="06457796">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Paternoster"/>
+  </SYNSET>
+  <SYNSET id="06476475">
+    <ORIGINALDEF/>
+    <CANDIDATES original="telegraph_form"/>
+  </SYNSET>
+  <SYNSET id="06513366">
+    <ORIGINALDEF/>
+    <CANDIDATES original="petition">
+      <CANDIDATE score="0">placet</CANDIDATE>
+      <CANDIDATE score="0">prière</CANDIDATE>
+      <CANDIDATE score="1">pétition</CANDIDATE>
+      <CANDIDATE score="1">requête</CANDIDATE>
+      <CANDIDATE score="0">supplique</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="postulation"/>
+    <CANDIDATES original="request">
+      <CANDIDATE score="0">demande</CANDIDATE>
+      <CANDIDATE score="1">requête</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06516495">
+    <ORIGINALDEF/>
+    <CANDIDATES original="memoir">
+      <CANDIDATE score="1">mémoire</CANDIDATE>
+      <CANDIDATE score="0">mémorial</CANDIDATE>
+      <CANDIDATE score="0">étude</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06531327">
+    <ORIGINALDEF/>
+    <CANDIDATES original="stock_symbol"/>
+  </SYNSET>
+  <SYNSET id="06604209">
+    <ORIGINALDEF/>
+    <CANDIDATES original="alpha_and_omega"/>
+  </SYNSET>
+  <SYNSET id="06680818">
+    <ORIGINALDEF/>
+    <CANDIDATES original="offset_lithography"/>
+  </SYNSET>
+  <SYNSET id="06689297">
+    <ORIGINALDEF/>
+    <CANDIDATES original="permission">
+      <CANDIDATE score="1">autorisation</CANDIDATE>
+      <CANDIDATE score="0">permis</CANDIDATE>
+      <CANDIDATE score="1">permission</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06690770">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hall_pass"/>
+  </SYNSET>
+  <SYNSET id="06724323">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gospel">
+      <CANDIDATE score="0">gospel</CANDIDATE>
+      <CANDIDATE score="1">évangile</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="gospel_truth"/>
+  </SYNSET>
+  <SYNSET id="06739676">
+    <ORIGINALDEF/>
+    <CANDIDATES original="value_statement"/>
+  </SYNSET>
+  <SYNSET id="06771424">
+    <ORIGINALDEF/>
+    <CANDIDATES original="working_agreement"/>
+  </SYNSET>
+  <SYNSET id="06792188">
+    <ORIGINALDEF/>
+    <CANDIDATES original="start">
+      <CANDIDATE score="0">amorce</CANDIDATE>
+      <CANDIDATE score="0">attaque</CANDIDATE>
+      <CANDIDATE score="0">avance</CANDIDATE>
+      <CANDIDATE score="0">avantage</CANDIDATE>
+      <CANDIDATE score="0">bonification</CANDIDATE>
+      <CANDIDATE score="0">commencement</CANDIDATE>
+      <CANDIDATE score="0">début</CANDIDATE>
+      <CANDIDATE score="0">démarrage</CANDIDATE>
+      <CANDIDATE score="1">départ</CANDIDATE>
+      <CANDIDATE score="0">enclenchement</CANDIDATE>
+      <CANDIDATE score="0">engagement</CANDIDATE>
+      <CANDIDATE score="0">lancer</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">ouverture</CANDIDATE>
+      <CANDIDATE score="0">soubresaut</CANDIDATE>
+      <CANDIDATE score="0">sursaut</CANDIDATE>
+      <CANDIDATE score="0">tressaillement</CANDIDATE>
+      <CANDIDATE score="0">tressautement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="starting_signal"/>
+  </SYNSET>
+  <SYNSET id="06811867">
+    <ORIGINALDEF/>
+    <CANDIDATES original="equal_sign">
+      <CANDIDATE score="5">signe_d'égalité</CANDIDATE>
+      <CANDIDATE score="1">signe_égal</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06826214">
+    <ORIGINALDEF/>
+    <CANDIDATES original="proportional_font"/>
+  </SYNSET>
+  <SYNSET id="06838868">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sin">
+      <CANDIDATE score="0">crime</CANDIDATE>
+      <CANDIDATE score="0">faute</CANDIDATE>
+      <CANDIDATE score="0">péché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06871675">
+    <ORIGINALDEF/>
+    <CANDIDATES original="demisemiquaver"/>
+    <CANDIDATES original="thirty-second_note"/>
+  </SYNSET>
+  <SYNSET id="06873927">
+    <ORIGINALDEF/>
+    <CANDIDATES original="watch_fire"/>
+  </SYNSET>
+  <SYNSET id="06893772">
+    <ORIGINALDEF/>
+    <CANDIDATES original="song_and_dance"/>
+  </SYNSET>
+  <SYNSET id="06911666">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Pamlico"/>
+  </SYNSET>
+  <SYNSET id="06946199">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lithuanian">
+      <CANDIDATE score="0">lituanienne</CANDIDATE>
+      <CANDIDATE score="1">lituanien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06958178">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Ludian"/>
+  </SYNSET>
+  <SYNSET id="06972874">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Kashmiri">
+      <CANDIDATE score="0">cachemirien</CANDIDATE>
+      <CANDIDATE score="0">cachemirienne</CANDIDATE>
+      <CANDIDATE score="1">kashmiri</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06973941">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Zend"/>
+    <CANDIDATES original="Avestan">
+      <CANDIDATE score="1">avestique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07032292">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bass">
+      <CANDIDATE score="0">achigan</CANDIDATE>
+      <CANDIDATE score="0">bar</CANDIDATE>
+      <CANDIDATE score="0">bas</CANDIDATE>
+      <CANDIDATE score="1">basse</CANDIDATE>
+      <CANDIDATE score="0">contrebasse</CANDIDATE>
+      <CANDIDATE score="0">grave</CANDIDATE>
+      <CANDIDATE score="0">loup</CANDIDATE>
+      <CANDIDATE score="0">perche</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bass_part"/>
+  </SYNSET>
+  <SYNSET id="07056593">
+    <ORIGINALDEF/>
+    <CANDIDATES original="quadrille">
+      <CANDIDATE score="0">contredanse</CANDIDATE>
+      <CANDIDATE score="1">quadrille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07058762">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pibroch">
+      <CANDIDATE score="1">pibroch</CANDIDATE>
+      <CANDIDATE score="1">pibrock</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07094621">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sprung_rhythm"/>
+  </SYNSET>
+  <SYNSET id="07129422">
+    <ORIGINALDEF/>
+    <CANDIDATES original="exultation">
+      <CANDIDATE score="1">exultation</CANDIDATE>
+      <CANDIDATE score="1">jubilation</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="jubilation">
+      <CANDIDATE score="1">allégresse</CANDIDATE>
+      <CANDIDATE score="1">exultation</CANDIDATE>
+      <CANDIDATE score="0">fête</CANDIDATE>
+      <CANDIDATE score="1">jubilation</CANDIDATE>
+      <CANDIDATE score="1">liesse</CANDIDATE>
+      <CANDIDATE score="1">réjouissance</CANDIDATE>
+      <CANDIDATE score="0">réjouissances</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rejoicing">
+      <CANDIDATE score="1">jubilation</CANDIDATE>
+      <CANDIDATE score="1">réjouissance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07131366">
+    <ORIGINALDEF/>
+    <CANDIDATES original="homophony">
+      <CANDIDATE score="1">homophonie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07137950">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dilation">
+      <CANDIDATE score="0">dilatation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07184735">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bicker"/>
+    <CANDIDATES original="bickering">
+      <CANDIDATE score="1">chamailleries</CANDIDATE>
+      <CANDIDATE score="0">querelleur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fuss">
+      <CANDIDATE score="0">agitation</CANDIDATE>
+      <CANDIDATE score="0">cinéma</CANDIDATE>
+      <CANDIDATE score="0">comédie</CANDIDATE>
+      <CANDIDATE score="0">cérémonie</CANDIDATE>
+      <CANDIDATE score="0">embarras</CANDIDATE>
+      <CANDIDATE score="0">façons</CANDIDATE>
+      <CANDIDATE score="0">histoire</CANDIDATE>
+      <CANDIDATE score="1">histoires</CANDIDATE>
+      <CANDIDATE score="0">micmac</CANDIDATE>
+      <CANDIDATE score="0">pantomime</CANDIDATE>
+      <CANDIDATE score="0">scandale</CANDIDATE>
+      <CANDIDATE score="0">simagrée</CANDIDATE>
+      <CANDIDATE score="0">simagrées</CANDIDATE>
+      <CANDIDATE score="0">tam-tam</CANDIDATE>
+      <CANDIDATE score="0">tapage</CANDIDATE>
+      <CANDIDATE score="0">tracas</CANDIDATE>
+      <CANDIDATE score="0">tralala</CANDIDATE>
+      <CANDIDATE score="0">éclat</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pettifoggery">
+      <CANDIDATE score="1">avocasserie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="spat">
+      <CANDIDATE score="0">algarade</CANDIDATE>
+      <CANDIDATE score="0">demi-guêtre</CANDIDATE>
+      <CANDIDATE score="0">naissain</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="squabble">
+      <CANDIDATE score="1">bisbille</CANDIDATE>
+      <CANDIDATE score="1">chamaille</CANDIDATE>
+      <CANDIDATE score="1">chamaillerie</CANDIDATE>
+      <CANDIDATE score="1">chicane</CANDIDATE>
+      <CANDIDATE score="1">guéguerre</CANDIDATE>
+      <CANDIDATE score="1">querelle</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="tiff">
+      <CANDIDATE score="1">bisbille</CANDIDATE>
+      <CANDIDATE score="1">bisbrouille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07272694">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dog_tag"/>
+  </SYNSET>
+  <SYNSET id="07300092">
+    <ORIGINALDEF/>
+    <CANDIDATES original="programming_error"/>
+    <CANDIDATES original="software_error"/>
+  </SYNSET>
+  <SYNSET id="07382044">
+    <ORIGINALDEF/>
+    <CANDIDATES original="crepitation_rale"/>
+  </SYNSET>
+  <SYNSET id="07405137">
+    <ORIGINALDEF/>
+    <CANDIDATES original="avalanche">
+      <CANDIDATE score="1">avalanche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07445480">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ascension">
+      <CANDIDATE score="1">ascension</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="ascent">
+      <CANDIDATE score="0">ascendance</CANDIDATE>
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">avancement</CANDIDATE>
+      <CANDIDATE score="0">montaison</CANDIDATE>
+      <CANDIDATE score="1">montée</CANDIDATE>
+      <CANDIDATE score="0">remonte</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">retour</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rise">
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">augmentation</CANDIDATE>
+      <CANDIDATE score="0">crue</CANDIDATE>
+      <CANDIDATE score="0">côte</CANDIDATE>
+      <CANDIDATE score="0">flot</CANDIDATE>
+      <CANDIDATE score="0">flux</CANDIDATE>
+      <CANDIDATE score="0">hausse</CANDIDATE>
+      <CANDIDATE score="0">hauteur</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">majoration</CANDIDATE>
+      <CANDIDATE score="1">montée</CANDIDATE>
+      <CANDIDATE score="0">pente</CANDIDATE>
+      <CANDIDATE score="0">poussée</CANDIDATE>
+      <CANDIDATE score="0">progrès</CANDIDATE>
+      <CANDIDATE score="0">relèvement</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">renchérissement</CANDIDATE>
+      <CANDIDATE score="0">ressaut</CANDIDATE>
+      <CANDIDATE score="0">source</CANDIDATE>
+      <CANDIDATE score="1">élévation</CANDIDATE>
+      <CANDIDATE score="0">éminence</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="rising">
+      <CANDIDATE score="0">ajournement</CANDIDATE>
+      <CANDIDATE score="0">ascendance</CANDIDATE>
+      <CANDIDATE score="0">ascendant</CANDIDATE>
+      <CANDIDATE score="1">ascension</CANDIDATE>
+      <CANDIDATE score="0">augmentation</CANDIDATE>
+      <CANDIDATE score="0">croissant</CANDIDATE>
+      <CANDIDATE score="0">crue</CANDIDATE>
+      <CANDIDATE score="0">hausse</CANDIDATE>
+      <CANDIDATE score="0">haussier</CANDIDATE>
+      <CANDIDATE score="0">insurrection</CANDIDATE>
+      <CANDIDATE score="0">levage</CANDIDATE>
+      <CANDIDATE score="0">levant</CANDIDATE>
+      <CANDIDATE score="0">lever</CANDIDATE>
+      <CANDIDATE score="0">montant</CANDIDATE>
+      <CANDIDATE score="0">nouveau</CANDIDATE>
+      <CANDIDATE score="0">remontée</CANDIDATE>
+      <CANDIDATE score="0">résurrection</CANDIDATE>
+      <CANDIDATE score="0">soulèvement</CANDIDATE>
+      <CANDIDATE score="1">élévation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07516905">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wrath">
+      <CANDIDATE score="1">colère</CANDIDATE>
+      <CANDIDATE score="1">courroux</CANDIDATE>
+      <CANDIDATE score="1">fureur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07547674">
+    <ORIGINALDEF/>
+    <CANDIDATES original="despisal"/>
+    <CANDIDATES original="despising"/>
+  </SYNSET>
+  <SYNSET id="07571765">
+    <ORIGINALDEF/>
+    <CANDIDATES original="haute_cuisine"/>
+  </SYNSET>
+  <SYNSET id="07606278">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mint">
+      <CANDIDATE score="0">menthe</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mint_candy"/>
+  </SYNSET>
+  <SYNSET id="07623475">
+    <ORIGINALDEF/>
+    <CANDIDATES original="frangipane">
+      <CANDIDATE score="1">frangipane</CANDIDATE>
+      <CANDIDATE score="0">frangipanier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07641928">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fish_ball"/>
+    <CANDIDATES original="fish_cake"/>
+  </SYNSET>
+  <SYNSET id="07668215">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lamb_roast"/>
+    <CANDIDATES original="roast_lamb"/>
+  </SYNSET>
+  <SYNSET id="07672790">
+    <ORIGINALDEF/>
+    <CANDIDATES original="suet">
+      <CANDIDATE score="1">suif</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07678953">
+    <ORIGINALDEF/>
+    <CANDIDATES original="turkey_stuffing"/>
+  </SYNSET>
+  <SYNSET id="07689217">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Shawnee_cake"/>
+  </SYNSET>
+  <SYNSET id="07696527">
+    <ORIGINALDEF/>
+    <CANDIDATES original="butty">
+      <CANDIDATE score="1">sandwich</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07697699">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Sloppy_Joe"/>
+  </SYNSET>
+  <SYNSET id="07714188">
+    <ORIGINALDEF/>
+    <CANDIDATES original="collard_greens"/>
+    <CANDIDATES original="collards"/>
+  </SYNSET>
+  <SYNSET id="07755619">
+    <ORIGINALDEF/>
+    <CANDIDATES original="melon_ball"/>
+  </SYNSET>
+  <SYNSET id="07779747">
+    <ORIGINALDEF/>
+    <CANDIDATES original="monkfish">
+      <CANDIDATE score="1">baudroie</CANDIDATE>
+      <CANDIDATE score="1">lotte</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07850219">
+    <ORIGINALDEF/>
+    <CANDIDATES original="clabber"/>
+  </SYNSET>
+  <SYNSET id="07862095">
+    <ORIGINALDEF/>
+    <CANDIDATES original="arroz_con_pollo"/>
+  </SYNSET>
+  <SYNSET id="07965937">
+    <ORIGINALDEF/>
+    <CANDIDATES original="domain">
+      <CANDIDATE score="0">compétence</CANDIDATE>
+      <CANDIDATE score="0">domaine</CANDIDATE>
+      <CANDIDATE score="0">propriété</CANDIDATE>
+      <CANDIDATE score="0">royaume</CANDIDATE>
+      <CANDIDATE score="0">seigneurie</CANDIDATE>
+      <CANDIDATE score="0">terres</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="world">
+      <CANDIDATE score="0">galaxie</CANDIDATE>
+      <CANDIDATE score="1">monde</CANDIDATE>
+      <CANDIDATE score="0">mondial</CANDIDATE>
+      <CANDIDATE score="0">royaume</CANDIDATE>
+      <CANDIDATE score="0">siècle</CANDIDATE>
+      <CANDIDATE score="0">terre</CANDIDATE>
+      <CANDIDATE score="0">univers</CANDIDATE>
+      <CANDIDATE score="0">universel</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="07988229">
+    <ORIGINALDEF/>
+    <CANDIDATES original="quintet">
+      <CANDIDATE score="1">quintette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quintette">
+      <CANDIDATE score="1">quintette</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quintuplet">
+      <CANDIDATE score="0">quintuplé</CANDIDATE>
+      <CANDIDATE score="0">quintuplée</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quintuple">
+      <CANDIDATE score="0">quintupler</CANDIDATE>
+      <CANDIDATE score="0">quintuple</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08056873">
+    <ORIGINALDEF/>
+    <CANDIDATES original="kibbutz">
+      <CANDIDATE score="1">kibboutz</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08090973">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Congregational_Church"/>
+  </SYNSET>
+  <SYNSET id="08101755">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bloodstock"/>
+  </SYNSET>
+  <SYNSET id="08139637">
+    <ORIGINALDEF/>
+    <CANDIDATES original="National_Park_Service"/>
+  </SYNSET>
+  <SYNSET id="08189581">
+    <ORIGINALDEF/>
+    <CANDIDATES original="minstrelsy">
+      <CANDIDATE score="0">chants</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08218393">
+    <ORIGINALDEF/>
+    <CANDIDATES original="shift">
+      <CANDIDATE score="0">aller</CANDIDATE>
+      <CANDIDATE score="0">changement</CANDIDATE>
+      <CANDIDATE score="0">chemise</CANDIDATE>
+      <CANDIDATE score="0">décalage</CANDIDATE>
+      <CANDIDATE score="0">déplacement</CANDIDATE>
+      <CANDIDATE score="0">expédient</CANDIDATE>
+      <CANDIDATE score="1">faction</CANDIDATE>
+      <CANDIDATE score="0">inflexion</CANDIDATE>
+      <CANDIDATE score="0">infléchissement</CANDIDATE>
+      <CANDIDATE score="0">modification</CANDIDATE>
+      <CANDIDATE score="0">mutation</CANDIDATE>
+      <CANDIDATE score="0">poste</CANDIDATE>
+      <CANDIDATE score="0">ruse</CANDIDATE>
+      <CANDIDATE score="0">stratagème</CANDIDATE>
+      <CANDIDATE score="0">tour</CANDIDATE>
+      <CANDIDATE score="0">truc</CANDIDATE>
+      <CANDIDATE score="0">vacation</CANDIDATE>
+      <CANDIDATE score="0">vitesse</CANDIDATE>
+      <CANDIDATE score="0">équipe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08223263">
+    <ORIGINALDEF/>
+    <CANDIDATES original="followers"/>
+    <CANDIDATES original="following">
+      <CANDIDATE score="0">adeptes</CANDIDATE>
+      <CANDIDATE score="1">cour</CANDIDATE>
+      <CANDIDATE score="0">disciples</CANDIDATE>
+      <CANDIDATE score="0">partisans</CANDIDATE>
+      <CANDIDATE score="0">suivant</CANDIDATE>
+      <CANDIDATE score="0">suivante</CANDIDATE>
+      <CANDIDATE score="0">suiviste</CANDIDATE>
+      <CANDIDATE score="0">supporters</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sixth_form"/>
+  </SYNSET>
+  <SYNSET id="08249752">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pop_group"/>
+  </SYNSET>
+  <SYNSET id="08251756">
+    <ORIGINALDEF/>
+    <CANDIDATES original="jet_set">
+      <CANDIDATE score="1">jet-set</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08256005">
+    <ORIGINALDEF/>
+    <CANDIDATES original="smoker">
+      <CANDIDATE score="0">fumeur</CANDIDATE>
+      <CANDIDATE score="0">fumeuse</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stag_party"/>
+  </SYNSET>
+  <SYNSET id="08277805">
+    <ORIGINALDEF/>
+    <CANDIDATES original="academy">
+      <CANDIDATE score="1">académie</CANDIDATE>
+      <CANDIDATE score="0">collège</CANDIDATE>
+      <CANDIDATE score="0">conservatoire</CANDIDATE>
+      <CANDIDATE score="0">pensionnat</CANDIDATE>
+      <CANDIDATE score="0">société</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08358492">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pep_rally"/>
+  </SYNSET>
+  <SYNSET id="08373544">
+    <ORIGINALDEF/>
+    <CANDIDATES original="combination">
+      <CANDIDATE score="0">agencement</CANDIDATE>
+      <CANDIDATE score="0">alliance</CANDIDATE>
+      <CANDIDATE score="0">association</CANDIDATE>
+      <CANDIDATE score="0">chiffre</CANDIDATE>
+      <CANDIDATE score="0">coalition</CANDIDATE>
+      <CANDIDATE score="1">combinaison</CANDIDATE>
+      <CANDIDATE score="0">composé</CANDIDATE>
+      <CANDIDATE score="0">concours</CANDIDATE>
+      <CANDIDATE score="0">panachage</CANDIDATE>
+      <CANDIDATE score="0">réunion</CANDIDATE>
+      <CANDIDATE score="0">side-car</CANDIDATE>
+      <CANDIDATE score="0">union</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08373723">
+    <ORIGINALDEF/>
+    <CANDIDATES original="combination">
+      <CANDIDATE score="0">agencement</CANDIDATE>
+      <CANDIDATE score="0">alliance</CANDIDATE>
+      <CANDIDATE score="0">association</CANDIDATE>
+      <CANDIDATE score="0">chiffre</CANDIDATE>
+      <CANDIDATE score="0">coalition</CANDIDATE>
+      <CANDIDATE score="1">combinaison</CANDIDATE>
+      <CANDIDATE score="0">composé</CANDIDATE>
+      <CANDIDATE score="0">concours</CANDIDATE>
+      <CANDIDATE score="0">panachage</CANDIDATE>
+      <CANDIDATE score="0">réunion</CANDIDATE>
+      <CANDIDATE score="0">side-car</CANDIDATE>
+      <CANDIDATE score="0">union</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08374049">
+    <ORIGINALDEF/>
+    <CANDIDATES original="colony">
+      <CANDIDATE score="1">colonie</CANDIDATE>
+      <CANDIDATE score="0">souche</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="settlement">
+      <CANDIDATE score="0">accord</CANDIDATE>
+      <CANDIDATE score="0">acquittement</CANDIDATE>
+      <CANDIDATE score="1">colonie</CANDIDATE>
+      <CANDIDATE score="0">colonisation</CANDIDATE>
+      <CANDIDATE score="0">constitution</CANDIDATE>
+      <CANDIDATE score="0">donation</CANDIDATE>
+      <CANDIDATE score="0">dot</CANDIDATE>
+      <CANDIDATE score="0">décision</CANDIDATE>
+      <CANDIDATE score="0">ferme</CANDIDATE>
+      <CANDIDATE score="0">habitat</CANDIDATE>
+      <CANDIDATE score="0">habitation</CANDIDATE>
+      <CANDIDATE score="0">hameau</CANDIDATE>
+      <CANDIDATE score="0">implantation</CANDIDATE>
+      <CANDIDATE score="0">liquidation</CANDIDATE>
+      <CANDIDATE score="0">remboursement</CANDIDATE>
+      <CANDIDATE score="0">rente</CANDIDATE>
+      <CANDIDATE score="0">règlement</CANDIDATE>
+      <CANDIDATE score="0">solution</CANDIDATE>
+      <CANDIDATE score="0">tassement</CANDIDATE>
+      <CANDIDATE score="0">transaction</CANDIDATE>
+      <CANDIDATE score="0">village</CANDIDATE>
+      <CANDIDATE score="0">établissement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08406486">
+    <ORIGINALDEF/>
+    <CANDIDATES original="foundation">
+      <CANDIDATE score="0">assise</CANDIDATE>
+      <CANDIDATE score="0">assises</CANDIDATE>
+      <CANDIDATE score="0">base</CANDIDATE>
+      <CANDIDATE score="0">création</CANDIDATE>
+      <CANDIDATE score="1">fondation</CANDIDATE>
+      <CANDIDATE score="0">fondement</CANDIDATE>
+      <CANDIDATE score="0">établissement</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08430203">
+    <ORIGINALDEF/>
+    <CANDIDATES original="line">
+      <CANDIDATE score="1">alignement</CANDIDATE>
+      <CANDIDATE score="0">argument</CANDIDATE>
+      <CANDIDATE score="0">bande</CANDIDATE>
+      <CANDIDATE score="0">barre</CANDIDATE>
+      <CANDIDATE score="0">bordure</CANDIDATE>
+      <CANDIDATE score="0">chaîne</CANDIDATE>
+      <CANDIDATE score="0">collection</CANDIDATE>
+      <CANDIDATE score="1">colonne</CANDIDATE>
+      <CANDIDATE score="0">compagnie</CANDIDATE>
+      <CANDIDATE score="0">contour</CANDIDATE>
+      <CANDIDATE score="0">corde</CANDIDATE>
+      <CANDIDATE score="0">cordeau</CANDIDATE>
+      <CANDIDATE score="0">dessin</CANDIDATE>
+      <CANDIDATE score="0">direction</CANDIDATE>
+      <CANDIDATE score="0">fil</CANDIDATE>
+      <CANDIDATE score="0">file</CANDIDATE>
+      <CANDIDATE score="0">frontière</CANDIDATE>
+      <CANDIDATE score="0">haie</CANDIDATE>
+      <CANDIDATE score="0">indice</CANDIDATE>
+      <CANDIDATE score="1">ligne</CANDIDATE>
+      <CANDIDATE score="0">lignée</CANDIDATE>
+      <CANDIDATE score="0">linéament</CANDIDATE>
+      <CANDIDATE score="0">mot</CANDIDATE>
+      <CANDIDATE score="0">pipeline</CANDIDATE>
+      <CANDIDATE score="0">pli</CANDIDATE>
+      <CANDIDATE score="0">position</CANDIDATE>
+      <CANDIDATE score="0">profil</CANDIDATE>
+      <CANDIDATE score="0">queue</CANDIDATE>
+      <CANDIDATE score="0">raie</CANDIDATE>
+      <CANDIDATE score="0">rail</CANDIDATE>
+      <CANDIDATE score="1">rang</CANDIDATE>
+      <CANDIDATE score="1">rangée</CANDIDATE>
+      <CANDIDATE score="0">renseignement</CANDIDATE>
+      <CANDIDATE score="0">ride</CANDIDATE>
+      <CANDIDATE score="0">réplique</CANDIDATE>
+      <CANDIDATE score="0">série</CANDIDATE>
+      <CANDIDATE score="0">tire</CANDIDATE>
+      <CANDIDATE score="0">tracé</CANDIDATE>
+      <CANDIDATE score="0">train</CANDIDATE>
+      <CANDIDATE score="0">trait</CANDIDATE>
+      <CANDIDATE score="0">tuyau</CANDIDATE>
+      <CANDIDATE score="0">vers</CANDIDATE>
+      <CANDIDATE score="0">voie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08480512">
+    <ORIGINALDEF/>
+    <CANDIDATES original="number">
+      <CANDIDATE score="0">attraction</CANDIDATE>
+      <CANDIDATE score="0">chanson</CANDIDATE>
+      <CANDIDATE score="0">chiffre</CANDIDATE>
+      <CANDIDATE score="0">compte</CANDIDATE>
+      <CANDIDATE score="0">danse</CANDIDATE>
+      <CANDIDATE score="0">dossard</CANDIDATE>
+      <CANDIDATE score="0">livraison</CANDIDATE>
+      <CANDIDATE score="0">modèle</CANDIDATE>
+      <CANDIDATE score="0">morceau</CANDIDATE>
+      <CANDIDATE score="0">nombre</CANDIDATE>
+      <CANDIDATE score="0">numéro</CANDIDATE>
+      <CANDIDATE score="0">quantité</CANDIDATE>
+      <CANDIDATE score="0">rythme</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08521623">
+    <ORIGINALDEF/>
+    <CANDIDATES original="burial_ground">
+      <CANDIDATE score="1">cimetière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="burial_site"/>
+    <CANDIDATES original="burying_ground"/>
+    <CANDIDATES original="cemetery">
+      <CANDIDATE score="1">cimetière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="graveyard">
+      <CANDIDATE score="1">cimetière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="memorial_park">
+      <CANDIDATE score="1">cimetière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="necropolis">
+      <CANDIDATE score="1">nécropole</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08557131">
+    <ORIGINALDEF/>
+    <CANDIDATES original="duchy">
+      <CANDIDATE score="1">duché</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dukedom">
+      <CANDIDATE score="1">duché</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08592656">
+    <ORIGINALDEF/>
+    <CANDIDATES original="demarcation">
+      <CANDIDATE score="1">bornage</CANDIDATE>
+      <CANDIDATE score="1">délimitation</CANDIDATE>
+      <CANDIDATE score="1">démarcation</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="demarcation_line"/>
+    <CANDIDATES original="limit">
+      <CANDIDATE score="0">borne</CANDIDATE>
+      <CANDIDATE score="1">extrémité</CANDIDATE>
+      <CANDIDATE score="0">limitation</CANDIDATE>
+      <CANDIDATE score="1">limite</CANDIDATE>
+      <CANDIDATE score="0">restriction</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08602650">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Big_Bend"/>
+  </SYNSET>
+  <SYNSET id="08616311">
+    <ORIGINALDEF/>
+    <CANDIDATES original="itinerary">
+      <CANDIDATE score="1">itinéraire</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="path">
+      <CANDIDATE score="0">allée</CANDIDATE>
+      <CANDIDATE score="0">banquette</CANDIDATE>
+      <CANDIDATE score="0">berme</CANDIDATE>
+      <CANDIDATE score="1">chemin</CANDIDATE>
+      <CANDIDATE score="0">cours</CANDIDATE>
+      <CANDIDATE score="0">course</CANDIDATE>
+      <CANDIDATE score="0">filière</CANDIDATE>
+      <CANDIDATE score="1">parcours</CANDIDATE>
+      <CANDIDATE score="1">route</CANDIDATE>
+      <CANDIDATE score="0">sente</CANDIDATE>
+      <CANDIDATE score="0">sentier</CANDIDATE>
+      <CANDIDATE score="0">trace</CANDIDATE>
+      <CANDIDATE score="0">trajectoire</CANDIDATE>
+      <CANDIDATE score="1">trajet</CANDIDATE>
+      <CANDIDATE score="0">voie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="route">
+      <CANDIDATE score="1">itinéraire</CANDIDATE>
+      <CANDIDATE score="1">parcours</CANDIDATE>
+      <CANDIDATE score="0">passage</CANDIDATE>
+      <CANDIDATE score="1">route</CANDIDATE>
+      <CANDIDATE score="0">tournée</CANDIDATE>
+      <CANDIDATE score="0">tracé</CANDIDATE>
+      <CANDIDATE score="1">trajet</CANDIDATE>
+      <CANDIDATE score="0">voie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08647264">
+    <ORIGINALDEF/>
+    <CANDIDATES original="schoolyard"/>
+  </SYNSET>
+  <SYNSET id="08648781">
+    <ORIGINALDEF/>
+    <CANDIDATES original="service_area"/>
+  </SYNSET>
+  <SYNSET id="08683841">
+    <ORIGINALDEF/>
+    <CANDIDATES original="winner's_circle"/>
+  </SYNSET>
+  <SYNSET id="08715110">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Southeast_Asia"/>
+  </SYNSET>
+  <SYNSET id="08740617">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Campeche"/>
+  </SYNSET>
+  <SYNSET id="08742743">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Juarez"/>
+    <CANDIDATES original="Ciudad_Juarez"/>
+  </SYNSET>
+  <SYNSET id="08775179">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Wuerzburg"/>
+    <CANDIDATES original="Wurzburg"/>
+  </SYNSET>
+  <SYNSET id="08780380">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Tampere"/>
+    <CANDIDATES original="Tammerfors"/>
+  </SYNSET>
+  <SYNSET id="08794798">
+    <ORIGINALDEF/>
+    <CANDIDATES original="capital_of_Israel"/>
+    <CANDIDATES original="Jerusalem">
+      <CANDIDATE score="1">Jérusalem</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08816807">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Kosovo">
+      <CANDIDATE score="1">Kosovo</CANDIDATE>
+      <CANDIDATE score="0">kosovar</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08853308">
+    <ORIGINALDEF/>
+    <CANDIDATES original="La_Paz">
+      <CANDIDATE score="1">La_Paz</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="capital_of_Bolivia"/>
+  </SYNSET>
+  <SYNSET id="08876773">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Wimbledon"/>
+  </SYNSET>
+  <SYNSET id="08878367">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Blackpool"/>
+  </SYNSET>
+  <SYNSET id="08884191">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lincolnshire"/>
+  </SYNSET>
+  <SYNSET id="08925552">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Sapporo"/>
+  </SYNSET>
+  <SYNSET id="08941057">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Burgundy">
+      <CANDIDATE score="1">Bourgogne</CANDIDATE>
+      <CANDIDATE score="1">bourgogne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Bourgogne"/>
+  </SYNSET>
+  <SYNSET id="08941535">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Champagne-Ardenne"/>
+    <CANDIDATES original="Champagne">
+      <CANDIDATE score="0">champenois</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="08962951">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Blantyre"/>
+  </SYNSET>
+  <SYNSET id="09077977">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Valdosta"/>
+  </SYNSET>
+  <SYNSET id="09081955">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lewiston"/>
+  </SYNSET>
+  <SYNSET id="09105003">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Jackson"/>
+    <CANDIDATES original="capital_of_Mississippi"/>
+  </SYNSET>
+  <SYNSET id="09119070">
+    <ORIGINALDEF/>
+    <CANDIDATES original="New_York_State_Barge_Canal"/>
+  </SYNSET>
+  <SYNSET id="09122779">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Wall_Street">
+      <CANDIDATE score="1">Wall_Street</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Wall_St."/>
+  </SYNSET>
+  <SYNSET id="09123281">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Staten_Island"/>
+  </SYNSET>
+  <SYNSET id="09131001">
+    <ORIGINALDEF/>
+    <CANDIDATES original="capital_of_Ohio"/>
+    <CANDIDATES original="Columbus"/>
+  </SYNSET>
+  <SYNSET id="09133775">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Medford"/>
+  </SYNSET>
+  <SYNSET id="09144484">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Galveston"/>
+  </SYNSET>
+  <SYNSET id="09148259">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Montpelier"/>
+    <CANDIDATES original="capital_of_Vermont"/>
+  </SYNSET>
+  <SYNSET id="09167101">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Rhodesia">
+      <CANDIDATE score="1">Rhodésie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Republic_of_Zimbabwe"/>
+    <CANDIDATES original="Southern_Rhodesia"/>
+    <CANDIDATES original="Zimbabwe">
+      <CANDIDATE score="1">Zimbabwe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09171984">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Patagonian_Desert"/>
+  </SYNSET>
+  <SYNSET id="09192280">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Alaska_Range"/>
+  </SYNSET>
+  <SYNSET id="09273776">
+    <ORIGINALDEF/>
+    <CANDIDATES original="envelope">
+      <CANDIDATE score="1">enveloppe</CANDIDATE>
+      <CANDIDATE score="0">pli</CANDIDATE>
+      <CANDIDATE score="0">pochette</CANDIDATE>
+      <CANDIDATE score="0">tunique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09330467">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lake_Chad"/>
+    <CANDIDATES original="Chad">
+      <CANDIDATE score="0">tchadienne</CANDIDATE>
+      <CANDIDATE score="1">Tchad</CANDIDATE>
+      <CANDIDATE score="0">tchadien</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09357346">
+    <ORIGINALDEF/>
+    <CANDIDATES original="molehill">
+      <CANDIDATE score="1">taupinière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09400826">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mush">
+      <CANDIDATE score="1">bouillie</CANDIDATE>
+      <CANDIDATE score="0">tronche</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pulp">
+      <CANDIDATE score="0">chair</CANDIDATE>
+      <CANDIDATE score="0">pulpe</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09418169">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Saale"/>
+    <CANDIDATES original="Saale_River"/>
+  </SYNSET>
+  <SYNSET id="09476521">
+    <ORIGINALDEF/>
+    <CANDIDATES original="weakener"/>
+  </SYNSET>
+  <SYNSET id="01827202">
+    <ORIGINALDEF/>
+    <CANDIDATES original="halcyon">
+      <CANDIDATE score="0">alcyon</CANDIDATE>
+      <CANDIDATE score="0">martin-pêcheur</CANDIDATE>
+      <CANDIDATE score="0">serein</CANDIDATE>
+      <CANDIDATE score="0">paisible</CANDIDATE>
+      <CANDIDATE score="0">de_bonheur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09521763">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Shamash"/>
+  </SYNSET>
+  <SYNSET id="09532942">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Buddha">
+      <CANDIDATE score="1">Bouddha</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09505418">
+    <ORIGINALDEF/>
+    <CANDIDATES original="god">
+      <CANDIDATE score="1">dieu</CANDIDATE>
+      <CANDIDATE score="0">divinité</CANDIDATE>
+      <CANDIDATE score="0">idole</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="divinity">
+      <CANDIDATE score="0">théologie</CANDIDATE>
+      <CANDIDATE score="1">divinité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="immortal">
+      <CANDIDATE score="0">impérissable</CANDIDATE>
+      <CANDIDATE score="0">immortelle</CANDIDATE>
+      <CANDIDATE score="1">immortel</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="deity">
+      <CANDIDATE score="1">divinité</CANDIDATE>
+      <CANDIDATE score="1">dieu</CANDIDATE>
+      <CANDIDATE score="1">déité</CANDIDATE>
+      <CANDIDATE score="1">déesse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09536363">
+    <ORIGINALDEF/>
+    <CANDIDATES original="God_Almighty"/>
+    <CANDIDATES original="Godhead"/>
+    <CANDIDATES original="Lord">
+      <CANDIDATE score="1">Seigneur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Maker"/>
+    <CANDIDATES original="Creator"/>
+    <CANDIDATES original="Almighty"/>
+    <CANDIDATES original="Divine"/>
+    <CANDIDATES original="Jehovah">
+      <CANDIDATE score="1">Jéhovah</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09581680">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Loki">
+      <CANDIDATE score="1">Loki</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09585434">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Teutonic_deity"/>
+  </SYNSET>
+  <SYNSET id="09593651">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Tantalus">
+      <CANDIDATE score="1">Tantale</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09621545">
+    <ORIGINALDEF/>
+    <CANDIDATES original="intellect">
+      <CANDIDATE score="1">esprit</CANDIDATE>
+      <CANDIDATE score="0">intellect</CANDIDATE>
+      <CANDIDATE score="0">intelligence</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="intellectual">
+      <CANDIDATE score="1">intellectuel</CANDIDATE>
+      <CANDIDATE score="1">intellectuelle</CANDIDATE>
+      <CANDIDATE score="0">intello</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09695019">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Carioca"/>
+  </SYNSET>
+  <SYNSET id="09699403">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Czech">
+      <CANDIDATE score="1">Tchèque</CANDIDATE>
+      <CANDIDATE score="5">de_la_République_tchèque</CANDIDATE>
+      <CANDIDATE score="1">tchèque</CANDIDATE>
+      <CANDIDATE score="0">de_tchèque</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09704057">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lancastrian">
+      <CANDIDATE score="0">de_Lancastre</CANDIDATE>
+      <CANDIDATE score="5">habitant_de_Lancastre</CANDIDATE>
+      <CANDIDATE score="0">natif</CANDIDATE>
+      <CANDIDATE score="5">habitante_de_Lancaster</CANDIDATE>
+      <CANDIDATE score="1">lancastrienne</CANDIDATE>
+      <CANDIDATE score="5">habitante_de_Lancastre</CANDIDATE>
+      <CANDIDATE score="5">de_Lancaster</CANDIDATE>
+      <CANDIDATE score="5">habitant_de_Lancaster</CANDIDATE>
+      <CANDIDATE score="5">native_de_Lancaster</CANDIDATE>
+      <CANDIDATE score="5">native_de_Lancastre</CANDIDATE>
+      <CANDIDATE score="1">lancastrien</CANDIDATE>
+      <CANDIDATE score="5">natif_de_Lancaster</CANDIDATE>
+      <CANDIDATE score="5">natif_de_Lancastre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09706911">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Ostyak">
+      <CANDIDATE score="1">ostiak</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Khanty"/>
+  </SYNSET>
+  <SYNSET id="09719794">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Laotian">
+      <CANDIDATE score="1">laotien</CANDIDATE>
+      <CANDIDATE score="1">laotienne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Lao">
+      <CANDIDATE score="1">Lao</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09723228">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Montserratian"/>
+  </SYNSET>
+  <SYNSET id="09728009">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Portuguese">
+      <CANDIDATE score="5">du_Portugal</CANDIDATE>
+      <CANDIDATE score="1">portugaise</CANDIDATE>
+      <CANDIDATE score="1">portugais</CANDIDATE>
+      <CANDIDATE score="0">de_portugais</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09748101">
+    <ORIGINALDEF/>
+    <CANDIDATES original="East_German">
+      <CANDIDATE score="1">allemand_de_l'Est</CANDIDATE>
+      <CANDIDATE score="1">allemande_de_l'Est</CANDIDATE>
+      <CANDIDATE score="1">Est-Allemand</CANDIDATE>
+      <CANDIDATE score="1">est-allemande</CANDIDATE>
+      <CANDIDATE score="1">est-allemand</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09759311">
+    <ORIGINALDEF/>
+    <CANDIDATES original="academician">
+      <CANDIDATE score="1">académicien</CANDIDATE>
+      <CANDIDATE score="1">académicienne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="schoolman">
+      <CANDIDATE score="1">scolastique</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09792125">
+    <ORIGINALDEF/>
+    <CANDIDATES original="anathema">
+      <CANDIDATE score="1">anathème</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bete_noire"/>
+  </SYNSET>
+  <SYNSET id="09795556">
+    <ORIGINALDEF/>
+    <CANDIDATES original="annuitant"/>
+  </SYNSET>
+  <SYNSET id="09798811">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Apostle"/>
+  </SYNSET>
+  <SYNSET id="09833896">
+    <ORIGINALDEF/>
+    <CANDIDATES original="baldhead"/>
+    <CANDIDATES original="baldpate"/>
+    <CANDIDATES original="baldy">
+      <CANDIDATE score="1">chauve</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09867154">
+    <ORIGINALDEF/>
+    <CANDIDATES original="borderer">
+      <CANDIDATE score="1">frontalier</CANDIDATE>
+      <CANDIDATE score="1">frontalière</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09877951">
+    <ORIGINALDEF/>
+    <CANDIDATES original="brother">
+      <CANDIDATE score="1">camarade</CANDIDATE>
+      <CANDIDATE score="0">frangin</CANDIDATE>
+      <CANDIDATE score="0">frère</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="buddy">
+      <CANDIDATE score="0">buddy</CANDIDATE>
+      <CANDIDATE score="1">copain</CANDIDATE>
+      <CANDIDATE score="1">pote</CANDIDATE>
+      <CANDIDATE score="0">poteau</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="chum">
+      <CANDIDATE score="1">copain</CANDIDATE>
+      <CANDIDATE score="1">copine</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="crony">
+      <CANDIDATE score="1">compère</CANDIDATE>
+      <CANDIDATE score="1">copain</CANDIDATE>
+      <CANDIDATE score="1">copine</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pal">
+      <CANDIDATE score="1">copain</CANDIDATE>
+      <CANDIDATE score="1">copine</CANDIDATE>
+      <CANDIDATE score="1">pote</CANDIDATE>
+      <CANDIDATE score="0">poteau</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sidekick">
+      <CANDIDATE score="0">acolyte</CANDIDATE>
+      <CANDIDATE score="1">copain</CANDIDATE>
+      <CANDIDATE score="1">copine</CANDIDATE>
+      <CANDIDATE score="0">porte-serviette</CANDIDATE>
+      <CANDIDATE score="0">sous-fifre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09893015">
+    <ORIGINALDEF/>
+    <CANDIDATES original="captain">
+      <CANDIDATE score="0">capitaine</CANDIDATE>
+      <CANDIDATE score="0">cheftaine</CANDIDATE>
+      <CANDIDATE score="0">commandant</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="police_captain"/>
+    <CANDIDATES original="police_chief"/>
+  </SYNSET>
+  <SYNSET id="09897914">
+    <ORIGINALDEF/>
+    <CANDIDATES original="carter">
+      <CANDIDATE score="1">charretier</CANDIDATE>
+      <CANDIDATE score="0">charretiière</CANDIDATE>
+      <CANDIDATE score="1">charretière</CANDIDATE>
+      <CANDIDATE score="0">voiturier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09933324">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cocksucker">
+      <CANDIDATE score="0">enculé</CANDIDATE>
+      <CANDIDATE score="0">enfoiré</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09934921">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coiner">
+      <CANDIDATE score="1">monnayeur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="minter">
+      <CANDIDATE score="1">monnayeur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="moneyer"/>
+  </SYNSET>
+  <SYNSET id="09935233">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coiner">
+      <CANDIDATE score="2">monnayeur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="09980458">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cross-examiner"/>
+    <CANDIDATES original="cross-questioner"/>
+  </SYNSET>
+  <SYNSET id="09993122">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dauphin"/>
+  </SYNSET>
+  <SYNSET id="09804658">
+    <ORIGINALDEF/>
+    <CANDIDATES original="archduke">
+      <CANDIDATE score="1">archiduc</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10096855">
+    <ORIGINALDEF/>
+    <CANDIDATES original="floater">
+      <CANDIDATE score="0">flotteur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10135842">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gold-beater"/>
+    <CANDIDATES original="goldbeater"/>
+  </SYNSET>
+  <SYNSET id="10160280">
+    <ORIGINALDEF/>
+    <CANDIDATES original="harlequin">
+      <CANDIDATE score="1">arlequin</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10175090">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Highness"/>
+  </SYNSET>
+  <SYNSET id="10187557">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hostage">
+      <CANDIDATE score="1">otage</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="surety">
+      <CANDIDATE score="0">accréditeur</CANDIDATE>
+      <CANDIDATE score="0">caution</CANDIDATE>
+      <CANDIDATE score="0">cautionnement</CANDIDATE>
+      <CANDIDATE score="0">certitude</CANDIDATE>
+      <CANDIDATE score="0">garant</CANDIDATE>
+      <CANDIDATE score="0">garante</CANDIDATE>
+      <CANDIDATE score="0">garantie</CANDIDATE>
+      <CANDIDATE score="0">porte-fort</CANDIDATE>
+      <CANDIDATE score="0">répondant</CANDIDATE>
+      <CANDIDATE score="0">répondante</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10239329">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Knight_Templar">
+      <CANDIDATE score="5">chevalier_de_l'ordre_du_Temple</CANDIDATE>
+      <CANDIDATE score="1">templier</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Templar">
+      <CANDIDATE score="1">templier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10251125">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Lazarus">
+      <CANDIDATE score="1">Lazare</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10268422">
+    <ORIGINALDEF/>
+    <CANDIDATES original="liveryman"/>
+  </SYNSET>
+  <SYNSET id="10326392">
+    <ORIGINALDEF/>
+    <CANDIDATES original="moderator">
+      <CANDIDATE score="0">examinateur</CANDIDATE>
+      <CANDIDATE score="0">examinatrice</CANDIDATE>
+      <CANDIDATE score="1">modérateur</CANDIDATE>
+      <CANDIDATE score="0">président</CANDIDATE>
+      <CANDIDATE score="0">présidente</CANDIDATE>
+      <CANDIDATE score="0">ralentisseur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10346392">
+    <ORIGINALDEF/>
+    <CANDIDATES original="natural">
+      <CANDIDATE score="0">bécarre</CANDIDATE>
+      <CANDIDATE score="0">demeuré</CANDIDATE>
+      <CANDIDATE score="0">demeurée</CANDIDATE>
+      <CANDIDATE score="0">idiot</CANDIDATE>
+      <CANDIDATE score="0">idiote</CANDIDATE>
+      <CANDIDATE score="0">nature</CANDIDATE>
+      <CANDIDATE score="0">naturel</CANDIDATE>
+      <CANDIDATE score="0">normal</CANDIDATE>
+      <CANDIDATE score="0">simple</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10363360">
+    <ORIGINALDEF/>
+    <CANDIDATES original="noticer"/>
+  </SYNSET>
+  <SYNSET id="10375214">
+    <ORIGINALDEF/>
+    <CANDIDATES original="old_boy"/>
+    <CANDIDATES original="old_man">
+      <CANDIDATE score="0">ancien</CANDIDATE>
+      <CANDIDATE score="0">ancienne</CANDIDATE>
+      <CANDIDATE score="0">ancêtre</CANDIDATE>
+      <CANDIDATE score="1">bonhomme</CANDIDATE>
+      <CANDIDATE score="0">dab</CANDIDATE>
+      <CANDIDATE score="0">grand-père</CANDIDATE>
+      <CANDIDATE score="0">papet</CANDIDATE>
+      <CANDIDATE score="0">papi</CANDIDATE>
+      <CANDIDATE score="0">pater</CANDIDATE>
+      <CANDIDATE score="0">paternel</CANDIDATE>
+      <CANDIDATE score="0">patron</CANDIDATE>
+      <CANDIDATE score="0">vieillard</CANDIDATE>
+      <CANDIDATE score="1">vieux</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10427223">
+    <ORIGINALDEF/>
+    <CANDIDATES original="photojournalist">
+      <CANDIDATE score="1">journaliste-photographe</CANDIDATE>
+      <CANDIDATE score="1">photojournaliste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10470460">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fair_game"/>
+    <CANDIDATES original="prey">
+      <CANDIDATE score="0">gibier</CANDIDATE>
+      <CANDIDATE score="1">proie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="quarry">
+      <CANDIDATE score="0">carrière</CANDIDATE>
+      <CANDIDATE score="0">curée</CANDIDATE>
+      <CANDIDATE score="0">gibier</CANDIDATE>
+      <CANDIDATE score="1">proie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="target">
+      <CANDIDATE score="0">but</CANDIDATE>
+      <CANDIDATE score="0">carton</CANDIDATE>
+      <CANDIDATE score="1">cible</CANDIDATE>
+      <CANDIDATE score="0">fixé</CANDIDATE>
+      <CANDIDATE score="0">objectif</CANDIDATE>
+      <CANDIDATE score="0">pointer</CANDIDATE>
+      <CANDIDATE score="0">prévu</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10476467">
+    <ORIGINALDEF/>
+    <CANDIDATES original="buck_private"/>
+    <CANDIDATES original="common_soldier"/>
+    <CANDIDATES original="private">
+      <CANDIDATE score="0">intime</CANDIDATE>
+      <CANDIDATE score="0">particulier</CANDIDATE>
+      <CANDIDATE score="0">personnel</CANDIDATE>
+      <CANDIDATE score="0">privatif</CANDIDATE>
+      <CANDIDATE score="0">privé</CANDIDATE>
+      <CANDIDATE score="1">soldat</CANDIDATE>
+      <CANDIDATE score="1">troupier</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10479561">
+    <ORIGINALDEF/>
+    <CANDIDATES original="prodigal">
+      <CANDIDATE score="1">prodigue</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="profligate">
+      <CANDIDATE score="0">débauché</CANDIDATE>
+      <CANDIDATE score="0">débauchée</CANDIDATE>
+      <CANDIDATE score="0">libertin</CANDIDATE>
+      <CANDIDATE score="0">libertine</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="squanderer">
+      <CANDIDATE score="1">dilapidateur</CANDIDATE>
+      <CANDIDATE score="1">dilapidatrice</CANDIDATE>
+      <CANDIDATE score="1">dissipateur</CANDIDATE>
+      <CANDIDATE score="1">dissipatrice</CANDIDATE>
+      <CANDIDATE score="1">gaspilleur</CANDIDATE>
+      <CANDIDATE score="1">gaspilleuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10491575">
+    <ORIGINALDEF/>
+    <CANDIDATES original="newspaper_publisher"/>
+    <CANDIDATES original="publisher">
+      <CANDIDATE score="1">éditeur</CANDIDATE>
+      <CANDIDATE score="1">éditrice</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10493835">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pup">
+      <CANDIDATE score="1">blanc-bec</CANDIDATE>
+      <CANDIDATE score="0">bébé-phoque</CANDIDATE>
+      <CANDIDATE score="1">chiot</CANDIDATE>
+      <CANDIDATE score="1">freluquet</CANDIDATE>
+      <CANDIDATE score="1">godelureau</CANDIDATE>
+      <CANDIDATE score="0">pataud</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="puppy">
+      <CANDIDATE score="1">chiot</CANDIDATE>
+      <CANDIDATE score="0">pataud</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10504090">
+    <ORIGINALDEF/>
+    <CANDIDATES original="radiologic_technologist"/>
+  </SYNSET>
+  <SYNSET id="10510339">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ratiocinator"/>
+    <CANDIDATES original="reasoner">
+      <CANDIDATE score="1">raisonneur</CANDIDATE>
+      <CANDIDATE score="1">raisonneuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10567401">
+    <ORIGINALDEF/>
+    <CANDIDATES original="searcher">
+      <CANDIDATE score="1">chercheur</CANDIDATE>
+      <CANDIDATE score="1">chercheuse</CANDIDATE>
+      <CANDIDATE score="0">fouilleur</CANDIDATE>
+      <CANDIDATE score="0">fouilleuse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10574723">
+    <ORIGINALDEF/>
+    <CANDIDATES original="secundigravida"/>
+    <CANDIDATES original="gravida_II"/>
+  </SYNSET>
+  <SYNSET id="10598349">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Sikh">
+      <CANDIDATE score="1">Sikh</CANDIDATE>
+      <CANDIDATE score="1">sikh</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10611117">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Sleeping_Beauty"/>
+  </SYNSET>
+  <SYNSET id="10612210">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pig">
+      <CANDIDATE score="0">bouffeur</CANDIDATE>
+      <CANDIDATE score="0">bouffeuse</CANDIDATE>
+      <CANDIDATE score="1">cochon</CANDIDATE>
+      <CANDIDATE score="1">dégoûtant</CANDIDATE>
+      <CANDIDATE score="1">dégoûtante</CANDIDATE>
+      <CANDIDATE score="0">flicard</CANDIDATE>
+      <CANDIDATE score="0">goinfre</CANDIDATE>
+      <CANDIDATE score="0">gueuse</CANDIDATE>
+      <CANDIDATE score="0">morfal</CANDIDATE>
+      <CANDIDATE score="0">morfale</CANDIDATE>
+      <CANDIDATE score="1">porc</CANDIDATE>
+      <CANDIDATE score="0">porcin</CANDIDATE>
+      <CANDIDATE score="0">poulet</CANDIDATE>
+      <CANDIDATE score="0">pourceau</CANDIDATE>
+      <CANDIDATE score="0">salope</CANDIDATE>
+      <CANDIDATE score="0">saumon</CANDIDATE>
+      <CANDIDATE score="1">souillon</CANDIDATE>
+      <CANDIDATE score="0">vache</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="slob">
+      <CANDIDATE score="0">plouc</CANDIDATE>
+      <CANDIDATE score="0">rustaud</CANDIDATE>
+      <CANDIDATE score="0">rustaude</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sloven">
+      <CANDIDATE score="1">souillon</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="slovenly_person"/>
+  </SYNSET>
+  <SYNSET id="10647745">
+    <ORIGINALDEF/>
+    <CANDIDATES original="standee">
+      <CANDIDATE score="0">spectateur</CANDIDATE>
+      <CANDIDATE score="0">voyageur</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10667187">
+    <ORIGINALDEF/>
+    <CANDIDATES original="dolt">
+      <CANDIDATE score="1">balourd</CANDIDATE>
+      <CANDIDATE score="1">balourde</CANDIDATE>
+      <CANDIDATE score="1">buse</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="dullard">
+      <CANDIDATE score="1">balourd</CANDIDATE>
+      <CANDIDATE score="1">balourde</CANDIDATE>
+      <CANDIDATE score="0">cancre</CANDIDATE>
+      <CANDIDATE score="1">lourdaud</CANDIDATE>
+      <CANDIDATE score="1">lourdaude</CANDIDATE>
+      <CANDIDATE score="1">nullard</CANDIDATE>
+      <CANDIDATE score="1">nullarde</CANDIDATE>
+      <CANDIDATE score="1">âne</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pillock">
+      <CANDIDATE score="1">con</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="poor_fish"/>
+    <CANDIDATES original="pudden-head"/>
+    <CANDIDATES original="pudding_head"/>
+    <CANDIDATES original="stupid">
+      <CANDIDATE score="1">abruti</CANDIDATE>
+      <CANDIDATE score="0">bobet</CANDIDATE>
+      <CANDIDATE score="1">bêta</CANDIDATE>
+      <CANDIDATE score="0">bête</CANDIDATE>
+      <CANDIDATE score="1">débile</CANDIDATE>
+      <CANDIDATE score="0">grossier</CANDIDATE>
+      <CANDIDATE score="0">hébété</CANDIDATE>
+      <CANDIDATE score="1">idiot</CANDIDATE>
+      <CANDIDATE score="1">imbécile</CANDIDATE>
+      <CANDIDATE score="0">nase</CANDIDATE>
+      <CANDIDATE score="1">sot</CANDIDATE>
+      <CANDIDATE score="0">tarte</CANDIDATE>
+      <CANDIDATE score="0">ânerie</CANDIDATE>
+      <CANDIDATE score="0">stupide</CANDIDATE>
+      <CANDIDATE score="2">tartignole</CANDIDATE>
+      <CANDIDATE score="0">niaiseux</CANDIDATE>
+      <CANDIDATE score="0">bouché</CANDIDATE>
+      <CANDIDATE score="0">relou</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stupid_person"/>
+    <CANDIDATES original="stupe"/>
+  </SYNSET>
+  <SYNSET id="10697519">
+    <ORIGINALDEF/>
+    <CANDIDATES original="telegraph_operator"/>
+    <CANDIDATES original="telegrapher">
+      <CANDIDATE score="1">télégraphiste</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="telegraphist">
+      <CANDIDATE score="1">télégraphiste</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10709876">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thrush">
+      <CANDIDATE score="0">candidose</CANDIDATE>
+      <CANDIDATE score="0">grive</CANDIDATE>
+      <CANDIDATE score="0">muguet</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10710632">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tiger">
+      <CANDIDATE score="1">tigre</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10737264">
+    <ORIGINALDEF/>
+    <CANDIDATES original="undesirable">
+      <CANDIDATE score="1">indésirable</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10786992">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wog">
+      <CANDIDATE score="1">bicot</CANDIDATE>
+      <CANDIDATE score="1">bougnoul</CANDIDATE>
+      <CANDIDATE score="1">bougnoule</CANDIDATE>
+      <CANDIDATE score="1">crouillat</CANDIDATE>
+      <CANDIDATE score="1">métèque</CANDIDATE>
+      <CANDIDATE score="1">nègre</CANDIDATE>
+      <CANDIDATE score="1">négresse</CANDIDATE>
+      <CANDIDATE score="1">sidi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="06341525">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Ms"/>
+    <CANDIDATES original="Ms.">
+      <CANDIDATE score="0">Mlle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="10801893">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Yahoo"/>
+  </SYNSET>
+  <SYNSET id="10809857">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Marcus_Vipsanius_Agrippa"/>
+    <CANDIDATES original="Agrippa"/>
+  </SYNSET>
+  <SYNSET id="10812047">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Alcibiades"/>
+  </SYNSET>
+  <SYNSET id="10849323">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Bernardo_Bertolucci"/>
+    <CANDIDATES original="Bertolucci"/>
+  </SYNSET>
+  <SYNSET id="10860589">
+    <ORIGINALDEF/>
+    <CANDIDATES original="William_Bradford"/>
+    <CANDIDATES original="Bradford"/>
+  </SYNSET>
+  <SYNSET id="10875249">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Richard_Burton"/>
+    <CANDIDATES original="Sir_Richard_Francis_Burton"/>
+    <CANDIDATES original="Sir_Richard_Burton"/>
+    <CANDIDATES original="Burton"/>
+  </SYNSET>
+  <SYNSET id="10883202">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Carnegie"/>
+    <CANDIDATES original="Dale_Carnegie"/>
+  </SYNSET>
+  <SYNSET id="10913355">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Court"/>
+    <CANDIDATES original="Margaret_Court"/>
+  </SYNSET>
+  <SYNSET id="10926238">
+    <ORIGINALDEF/>
+    <CANDIDATES original="De_Bakey"/>
+    <CANDIDATES original="Michael_Ellis_De_Bakey"/>
+  </SYNSET>
+  <SYNSET id="10939630">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Bryan_Donkin"/>
+    <CANDIDATES original="Donkin"/>
+  </SYNSET>
+  <SYNSET id="11002895">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Robert_Hutchings_Goddard"/>
+    <CANDIDATES original="Goddard"/>
+  </SYNSET>
+  <SYNSET id="11041236">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Henry_II"/>
+  </SYNSET>
+  <SYNSET id="11045353">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Herod_the_Great"/>
+    <CANDIDATES original="Herod">
+      <CANDIDATE score="1">Hérode</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="11054856">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Hoffmann"/>
+    <CANDIDATES original="Roald_Hoffmann"/>
+  </SYNSET>
+  <SYNSET id="11055454">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Ben_Hogan"/>
+    <CANDIDATES original="Hogan"/>
+    <CANDIDATES original="William_Benjamin_Hogan"/>
+  </SYNSET>
+  <SYNSET id="11062285">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Howard"/>
+    <CANDIDATES original="Leslie_Howard_Stainer"/>
+    <CANDIDATES original="Leslie_Howard"/>
+  </SYNSET>
+  <SYNSET id="11066621">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Engelbert_Humperdinck"/>
+    <CANDIDATES original="Humperdinck"/>
+  </SYNSET>
+  <SYNSET id="11069085">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Anne_Hutchinson"/>
+    <CANDIDATES original="Hutchinson"/>
+  </SYNSET>
+  <SYNSET id="11116875">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Langmuir"/>
+    <CANDIDATES original="Irving_Langmuir"/>
+  </SYNSET>
+  <SYNSET id="11200276">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Napoleon_I"/>
+    <CANDIDATES original="Bonaparte">
+      <CANDIDATE score="1">Bonaparte</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Napoleon">
+      <CANDIDATE score="1">Napoléon</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Little_Corporal"/>
+    <CANDIDATES original="Napoleon_Bonaparte"/>
+  </SYNSET>
+  <SYNSET id="11210806">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Annie_Oakley">
+      <CANDIDATE score="0">billet_de_faveur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Oakley"/>
+  </SYNSET>
+  <SYNSET id="11213216">
+    <ORIGINALDEF/>
+    <CANDIDATES original="O'Keeffe"/>
+    <CANDIDATES original="Georgia_Okeeffe"/>
+  </SYNSET>
+  <SYNSET id="11268667">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Virginia_Katherine_McMath"/>
+    <CANDIDATES original="Ginger_Rogers"/>
+    <CANDIDATES original="Virginia_McMath"/>
+    <CANDIDATES original="Rogers"/>
+  </SYNSET>
+  <SYNSET id="11275344">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Russell"/>
+    <CANDIDATES original="Lillian_Russell"/>
+  </SYNSET>
+  <SYNSET id="11291179">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Segal"/>
+    <CANDIDATES original="George_Segal"/>
+  </SYNSET>
+  <SYNSET id="11306760">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Samuel_Jackson_Snead"/>
+    <CANDIDATES original="Sam_Snead"/>
+    <CANDIDATES original="Snead"/>
+  </SYNSET>
+  <SYNSET id="11322481">
+    <ORIGINALDEF/>
+    <CANDIDATES original="August_Strindberg"/>
+    <CANDIDATES original="Strindberg"/>
+    <CANDIDATES original="Johan_August_Strindberg"/>
+  </SYNSET>
+  <SYNSET id="11352498">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Alan_Turing"/>
+    <CANDIDATES original="Alan_Mathison_Turing"/>
+    <CANDIDATES original="Turing"/>
+  </SYNSET>
+  <SYNSET id="11362573">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Craig_Ventner"/>
+    <CANDIDATES original="Ventner"/>
+    <CANDIDATES original="J._Craig_Ventner"/>
+  </SYNSET>
+  <SYNSET id="11406141">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Zeppelin"/>
+    <CANDIDATES original="Count_Ferdinand_von_Zeppelin"/>
+  </SYNSET>
+  <SYNSET id="11410625">
+    <ORIGINALDEF/>
+    <CANDIDATES original="consequence">
+      <CANDIDATE score="0">accompagnement</CANDIDATE>
+      <CANDIDATE score="1">conséquence</CANDIDATE>
+      <CANDIDATE score="0">corollaire</CANDIDATE>
+      <CANDIDATE score="0">importance</CANDIDATE>
+      <CANDIDATE score="0">prolongement</CANDIDATE>
+      <CANDIDATE score="1">retombée</CANDIDATE>
+      <CANDIDATE score="1">résultante</CANDIDATE>
+      <CANDIDATE score="0">suites</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="effect">
+      <CANDIDATE score="0">action</CANDIDATE>
+      <CANDIDATE score="1">conséquence</CANDIDATE>
+      <CANDIDATE score="1">effet</CANDIDATE>
+      <CANDIDATE score="0">incidence</CANDIDATE>
+      <CANDIDATE score="0">retentissement</CANDIDATE>
+      <CANDIDATE score="1">retombée</CANDIDATE>
+      <CANDIDATE score="1">résultat</CANDIDATE>
+      <CANDIDATE score="0">sens</CANDIDATE>
+      <CANDIDATE score="0">truc</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="event">
+      <CANDIDATE score="0">cas</CANDIDATE>
+      <CANDIDATE score="0">compétition</CANDIDATE>
+      <CANDIDATE score="0">course</CANDIDATE>
+      <CANDIDATE score="0">fait</CANDIDATE>
+      <CANDIDATE score="0">manifestation</CANDIDATE>
+      <CANDIDATE score="0">péripétie</CANDIDATE>
+      <CANDIDATE score="0">épreuve</CANDIDATE>
+      <CANDIDATE score="0">événement</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="issue">
+      <CANDIDATE score="0">considération</CANDIDATE>
+      <CANDIDATE score="0">descendance</CANDIDATE>
+      <CANDIDATE score="0">distribution</CANDIDATE>
+      <CANDIDATE score="0">dossier</CANDIDATE>
+      <CANDIDATE score="0">délivrance</CANDIDATE>
+      <CANDIDATE score="0">enjeu</CANDIDATE>
+      <CANDIDATE score="0">faire</CANDIDATE>
+      <CANDIDATE score="0">lancement</CANDIDATE>
+      <CANDIDATE score="0">lancer</CANDIDATE>
+      <CANDIDATE score="0">livraison</CANDIDATE>
+      <CANDIDATE score="0">numéro</CANDIDATE>
+      <CANDIDATE score="0">parution</CANDIDATE>
+      <CANDIDATE score="0">point</CANDIDATE>
+      <CANDIDATE score="0">problème</CANDIDATE>
+      <CANDIDATE score="0">problématique</CANDIDATE>
+      <CANDIDATE score="0">progéniture</CANDIDATE>
+      <CANDIDATE score="0">publication</CANDIDATE>
+      <CANDIDATE score="0">question</CANDIDATE>
+      <CANDIDATE score="1">résultat</CANDIDATE>
+      <CANDIDATE score="0">sortie</CANDIDATE>
+      <CANDIDATE score="0">écoulement</CANDIDATE>
+      <CANDIDATE score="0">émission</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="outcome">
+      <CANDIDATE score="0">aboutissement</CANDIDATE>
+      <CANDIDATE score="1">conséquence</CANDIDATE>
+      <CANDIDATE score="0">dénouement</CANDIDATE>
+      <CANDIDATE score="0">issue</CANDIDATE>
+      <CANDIDATE score="1">résultante</CANDIDATE>
+      <CANDIDATE score="1">résultat</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="result">
+      <CANDIDATE score="0">aboutissement</CANDIDATE>
+      <CANDIDATE score="0">accompagnement</CANDIDATE>
+      <CANDIDATE score="0">performance</CANDIDATE>
+      <CANDIDATE score="1">résultante</CANDIDATE>
+      <CANDIDATE score="1">résultat</CANDIDATE>
+      <CANDIDATE score="0">suite</CANDIDATE>
+      <CANDIDATE score="0">total</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="upshot">
+      <CANDIDATE score="0">aboutissement</CANDIDATE>
+      <CANDIDATE score="1">conséquence</CANDIDATE>
+      <CANDIDATE score="1">résultat</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="11464784">
+    <ORIGINALDEF/>
+    <CANDIDATES original="solar_gravity"/>
+  </SYNSET>
+  <SYNSET id="11517656">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sunrise"/>
+  </SYNSET>
+  <SYNSET id="11610602">
+    <ORIGINALDEF/>
+    <CANDIDATES original="California_single-leaf_pinyon"/>
+    <CANDIDATES original="Pinus_californiarum"/>
+  </SYNSET>
+  <SYNSET id="11629501">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cypress_family"/>
+    <CANDIDATES original="Cupressaceae"/>
+    <CANDIDATES original="family_Cupressaceae"/>
+  </SYNSET>
+  <SYNSET id="11658104">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Prumnopitys"/>
+    <CANDIDATES original="genus_Prumnopitys"/>
+  </SYNSET>
+  <SYNSET id="11693812">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Annona"/>
+    <CANDIDATES original="genus_Annona"/>
+  </SYNSET>
+  <SYNSET id="11701492">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Chimonanthus"/>
+    <CANDIDATES original="Chimonanthus"/>
+  </SYNSET>
+  <SYNSET id="11787391">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Dieffenbachia"/>
+    <CANDIDATES original="Dieffenbachia"/>
+  </SYNSET>
+  <SYNSET id="11804604">
+    <ORIGINALDEF/>
+    <CANDIDATES original="carnation_family"/>
+    <CANDIDATES original="pink_family"/>
+    <CANDIDATES original="family_Caryophyllaceae"/>
+    <CANDIDATES original="Caryophyllaceae"/>
+  </SYNSET>
+  <SYNSET id="11865276">
+    <ORIGINALDEF/>
+    <CANDIDATES original="native_pomegranate"/>
+    <CANDIDATES original="Capparis_arborea"/>
+  </SYNSET>
+  <SYNSET id="12060118">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Dryadella"/>
+    <CANDIDATES original="Dryadella"/>
+  </SYNSET>
+  <SYNSET id="12070712">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fen_orchid">
+      <CANDIDATE score="1">liparis</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="fen_orchis"/>
+    <CANDIDATES original="Liparis_loeselii"/>
+  </SYNSET>
+  <SYNSET id="12089496">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cush-cush"/>
+    <CANDIDATES original="Dioscorea_trifida"/>
+  </SYNSET>
+  <SYNSET id="12106786">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bent">
+      <CANDIDATE score="1">agrostide</CANDIDATE>
+      <CANDIDATE score="1">agrostis</CANDIDATE>
+      <CANDIDATE score="0">aptitudes</CANDIDATE>
+      <CANDIDATE score="0">dispositions</CANDIDATE>
+      <CANDIDATE score="0">goût</CANDIDATE>
+      <CANDIDATE score="0">homo</CANDIDATE>
+      <CANDIDATE score="0">homosexuel</CANDIDATE>
+      <CANDIDATE score="0">lande</CANDIDATE>
+      <CANDIDATE score="0">penchant</CANDIDATE>
+      <CANDIDATE score="0">ripou</CANDIDATE>
+      <CANDIDATE score="0">tordu</CANDIDATE>
+      <CANDIDATE score="0">tors</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="bent-grass"/>
+    <CANDIDATES original="bent_grass">
+      <CANDIDATE score="1">agrostis</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="12109719">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Avena"/>
+    <CANDIDATES original="Avena"/>
+  </SYNSET>
+  <SYNSET id="12151814">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Carex"/>
+    <CANDIDATES original="Carex"/>
+  </SYNSET>
+  <SYNSET id="12158031">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gourd">
+      <CANDIDATE score="0">calebasse</CANDIDATE>
+      <CANDIDATE score="1">coloquinte</CANDIDATE>
+      <CANDIDATE score="0">courge</CANDIDATE>
+      <CANDIDATE score="0">gourde</CANDIDATE>
+      <CANDIDATE score="0">potiron</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="12192877">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blue_fig"/>
+    <CANDIDATES original="quandong"/>
+    <CANDIDATES original="quandong_tree"/>
+    <CANDIDATES original="silver_quandong_tree"/>
+    <CANDIDATES original="Brisbane_quandong"/>
+    <CANDIDATES original="Elaeocarpus_grandis"/>
+  </SYNSET>
+  <SYNSET id="12195186">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Sterculia"/>
+  </SYNSET>
+  <SYNSET id="12270027">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Quercus_alba"/>
+    <CANDIDATES original="American_white_oak"/>
+  </SYNSET>
+  <SYNSET id="12274630">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scrub_oak"/>
+  </SYNSET>
+  <SYNSET id="12310021">
+    <ORIGINALDEF/>
+    <CANDIDATES original="mock_privet"/>
+  </SYNSET>
+  <SYNSET id="12332218">
+    <ORIGINALDEF/>
+    <CANDIDATES original="jambosa"/>
+    <CANDIDATES original="rose-apple_tree"/>
+    <CANDIDATES original="rose_apple">
+      <CANDIDATE score="1">jambose</CANDIDATE>
+      <CANDIDATE score="1">jambosier</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Eugenia_jambos"/>
+  </SYNSET>
+  <SYNSET id="12336092">
+    <ORIGINALDEF/>
+    <CANDIDATES original="peppermint">
+      <CANDIDATE score="1">menthe_poivrée</CANDIDATE>
+      <CANDIDATE score="0">à_la_menthe</CANDIDATE>
+      <CANDIDATE score="0">pastille_de_menthe</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="peppermint_gum"/>
+    <CANDIDATES original="red_gum"/>
+    <CANDIDATES original="Eucalyptus_amygdalina"/>
+  </SYNSET>
+  <SYNSET id="12369066">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Hypericum_hypericoides"/>
+    <CANDIDATES original="low_St_Andrew's_cross"/>
+  </SYNSET>
+  <SYNSET id="12435649">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wild_garlic"/>
+    <CANDIDATES original="wood_garlic"/>
+    <CANDIDATES original="Allium_ursinum"/>
+    <CANDIDATES original="Ramsons"/>
+  </SYNSET>
+  <SYNSET id="12441770">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Asphodelaceae"/>
+    <CANDIDATES original="family_Asphodelaceae"/>
+  </SYNSET>
+  <SYNSET id="12461466">
+    <ORIGINALDEF/>
+    <CANDIDATES original="scilla">
+      <CANDIDATE score="1">scille</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="squill">
+      <CANDIDATE score="1">scille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="12498739">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Poinciana"/>
+    <CANDIDATES original="subgenus_Poinciana"/>
+  </SYNSET>
+  <SYNSET id="12500751">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coffee_senna"/>
+    <CANDIDATES original="mogdad_coffee"/>
+    <CANDIDATES original="stinking_weed"/>
+    <CANDIDATES original="styptic_weed"/>
+    <CANDIDATES original="Senna_occidentalis"/>
+    <CANDIDATES original="Cassia_occidentalis"/>
+  </SYNSET>
+  <SYNSET id="12572373">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Tephrosia"/>
+    <CANDIDATES original="genus_Tephrosia"/>
+  </SYNSET>
+  <SYNSET id="12587132">
+    <ORIGINALDEF/>
+    <CANDIDATES original="jaggery_palm"/>
+    <CANDIDATES original="kittul"/>
+    <CANDIDATES original="kitul"/>
+    <CANDIDATES original="kitul_tree"/>
+    <CANDIDATES original="wine_palm"/>
+    <CANDIDATES original="toddy_palm"/>
+    <CANDIDATES original="Caryota_urens"/>
+  </SYNSET>
+  <SYNSET id="12608127">
+    <ORIGINALDEF/>
+    <CANDIDATES original="black_moss"/>
+    <CANDIDATES original="long_moss"/>
+    <CANDIDATES original="old_man's_beard"/>
+    <CANDIDATES original="Spanish_moss">
+      <CANDIDATE score="1">mousse_espagnole</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Tillandsia_usneoides"/>
+  </SYNSET>
+  <SYNSET id="12687211">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Pelargonium"/>
+    <CANDIDATES original="genus_Pelargonium"/>
+  </SYNSET>
+  <SYNSET id="12815434">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Crescentia"/>
+    <CANDIDATES original="genus_Crescentia"/>
+  </SYNSET>
+  <SYNSET id="12864363">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Salvia"/>
+  </SYNSET>
+  <SYNSET id="12866824">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Satureja"/>
+    <CANDIDATES original="Satureia"/>
+    <CANDIDATES original="genus_Satureia"/>
+    <CANDIDATES original="genus_Satureja"/>
+  </SYNSET>
+  <SYNSET id="12870225">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wood_sage"/>
+    <CANDIDATES original="Teucrium_scorodonia"/>
+  </SYNSET>
+  <SYNSET id="12879963">
+    <ORIGINALDEF/>
+    <CANDIDATES original="painted_cup"/>
+    <CANDIDATES original="Indian_paintbrush"/>
+  </SYNSET>
+  <SYNSET id="12933827">
+    <ORIGINALDEF/>
+    <CANDIDATES original="genus_Astrantia"/>
+  </SYNSET>
+  <SYNSET id="13008485">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Pholiota_destruens"/>
+  </SYNSET>
+  <SYNSET id="13038376">
+    <ORIGINALDEF/>
+    <CANDIDATES original="saddled-shaped_false_morel"/>
+    <CANDIDATES original="Gyromitra_infula"/>
+  </SYNSET>
+  <SYNSET id="13102775">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tendril">
+      <CANDIDATE score="1">attache</CANDIDATE>
+      <CANDIDATE score="1">crampon</CANDIDATE>
+      <CANDIDATE score="1">vrille</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13129826">
+    <ORIGINALDEF/>
+    <CANDIDATES original="internode">
+      <CANDIDATE score="1">entre-nœud</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13158714">
+    <ORIGINALDEF/>
+    <CANDIDATES original="obtuse_leaf"/>
+  </SYNSET>
+  <SYNSET id="13164881">
+    <ORIGINALDEF/>
+    <CANDIDATES original="sucker">
+      <CANDIDATE score="0">cave</CANDIDATE>
+      <CANDIDATE score="1">drageon</CANDIDATE>
+      <CANDIDATE score="0">gobeur</CANDIDATE>
+      <CANDIDATE score="0">gobeuse</CANDIDATE>
+      <CANDIDATE score="0">gogo</CANDIDATE>
+      <CANDIDATE score="0">gourmand</CANDIDATE>
+      <CANDIDATE score="0">jobard</CANDIDATE>
+      <CANDIDATE score="0">jobarde</CANDIDATE>
+      <CANDIDATE score="0">pigeon</CANDIDATE>
+      <CANDIDATE score="0">piston</CANDIDATE>
+      <CANDIDATE score="0">poire</CANDIDATE>
+      <CANDIDATE score="0">pomme</CANDIDATE>
+      <CANDIDATE score="0">suceuse</CANDIDATE>
+      <CANDIDATE score="1">surgeon</CANDIDATE>
+      <CANDIDATE score="0">suçoir</CANDIDATE>
+      <CANDIDATE score="0">talle</CANDIDATE>
+      <CANDIDATE score="0">ventouse</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13215258">
+    <ORIGINALDEF/>
+    <CANDIDATES original="potato_fern"/>
+    <CANDIDATES original="Marattia_salicina"/>
+  </SYNSET>
+  <SYNSET id="13263375">
+    <ORIGINALDEF/>
+    <CANDIDATES original="borough_English"/>
+  </SYNSET>
+  <SYNSET id="13303315">
+    <ORIGINALDEF/>
+    <CANDIDATES original="damage">
+      <CANDIDATE score="0">avarie</CANDIDATE>
+      <CANDIDATE score="0">casse</CANDIDATE>
+      <CANDIDATE score="0">dommage</CANDIDATE>
+      <CANDIDATE score="0">dommages</CANDIDATE>
+      <CANDIDATE score="0">dégradation</CANDIDATE>
+      <CANDIDATE score="0">dégât</CANDIDATE>
+      <CANDIDATE score="0">dégâts</CANDIDATE>
+      <CANDIDATE score="0">déprédation</CANDIDATE>
+      <CANDIDATE score="0">détérioration</CANDIDATE>
+      <CANDIDATE score="0">méfait</CANDIDATE>
+      <CANDIDATE score="0">préjudice</CANDIDATE>
+      <CANDIDATE score="0">tort</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="price">
+      <CANDIDATE score="0">cote</CANDIDATE>
+      <CANDIDATE score="0">cours</CANDIDATE>
+      <CANDIDATE score="0">devis</CANDIDATE>
+      <CANDIDATE score="1">prix</CANDIDATE>
+      <CANDIDATE score="1">valeur</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="terms">
+      <CANDIDATE score="0">teneur</CANDIDATE>
+      <CANDIDATE score="0">termes</CANDIDATE>
+      <CANDIDATE score="0">énoncé</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13356402">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bank">
+      <CANDIDATE score="0">ados</CANDIDATE>
+      <CANDIDATE score="0">agence</CANDIDATE>
+      <CANDIDATE score="0">banc</CANDIDATE>
+      <CANDIDATE score="1">banque</CANDIDATE>
+      <CANDIDATE score="0">berge</CANDIDATE>
+      <CANDIDATE score="0">bord</CANDIDATE>
+      <CANDIDATE score="0">carreau</CANDIDATE>
+      <CANDIDATE score="0">clavier</CANDIDATE>
+      <CANDIDATE score="0">crédit</CANDIDATE>
+      <CANDIDATE score="0">grève</CANDIDATE>
+      <CANDIDATE score="0">massif</CANDIDATE>
+      <CANDIDATE score="0">quai</CANDIDATE>
+      <CANDIDATE score="0">rang</CANDIDATE>
+      <CANDIDATE score="0">rangée</CANDIDATE>
+      <CANDIDATE score="0">remblai</CANDIDATE>
+      <CANDIDATE score="0">rive</CANDIDATE>
+      <CANDIDATE score="0">talus</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13391841">
+    <ORIGINALDEF/>
+    <CANDIDATES original="new_penny"/>
+  </SYNSET>
+  <SYNSET id="13420544">
+    <ORIGINALDEF/>
+    <CANDIDATES original="letter_stock"/>
+  </SYNSET>
+  <SYNSET id="11468172">
+    <ORIGINALDEF/>
+    <CANDIDATES original="induction">
+      <CANDIDATE score="0">admission</CANDIDATE>
+      <CANDIDATE score="0">déclenchement</CANDIDATE>
+      <CANDIDATE score="0">incorporation</CANDIDATE>
+      <CANDIDATE score="1">induction</CANDIDATE>
+      <CANDIDATE score="0">insertion</CANDIDATE>
+      <CANDIDATE score="0">installation</CANDIDATE>
+      <CANDIDATE score="0">intégration</CANDIDATE>
+      <CANDIDATE score="0">provocation</CANDIDATE>
+      <CANDIDATE score="0">déclenchement_provoqué</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="inductance">
+      <CANDIDATE score="1">inductance</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13501261">
+    <ORIGINALDEF/>
+    <CANDIDATES original="internal_combustion"/>
+  </SYNSET>
+  <SYNSET id="13528100">
+    <ORIGINALDEF/>
+    <CANDIDATES original="osmosis">
+      <CANDIDATE score="1">osmose</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13537761">
+    <ORIGINALDEF/>
+    <CANDIDATES original="pinocytosis">
+      <CANDIDATE score="1">pinocytose</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13543871">
+    <ORIGINALDEF/>
+    <CANDIDATES original="ptyalism">
+      <CANDIDATE score="1">sialorrhée</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13572860">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vascularisation"/>
+    <CANDIDATES original="vascularization">
+      <CANDIDATE score="1">vascularisation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13573666">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vinification">
+      <CANDIDATE score="1">vinification</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13579287">
+    <ORIGINALDEF/>
+    <CANDIDATES original="information_measure"/>
+  </SYNSET>
+  <SYNSET id="13587236">
+    <ORIGINALDEF/>
+    <CANDIDATES original="coefficient_of_mutual_induction"/>
+    <CANDIDATES original="mutual_inductance"/>
+  </SYNSET>
+  <SYNSET id="13593908">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Fibonacci_number"/>
+  </SYNSET>
+  <SYNSET id="13611740">
+    <ORIGINALDEF/>
+    <CANDIDATES original="microradian"/>
+  </SYNSET>
+  <SYNSET id="13692559">
+    <ORIGINALDEF/>
+    <CANDIDATES original="peso">
+      <CANDIDATE score="1">peso</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Guinea-Bissau_peso"/>
+  </SYNSET>
+  <SYNSET id="13702620">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tanga">
+      <CANDIDATE score="0">string</CANDIDATE>
+      <CANDIDATE score="1">tanga</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13748246">
+    <ORIGINALDEF/>
+    <CANDIDATES original="21"/>
+    <CANDIDATES original="twenty-one">
+      <CANDIDATE score="1">vingt-et-un</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="XXI"/>
+  </SYNSET>
+  <SYNSET id="13901490">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bolus">
+      <CANDIDATE score="0">bol</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13910019">
+    <ORIGINALDEF/>
+    <CANDIDATES original="blob">
+      <CANDIDATE score="0">goutte</CANDIDATE>
+      <CANDIDATE score="1">pâté</CANDIDATE>
+      <CANDIDATE score="0">tache</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13942405">
+    <ORIGINALDEF/>
+    <CANDIDATES original="extremity">
+      <CANDIDATE score="1">extrémité</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13974317">
+    <ORIGINALDEF/>
+    <CANDIDATES original="immunodeficiency">
+      <CANDIDATE score="1">immunodéficience</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="13976322">
+    <ORIGINALDEF/>
+    <CANDIDATES original="bedlam">
+      <CANDIDATE score="1">chahut</CANDIDATE>
+      <CANDIDATE score="1">chambard</CANDIDATE>
+      <CANDIDATE score="0">pétaudière</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="chaos">
+      <CANDIDATE score="1">chamboulement</CANDIDATE>
+      <CANDIDATE score="1">chaos</CANDIDATE>
+      <CANDIDATE score="1">cirque</CANDIDATE>
+      <CANDIDATE score="1">débandade</CANDIDATE>
+      <CANDIDATE score="1">gabegie</CANDIDATE>
+      <CANDIDATE score="1">pagaille</CANDIDATE>
+      <CANDIDATE score="1">pagaïe</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="pandemonium">
+      <CANDIDATE score="1">chahut</CANDIDATE>
+      <CANDIDATE score="1">pandémonium</CANDIDATE>
+      <CANDIDATE score="1">tohu-bohu</CANDIDATE>
+      <CANDIDATE score="0">vacarme</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="topsy-turvydom"/>
+    <CANDIDATES original="topsy-turvyness"/>
+  </SYNSET>
+  <SYNSET id="14006490">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fixedness">
+      <CANDIDATE score="1">fixité</CANDIDATE>
+      <CANDIDATE score="1">immobilité</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="immobility">
+      <CANDIDATE score="1">immobilité</CANDIDATE>
+      <CANDIDATE score="0">repos</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="stationariness"/>
+  </SYNSET>
+  <SYNSET id="14023374">
+    <ORIGINALDEF/>
+    <CANDIDATES original="insomnia">
+      <CANDIDATE score="1">insomnie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14070055">
+    <ORIGINALDEF/>
+    <CANDIDATES original="lead_colic"/>
+    <CANDIDATES original="painter's_colic"/>
+  </SYNSET>
+  <SYNSET id="14074606">
+    <ORIGINALDEF/>
+    <CANDIDATES original="enteropathy">
+      <CANDIDATE score="1">entéropathie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14076992">
+    <ORIGINALDEF/>
+    <CANDIDATES original="hyperparathyroidism"/>
+  </SYNSET>
+  <SYNSET id="14081665">
+    <ORIGINALDEF/>
+    <CANDIDATES original="anxiety_attack"/>
+  </SYNSET>
+  <SYNSET id="14089240">
+    <ORIGINALDEF/>
+    <CANDIDATES original="musicogenic_epilepsy"/>
+  </SYNSET>
+  <SYNSET id="14103998">
+    <ORIGINALDEF/>
+    <CANDIDATES original="heterotaxy"/>
+    <CANDIDATES original="transposition">
+      <CANDIDATE score="0">mastic</CANDIDATE>
+      <CANDIDATE score="0">transport</CANDIDATE>
+      <CANDIDATE score="1">transposition</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14112466">
+    <ORIGINALDEF/>
+    <CANDIDATES original="valvular_heart_disease"/>
+  </SYNSET>
+  <SYNSET id="14116482">
+    <ORIGINALDEF/>
+    <CANDIDATES original="cirrhosis">
+      <CANDIDATE score="1">cirrhose</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="cirrhosis_of_the_liver"/>
+  </SYNSET>
+  <SYNSET id="14116672">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fatty_liver"/>
+  </SYNSET>
+  <SYNSET id="14122235">
+    <ORIGINALDEF/>
+    <CANDIDATES original="contagion">
+      <CANDIDATE score="0">contage</CANDIDATE>
+      <CANDIDATE score="1">contagion</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="contagious_disease"/>
+  </SYNSET>
+  <SYNSET id="14173625">
+    <ORIGINALDEF/>
+    <CANDIDATES original="angina">
+      <CANDIDATE score="1">angine</CANDIDATE>
+      <CANDIDATE score="1">angor</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14174549">
+    <ORIGINALDEF/>
+    <CANDIDATES original="infection">
+      <CANDIDATE score="0">contagion</CANDIDATE>
+      <CANDIDATE score="0">contamination</CANDIDATE>
+      <CANDIDATE score="1">infection</CANDIDATE>
+      <CANDIDATE score="0">inoculation</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14199934">
+    <ORIGINALDEF/>
+    <CANDIDATES original="kwashiorkor">
+      <CANDIDATE score="1">kwashiorkor</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14289387">
+    <ORIGINALDEF/>
+    <CANDIDATES original="black_eye">
+      <CANDIDATE score="1">cocard</CANDIDATE>
+      <CANDIDATE score="1">coquard</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="shiner">
+      <CANDIDATE score="1">cocard</CANDIDATE>
+      <CANDIDATE score="1">coquard</CANDIDATE>
+      <CANDIDATE score="1">œil_poché</CANDIDATE>
+      <CANDIDATE score="1">œil_au_beurre_noir</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="mouse">
+      <CANDIDATE score="0">souris</CANDIDATE>
+      <CANDIDATE score="0">timide</CANDIDATE>
+      <CANDIDATE score="0">châtain_terne</CANDIDATE>
+      <CANDIDATE score="0">chasser_les_souris</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14297150">
+    <ORIGINALDEF/>
+    <CANDIDATES original="proctocele"/>
+    <CANDIDATES original="rectocele">
+      <CANDIDATE score="1">rectocèle</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14313017">
+    <ORIGINALDEF/>
+    <CANDIDATES original="exophthalmos">
+      <CANDIDATE score="1">exophtalmie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14358860">
+    <ORIGINALDEF/>
+    <CANDIDATES original="vesiculitis"/>
+  </SYNSET>
+  <SYNSET id="14366486">
+    <ORIGINALDEF/>
+    <CANDIDATES original="polyostotic_fibrous_dysplasia"/>
+    <CANDIDATES original="Albright's_disease"/>
+  </SYNSET>
+  <SYNSET id="14367556">
+    <ORIGINALDEF/>
+    <CANDIDATES original="elephantiasis_neuromatosa"/>
+  </SYNSET>
+  <SYNSET id="14392143">
+    <ORIGINALDEF/>
+    <CANDIDATES original="epidemic_hysertia"/>
+    <CANDIDATES original="mass_hysteria"/>
+  </SYNSET>
+  <SYNSET id="14399116">
+    <ORIGINALDEF/>
+    <CANDIDATES original="catatonia">
+      <CANDIDATE score="1">cataplexie</CANDIDATE>
+      <CANDIDATE score="1">catatonie</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="catatonic_schizophrenia"/>
+    <CANDIDATES original="catatonic_type_schizophrenia"/>
+  </SYNSET>
+  <SYNSET id="14446652">
+    <ORIGINALDEF/>
+    <CANDIDATES original="discomfort">
+      <CANDIDATE score="0">désagrément</CANDIDATE>
+      <CANDIDATE score="1">gêne</CANDIDATE>
+      <CANDIDATE score="0">incommodité</CANDIDATE>
+      <CANDIDATE score="0">inconfort</CANDIDATE>
+      <CANDIDATE score="0">inconvénient</CANDIDATE>
+      <CANDIDATE score="1">malaise</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="uncomfortableness"/>
+  </SYNSET>
+  <SYNSET id="14475992">
+    <ORIGINALDEF/>
+    <CANDIDATES original="gutter">
+      <CANDIDATE score="0">caniveau</CANDIDATE>
+      <CANDIDATE score="0">chéneau</CANDIDATE>
+      <CANDIDATE score="0">gouttière</CANDIDATE>
+      <CANDIDATE score="0">rigole</CANDIDATE>
+      <CANDIDATE score="0">ruisseau</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="sewer">
+      <CANDIDATE score="0">couseuse</CANDIDATE>
+      <CANDIDATE score="0">égout</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="toilet">
+      <CANDIDATE score="0">cabinets</CANDIDATE>
+      <CANDIDATE score="0">toilette</CANDIDATE>
+      <CANDIDATE score="0">toilettes</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14523923">
+    <ORIGINALDEF/>
+    <CANDIDATES original="tempestuousness">
+      <CANDIDATE score="1">fougue</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14543552">
+    <ORIGINALDEF/>
+    <CANDIDATES original="peril">
+      <CANDIDATE score="1">danger</CANDIDATE>
+      <CANDIDATE score="1">péril</CANDIDATE>
+      <CANDIDATE score="0">traîtrise</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="riskiness">
+      <CANDIDATE score="0">aléas</CANDIDATE>
+      <CANDIDATE score="0">hasards</CANDIDATE>
+      <CANDIDATE score="0">risques</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14555414">
+    <ORIGINALDEF/>
+    <CANDIDATES original="eye_condition"/>
+  </SYNSET>
+  <SYNSET id="14557315">
+    <ORIGINALDEF/>
+    <CANDIDATES original="figural_blindness"/>
+  </SYNSET>
+  <SYNSET id="14563928">
+    <ORIGINALDEF/>
+    <CANDIDATES original="malady">
+      <CANDIDATE score="1">mal</CANDIDATE>
+      <CANDIDATE score="1">maladie</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="14604763">
+    <ORIGINALDEF/>
+    <CANDIDATES original="diamagnet"/>
+  </SYNSET>
+  <SYNSET id="14609689">
+    <ORIGINALDEF/>
+    <CANDIDATES original="alpha-naphthol"/>
+  </SYNSET>
+  <SYNSET id="14610782">
+    <ORIGINALDEF/>
+    <CANDIDATES original="chloric_acid"/>
+  </SYNSET>
+  <SYNSET id="14631295">
+    <ORIGINALDEF/>
+    <CANDIDATES original="atomic_number_4"/>
+    <CANDIDATES original="beryllium">
+      <CANDIDATE score="1">béryllium</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="glucinium"/>
+    <CANDIDATES original="Be"/>
+  </SYNSET>
+  <SYNSET id="14719893">
+    <ORIGINALDEF/>
+    <CANDIDATES original="allyl_alcohol"/>
+    <CANDIDATES original="propenyl_alcohol"/>
+  </SYNSET>
+  <SYNSET id="14923962">
+    <ORIGINALDEF/>
+    <CANDIDATES original="isocyanic_acid"/>
+  </SYNSET>
+  <SYNSET id="15070550">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thortveitite"/>
+  </SYNSET>
+  <SYNSET id="15070897">
+    <ORIGINALDEF/>
+    <CANDIDATES original="prothrombin">
+      <CANDIDATE score="1">prothrombine</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="factor_II"/>
+  </SYNSET>
+  <SYNSET id="15074456">
+    <ORIGINALDEF/>
+    <CANDIDATES original="thyronine"/>
+  </SYNSET>
+  <SYNSET id="15081221">
+    <ORIGINALDEF/>
+    <CANDIDATES original="trypsinogen">
+      <CANDIDATE score="1">trypsinogène</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15125097">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Tertiary_period"/>
+    <CANDIDATES original="Tertiary">
+      <CANDIDATE score="1">tertiaire</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15132408">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Mountain_Standard_Time">
+      <CANDIDATE score="0">heure_d'hiver_des_Montagnes_Rocheuses</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="MST"/>
+    <CANDIDATES original="Mountain_Time">
+      <CANDIDATE score="1">heure_des_Montagnes_Rocheuses</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15143012">
+    <ORIGINALDEF/>
+    <CANDIDATES original="incipience"/>
+    <CANDIDATES original="incipiency"/>
+  </SYNSET>
+  <SYNSET id="15161631">
+    <ORIGINALDEF/>
+    <CANDIDATES original="feast_day"/>
+    <CANDIDATES original="fete_day"/>
+  </SYNSET>
+  <SYNSET id="15172881">
+    <ORIGINALDEF/>
+    <CANDIDATES original="election_day"/>
+    <CANDIDATES original="polling_day"/>
+  </SYNSET>
+  <SYNSET id="15188852">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Patriot's_Day"/>
+  </SYNSET>
+  <SYNSET id="15197042">
+    <ORIGINALDEF/>
+    <CANDIDATES original="Shabuoth">
+      <CANDIDATE score="1">Shavouoth</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Shavous"/>
+    <CANDIDATES original="Pentecost">
+      <CANDIDATE score="0">Pentecôte</CANDIDATE>
+    </CANDIDATES>
+    <CANDIDATES original="Shavuoth"/>
+    <CANDIDATES original="Feast_of_Weeks"/>
+    <CANDIDATES original="Shavuot">
+      <CANDIDATE score="1">Shavouoth</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15240888">
+    <ORIGINALDEF/>
+    <CANDIDATES original="fishing_season">
+      <CANDIDATE score="0">pêche</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+  <SYNSET id="15246258">
+    <ORIGINALDEF/>
+    <CANDIDATES original="wee">
+      <CANDIDATE score="0">petit</CANDIDATE>
+      <CANDIDATE score="0">pipi</CANDIDATE>
+    </CANDIDATES>
+  </SYNSET>
+</VERITE>
