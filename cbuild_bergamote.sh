@@ -8,6 +8,7 @@ export CMAKE_INCLUDE_PATH=~/apps/wonef_install/include CMAKE_LIBRARY_PATH=~/apps
 # libxml++
 export LIBXMLPP_LIBRARY=$HOME/apps/wonef_install/lib/ LIBXMLPP_INCLUDE_DIR=$HOME/apps/wonef_install/include/libxml++-1.0/
 
+export DATAPATH='/scratch_global/DATASETS/WoNeF'
 
 cmake ..
 

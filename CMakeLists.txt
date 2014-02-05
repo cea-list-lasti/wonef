@@ -4,8 +4,9 @@ cmake_minimum_required(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pg -ggdb")
+add_definitions(-DDATAPATH_CMAKE="$ENV{DATAPATH}")
 
-# All used libraries. xml++ has no cmake modules, so we include it manually
+# ICU, Boost and protobuf libraries
 find_package(ICU COMPONENTS i18n)
 include_directories(${ICU_INCLUDE_DIRS})
 link_libraries(${ICU_LIBRARIES})
@@ -17,12 +18,13 @@ link_libraries(${Boost_LIBRARIES})
 find_package(Protobuf REQUIRED)
 include_directories(${PROTOBUF_INCLUDE_DIR})
 link_libraries(${PROTOBUF_LIBRARIES})
-
+ 
+# libxml++ has no cmake module, those need to be set in cbuild.sh
 include_directories($ENV{LIBXMLPP_INCLUDE_DIR})
 link_directories($ENV{LIBXMLPP_LIBRARY})
 link_libraries(xml++-1.0)
 
-
+# Compile protobuf headers
 add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/knn.pb.cc
 	COMMAND protoc knn.proto --cpp_out=.
 	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
@@ -31,7 +33,7 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/repository.pb.cc
 	COMMAND protoc repository.proto --cpp_out=.
 	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
-# The wonef library simply contains all object codes
+# The wonef library simply contains all files
 add_library(wonef
     ExtractorModule.cpp SimSynModule.cpp HyperHypoModule.cpp MeroHoloModule.cpp
     LastChanceModule.cpp MeroHoloLikeHyperModule.cpp TranslatorModule.cpp
