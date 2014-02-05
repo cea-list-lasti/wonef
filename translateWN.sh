@@ -87,7 +87,6 @@ mkdir -p logs data
 rm -f logs/* data/*
 
 echo "Translating... $seqsspaces"
-# It's really WOLF, not $WOLF
 ./build/translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep $grep_logs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
 gprof build/translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
