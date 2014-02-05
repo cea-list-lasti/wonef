@@ -58,4 +58,4 @@ add_executable(translateAdvs translateAdvs.cpp)
 add_executable(evalJAWS-WOLF evalJAWS-WOLF.cpp)
 
 add_custom_command(TARGET translateNouns POST_BUILD
-	COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/data ${CMAKE_SOURCE_DIR}/logs)
+	COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/data ${CMAKE_SOURCE_DIR}/logs ${CMAKE_SOURCE_DIR}/profiles)

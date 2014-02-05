@@ -90,12 +90,12 @@ echo "Translating... $seqsspaces"
 # It's really WOLF, not $WOLF
 ./build/translate$Poss $seqsspaces 2>&1 | tee logs/trans$Poss.$seqs | egrep $grep_logs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Translation failed, exiting."; exit 255; fi
-gprof build/translate$Poss > profiled.create.$pos.$seqs 2> /dev/null
+gprof build/translate$Poss > profiles/profiled.create.$pos.$seqs 2> /dev/null
 
 echo "Evaluating..."
 ./build/evalJAWS-WOLF $prefer $pos $seqs
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
-gprof build/evalJAWS-WOLF 2>/dev/null > profiled.eval.$pos.$seqs
+gprof build/evalJAWS-WOLF 2>/dev/null > profiles/profiled.eval.$pos.$seqs
 
 echo "Done! (not archiving)"
 exit
@@ -113,7 +113,7 @@ chmod -f o+w $archivedir
 
 cp logs/* $tmppath
 cp data/jaws.$pos.$seqs.xml data/jaws.best.$pos.$seqs.xml $tmppath
-cp profiled.create.$pos.$seqs profiled.eval.$pos.$seqs $tmppath
+cp profiles/profiled.create.$pos.$seqs profiles/profiled.eval.$pos.$seqs $tmppath
 
 pushd /tmp > /dev/null
   tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
