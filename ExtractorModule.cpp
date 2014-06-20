@@ -120,6 +120,8 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
 
                 {"er$", ""},
                 {"osis$", "ose"},
+
+                {"ment$", "lly"},
                 {"", ""}
               };
 
