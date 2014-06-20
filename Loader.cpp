@@ -1,3 +1,4 @@
+#include "Timer.hpp"
 #include "Loader.hpp"
 #include "Tools.hpp"
 #include "Paths.hpp"
@@ -35,7 +36,6 @@ void LoaderModule::loadIndex() {
     indexFile = infile.replace(infile.rfind("DAT"), 3,"IDX");
   }
 
-  cerr << "Opening index "<< indexFile << endl;
   ifstream idss(indexFile.c_str(), fstream::in);
   if (idss.fail()) {
     cerr << "Oops, " << indexFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -65,7 +65,6 @@ void LoaderModule::loadIndex() {
 }
 
 void LoaderModule::loadPOSList(string posFile) {
-  cerr << "Opening "<< posFile << endl;
   ifstream idss(posFile.c_str(), fstream::in);
   if (idss.fail()) {
     cerr << "Oops, " << posFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -115,7 +114,6 @@ WORDNET::WordNet LoaderModule::load() {
     infile.replace(infile.rfind("IDX"), 3,"DAT");
   }
 
-  cerr << "Opening data "<< infile << endl;
   ifstream dataIfs(infile.c_str(), fstream::in);
   if (dataIfs.fail()) {
     cerr << "Oops, " << infile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
@@ -124,7 +122,6 @@ WORDNET::WordNet LoaderModule::load() {
 
   int cnt = 0;
   string s = "";
-  cerr << infile << endl;
 
   while (getline(dataIfs, s)) {
     WORDNET::WordNetEntry wne;
@@ -224,6 +221,8 @@ WORDNET::WordNet LoaderModule::load() {
   }
 
   dataIfs.close();
+
+  cout << "Loaded WordNet + dictionaries: " << t.duration() << "s" << endl;
   return wn;
 }
 

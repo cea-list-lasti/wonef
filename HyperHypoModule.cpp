@@ -121,7 +121,6 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
       reverseIndex[itwn->first].insert(itwne->first);
     }
   }
-  cerr << "Reverse Index size : " << reverseIndex.size() << endl;
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {
     for (map<string, WORDNET::TgtCandidates >::iterator it = itwn->second.frenchCandidates.begin(); it != itwn->second.frenchCandidates.end(); it++) {
       float best = 0;
@@ -260,10 +259,6 @@ void HyperHypoModule::process(WORDNET::WordNet& wn){
 
 
   }
-
-  cout << "Nb disamb : " << nbDisamb << endl;
-
-
 
 }
 

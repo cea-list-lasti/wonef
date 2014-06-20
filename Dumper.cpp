@@ -13,7 +13,6 @@ DumperModule::DumperModule(string _datafile) {
 }
 
 void DumperModule::dump(WORDNET::WordNet& wn) {
-  cerr << "Writing in " << datafile << endl;
   ofstream ofs(datafile.c_str(), ios_base::out | ios_base::trunc );
   ofs << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
   ofs << "<JAWS>" << endl;

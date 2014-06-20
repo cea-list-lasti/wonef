@@ -11,8 +11,6 @@
 
 
 void DEBVisDicDumperModule::dump(WORDNET::WordNet& wn) {
-  std::cerr << "Writing in " << datafile << std::endl;
-
   std::string spos = WORDNET::string_of_POS[WORDNET::pos];
 
   std::map<string,int> bcsbase;

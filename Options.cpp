@@ -114,6 +114,12 @@ Options::Options(std::string _pos, int argc, char **argv) {
     std::cout << ExtractorModule::toString(e) << " ";
   }
   std::cout << std::endl;
+
+  std::cout << "modules: ";
+  for(int i: moduleSequence) {
+    std::cout << i << " ";
+  }
+  std::cout << std::endl;
 }
 
 std::string Options::getWN30Data(POS pos) {

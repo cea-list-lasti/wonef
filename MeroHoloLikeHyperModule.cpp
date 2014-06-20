@@ -38,7 +38,6 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
       reverseIndex[itwn->first].insert(itwne->first); 	
     }
   }
-  cerr << "Reverse Index size : " << reverseIndex.size() << endl;
   for (map<string, WORDNET::WordNetEntry>::iterator itwn = wn.begin(); itwn !=wn.end(); itwn++) {    
     for (map<string, WORDNET::TgtCandidates >::iterator it = itwn->second.frenchCandidates.begin(); it != itwn->second.frenchCandidates.end(); it++) {
       float best = 0;
@@ -52,12 +51,9 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	    string head = HyperHypoModule::getHead(*itSyn);
 	    float score = tRoler.computeIsAScore( itCand->first, head, mode);
 
-/*	    if( verbose) {
-	      cerr << "DEBUG "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
-	    }*/
 	    if (!isnan(score)) {
 	      if( verbose) {
-		cerr << "DEBUG MERO "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
+	        cerr << "DEBUG MERO "<<" : " << it->first << " : " << itCand->first << " > " << *itSyn << " : " << score << endl;
 	      }
 	      sum+=score;
 	      nbMeroHolo ++;
@@ -71,7 +67,7 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 	    float score =tRoler.computeIsAScore(head, itCand->first, mode);
 	    if (!isnan(score)) {
 	      if( verbose) {
-	      cerr << "DEBUG HOLO "<<" : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
+	        cerr << "DEBUG HOLO "<<" : " << it->first << " : " << itCand->first << " < " << *itSyn << " : " << score << endl;
 	    }
 	      sum+=score;
 	      nbMeroHolo ++;
@@ -112,10 +108,6 @@ void MeroHoloLikeHyperModule::process(WORDNET::WordNet& wn, TRMode mode, bool ve
 
 
   }
-
-  cout << "Nb disamb : " << nbDisamb << endl;
-
-
 
 }
 

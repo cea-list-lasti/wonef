@@ -3,6 +3,7 @@
 #include "levenshtein.hpp"
 #include "tools.h"
 #include "Tools.hpp"
+#include "Timer.hpp"
 
 #include <boost/regex.hpp>
 #include <cassert>
@@ -11,6 +12,7 @@ ExtractorModule::ExtractorModule(std::string _pos, const Options& _options)
   : pos(_pos), opt(_options) { }
 
 void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
+  Timer t;
 
   typedef std::pair<const std::string, WORDNET::WordNetEntry> wn_t;
   typedef std::pair<const std::string, WORDNET::TgtCandidates> candidate_t;
@@ -181,6 +183,8 @@ void ExtractorModule::process(WORDNET::WordNet& wn, bool /*verbose*/) {
       }
     }
   }
+
+  cout << "Initial selectors duration: " << t.duration() << "s" << endl;
 }
 
 void ExtractorModule::addInstance(std::map<std::string, std::set<WORDNET::TranslationInfos> >& frenchSynset,

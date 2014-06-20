@@ -48,7 +48,6 @@ int main(int argc, char **argv) {
     nIteration++;
     switch (idModuleConf) {
     case 1:
-      cout << "First step " << endl;
       t.start();
       lastchancer = new LastChanceModule(idModuleConf, nIteration);
       lastchancer->process(wn);
@@ -57,7 +56,6 @@ int main(int argc, char **argv) {
       break;
 
     case 2 :
-      cout << "Second step "  << endl;
       t.start();
       simsyner = new SimSynModule(pos, idModuleConf, nIteration);
       simsyner->process(wn);
@@ -66,7 +64,6 @@ int main(int argc, char **argv) {
       break;
 
     case 3 :
-      cout << "Third step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "SUJ_V_RELG.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);
@@ -75,7 +72,6 @@ int main(int argc, char **argv) {
       break;
 
     case 4 :
-      cout << "Fourth step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "COD_V.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);
@@ -84,7 +80,6 @@ int main(int argc, char **argv) {
       break;
 
     case 5 :
-      cout << "Fifth step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "CPL_V.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);
@@ -93,7 +88,6 @@ int main(int argc, char **argv) {
       break;
 
     case 6 :
-      cout << "Six step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "ATB_S.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);
@@ -102,7 +96,6 @@ int main(int argc, char **argv) {
       break;
 
     case 7 :
-      cout << "Seventh step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "SUJ_V.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);
@@ -111,7 +104,6 @@ int main(int argc, char **argv) {
       break;
 
     case 8 :
-      cout << "Eigth step "  << endl;
       t.start();
       hyperhypoer = new HyperHypoModule(options.datafile, "CPLV_V.reverse", R_HYPER, pos, idModuleConf, nIteration);
       hyperhypoer->process(wn);

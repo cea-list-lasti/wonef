@@ -1,9 +1,9 @@
+#include "Timer.hpp"
 #include "Paths.hpp"
 #include "Options.hpp"
 #include "Loader.hpp"
 #include "Dumper.hpp"
 #include "DEBVisDicDumper.hpp"
-#include "Timer.hpp"
 
 #include "ExtractorModule.hpp"
 #include "SimSynModule.hpp"

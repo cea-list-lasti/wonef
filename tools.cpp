@@ -11,7 +11,6 @@
 
 void initializeDicMap(  map<ulong, string>& dicmap, string dicfilename ) {
   /***** initialize dicmap ***********/
-  cerr << "Opening  : " << dicfilename << endl;
   ifstream is(dicfilename);
   if (is.fail()) {
     std::cerr << "Oops, " << dicfilename << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
@@ -31,12 +30,8 @@ void initializeDicMap(  map<ulong, string>& dicmap, string dicfilename ) {
     stringstream ss2;
     ss2.write(word, size) ;
     ss2 >>     dicmap[id];
-    //std::cerr << "dicmap[" << id << "] = " << dicmap[id] << std::endl;
   }
   is.close();
-
-
-  cerr << "Loaded " << dicfilename << endl;
 
 }
 
@@ -61,15 +56,8 @@ void initializeDicMapReverse(  map<string, ulong>& dicmapreverse,   string dicfi
     if (desaxIdent) {
       dicmapreverse[fastDesax(dict,ss2.str())]=id;
     }
-
-    /*    cerr << id << endl;
-	  cerr << ss2.str() << endl;    
-	  cerr << dicmap[id] << endl;    */
   }
   is.close();
-
-
-  cerr << "Loaded " << dicfilename << endl;
 
 }
 

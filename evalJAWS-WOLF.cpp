@@ -219,14 +219,13 @@ int main(int argc, char **argv) {
   */
 
   /* Then evaluate with the gold standard */
-  std::cout << std::endl << "-- Evaluating with Gold... --" << std::endl;
   if (mode == "precision") {
-    std::cout << std::endl << "                *** Filtered ***" << std::endl;
+    std::cout << std::endl << "-- Evaluating filtered with gold... --" << std::endl;
     std::ofstream logGoldBest("logs/eval.gold.best.test." + suffix, ios_base::out | ios_base::trunc);
     parseAndEvaluatePolysemous(logGoldBest, bcsbase, BCSCount, litList, polysemousIdsList,
         goldNetTest, goldNetIdIdentTest, spos, bestJaws, goldValueTest, true);
   } else {
-    std::cout << std::endl << "                *** Normal ***" << std::endl;
+    std::cout << std::endl << "-- Evaluating with gold... --" << std::endl;
     std::ofstream logGold("logs/eval.gold.test." + suffix, ios_base::out | ios_base::trunc);
     parseAndEvaluatePolysemous(logGold, bcsbase, BCSCount, litList, polysemousIdsList,
         goldNetTest, goldNetIdIdentTest, spos, jaws, goldValueTest, true);
