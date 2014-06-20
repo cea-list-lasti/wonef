@@ -96,27 +96,4 @@ echo "Evaluating..."
 if [[ ${PIPESTATUS[0]} -ne 0 ]]; then echo "Evaluation failed, exiting."; exit 255; fi
 gprof build/evalJAWS-WOLF 2>/dev/null > profiles/profiled.eval.$pos.$seqs
 
-echo "Done! (not archiving)"
-exit
-
-# Archive relevant files to our archive.
-echo -n "Finished! Archiving to $archivedir/${Poss}_${seqs}_$time.tar.bz2..."
-
-tmpsubdir="${pos}__${day}__${time}"
-tmppath=/tmp/$tmpsubdir
-archivedir=/home/pradet/archives/$day
-
-mkdir -p $tmppath
-mkdir -p $archivedir
-chmod -f o+w $archivedir
-
-cp logs/* $tmppath
-cp data/jaws.$pos.$seqs.xml data/jaws.best.$pos.$seqs.xml $tmppath
-cp profiles/profiled.create.$pos.$seqs profiles/profiled.eval.$pos.$seqs $tmppath
-
-pushd /tmp > /dev/null
-  tar cjf $archivedir/$Poss__$time.tar.bz2 $tmpsubdir
-  rm -rf $tmpsubdir
-popd > /dev/null
-
-echo " done!"
+echo "Done!"
