@@ -3,7 +3,7 @@ project(WoNeF)
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pg -ggdb")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pg -ggdb -msse4.2 -march=native")
 add_definitions(-DDATAPATH_CMAKE="$ENV{DATAPATH}")
 
 # ICU, Boost and protobuf libraries
