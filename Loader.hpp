@@ -21,6 +21,7 @@ class LoaderModule {
 
 private:
   string pos;
+  string posfile;
   bool noen;
 
   string infile;

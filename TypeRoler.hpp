@@ -17,7 +17,7 @@ class TypeRoler {
 
 
 public : 
-  TypeRoler(string _dataFile, string relation) ;
+  TypeRoler(string relation) ;
   TypeRoler();
   ~TypeRoler() ;
   float computeIsAScore( string strA, string strB, TRMode mode);
@@ -32,7 +32,6 @@ public :
 
 private :
 
-  string dataFile ; 
   int topSize; 
   float thresCut;
   void writeRepository(std::string protofile, std::string relation);

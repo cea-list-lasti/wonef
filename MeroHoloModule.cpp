@@ -85,8 +85,8 @@ void MeroHoloModule::loadMeroHolos(string dataInput) {
 
 void MeroHoloModule::process(WORDNET::WordNet& wn) {
   /* Load TypeRoler files */
-  meroTypeRoler = TypeRoler(TYPEROLERFILE, "COMPDUNOM");
-  holoTypeRoler = TypeRoler(HOLOFILE, "COMPDUNOM.reverse");
+  meroTypeRoler = TypeRoler("COMPDUNOM");
+  holoTypeRoler = TypeRoler("COMPDUNOM.reverse");
 
 
   // First compute the reverseIndex to know about existing instances

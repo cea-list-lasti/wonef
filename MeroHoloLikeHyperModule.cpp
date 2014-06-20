@@ -11,7 +11,7 @@ using namespace std;
 MeroHoloLikeHyperModule::MeroHoloLikeHyperModule(string& datafile, int idModuleConf, int nIteration)
   : MeroHoloModule(datafile, idModuleConf, nIteration) {
 
-  tRoler = TypeRoler(TYPEROLERFILE, "COMPDUNOM");
+  tRoler = TypeRoler("COMPDUNOM");
 
 }
 

@@ -34,15 +34,9 @@ private:
   std::map<std::string, std::map<std::string, std::map<std::string, int> > > knnDistsCache;
   boost::optional<int> getDistance(const string &relation, const string& word, const string& related);
 
-  // load write the cache if necessary, or reads it otherwise.
+  // loads the KnnDists cache from protobuf files
   void loadKnnDistsCache();
-  void buildRelationCache(std::string relation);
-
-  // read and write protocol buffers
   void readProtobuf(std::string relation);
-  void writeProtobuf(std::string relation);
-
-  std::list<std::string> getPaths(std::string relation);
 
 protected:
   string trySelectAndReplace(WORDNET::WordNetEntry& synset,

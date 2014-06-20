@@ -114,64 +114,6 @@ boost::optional<int> SimSynModule::getDistance(const string &relation, const str
   }
 }
 
-std::list<std::string> SimSynModule::getPaths(std::string relation) {
-  std::list<std::string> paths;
-  boost::filesystem::path dir(KNNSTDDIR + relation);
-  assert(boost::filesystem::is_directory(dir));
-
-  boost::filesystem::directory_iterator it(dir);
-  boost::filesystem::directory_iterator end;
-
-  while (it != end) {
-    if (it->path().extension() == ".txt") {
-      paths.push_back(it->path().native());
-    }
-    it++;
-  }
-
-  return paths;
-}
-
-void SimSynModule::buildRelationCache(std::string relation) {
-  std::map<std::string, std::map<std::string, int> >& relationCache = knnDistsCache[relation];
-
-  BOOST_FOREACH(const std::string& knnFile, getPaths(relation)) {
-    // put our file into a string
-    string knns;
-    ifstream knnIfs(knnFile);
-    if (knnIfs.fail()) {
-      std::cerr << "Oops, " << knnFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << std::endl;
-      exit(-1);
-    }
-    getline(knnIfs, knns);
-    knnIfs.close();
-
-    boost::u32regex r = boost::make_u32regex("([a-z]+):([0-9]+)", boost::regex_constants::collate);
-
-    boost::u32regex_token_iterator<std::string::const_iterator>
-      iterword(knns.begin(), knns.end(), r, 1),
-      endword;
-    boost::u32regex_token_iterator<std::string::const_iterator>
-      iterscore(knns.begin(), knns.end(), r, 2),
-      endscore;
-
-
-    std::map<std::string, int>& relatedWords = relationCache[*iterword];
-
-    // skip first word
-    iterword++;
-    iterscore++;
-
-    for( ; iterword != endword; ++iterword, ++iterscore ) {
-        int score;
-        stringstream(*iterscore) >> score;
-        relatedWords[*iterword] = score;
-    }
-
-  }
-
-}
-
 pair<string, size_t> SimSynModule::selectTgtWord (map<string, int>& cand, map<string, string>& verbCand, map<string, set<WORDNET::TranslationInfos> >& synset, const string& relation) {
   map<pair<string, size_t>, uint> votes;
   for (map<string, set<WORDNET::TranslationInfos> >::iterator itSynset = synset.begin(); itSynset != synset.end(); itSynset++) {
@@ -237,41 +179,13 @@ void SimSynModule::readProtobuf(std::string relation) {
   }
 }
 
-// postcondition: protofile contains the correct data
-void SimSynModule::writeProtobuf(std::string relation) {
-  std::string protofile = KNNPROTOFILE + pos + "_" + relation;
-  KnnDists knnDistsFile;
-  knnDistsFile.set_relation(relation);
-
-  assert(boost::filesystem::is_directory(KNNPROTODIR));
-  std::map<std::string, std::map<std::string, int> >& relationCache = knnDistsCache[relation];
-
-  typedef std::pair<const string, std::map<std::string, int> > words_t;
-  typedef std::pair<const string, int> related_t;
-
-  BOOST_FOREACH(words_t& words, relationCache) {
-    KnnDists::Word *word = knnDistsFile.add_word();
-    word->set_word(words.first);
-    BOOST_FOREACH(related_t& related, words.second) {
-      word->add_related(related.first);
-      word->add_distance(related.second);
-    }
-  }
-
-  fstream out(protofile.c_str(), ios::out | ios::binary | ios::trunc);
-  knnDistsFile.SerializeToOstream(&out);
-  out.close();
-}
-
 void SimSynModule::loadKnnDistsCache() {
   BOOST_FOREACH(std::string &relation, rels) {
     std::string protofile = KNNPROTOFILE + pos + "_" + relation;
     if (ifstream(protofile.c_str(), std::ios::in).good()) {
       readProtobuf(relation);
     } else {
-      std::cout << "note: computing the simsyn cache, next run will be faster." << std::endl;
-      buildRelationCache(relation);
-      writeProtobuf(relation);
+      std::cerr << "Error: protobuf file not found: " << protofile << "." << std::endl;
     }
   }
 }

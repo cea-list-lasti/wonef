@@ -55,22 +55,6 @@ const std::string ADVS_LIST_F = DATAPATH + "/POSlist/others.uniq.filtered.list";
 const std::string  KNNSTDDIR = DATAPATH + "/FastKNN/knnall/";
 const std::string  KNNSTDFILE = "KNNSTDDIR/$REL/SemMap.$REL.16384.knnResFile.$WORD.txt";
 
-
-const std::string  TYPEROLERFILE13 = DATAPATH + "/FastKNN/SemMap/reverse/SUJ_V_RELG.reverse.dmp";
-const std::string  TYPEROLERFILE12 = DATAPATH + "/FastKNN/SemMap/reverse/MOD_V.reverse.dmp";
-const std::string  TYPEROLERFILE11 = DATAPATH + "/FastKNN/SemMap/normal/CPLV_V.dmp";
-const std::string  TYPEROLERFILE10 = DATAPATH + "/FastKNN/SemMap/reverse/CPLV_V.reverse.dmp";
-const std::string  TYPEROLERFILE9  = DATAPATH + "/FastKNN/SemMap/reverse/CPL_V.reverse.dmp";
-const std::string  TYPEROLERFILE8  = DATAPATH + "/FastKNN/SemMap/reverse/AdvVerbe.reverse.dmp";
-const std::string  TYPEROLERFILE7  = DATAPATH + "/FastKNN/SemMap/reverse/ATB_S.reverse.dmp";
-const std::string  TYPEROLERFILE6  = DATAPATH + "/FastKNN/SemMap/reverse/COD_V.reverse.dmp";
-const std::string  TYPEROLERFILE5  = DATAPATH + "/FastKNN/SemMap/reverse/SUJ_V.reverse.dmp";
-const std::string  TYPEROLERFILE4  = DATAPATH + "/FastKNN/SemMap/windows/window10.dmp";
-const std::string  TYPEROLERFILE3  = DATAPATH + "/FastKNN/SemMap/normal/COD_V.dmp";
-const std::string  TYPEROLERFILE2  = DATAPATH + "/FastKNN/SemMap/normal/SUJ_V.dmp";
-const std::string  TYPEROLERFILE   = DATAPATH + "/FastKNN/SemMap/normal/COMPDUNOM.dmp";
-const std::string  HOLOFILE        = DATAPATH + "/FastKNN/SemMap/reverse/COMPDUNOM.reverse.dmp";
-
 const std::string  WORDS_IDS = DATAPATH + "/FastKNN/SemMap/words.ids";
 const std::string  CONVFILE = DATAPATH + "/FastKNN/SemMap/semmapconversion.global.bin";
 

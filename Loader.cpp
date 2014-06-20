@@ -18,13 +18,8 @@ set<string> LoaderModule::posList;
 WORDNET::WordNetIndex LoaderModule::WNIndex;
 
 
-LoaderModule::LoaderModule(string _infile, string posfile, string _pos) :
-  pos(_pos), infile(_infile), dictionaries(_pos) {
-    cerr << "Loading...  " << endl;
-    LoaderModule::loadPOSList(posfile);
-    LoaderModule::loadIndex();
-    cerr << "... Loaded!" << endl;
-  }
+LoaderModule::LoaderModule(string _infile, string _posfile, string _pos) :
+  pos(_pos), posfile(_posfile), infile(_infile), dictionaries(_pos) {  }
 
 LoaderModule::~LoaderModule() {}
 
@@ -105,6 +100,10 @@ WORDNET::TgtCandidates LoaderModule::extractCandidates(string srcWord) {
 }
 
 WORDNET::WordNet LoaderModule::load() {
+  Timer t;
+
+  LoaderModule::loadPOSList(posfile);
+  LoaderModule::loadIndex();
 
   WORDNET::WordNet wn;
 

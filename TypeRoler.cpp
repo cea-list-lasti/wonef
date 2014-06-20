@@ -18,8 +18,7 @@ using namespace std;
 TypeRoler::TypeRoler() {
 }
 
-TypeRoler::TypeRoler(string _dataFile, string relation) : 
-  dataFile(_dataFile),
+TypeRoler::TypeRoler(string relation) :
   topSize(10),
   thresCut(0) {
   initializeDicMap(dicmap, WORDS_IDS);
@@ -29,59 +28,14 @@ TypeRoler::TypeRoler(string _dataFile, string relation) :
   if (ifstream(protofile.c_str(), std::ios::in).good()) {
     readRepository(protofile, relation);
   } else {
-    ifstream idss(dataFile.c_str());
-    if (idss.fail()) {
-      cerr << "Oops, " << dataFile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
-      exit(-1);
-    }
-
-    std::cout << "note: computing the typeroler cache, next run will be faster." << std::endl;
-
-    string s;
-    while (getline(idss, s) ) {
-      stringstream ss;
-      ss <<s;
-      ulong currentIdent;
-      ss>>currentIdent;
-      if (s.find('}') - s.find('{') !=1 && s.find(']')-s.find('[')!=3) {
-        if (dicmap.find(currentIdent) == dicmap.end()) {
-          std::cout << relation << ": " << currentIdent << " was not found in word.ids! Ignoring it." << std::endl;
-        } else {
-          string semanticMapWord = dicmap[currentIdent];
-          int sumOccs = processLine(ss.str(), thresCut, repository[semanticMapWord]);
-          numCoocs[semanticMapWord] = sumOccs;
-        }
-      }
-    }
-    idss.close();
-
-    writeRepository(protofile, relation);
+    cerr << "Oops, " << protofile << " doesn't exist. " << __FILE__ << ":" << __LINE__ << endl;
+    exit(-1);
   }
 }
 
 TypeRoler::~TypeRoler() {
 }
 
-void TypeRoler::writeRepository(std::string protofile, std::string relation) {
-  std::cout << "Writing protobuf " << protofile << "!" << std::endl;
-  Repository repositoryFile;
-  repositoryFile.set_relation(relation);
-
-  for(std::map<std::string, std::vector<pair<ulong,int> > >::iterator it = repository.begin();
-    it != repository.end(); ++it) {
-    Repository::Word *word = repositoryFile.add_word();
-    word->set_key(it->first);
-    word->set_numcoocs(numCoocs[it->first]);
-    for(unsigned int i = 0; i < it->second.size(); i++) {
-      word->add_related(it->second[i].first);
-      word->add_score(it->second[i].second);
-    }
-  }
-
-  fstream out(protofile.c_str(), ios::out | ios::binary | ios::trunc);
-  repositoryFile.SerializeToOstream(&out);
-  out.close();
-}
 
 void TypeRoler::readRepository(std::string protofile, std::string relation) {
   std::cout << "Reading protobuf " << protofile << "!" << std::endl;
